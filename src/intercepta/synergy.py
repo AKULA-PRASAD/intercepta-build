@@ -124,6 +124,28 @@ class SynergyRanker:
         out = pd.DataFrame(rows).sort_values(["sample", "predicted_synergy"], ascending=[True, False])
         return out.groupby("sample", group_keys=False).head(top).reset_index(drop=True) if top else out
 
+    def predict(self, expr, pairs, smiles=None):
+        """Predict synergy for specific (sample, drug1, drug2) triples. expr: genes x samples. pairs: DataFrame with
+        columns [sample, drug1, drug2]. smiles: optional {drug_id: SMILES} to featurize drugs outside the fitted
+        library (fingerprints are computable for any molecule). Returns pairs + predicted_synergy (NaN if
+        unfeaturizable)."""
+        if self._model is None:
+            raise RuntimeError("call fit() first")
+        pcdf = pd.DataFrame(self._cell_pca(expr.T), index=list(expr.columns))
+        fp = dict(self._fp)
+        if smiles:
+            for d, s in smiles.items():
+                if d not in fp:
+                    fp[d] = _morgan(s, self.nbits)
+        preds = np.full(len(pairs), np.nan)
+        for i, r in enumerate(pairs.itertuples(index=False)):
+            if r.drug1 in fp and r.drug2 in fp and r.sample in pcdf.index:
+                f1, f2 = fp[r.drug1], fp[r.drug2]
+                x = np.concatenate([pcdf.loc[r.sample].values, (f1 + f2).astype(np.int8), (f1 & f2).astype(np.int8)])
+                preds[i] = float(self._model.predict(x[None, :])[0])
+        out = pairs.copy(); out["predicted_synergy"] = preds
+        return out
+
     # ---- convenience constructor from the cached open O'Neil data + DepMap expression ----
     @classmethod
     def from_oneil(cls, data_dir=None, **kw):
