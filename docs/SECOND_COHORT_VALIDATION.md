@@ -45,3 +45,20 @@ Code is ready: `src/intercepta/engine.py` + `experiments/B3b/B3c` (transfer), `B
 (integration), `B5` (markers), `B6` (OOD). A new-cohort loader (matching `data/MANIFEST.md` conventions) is the
 only code to add; the analysis scripts run unchanged. Controlled data stays on your secure environment — never
 committed (policy in `data/MANIFEST.md`, `INTEGRITY_SWEEP.md`).
+
+## Execution log — external validation actually run (2026-07-29)
+**Public patient-proxy cohort used: PDXE** (Gao 2015, ~399 PDX, public — no gate needed).
+- **B7 (R1/R2 transfer):** the drug-specific, proliferation-independent signal (V9) **REPLICATES** in PDXE —
+  cross-cohort + cross-cancer + cross-model-system (prolif-resid diag>off, perm p=0.036, 9 drugs). Overall
+  transfer magnitude underpowered (H1 p=0.14). → LEDGER V14.
+- **B8 (R3/R4 mechanism/engine):** established solid-tumor markers underpowered on PDXE — PIK3CA→alpelisib
+  correct sensitizing direction (nominal p=0.043) + engine>parts, but only 15 mutant PDX → doesn't survive
+  correction. Honest inconclusive. → LEDGER (underpowered note).
+
+**Other public patient-proxy cohorts surveyed (candidates for further external validation):**
+- **NCI PDMR** (pdmr.cancer.gov) — >600 PDX with public RNA-seq + some drug-response; requires portal/bulk
+  download + harmonization (feasible future work, not done here).
+- Prostate PDX-organoid (Nat Commun 2021) — EGA-controlled (needs a gate).
+- GI/CRC organoid screens — small n, scattered supplementary.
+CONCLUSION: PDXE was the accessible clean public cohort and has been used. The decisive remaining step is a
+**human clinical** cohort (dbGaP/EGA — a gate); PDMR is the best next PUBLIC add if deeper PDX validation is wanted.
