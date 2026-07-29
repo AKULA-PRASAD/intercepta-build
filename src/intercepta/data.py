@@ -70,6 +70,16 @@ def load_gdsc_response():
     return g
 
 
+def load_depmap_crispr():
+    """DepMap CRISPR gene-effect (Chronos): cells(rows, DepMap_ID) x genes(cols, symbol). More negative = the cell
+    DEPENDS on that gene. File `depmap_crispr_gene_effect.csv` under INTERCEPTA_DATA (columns 'SYMBOL (ENTREZ)')."""
+    f = "depmap_crispr_gene_effect.csv"
+    verify(f, _p(f))
+    ce = pd.read_csv(_p(f), index_col=0)
+    ce = ce.rename(columns={c: c.split(" (")[0] for c in ce.columns if " (" in c})
+    return ce.loc[:, ~ce.columns.duplicated()]
+
+
 def load_gdsc1_response():
     """GDSC1 (independent screen) drug response -> [DRUG_NAME, COSMIC_ID(str), LN_IC50]. For external replication."""
     f = "independent/gdsc1/GDSC1_fitted_dose_response.xlsx"
