@@ -17,30 +17,32 @@ reproduce ×2, never fabricate. Where legacy code docstrings overclaim, the modu
 > therapy-*selection* platform. The original "universal / any-disease / de novo / therapy-selection" vision was
 > tested against our own evidence and reconstructed into an evidence-earned milestone ladder ([`VISION.md`](VISION.md)).
 
-## Where we are on the ladder
+## Where we are — the honest ladder (tested to the ceiling)
 | Rung | Status |
 |---|---|
 | **L0** engine + verified core | ✅ DONE — cross-dataset ceiling ρ=+0.212; AML mutation→drug mechanism verified |
-| **L1** cell-line → patient transfer | ✅ real (perm p=5e-4), non-specific on mismatched platform |
-| **L1b** drug-specific, proliferation-independent transfer | ✅ PASS · replicated across 2 label screens · robust; weak (ρ≈0.07–0.08), mechanism unexplained |
-| **L3** engine > parts (preview) | ✅ first evidence — mutation marker + expression transfer complementary (combined CV beats both in 4/4 pairs) |
-| **L2** controlled clinical trials | ⛔ needs dbGaP/EGA (human gate) |
-| **L4** beyond first cancer | conditional |
+| **L1/L1b** drug-specific cell-line→patient transfer (BeatAML ex-vivo) | ✅ real, weak (ρ≈0.07–0.08), replicated across 2 label screens, robust — but mechanism unexplained |
+| **engine > parts** (mechanism + transfer) | ✅ combined beats either alone (4/4 pairs, CV); shipped engine embodies it |
+| **genome-wide markers · OOD calibration** | ✅ 177 robust AML markers (FLT3-ITD→FLTi, RAS→MEKi); OOD confidence validated |
+| **external PDX drug-specificity** | ⚠️ FRAGILE — borderline (p=0.036) then non-sig under a broader screen (p=0.076); **unestablished** |
+| **human clinical drug response (TCGA)** | ❌ **NULL** — raw signal is cancer-type confounding; within-cancer AUROC 0.504 (p=0.43) |
 
-## Verified results (reproduced ×2; see [`LEDGER.md`](LEDGER.md))
-- **V1** leakage-free cross-dataset drug-response transfer, mean per-drug ρ=+0.212 (94/100 drugs), beats the
-  parameter-free bar (Wilcoxon p=1.9e-15).
-- **V4–V6** mutation→drug in AML: **NPM1→Cabozantinib** (p=4.4e-11, deconfounded, split-replicated),
-  NRAS→MEK, DNMT3A→Dasatinib.
-- **V9** weak but drug-specific cell-line→patient signal (BeatAML), replicated across GDSC2/GDSC1 labels, robust.
-- **V10** the two verified signals are **complementary** — combining them beats either alone (4/4 pairs, CV).
+## Verified results (reproduced ×2; see [`LEDGER.md`](LEDGER.md), [`MANUSCRIPT`](papers/intercepta_engine/MANUSCRIPT.md))
+- **V1** leakage-free cross-dataset transfer, mean per-drug ρ=+0.212 (94/100 drugs, p=1.9e-15); a real *ceiling*
+  (adding proliferation/mutations doesn't beat it).
+- **V5/V12** genome-wide AML mutation→drug markers — **FLT3-ITD→FLT3 inhibitors**, **RAS→MEK** (177 robust).
+  *(Refinement: NPM1→Cabo and DNMT3A→Dasatinib do NOT survive genome-wide correction — B5.)*
+- **V9** weak but drug-specific cell-line→patient signal (BeatAML ex-vivo), replicated across GDSC1/GDSC2, robust.
+- **V10/V11** mechanism + transfer are complementary; the shipped engine embodies it.
+- **V13** out-of-distribution distance is a validated confidence gate.
 
-## What is NOT claimed (honest boundaries)
-- ❌ therapy SELECTION (falsified at n=988) ❌ a novel coordinate beyond Ki67+TILs (R_prolif ≈ GGI)
-- ❌ de novo molecule design (Scout-2 = scaffold-hopping; INTC002 = hypothesis, novelty 0.266)
-- ❌ quantitative trial prediction (ODE = directional ranking; 2/6 trials, "5/5" retracted)
-- ❌ RNA-velocity pre-resistance "time machine" (untestable on current data)
-- ❌ validated patient drug predictor (V9/V10 are weak, single cohort, need a 2nd patient cohort)
+## What is NOT claimed / was falsified (honest boundaries)
+- ❌ **human clinical drug prediction** — TESTED on TCGA, well-powered NULL once cancer type controlled (B10).
+- ⚠️ **robust external (PDX) drug-specificity** — fragile/unestablished (B7 p=0.036 → B9 p=0.076).
+- ❌ therapy SELECTION (falsified at n=988) ❌ novel coordinate beyond Ki67+TILs (R_prolif ≈ GGI)
+- ❌ de novo molecule design (Scout-2 = scaffold-hopping; INTC002 = hypothesis) ❌ quantitative trial prediction
+  (ODE directional; 2/6 trials, "5/5" retracted) ❌ RNA-velocity "time machine" (untestable).
+- **Net:** a validated cell-line/ex-vivo drug-response + mechanism engine — NOT a clinical predictor.
 
 ## Repository layout
 ```
@@ -53,11 +55,13 @@ docs/
 src/intercepta/         library: sha256-gated data loaders, splits, metrics, frozen axes
 engine/                 ode/ net/ scouts/ kaalcura/ velocity/ cell_fm/ aml/ synergy_pk/ pipeline/ audit/
                         (142 code files; each module README states its honest status)
-experiments/            B1–B4: pre-registered, permutation-tested, reproduced ×2
+experiments/            B1–B10 + engine validation: pre-registered, permutation-tested, reproduced ×2
 prereg/                 pre-registrations (written before each run)
 verification/           independent AML verification ledger + prereg + reproduction scripts
-papers/                 honest AML response paper ("where ML works, where it doesn't, and why")
+papers/                 intercepta_engine/MANUSCRIPT.md (the honest paper) + AML response paper
+pyproject.toml tests/   installable `intercepta` package + CLI + 10 unit tests
 data/MANIFEST.md        provenance + access class for every external input (nothing committed)
+INTEGRITY_SWEEP.md      transparent record of removed/flagged content
 reproduce.sh requirements.txt
 ```
 
