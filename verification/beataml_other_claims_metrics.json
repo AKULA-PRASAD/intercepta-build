@@ -1,0 +1,34 @@
+{
+  "nras_mek": {
+    "Selumetinib (AZD6244)": {
+      "n_mut": 88,
+      "n_wt": 505,
+      "med_mut": 145.9,
+      "med_wt": 205.8,
+      "p": 3.0527237884799414e-11
+    },
+    "Trametinib (GSK1120212)": {
+      "n_mut": 95,
+      "n_wt": 537,
+      "med_mut": 84.3,
+      "med_wt": 128.4,
+      "p": 6.248710789601938e-10
+    },
+    "CI-1040 (PD184352)": {
+      "n_mut": 86,
+      "n_wt": 511,
+      "med_mut": 158.6,
+      "med_wt": 195.5,
+      "p": 1.6813513127341277e-09
+    }
+  },
+  "dnmt3a_dasatinib": {
+    "reproduce_p": 1.5843738224831383e-05,
+    "n_mut": 132,
+    "n_wt": 509,
+    "ols_dnmt_beta": -23.745197605937676,
+    "ols_dnmt_p": 0.00011509924356807103,
+    "independent": true
+  },
+  "nras_mek_consistent": true
+}

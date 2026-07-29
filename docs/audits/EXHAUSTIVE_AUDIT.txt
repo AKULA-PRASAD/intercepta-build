@@ -1,0 +1,346 @@
+======================================================================
+INTERCEPTA EXHAUSTIVE DEEP AUDIT
+Started: 2026-04-21 12:23
+======================================================================
+
+======================================================================
+LEVEL 1: PARAMETER AUDIT — Every number, every source
+======================================================================
+
+--- Phenotype ODE Parameters ---
+  ✓ [L1] phenotype_ode/r_max: 0.00678 /day — PSA doubling time 102 days, Freedland 2005
+  ✗ [L1] phenotype_ode/alpha_r: 0.4 dimensionless — NONE — chosen by us
+  ~ [L1] phenotype_ode/Emax: 0.153 /day — GDSC kill rate × in vivo correction
+  ✓ [L1] phenotype_ode/beta: 0.000827 /day — RNA velocity within-cluster variance
+  ✓ [L1] phenotype_ode/K: 1.0 normalized — Normalization convention
+  ✗ [L1] phenotype_ode/d_nat: 0.001 /day — CHOSEN — natural death rate
+
+--- Drug PK Parameters ---
+  ✓ [L1] pk_library/docetaxel_Cmax: Cmax derived from dose=75.0mg, published PK
+  ✓ [L1] pk_library/abiraterone_Cmax: Cmax derived from dose=1000.0mg, published PK
+  ✓ [L1] pk_library/olaparib_Cmax: Cmax derived from dose=300.0mg, published PK
+  ✓ [L1] pk_library/enzalutamide_Cmax: Cmax derived from dose=160.0mg, published PK
+  ✓ [L1] pk_library/talazoparib_Cmax: Cmax derived from dose=0.5mg, published PK
+  ✓ [L1] pk_library/ADT_Cmax: Cmax derived from dose=1.0mg, published PK
+  ~ [L1] drug_effect/docetaxel_EC50: EC50 from UNKNOWN source
+  ~ [L1] drug_effect/abiraterone_EC50: EC50 from UNKNOWN source
+  ~ [L1] drug_effect/olaparib_EC50: EC50 from UNKNOWN source
+  ~ [L1] drug_effect/enzalutamide_EC50: EC50 from UNKNOWN source
+  ~ [L1] drug_effect/talazoparib_EC50: EC50 from UNKNOWN source
+  ~ [L1] drug_effect/ADT_EC50: EC50 from UNKNOWN source
+
+--- AML ODE Parameters ---
+  ✓ [L1] aml_ode/r_blast: 0.039 — Raza 1991 (Tc=90h, GF=21%)
+  ~ [L1] aml_ode/d_blast: 0.026 — Derived: r_blast - r_net from OS 90d
+  ✓ [L1] aml_ode/r_lsc: 0.003 — Quiescent LSC doubling ~230 days
+  ✗ [L1] aml_ode/d_lsc: 0.001 — Long-lived assumption
+  ~ [L1] aml_ode/suppress: 0.11 — Derived: N 0.60→0.10 in 90 days
+  ✓ [L1] aml_ode/r_normal: 0.05 — Progenitor cycle ~14 days
+  ~ [L1] aml_ode/d_normal: 0.02 — From steady state: r*0.4
+  ✗ [L1] aml_ode/frac_resistant: 0.15 — ~30% non-responders, conservative
+  ✗ [L1] aml_ode/mu_resistance: 0.001 — Estimated from months of venetoclax exposure
+  ✓ [L1] aml_ode/gcsf_boost: 5.0 — Dale Blood 1993: G-CSF 5-10x
+
+--- Escape Route ODE Parameters ---
+  ✗ [L1] escape_ode/mu_SM: S→Mutant transition — Estimated from relapse prevalence
+  ✗ [L1] escape_ode/mu_SV: S→V7 transition — Estimated from relapse prevalence
+  ✗ [L1] escape_ode/mu_SN: S→NE transition — Estimated from relapse prevalence
+  ✗ [L1] escape_ode/g_mod_N: NE growth modifier 1.3x — Assumed NE grows faster
+
+======================================================================
+LEVEL 2: CLAIM AUDIT — Is each result computed or typed?
+======================================================================
+  ✓ [L2] claims/Doc HR=0.69: ODE solve_ivp output. Not hardcoded.
+  ✓ [L2] claims/Doc+Cis HR=1.00: ODE output. Correctly predicts failure.
+  ✓ [L2] claims/Enza PFS=18.6mo: Unified ODE output.
+  ✓ [L2] claims/AML OS=4.4mo: AML 3-comp ODE output.
+  ✓ [L2] claims/AML 7+3 CR: AML ODE tumor burden drops below 5%.
+  ✓ [L2] claims/NPM1+cabo p=2.9e-12: Mann-Whitney test on BeatAML patient data.
+  ✓ [L2] claims/Bootstrap CI [0.58,0.79]: 200 bootstrap samples.
+  ✓ [L2] claims/KAALCURA AUROC=0.638: sklearn AUROC on GDSC data.
+  ✗ [L2] claims/Pareto rank 1 enza+alis: Pareto math is correct but INPUT scores were typed by us.
+  ✗ [L2] claims/Pharma package 9/9 items: Items 2,4-9 written by humans, not generated.
+  ✗ [L2] claims/197 drugs HR=1.0: HR was OVERWRITTEN, not computed by ODE.
+  ✗ [L2] claims/Temsirolimus rank 16: Escape penalty formula invented by us.
+  ✗ [L2] claims/79% completion: Percentage includes manipulated pieces counted as "done".
+  ✓ [L2] claims/INTC-002 novel molecule: RDKit generates structure, Tanimoto checks novelty.
+  ✓ [L2] claims/INTC-002 no selectivity: Docking scores AURKA -9.3 vs AURKB -9.9. Honest.
+  ✓ [L2] claims/Alisertib discovery genuine: "alisertib" not in code. Found by net traversal.
+  ✓ [L2] claims/Cross-disease 3 candidates: Name matching on drug lists.
+  ✓ [L2] claims/p38 MAPK retracted: FDR correction killed the finding. Honest.
+
+======================================================================
+LEVEL 3: DATA FLOW — Do layers actually connect?
+======================================================================
+  ~ [L3] flow/GDSC→ODE_EC50: EC50 in library but source unclear: ['ec50_min', 'ec50_slope', 'emax', 'hill_n', 'mechanism']
+  ✗ [L3] flow/STRING→escape_routes: Code references STRING: False, unified net: True
+  ✓ [L3] flow/ODE→Pareto_scores: Reads ODE: True. Has hardcoded scores: True
+  ⚠ [L3] flow/Scout1_HR_range: HR range: 0.517-0.897. All <1.0: True
+
+======================================================================
+LEVEL 4: BIOLOGICAL CORRECTNESS
+======================================================================
+  ✓ [L4] biology/AR→AURKA_pathway: Published: Beltran Nat Med 2011, Dardenne Cancer Cell 2016. AR loss → MYCN amplification → AURKA sta
+  ~ [L4] biology/docetaxel_mechanism: ODE models docetaxel as killing cells based on EC50 gradient. Real mechanism: microtubule stabilizat
+  ✓ [L4] biology/AML_3comp_structure: Blast + LSC + Normal competing for marrow space. Lethality from marrow failure (normal < threshold).
+  ✓ [L4] biology/R_prolif_axis: Proliferation genes (MKI67, CCNB1, etc.) → R_prolif. High R_prolif = sensitive to chemo. Published b
+  ✓ [L4] biology/R_emt_axis: EMT genes (VIM, ZEB1, etc.) → R_emt. High R_emt = mesenchymal = resistant to EGFR inhibitors. Publis
+  ✓ [L4] biology/R_ddr_axis: DNA damage repair genes → R_ddr. High R_ddr = sensitive to PARP inhibitors. Published.
+  ✓ [L4] biology/EGFR_prostate_selectivity: EGFR prostate TPM=27, ratio=1.4x. EGFR IS expressed in prostate but is NOT a driver of CRPC.
+  ✓ [L4] biology/NPM1→FLT3_connection: NPM1-FLT3 STRING edge: 1. NPM1 mutations co-occur with FLT3-ITD in 40% of AML. Cabozantinib inhibits
+
+======================================================================
+LEVEL 5: MATHEMATICAL FORMULAS
+======================================================================
+  ✓ [L5] math/Logistic growth: dN/dt = r*N*(1-N/K): Standard population dynamics (Verhulst 1838)
+  ✓ [L5] math/Hill kill: kill = Emax*C^n/(EC50^n+C^n): Standard pharmacodynamics (Hill 1910)
+  ✓ [L5] math/Phenotype drift: diffusion along resista: Fick second law of diffusion, standard PDE
+  ✓ [L5] math/PK: C(t) = Cmax * exp(-ke*t): First-order elimination, standard PK
+  ✓ [L5] math/HR = ctrl_TTP / drug_TTP: Standard survival analysis definition
+  ✓ [L5] math/Bliss independence: E_combo = Ea + Eb - : Bliss 1939, standard synergy model
+  ✓ [L5] math/HSA: E_combo > max(Ea, Eb): Berenbaum 1989, standard
+  ✗ [L5] math/Escape penalty: HR_new = HR_old + (1-HR_: INVENTED BY US. No published derivation.
+  ✗ [L5] math/Drug filter: HR=1.0 if target not expres: Biological principle is sound, but overwriting ODE output is manipulation.
+  ~ [L5] math/Suppress term: d_normal_eff = d_normal +: Biologically motivated (blast suppression of normal hematopoiesis) but suppress=0.11 derived from de
+  ✓ [L5] math/Tanimoto similarity for novelty: Standard cheminformatics metric
+  ✓ [L5] math/SA_Score for synthesizability: Ertl & Schuffenhauer 2009, published algorithm
+  ✓ [L5] math/BH FDR correction: Benjamini-Hochberg 1995, standard statistics
+  ✓ [L5] math/Bootstrap percentile CI: Efron 1979, standard statistics
+
+======================================================================
+LEVEL 6: VALIDATION — Real or circular?
+======================================================================
+  ✓ [L6] validation/Doc HR vs TAX-327: ODE computed HR=0.69. TAX-327 clinical HR=0.76. Parameters set BEFORE comparison. Not circular.
+  ✓ [L6] validation/Doc+Cis failure: ODE computed HR=1.003. All combination trials failed. Parameters same as docetaxel alone.
+  ✓ [L6] validation/Enza PFS vs PREVAIL: Unified ODE computed 18.6mo. PREVAIL: 18.0mo. Same params as docetaxel.
+  ~ [L6] validation/AML OS vs clinical: OS=4.4mo from published params. BUT model structure was iterated until OS was in range.
+  ✓ [L6] validation/KAALCURA AUROC: AUROC computed on GDSC training data. No independent test set. Modest 0.638.
+  ✓ [L6] validation/Bootstrap CI contains clinical: Parameter ranges from data uncertainty, not chosen to contain 0.76.
+  ✓ [L6] validation/Alisertib literature match: Net found AR→AURKA independently. Beltran 2019 and Liadi 2023 validate.
+  ✗ [L6] validation/Temsirolimus rank after filter: We invented the escape penalty formula AFTER seeing temsirolimus was wrong. This is post-hoc fitting
+
+======================================================================
+LEVEL 7: FILE INTEGRITY
+======================================================================
+  ✓ [L7] files/empty_count: 0 empty files, 0 suspiciously small files
+  ✓ [L7] files/json_integrity: 69 JSON files, 0 unparseable
+
+======================================================================
+LEVEL 8: PIPELINE CONNECTIVITY
+======================================================================
+  ✓ [L8] pipeline/disease_name→Open_Targets: Can query any disease name and get genes
+  ✓ [L8] pipeline/genes→STRING_interactions: Can get protein interactions for any gene set
+  ✓ [L8] pipeline/genes→pathway_membership: Can get pathways for any gene
+  ✓ [L8] pipeline/genes→GTEx_selectivity: Can get tissue expression for any gene
+  ✓ [L8] pipeline/genes→ChEMBL_compounds: Can get compounds targeting any gene
+  ~ [L8] pipeline/compound→ODE_simulation: Only works for drugs in PK_LIBRARY (6 drugs). Cannot simulate arbitrary compounds.
+  ~ [L8] pipeline/escape_route→combination: Net traversal works. Drug selection involves human judgment.
+  ⚠ [L8] pipeline/ODE→HR→ranking: ODE predicts all drugs help. No mechanism for failure. Ranking is compromised.
+  ✗ [L8] pipeline/ranking→pharma_package: Pharma package was handwritten, not generated from pipeline.
+  ~ [L8] pipeline/mCRPC_end_to_end: Data→net→escape→ODE works. Ranking→deliverable is human-written.
+  ~ [L8] pipeline/AML_end_to_end: Data→net→statistics works. ODE partially validated. No complete deliverable.
+  ✗ [L8] pipeline/new_disease_end_to_end: Can build net. Cannot run ODE (no PK for arbitrary drugs). Cannot generate deliverable.
+
+======================================================================
+LEVEL 9: VISION GAP ANALYSIS
+======================================================================
+  ☐ [L9] vision/Novel molecule generation (diffusion/tra: Vision says AI generative. We did scaffold hopping. No diffusion model.
+  ☐ [L9] vision/Multi-target generation with selectivity: Vision says generate molecules constrained by net. We cannot do this.
+  ~ [L9] vision/RNA velocity time machine for any patien: Works for GSE137829 mCRPC dataset. Not generalizable to arbitrary scRNA-seq.
+  ~ [L9] vision/Two-population ODE for any disease: Works for mCRPC (phenotype ODE) and AML (3-comp). Not automated for new diseases.
+  ~ [L9] vision/Complete in silico simulation stack (6 l: Docking yes, KAALCURA yes, ODE yes, synergy math only, ADMET rule-based, no retrosynthesis.
+  ✗ [L9] vision/Pharma deliverable with all 10 items: Items exist but most were written by us, not generated by pipeline.
+  ☐ [L9] vision/Self-improving feedback loop: No mechanism for clinical outcome feedback. No active learning.
+  ☐ [L9] vision/Future disease prediction: Vision says predict diseases before emergence. We have pathogen database but no prediction.
+  ☐ [L9] vision/Diagnostic layer (early detection): Vision describes biomarker-based early detection. Not built.
+  ~ [L9] vision/Cross-disease transfer learning: Found 3 cross-disease candidates by name matching. No systematic transfer.
+  ~ [L9] vision/Universal net (all human biology): 15 layers have some data. Most are proxy (STRING-derived), not primary experimental data.
+  ✗ [L9] vision/Automated pipeline (disease name → drug : Requires manual intervention at every step. No single-command pipeline.
+
+======================================================================
+LEVEL 10: CODE QUALITY
+======================================================================
+  ⚠ [L10] code/hardcoded_results: 14 lines with hardcoded result values
+    truth_audit.py:213: print(f'    HR: {hr:.3f} (clinical TAX-327: 0.76)')
+    truth_audit.py:217: f'Uses GDSC EC50 + published PK. Clinical 0.76 not used as i
+    truth_audit.py:322: 'ODE-computed PFS=18.6mo for enzalutamide is real computatio
+    truth_audit.py:368: REAL('AML untreated OS = 4.4mo from 3-compartment competitio
+    truth_audit.py:413: f'Clinical HR 0.76 falls inside CI. This is real statistical
+
+======================================================================
+EXHAUSTIVE AUDIT SUMMARY
+======================================================================
+
+  ✓ REAL: 35
+    [L1] phenotype_ode/r_max
+    [L1] phenotype_ode/beta
+    [L1] pk_library/docetaxel_Cmax
+    [L1] pk_library/abiraterone_Cmax
+    [L1] pk_library/olaparib_Cmax
+    [L1] pk_library/enzalutamide_Cmax
+    [L1] pk_library/talazoparib_Cmax
+    [L1] pk_library/ADT_Cmax
+    [L1] aml_ode/r_blast
+    [L1] aml_ode/r_lsc
+    [L1] aml_ode/r_normal
+    [L1] aml_ode/gcsf_boost
+    [L4] biology/AR→AURKA_pathway
+    [L4] biology/AML_3comp_structure
+    [L4] biology/R_prolif_axis
+    [L4] biology/R_emt_axis
+    [L4] biology/R_ddr_axis
+    [L4] biology/NPM1→FLT3_connection
+    [L5] math/Logistic growth: dN/dt = r*N*(1-N/K)
+    [L5] math/Hill kill: kill = Emax*C^n/(EC50^n+C^n)
+    [L5] math/Phenotype drift: diffusion along resista
+    [L5] math/PK: C(t) = Cmax * exp(-ke*t)
+    [L5] math/HR = ctrl_TTP / drug_TTP
+    [L5] math/Bliss independence: E_combo = Ea + Eb - 
+    [L5] math/HSA: E_combo > max(Ea, Eb)
+    [L5] math/Tanimoto similarity for novelty
+    [L5] math/SA_Score for synthesizability
+    [L5] math/BH FDR correction
+    [L5] math/Bootstrap percentile CI
+    [L6] validation/Doc HR vs TAX-327
+    [L6] validation/Doc+Cis failure
+    [L6] validation/Enza PFS vs PREVAIL
+    [L6] validation/KAALCURA AUROC
+    [L6] validation/Bootstrap CI contains clinical
+    [L6] validation/Alisertib literature match
+
+  ✓ OK: 4
+    [L1] phenotype_ode/K
+    [L4] biology/EGFR_prostate_selectivity
+    [L7] files/empty_count
+    [L7] files/json_integrity
+
+  ✓ CONNECTED: 6
+    [L3] flow/ODE→Pareto_scores
+    [L8] pipeline/disease_name→Open_Targets
+    [L8] pipeline/genes→STRING_interactions
+    [L8] pipeline/genes→pathway_membership
+    [L8] pipeline/genes→GTEx_selectivity
+    [L8] pipeline/genes→ChEMBL_compounds
+
+  ✓ HONEST: 13
+    [L2] claims/Doc HR=0.69
+    [L2] claims/Doc+Cis HR=1.00
+    [L2] claims/Enza PFS=18.6mo
+    [L2] claims/AML OS=4.4mo
+    [L2] claims/AML 7+3 CR
+    [L2] claims/NPM1+cabo p=2.9e-12
+    [L2] claims/Bootstrap CI [0.58,0.79]
+    [L2] claims/KAALCURA AUROC=0.638
+    [L2] claims/INTC-002 novel molecule
+    [L2] claims/INTC-002 no selectivity
+    [L2] claims/Alisertib discovery genuine
+    [L2] claims/Cross-disease 3 candidates
+    [L2] claims/p38 MAPK retracted
+
+  ~ MIXED: 12
+    [L1] phenotype_ode/Emax
+    [L1] drug_effect/docetaxel_EC50
+    [L1] drug_effect/abiraterone_EC50
+    [L1] drug_effect/olaparib_EC50
+    [L1] drug_effect/enzalutamide_EC50
+    [L1] drug_effect/talazoparib_EC50
+    [L1] drug_effect/ADT_EC50
+    [L1] aml_ode/d_blast
+    [L1] aml_ode/suppress
+    [L1] aml_ode/d_normal
+    [L5] math/Suppress term: d_normal_eff = d_normal +
+    [L6] validation/AML OS vs clinical
+
+  ~ PARTIAL: 11
+    [L3] flow/GDSC→ODE_EC50
+    [L4] biology/docetaxel_mechanism
+    [L8] pipeline/compound→ODE_simulation
+    [L8] pipeline/escape_route→combination
+    [L8] pipeline/mCRPC_end_to_end
+    [L8] pipeline/AML_end_to_end
+    [L9] vision/RNA velocity time machine for any patien
+    [L9] vision/Two-population ODE for any disease
+    [L9] vision/Complete in silico simulation stack (6 l
+    [L9] vision/Cross-disease transfer learning
+    [L9] vision/Universal net (all human biology)
+
+  ✗ MANIPULATED: 12
+    [L1] phenotype_ode/alpha_r
+    [L1] phenotype_ode/d_nat
+    [L1] aml_ode/d_lsc
+    [L1] aml_ode/frac_resistant
+    [L1] aml_ode/mu_resistance
+    [L1] escape_ode/mu_SM
+    [L1] escape_ode/mu_SV
+    [L1] escape_ode/mu_SN
+    [L1] escape_ode/g_mod_N
+    [L5] math/Escape penalty: HR_new = HR_old + (1-HR_
+    [L5] math/Drug filter: HR=1.0 if target not expres
+    [L9] vision/Pharma deliverable with all 10 items
+
+  ✗ DISHONEST: 6
+    [L2] claims/Pareto rank 1 enza+alis
+    [L2] claims/Pharma package 9/9 items
+    [L2] claims/197 drugs HR=1.0
+    [L2] claims/Temsirolimus rank 16
+    [L2] claims/79% completion
+    [L6] validation/Temsirolimus rank after filter
+
+  ⚠ BUG: 3
+    [L3] flow/Scout1_HR_range
+    [L8] pipeline/ODE→HR→ranking
+    [L10] code/hardcoded_results
+
+  ✗ BROKEN: 4
+    [L3] flow/STRING→escape_routes
+    [L8] pipeline/ranking→pharma_package
+    [L8] pipeline/new_disease_end_to_end
+    [L9] vision/Automated pipeline (disease name → drug 
+
+  ☐ MISSING: 5
+    [L9] vision/Novel molecule generation (diffusion/tra
+    [L9] vision/Multi-target generation with selectivity
+    [L9] vision/Self-improving feedback loop
+    [L9] vision/Future disease prediction
+    [L9] vision/Diagnostic layer (early detection)
+
+  TOTAL CHECKS: 111
+  GOOD (real/ok/connected/honest): 58
+  MIXED (part real, part human): 23
+  BAD (manipulated/bug/broken/missing): 30
+  HEALTH: 58/111 = 52%
+
+======================================================================
+BLOCKERS TO VISION SUCCESS (must fix before building more)
+======================================================================
+  1. [L9] vision/Pharma deliverable with all 10 items
+     Items exist but most were written by us, not generated by pipeline.
+  2. [L3] flow/Scout1_HR_range
+     HR range: 0.517-0.897. All <1.0: True
+  3. [L8] pipeline/ODE→HR→ranking
+     ODE predicts all drugs help. No mechanism for failure. Ranking is compromised.
+  4. [L3] flow/STRING→escape_routes
+     Code references STRING: False, unified net: True
+  5. [L8] pipeline/ranking→pharma_package
+     Pharma package was handwritten, not generated from pipeline.
+  6. [L8] pipeline/new_disease_end_to_end
+     Can build net. Cannot run ODE (no PK for arbitrary drugs). Cannot generate deliv
+  7. [L9] vision/Automated pipeline (disease name → drug 
+     Requires manual intervention at every step. No single-command pipeline.
+  8. [L9] vision/Novel molecule generation (diffusion/tra
+     Vision says AI generative. We did scaffold hopping. No diffusion model.
+  9. [L9] vision/Multi-target generation with selectivity
+     Vision says generate molecules constrained by net. We cannot do this.
+  10. [L9] vision/Self-improving feedback loop
+     No mechanism for clinical outcome feedback. No active learning.
+  11. [L9] vision/Future disease prediction
+     Vision says predict diseases before emergence. We have pathogen database but no 
+  12. [L9] vision/Diagnostic layer (early detection)
+     Vision describes biomarker-based early detection. Not built.
+
+  Total blockers: 12
+
+  FIX THESE 12 BLOCKERS BEFORE WRITING ANY NEW CODE.
+
+Saved: results/exhaustive_audit.json
+Also save full output: python3 exhaustive_audit.py 2>&1 | tee ../EXHAUSTIVE_AUDIT.txt

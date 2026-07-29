@@ -1,0 +1,26 @@
+{
+  "reproduce_p": 4.441687715216056e-11,
+  "n_mut": 157,
+  "n_wt": 425,
+  "median_mut": 144.54215995906,
+  "median_wt": 185.333807073655,
+  "flt3itd_p": 5.138189816452706e-21,
+  "within_itdneg_npm1_p": 0.003108738708862606,
+  "ols_npm1_beta": -21.933514778060967,
+  "ols_npm1_p": 3.2808879829078064e-05,
+  "ols_itd_beta": -49.767012066509885,
+  "ols_itd_p": 8.283291081709851e-19,
+  "cooccurrence": {
+    "0.0": {
+      "0.0": 357,
+      "1.0": 84
+    },
+    "1.0": {
+      "0.0": 68,
+      "1.0": 73
+    }
+  },
+  "reproduced": true,
+  "npm1_independent": true,
+  "verdict": "NPM1 INDEPENDENT of FLT3-ITD (survives)"
+}

@@ -1,0 +1,6 @@
+{
+  "test": "NPM1->Cabozantinib internal split-replication (deterministic md5 subject-id parity)",
+  "half0": {"n_mut": 82, "n_wt": 211, "median_mut": 147.6, "median_wt": 180.4, "MW_p": 8.634e-06, "OLS_NPM1_adjITD_p": 6.584e-03, "OLS_beta": -19.6},
+  "half1": {"n_mut": 75, "n_wt": 214, "median_mut": 137.9, "median_wt": 188.4, "MW_p": 1.240e-06, "OLS_NPM1_adjITD_p": 1.598e-03, "OLS_beta": -24.4},
+  "verdict": "REPLICATES in both independent halves: correct direction, significant unadjusted and FLT3-ITD-adjusted"
+}
