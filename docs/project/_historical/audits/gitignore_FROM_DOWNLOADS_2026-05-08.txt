@@ -1,0 +1,84 @@
+# =====================================================================
+# INTERCEPTA .gitignore
+# Maintainer: Prasad Akula (CEO) + Claude (CSO)
+# Last updated: 2026-05-08 (workstream-b-phase0-complete + hygiene session)
+# =====================================================================
+# Rule of thumb:
+#   - Code, configs, manifests, docs, small results -> COMMIT
+#   - Bulk data (h5ad, BAM, FASTQ, TCGA), envs, logs, temp -> IGNORE
+#   - Re-downloadable from public sources -> IGNORE
+# =====================================================================
+
+# ── Bulk scientific data (re-downloadable from GDC/GEO/Zenodo) ─────────
+data/gdsc/
+data/gtex_median_tpm.gct.gz
+data/nsclc/                      # 80 GB, downloads via slurm scripts
+data/scrna/GSE141445/
+data/scrna/GSE137829_RAW.tar
+data/scrna/*.tar
+data/scrna/GSE137829/*.gz
+data/velocity/genome/
+data/velocity/fastq/
+data/velocity/aligned/
+
+# ── Manifests intentionally tracked separately ─────────────────────────
+# data/manifests/ and data/manifests_v2/ are small (TSV/TXT, ~500KB total)
+# and serve as critical reproducibility provenance. They are committed.
+# (No exclusion rule needed; just documenting intent.)
+
+# ── Conda envs (should never be in git) ────────────────────────────────
+envs/
+*.conda
+.conda/
+
+# ── Slurm logs and outputs ─────────────────────────────────────────────
+logs/
+*.out                            # slurm stdout logs
+*.err                            # slurm stderr logs
+slurm-*.out
+
+# ── Slurm temporary working dirs ───────────────────────────────────────
+fasterq.tmp.*
+*.tmp/
+
+# ── Large h5ad results (re-computable; don't bloat git) ────────────────
+*.h5ad
+!configs/*.h5ad                  # if any small ref h5ad is kept in configs/
+
+# ── Bulk archives (re-downloadable) ────────────────────────────────────
+*.tar
+*.tar.gz
+*.tar.xz
+!docs/*.tar*                     # exception: any docs archives if needed
+
+# ── Pre-existing ignores ───────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+venv/
+archive/
+archive_v2/
+.DS_Store
+code/velocity_log.txt
+round2_aml/data/
+
+# ── Editor / IDE ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.ipynb_checkpoints/
+
+# ── Large committed-once-by-mistake files (warn but don't re-commit) ──
+# results/mcrpc_unified_net.json is 78 MB. It's already in git history.
+# Future cleanup: migrate to git-lfs in dedicated session.
+
+# ── Macros: things ALWAYS committed even if matched above ─────────────
+!code/**/*.py
+!code/**/*.slurm
+!code/**/*.sh
+!configs/**
+!docs/**
+!*.md
+!.gitignore
+!requirements.txt

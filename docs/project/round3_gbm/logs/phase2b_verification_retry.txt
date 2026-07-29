@@ -1,0 +1,83 @@
+======================================================================
+Phase 2B verification — retry with fixed aliases parser
+======================================================================
+
+--- Build GBM net ---
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.1): 458
+  Pathways involved: 1530
+  Metabolites linked: 0
+  Drug targets (with compounds): 14
+  Immune-relevant genes: 299
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+Build time: 1.5s
+
+--- Apply populate_string_interactions ---
+  STRING aliases loaded: 19,278 ENSP→symbol entries, 19,272 unique symbols
+  STRING edges loaded: 473,860 of 13,715,404 edges at score>=700
+  populate_string_interactions: 445/458 genes enriched, 39385 total edges added
+Enrichment time: 5.4s
+Coverage: 445/458 = 97.2%
+
+EGFR n_interactions: 502
+EGFR top 15 partners:
+  PTPN11           score=0.999
+  HBEGF            score=0.999
+  NRG1             score=0.999
+  TGFA             score=0.999
+  ERBB2            score=0.999
+  DCN              score=0.999
+  SHC1             score=0.999
+  SOS1             score=0.999
+  PIK3CA           score=0.999
+  ERBB3            score=0.999
+  GRB2             score=0.999
+  EPGN             score=0.999
+  CAV1             score=0.999
+  MUC1             score=0.999
+  BTC              score=0.999
+
+--- Canonical cancer biology check ---
+  ✓ EGFR ↔ MET
+  ✓ EGFR ↔ ERBB2
+  ✓ EGFR ↔ HRAS
+  ✓ EGFR ↔ GRB2
+  ✓ PTEN ↔ PIK3CA
+  ✓ TP53 ↔ MDM2
+  ✓ BRAF ↔ MAP2K1
+  ✓ AKT1 ↔ PIK3CA
+  ✓ TP53 ↔ CDKN1A
+  ✓ RB1 ↔ E2F1
+  ✓ CDKN2A ↔ CDK4
+  ✓ IDH1 ↔ IDH2
+
+Canonical edges found: 12/12
+Unique gene symbols in ensp_to_symbol: 19,270 (expected ~20K)
+✓ EGFR ↔ MET edge present
+✓ Canonical biology PASS: 12/12 ≥ 8
+✓ Coverage PASS: 445 ≥ 250
+
+Saved: gbm_disease_net_phase2b.json
+
+======================================================================
+Phase 2B verification COMPLETE. Gaps 6 + 8 closed.
+======================================================================

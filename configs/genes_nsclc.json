@@ -1,0 +1,51 @@
+{
+  "_metadata": {
+    "spec": "INTERCEPTA_Workstream_B_NSCLC_Specification.md (tag: workstream-b-spec-locked)",
+    "schema_version": "1.0",
+    "created": "2026-05-08",
+    "source": "Top genes from disease_net_non-small_cell_lung_carcinoma.json (Open Targets, 500-gene curated NSCLC list) + spec-required LUSC-specific additions (FGFR1, SOX2, NFE2L2). Curated subset of 33 actionable NSCLC drug targets.",
+    "disease_id": "nsclc"
+  },
+
+  "disease_id": "nsclc",
+  "disease_full_name": "Non-Small Cell Lung Carcinoma (LUAD + LUSC)",
+
+  "key_target_genes": [
+    "EGFR", "KRAS", "ERBB2", "ALK", "MET",
+    "BRAF", "ROS1", "RET", "NTRK1", "NTRK2", "NTRK3",
+    "ERBB4", "PIK3CA", "AKT1", "MTOR",
+    "TP53", "RB1", "STK11", "KEAP1", "NFE2L2",
+    "CDKN2A", "MYC",
+    "VEGFA", "KDR", "FLT4",
+    "CD274", "PDCD1",
+    "FGFR1", "FGFR2", "FGFR3",
+    "SOX2",
+    "BCL2", "MCL1"
+  ],
+
+  "n_genes": 33,
+
+  "gene_categories": {
+    "luad_drivers": ["EGFR", "KRAS", "ALK", "MET", "BRAF", "ROS1", "RET", "ERBB2", "NTRK1", "NTRK2", "NTRK3", "ERBB4"],
+    "lusc_drivers": ["FGFR1", "SOX2", "NFE2L2", "KEAP1", "CDKN2A"],
+    "tumor_suppressors": ["TP53", "RB1", "STK11", "CDKN2A", "KEAP1"],
+    "pi3k_mtor_pathway": ["PIK3CA", "AKT1", "MTOR"],
+    "rtk_signaling": ["EGFR", "ERBB2", "ERBB4", "ALK", "MET", "ROS1", "RET", "FGFR1", "FGFR2", "FGFR3", "NTRK1", "NTRK2", "NTRK3"],
+    "ras_mapk_pathway": ["KRAS", "BRAF"],
+    "angiogenesis": ["VEGFA", "KDR", "FLT4"],
+    "immune_checkpoint": ["CD274", "PDCD1"],
+    "anti_apoptotic": ["BCL2", "MCL1"],
+    "transcription": ["MYC", "SOX2"],
+    "oxidative_stress": ["NFE2L2", "KEAP1"]
+  },
+
+  "subtype_specific_notes": {
+    "_description": "Per spec Section 2 H5 (LUAD vs LUSC distinguishability), some genes are subtype-enriched.",
+    "luad_enriched": ["EGFR", "KRAS", "ALK", "ROS1", "RET", "ERBB2", "MET"],
+    "lusc_enriched": ["FGFR1", "SOX2", "NFE2L2", "KEAP1", "CDKN2A"],
+    "shared": ["TP53", "RB1", "PIK3CA", "AKT1", "MTOR", "MYC", "VEGFA", "CD274", "PDCD1", "BCL2", "MCL1"]
+  },
+
+  "open_targets_full_size": 500,
+  "open_targets_path": "results/disease_net_non-small_cell_lung_carcinoma.json"
+}

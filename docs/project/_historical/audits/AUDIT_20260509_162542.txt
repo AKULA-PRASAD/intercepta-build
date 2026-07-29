@@ -1,0 +1,380 @@
+================================================================
+INTERCEPTA Downloads-vs-Project Audit Report
+Generated: Sat May  9 16:25:42 EDT 2026
+Downloads: /Users/kalki/Downloads
+Project:   /Users/kalki/INTERCEPTA
+================================================================
+
+SUMMARY
+-------
+Downloads files scanned: 584
+Project files scanned:   751
+Exact duplicates:        49  (SAFE to delete from Downloads)
+Name-matches-differ:     19  (need human judgment)
+Downloads-only:          516  (review individually)
+
+
+================================================================
+CATEGORY 1: EXACT DUPLICATES
+Files where Downloads/<file> has identical SHA256 to a project file.
+These are 100% safe to delete from Downloads — content is preserved in project.
+Sorted by size (largest first) so you see the biggest space savings.
+================================================================
+
+  [268.3 MB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_waves1to4_norm_exp_dbgap.txt
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/beataml_waves1to4_norm_exp_dbgap.txt
+
+  [116.8 MB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_waves1to4_counts_dbgap.txt
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/beataml_waves1to4_counts_dbgap.txt
+
+  [47.1 MB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_wv1to4_raw_inhibitor_v4_dbgap.txt
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/beataml_wv1to4_raw_inhibitor_v4_dbgap.txt
+
+  [20.3 MB]  /Users/kalki/Downloads/GDSC2_fitted_dose_response_27Oct23.xlsx
+    -> matches: /Users/kalki/INTERCEPTA/data/gdsc/GDSC2_fitted_dose_response.xlsx
+
+  [18.2 MB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_probit_curve_fits_v4_dbgap.txt
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/beataml_probit_curve_fits_v4_dbgap.txt
+
+  [3.5 MB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_wes_wv1to4_mutations_dbgap.txt
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/beataml_wes_wv1to4_mutations_dbgap.txt
+
+  [476.8 KB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_wv1to4_clinical.xlsx
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/beataml_wv1to4_clinical.xlsx
+
+  [362.3 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/aml_net_round22a_output.txt
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_round22a_build.txt
+
+  [99.5 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_part4_test.py
+    -> matches: /Users/kalki/INTERCEPTA/intercepta_part4_test.py
+
+  [79.0 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_part2_test.py
+    -> matches: /Users/kalki/INTERCEPTA/intercepta_part2_test.py
+
+  [70.3 KB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_waves1to4_sample_mapping.xlsx
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/beataml_waves1to4_sample_mapping.xlsx
+
+  [67.3 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_part1_test.py
+    -> matches: /Users/kalki/INTERCEPTA/intercepta_part1_test.py
+
+  [64.5 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_100_test.py
+    -> matches: /Users/kalki/INTERCEPTA/intercepta_100_test.py
+
+  [57.9 KB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_drug_families.xlsx
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/beataml_drug_families.xlsx
+
+  [55.7 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_part6_test.py
+    -> matches: /Users/kalki/INTERCEPTA/intercepta_part6_test.py
+
+  [50.0 KB]  /Users/kalki/Downloads/beataml2.0_data-2.0/wgcna/merged_older_wgcna_kme.RData
+    -> matches: /Users/kalki/INTERCEPTA/round2_aml/data/beataml2.0_data-2.0/wgcna/merged_older_wgcna_kme.RData
+
+  [46.9 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_part5_test.py
+    -> matches: /Users/kalki/INTERCEPTA/intercepta_part5_test.py
+
+  [43.4 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_part3_test.py
+    -> matches: /Users/kalki/INTERCEPTA/intercepta_part3_test.py
+
+  [38.5 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_44_test.py
+    -> matches: /Users/kalki/INTERCEPTA/intercepta_44_test.py
+
+  [33.3 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/vision_alignment_audit.py
+    -> matches: /Users/kalki/INTERCEPTA/code/vision_alignment_audit.py
+
+  [31.5 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/exhaustive_audit.py
+    -> matches: /Users/kalki/INTERCEPTA/code/exhaustive_audit.py
+
+  [30.0 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_three_mechanism_ode.py
+    -> matches: /Users/kalki/INTERCEPTA/code/intercepta_three_mechanism_ode.py
+
+  [27.1 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_capability_test.py
+    -> matches: /Users/kalki/INTERCEPTA/code/intercepta_capability_test.py
+
+  [24.0 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/truth_audit.py
+    -> matches: /Users/kalki/INTERCEPTA/code/truth_audit.py
+
+  [22.6 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/pre_rebuild_audit.py
+    -> matches: /Users/kalki/INTERCEPTA/code/pre_rebuild_audit.py
+
+  [12.7 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/kaalcura_step2_validate.py
+    -> matches: /Users/kalki/INTERCEPTA/code/kaalcura_step2_validate.py
+
+  [12.0 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/kaalcura_step2_validate_fixed.py
+    -> matches: /Users/kalki/INTERCEPTA/code/kaalcura_step2_validate_fixed.py
+
+  [9.0 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/kaalcura_revalidate.py
+    -> matches: /Users/kalki/INTERCEPTA/code/kaalcura_revalidate.py
+
+  [8.3 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/MASTER_FIXES.md
+    -> matches: /Users/kalki/INTERCEPTA/MASTER_FIXES.md
+
+  [7.3 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/hr_estimator_fixed.py
+    -> matches: /Users/kalki/INTERCEPTA/code/hr_estimator_fixed.py
+
+  [7.1 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/bootstrap_rerun.py
+    -> matches: /Users/kalki/INTERCEPTA/code/bootstrap_rerun.py
+
+  [6.3 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/scDrugMap_Wang_2025.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/scDrugMap_Wang_2025.md
+
+  [6.2 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/build_aml_net.py
+    -> matches: /Users/kalki/INTERCEPTA/code/build_aml_net.py
+
+  [5.4 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/download_tcga_v2.slurm
+    -> matches: /Users/kalki/INTERCEPTA/code/slurm/download_tcga_v2.slurm
+
+  [5.1 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/INDEX.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/INDEX.md
+
+  [4.8 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/Empirical_Evaluation_Elmarakeby_2025.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/Empirical_Evaluation_Elmarakeby_2025.md
+
+  [4.6 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/CancerFoundation_Theus_2024.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/CancerFoundation_Theus_2024.md
+
+  [4.4 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/LLM4Cell_Survey_2025.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/LLM4Cell_Survey_2025.md
+
+  [4.1 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/FM_Interpretability_Critique_2602.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/FM_Interpretability_Critique_2602.md
+
+  [3.8 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/UCE_Rosen_2023.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/UCE_Rosen_2023.md
+
+  [3.8 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/scGPT_Cui_2024.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/scGPT_Cui_2024.md
+
+  [3.4 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/UCell_Andreatta_Carmona_2021.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/UCell_Andreatta_Carmona_2021.md
+
+  [3.1 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/scFoundation_Hao_2024.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/scFoundation_Hao_2024.md
+
+  [3.1 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/Noureen_Signature_Benchmark_2022.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/Noureen_Signature_Benchmark_2022.md
+
+  [3.1 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/scRank_Cheng_2024.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/scRank_Cheng_2024.md
+
+  [2.9 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/scAgents_ICML_2025.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/scAgents_ICML_2025.md
+
+  [2.7 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/scAgent_Mao_2025.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/scAgent_Mao_2025.md
+
+  [2.5 KB]  /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/paper_notes/CellAgent_Xiao_2025.md
+    -> matches: /Users/kalki/INTERCEPTA/docs/research/literature/notes/CellAgent_Xiao_2025.md
+
+  [2.3 KB]  /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/kaalcura_step1_build_mapping.py
+    -> matches: /Users/kalki/INTERCEPTA/code/kaalcura_step1_build_mapping.py
+
+  TOTAL RECOVERABLE FROM CATEGORY 1: 476.0 MB
+
+
+================================================================
+CATEGORY 2: NAME MATCHES, CONTENT DIFFERS
+Same filename in both Downloads and project, but content is different.
+Probably one is a newer/older version of the other.
+REQUIRES HUMAN REVIEW — which one is canonical?
+================================================================
+
+  Downloads [1.4 MB]: /Users/kalki/Downloads/KAALI.pdf
+  Project   [251.5 KB]: /Users/kalki/INTERCEPTA/docs/KAALI.pdf
+
+  Downloads [47.7 KB]: /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_phenotype_ode_v1.py
+  Project   [48.1 KB]: /Users/kalki/INTERCEPTA/code/intercepta_phenotype_ode_v1.py
+
+  Downloads [41.0 KB]: /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/intercepta_pipeline.py
+  Project   [42.2 KB]: /Users/kalki/INTERCEPTA/code/intercepta_pipeline.py
+
+  Downloads [32.4 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/06_architecture.md
+  Project   [32.3 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/06_architecture.md
+
+  Downloads [25.4 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/07_capabilities.md
+  Project   [25.3 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/07_capabilities.md
+
+  Downloads [21.7 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/16_risks.md
+  Project   [21.6 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/16_risks.md
+
+  Downloads [21.6 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/12_operations.md
+  Project   [21.6 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/12_operations.md
+
+  Downloads [21.3 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/11_validation.md
+  Project   [21.2 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/11_validation.md
+
+  Downloads [21.2 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/14_team.md
+  Project   [21.2 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/14_team.md
+
+  Downloads [20.4 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/09_scientific_honesty.md
+  Project   [20.4 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/09_scientific_honesty.md
+
+  Downloads [20.1 KB]: /Users/kalki/Downloads/INTERCEPTA_Fullest_Vision_Research_Charter_v1.0.md
+  Project   [23.3 KB]: /Users/kalki/INTERCEPTA/docs/research/INTERCEPTA_Fullest_Vision_Research_Charter_v1.0.md
+
+  Downloads [19.7 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/15_sustainability.md
+  Project   [19.7 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/15_sustainability.md
+
+  Downloads [18.9 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/17_evolution.md
+  Project   [18.8 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/17_evolution.md
+
+  Downloads [17.7 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/08_deliverables.md
+  Project   [17.7 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/08_deliverables.md
+
+  Downloads [17.4 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/13_implementation.md
+  Project   [17.4 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/13_implementation.md
+
+  Downloads [17.2 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/10_dynamic_universality.md
+  Project   [17.1 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/10_dynamic_universality.md
+
+  Downloads [11.3 KB]: /Users/kalki/Downloads/intercepta_charter_v2_chapters_06-18/18_founders_commitment.md
+  Project   [11.2 KB]: /Users/kalki/INTERCEPTA/docs/charter/chapters/18_founders_commitment.md
+
+  Downloads [5.7 KB]: /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-08/CLAUDE.md
+  Project   [6.8 KB]: /Users/kalki/INTERCEPTA/CLAUDE.md
+
+  Downloads [5.2 KB]: /Users/kalki/Downloads/INTERCEPTA_overnight_2026-05-09/README.md
+  Project   [743 B]: /Users/kalki/INTERCEPTA/docs/research/synthesis/README.md
+
+
+
+================================================================
+CATEGORY 3: DOWNLOADS-ONLY (no project counterpart)
+These exist in Downloads but not in the project at all.
+Could be: archives, source materials, reference docs we haven't
+         integrated yet, OR old artifacts safe to delete.
+REQUIRES HUMAN REVIEW — keep, integrate into project, or delete?
+Sorted by size (largest first).
+================================================================
+
+  [364.6 MB]  /Users/kalki/Downloads/MicrosoftTeams.pkg
+  [301.9 MB]  /Users/kalki/Downloads/Claude-2.dmg
+  [292.1 MB]  /Users/kalki/Downloads/Cell_line_RMA_proc_basalExp.txt
+  [240.6 MB]  /Users/kalki/Downloads/ChatGPT_Atlas.dmg
+  [237.1 MB]  /Users/kalki/Downloads/Claude.dmg
+  [178.8 MB]  /Users/kalki/Downloads/obs-studio-32.1.1-macos-apple.dmg
+  [153.4 MB]  /Users/kalki/Downloads/beataml2.0_v2.zip
+  [124.3 MB]  /Users/kalki/Downloads/tsetup.6.4.2.dmg
+  [96.7 MB]  /Users/kalki/Downloads/R-4.5.2-arm64.pkg
+  [53.8 MB]  /Users/kalki/Downloads/Zoom.pkg
+  [41.6 MB]  /Users/kalki/Downloads/dokumen.pub_the-biostar-handbook-2nbsped.pdf
+  [37.1 MB]  /Users/kalki/Downloads/DA5030.LogisticRegression.Akula.zip
+  [33.0 MB]  /Users/kalki/Downloads/The_Explainer.mp4
+  [29.3 MB]  /Users/kalki/Downloads/clinvar_conflicting.csv
+  [18.4 MB]  /Users/kalki/Downloads/ScienceDirect_files_10Mar2026_04-38-27.zip
+  [14.2 MB]  /Users/kalki/Downloads/hey i have few chunks of codes i will paste one by one can you trurn….pdf
+  [13.0 MB]  /Users/kalki/Downloads/ScienceDirect_files_10Mar2026_04-38-27/1-s2.0-S1535610819300376-mmc10.pdf
+  [8.7 MB]  /Users/kalki/Downloads/GSE135222_GEO_RNA-seq_omicslab_exp.tsv
+  [7.3 MB]  /Users/kalki/Downloads/ScienceDirect_files_10Mar2026_04-38-27/1-s2.0-S1535610819300376-mmc1.pdf
+  [7.1 MB]  /Users/kalki/Downloads/Business pitch deck main.pptx
+  [6.8 MB]  /Users/kalki/Downloads/Business pitch deck (4).pptx
+  [6.8 MB]  /Users/kalki/Downloads/Business pitch deck (3).pptx
+  [6.8 MB]  /Users/kalki/Downloads/BIOT5219 Final Primer Business Pitch_Gwyn_Asmitha_Tiyasha_Prasad.pptx
+  [6.8 MB]  /Users/kalki/Downloads/BIOT5219 Final Primer B   usiness Pitch_Gwyn_Asmitha_Tiyasha_Prasad.pptx
+  [6.6 MB]  /Users/kalki/Downloads/KAALI_sub_chat.pdf
+  [6.5 MB]  /Users/kalki/Downloads/Business pitch deck (2).pptx
+  [6.5 MB]  /Users/kalki/Downloads/Business pitch deck (1).pptx
+  [6.4 MB]  /Users/kalki/Downloads/files-8/NeoCARTa_Bio_Funding_FINAL.pptx
+  [6.4 MB]  /Users/kalki/Downloads/NeoCARTa_Funding_COMPREHENSIVE_ANIMATED.pptx
+  [6.4 MB]  /Users/kalki/Downloads/NeoCARTa_Funding_COMPREHENSIVE_ANIMATED copy.pptx
+  [6.3 MB]  /Users/kalki/Downloads/KAALI_chat.pdf
+  [6.1 MB]  /Users/kalki/Downloads/AkulaP.DA5030.Project_1.html
+  [5.9 MB]  /Users/kalki/Downloads/41388_2020_1528_MOESM1_ESM.docx
+  [5.6 MB]  /Users/kalki/Downloads/Akula_DA5030_SignatureProject.html
+  [5.5 MB]  /Users/kalki/Downloads/AkulaP_DA5030_Project-3_2.html
+  [5.4 MB]  /Users/kalki/Downloads/AkulaP_DA5030_Project_11_3.html
+  [5.3 MB]  /Users/kalki/Downloads/AkulaP.DA5030.Project_3.html
+  [5.3 MB]  /Users/kalki/Downloads/AkulaP_DA5030_Project_11_2.html
+  [5.1 MB]  /Users/kalki/Downloads/AkulaP_DA5030_Project.html
+  [4.8 MB]  /Users/kalki/Downloads/s41388-020-01528-0.pdf
+  [4.6 MB]  /Users/kalki/Downloads/KAALI_convo.pdf
+  [4.4 MB]  /Users/kalki/Downloads/DA5030.LogisticRegression.Akula/bank-term-deposit-marketing-full.csv
+  [4.4 MB]  /Users/kalki/Downloads/DA5030.DecisionTrees.Akula/bank-term-deposit-marketing-full.csv
+  [4.1 MB]  /Users/kalki/Downloads/You said.pdf
+  [3.5 MB]  /Users/kalki/Downloads/DiabetesDatasetWithMissingValues (1).csv
+  [3.5 MB]  /Users/kalki/Downloads/DA5030.kNN.Akula/DiabetesDatasetWithMissingValues.csv
+  [3.4 MB]  /Users/kalki/Downloads/DA5030.DecisionTrees.Akula/-Da5030.decisiontrees.akula.html
+  [2.9 MB]  /Users/kalki/Downloads/Kymera eczema drug succeeds in early trial, could rival Dupixent | STAT.pdf
+  [2.8 MB]  /Users/kalki/Downloads/Distinct Immune Cell Populations Define Response to Anti-PD-1 Monotherapy and Anti-PD-1:Anti-CTLA-4 Combined Therapy - ScienceDirect.pdf
+  [2.7 MB]  /Users/kalki/Downloads/ new one .pdf
+  [2.7 MB]  /Users/kalki/Downloads/ nbvhn.docx
+  [2.7 MB]  /Users/kalki/Downloads/Description.docx
+  [2.4 MB]  /Users/kalki/Downloads/Description.pdf
+  [2.3 MB]  /Users/kalki/Downloads/Last login.pdf
+  [2.1 MB]  /Users/kalki/Downloads/ calcura .pdf
+  [2.1 MB]  /Users/kalki/Downloads/LUAD_Volcano_Plot.pdf
+  [2.0 MB]  /Users/kalki/Downloads/hey i have few chunks of codes i will paste one by one can you trurn….pages
+  [1.6 MB]  /Users/kalki/Downloads/https:da5030.weebly.com:uploads:8:6:5:9:8659576:freechapter_informationbasedlearning.pdf
+  [1.6 MB]  /Users/kalki/Downloads/donations-salted.csv
+  [1.6 MB]  /Users/kalki/Downloads/donations-salted_1.csv
+  [1.5 MB]  /Users/kalki/Downloads/INTERCEPTA_full_bundle.md
+  [1.5 MB]  /Users/kalki/Downloads/Business pitch deck.pptx
+  [1.4 MB]  /Users/kalki/Downloads/Pasted text.pdf
+  [1.4 MB]  /Users/kalki/Downloads/temp.pdf
+  [1.3 MB]  /Users/kalki/Downloads/DA5030.LogisticRegression.Akula/DA5030.LogisticRegression.Gautam.html
+  [1.2 MB]  /Users/kalki/Downloads/Akula_Prasad_Drug Trails Snapshiot.pptx
+  [1.2 MB]  /Users/kalki/Downloads/GautamK_AkulaP.DA5030.Practicum2-PartB.html
+  [1.2 MB]  /Users/kalki/Downloads/AkulaP_DA5030_Project-3_1.docx
+  [1.1 MB]  /Users/kalki/Downloads/ Prasad_Akula_inro_Assignment (1).docx
+  [1.1 MB]  /Users/kalki/Downloads/DA5030.LogisticRegression.Akula.html
+  [1.1 MB]  /Users/kalki/Downloads/DA5030_LogisticRegression_Akula-2.html
+  [1.1 MB]  /Users/kalki/Downloads/DA5030_LogisticRegression_Akula.html
+  [1.1 MB]  /Users/kalki/Downloads/DA5030.LogisticRegression.Akula/DA5030_LogisticRegression_Akula.html
+  [1.0 MB]  /Users/kalki/Downloads/3.908 Building Ensemble Models.pdf
+  [1.0 MB]  /Users/kalki/Downloads/3.908 Building Ensemble Models (1).pdf
+  [1.0 MB]  /Users/kalki/Downloads/ book.docx
+  [1023.7 KB]  /Users/kalki/Downloads/GautamKAkulaP_DA5030_Practicum1_Rmd.html
+  [984.9 KB]  /Users/kalki/Downloads/GautamKAkulaP.DA5030.Practicum1/GautamKAkulaP.DA5030.Practicum1.Rmd-.html
+  [908.7 KB]  /Users/kalki/Downloads/my ppt.pptx
+  [903.7 KB]  /Users/kalki/Downloads/KAALI-hfgh.pdf
+  [864.0 KB]  /Users/kalki/Downloads/NeoCARTa_Funding_main.pptx
+  [813.7 KB]  /Users/kalki/Downloads/DA5030.Regression.Akula.html
+  [796.0 KB]  /Users/kalki/Downloads/1.docx
+  [762.2 KB]  /Users/kalki/Downloads/DA5030.Forecasting.Akula/-DA5030.Forecasting.Akula.html
+  [761.6 KB]  /Users/kalki/Downloads/TableS5C.xlsx
+  [754.7 KB]  /Users/kalki/Downloads/Genetic architecture of hippocampal subfields on standard resolution MRI: How the parts relate to the whole - PMC.pdf
+  [737.5 KB]  /Users/kalki/Downloads/DA5030.DescStats.Akula/-DA5030.AnalyzeWines.Akula.html
+  [725.3 KB]  /Users/kalki/Downloads/PHASE 1.pdf
+  [702.5 KB]  /Users/kalki/Downloads/INTERCEPTA_Plan_of_Action_v2.pdf
+  [686.2 KB]  /Users/kalki/Downloads/GautamK_AkulaP.DA5030.Practicum2-PartA.html
+  [681.1 KB]  /Users/kalki/Downloads/Pasted text.docx
+  [676.5 KB]  /Users/kalki/Downloads/DA5030.kNN.Akula/DA5030.kNN.Akula.nb.html
+  [676.3 KB]  /Users/kalki/Downloads/DA5030.Forecasting.Akula/ DA5030.Forecasting.Akula.nb.html
+  [656.7 KB]  /Users/kalki/Downloads/DA5030.BegR.Gautam.html
+  [656.3 KB]  /Users/kalki/Downloads/DA5030.BegR.Akula/ DA5030.BegR.Akula.nb.html
+  [656.1 KB]  /Users/kalki/Downloads/DA5030.DescStats.Akula/ DA5030.AnalyzeWines.Akula.nb.html
+  [654.1 KB]  /Users/kalki/Downloads/practice_1/A-6.103-Solution.html
+  [653.4 KB]  /Users/kalki/Downloads/-final-_reflectionn.html
+  [652.0 KB]  /Users/kalki/Downloads/DA5030.NaiveBayes.Akula.html
+  [651.3 KB]  /Users/kalki/Downloads/DA5030.DFinR.Akula/ DA5030.AnalyzeWineData.Akula.nb.html
+
+  ... (416 more files not shown — see full list in /var/folders/w2/5rs_85850gv6kv3jf0ft78mw0000gn/T/tmp.sQjEaspT0C or rerun with all)
+
+
+================================================================
+TOP 20 LARGEST FILES IN DOWNLOADS (regardless of category)
+================================================================
+
+  [2.55 GB]  /Users/kalki/Downloads/Microsoft_365_and_Office_16.104.25121423_Installer.pkg
+  [1.08 GB]  /Users/kalki/Downloads/ AkulaP_DA5030_SignatureProject_Spring2026.mov
+  [639.0 MB]  /Users/kalki/Downloads/RStudio-2026.01.0-392.dmg
+  [635.6 MB]  /Users/kalki/Downloads/RStudio-2026.01.1-403.dmg
+  [364.6 MB]  /Users/kalki/Downloads/MicrosoftTeams.pkg
+  [301.9 MB]  /Users/kalki/Downloads/Claude-2.dmg
+  [292.1 MB]  /Users/kalki/Downloads/Cell_line_RMA_proc_basalExp.txt
+  [268.3 MB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_waves1to4_norm_exp_dbgap.txt
+  [240.6 MB]  /Users/kalki/Downloads/ChatGPT_Atlas.dmg
+  [237.1 MB]  /Users/kalki/Downloads/Claude.dmg
+  [178.8 MB]  /Users/kalki/Downloads/obs-studio-32.1.1-macos-apple.dmg
+  [153.4 MB]  /Users/kalki/Downloads/beataml2.0_v2.zip
+  [124.3 MB]  /Users/kalki/Downloads/tsetup.6.4.2.dmg
+  [116.8 MB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_waves1to4_counts_dbgap.txt
+  [96.7 MB]  /Users/kalki/Downloads/R-4.5.2-arm64.pkg
+  [53.8 MB]  /Users/kalki/Downloads/Zoom.pkg
+  [47.1 MB]  /Users/kalki/Downloads/beataml2.0_data-2.0/beataml_wv1to4_raw_inhibitor_v4_dbgap.txt
+  [41.6 MB]  /Users/kalki/Downloads/dokumen.pub_the-biostar-handbook-2nbsped.pdf
+  [37.1 MB]  /Users/kalki/Downloads/DA5030.LogisticRegression.Akula.zip
+  [33.0 MB]  /Users/kalki/Downloads/The_Explainer.mp4
+
+================================================================
+END OF REPORT
+================================================================

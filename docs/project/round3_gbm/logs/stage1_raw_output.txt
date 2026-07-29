@@ -1,0 +1,356 @@
+
+### Stage 1.3 — Re-execution after pyarrow install
+
+**Start:** 14:16:38
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+**Init time:** 2.9s
+
+**search_disease("glioblastoma", top_n=10):**
+Time: 0.00s
+```
+[('MONDO_0018177', 'glioblastoma'), ('MONDO_0020690', 'adult glioblastoma'), ('EFO_0006545', 'brain glioblastoma'), ('MONDO_0016682', 'giant cell glioblastoma'), ('EFO_0000519', 'glioblastoma multiforme'), ('EFO_1000141', 'Brain Stem Glioblastoma'), ('EFO_0009254', 'optic nerve glioblastoma'), ('MONDO_0850335', 'IDH-wildtype glioblastoma'), ('OBA_2040157', 'age of onset of glioblastoma'), ('MONDO_0004363', 'adult spinal cord glioblastoma')]
+```
+
+**build_net signature:**
+`build_net(disease_id, min_score=0.1, max_genes=500)`
+```python
+    def build_net(self, disease_id, min_score=0.1, max_genes=500):
+        """Build a complete disease-specific net."""
+        disease_name = self.name_map.get(disease_id, disease_id)
+        print(f"Building net for: {disease_name} ({disease_id})")
+        print("=" * 55)
+        
+        # Step 1: Get disease-associated genes
+        disease_assoc = self.assoc[self.assoc['diseaseId'] == disease_id]
+        disease_assoc = disease_assoc[disease_assoc['associationScore'] >= min_score]
+        disease_assoc = disease_assoc.nlargest(max_genes, 'associationScore')
+        
+        genes = list(disease_assoc['gene'].unique())
+        print(f"  Genes (score>{min_score}): {len(genes)}")
+        
+        if len(genes) == 0:
+            print("  No genes found. Try lower min_score.")
+            return None
+        
+        # Step 2: Extract all layers for these genes from universal net
+        disease_net = {
+            'disease': disease_name,
+            'disease_id': disease_id,
+            'n_genes': len(genes),
+            'genes': {},
+            'pathways': set(),
+            'metabolites': set(),
+            'drug_targets': [],
+            'immune_relevant': [],
+            'structures_available': [],
+            'mutation_profile': {},
+        }
+        
+        for gene in genes:
+            score = float(disease_assoc[disease_assoc['gene']==gene]['associationScore'].max())
+            gene_data = self.net['genes'].get(gene, {})
+            
+            entry = {
+                'association_score': round(score, 4),
+                'mutation_frequency': gene_data.get('mutation_frequency', 0),
+            }
+            
+            # Drug correlations
+            if gene_data.get('drug_correlations'):
+                entry['n_drug_correlations'] = len(gene_data['drug_correlations'])
+            
+            # Interactions
+            if gene_data.get('interactions'):
+                entry['n_interactions'] = len(gene_data['interactions'])
+            
+          
+```
+
+**build_net("glioblastoma") attempt:**
+Building net for: glioblastoma (glioblastoma)
+=======================================================
+  Genes (score>0.1): 0
+  No genes found. Try lower min_score.
+Time: 0.08s
+Return type: NoneType
+Result: None
+
+**End:** 14:16:43
+
+### Stage 1.4 — build_net with resolved ID MONDO_0018177
+
+**Start:** 14:18:03
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+Building net for: glioblastoma (MONDO_0018177)
+=======================================================
+  Genes (score>0.1): 47
+  Pathways involved: 768
+  Metabolites linked: 0
+  Drug targets (with compounds): 5
+  Immune-relevant genes: 34
+  Structures available: 0
+
+  Top 10 genes:
+    MSH2         score=0.345
+    BRAF         score=0.292 [compounds=50]
+    ATM          score=0.272
+    C11orf65     score=0.266
+    DNMT3A       score=0.266
+    SOX2         score=0.226
+    MAPK1        score=0.210
+    MDM2         score=0.208 [compounds=50]
+    STAG1        score=0.198
+    MET          score=0.194
+
+**build_net(MONDO_0018177, min_score=0.1, max_genes=500):** 0.09s
+Return type: dict
+
+**Net structure for GBM:**
+- Disease name: glioblastoma
+- Disease ID: MONDO_0018177
+- Total genes: 47
+- Genes dict size: 47
+- Pathways: 768
+- Metabolites: 0
+- Drug targets: 5
+- Immune relevant: 34
+- Structures available: 0
+- Mutation profile entries: 0
+
+**Top 20 GBM genes by association score:**
+  MSH2: assoc=0.345, mut_freq=0.0141, drug_corrs=20, interactions=2
+  BRAF: assoc=0.292, mut_freq=0.0117, drug_corrs=20, interactions=10
+  ATM: assoc=0.272, mut_freq=0.0585, drug_corrs=20, interactions=7
+  C11orf65: assoc=0.266, mut_freq=0, drug_corrs=0, interactions=0
+  DNMT3A: assoc=0.266, mut_freq=0.0094, drug_corrs=20, interactions=0
+  SOX2: assoc=0.226, mut_freq=0.0047, drug_corrs=9, interactions=11
+  MAPK1: assoc=0.210, mut_freq=0.0023, drug_corrs=0, interactions=0
+  MDM2: assoc=0.208, mut_freq=0.007, drug_corrs=20, interactions=14
+  STAG1: assoc=0.198, mut_freq=0.0117, drug_corrs=6, interactions=1
+  MET: assoc=0.194, mut_freq=0.0164, drug_corrs=20, interactions=8
+  DNM2: assoc=0.187, mut_freq=0.0047, drug_corrs=20, interactions=0
+  CCND1: assoc=0.181, mut_freq=0.0023, drug_corrs=20, interactions=24
+  CDK6: assoc=0.169, mut_freq=0.0047, drug_corrs=20, interactions=9
+  RAC1: assoc=0.168, mut_freq=0.0023, drug_corrs=20, interactions=0
+  SOX3: assoc=0.162, mut_freq=0.0023, drug_corrs=10, interactions=0
+  CCNE1: assoc=0.159, mut_freq=0.0047, drug_corrs=1, interactions=0
+  GAB1: assoc=0.157, mut_freq=0.007, drug_corrs=3, interactions=0
+  SDHB: assoc=0.156, mut_freq=0.0023, drug_corrs=6, interactions=0
+  ARF1: assoc=0.156, mut_freq=0, drug_corrs=1, interactions=0
+  IDH1: assoc=0.120, mut_freq=0, drug_corrs=20, interactions=0
+
+**GBM net saved:** /Users/kalki/INTERCEPTA/round3_gbm_live_test/results/gbm_disease_net.json
+**End Stage 1:** 14:18:04
+
+### Stage 1.5 — Diligence test: try subtype IDs and directly query parquet for known GBM genes
+
+**Start:** 14:19:42
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+
+**Direct parquet inspection — rows per GBM ontology ID:**
+  MONDO_0018177: 7333 gene-association rows
+  EFO_0000519: 9906 gene-association rows
+  MONDO_0850335: 0 gene-association rows
+  MONDO_0020690: 26 gene-association rows
+  EFO_0006545: 834 gene-association rows
+  MONDO_0016682: 35 gene-association rows
+  EFO_1000141: 271 gene-association rows
+  EFO_0009254: 29 gene-association rows
+
+**Highest-coverage ID: EFO_0000519**
+Top 20 by associationScore:
+  EGFR         score=0.6493
+  IDH1         score=0.6272
+  TP53         score=0.6208
+  PTEN         score=0.6028
+  VEGFA        score=0.5508
+  GSR          score=0.5431
+  BRAF         score=0.5326
+  ATRX         score=0.5242
+  RB1          score=0.5205
+  PIK3CA       score=0.5108
+  FGFR1        score=0.5107
+  NF1          score=0.5036
+  TERT         score=0.4847
+  PIK3R1       score=0.4669
+  CDKN2B       score=0.4469
+  PTPN11       score=0.4402
+  PDGFRA       score=0.3928
+  MAP2K1       score=0.3796
+  STAG2        score=0.3796
+  ARID1A       score=0.3765
+
+**Association scores for known GBM drivers (across ALL GBM-related IDs):**
+  EGFR      : max score=0.6493 (via EFO_0000519)
+  PTEN      : max score=0.6028 (via EFO_0000519)
+  TP53      : max score=0.6208 (via EFO_0000519)
+  NF1       : max score=0.5036 (via EFO_0000519)
+  CDKN2A    : max score=0.3700 (via EFO_0006545)
+  IDH1      : max score=0.6272 (via EFO_0000519)
+  PDGFRA    : max score=0.3928 (via EFO_0000519)
+  RB1       : max score=0.5205 (via EFO_0000519)
+  ATRX      : max score=0.5242 (via EFO_0000519)
+  TERT      : max score=0.4847 (via EFO_0000519)
+  MGMT      : max score=0.1869 (via EFO_0006545)
+  EGFRvIII  : NOT PRESENT for any GBM ID
+
+**build_net for each GBM subtype — top 5 gene rankings:**
+Building net for: glioblastoma (MONDO_0018177)
+=======================================================
+  Genes (score>0.01): 100
+  Pathways involved: 1003
+  Metabolites linked: 0
+  Drug targets (with compounds): 8
+  Immune-relevant genes: 72
+  Structures available: 0
+
+  Top 10 genes:
+    MSH2         score=0.345
+    BRAF         score=0.292 [compounds=50]
+    ATM          score=0.272
+    C11orf65     score=0.266
+    DNMT3A       score=0.266
+    SOX2         score=0.226
+    MAPK1        score=0.210
+    MDM2         score=0.208 [compounds=50]
+    STAG1        score=0.198
+    MET          score=0.194
+  MONDO_0018177 (glioblastoma): MSH2(0.34), BRAF(0.29), ATM(0.27), C11orf65(0.27), DNMT3A(0.27)
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.01): 100
+  Pathways involved: 878
+  Metabolites linked: 0
+  Drug targets (with compounds): 3
+  Immune-relevant genes: 66
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+  EFO_0000519 (glioblastoma multiforme): EGFR(0.65), IDH1(0.63), TP53(0.62), PTEN(0.60), VEGFA(0.55)
+Building net for: IDH-wildtype glioblastoma (MONDO_0850335)
+=======================================================
+  Genes (score>0.01): 0
+  No genes found. Try lower min_score.
+  MONDO_0850335: net returned None
+Building net for: adult glioblastoma (MONDO_0020690)
+=======================================================
+  Genes (score>0.01): 24
+  Pathways involved: 238
+  Metabolites linked: 0
+  Drug targets (with compounds): 1
+  Immune-relevant genes: 17
+  Structures available: 0
+
+  Top 10 genes:
+    KDR          score=0.104
+    PDGFRA       score=0.101
+    KIT          score=0.099
+    PDGFRB       score=0.099
+    FLT1         score=0.099
+    FLT4         score=0.099
+    FGFR3        score=0.092
+    EGFR         score=0.088
+    FKBP1A       score=0.088
+    FLT3         score=0.088
+  MONDO_0020690 (adult glioblastoma): KDR(0.10), PDGFRA(0.10), KIT(0.10), PDGFRB(0.10), FLT1(0.10)
+Building net for: brain glioblastoma (EFO_0006545)
+=======================================================
+  Genes (score>0.01): 100
+  Pathways involved: 830
+  Metabolites linked: 0
+  Drug targets (with compounds): 5
+  Immune-relevant genes: 67
+  Structures available: 0
+
+  Top 10 genes:
+    TERT         score=0.456
+    PIK3R1       score=0.389
+    PTEN         score=0.371
+    HIF1A        score=0.371
+    IRS4         score=0.370
+    H3-3A        score=0.370
+    CHEK2        score=0.370 [compounds=50]
+    CDKN2A       score=0.370
+    NF1          score=0.370
+    PDGFRA       score=0.370
+  EFO_0006545 (brain glioblastoma): TERT(0.46), PIK3R1(0.39), PTEN(0.37), HIF1A(0.37), IRS4(0.37)
+Building net for: giant cell glioblastoma (MONDO_0016682)
+=======================================================
+  Genes (score>0.01): 6
+  Pathways involved: 170
+  Metabolites linked: 0
+  Drug targets (with compounds): 1
+  Immune-relevant genes: 5
+  Structures available: 0
+
+  Top 10 genes:
+    CHEK2        score=0.020 [compounds=50]
+    POLE         score=0.017
+    IDH1         score=0.013
+    IDH2         score=0.012
+    CD34         score=0.011
+    TP53         score=0.011
+  MONDO_0016682 (giant cell glioblastoma): CHEK2(0.02), POLE(0.02), IDH1(0.01), IDH2(0.01), CD34(0.01)
+Building net for: Brain Stem Glioblastoma (EFO_1000141)
+=======================================================
+  Genes (score>0.01): 100
+  Pathways involved: 1031
+  Metabolites linked: 0
+  Drug targets (with compounds): 2
+  Immune-relevant genes: 73
+  Structures available: 0
+
+  Top 10 genes:
+    H3-3A        score=0.370
+    H3C2         score=0.370
+    ACVR1        score=0.370
+    PPM1D        score=0.370
+    BRCA2        score=0.278
+    AR           score=0.278 [compounds=50]
+    BCORL1       score=0.278
+    ATRX         score=0.278
+    MECOM        score=0.278
+    KDM6A        score=0.278
+  EFO_1000141 (Brain Stem Glioblastoma): H3-3A(0.37), H3C2(0.37), ACVR1(0.37), PPM1D(0.37), BRCA2(0.28)
+Building net for: optic nerve glioblastoma (EFO_0009254)
+=======================================================
+  Genes (score>0.01): 4
+  Pathways involved: 117
+  Metabolites linked: 0
+  Drug targets (with compounds): 0
+  Immune-relevant genes: 3
+  Structures available: 0
+
+  Top 10 genes:
+    NF1          score=0.503
+    ALX4         score=0.118
+    MAP2K2       score=0.056
+    MAP2K1       score=0.056
+  EFO_0009254 (optic nerve glioblastoma): NF1(0.50), ALX4(0.12), MAP2K2(0.06), MAP2K1(0.06)
+
+**End Stage 1.5:** 14:19:47

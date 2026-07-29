@@ -1,0 +1,37 @@
+{
+  "_metadata": {
+    "spec": "INTERCEPTA_Selectivity_Redesign_Specification.md (tag: selectivity-redesign-spec)",
+    "schema_version": "1.0",
+    "created": "2026-05-06",
+    "source": "Extracted verbatim from step6_fix_gtex.py key_genes list (preserves Round 1 mCRPC behavior per P16)",
+    "disease_id": "mcrpc"
+  },
+
+  "disease_id": "mcrpc",
+  "disease_full_name": "Metastatic Castration-Resistant Prostate Cancer",
+
+  "key_target_genes": [
+    "KLK3", "FOLH1", "AR", "TMPRSS2", "NKX3-1", "FOXA1",
+    "TP53", "PTEN", "RB1", "BRCA2", "BRCA1", "ATM", "MYC",
+    "PARP1", "PARP2", "CDK4", "CDK6", "MTOR", "PIK3CA",
+    "SPOP", "CDK12", "EZH2", "AURKA", "CCND1",
+    "VEGFA", "EGFR", "ERBB2", "BCL2", "MCL1",
+    "SYP", "CHGA", "ENO2", "NR3C1", "STAT3",
+    "KLK2", "STEAP2", "ACPP", "SLC45A3"
+  ],
+
+  "n_genes": 38,
+
+  "gene_categories": {
+    "androgen_axis": ["AR", "KLK3", "KLK2", "TMPRSS2", "NKX3-1", "FOXA1", "FOLH1", "STEAP2", "ACPP", "SLC45A3"],
+    "tumor_suppressors": ["TP53", "PTEN", "RB1", "BRCA1", "BRCA2", "ATM"],
+    "ddr": ["BRCA1", "BRCA2", "ATM", "PARP1", "PARP2", "CDK12"],
+    "cell_cycle": ["CDK4", "CDK6", "AURKA", "CCND1"],
+    "pi3k_mtor": ["MTOR", "PIK3CA", "PTEN"],
+    "neuroendocrine_markers": ["SYP", "CHGA", "ENO2"],
+    "growth_factors": ["VEGFA", "EGFR", "ERBB2"],
+    "anti_apoptotic": ["BCL2", "MCL1"],
+    "epigenetic": ["EZH2", "SPOP"],
+    "transcription": ["MYC", "STAT3", "NR3C1"]
+  }
+}

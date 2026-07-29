@@ -1,0 +1,150 @@
+======================================================================
+mCRPC unified net: gene-level schema
+======================================================================
+Total genes: 28454
+
+--- TP53 ---
+  name: 'TP53'
+  layers_present: 5
+  layer_list: list of 5
+      first: genomic
+  mutation_frequency: 0.3724
+  mutation_types: dict []
+  cna: dict ['n_patients', 'amp', 'del']
+  drug_correlations: list of 20
+      first: {'drug': 'Nutlin-3a (-)', 'r': -0.269, 'direction': 'sensitive'}
+  interactions: list of 25
+      first: {'partner': 'FOXA1', 'score': 0.735}
+  pathways: list of 138
+      first: {'id': 'hsa01522', 'name': 'Endocrine resistance', 'source': 'KEGG'}
+  selectivity: dict ['prostate_tpm', 'other_mean_tpm', 'other_max_tpm', 'ratio_vs_mean', 'safety_class', 'max_other_tissue']
+
+--- AR ---
+  name: 'AR'
+  layers_present: 6
+  layer_list: list of 6
+      first: genomic
+  mutation_frequency: 0.1358
+  mutation_types: dict []
+  cna: dict ['n_patients', 'amp', 'del']
+  drug_correlations: list of 4
+      first: {'drug': 'Tozasertib', 'r': 0.221, 'direction': 'resistant'}
+  interactions: list of 11
+      first: {'partner': 'FOXA1', 'score': 0.996}
+  pathways: list of 32
+      first: {'id': 'hsa04114', 'name': 'Oocyte meiosis', 'source': 'KEGG'}
+  selectivity: dict ['prostate_tpm', 'other_mean_tpm', 'other_max_tpm', 'ratio_vs_mean', 'safety_class', 'max_other_tissue']
+  compounds: list of 50
+      first: {'chembl_id': 'CHEMBL180681', 'pchembl': 11.0, 'type': 'Ki', 'value_nM': 0.0}
+
+--- BRCA2 ---
+  name: 'BRCA2'
+  layers_present: 5
+  layer_list: list of 5
+      first: genomic
+  mutation_frequency: 0.0796
+  mutation_types: dict []
+  cna: dict ['n_patients', 'amp', 'del']
+  drug_correlations: list of 20
+      first: {'drug': 'Tozasertib', 'r': -0.3909, 'direction': 'sensitive'}
+  interactions: list of 6
+      first: {'partner': 'PIK3CA', 'score': 0.812}
+  pathways: list of 31
+      first: {'id': 'hsa03440', 'name': 'Homologous recombination', 'source': 'KEGG'}
+  selectivity: dict ['prostate_tpm', 'other_mean_tpm', 'other_max_tpm', 'ratio_vs_mean', 'safety_class', 'max_other_tissue']
+
+--- PARP1 ---
+  name: 'PARP1'
+  layers_present: 6
+  layer_list: list of 6
+      first: genomic
+  mutation_frequency: 0.0047
+  mutation_types: dict []
+  drug_correlations: list of 20
+      first: {'drug': 'Niraparib', 'r': -0.4501, 'direction': 'sensitive'}
+  interactions: list of 15
+      first: {'partner': 'CCND1', 'score': 0.724}
+  pathways: list of 33
+      first: {'id': 'hsa03410', 'name': 'Base excision repair', 'source': 'KEGG'}
+  selectivity: dict ['prostate_tpm', 'other_mean_tpm', 'other_max_tpm', 'ratio_vs_mean', 'safety_class', 'max_other_tissue']
+  compounds: list of 50
+      first: {'chembl_id': 'CHEMBL4169012', 'pchembl': 10.7, 'type': 'IC50', 'value_nM': 0.0}
+
+--- Sample odd-named first keys ---
+  '40S ribosomal protein S8-like': type=dict
+      keys: ['name', 'layers_present', 'layer_list', 'pathways']
+  '5S ribosomal RNA': type=dict
+      keys: ['name', 'layers_present', 'layer_list', 'pathways']
+  'A1BG': type=dict
+      keys: ['name', 'layers_present', 'layer_list', 'mutation_frequency', 'mutation_types', 'drug_correlations']
+
+======================================================================
+GBM disease_net_action1: gene-level schema
+======================================================================
+Total genes (dict): 458
+
+--- GBM EGFR ---
+  association_score: 0.6493
+  mutation_frequency: 0.0094
+  n_drug_correlations: 20
+  pathways: list of 51
+      first: {'id': 'hsa01521', 'name': 'EGFR tyrosine kinase inhibitor resistance', 'source': 'KEGG'}
+  selectivity: dict ['prostate_tpm', 'other_mean_tpm', 'other_max_tpm', 'ratio_vs_mean', 'safety_class', 'max_other_tissue']
+  interactions: list of 502
+      first: {'partner': 'PTPN11', 'score': 0.999}
+  n_interactions: 502
+  uniprot_id: 'P00533'
+  alphafold_url: 'https://alphafold.ebi.ac.uk/files/AF-P00533-F1-model_v6.pdb'
+  alphafold_available: True
+  chembl_target_id: 'CHEMBL203'
+  chembl_compounds: list of 31
+      first: {'chembl_id': 'CHEMBL176582', 'standard_type': 'IC50', 'standard_value': '0.01', 'standard_units': 'nM', 'pchembl_value': 11.0, 'assay_chembl_id': 'CHEMBL683040'}
+  n_chembl_compounds: 31
+  clinical_trials: list of 50
+  n_clinical_trials: 50
+
+--- GBM TP53 ---
+  association_score: 0.6208
+  mutation_frequency: 0.3724
+  n_drug_correlations: 20
+  n_interactions: 765
+  pathways: list of 138
+      first: {'id': 'hsa01522', 'name': 'Endocrine resistance', 'source': 'KEGG'}
+  immune_top_cell: 'T cell, CD8, naive [activated]'
+  immune_top_tpm: 43.6
+  selectivity: dict ['prostate_tpm', 'other_mean_tpm', 'other_max_tpm', 'ratio_vs_mean', 'safety_class', 'max_other_tissue']
+  cna: dict ['n_patients', 'amp', 'del']
+  interactions: list of 765
+      first: {'partner': 'SFN', 'score': 0.999}
+  uniprot_id: 'P04637'
+  alphafold_url: 'https://alphafold.ebi.ac.uk/files/AF-P04637-F1-model_v6.pdb'
+  alphafold_available: True
+  chembl_target_id: 'CHEMBL4096'
+  chembl_compounds: list of 28
+      first: {'chembl_id': 'CHEMBL4248974', 'standard_type': 'EC50', 'standard_value': '2.0', 'standard_units': 'nM', 'pchembl_value': 8.7, 'assay_chembl_id': 'CHEMBL4235136'}
+  n_chembl_compounds: 28
+  clinical_trials: list of 5
+  n_clinical_trials: 5
+
+--- GBM PTEN ---
+  association_score: 0.6028
+  mutation_frequency: 0.0632
+  n_drug_correlations: 20
+  n_interactions: 234
+  pathways: list of 72
+      first: {'id': 'hsa00562', 'name': 'Inositol phosphate metabolism', 'source': 'KEGG'}
+  immune_top_cell: 'B cell, naive'
+  immune_top_tpm: 158.7
+  selectivity: dict ['prostate_tpm', 'other_mean_tpm', 'other_max_tpm', 'ratio_vs_mean', 'safety_class', 'max_other_tissue']
+  cna: dict ['n_patients', 'amp', 'del']
+  interactions: list of 234
+      first: {'partner': 'TP53', 'score': 0.999}
+  uniprot_id: 'P60484'
+  alphafold_url: 'https://alphafold.ebi.ac.uk/files/AF-P60484-F1-model_v6.pdb'
+  alphafold_available: True
+  chembl_target_id: 'CHEMBL2052032'
+  chembl_compounds: list of 2
+      first: {'chembl_id': 'CHEMBL2057662', 'standard_type': 'IC50', 'standard_value': '8870.0', 'standard_units': 'nM', 'pchembl_value': 5.05, 'assay_chembl_id': 'CHEMBL2061290'}
+  n_chembl_compounds: 2
+  clinical_trials: list of 6
+  n_clinical_trials: 6

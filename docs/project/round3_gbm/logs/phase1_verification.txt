@@ -1,0 +1,73 @@
+
+======================================================================
+Phase 1 verification — re-run GBM Stage 1+2+3 with fixes
+======================================================================
+
+--- Gap 1+2 test: resolve_disease("glioblastoma") ---
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+
+Resolved 'glioblastoma' → EFO_0000519 (glioblastoma multiforme) with 9906 rows
+All candidates ranked by coverage:
+  ★ EFO_0000519           9906 rows  glioblastoma multiforme
+    MONDO_0018177         7333 rows  glioblastoma
+    EFO_0006545            834 rows  brain glioblastoma
+    EFO_1000141            271 rows  Brain Stem Glioblastoma
+    MONDO_0016682           35 rows  giant cell glioblastoma
+Resolution time: 1.56s
+✓ Gap 1+2 PASS: highest-coverage ID auto-selected
+
+--- Gap 1 test: build_net("glioblastoma") via name ---
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.1): 458
+  Pathways involved: 1530
+  Metabolites linked: 0
+  Drug targets (with compounds): 14
+  Immune-relevant genes: 299
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+Build time: 0.95s
+Top 10 genes: ['EGFR', 'IDH1', 'TP53', 'PTEN', 'VEGFA', 'GSR', 'BRAF', 'ATRX', 'RB1', 'PIK3CA']
+✓ Gap 1 PASS: name-based build_net returns biology-correct GBM net
+
+--- Gap 5 test: corrected_net_summary ---
+{
+  "n_genes_total": 458,
+  "n_genes_with_drug_correlations": 434,
+  "n_genes_with_interactions": 81,
+  "n_genes_with_mutations": 321,
+  "drug_targets_field_count_legacy": 14,
+  "n_pathways": 1530,
+  "n_metabolites": 0,
+  "n_immune_relevant": 299,
+  "n_structures": 0
+}
+✓ Gap 5 PASS: summary shows distinct counts for each interpretation
+
+--- Gap 4 test: inspect_gdsc_drugs() ---
+GDSC drug-target file detected: GDSC2_fitted_dose_response.xlsx (drug='DRUG_NAME', target='PUTATIVE_TARGET')
+Inspection time: 11.3s
+✓ Gap 4 PASS: detected GDSC2_fitted_dose_response.xlsx with drug=DRUG_NAME, target=PUTATIVE_TARGET
+  (242036 rows, 286 unique drugs, 185 unique target strings)
+
+======================================================================
+Phase 1 complete: Gaps 1, 2, 4, 5 closed and verified.
+Gap 3 (pyarrow) was closed earlier via pip install.
+Module saved to round3_gbm_live_test/code/intercepta_pipeline_v0.py
+======================================================================

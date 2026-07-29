@@ -1,0 +1,566 @@
+**INTERCEPTA**
+
+Phase 1: Complete Data Source Audit for mCRPC
+
+*Every Dataset, Its Format, Its Access Method, Its Quality*
+
+Version 1.0 \| March 2026 \| CONFIDENTIAL
+
+**1. Purpose**
+
+This document provides a complete audit of every data source required to
+build the mCRPC disease net and validate the INTERCEPTA computational
+engine in Phase 1. For each data source, we specify: what it contains,
+how many samples, the data format, access method, licensing, and exactly
+how INTERCEPTA will use it. No data source is assumed. Every source is
+verified.
+
+**2. Genomic Layer: Mutations, Copy Number, Fusions**
+
+The genomic layer identifies genetic vulnerabilities specific to mCRPC.
+We need driver mutations (AR, TP53, PTEN, BRCA1/2, ATM, RB1), copy
+number alterations, and gene fusions (TMPRSS2-ERG). These define the net
+nodes for the selectivity map.
+
+**2.1 Primary Genomic Datasets**
+
+  ---------------- ------------ ------------ ------------------------- ------------------
+  **Dataset**      **N          **Data       **Access**                **INTERCEPTA Use**
+                   Samples**    Type**                                 
+
+  TCGA-PRAD        494 primary  WES,         GDC Data Portal           Baseline primary
+  (PanCancer       tumors       RNA-seq,     (portal.gdc.cancer.gov)   PCa genomics;
+  Atlas)                        CNA,         --- Free, open access     tissue-of-origin
+                                clinical                               reference for
+                                                                       KAALCURA
+                                                                       residualization
+
+  SU2C/PCF Dream   150 mCRPC    WES,         cBioPortal                PRIMARY: mCRPC
+  Team (Robinson   biopsies     RNA-seq,     (prad_su2c_2015) ---      mutation
+  2015)                         germline     Free, open access         landscape;
+                                                                       BRCA2/ATM at
+                                                                       19.3%; AR pathway
+                                                                       alterations
+
+  SU2C/PCF 2019    429 mCRPC    WES,         cBioPortal                Expanded mCRPC
+  (Abida et al.)   patients     RNA-seq,     (prad_su2c_2019) ---      with clinical
+                                clinical     Free, open access         outcomes; RB1 as
+                                outcomes                               strongest
+                                                                       poor-outcome
+                                                                       predictor
+
+  WCDT (West Coast 162 mCRPC    WES, RNA-seq cBioPortal / GEO --- Free Validation cohort;
+  Dream Team)      samples                                             neuroendocrine
+                                                                       subtypes
+
+  FHCRC (Fred      157 mCRPC    WES, RNA-seq cBioPortal (prad_fhcrc)   Independent
+  Hutchinson)      samples                   --- Free                  validation cohort
+
+  curatedPCaData   2900+        Harmonized   Bioconductor R package    PRE-HARMONIZED:
+  (R package)      primary,     multi-omic   --- Free                  Standardized
+                   500+                                                across 19
+                   metastatic                                          datasets; gene
+                                                                       expression + CNA +
+                                                                       mutations
+  ---------------- ------------ ------------ ------------------------- ------------------
+
+**2.2 Key Genomic Findings for Disease Net Construction**
+
+**AR pathway alterations:** Present in 40--60% of mCRPC (AR
+amplification, mutations, splice variants including AR-V7). These define
+the sensitive population\'s vulnerability.
+
+**DNA repair deficiency:** BRCA2 (12%), ATM (5%), BRCA1 (1.5%) --- total
+HRR deficiency \~19.3%. These define the olaparib/talazoparib-sensitive
+resistant population.
+
+**TP53/RB1 co-loss:** Associated with treatment resistance,
+neuroendocrine differentiation, and worst outcomes. RB1 alteration is
+the strongest predictor of poor survival.
+
+**PTEN loss:** \~40% of mCRPC. Activates PI3K pathway as escape route
+when AR is blocked.
+
+**3. Transcriptomic Layer: Gene Expression & Single-Cell**
+
+The transcriptomic layer is where INTERCEPTA\'s unique contributions
+live: KAALCURA axes require gene expression data, and RNA velocity
+requires single-cell RNA-seq with unspliced/spliced read information.
+This layer identifies cell populations and their trajectories.
+
+**3.1 Bulk RNA-seq Datasets**
+
+  -------------- ----------- ---------------- ---------------------------- ------------------
+  **Dataset**    **N         **Data Type**    **Access**                   **INTERCEPTA Use**
+                 Samples**                                                 
+
+  TCGA-PRAD      494         FPKM / TPM gene  GDC / UCSC Xena Browser ---  KAALCURA axis
+  RNA-seq        tumors +    expression       Free                         computation;
+                 normals                                                   tissue-of-origin
+                                                                           residualization
+                                                                           baseline
+
+  SU2C/PCF mCRPC 266--429    Normalized gene  cBioPortal --- Free          mCRPC
+  RNA-seq        samples     expression                                    transcriptional
+                                                                           landscape; AR
+                                                                           score and NEPC
+                                                                           score computation
+
+  GDSC Cell Line \~1000 cell RMA-normalized   cancerrxgene.org/downloads   KAALCURA training:
+  Expression     lines       microarray +     --- Free                     compute R_prolif,
+                             RNA-seq                                       R_emt, R_ddr per
+                                                                           cell line matched
+                                                                           to drug
+                                                                           sensitivity
+  -------------- ----------- ---------------- ---------------------------- ------------------
+
+**3.2 Single-Cell RNA-seq Datasets (Critical for RNA Velocity)**
+
+  -------------- --------------------- ----------------- --------------- ---------------------
+  **Dataset**    **N Samples**         **Data Type**     **Access**      **INTERCEPTA Use**
+
+  GSE193337      4 PCa samples         10X Chromium      GEO --- Free    Primary PCa
+                                       scRNA-seq                         heterogeneity; cell
+                                                                         cluster
+                                                                         identification;
+                                                                         KAALCURA per cluster
+
+  GSE206962      3 CRPC samples        10X Chromium      GEO --- Free    CRPC cell
+                                       scRNA-seq                         populations;
+                                                                         sensitive vs
+                                                                         resistant cluster
+                                                                         identification
+
+  Sawyers/PNAS   21                    scRNA-seq +       GEO (upon       Treatment-resistant
+  2024           treatment-resistant   tissue microarray publication)    phenotypic
+                 biopsies                                --- Free        heterogeneity; AR+
+                                                                         and AR- populations;
+                                                                         NEPC lineage states
+
+  Deblois et al. LNCaP parental +      scRNA-seq +       GEO --- Free    PRE-EXISTING
+  Nat Comms 2021 ENZ-resistant         scATAC-seq                        PERSISTENT CELLS:
+                                                                         Identifies cells
+                                                                         present before ENZ
+                                                                         treatment that
+                                                                         survive and drive
+                                                                         resistance. DIRECT
+                                                                         VALIDATION of our
+                                                                         two-population model.
+
+  Club-like      120 patients,         scRNA-seq +       GEO --- Free    TME interaction;
+  cells (Nat     multiple timepoints   spatial                           club-like cells as
+  Comms 2025)                          transcriptomics                   treatment resistance
+                                                                         interface; immune
+                                                                         context
+  -------------- --------------------- ----------------- --------------- ---------------------
+
+**Critical Note on RNA Velocity Requirements**
+
+For scVelo dynamical mode (our RNA velocity engine), we need raw BAM
+files or loom files containing UNSPLICED and SPLICED read counts per
+gene per cell. Standard processed count matrices are insufficient. We
+must verify that each scRNA-seq dataset was generated with a protocol
+that captures intronic reads (10X Chromium does this by default).
+Datasets from Smart-seq2 or other plate-based methods may lack
+sufficient unspliced reads for reliable velocity estimation.
+
+**4. Drug Sensitivity Layer**
+
+This layer provides the ground truth for KAALCURA: which drugs kill
+which cell lines, linked to gene expression. It also provides IC50
+values and dose-response curves needed for ODE model parameterization.
+
+**4.1 Drug Sensitivity Datasets**
+
+  -------------- ----------- --------------- ---------------------------- -----------------
+  **Dataset**    **N         **Data Type**   **Access**                   **INTERCEPTA
+                 Samples**                                                Use**
+
+  GDSC1          \~700 cell  IC50, AUC,      cancerrxgene.org/downloads   PRIMARY: KAALCURA
+  (Sanger/MGH)   lines × 345 dose-response   --- Free (CC BY-NC-ND 2.5)   validation (AUROC
+                 drugs       curves                                       0.600 for
+                                                                          R_prolif). Drug
+                                                                          response linked
+                                                                          to expression.
+
+  GDSC2          \~800 cell  IC50, AUC,      cancerrxgene.org/downloads   Preferred for
+  (improved      lines × 198 dose-response   --- Free                     duplicate drugs
+  protocol)      drugs       curves                                       (improved
+                                                                          equipment).
+                                                                          1536-well plates,
+                                                                          acoustic
+                                                                          dispensing.
+
+  CCLE (Broad    \~1000 cell IC50, activity  depmap.org --- Free          Validation:
+  Institute)     lines × 24  area                                         Independent drug
+                 drugs                                                    sensitivity for
+                                                                          cross-checking
+                                                                          GDSC predictions
+
+  NCI-ALMANAC    60 cell     Combination     dtp.cancer.gov --- Free      SYNERGY
+                 lines ×     dose matrices                                VALIDATION:
+                 5000+                                                    Validate
+                 combos                                                   ZIP/Bliss/Loewe
+                                                                          consensus scoring
+                                                                          against measured
+                                                                          combinations
+  -------------- ----------- --------------- ---------------------------- -----------------
+
+**4.2 Prostate-Specific Cell Lines in GDSC**
+
+The following prostate cancer cell lines in GDSC are critical for
+KAALCURA validation and ODE parameterization:
+
+**LNCaP:** AR+, androgen-sensitive, PTEN-null. Models the sensitive
+population. Expected high R_prolif.
+
+**22Rv1:** AR+ with AR-V7 splice variant. Models castration-resistant
+population.
+
+**DU145:** AR-negative, mesenchymal features. Models EMT-transitioned
+resistant population. Expected high R_emt.
+
+**PC-3:** AR-negative, neuroendocrine features. Models NEPC lineage.
+
+**VCaP:** AR amplified, TMPRSS2-ERG fusion. High AR dependency.
+
+**C4-2B:** LNCaP-derived CRPC subline. Bone metastasis model.
+
+**5. Pharmacokinetic/Pharmacodynamic Parameters**
+
+The ODE simulation engine requires real PK/PD parameters for every drug
+in the 15-drug mCRPC library. These come from published Phase I/II
+pharmacokinetic studies and FDA drug labels.
+
+**5.1 Critical Drug PK Parameters**
+
+  -------------- ---------- ---------- ---------- --------------- ----------- ----------------
+  **Drug**       **Dose**   **Cmax**   **t1/2**   **Bioavail.**   **Protein   **Source**
+                                                                  Bind.**     
+
+  Docetaxel      75 mg/m²   3.7 μg/mL  11.1 hr    IV (100%)       94-97%      FDA label;
+                 IV                                                           Clarke 1999
+
+  Abiraterone    1000 mg PO 226 ng/mL  12 hr      \~10%           \>99%       FDA label; Chi
+                                                                              2015
+
+  Enzalutamide   160 mg PO  16.6 μg/mL 5.8 days   \~84%           97-98%      FDA label;
+                                                                              Gibbons 2015
+
+  Olaparib       300 mg BID 7.9 μg/mL  11.9 hr    \~42%           82%         FDA label;
+                 PO                                                           McCormick 2018
+
+  Talazoparib    0.5 mg PO  15.8 ng/mL 90 hr      \~69%           74%         FDA label; Yu
+                                                                              2020
+
+  Prednisone     5 mg PO    \~25 ng/mL 3.5 hr     \~70%           65-91%      FDA label;
+                                                                              standard refs
+  -------------- ---------- ---------- ---------- --------------- ----------- ----------------
+
+These parameters feed directly into the PK/PD module of our ODE engine.
+Drug concentration over time is modeled as a one- or two-compartment
+pharmacokinetic model, then coupled to the tumor dynamics equations
+through Hill-equation dose-response functions. Each drug\'s effect on
+the sensitive and resistant populations is parameterized independently
+using KAALCURA-predicted sensitivity per population.
+
+**6. Pathway & Network Layer**
+
+The pathway layer builds the connections between net nodes. Mutations
+and expression changes mean nothing in isolation --- they must be placed
+in the context of signaling pathways to identify escape routes and
+vulnerabilities.
+
+**6.1 Pathway and Interaction Databases**
+
+  -------------- -------------- ------------------- ------------------ --------------------------
+  **Dataset**    **N Samples**  **Data Type**       **Access**         **INTERCEPTA Use**
+
+  KEGG Pathways  \~350 pathways Pathway maps with   kegg.jp --- Free   AR signaling, DNA repair,
+                                gene/compound nodes for academic       apoptosis, EMT, PI3K/AKT
+                                                                       pathways for mCRPC net
+
+  Reactome       \~2600         Hierarchical        reactome.org ---   Detailed reaction-level
+                 pathways       pathway annotations Free (CC0)         pathway data; complement
+                                                                       to KEGG
+
+  STRING v12     \~2.4B         Protein-protein     string-db.org ---  Disease net PPI layer; hub
+                 interactions   interaction network Free (CC BY 4.0)   identification; essential
+                                                                       node analysis
+
+  BioGRID        \~2.1M         Curated             thebiogrid.org --- Validation of STRING
+                 interactions   genetic/physical    Free               interactions; genetic
+                                interactions                           interaction layer
+
+  WikiPathways   \~3000         Community-curated   wikipathways.org   Prostate-cancer-specific
+                 pathways       pathway models      --- Free (CC0)     community pathways
+  -------------- -------------- ------------------- ------------------ --------------------------
+
+**6.2 Key Pathways for mCRPC Disease Net**
+
+**AR signaling pathway:** AR → FOXA1 → target gene transcription.
+Primary therapeutic target. Blocked by abiraterone (CYP17A1) and
+enzalutamide (AR LBD).
+
+**DNA damage repair (HRR):** BRCA1/2 → RAD51 → homologous recombination.
+Targeted by PARP inhibitors (olaparib, talazoparib) through synthetic
+lethality.
+
+**PI3K/AKT/mTOR:** PTEN loss → PI3K activation. Major escape route when
+AR is blocked. Crosstalk with AR pathway.
+
+**Wnt/β-catenin:** APC mutations, R-spondin fusions. Alternative growth
+signaling bypassing AR.
+
+**EMT pathway:** E-cadherin loss → mesenchymal transition → drug
+resistance. Captured by KAALCURA R_emt axis.
+
+**RB1/TP53/cell cycle:** RB1 loss + TP53 loss enables lineage plasticity
+toward neuroendocrine differentiation.
+
+**7. Protein Structure Layer**
+
+For molecular docking (Stage 4, Layer A in our pipeline), we need 3D
+protein structures for every druggable target in the disease net.
+AlphaFold DB provides predicted structures for essentially all human
+proteins.
+
+**7.1 Structure Sources**
+
+  -------------- -------------- ------------------- --------------------- --------------------
+  **Dataset**    **N Samples**  **Data Type**       **Access**            **INTERCEPTA Use**
+
+  AlphaFold DB   200M+          PDB format          alphafold.ebi.ac.uk   PRIMARY: Automatic
+                 structures     predicted           --- Free (CC BY 4.0)  target structure
+                                structures                                retrieval for any
+                                                                          disease net node
+
+  PDB (Protein   \~220K         Experimental        rcsb.org --- Free     Preferred when
+  Data Bank)     experimental   X-ray/cryo-EM/NMR                         experimental
+                                structures                                structure exists
+                                                                          (higher confidence
+                                                                          for docking)
+
+  UniProt        \~250M         Sequence +          uniprot.org --- Free  Protein function,
+                 sequences      functional          (CC BY 4.0)           domains,
+                                annotation                                post-translational
+                                                                          modifications,
+                                                                          isoforms
+  -------------- -------------- ------------------- --------------------- --------------------
+
+**7.2 Priority Target Structures for mCRPC**
+
+**AR (P10275):** PDB: 1T7T (LBD + DHT), 2AX6 (LBD + enzalutamide
+analog). AlphaFold: AF-P10275-F1.
+
+**CYP17A1 (P05093):** PDB: 3RUK (with abiraterone). Critical for
+understanding abiraterone binding.
+
+**PARP1 (P09874):** PDB: 7KK4 (with olaparib), 4PJT (with talazoparib).
+Both inhibitor-bound structures available.
+
+**BRCA2 (P51587):** AlphaFold predicted. No complete experimental
+structure (too large). Use domain structures from PDB.
+
+**PTEN (P60484):** PDB: 1D5R. Phosphatase domain structure for
+understanding functional impact of mutations.
+
+**8. Chemical Compound Layer**
+
+Scout 1 (Database Search) queries these databases for existing molecules
+with activity against disease net targets. Scout 2 (Generative Design)
+uses them as seed structures.
+
+**8.1 Compound Databases**
+
+  -------------- ------------- ---------------- -------------------------- ----------------
+  **Dataset**    **N Samples** **Data Type**    **Access**                 **INTERCEPTA
+                                                                           Use**
+
+  ChEMBL 34      \~2.4M        Bioactivity data ebi.ac.uk/chembl --- Free  Primary: Known
+                 compounds     (IC50, Ki, EC50) (CC BY-SA 3.0)             active compounds
+                                                                           against mCRPC
+                                                                           targets
+
+  PubChem        \~118M        Bioassay data,   pubchem.ncbi.nlm.nih.gov   Broadest search
+                 compounds     SMILES,          --- Free                   space;
+                               properties                                  complementary to
+                                                                           ChEMBL
+
+  ZINC22         \~4.5B        3D               zinc22.docking.org ---     Virtual
+                 purchasable   conformations,   Free                       screening
+                 molecules     SMILES                                      library;
+                                                                           commercially
+                                                                           available
+                                                                           compounds
+
+  DrugBank       \~14K drug    Approved +       drugbank.com --- Free for  Drug-target
+                 entries       experimental     academic                   mapping; PK
+                               drugs                                       data; drug
+                                                                           interaction data
+  -------------- ------------- ---------------- -------------------------- ----------------
+
+**9. Clinical & Trial Data Layer**
+
+  -------------------- --------------- ------------ ----------------------- ------------------
+  **Dataset**          **N Samples**   **Data       **Access**              **INTERCEPTA Use**
+                                       Type**                               
+
+  ClinicalTrials.gov   \~500K studies  Trial        clinicaltrials.gov API  Novelty checking;
+                                       registry     v2 --- Free             existing trial
+                                       with                                 landscape;
+                                       outcomes                             standard of care
+                                                                            baseline
+
+  Project Data Sphere  Patient-level   Individual   projectdatasphere.org   CHAARTED IPD
+                       trial data      patient data --- Free (application)  available; enables
+                                       (IPD)                                direct
+                                                                            model-vs-patient
+                                                                            comparison
+
+  cBioPortal Clinical  Multiple mCRPC  Treatment,   cbioportal.org --- Free Clinical outcomes
+                       cohorts         outcomes,                            linked to genomics
+                                       mutations                            for model
+                                                                            validation
+  -------------------- --------------- ------------ ----------------------- ------------------
+
+**10. Computational Tools Layer**
+
+These are the validated open-source tools INTERCEPTA connects through
+its integration layer. We do not rebuild these --- we use them as
+engines and add our unique layers on top.
+
+  ---------------- ----------------- ------------------- ----------------- --------------
+  **Tool**         **Function**      **Input**           **Output**        **License**
+
+  scVelo (Theis    RNA velocity      Spliced/unspliced   Velocity vectors  BSD-3 --- Free
+  lab)             computation       counts              per cell          
+
+  CellRank 2       Cell fate         scVelo velocities   Fate              BSD-3 --- Free
+                   probability                           probabilities     
+
+  AutoDock Vina    Molecular docking Protein PDB +       Binding affinity  Apache 2.0 ---
+                                     ligand PDBQT        (kcal/mol)        Free
+
+  SwissADME        ADMET prediction  SMILES string       Lipinski,         Free web
+                                                         bioavailability   service
+
+  pkCSM            PK/toxicity       SMILES string       ADMET properties  Free web
+                   prediction                                              service
+
+  ASKCOS (MIT)     Retrosynthesis    Target molecule     Synthesis routes  MIT License
+                                     SMILES                                --- Free
+
+  RDKit            Cheminformatics   SMILES/SDF/MOL      Molecular         BSD-3 --- Free
+                                                         properties        
+
+  Scanpy/AnnData   scRNA-seq         Count matrices      Clusters, markers BSD-3 --- Free
+                   analysis                                                
+
+  SciPy/NumPy      ODE solver        ODE system + params Population        BSD-3 --- Free
+                   (solve_ivp)                           trajectories      
+  ---------------- ----------------- ------------------- ----------------- --------------
+
+**11. Data Quality Assessment**
+
+Not all data is equal. For each layer, we assess quality and define
+minimum thresholds:
+
+**11.1 Quality Criteria per Layer**
+
+**Genomic:** Minimum 20% tumor content for WES calls (per SU2C
+protocol). Matched normal required for somatic mutation calling. Minimum
+30X coverage.
+
+**Transcriptomic (bulk):** Minimum 20M mapped reads. TPM normalization
+preferred over FPKM. Batch correction required for cross-dataset
+integration.
+
+**Transcriptomic (scRNA-seq):** Minimum 500 genes per cell, 200 cells
+per cluster for statistical power. For RNA velocity: minimum 10%
+unspliced fraction (below this, velocity estimates are unreliable). 10X
+Chromium protocol preferred.
+
+**Drug sensitivity:** GDSC2 preferred over GDSC1 where duplicate exists.
+Minimum 5 concentration points per dose-response curve. Cell line
+identity verified by STR profiling.
+
+**PK/PD parameters:** FDA-approved drug labels as primary source. Phase
+I publications for validation. Population PK models preferred over
+single-study estimates.
+
+**Pathway:** STRING confidence score ≥ 0.7 (high confidence) for disease
+net edges. Experimental evidence preferred over text-mining.
+
+**11.2 Known Data Gaps**
+
+**Gap 1:** No public scRNA-seq dataset of mCRPC patients receiving
+combination therapy (e.g., olaparib + abiraterone) with pre- and
+post-treatment biopsies. We must infer combination effects from
+single-drug resistance models.
+
+**Gap 2:** PK parameters for drug combinations (drug-drug interactions
+affecting PK) are limited. We use independent PK models as first
+approximation and flag interaction risks.
+
+**Gap 3:** RNA velocity in clinical biopsies (fresh tissue, not FFPE) is
+rare. Most scRNA-seq datasets are from cell lines or fresh-frozen
+surgical specimens, not treatment biopsies.
+
+**Gap 4:** Synergy data for prostate cancer-specific combinations is
+sparse. NCI-ALMANAC uses NCI-60 panel which has limited prostate
+representation (DU145, PC-3 only).
+
+**12. Priority Data Acquisition Sequence**
+
+Based on Phase 1 build roadmap, data must be acquired in this exact
+order:
+
+**12.1 Weeks 1--2: Foundation Data**
+
+**Download 1:** GDSC2 drug sensitivity data (IC50 + expression) from
+cancerrxgene.org
+
+**Download 2:** TCGA-PRAD RNA-seq from GDC (for KAALCURA
+residualization)
+
+**Download 3:** SU2C/PCF 2015 + 2019 from cBioPortal (mCRPC genomic
+landscape)
+
+**Download 4:** PK parameters from FDA drug labels (5 drugs: docetaxel,
+abiraterone, enzalutamide, olaparib, talazoparib)
+
+**12.2 Weeks 3--6: Validation Data**
+
+**Download 5:** CHAARTED individual patient data from Project Data
+Sphere (requires application)
+
+**Download 6:** KEGG + Reactome + STRING pathways for AR signaling, HRR,
+EMT, PI3K/AKT
+
+**Download 7:** AlphaFold structures for AR, CYP17A1, PARP1, BRCA2, PTEN
+
+**12.3 Weeks 7--14: RNA Velocity Data**
+
+**Download 8:** scRNA-seq datasets (GSE193337, GSE206962) --- verify
+unspliced read availability
+
+**Download 9:** LNCaP enzalutamide resistance scRNA-seq (Deblois et al.
+2021) from GEO
+
+**Download 10:** Treatment-resistant PCa scRNA-seq (Sawyers/PNAS 2024)
+from GEO
+
+**13. Next Step: ODE + KAALCURA Mathematical Formulation**
+
+With ground truth defined (Document 1) and data sources audited (this
+document), the next systematic step is the precise mathematical
+specification of our computational engine: the two-population ODE model
+equations, KAALCURA axis computation, synergy scoring formulas, and
+their coupling. This will be documented in:
+INTERCEPTA_Phase1_Mathematical_Specification_v1.0.docx
+
+*Document prepared by Prasad Akula and Claude, Co-Founders of
+INTERCEPTA*
+
+*March 2026 \| Version 1.0*

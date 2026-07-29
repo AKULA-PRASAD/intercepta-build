@@ -1,0 +1,63 @@
+{
+  "_metadata": {
+    "spec": "INTERCEPTA_Selectivity_Redesign_Specification.md (tag: selectivity-redesign-spec)",
+    "schema_version": "1.0",
+    "created": "2026-05-06",
+    "source": "Round 2.2c MUTATION_GENES list + AML KEGG pathway hsa05221 representative genes. RAS_family expanded to NRAS+KRAS. FLT3_ITD merged into FLT3 (same gene, ITD is a variant type not a separate gene for tissue-expression purposes).",
+    "disease_id": "aml"
+  },
+
+  "disease_id": "aml",
+  "disease_full_name": "Acute Myeloid Leukemia",
+
+  "key_target_genes": [
+    "FLT3",
+    "NPM1", "DNMT3A", "TET2",
+    "IDH1", "IDH2",
+    "RUNX1", "CEBPA",
+    "TP53", "ASXL1",
+    "KIT", "KMT2A",
+    "NRAS", "KRAS",
+    "WT1",
+    "BCL2", "MCL1",
+    "STAT3", "STAT5A", "STAT5B",
+    "JAK1", "JAK2", "JAK3",
+    "PIK3CA", "PIK3R1",
+    "MAP2K1", "MAP2K2",
+    "MYC", "CDKN2A", "TET1",
+    "EZH2", "BRD4"
+  ],
+
+  "n_genes": 31,
+
+  "gene_categories": {
+    "tyrosine_kinase_drivers": ["FLT3", "KIT", "JAK1", "JAK2", "JAK3"],
+    "epigenetic_regulators": ["DNMT3A", "TET2", "TET1", "IDH1", "IDH2", "ASXL1", "KMT2A", "EZH2"],
+    "transcription_factors": ["NPM1", "RUNX1", "CEBPA", "MYC", "WT1"],
+    "tumor_suppressors": ["TP53", "CDKN2A"],
+    "ras_pathway": ["NRAS", "KRAS", "MAP2K1", "MAP2K2"],
+    "pi3k_pathway": ["PIK3CA", "PIK3R1"],
+    "anti_apoptotic": ["BCL2", "MCL1"],
+    "stat_signaling": ["STAT3", "STAT5A", "STAT5B"],
+    "bromodomain": ["BRD4"]
+  },
+
+  "round2_mutation_features_mapping": {
+    "_description": "How Round 2.2c's 15-feature mutation matrix maps to this 31-gene list. The CSV has feature names that don't directly match HGNC symbols.",
+    "FLT3": "FLT3 (covers FLT3-TKD point mutations)",
+    "FLT3_ITD": "FLT3 (ITD insertion, same gene different variant)",
+    "NPM1": "NPM1",
+    "DNMT3A": "DNMT3A",
+    "IDH1": "IDH1",
+    "IDH2": "IDH2",
+    "RUNX1": "RUNX1",
+    "CEBPA": "CEBPA",
+    "TET2": "TET2",
+    "TP53": "TP53",
+    "ASXL1": "ASXL1",
+    "KIT": "KIT",
+    "KMT2A": "KMT2A",
+    "RAS_family": "Expanded to NRAS + KRAS for selectivity computation",
+    "WT1": "WT1"
+  }
+}

@@ -1,0 +1,399 @@
+======================================================================
+1. ROUND 2.2b VERDICT
+======================================================================
+{
+  "verdict": "FAIL",
+  "version": "round2.2b",
+  "spec_commit": "1333a9d",
+  "mechanism": "pyUCell rank-based scoring + PCNA-style R_ddr residualization",
+  "max_rank": 17663,
+  "residualization": {
+    "method": "linear regression R_ddr ~ alpha + beta * R_prolif, fit on BeatAML",
+    "reference": "Peterson & Kovyrshina 2019 Cancers",
+    "alpha": 0.37896430267358094,
+    "beta": 0.3483341121414258,
+    "r_squared": 0.62273401939062,
+    "beataml_post_residualization_corr": 3.2987761748728326e-08
+  },
+  "signatures": {
+    "prolif": [
+      "MKI67",
+      "TOP2A",
+      "PCNA",
+      "CDK1",
+      "CCNB1",
+      "AURKA",
+      "BUB1",
+      "PLK1",
+      "MCM2",
+      "MCM6",
+      "FOXM1",
+      "BIRC5",
+      "NUSAP1",
+      "TPX2",
+      "CDC20",
+      "CENPF",
+      "KIF11",
+      "PRC1",
+      "HMGA1",
+      "MYBL2"
+    ],
+    "emt": [
+      "VIM",
+      "CDH2",
+      "SNAI1",
+      "SNAI2",
+      "ZEB1",
+      "ZEB2",
+      "TWIST1",
+      "FN1",
+      "MMP2",
+      "MMP9",
+      "CDH1-",
+      "CLDN1-",
+      "TJP1-"
+    ],
+    "ddr": [
+      "BRCA1",
+      "BRCA2",
+      "RAD51",
+      "ATM",
+      "ATR",
+      "CHEK1",
+      "CHEK2",
+      "PARP1",
+      "PARP2",
+      "XRCC1",
+      "MLH1",
+      "MSH2",
+      "FANCA",
+      "FANCD2",
+      "RPA1"
+    ]
+  },
+  "training_stats": {
+    "n_beataml_samples_train": 517,
+    "n_drugs_trained": 141,
+    "mean_cv_auroc": 0.5263280607575826,
+    "median_cv_auroc": 0.54421768707483,
+    "n_drugs_auroc_ge_0_60": 27,
+    "per_axis_max_coef": {
+      "R_prolif": 0.7640585823540018,
+      "R_emt": 0.8168753383693329,
+      "R_ddr": 0.6377630092771329
+    },
+    "per_axis_best_drug": {
+      "R_prolif": "PP2",
+      "R_emt": "JNK Inhibitor II",
+      "R_ddr": "Perhexiline maleate"
+    }
+  },
+  "beataml_axis_correlations_post_residualization": {
+    "R_prolif": {
+      "R_prolif": 1.0,
+      "R_emt": -0.3832858902743993,
+      "R_ddr": 3.2987761748728326e-08
+    },
+    "R_emt": {
+      "R_prolif": -0.3832858902743993,
+      "R_emt": 1.0,
+      "R_ddr": -0.248035140056995
+    },
+    "R_ddr": {
+      "R_prolif": 3.2987761748728326e-08,
+      "R_emt": -0.248035140056995,
+      "R_ddr": 1.0
+    }
+  },
+  "vangalen_axis_per_celltype_post_residualization": {
+    "B": {
+      "R_prolif": 0.5048123598098755,
+      "R_emt": 0.2545260787010193,
+      "R_ddr": 0.09621846675872803
+    },
+    "CTL": {
+      "R_prolif": 0.6205721497535706,
+      "R_emt": 0.2880723476409912,
+      "R_ddr": 0.07329553365707397
+    },
+    "GMP": {
+      "R_prolif": 0.8024274110794067,
+      "R_emt": 0.351340115070343,
+      "R_ddr": 0.11400657892227173
+    },
+    "GMP-like": {
+      "R_prolif": 0.8621328473091125,
+      "R_emt": 0.42511212825775146,
+      "R_ddr": 0.10385769605636597
+    },
+    "HSC": {
+      "R_prolif": 0.5643789768218994,
+      "R_emt": 0.38752835988998413,
+      "R_ddr": 0.12469059228897095
+    },
+    "HSC-like": {
+      "R_prolif": 0.575674831867218,
+      "R_emt": 0.38502180576324463,
+      "R_ddr": 0.09533905982971191
+    },
+    "Mono": {
+      "R_prolif": 0.7012830972671509,
+      "R_emt": 0.20348083972930908,
+      "R_ddr": 0.028883635997772217
+    },
+    "Mono-like": {
+      "R_prolif": 0.5056620836257935,
+      "R_emt": 0.3794121742248535,
+      "R_ddr": 0.07511627674102783
+    },
+    "NK": {
+      "R_prolif": 0.6065911054611206,
+      "R_emt": 0.19719725847244263,
+      "R_ddr": 0.0944405198097229
+    },
+    "Plasma": {
+      "R_prolif": 0.6147061586380005,
+      "R_emt": 0.0,
+      "R_ddr": 0.10242092609405518
+    },
+    "ProB": {
+      "R_prolif": 0.88886559009552,
+      "R_emt": 0.4390259385108948,
+      "R_ddr": 0.1284436583518982
+    },
+    "ProMono": {
+      "R_prolif": 0.855167806148529,
+      "R_emt": 0.17619121074676514,
+      "R_ddr": 0.10344046354293823
+    },
+    "ProMono-like": {
+      "R_prolif": 0.8273473978042603,
+      "R_emt": 0.349934458732605,
+      "R_ddr": 0.09316331148147583
+    },
+    "Prog": {
+      "R_prolif": 0.7690610289573669,
+      "R_emt": 0.39332109689712524,
+      "R_ddr": 0.12496459484100342
+    },
+    "Prog-like": {
+      "R_prolif": 0.8225322365760803,
+      "R_emt": 0.39326030015945435,
+      "R_ddr": 0.09643787145614624
+    },
+    "T": {
+      "R_prolif": 0.5635122060775757,
+      "R_emt": 0.2496941089630127,
+      "R_ddr": 0.07563543319702148
+    },
+    "cDC": {
+      "R_prolif": 0.8035858869552612,
+      "R_emt": 0.1844218373298645,
+      "R_ddr": 0.0939447283744812
+    },
+    "cDC-like": {
+      "R_prolif": 0.7259424924850464,
+      "R_emt": 0.30784064531326294,
+      "R_ddr": 0.07701438665390015
+    },
+    "earlyEry": {
+      "R_prolif": 0.8292649984359741,
+      "R_emt": 0.05574280023574829,
+      "R_ddr": 0.12764310836791992
+    },
+    "lateEry": {
+      "R_prolif": 0.9131426215171814,
+      "R_emt": 0.0,
+      "R_ddr": 0.12469583749771118
+    },
+    "pDC": {
+      "R_prolif": 0.8238577842712402,
+      "R_emt": 0.3727537989616394,
+      "R_ddr": 0.09182250499725342
+    }
+  },
+  "vangalen_axis_correlations_post_residualization": {
+    "R_prolif": {
+      "R_prolif": 1.0,
+      "R_emt": -0.044055340440854435,
+      "R_ddr": 0.387702673305291
+    },
+    "R_emt": {
+      "R_prolif": -0.044055340440854435,
+      "R_emt": 1.0,
+      "R_ddr": -0.014825390278134884
+    },
+    "R_ddr": {
+      "R_prolif": 0.387702673305291,
+      "R_emt": -0.014825390278134884,
+      "R_ddr": 1.0
+    }
+  },
+  "queries": {
+    "Q_A_LSC_quiescence_vs_Prog_like": {
+      "hsc_like_rprolif": 0.575674831867218,
+      "prog_like_rprolif": 0.8225322365760803,
+      "margin": 0.2468574047088623,
+      "secondary_gmp_like_rprolif": 0.8621328473091125,
+      "secondary_pass": true,
+      "mono_like_rprolif_for_reference": 0.5056620836257935,
+      "pass": true
+    },
+    "Q_B_axis_non_redundancy": {
+      "max_abs_r": 0.387702673305291,
+      "threshold": 0.9,
+      "pass": true
+    },
+    "Q_C_axis_utility": {
+      "mean_auroc": 0.5263280607575826,
+      "threshold_mean": 0.55,
+      "threshold_per_axis_auroc": 0.6,
+      "per_axis_max_coef": {
+        "R_prolif": 0.7640585823540018,
+        "R_emt": 0.8168753383693329,
+        "R_ddr": 0.6377630092771329
+      },
+      "mean_check_pass": false,
+      "axes_contrib_pass": true,
+      "pass": false,
+      "historical_comparison": {
+        "round2.1d_z_score": 0.534,
+        "round2.2a_pyucell_raw": 0.532,
+        "round2.2b_pyucell_residualized": 0.5263280607575826
+      }
+    },
+    "Q_D_prog_flt3_correlation": {
+      "n_drugs_aligned": 139,
+      "spearman_rho": -0.27100853478707715,
+      "spearman_p": 0.0012513943069233958,
+      "pass": true
+    },
+    "Q_E_distinguishability": {
+      "jaccard": 0.25,
+      "threshold": 0.6,
+      "hsc_top10": [
+        "CYT387",
+        "Go6976",
+        "JNK Inhibitor II",
+        "Lestaurtinib (CEP-701)",
+        "Neratinib (HKI-272)",
+        "PH-797804",
+        "Pazopanib (GW786034)",
+        "Perhexiline maleate",
+        "SB-203580",
+        "SB-431542"
+      ],
+      "prog_top10": [
+        "AMPK Inhibitor",
+        "Go6976",
+        "Lestaurtinib (CEP-701)",
+        "Perhexiline maleate",
+        "SB-203580",
+        "TG101348",
+        "Tozasertib (VX-680)",
+        "Vandetanib (ZD6474)",
+        "Vatalanib (PTK787)",
+        "Volasertib (BI-6727)"
+      ],
+      "venetoclax_in_hsc_top10_diagnostic": false,
+      "pass": true
+    }
+  },
+  "Q_F_diagnostic_range_ratios": {
+    "R_prolif": {
+      "vangalen_range": 0.4083302617073059,
+      "beataml_range": 0.703330934047699,
+      "ratio": 0.5805663466453552
+    },
+    "R_emt": {
+      "vangalen_range": 0.4390259385108948,
+      "beataml_range": 0.5724246501922607,
+      "ratio": 0.766958475112915
+    },
+    "R_ddr": {
+      "vangalen_range": 0.09956002235412598,
+      "beataml_range": 0.2504953145980835,
+      "ratio": 0.39745262265205383
+    }
+  }
+}
+
+======================================================================
+2. mCRPC UNIFIED NET STRUCTURE
+======================================================================
+File size: 53,651,677 bytes
+Top-level type: dict with 9 keys
+First 20 keys: ['metadata', 'genes', 'drugs', 'pathways', 'cell_populations', 'velocity_clusters', 'escape_routes', 'statistics', 'ode_parameters_from_data']
+  'metadata': dict with keys ['disease', 'version', 'date', 'cofounders', 'layers', 'principle']
+  'genes': dict with keys ['40S ribosomal protein S8-like', '5S ribosomal RNA', 'A1BG', 'A1BG-AS1', 'A1CF', 'A2M', 'A2M-AS1', 'A2ML1', 'A2ML1-AS1', 'A3GALT2', 'A4GALT', 'A4GNT']
+  'drugs': dict with keys []
+
+======================================================================
+3. DATA DIRECTORY SIZES
+======================================================================
+       6.48 GB  gdsc/
+      833.7 MB  scrna/
+      692.5 MB  opentargets/
+       98.2 MB  string/
+       22.2 MB  beataml/
+       19.4 MB  signor/
+       10.5 MB  dice/
+       10.1 MB  alphafold/
+        6.8 MB  chembl/
+        6.6 MB  gtex_median_tpm.gct.gz
+        4.4 MB  human_gem/
+        4.4 MB  pathogen/
+        3.1 MB  su2c/
+        3.1 MB  docking/
+        754 KB  alphafold_cache/
+        468 KB  clinicaltrials/
+          1 KB  encode/
+           0 B  tcga_prad/
+           0 B  scrna_seq/
+           0 B  hmdb/
+           0 B  epigenome/
+
+======================================================================
+4. KAALCURA AUROC DISTRIBUTION (full 286 drugs)
+======================================================================
+Total drugs: 286
+Columns: ['drug', 'auroc', 'coef_prolif', 'coef_emt', 'coef_ddr']
+
+AUROC distribution:
+count    286.000000
+mean       0.637823
+std        0.041157
+min        0.502773
+25%        0.614337
+50%        0.646655
+75%        0.664523
+max        0.741820
+Name: auroc, dtype: float64
+
+Distribution by bin:
+  0.70 <= AUROC < 1.01:  10 drugs (3%)
+  0.65 <= AUROC < 0.70: 120 drugs (42%)
+  0.60 <= AUROC < 0.65: 109 drugs (38%)
+  0.55 <= AUROC < 0.60:  35 drugs (12%)
+  0.50 <= AUROC < 0.55:  12 drugs (4%)
+  0.00 <= AUROC < 0.50:   0 drugs (0%)
+
+Top axis dominance (which axis has the largest absolute coefficient):
+dominant_axis
+coef_ddr       264
+coef_prolif     13
+coef_emt         9
+Name: count, dtype: int64
+
+======================================================================
+5. GBM NET STRUCTURE (gbm_disease_net_action1.json)
+======================================================================
+File size: 12,069,598 bytes
+Total top-level keys: 10
+First 20 keys: ['disease', 'disease_id', 'n_genes', 'genes', 'pathways', 'metabolites', 'drug_targets', 'immune_relevant', 'structures_available', 'mutation_profile']
+
+EGFR not in top-level keys. Sample first key 'disease':
+
+======================================================================
+DONE
+======================================================================

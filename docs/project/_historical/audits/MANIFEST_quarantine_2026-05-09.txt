@@ -1,0 +1,27 @@
+# INTERCEPTA quarantine manifest
+# Created: Sat May  9 16:37:58 EDT 2026
+# Format: CATEGORY|original_relative_path|quarantine_destination
+# Recovery: 'mv /Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/<rel> /Users/kalki/Downloads/<rel>'
+
+PHASE1_EXACT_DUPE_BEATAML|beataml2.0_data-2.0|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/beataml2.0_data-2.0
+PHASE1_BEATAML_ORIGINAL_ZIP|beataml2.0_v2.zip|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/beataml2.0_v2.zip
+PHASE1_EXACT_DUPE_GDSC|GDSC2_fitted_dose_response_27Oct23.xlsx|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/GDSC2_fitted_dose_response_27Oct23.xlsx
+PHASE1_OLD_QUARANTINE|_INTERCEPTA_quarantine_2026-05-08|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/_INTERCEPTA_quarantine_2026-05-08
+PHASE1_OVERNIGHT_BUNDLE|INTERCEPTA_overnight_2026-05-09|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_overnight_2026-05-09
+PHASE2_CHARTER_ZIP|intercepta_charter_v2_chapters_06-18|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/intercepta_charter_v2_chapters_06-18
+PHASE3_SUPERSEDED_CHARTER_V1|INTERCEPTA_Fullest_Vision_Research_Charter_v1.0.md|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_Fullest_Vision_Research_Charter_v1.0.md
+PHASE3_OLD_BUNDLE_DOC|INTERCEPTA_full_bundle.md|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_full_bundle.md
+PHASE3_OLD_PLAN|INTERCEPTA_Plan_of_Action_v2.md|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_Plan_of_Action_v2.md
+PHASE3_OLD_PLAN|INTERCEPTA_Plan_of_Action_v2.docx|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_Plan_of_Action_v2.docx
+PHASE3_OLD_PLAN|INTERCEPTA_Plan_of_Action_v2.pdf|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_Plan_of_Action_v2.pdf
+PHASE3_OLD_PLAN|INTERCEPTA_Plan_of_Action_v1.docx|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_Plan_of_Action_v1.docx
+PHASE3_OLD_PLAN|INTERCEPTA_Plan_of_Action_v1.pdf|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_Plan_of_Action_v1.pdf
+PHASE3_OLD_BUNDLE_DOC|INTERCEPTA_docx_bundle.md|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_docx_bundle.md
+PHASE3_OLD_AUDIT|INTERCEPTA_Round1_Audit_Report.md|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_Round1_Audit_Report.md
+PHASE3_DUPLICATE_OF_PROJECT|INTERCEPTA_Workstream_B_NSCLC_Specification_SCAFFOLDING.md|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/INTERCEPTA_Workstream_B_NSCLC_Specification_SCAFFOLDING.md
+PHASE3_OLD_FIX_STATUS|MASTER_FIXES_status_2026-05-06.md|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/MASTER_FIXES_status_2026-05-06.md
+PHASE6_KAALI_INTEGRATED|KAALI.pdf|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/KAALI.pdf
+PHASE6_KAALI_CONVERSATION_ARCHIVE|KAALI_chat.pdf|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/KAALI_chat.pdf
+PHASE6_KAALI_CONVERSATION_ARCHIVE|KAALI_sub_chat.pdf|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/KAALI_sub_chat.pdf
+PHASE6_KAALI_CONVERSATION_ARCHIVE|KAALI_convo.pdf|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/KAALI_convo.pdf
+PHASE6_KAALI_CONVERSATION_ARCHIVE|KAALI-hfgh.pdf|/Users/kalki/Downloads/_INTERCEPTA_quarantine_2026-05-09/KAALI-hfgh.pdf

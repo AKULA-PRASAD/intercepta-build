@@ -1,0 +1,107 @@
+======================================================================
+Phase 2C v2 verification — UniProt REST API approach
+======================================================================
+
+--- Build GBM net ---
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.1): 458
+  Pathways involved: 1530
+  Metabolites linked: 0
+  Drug targets (with compounds): 14
+  Immune-relevant genes: 299
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+
+--- Apply Phase 2B (STRING) for cache warmup ---
+  STRING aliases loaded: 19,278 ENSP→symbol entries, 19,272 unique symbols
+  STRING edges loaded: 473,860 of 13,715,404 edges at score>=700
+  populate_string_interactions: 445/458 genes enriched, 39385 total edges added
+
+--- Apply attach_alphafold_structures (v2) ---
+  Querying UniProt REST API for 458 gene symbols (0 cached)...
+  UniProt API found 453 canonical accessions
+  attach_alphafold_structures: 453/458 genes mapped to canonical UniProt
+  Checking AlphaFold availability for 453 proteins (parallel HEAD)...
+  attach_alphafold_structures: 443/453 have AlphaFold structures available
+AlphaFold attach time: 19.2s
+✓ Performance PASS: 19.2s < 180s
+
+--- Canonical UniProt ID check ---
+  ✓ EGFR     → P00533   ✓ AF available
+  ✓ IDH1     → O75874   ✓ AF available
+  ✓ TP53     → P04637   ✓ AF available
+  ✓ PTEN     → P60484   ✓ AF available
+  ✓ VEGFA    → P15692   ✓ AF available
+  ✓ BRAF     → P15056   ✓ AF available
+  ✓ PIK3CA   → P42336   ✓ AF available
+  ✓ AKT1     → P31749   ✓ AF available
+  ✓ MET      → P08581   ✓ AF available
+  ✓ ERBB2    → P04626   ✓ AF available
+  ✓ CDKN2A   → P42771   ✓ AF available
+  ✓ RB1      → P06400   ✓ AF available
+  ✗ MDM2     no UniProt mapping (expected Q00987)
+  ✓ MAP2K1   → Q02750   ✓ AF available
+
+UniProt mapping: 13 canonical, 0 non-canonical, 1 missing
+✓ Canonical UniProt PASS: 13/14 ≥ 12
+✓ Top GBM oncogenes (EGFR, IDH1, TP53, PTEN): canonical UniProt + AlphaFold
+
+Coverage: 453/458 have UniProt (98.9%)
+          443/453 of those have AlphaFold (97.8%)
+✓ Coverage PASS: UniProt ≥70%, AlphaFold ≥85% of UniProt-mapped
+
+--- On-demand PDB download (EGFR) ---
+✓ EGFR PDB: 772,334 bytes in 0.3s
+
+--- Cache test on AML (UniProt cache should accelerate) ---
+Building net for: acute myeloid leukemia (EFO_0000222)
+=======================================================
+  Genes (score>0.1): 498
+  Pathways involved: 1834
+  Metabolites linked: 0
+  Drug targets (with compounds): 11
+  Immune-relevant genes: 389
+  Structures available: 0
+
+  Top 10 genes:
+    DNMT3A       score=0.850
+    CEBPA        score=0.832
+    FLT3         score=0.832
+    IDH1         score=0.773
+    RUNX1        score=0.759
+    TET2         score=0.756
+    KRAS         score=0.756
+    GATA2        score=0.745
+    SRSF2        score=0.733
+    KIT          score=0.731
+  populate_string_interactions: 497/498 genes enriched, 39464 total edges added
+  Querying UniProt REST API for 381 gene symbols (117 cached)...
+  UniProt API found 381 canonical accessions
+  attach_alphafold_structures: 498/498 genes mapped to canonical UniProt
+  Checking AlphaFold availability for 498 proteins (parallel HEAD)...
+  attach_alphafold_structures: 483/498 have AlphaFold structures available
+AML: 498/498 UniProt, 483/498 AlphaFold in 18.2s
+
+Saved: gbm_disease_net_phase2c.json
+
+======================================================================
+Phase 2C v2 verification COMPLETE. Gap 11 closed.
+======================================================================

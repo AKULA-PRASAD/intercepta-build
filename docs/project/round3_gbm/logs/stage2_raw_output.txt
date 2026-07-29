@@ -1,0 +1,117 @@
+
+## Stage 2 — Vulnerability Map
+
+**Start:** 14:26:09
+
+### 2.1 Build GBM net with EFO_0000519
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.1): 458
+  Pathways involved: 1530
+  Metabolites linked: 0
+  Drug targets (with compounds): 14
+  Immune-relevant genes: 299
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+Time: 0.68s
+Genes: 458, Pathways: 1530, Drug targets (with compounds, summary stat): 14, Immune: 299, Structures: 0
+Saved correct net: gbm_disease_net_EFO_0000519.json
+
+**Top 20 GBM genes:** ['EGFR', 'IDH1', 'TP53', 'PTEN', 'VEGFA', 'GSR', 'BRAF', 'ATRX', 'RB1', 'PIK3CA', 'FGFR1', 'NF1', 'TERT', 'PIK3R1', 'CDKN2B', 'PTPN11', 'PDGFRA', 'MAP2K1', 'STAG2', 'ARID1A']
+
+### 2.2 Druggability — ChEMBL compound counts per gene
+ChEMBL loaded: 24,598 activity rows, columns: ['target_gene', 'target_chembl_id', 'molecule_chembl_id', 'molecule_name', 'pchembl_value', 'standard_type', 'standard_value', 'standard_units']
+Using gene column: target_gene
+
+| Gene | ChEMBL compounds |
+|------|------------------|
+| EGFR | 0 |
+| IDH1 | 0 |
+| TP53 | 0 |
+| PTEN | 0 |
+| VEGFA | 0 |
+| GSR | 0 |
+| BRAF | 991 |
+| ATRX | 0 |
+| RB1 | 0 |
+| PIK3CA | 968 |
+| FGFR1 | 0 |
+| NF1 | 0 |
+| TERT | 0 |
+| PIK3R1 | 0 |
+| CDKN2B | 0 |
+| PTPN11 | 0 |
+| PDGFRA | 0 |
+| MAP2K1 | 0 |
+| STAG2 | 0 |
+| ARID1A | 0 |
+
+### 2.3 Selectivity — GTEx tissue expression
+GTEx loaded: (56200, 56), columns sample: ['Name', 'Description', 'Adipose - Subcutaneous', 'Adipose - Visceral (Omentum)', 'Adrenal Gland', 'Artery - Aorta']
+Tissues total: 54, brain-related: 14
+
+| Gene | Brain median TPM | All-tissue median TPM | Brain/median ratio | Selectivity |
+|------|-------------------|-------------------------|--------------------|-----|
+| EGFR | 5.1 | 14.8 | 0.34 | moderate |
+| IDH1 | 12.3 | 28.1 | 0.44 | moderate |
+| TP53 | 3.3 | 14.7 | 0.23 | moderate |
+| PTEN | 10.3 | 21.0 | 0.49 | moderate |
+| VEGFA | 17.9 | 60.8 | 0.29 | UBIQUITOUS |
+| GSR | 16.0 | 26.4 | 0.61 | moderate |
+| BRAF | 6.6 | 11.1 | 0.59 | moderate |
+| ATRX | 7.0 | 11.9 | 0.59 | moderate |
+| RB1 | 7.5 | 14.7 | 0.51 | moderate |
+| PIK3CA | 3.8 | 9.6 | 0.39 | moderate |
+| FGFR1 | 16.2 | 38.3 | 0.42 | moderate |
+| NF1 | 6.9 | 8.2 | 0.84 | moderate |
+| TERT | 0.0 | 0.0 | 7.48 | brain-enriched |
+| PIK3R1 | 21.1 | 29.6 | 0.71 | moderate |
+| CDKN2B | 1.1 | 3.4 | 0.31 | moderate |
+| PTPN11 | 56.7 | 50.0 | 1.14 | moderate |
+| PDGFRA | 9.3 | 19.4 | 0.48 | moderate |
+| MAP2K1 | 41.5 | 34.0 | 1.22 | moderate |
+| STAG2 | 10.4 | 21.2 | 0.49 | moderate |
+| ARID1A | 10.6 | 25.5 | 0.41 | moderate |
+
+### 2.4 Escape routes — STRING interactions for top 5 genes
+STRING directory contents: ['9606.protein.aliases.v12.0.txt.gz', '9606.protein.links.v12.0.txt.gz']
+Trying to load 9606.protein.aliases.v12.0.txt.gz...
+  Columns: ['#string_protein_id\talias\tsource'], sample row: {'#string_protein_id\talias\tsource': '9606.ENSP00000000233\t2B6H\tEnsembl_PDB'}
+
+**Using GBM net built-in interactions field for escape routes:**
+
+EGFR: 0 interactions in universal net
+
+IDH1: 0 interactions in universal net
+
+TP53: 25 interactions in universal net
+  Sample (first 10): [{'partner': 'FOXA1', 'score': 0.735}, {'partner': 'KMT2C', 'score': 0.858}, {'partner': 'PIK3CA', 'score': 0.941}, {'partner': 'RB1', 'score': 0.936}, {'partner': 'NCOR1', 'score': 0.853}, {'partner': 'HERC1', 'score': 0.72}, {'partner': 'ANK2', 'score': 0.727}, {'partner': 'DMD', 'score': 0.73}, {'partner': 'LRRK2', 'score': 0.738}, {'partner': 'CHD4', 'score': 0.749}]
+
+PTEN: 11 interactions in universal net
+  Sample (first 10): [{'partner': 'PIK3CA', 'score': 0.995}, {'partner': 'RB1', 'score': 0.734}, {'partner': 'TP53', 'score': 0.999}, {'partner': 'ATM', 'score': 0.897}, {'partner': 'PREX2', 'score': 0.99}, {'partner': 'ARID1A', 'score': 0.743}, {'partner': 'USP7', 'score': 0.979}, {'partner': 'BRCA2', 'score': 0.877}, {'partner': 'AR', 'score': 0.892}, {'partner': 'CTNNB1', 'score': 0.943}]
+
+VEGFA: 0 interactions in universal net
+
+### 2.5 Canonical biology test — EGFR↔MET interaction present?
+EGFR interactions: 0
+EGFR→MET found: False
+MET in universal net: True, interactions: 8
+
+**End Stage 2:** 14:26:10

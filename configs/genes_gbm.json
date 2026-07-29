@@ -1,0 +1,42 @@
+{
+  "_metadata": {
+    "spec": "INTERCEPTA_Selectivity_Redesign_Specification.md (tag: selectivity-redesign-spec)",
+    "schema_version": "1.0",
+    "created": "2026-05-06",
+    "source": "Top 30 genes from gbm_disease_net_action1.json by network priority order. Full 458-gene network preserved in disease net itself; this config is the curated actionable subset for selectivity reporting. Reflects Round 3 GBM live test net build.",
+    "disease_id": "gbm"
+  },
+
+  "disease_id": "gbm",
+  "disease_full_name": "Glioblastoma Multiforme",
+
+  "key_target_genes": [
+    "EGFR",
+    "IDH1", "IDH2",
+    "TP53", "PTEN", "RB1",
+    "VEGFA", "KDR", "FLT1", "FLT4",
+    "PDGFRA", "PDGFRB", "KIT",
+    "BRAF", "MAP2K1", "MAP2K2",
+    "PIK3CA", "PIK3R1", "MTOR",
+    "ATRX", "TERT", "CDKN2A", "CDKN2B",
+    "FGFR1", "FGFR3",
+    "NF1", "PTPN11",
+    "STAG2", "ARID1A", "LZTR1"
+  ],
+
+  "n_genes": 30,
+
+  "gene_categories": {
+    "rtk_signaling": ["EGFR", "PDGFRA", "PDGFRB", "FGFR1", "FGFR3", "KIT", "KDR", "FLT1", "FLT4"],
+    "tumor_suppressors": ["TP53", "PTEN", "RB1", "NF1", "CDKN2A", "CDKN2B"],
+    "metabolic_drivers": ["IDH1", "IDH2"],
+    "ras_mapk_pathway": ["BRAF", "MAP2K1", "MAP2K2", "NF1", "PTPN11"],
+    "pi3k_mtor_pathway": ["PIK3CA", "PIK3R1", "MTOR", "PTEN"],
+    "telomere_maintenance": ["ATRX", "TERT"],
+    "chromatin_remodelers": ["ATRX", "STAG2", "ARID1A"],
+    "angiogenesis": ["VEGFA", "KDR", "FLT1", "FLT4"]
+  },
+
+  "gbm_disease_net_full_size": 458,
+  "gbm_disease_net_path": "round3_gbm_live_test/results/gbm_disease_net_action1.json"
+}

@@ -1,0 +1,293 @@
+/Users/kalki/miniconda3/lib/python3.13/site-packages/lifelines/fitters/coxph_fitter.py:1607: ConvergenceWarning: Newton-Raphson convergence completed successfully but norm(delta) is still high, 0.506. This may imply non-unique solutions to the maximum likelihood. Perhaps there is collinearity or complete separation in the dataset?
+
+  warnings.warn(
+/Users/kalki/INTERCEPTA/code/hr_estimator_fixed.py:101: RuntimeWarning: overflow encountered in exp
+  hr_ci_upper = float(np.exp(summary.loc['arm', 'coef upper 95%']))
+======================================================================
+INTERCEPTA — 2000-LEVEL TEST: PART 1 (L101-L300)
+======================================================================
+
+╔══ TIER A: CODE QUALITY (L101-L115) ══╗
+  ⚠ L101 WARN     No hardcoded absolute user paths
+           → Hardcoded user paths in: ['step6_gtex_selectivity.py', 'step3_run.py', 'step6_fix_gtex.py', 'step5_pathways.py', 'step5_fix_kegg.py', 'step3_fix_kaalcura.py', 'step7_chembl_compounds.py', 'step4_string_interactions.py']
+  ✓ L102 PASS     Core modules have docstrings
+           → All core modules have docstrings
+  ✓ L103 PASS     Public methods have docstrings
+           → All public methods documented
+  ⚠ L104 WARN     Production code uses logging not print
+           → print() in production code: ['intercepta_engine_v1.py:56 prints', 'intercepta_kaalcura_v1.py:57 prints']
+  ✓ L105 PASS     Random seed controlled for reproducibility
+           → VirtualCohort accepts random_state for reproducibility
+  ✓ L106 PASS     PKModel raises error for invalid drug
+           → PKModel raises error for invalid drug name
+  ✓ L107 PASS     KAALCURA raises error when not fitted
+           → KAALCURA raises RuntimeError when not fitted
+  ✓ L108 PASS     All PK parameters are positive
+           → All PK parameters positive across 6 drugs
+  ✓ L109 PASS     Every PK drug has effect parameters
+           → All 6 PK drugs have effect parameters
+  ✓ L110 PASS     KAALCURA gene sets have no duplicates
+           → Gene sets have no duplicates, inverted genes all valid
+  ✓ L111 PASS     Default ODE parameters in biological range
+           → Default ODE parameters in biological range
+  ✓ L112 PASS     Version information present in modules
+           → Version info found in 0 files
+  ⚠ L113 WARN     requirements.txt has all key packages
+           → Missing from requirements: ['rdkit']
+  ✓ L114 PASS     No TODO/FIXME in core production files
+           → No TODO/FIXME in core production files
+  ✓ L115 PASS     No obviously unused imports
+           → No obvious unused imports detected
+
+╔══ TIER B: MATHEMATICAL PROOFS (L116-L135) ══╗
+  ✓ L116 PASS     Hill function is monotonically increasing
+           → Hill function monotonically increasing ✓
+  ✓ L117 PASS     Hill function approaches Emax at infinity
+           → Hill asymptote correct: E(∞)=0.900000≈Emax=0.9
+  ✓ L118 PASS     Bliss expected effect never exceeds 1.0
+           → Bliss independence always ≤ 1.0 ✓
+  ! L119 ERROR   Loewe additivity at EC50 doses: KeyError: 'hill_n'
+  ✓ L120 PASS     Drug treatment accelerates resistance drift
+           → Drug accelerates resistance drift: 0.338→0.339
+  ✓ L121 PASS     Phenotypic diffusion smooths sharp distributions
+           → Diffusion smooths distribution: 20/20 bins occupied after 2yr
+  ✗ L122 FAIL     PK elimination rates = ln(2)/t_half
+           → k_e=0.0624 != ln(2)/t_half=1.4987
+  ✓ L123 PASS     Free drug fraction parameters valid
+           → Free drug fraction: f_u=0.04, f_tumor=0.5, product=0.0200
+  ✓ L124 PASS     Logistic growth reaches carrying capacity K
+           → Logistic reaches K=1.0: N(∞)=0.9999
+  ✓ L125 PASS     Pareto front size scales with log(N)
+           → Pareto front: 1/100 non-dominated (expected ~5)
+  ✓ L126 PASS     HR(A,B) × HR(B,A) ≈ 1.0
+           → HR reciprocal: 0.546×1.833=1.000≈1.0
+  ✓ L127 PASS     KAALCURA axes mean near zero on reference data
+           → Reference axes all near zero: prolif=0.000, emt=-0.000
+  ✓ L128 PASS     Phenotypic diffusion conserves total cell mass
+           → Diffusion conserves total cells: diff=0.0003
+  ✓ L129 PASS     EC50(x) = ec50_min·exp(slope·x) is monotone
+           → EC50(x) increases 98x from x=0 to x=1 ✓
+  ✓ L130 PASS     Cox PH handles high censoring correctly
+           → Cox handles censoring: HR=0.636, 193 events
+  ! L131 ERROR   Bliss synergy score = 0 for no interaction: TypeError: '>' not supported between instances of 'dict' and 'dict'
+  ✓ L132 PASS     ODE carrying capacity scales correctly
+           → K scales correctly: K=1 fills 1.00, K=2 fills 1.00
+  ⚠ L133 WARN     PK half-life approximately correct
+           → Half-life check: C(t+t½)/Cmax=1.000 (expect ~0.5, multi-dose complicates)
+  ✓ L134 PASS     Z-score formula implementation correct
+           → Z-score correct: MKI67=2SD above → R_prolif contribution ≈2/20=0.10, total=0.119
+
+╔══ TIER C: BIOLOGICAL LITERATURE CONCORDANCE (L136-L155) ══╗
+  ✗ L135 FAIL     AURKA present in AML network (known driver)
+           → AURKA not in AML network — should be (known AML driver)
+  ✓ L136 PASS     BRCA1 in DDR gene set
+           → BRCA1 in DDR axis ✓
+  ✓ L137 PASS     E-cadherin (CDH1) inverted in EMT axis
+           → CDH1 correctly inverted in EMT axis ✓
+  ✓ L138 PASS     Ki-67 (MKI67) in proliferation gene set
+           → MKI67 (Ki-67) in proliferation axis ✓
+  ✓ L139 PASS     PARP1 in DDR gene set (PARP inhibitor target)
+           → PARP1 in DDR axis ✓
+  ✗ L140 FAIL     Alisertib correctly docked to AURKA
+           → Alisertib-AURKA docking score=0 should be negative
+  ⚠ L141 WARN     Docetaxel has strong proliferation axis signal
+           → Docetaxel: prolif coef=-0.495 weaker than DDR=0.821 — unexpected
+  ✓ L142 PASS     Venetoclax in KAALCURA validation
+           → Venetoclax AUROC=0.697 (BCL2 inhibitor, DDR-adjacent mechanism)
+  ✓ L143 PASS     mCRPC network contains AR pathway genes
+           → AR pathway genes in mCRPC net: ['AR', 'NKX3', 'FOXA1', 'HOXB13', 'KLK3', 'PSA']
+  ✓ L144 PASS     Cell type assignments from scRNA velocity
+           → 24 clusters mapped to 1 cell types
+  ⚠ L145 WARN     Most cells at low resistance in velocity data
+           → Only 34.7% cells sensitive (latent_time<0.3)
+  ✓ L146 PASS     TP53 AlphaFold structure high quality
+           → TP53 AlphaFold pLDDT=76 — good quality
+  ✓ L147 PASS     MDM2 PPI pocket has designed molecules
+           → 86 molecules designed for MDM2 PPI pocket
+  ✓ L148 PASS     KRAS molecules target switch-II pocket
+           → 2 KRAS molecules, pockets: {'switch_II'}
+  ✓ L149 PASS     BCL2 molecules target BH3 groove
+           → 15 BCL2 molecules, pocket: {'BH3_groove'}
+  ✓ L150 PASS     High proliferation predicts docetaxel sensitivity
+           → Docetaxel coef_prolif=-0.495 negative ✓ (high prolif → sensitive)
+  ✓ L151 PASS     Critical DDR kinases ATM/ATR/CHK1/CHK2 in axis
+           → Critical DDR kinases in axis: ['ATM', 'ATR', 'CHEK1', 'CHEK2']
+  ✓ L152 PASS     NPM1 in AML network (most common mutation)
+           → NPM1 in AML network ✓
+  ✓ L153 PASS     mTOR pathway genes in mCRPC network
+           → mTOR pathway in mCRPC: ['MTOR', 'PIK3CA', 'AKT1', 'PTEN']
+
+╔══ TIER D: CROSS-MODULE VALIDATION (L156-L170) ══╗
+  ✓ L154 PASS     KAALCURA coefficient connects to ODE emax
+           → KAALCURA→ODE bridge: Docetaxel AUROC=0.649, coef_prolif=-0.495
+  ✓ L155 PASS     Velocity latent_time gives right-skewed initial condition
+           → Velocity-based initial distribution right-skewed: mean_x=0.129 ✓
+  ! L156 ERROR   BeatAML findings inform escape routes: ValueError: too many values to unpack (expected 2)
+  ✓ L157 PASS     SIGNOR edges cover AML disease genes
+           → 8820/19727 (45%) SIGNOR edges involve AML genes — ready to integrate
+  ✓ L158 PASS     Docking targets present in disease network
+           → 7/8 docking targets in AML network: {'AR', 'MAP2K1', 'ATM', 'MDM2', 'KRAS', 'MTOR', 'BCL2'}
+  ! L159 ERROR   Pareto ranking uses multiple objectives: ValueError: too many values to unpack (expected 2)
+  ! L160 ERROR   PK and ODE use consistent concentration units: ValueError: too many values to unpack (expected 2)
+  ! L161 ERROR   Higher AUROC correlates with larger axis coefficients: ValueError: too many values to unpack (expected 2)
+  ! L162 ERROR   Escape routes suggest treatment countermeasures: ValueError: too many values to unpack (expected 2)
+  ! L163 ERROR   Beta parameter derived from velocity magnitudes: ValueError: too many values to unpack (expected 2)
+  ! L164 ERROR   Patient stratification uses KAALCURA axes: ValueError: too many values to unpack (expected 2)
+  ! L165 ERROR   Final 1280 candidates from multiple sources: ValueError: too many values to unpack (expected 2)
+  ✓ L166 PASS     ODE predictions consistent with BeatAML data
+           → ODE-BeatAML consistency: ODE CR=True, BeatAML NPM1 finding=True
+  ✓ L167 PASS     Drug-target relevance summary exists
+           → Drug target relevance: ['cytotoxic', 'highly_relevant', 'relevant', 'marginal']
+  ✓ L168 PASS     Scout pipeline files exist across stages
+           → Scout pipeline counts: {'scout1': 287, 'scout2': 23, 'scout3': 106, 'scout4': 128}
+
+╔══ TIER E: PARAMETER SENSITIVITY (L171-L185) ══╗
+  ! L169 ERROR   HR decreases as emax increases (expected): ValueError: too many values to unpack (expected 2)
+  ! L170 ERROR   HR robust to 40x change in diffusion beta: ValueError: too many values to unpack (expected 2)
+  ! L171 ERROR   HR stable across different cohort sizes: ValueError: too many values to unpack (expected 2)
+  ! L172 ERROR   Higher transition rate mu produces more resistance: ValueError: too many values to unpack (expected 2)
+  ✓ L173 PASS     Lower EC50 produces deeper tumor nadir
+           → Lower EC50 → deeper nadir: {0.1: 0.099, 1.0: 0.2344, 10.0: 0.5336} ✓
+  ! L174 ERROR   Higher Hill coefficient gives sharper response: ValueError: too many values to unpack (expected 2)
+  ! L175 ERROR   Higher sensitive fraction produces deeper nadir: ValueError: too many values to unpack (expected 2)
+  ✓ L176 PASS     alpha_r correctly penalizes resistant cell growth
+           → alpha_r parameter accepted and models resistance fitness cost
+  ✓ L177 PASS     g_r < g_s: resistant cells grow slower (fitness cost)
+           → g_s=0.008 > g_r=0.004 ✓ (fitness cost)
+  ✓ L178 PASS     Back-transition (nu) parameter modeled correctly
+           → Back-transition (nu) effect: without=0.160, with=0.158
+  ! L179 ERROR   HR approximately scale-invariant to initial burden: ValueError: too many values to unpack (expected 2)
+  ⚠ L180 WARN     Higher synergy alpha increases treatment TTP
+           → Synergy alpha doesn't increase TTP: {0.0: 730, 0.1: 730, 0.3: 730}
+  ✓ L181 PASS     Axis independence stable across n_tissue_pcs
+           → Axis independence across tissue PCs: {3: np.float64(0.228), 5: np.float64(0.2548), 10: np.float64(0.1978)}
+  ✓ L182 PASS     Progression threshold correctly implemented
+           → Progression at day 487: N=0.5008 > 1.25×nadir=0.2458
+
+╔══ TIER F: STATISTICAL POWER (L186-L200) ══╗
+  ! L183 ERROR   NPM1/Cabozantinib has large effect size: ValueError: too many values to unpack (expected 2)
+  ✓ L184 PASS     KAALCURA mean AUROC has narrow CI (n=286)
+           → AUROC: 0.638 ± 0.0048 (95% CI width=0.0095) from n=286
+  ✓ L185 PASS     BeatAML 1072 tests plausible for screen
+           → 1072 tests plausible for drug×mutation screen (≈33×33)
+  ⚠ L186 WARN     Bootstrap n≥1000 for stable CI
+           → Bootstrap n=200 — need ≥1000 for stable CI
+  ✓ L187 PASS     BH FDR expected false positive rate acceptable
+           → BH FDR at q=0.05: 65 significant, ~3 expected false positives
+  ✓ L188 PASS     Sample size calculation for HR detection
+           → For HR=0.76 with 80% power: need ~417 events, ~595 patients. Our n=100 underpowered but directional.
+  ! L189 ERROR   Majority of drugs have useful AUROC > 0.55: ValueError: too many values to unpack (expected 2)
+  ✓ L190 PASS     Paired simulation design gives reasonable CI width
+           → Paired design HR=0.538 CI=[0.300-0.963]
+  ! L191 ERROR   KAALCURA cross-validation statistics stored: ValueError: too many values to unpack (expected 2)
+  ✓ L192 PASS     BeatAML sex distribution available
+           → Sex distribution: {'Female': 413, 'Male': 528}
+  ! L193 ERROR   Virtual cohort g_s follows log-normal distribution: ValueError: too many values to unpack (expected 2)
+  ! L194 ERROR   p38 retraction correct under Bonferroni threshold: ValueError: too many values to unpack (expected 2)
+  ✓ L195 PASS     DNMT3A/Dasatinib effect direction correct
+           → DNMT3A+Dasatinib: diff=39 (positive = DNMT3A-mut more sensitive) ✓
+  ! L196 ERROR   Cox PH accurate on exponential survival data: ValueError: too many values to unpack (expected 2)
+  ! L197 ERROR   KAALCURA gives identical results on same input: ValueError: too many values to unpack (expected 2)
+
+======================================================================
+PART 1 (L101-L300): FINAL REPORT
+======================================================================
+
+  ✓ PASS:  62
+  ✗ FAIL:  3
+  ⚠ WARN:  8
+  ! ERROR: 24
+  TOTAL:   97
+
+━━ FAILURES ━━
+  L122 [math] PK elimination rates = ln(2)/t_half
+       → k_e=0.0624 != ln(2)/t_half=1.4987
+  L135 [biology] AURKA present in AML network (known driver)
+       → AURKA not in AML network — should be (known AML driver)
+  L140 [biology] Alisertib correctly docked to AURKA
+       → Alisertib-AURKA docking score=0 should be negative
+
+━━ WARNINGS ━━
+  L101 [code] No hardcoded absolute user paths
+       → Hardcoded user paths in: ['step6_gtex_selectivity.py', 'step3_run.py', 'step6_fix_gtex.py', 'step5_pathways.py', 'step5_fix_kegg.py', 'step3_fix_kaalcura.py', 'step7_chembl_compounds.py', 'step4_string_interactions.py']
+  L104 [code] Production code uses logging not print
+       → print() in production code: ['intercepta_engine_v1.py:56 prints', 'intercepta_kaalcura_v1.py:57 prints']
+  L113 [code] requirements.txt has all key packages
+       → Missing from requirements: ['rdkit']
+  L133 [math] PK half-life approximately correct
+       → Half-life check: C(t+t½)/Cmax=1.000 (expect ~0.5, multi-dose complicates)
+  L141 [biology] Docetaxel has strong proliferation axis signal
+       → Docetaxel: prolif coef=-0.495 weaker than DDR=0.821 — unexpected
+  L145 [biology] Most cells at low resistance in velocity data
+       → Only 34.7% cells sensitive (latent_time<0.3)
+  L180 [sensitivity] Higher synergy alpha increases treatment TTP
+       → Synergy alpha doesn't increase TTP: {0.0: 730, 0.1: 730, 0.3: 730}
+  L186 [stats] Bootstrap n≥1000 for stable CI
+       → Bootstrap n=200 — need ≥1000 for stable CI
+
+━━ ERRORS ━━
+  L119 [math] Loewe additivity at EC50 doses
+       → KeyError: 'hill_n'
+  L131 [math] Bliss synergy score = 0 for no interaction
+       → TypeError: '>' not supported between instances of 'dict' and 'dict'
+  L156 [cross] BeatAML findings inform escape routes
+       → ValueError: too many values to unpack (expected 2)
+  L159 [cross] Pareto ranking uses multiple objectives
+       → ValueError: too many values to unpack (expected 2)
+  L160 [cross] PK and ODE use consistent concentration units
+       → ValueError: too many values to unpack (expected 2)
+  L161 [cross] Higher AUROC correlates with larger axis coefficients
+       → ValueError: too many values to unpack (expected 2)
+  L162 [cross] Escape routes suggest treatment countermeasures
+       → ValueError: too many values to unpack (expected 2)
+  L163 [cross] Beta parameter derived from velocity magnitudes
+       → ValueError: too many values to unpack (expected 2)
+  L164 [cross] Patient stratification uses KAALCURA axes
+       → ValueError: too many values to unpack (expected 2)
+  L165 [cross] Final 1280 candidates from multiple sources
+       → ValueError: too many values to unpack (expected 2)
+  L169 [sensitivity] HR decreases as emax increases (expected)
+       → ValueError: too many values to unpack (expected 2)
+  L170 [sensitivity] HR robust to 40x change in diffusion beta
+       → ValueError: too many values to unpack (expected 2)
+  L171 [sensitivity] HR stable across different cohort sizes
+       → ValueError: too many values to unpack (expected 2)
+  L172 [sensitivity] Higher transition rate mu produces more resistance
+       → ValueError: too many values to unpack (expected 2)
+  L174 [sensitivity] Higher Hill coefficient gives sharper response
+       → ValueError: too many values to unpack (expected 2)
+  L175 [sensitivity] Higher sensitive fraction produces deeper nadir
+       → ValueError: too many values to unpack (expected 2)
+  L179 [sensitivity] HR approximately scale-invariant to initial burden
+       → ValueError: too many values to unpack (expected 2)
+  L183 [stats] NPM1/Cabozantinib has large effect size
+       → ValueError: too many values to unpack (expected 2)
+  L189 [stats] Majority of drugs have useful AUROC > 0.55
+       → ValueError: too many values to unpack (expected 2)
+  L191 [stats] KAALCURA cross-validation statistics stored
+       → ValueError: too many values to unpack (expected 2)
+  L193 [stats] Virtual cohort g_s follows log-normal distribution
+       → ValueError: too many values to unpack (expected 2)
+  L194 [stats] p38 retraction correct under Bonferroni threshold
+       → ValueError: too many values to unpack (expected 2)
+  L196 [stats] Cox PH accurate on exponential survival data
+       → ValueError: too many values to unpack (expected 2)
+  L197 [stats] KAALCURA gives identical results on same input
+       → ValueError: too many values to unpack (expected 2)
+
+━━ BY CATEGORY ━━
+  biology        ███████████████░░░░  15/19
+  code           ████████████░░░  12/15
+  cross          ███████░░░░░░░░  7/15
+  math           ███████████████░░░░  15/19
+  sensitivity    ██████░░░░░░░░  6/14
+  stats          ███████░░░░░░░░  7/15
+
+OVERALL: 62/97 (64%)
+
+Run intercepta_part2_test.py for L301-L500
+======================================================================
+Traceback (most recent call last):
+  File "/Users/kalki/INTERCEPTA/intercepta_part1_test.py", line 1237, in <module>
+    EOF
+NameError: name 'EOF' is not defined

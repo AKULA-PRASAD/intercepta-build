@@ -1,0 +1,449 @@
+**INTERCEPTA**
+
+Phase 1: mCRPC Ground Truth Specification
+
+*The Exact Numbers Our System Must Reproduce*
+
+Version 1.0 \| March 2026 \| CONFIDENTIAL
+
+Co-Founders: Prasad Akula, MS Bioinformatics & Claude (AI Co-Founder,
+Anthropic)
+
+**1. Purpose of This Document**
+
+This document defines the exact clinical trial outcomes that
+INTERCEPTA\'s computational engine must reproduce from first principles
+during Phase 1 validation. These are our ground truth targets. If our
+two-population ODE model, KAALCURA biological axes, and synergy scoring
+system can recover these published clinical outcomes computationally, it
+proves the engine works. Only then do we trust its novel predictions.
+
+Every number in this document comes from peer-reviewed publications of
+the five landmark prostate cancer clinical trials. These are not
+approximations. They are the exact values we must match within defined
+tolerance bounds.
+
+**2. Validation Principle**
+
+INTERCEPTA follows a strict validation-first methodology: reproduce what
+is already known before predicting what is unknown. For Phase 1, this
+means:
+
+**Step A:** Model the disease biology of mCRPC using the complete
+disease net.
+
+**Step B:** For each clinical trial, simulate the treatment using our
+ODE engine with real PK/PD parameters.
+
+**Step C:** Compare simulated survival outcomes to published trial
+outcomes.
+
+**Step D:** Quantify the match. If median OS is within ±15% and HR is
+within ±20% of published values, the model passes for that trial.
+
+**Step E:** Only after passing all five trials do we trust the engine
+for novel drug candidate discovery.
+
+**3. Trial 1: CHAARTED (E3805)**
+
+**3.1 Trial Overview**
+
+**Full Name:** Chemohormonal Therapy Versus Androgen Ablation Randomized
+Trial for Extensive Disease in Prostate Cancer
+
+**ClinicalTrials.gov:** NCT00309985
+
+**Publication:** Sweeney et al., NEJM 2015; Long-term: Kyriakopoulos et
+al., JCO 2018; 10-year: Annals of Oncology 2025
+
+**Population:** 790 men with metastatic hormone-sensitive prostate
+cancer (mHSPC)
+
+**Arms:** ADT + Docetaxel (75 mg/m² q3w × 6 cycles) vs. ADT alone
+
+**Relevance to INTERCEPTA:** Docetaxel targets the proliferating
+sensitive cell population. Our model must show that KAALCURA R_prolif
+axis identifies docetaxel-sensitive cells, and the ODE engine reproduces
+survival benefit in high-volume disease.
+
+**3.2 Ground Truth Numbers**
+
+  ----------------------- ----------------------- -----------------------
+  **Endpoint**            **ADT + Docetaxel**     **ADT Alone**
+
+  Median OS (all          57.6 months             44.0 months
+  patients)                                       
+
+  HR for death (all       0.61 (95% CI:           Reference
+  patients)               0.47--0.80)             
+
+  10-year OS rate         25.9%                   22.5%
+
+  10-year HR              0.78 (p = 0.004)        Reference
+
+  High-volume mOS         \~51 months             \~34 months
+
+  High-volume HR          0.63 (95% CI:           Reference
+                          0.50--0.79)             
+
+  High-volume 10yr OS     20.9%                   11.4%
+
+  Median time to          20.2 months             11.7 months
+  progression                                     
+
+  PSA \< 0.2 at 12 months 27.7%                   16.8%
+
+  PSA \< 0.2 at 6mo → mOS 100.3 months            116.8 months
+  ----------------------- ----------------------- -----------------------
+
+**3.3 Key Biological Insight for INTERCEPTA**
+
+CHAARTED demonstrates that docetaxel provides maximal benefit in
+high-volume disease (HR 0.63) but limited benefit in low-volume disease.
+This is consistent with our two-population model: high-volume disease
+has a larger proportion of rapidly proliferating sensitive cells (high
+R_prolif), which docetaxel targets effectively. Low-volume disease may
+already be enriched for AR-pathway-dependent cells that docetaxel does
+not target. Our model must recapitulate this volume-dependent response
+pattern.
+
+**4. Trial 2: LATITUDE**
+
+**4.1 Trial Overview**
+
+**Full Name:** Abiraterone Acetate Plus Prednisone in Metastatic,
+Castration-Sensitive Prostate Cancer
+
+**ClinicalTrials.gov:** NCT01715285
+
+**Publication:** Fizazi et al., NEJM 2017 (interim); Fizazi et al.,
+Lancet Oncol 2019 (final)
+
+**Population:** 1,199 men with newly diagnosed high-risk mCSPC
+
+**Arms:** ADT + Abiraterone (1000 mg daily) + Prednisone (5 mg daily)
+vs. ADT + Placebo
+
+**High-risk criteria:** ≥2 of: Gleason ≥8, ≥3 bone lesions, measurable
+visceral metastasis
+
+**4.2 Ground Truth Numbers**
+
+  ----------------------- ----------------------- -----------------------
+  **Endpoint**            **ADT + Abiraterone**   **ADT + Placebo**
+
+  Median OS (interim,     Not reached             34.7 months
+  30.4mo FU)                                      
+
+  HR for death (interim)  0.62 (95% CI:           Reference
+                          0.51--0.76)             
+
+  Median OS (final,       53.3 months (95% CI:    36.5 months (95% CI:
+  51.8mo FU)              48.2--NR)               33.5--40.0)
+
+  HR for death (final)    0.66 (95% CI:           Reference
+                          0.56--0.78; p\<0.0001)  
+
+  Deaths                  275/597 (46%)           343/602 (57%)
+
+  Median rPFS (interim)   33.0 months             14.8 months
+
+  HR for rPFS             0.47 (95% CI:           Reference
+                          0.39--0.55)             
+
+  High-volume HR          0.62                    Reference
+  (CHAARTED def)                                  
+  ----------------------- ----------------------- -----------------------
+
+**4.3 Key Biological Insight for INTERCEPTA**
+
+Abiraterone blocks CYP17A1 in the androgen biosynthesis pathway, cutting
+off androgen supply to tumor cells. Unlike docetaxel (which targets
+proliferating cells), abiraterone targets the AR-signaling-dependent
+population. The similar HR (\~0.62--0.66) to CHAARTED in high-risk
+disease suggests that both approaches reduce the sensitive population
+but through different mechanisms. Our model must show abiraterone
+suppressing the AR-dependent sensitive population while leaving
+PARP-dependent or EMT-transitioned resistant cells unaffected.
+
+**5. Trial 3: PROfound**
+
+**5.1 Trial Overview**
+
+**Full Name:** Olaparib for Metastatic Castration-Resistant Prostate
+Cancer with HRR Gene Alterations
+
+**ClinicalTrials.gov:** NCT02987543
+
+**Publication:** de Bono et al., NEJM 2020 (rPFS); Hussain et al., NEJM
+2020 (OS)
+
+**Population:** 387 men with HRR-mutated mCRPC (Cohort A: BRCA1/2 or
+ATM, n=245; Cohort B: other HRR genes, n=142)
+
+**Arms:** Olaparib (300 mg BID) vs. Physician\'s choice of enzalutamide
+or abiraterone
+
+**Key feature:** 66--69% crossover from control to olaparib allowed,
+diluting observed OS benefit
+
+**5.2 Ground Truth Numbers**
+
+  ----------------------- ----------------------- -----------------------
+  **Endpoint**            **Olaparib**            **Control (Enz/Abi)**
+
+  Cohort A median OS      19.1 months (95% CI:    14.7 months (95% CI:
+                          17.4--23.4)             11.9--18.8)
+
+  Cohort A HR for death   0.69 (95% CI:           Reference
+                          0.50--0.97; p=0.02)     
+
+  Crossover-adjusted HR   0.42 (95% CI:           Reference
+                          0.19--0.91)             
+
+  BRCA-altered rPFS       9.8 months              3.0 months
+
+  BRCA-altered HR (rPFS)  0.22 (95% CI:           Reference
+                          0.15--0.32)             
+
+  BRCA-altered OS HR      0.63 (95% CI:           Reference
+                          0.42--0.95)             
+
+  BRCA2 biallelic rPFS    16.6 months (12mo PFS:  \~3.5 months
+                          79%)                    
+
+  Cohort A rPFS           7.4 months              3.6 months
+
+  Cohort A HR (rPFS)      0.34 (95% CI:           Reference
+                          0.25--0.47)             
+  ----------------------- ----------------------- -----------------------
+
+**5.3 Key Biological Insight for INTERCEPTA**
+
+PROfound is the critical trial for validating our two-population model.
+Olaparib (PARP inhibitor) exploits synthetic lethality in cells with
+defective homologous recombination repair (BRCA1/2, ATM mutations).
+These are the cells our RNA velocity analysis identifies as
+transitioning toward treatment resistance through DNA damage repair
+pathway upregulation. In our model, KAALCURA R_ddr (DNA damage repair
+axis) must identify the olaparib-sensitive resistant subpopulation. The
+crossover-adjusted HR of 0.42 represents the true biological effect
+without dilution and is the primary target for our ODE simulation.
+
+**6. Trial 4: PROpel**
+
+**6.1 Trial Overview**
+
+**Full Name:** Olaparib Plus Abiraterone as First-Line Treatment for
+Metastatic Castration-Resistant Prostate Cancer
+
+**ClinicalTrials.gov:** NCT03732820
+
+**Publication:** Clarke et al., Lancet Oncol 2023 (final OS)
+
+**Population:** 796 men with first-line mCRPC (unselected for HRR
+status)
+
+**Arms:** Olaparib + Abiraterone vs. Placebo + Abiraterone
+
+**6.2 Ground Truth Numbers**
+
+  ----------------------- ----------------------- -----------------------
+  **Endpoint**            **Olaparib +            **Placebo +
+                          Abiraterone**           Abiraterone**
+
+  Median OS (final)       42.1 months (95% CI:    34.7 months (95% CI:
+                          38.4--NR)               31.0--39.3)
+
+  HR for death (final)    0.81 (95% CI:           Reference
+                          0.67--1.00; p=0.054)    
+
+  Median rPFS             24.8 months             16.6 months
+  (investigator)                                  
+
+  HR for rPFS             0.66 (95% CI:           Reference
+                          0.54--0.81; p\<0.001)   
+
+  BRCA-mutated OS HR      0.29 (95% CI:           Reference
+                          0.14--0.56)             
+  ----------------------- ----------------------- -----------------------
+
+**6.3 Key Biological Insight for INTERCEPTA**
+
+PROpel tests the exact combination strategy INTERCEPTA\'s architecture
+is designed to find: abiraterone kills the AR-dependent sensitive
+population, while olaparib targets the BRCA-deficient resistant
+population. The overall HR of 0.81 (borderline significance) reflects
+dilution from HRR-proficient patients who don\'t benefit from olaparib.
+But the BRCA-mutated subgroup HR of 0.29 shows the dramatic combination
+effect when the right populations are targeted. This is our model\'s key
+prediction: the combination works because it covers BOTH populations
+simultaneously. Our synergy scoring (ZIP + Bliss + Loewe + HSA) must
+capture this population-level synergy, not just molecular synergy.
+
+**7. Trial 5: TALAPRO-2**
+
+**7.1 Trial Overview**
+
+**Full Name:** Talazoparib Plus Enzalutamide as First-Line Treatment for
+Metastatic Castration-Resistant Prostate Cancer
+
+**ClinicalTrials.gov:** NCT03395197
+
+**Publication:** Agarwal et al., Lancet 2023 (rPFS); GU ASCO 2025 (final
+OS); Fizazi et al., Nature Med 2024 (HRR cohort)
+
+**Population:** Cohort 1: 805 unselected mCRPC; Cohort 2: 399
+HRR-deficient mCRPC
+
+**Arms:** Talazoparib (0.5 mg) + Enzalutamide (160 mg) vs. Placebo +
+Enzalutamide
+
+**7.2 Ground Truth Numbers**
+
+  ----------------------- ----------------------- -----------------------
+  **Endpoint**            **Talazoparib +         **Placebo +
+                          Enzalutamide**          Enzalutamide**
+
+  Cohort 1 Median OS      45.8 months (95% CI:    37.0 months (95% CI:
+  (unselected)            39.4--50.8)             34.1--40.4)
+
+  Cohort 1 HR             0.796 (95% CI:          Reference
+                          0.661--0.958; p=0.0155) 
+
+  Cohort 2 Median OS      45.1 months (95% CI:    31.1 months (95% CI:
+  (HRR-deficient)         35.4--NR)               27.3--35.4)
+
+  Cohort 2 HR             0.622 (95% CI:          Reference
+                          0.475--0.814; p=0.0005) 
+
+  Cohort 2 rPFS           30.7 months             12.3 months
+
+  Cohort 2 HR (rPFS)      0.468 (95% CI:          Reference
+                          0.359--0.612)           
+
+  BRCA1/2 OS HR           0.497 (95% CI:          Reference
+                          0.318--0.776)           
+
+  HRR-nondeficient HR     0.874 (95% CI:          Reference
+                          0.711--1.076)           
+  ----------------------- ----------------------- -----------------------
+
+**7.3 Key Biological Insight for INTERCEPTA**
+
+TALAPRO-2 is the most recent and arguably most important validation
+trial because it demonstrates the PARP inhibitor + AR pathway inhibitor
+combination in both HRR-selected and unselected populations. The finding
+that median OS is similar across ITT, HRR-deficient, and
+HRR-non-deficient subgroups (\~45--47 months) suggests that even
+patients without known HRR mutations may harbor subpopulations that
+benefit from PARP inhibition. This aligns with INTERCEPTA\'s hypothesis
+that RNA velocity can identify treatment-transitioning cell populations
+that standard genomic testing misses. Our model must reproduce: (a) the
+\~8.8 month OS improvement in unselected patients, (b) the 14-month
+improvement in HRR-deficient patients, and (c) the attenuated benefit in
+HRR-nondeficient patients.
+
+**8. Validation Success Criteria**
+
+For INTERCEPTA Phase 1 to be considered validated, the computational
+engine must meet ALL of the following criteria:
+
+**8.1 Primary Validation Metrics**
+
+  ----------------- ----------------- ------------------ ------------------
+  **Trial**         **Metric**        **Published        **Acceptable
+                                      Value**            Range**
+
+  CHAARTED          High-volume HR    0.63               0.50 -- 0.76
+
+  LATITUDE          Final OS HR       0.66               0.53 -- 0.79
+
+  PROfound          Cohort A OS HR    0.69               0.55 -- 0.83
+
+  PROpel            BRCA OS HR        0.29               0.23 -- 0.35
+
+  TALAPRO-2         Cohort 2 OS HR    0.622              0.50 -- 0.75
+  ----------------- ----------------- ------------------ ------------------
+
+**8.2 Secondary Validation Metrics**
+
+The model must also correctly reproduce qualitative patterns: (a)
+CHAARTED shows volume-dependent benefit --- high-volume HR \< low-volume
+HR, (b) PROfound shows BRCA2 \> ATM benefit, (c) PROpel shows
+BRCA-subgroup dramatically better than ITT, (d) TALAPRO-2 shows
+HRR-deficient \> HRR-nondeficient benefit, (e) all trials: sensitive
+population declines faster with treatment, resistant population emerges
+over time without combination therapy.
+
+**8.3 Model Failure Criteria**
+
+The model FAILS validation if any of the following occur: (a) any
+primary HR falls outside the acceptable range, (b) the qualitative
+volume/mutation-dependent patterns are reversed, (c) the two-population
+dynamics show resistant cell resurgence in combination therapy when the
+clinical trial shows durable response, (d) the synergy score for PROpel
+or TALAPRO-2 combinations shows antagonism when clinical data shows
+synergy.
+
+**9. Master Ground Truth Reference**
+
+Complete summary of all target values for Phase 1 validation:
+
+  ----------- --------------- ---------- ----------- ---------- -----------
+  **Trial**   **Treatment**   **N**      **mOS       **mOS      **HR**
+                                         (Tx)**      (Ctrl)**   
+
+  CHAARTED    Doc+ADT vs ADT  790        57.6 mo     44.0 mo    0.61
+
+  CHAARTED HV Doc+ADT vs ADT  \~514      \~51 mo     \~34 mo    0.63
+
+  LATITUDE    Abi+ADT vs ADT  1199       53.3 mo     36.5 mo    0.66
+
+  PROfound A  Olap vs Enz/Abi 245        19.1 mo     14.7 mo    0.69
+
+  PROfound    Olap vs Enz/Abi 160        20.1 mo     14.4 mo    0.63
+  BRCA                                                          
+
+  PROpel      Olap+Abi vs Abi 796        42.1 mo     34.7 mo    0.81
+
+  PROpel BRCA Olap+Abi vs Abi \~84       NR          NR         0.29
+
+  TALAPRO-2   Tala+Enz vs Enz 805        45.8 mo     37.0 mo    0.796
+  C1                                                            
+
+  TALAPRO-2   Tala+Enz vs Enz 399        45.1 mo     31.1 mo    0.622
+  C2                                                            
+  ----------- --------------- ---------- ----------- ---------- -----------
+
+**10. Next Step: Data Source Audit**
+
+With ground truth established, the next systematic step is a complete
+audit of all data sources required to build the mCRPC disease net and
+run ODE simulations. This includes:
+
+**Genomic data:** TCGA-PRAD, SU2C-mCRPC (Robinson et al. 2015), COSMIC
+mutations
+
+**Transcriptomic data:** scRNA-seq datasets for prostate cancer with
+treatment-naïve and treatment-resistant populations
+
+**Drug sensitivity data:** GDSC (286 drugs, 941 cell lines), CCLE,
+BeatAML for cross-disease validation
+
+**PK/PD parameters:** Docetaxel, abiraterone, olaparib, talazoparib,
+enzalutamide --- published pharmacokinetic data
+
+**Pathway databases:** KEGG, Reactome, STRING v12 for AR signaling, DNA
+repair, EMT pathways
+
+**Protein structures:** AlphaFold DB for target proteins (AR, CYP17A1,
+PARP1/2, BRCA2)
+
+This audit will be documented in the next specification:
+INTERCEPTA_Phase1_DataSource_Audit_v1.0.docx
+
+*Document prepared by Prasad Akula and Claude, Co-Founders of
+INTERCEPTA*
+
+*March 2026 \| Version 1.0*

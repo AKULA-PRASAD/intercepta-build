@@ -1,0 +1,62 @@
+======================================================================
+INTERCEPTA — 2000-LEVEL TEST: PART 2 (L301-L500)
+======================================================================
+
+╔══ TIER G: PART 1 FOLLOW-UP INVESTIGATIONS (L301-L315) ══╗
+  ✓ L301 PASS     BeatAML duplicate IDs = longitudinal design (not error)
+           → BeatAML longitudinal design: 108 patients with multiple visits (waves 1-4)
+  ⚠ L302 WARN     MDM2/AR/BRCA1 pLDDT affects docking reliability
+           → Low pLDDT structures — docking unreliable: ['MDM2:pLDDT=63,low_conf_residues=1787', 'AR:pLDDT=59,low_conf_residues=3842', 'BRCA1:pLDDT=42,low_conf_residues=11611']
+  ✗ L303 FAIL     Alisertib docking score actual value
+           → No negative score found. Keys: ['status', 'target', 'crystal_structure', 'validation', 'alisertib', 'method']
+  ✓ L304 PASS     STRING score scale identified (0-1 vs 0-1000)
+           → STRING score scale: 0-1 (normalized), max=1, high_conf=918/920
+  ✓ L305 PASS     Synergy effect visible with 5-year simulation
+           → With 5yr sim: combo+syn TTP=1825d > mono TTP=159d (+54.7mo)
+  ✗ L306 FAIL     AURKA absence from AML network confirmed + documented
+           → AURKA missing from AML network. Add AURKA (overexpressed in t(8;21) AML).
+  ✓ L307 PASS     Docetaxel DDR coefficient biologically justified
+           → Docetaxel: coef_prolif=-0.495, coef_ddr=0.821. Both biologically plausible (mitotic catastrophe → DNA damage).
+  ✓ L308 PASS     CRPC velocity distribution reflects advanced resistance
+           → CRPC cells: 29.9% at high resistance (latent_time>0.5). Expected for castration-resistant disease.
+  ✓ L309 PASS     2-pop ODE emax threshold for resistance dynamics
+           → 2-pop ODE resistance threshold: emax_s≥0.01 needed
+  ✓ L310 PASS     Bootstrap CI width at n=200 vs n=1000
+           → CI width by cohort size: {200: np.float64(0.39), 500: np.float64(0.235), 1000: np.float64(0.174)} — n=200 gives CI 0.39 wide
+  ✓ L311 PASS     2-pop ODE vs Phenotype ODE nadir comparison
+           → 2-pop nadir=0.1966, Phenotype nadir=0.1490. Both models produce tumor shrinkage.
+  ✓ L312 PASS     CHAARTED failure root cause: emax too low
+           → CHAARTED HR<1 requires emax_s≥0.03: HR=0.925
+  ⚠ L313 WARN     mCRPC escape route TTP values readable
+           → TTP values not found. Arm structure: [['pfs_months', 'composition_2y'], ['pfs_months', 'composition_2y']]
+  ⚠ L314 WARN     VenAza 'sec' field meaning documented
+           → VenAza: sec=51.3, cr=True, cr_mo=4.8. 'sec' meaning unclear — likely 'secondary resistance onset' in days.
+  ⚠ L315 WARN     Capability test 0/2 failure investigated
+           → Capability test 0/2 passed. Contents: ['test_date', 'passed', 'warnings', 'failed', 'tnbc_genes']. Investigate what failed.
+
+╔══ TIER H: OUTPUT FORMAT VALIDATION (L316-L330) ══╗
+  ✓ L316 PASS     INTERCEPTA FINAL package has all sections
+           → Pharma package complete: ['platform', 'disease', 'date', 'authors', 'validation', 'disease_net', 'total_candidates', 'database_compounds', 'novel_molecules', 'novels_in_top_50', 'novels_in_top_100', 'targets_covered']
+  ✓ L317 PASS     INTC002 JSON has all required fields
+           → INTC002 JSON complete: 9 fields
+  ✓ L318 PASS     BeatAML findings JSON has required schema
+           → BeatAML findings JSON complete
+  ✓ L319 PASS     Calibrated parameters JSON has required fields
+           → Calibrated params complete: ['ec50_method', 'progression_def', 'ec50', 'trials']
+  ✓ L320 PASS     5-trial validation CSV has all columns
+           → 5-trial CSV has all columns: ['trial', 'target', 'simulated', 'pass', 'benefit']
+  ✓ L321 PASS     KAALCURA validation CSV has coefficient columns
+           → KAALCURA CSV complete: ['drug', 'auroc', 'coef_prolif', 'coef_emt', 'coef_ddr']
+  ✗ L322 FAIL     De novo molecules CSV has all ADMET columns
+           → De novo CSV missing columns: ['docking_score']
+  ✓ L323 PASS     AML escape routes JSON has gene and drug info
+           → Escape routes have gene info: False, drug suggestion: False. Sample keys: non-dict
+  ✓ L324 PASS     Patient stratification has 4 clinical groups
+           → Patient stratification groups: ['NE_high', 'NE_moderate', 'Average', 'NE_low', 'AR_mutant_dominant', 'AR_V7_dominant']
+  ✓ L325 PASS     Docked novel molecules JSON has all fields
+           → Docked novel JSON complete: ['position', 'substitution', 'smiles', 'mw', 'logp', 'hbd']
+Traceback (most recent call last):
+  File "/Users/kalki/INTERCEPTA/intercepta_part2_test.py", line 369, in <module>
+    test("AML ODE validation has all treatment arms", t_aml_ode_all_arms, "format")
+                                                      ^^^^^^^^^^^^^^^^^^
+NameError: name 't_aml_ode_all_arms' is not defined. Did you mean: 't_aml_ode_json_all_arms'?

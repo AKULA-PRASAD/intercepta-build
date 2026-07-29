@@ -1,0 +1,86 @@
+============================================================
+KAALCURA REVALIDATION ON REAL GDSC DATA (FIXED)
+============================================================
+  ✓ Gene mapping: 1MB
+  ✓ FPKM expression: 250MB
+  ✓ IC50 data: 21MB
+
+[1/6] Loading SIDG → gene_symbol mapping...
+  37345 pairs loaded
+
+[2/6] Identifying KAALCURA genes in GDSC...
+  48/48 KAALCURA genes found
+
+[3/6] Loading FPKM expression matrix...
+  Raw shape: (37606, 1432)  (4s)
+  Cell line names: 1431
+  KAALCURA genes in matrix: 48/48
+  Final expression matrix: (1432, 48)
+  Cell line name examples: ['Unnamed: 1', 'MEC-1', 'NBsusSR', 'M14']
+
+[4/6] Loading IC50 data...
+  Shape: (242036, 19)
+  Columns: ['DATASET', 'NLME_RESULT_ID', 'NLME_CURVE_ID', 'COSMIC_ID', 'CELL_LINE_NAME', 'SANGER_MODEL_ID', 'TCGA_DESC', 'DRUG_ID', 'DRUG_NAME', 'PUTATIVE_TARGET']
+  Using: cell='CELL_LINE_NAME', drug='DRUG_NAME', ic50='LN_IC50'
+  Direct match: 962/969 IC50 cells in expression
+
+  Final matched cell lines: 962
+
+[5/6] Fitting KAALCURA on real GDSC expression...
+  Expression for matched cells: (962, 48)
+  KAALCURA fitted on 962 cell lines
+  R_prolif=-0.000  R_emt=-0.000  R_ddr=-0.000
+  Max axis correlation: 0.787 (⚠ correlated)
+
+[6/6] Computing AUROC for each drug...
+  Total drugs: 286
+  50 drugs...  100 drugs...  150 drugs...  200 drugs...  250 drugs...
+  Computed 286, skipped 0
+
+============================================================
+RESULTS
+============================================================
+  n_drugs:    286
+  mean_AUROC: 0.671
+  std:        0.047
+  t-test p:   1.06e-165  (vs random 0.5)
+
+  Top 10:
+                   drug    auroc  coef_prolif  coef_emt  coef_ddr
+             Vorinostat 0.769997     0.565972 -0.163647 -1.204522
+            GSK626616AC 0.767907     0.452085 -0.181604 -0.965773
+               Olaparib 0.762246     0.534397 -0.487605 -1.300358
+       Schweinfurthin A 0.759257     1.101426 -1.571280 -2.364084
+              Veliparib 0.752800     0.395328 -0.186369 -0.943968
+              Niraparib 0.750487     0.719683 -0.512291 -1.564965
+Podophyllotoxin bromide 0.750168     0.697530 -0.411666 -1.395991
+             GSK2830371 0.750068     0.693772 -0.308437 -1.351419
+                LMB_AB1 0.747598     0.449505 -0.134889 -1.056418
+            Zoledronate 0.745318     0.432259 -0.191520 -0.939174
+
+  PARP inhibitors:
+       drug    auroc  coef_prolif  coef_ddr
+   Olaparib 0.762246     0.534397 -1.300358
+  Veliparib 0.752800     0.395328 -0.943968
+  Niraparib 0.750487     0.719683 -1.564965
+  Rucaparib 0.728059     0.471118 -1.004319
+Talazoparib 0.677743     0.918187 -1.926573
+
+  Taxanes:
+       drug    auroc  coef_prolif  coef_ddr
+Vinblastine 0.729691     1.037848 -2.049612
+Vinorelbine 0.702352     1.000714 -1.964104
+ Paclitaxel 0.659586     0.651327 -1.341966
+  Docetaxel 0.642474     0.741916 -1.509279
+
+  COMPARISON TO ORIGINAL:
+  Original: n=286, mean=0.638
+  Rerun:    n=286,  mean=0.671
+  Shared drugs: 286, AUROC correlation r=0.818
+  ✓ HIGH CORRELATION — AUROC=0.638 CONFIRMED REAL.
+
+  Saved: /Users/kalki/INTERCEPTA/results/kaalcura_real_validation_RERUN.csv
+
+============================================================
+REVALIDATION COMPLETE
+============================================================

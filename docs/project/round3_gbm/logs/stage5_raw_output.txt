@@ -1,0 +1,107 @@
+/Users/kalki/miniconda3/envs/intercepta-scrna/lib/python3.11/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Unknown extension is not supported and will be removed
+  warn(msg)
+
+## Stage 5 — Ranking & Partial Pharma Deliverable
+
+**Start:** 22:32:34
+
+### 5.1 Inspect pareto_ranking module
+Functions: ['build_mcrpc_candidates', 'composite_score', 'main', 'pareto_front', 'rank_candidates']
+  `build_mcrpc_candidates()`
+  `composite_score(candidate, weights=None)`
+  `main()`
+  `pareto_front(scores)`
+  `rank_candidates(candidates)`
+
+### 5.2 Build candidate dataframe with available dimensions
+
+Candidates (≥3 brain cell lines AND target ≥1 GBM net gene): 90
+Of which target ≥1 top-20 GBM gene: 15
+
+### 5.3 GTEx-based selectivity score per drug
+
+### 5.4 ClinicalTrials.gov novelty check
+Local CT.gov files: []
+No local ClinicalTrials.gov data found. Novelty check requires live API call.
+Marking novelty=NaN per "no patching during test" rule. Real pipeline would need offline CT.gov index.
+
+### 5.5 Pareto ranking — multi-objective
+
+Total candidates with all 3 score dimensions: 90
+Pareto-optimal candidates: 10
+
+**Top 15 GBM candidates by composite ranking (efficacy + target + selectivity):**
+```
+           DRUG_NAME                                                targets gbm_top20_hits                  pathway_name  median_auc  efficacy_score  target_score  selectivity_score  is_pareto  composite_rank
+        Lestaurtinib                      [FLT3, JAK2, NTRK1, NTRK2, NTRK3]             []                Other, kinases    0.823788        0.176212             3           0.423709       True            32.0
+           Cediranib           [VEGFR, FLT1, FLT2, FLT3, FLT4, KIT, PDGFRB]             []                 RTK signaling    0.851208        0.148792             5           0.214219       True            39.0
+Sepantronium bromide                                                [BIRC5]             []          Apoptosis regulation    0.151970        0.848030             1           0.660982       True            45.0
+           Foretinib [MET, KDR, TIE2, VEGFR3/FLT4, RON, PDGFR, FGFR1, EGFR]  [FGFR1, EGFR]                 RTK signaling    0.729878        0.270122             8           0.068087       True            47.0
+          Dinaciclib                               [CDK1, CDK2, CDK5, CDK9]             []                    Cell cycle    0.600203        0.399797             2           0.105594       True            54.0
+             MK-1775                                           [WEE1, PLK1]             []                    Cell cycle    0.784096        0.215904             2           0.154092       True            56.0
+      Wee1 Inhibitor                                          [WEE1, CHEK1]             []                    Cell cycle    0.844100        0.155900             2           0.188876      False            57.0
+               AZ960                                           [JAK2, JAK3]             []                Other, kinases    0.777339        0.222661             2           0.108166       True            59.0
+             BI-2536                                     [PLK1, PLK2, PLK3]             []                    Cell cycle    0.782096        0.217904             2           0.110316       True            59.0
+             AZD7762                                         [CHEK1, CHEK2]             []                    Cell cycle    0.733356        0.266644             1           0.251275      False            63.0
+          Romidepsin                           [HDAC1, HDAC2, HDAC3, HDAC8]             [] Chromatin histone acetylation    0.782500        0.217500             4           0.058153      False            63.0
+          Crizotinib                                       [MET, ALK, ROS1]             []                 RTK signaling    0.917726        0.082274             2           0.684935       True            64.0
+           Alisertib                                                [AURKA]             []                       Mitosis    0.842598        0.157402             1           0.401664      False            68.0
+            ZM447439                                         [AURKA, AURKB]             []                       Mitosis    0.862034        0.137966             1           0.471709      False            70.0
+           Dasatinib                        [ABL, SRC, EPHRINS, PDGFR, KIT]             []                Other, kinases    0.857542        0.142458             2           0.075683      False            79.0
+```
+
+**Pareto-optimal set (all candidates not dominated on any axis):**
+```
+           DRUG_NAME                                                targets gbm_top20_hits         pathway_name  median_auc  efficacy_score  target_score  selectivity_score  is_pareto  composite_rank
+        Lestaurtinib                      [FLT3, JAK2, NTRK1, NTRK2, NTRK3]             []       Other, kinases    0.823788        0.176212             3           0.423709       True            32.0
+           Cediranib           [VEGFR, FLT1, FLT2, FLT3, FLT4, KIT, PDGFRB]             []        RTK signaling    0.851208        0.148792             5           0.214219       True            39.0
+Sepantronium bromide                                                [BIRC5]             [] Apoptosis regulation    0.151970        0.848030             1           0.660982       True            45.0
+           Foretinib [MET, KDR, TIE2, VEGFR3/FLT4, RON, PDGFR, FGFR1, EGFR]  [FGFR1, EGFR]        RTK signaling    0.729878        0.270122             8           0.068087       True            47.0
+          Dinaciclib                               [CDK1, CDK2, CDK5, CDK9]             []           Cell cycle    0.600203        0.399797             2           0.105594       True            54.0
+             MK-1775                                           [WEE1, PLK1]             []           Cell cycle    0.784096        0.215904             2           0.154092       True            56.0
+               AZ960                                           [JAK2, JAK3]             []       Other, kinases    0.777339        0.222661             2           0.108166       True            59.0
+             BI-2536                                     [PLK1, PLK2, PLK3]             []           Cell cycle    0.782096        0.217904             2           0.110316       True            59.0
+          Crizotinib                                       [MET, ALK, ROS1]             []        RTK signaling    0.917726        0.082274             2           0.684935       True            64.0
+           BIBR-1532                                                 [TERT]         [TERT]     Genome integrity    0.972980        0.027020             3           1.000000       True            85.0
+```
+
+Saved: gbm_pareto_candidates.csv
+
+### 5.6 Partial pharma deliverable for top Pareto candidate
+
+**Selected candidate: Lestaurtinib**
+
+**1. Molecular structure:** NOT AVAILABLE (no SMILES in our pipeline cache)
+**2. Mechanism of action:**
+   - Pathway: Other, kinases
+   - Targets (per GDSC): ['FLT3', 'JAK2', 'NTRK1', 'NTRK2', 'NTRK3']
+   - GBM top-20 genes hit: []
+   - All GBM net genes hit: ['FLT3', 'JAK2', 'NTRK1']
+
+**3. Predicted clinical outcomes:** NOT AVAILABLE (Stage 4 ODE failed structurally)
+   - No HR prediction
+   - No PFS curve
+   - No virtual cohort simulation
+
+**4. Resistance profile:** NOT AVAILABLE (would require RNA velocity on GBM scRNA-seq, which we do not have)
+
+**5. Combination rationale:** N/A (single drug)
+
+**6. Safety profile:**
+   - GTEx selectivity score (heuristic): 0.424
+   - ADMET data: NOT AVAILABLE (SwissADME/pkCSM not run)
+   - BBB penetration: NOT AVAILABLE (critical for GBM, no data layer)
+
+**7. Synthesis route:** NOT APPLICABLE (existing drug, not novel molecule)
+
+**8. Novelty confirmation:** NOT CHECKED (no offline ClinicalTrials.gov index, live API not invoked)
+
+**9. Comparison vs SoC:**
+   - GBM SoC (Temozolomide) median AUC in brain cell lines: 0.976 (rank #247/286)
+   - Candidate median AUC: 0.824
+
+**10. Suggested trial design:** NOT GENERATED (no efficacy prediction, no biomarker stratification)
+
+**Deliverable completeness: 3 of 10 sections have data, 7 of 10 are NOT AVAILABLE.**
+
+**End Stage 5:** 22:32:46

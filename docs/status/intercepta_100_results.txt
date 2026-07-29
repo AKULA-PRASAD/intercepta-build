@@ -1,0 +1,305 @@
+Missing 42 genes from reference: ['ATM', 'ATR', 'AURKA', 'BIRC5', 'BUB1', 'CCNB1', 'CDC20', 'CDH2', 'CDK1', 'CENPF']...
+======================================================================
+INTERCEPTA — 100-LEVEL STRESS TEST
+======================================================================
+
+╔══ TIER 1: DATA INTEGRITY (L1-L12) ══╗
+  ✗ L001 FAIL     BeatAML patient IDs unique
+           → 137 duplicate patient IDs
+  ✓ L002 PASS     BeatAML drug names parseable
+           → 166 unique drug names
+  ✓ L003 PASS     scRNA cell count consistent
+           → Velocity results: 35589 cells
+  ✓ L004 PASS     All 20 AlphaFold targets present
+           → All 20 targets present
+  ⚠ L005 WARN     AlphaFold pLDDT quality scores acceptable
+           → Low pLDDT (<70): ['MDM2_AF-Q0(63)', 'AR_AF-P102(59)', 'BRCA1_AF-P(42)']
+  ⚠ L006 WARN     SIGNOR edge self-loops
+           → 449 self-loops in SIGNOR
+  ✓ L007 PASS     STRING scores in valid range [0,1000]
+           → Scores in [0,1000], mean=1
+  ✓ L008 PASS     RNA velocity no excessive NaN
+           → 0 NaN rows (clean)
+  ✓ L009 PASS     GDSC gene expression data exists
+           → GDSC expression: 941MB
+  ✓ L010 PASS     Docking output files complete
+           → 17 docked pdbqt files
+  ✓ L011 PASS     No duplicate result files
+           → 69 unique JSON results
+  ✓ L012 PASS     Key CSV headers present
+           → All key CSVs have headers
+
+╔══ TIER 2: ODE NUMERICAL STABILITY (L13-L22) ══╗
+  ✓ L013 PASS     ODE HR stable across random seeds
+           → HR stable across 5 seeds: mean=0.708 CV=18%
+  ✓ L014 PASS     ODE populations never go negative
+           → No negative cell populations
+  ✓ L015 PASS     ODE total tumor bounded by K
+           → N bounded by K: max=0.870≤1.0
+  ✓ L016 PASS     Phenotype ODE reproducible (same params)
+           → ODE reproducible: N_final diff=0.00e+00
+  ✓ L017 PASS     ODE matches analytic logistic solution
+           → ODE matches analytic logistic: sim=0.7929 analytic=0.7929 err=0.0%
+  ✓ L018 PASS     Phenotype ODE bins sum to total
+           → Bins sum exactly to N_total: max_diff=0.00e+00
+  ✓ L019 PASS     emax threshold for correct resistance dynamics
+           → Resistance rises for emax_s≥0.005 — confirms emax=0.010 too low
+  ✗ L020 FAIL     Synergy parameter increases treatment effect
+           → Synergy doesn't help: no_syn=730d syn=730d
+  ✗ L021 FAIL     PK V1 bug quantified
+           → V1 bug: Cmax=0.3314uM is 3.7x too high vs published 0.09uM. Need V1=31L not 8.6L
+  ✓ L022 PASS     5-year simulation no numerical blowup
+           → 5yr stable: N_max=0.8151≤K=1.0
+
+╔══ TIER 3: NETWORK TOPOLOGY (L23-L32) ══╗
+  ! L023 ERROR   Network hub genes include known cancer drivers: FileNotFoundError: [Errno 2] No such file or directory: '/Users/kalki/INTERCEPTA/results/step4_hub_g
+  ⚠ L024 WARN     STRING interaction confidence distribution
+           → Only 0/920 high-confidence (≥700)
+  ✓ L025 PASS     SIGNOR has both activation and inhibition
+           → Both activations and inhibitions present in 19727 edges
+  ✓ L026 PASS     AML genes cover key pathways
+           → AML pathways covered: RTK/RAS=6, Epigenetic=6, TF=5
+  ⚠ L027 WARN     Escape routes cover diverse genes
+           → Only 2 unique genes across 7 routes
+  ⚠ L028 WARN     STRING network connectivity
+           → Network only 13% connected — 599 isolated genes
+  ✗ L029 FAIL     Disease network JSONs have edges (known failure)
+           → Disease networks with ZERO edges: ['acute_myeloid_leukemia', 'non-small_cell_lung_carcinoma', 'pancreatic_carcinoma']. Fix: merge STRING/SIGNOR edges into JSON.
+  ✓ L030 PASS     Drug targets contained in disease network
+           → 11/11 drug targets in AML gene network
+  ✓ L031 PASS     mCRPC network has key prostate cancer genes
+           → mCRPC key genes present: ['AR', 'PTEN', 'TP53', 'RB1', 'BRCA2', 'CDK12', 'SPOP']
+  ⚠ L032 WARN     Gene-pathway map coverage
+           → Only 1 pathways
+
+╔══ TIER 4: KAALCURA DEEP (L33-L42) ══╗
+  ✓ L033 PASS     KAALCURA axes mutually independent
+           → Axes independent: max |r|=0.059 ≤ 0.1
+  ✓ L034 PASS     KAALCURA top AUROC drugs biologically expected
+           → Top 10 includes known mechanism drugs: ['Schweinfurthin A', 'Olaparib', 'Vorinostat']
+  ✓ L035 PASS     KAALCURA bottom drugs near random AUROC
+           → Bottom 10 AUROC mean=0.526 (near random 0.5)
+  ✓ L036 PASS     PARP inhibitors have positive R_ddr coefficient
+           → All PARP inhibitors have positive DDR coefficients
+  ✓ L037 PASS     Taxanes have negative R_prolif coefficient
+           → Taxanes correctly have negative prolif coef: [('Vinblastine', -0.8812893331917803), ('Vinorelbine', -0.6467018519666085), ('Docetaxel', -0.4950201360410076)]
+  ✓ L038 PASS     KAALCURA AUROC distribution shape
+           → Distribution: <0.5:0, >0.65:130, >0.70:10 (of 286 drugs)
+  ✓ L039 PASS     KAALCURA orthogonality validation file
+           → Orthogonality validation: 286 entries
+  ✓ L040 PASS     KAALCURA residualized axes file exists
+           → Residualized axes file: 286 samples
+  ! L041 ERROR   KAALCURA genes covered in GDSC expression: gzip.BadGzipFile: Not a gzipped file (b'PK')
+  ✓ L042 PASS     KAALCURA drug-bin sensitivity file
+           → Drug-bin sensitivity: 286 drug-population pairs
+
+╔══ TIER 5: CHEMISTRY DEEP (L43-L52) ══╗
+  ✓ L043 PASS     De novo molecules no excessive duplicates
+           → 0 duplicates in 332 molecules
+  ✓ L044 PASS     Molecular weights in drug-like range
+           → MW range [201-419], mean=297
+  ✓ L045 PASS     H-bond donors/acceptors in range
+           → HBD/HBA in range: 0/332 violations
+  ✓ L046 PASS     All 10 design targets have molecules
+           → All 10 targets covered: ['AR', 'ATM', 'ATR', 'BCL2', 'CDK4', 'CHEK1', 'KRAS', 'MAP2K1', 'MDM2', 'MTOR']
+  ✓ L047 PASS     Fragment vs optimized molecule ratio
+           → Fragment-based: 90 (27%), Optimized: 242 (73%)
+  ✓ L048 PASS     Docking multi-pose consensus
+           → 15/15 molecules have multi-pose docking, mean pose diff=-0.44
+  ✓ L049 PASS     INTC002 advantages over alisertib documented
+           → 4 computational advantages listed (all need wet lab confirmation)
+  ✓ L050 PASS     Synthesizability scores acceptable
+           → SA score range [1.5-3.2], 0/332 hard (SA>6)
+  ✓ L051 PASS     QED drug-likeness scores
+           → Drug-likeness QED: mean=0.746, min=0.308
+  ✓ L052 PASS     De novo molecules scaffold diversity
+           → 30/100 unique Murcko scaffolds (30% diversity)
+
+╔══ TIER 6: BEATAML DEEP (L53-L62) ══╗
+  ✓ L053 PASS     NPM1/Cabozantinib effect size clinically meaningful
+           → NPM1+Cabozantinib effect size=45.0 — clinically meaningful
+  ✓ L054 PASS     DNMT3A/Dasatinib sample size adequate
+           → DNMT3A+Dasatinib n=125 patients, p=0.00014
+  ✓ L055 PASS     BeatAML test matrix dimensions
+           → 1072 tests: 7 mutations × 155 drugs
+  ✓ L056 PASS     BeatAML significant sensitivities file
+           → 179 significant drug sensitivities
+  ✓ L057 PASS     BeatAML WES mutation data present
+           → WES mutations: 11721 variants
+  ⚠ L058 WARN     BeatAML includes FLT3 biology
+           → No FLT3 findings — expected given gilteritinib in BeatAML
+  ✓ L059 PASS     BeatAML drug family classification
+           → Drug families: 87 entries
+  ✓ L060 PASS     BeatAML curve fits have valid IC50 values
+           → 63395/63395 valid IC50/AUC measurements
+  ✓ L061 PASS     BeatAML patient age range realistic
+           → Age range: 1-88 years (n=914)
+  ✓ L062 PASS     BeatAML FDR false positive rate
+           → At FDR=0.05: 65 significant, ~3 expected false positives
+
+╔══ TIER 7: CLINICAL DEEP (L63-L72) ══╗
+  ✓ L063 PASS     5 trials within 25% of ground truth
+           → All 5 trials within 25% of ground truth
+  ⚠ L064 WARN     AML CR timing within clinical range
+           → CR at 0.2mo — should be ~1mo
+  ⚠ L065 WARN     mCRPC enza+alisertib combo beats enza alone
+           → TTP not found in arm data
+  ✓ L066 PASS     Virtual cohort patient heterogeneity realistic
+           → Patient heterogeneity: g_s CV=28% (realistic)
+  ✓ L067 PASS     Progression definition documented
+           → Progression defined as: 'RECIST_like_20pct_growth_from_nadir'
+  ⚠ L068 WARN     AML VenAza 'sec' output interpretable
+           → VenAza sec=51.3 — what does 'sec' mean? Possible misinterpretation of output
+  ✓ L069 PASS     All trials show positive treatment benefit
+           → All trials show positive benefit: ['1.9', '3.6', '2.1', '5.9', '4.1']mo
+  ✗ L070 FAIL     Old vs new HR: CHAARTED direction reversed
+           → HR changed >20%: {'CHAARTED': 63.42141863699584, 'PROpel_BRCA': 105.44747081712063}. CHAARTED went from 0.719→1.175 (REVERSED direction)
+  ✓ L071 PASS     PROpel_BRCA has lowest HR (BRCA enrichment)
+           → PROpel_BRCA correctly lowest HR=0.257 (BRCA enrichment effect)
+  ✓ L072 PASS     AML untreated suppresses normal marrow
+           → Normal marrow suppressed in untreated AML: 0.0069
+
+╔══ TIER 8: PIPELINE DEEP (L73-L82) ══╗
+  ✓ L073 PASS     Final 1280 candidates SMILES valid
+           → 100/100 sampled SMILES valid
+  ! L074 ERROR   Final candidates sorted by score: ValueError: too many values to unpack (expected 2)
+  ⚠ L075 WARN     Pharma package contains lead molecule
+           → Pharma package missing lead molecule
+  ✓ L076 PASS     Patient stratification results exist
+           → Patient stratification: ['NE_high', 'NE_moderate', 'Average', 'NE_low']
+  ✓ L077 PASS     Virtual patient cohort generated
+           → Virtual cohort: 200 patients
+  ✓ L078 PASS     End-to-end pipeline test results
+           → End-to-end pipeline results: ['disease', 'pipeline_date', 'net', 'escape_routes']
+  ⚠ L079 WARN     Capability test results
+           → Capability test: 0/2 passed
+  ⚠ L080 WARN     ODE speed benchmark acceptable
+           → ODE benchmark took 999.0s — too slow for production
+  ✓ L081 PASS     Novel drug combinations scored
+           → 3 novel drug combinations scored
+  ✓ L082 PASS     Synergy scoring validation results
+           → Synergy validation: ['method', 'reference', 'threshold']
+
+╔══ TIER 9: VISION & HONEST GAPS (L83-L92) ══╗
+  ✓ L083 PASS     6 diseases have network + escape analysis
+           → 6 disease networks, 6 with escape route analysis
+  ✗ L084 FAIL     Generative molecule model exists
+           → No generative model found. 332 molecules from fragment-based design but no learned generative model. Vision requires true de novo generation from target pocket.
+  ✗ L085 FAIL     src/ production directory populated
+           → src/ has 0 Python files. README claims engine_v2 is here but it's MISSING.
+  ✗ L086 FAIL     Wet lab validation data (expected to FAIL)
+           → No experimental (wet lab) validation data found. All IC50 values are computational estimates. No cell line assays, no mouse studies, no in vivo data.
+  ⚠ L087 WARN     AML scRNA-seq data for relapse modeling
+           → No AML-specific scRNA-seq found. STATUS.md says AML relapse needs scRNA-seq — confirmed missing.
+  ⚠ L088 WARN     Scout 4 Boolean network status
+           → Scout 4 decision: ['scout4_status', 'original_plan', 'what_failed']. NEXT_SESSION.md confirms compensation logic wrong.
+  ✓ L089 PASS     Publication outline documented
+           → Publication outline: 3055 chars, has methods=True, results=True
+  ✓ L090 PASS     Core documentation complete
+           → 10 docs, key docs present: ['MathSpec', 'Vision', 'Roadmap', 'Validation']
+  ✓ L091 PASS     requirements.txt exists
+           → requirements.txt has 23 packages
+  ✓ L092 PASS     Status file updated with today's findings
+           → Status file updated with honest test results
+
+╔══ TIER 10: EDGE CASES & STRESS (L93-L100) ══╗
+  ✓ L093 PASS     ODE with zero drugs grows correctly
+           → No-drug growth correct: 0.550→0.829
+  ✓ L094 PASS     ODE stable with extreme emax (stress test)
+           → Extreme emax stable: N_final=0.000000
+  ! L095 ERROR   KAALCURA handles minimal gene expression: ValueError: Gene coverage too low (12.5%). Need at least 50% of KAALCURA genes. Available: 6/48
+  ✓ L096 PASS     HR estimator handles identical arms
+           → Identical arms: HR=1.000≈1.0, p=1.000
+  ✓ L097 PASS     Synergy edge cases (0 and 1 effects)
+           → Bliss edge cases: (0,0.5)=0.500✓ (1,1)=1.000✓ (0.5,0.5)=0.750
+  ✓ L098 PASS     Pareto front with single dominant solution
+           → Single dominant solution correctly identified
+  ✓ L099 PASS     Cohort simulation performance acceptable
+           → 20 patients in 0.2s (0.01s/patient)
+  ✓ L100 PASS     All result JSON files parseable
+           → All JSON files parse correctly (69 files)
+
+======================================================================
+100-LEVEL STRESS TEST — FINAL REPORT
+======================================================================
+
+  ✓ PASS:  73
+  ✗ FAIL:  8
+  ⚠ WARN:  15
+  ! ERROR: 4
+  TOTAL:   100
+
+━━ ALL FAILURES ━━
+  L001 [data] BeatAML patient IDs unique
+       137 duplicate patient IDs
+  L020 [ode] Synergy parameter increases treatment effect
+       Synergy doesn't help: no_syn=730d syn=730d
+  L021 [ode] PK V1 bug quantified
+       V1 bug: Cmax=0.3314uM is 3.7x too high vs published 0.09uM. Need V1=31L not 8.6L
+  L029 [network] Disease network JSONs have edges (known failure)
+       Disease networks with ZERO edges: ['acute_myeloid_leukemia', 'non-small_cell_lung_carcinoma', 'pancreatic_carcinoma']. Fix: merge STRING/SIGNOR edges into JSON.
+  L070 [clinical] Old vs new HR: CHAARTED direction reversed
+       HR changed >20%: {'CHAARTED': 63.42141863699584, 'PROpel_BRCA': 105.44747081712063}. CHAARTED went from 0.719→1.175 (REVERSED direction)
+  L084 [vision] Generative molecule model exists
+       No generative model found. 332 molecules from fragment-based design but no learned generative model. Vision requires true de novo generation from target pocket.
+  L085 [vision] src/ production directory populated
+       src/ has 0 Python files. README claims engine_v2 is here but it's MISSING.
+  L086 [vision] Wet lab validation data (expected to FAIL)
+       No experimental (wet lab) validation data found. All IC50 values are computational estimates. No cell line assays, no mouse studies, no in vivo data.
+
+━━ ALL WARNINGS ━━
+  L005 [data] AlphaFold pLDDT quality scores acceptable
+       Low pLDDT (<70): ['MDM2_AF-Q0(63)', 'AR_AF-P102(59)', 'BRCA1_AF-P(42)']
+  L006 [data] SIGNOR edge self-loops
+       449 self-loops in SIGNOR
+  L024 [network] STRING interaction confidence distribution
+       Only 0/920 high-confidence (≥700)
+  L027 [network] Escape routes cover diverse genes
+       Only 2 unique genes across 7 routes
+  L028 [network] STRING network connectivity
+       Network only 13% connected — 599 isolated genes
+  L032 [network] Gene-pathway map coverage
+       Only 1 pathways
+  L058 [beataml] BeatAML includes FLT3 biology
+       No FLT3 findings — expected given gilteritinib in BeatAML
+  L064 [clinical] AML CR timing within clinical range
+       CR at 0.2mo — should be ~1mo
+  L065 [clinical] mCRPC enza+alisertib combo beats enza alone
+       TTP not found in arm data
+  L068 [clinical] AML VenAza 'sec' output interpretable
+       VenAza sec=51.3 — what does 'sec' mean? Possible misinterpretation of output
+  L075 [pipeline] Pharma package contains lead molecule
+       Pharma package missing lead molecule
+  L079 [pipeline] Capability test results
+       Capability test: 0/2 passed
+  L080 [pipeline] ODE speed benchmark acceptable
+       ODE benchmark took 999.0s — too slow for production
+  L087 [vision] AML scRNA-seq data for relapse modeling
+       No AML-specific scRNA-seq found. STATUS.md says AML relapse needs scRNA-seq — confirmed missing.
+  L088 [vision] Scout 4 Boolean network status
+       Scout 4 decision: ['scout4_status', 'original_plan', 'what_failed']. NEXT_SESSION.md confirms compensation logic wrong.
+
+━━ ALL ERRORS ━━
+  L023 [network] Network hub genes include known cancer drivers
+       FileNotFoundError: [Errno 2] No such file or directory: '/Users/kalki/INTERCEPTA/results/step4_hub_genes.csv'
+  L041 [kaalcura] KAALCURA genes covered in GDSC expression
+       gzip.BadGzipFile: Not a gzipped file (b'PK')
+  L074 [pipeline] Final candidates sorted by score
+       ValueError: too many values to unpack (expected 2)
+  L095 [stress] KAALCURA handles minimal gene expression
+       ValueError: Gene coverage too low (12.5%). Need at least 50% of KAALCURA genes. Available: 6/48
+
+━━ BY CATEGORY ━━
+  beataml      █████████░  9/10
+  chemistry    ██████████  10/10
+  clinical     ██████░░░░  6/10
+  data         █████████░░░  9/12
+  kaalcura     █████████░  9/10
+  network      ████░░░░░░  4/10
+  ode          ████████░░  8/10
+  pipeline     ██████░░░░  6/10
+  stress       ███████░  7/8
+  vision       █████░░░░░  5/10
+
+OVERALL: 73/100 (73%)
+======================================================================

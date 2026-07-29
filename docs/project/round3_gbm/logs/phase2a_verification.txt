@@ -1,0 +1,91 @@
+/Users/kalki/miniconda3/envs/intercepta-scrna/lib/python3.11/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Unknown extension is not supported and will be removed
+  warn(msg)
+======================================================================
+Phase 2A verification — Gaps 9 + 10 closed
+======================================================================
+
+--- Gap 10 test: rank_drugs_for_disease("glioblastoma") ---
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.1): 458
+  Pathways involved: 1530
+  Metabolites linked: 0
+  Drug targets (with compounds): 14
+  Immune-relevant genes: 299
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+Ranking time: 12.8s
+Returned: 30 drugs
+
+Top 15 GBM drugs by composite score (efficacy + GBM-target relevance):
+              DRUG_NAME                                                targets top_gene_hits                      pathway_name  median_auc  n_top_gene_hits  n_any_gene_hits  composite_score
+   Sepantronium bromide                                                [BIRC5]            []              Apoptosis regulation    0.151970                0                1         0.868030
+          Staurosporine                      [BROAD SPECTRUM KINASE INHIBITOR]            []                     RTK signaling    0.276965                0                0         0.723035
+              Foretinib [MET, KDR, TIE2, VEGFR3/FLT4, RON, PDGFR, FGFR1, EGFR] [FGFR1, EGFR]                     RTK signaling    0.729878                2                4         0.550122
+           Dactinomycin                                       [RNA POLYMERASE]            []                             Other    0.470483                0                0         0.529517
+                 MG-132                                    [PROTEASOME, CAPN1]            [] Protein stability and degradation    0.520195                0                0         0.479805
+             Dinaciclib                               [CDK1, CDK2, CDK5, CDK9]            []                        Cell cycle    0.600203                0                2         0.439797
+              CDK9_5038                                                 [CDK9]            []                        Cell cycle    0.573215                0                0         0.426785
+             Sabutoclax                             [BCL2, BCL-XL, BFL1, MCL1]            []              Apoptosis regulation    0.658729                0                1         0.361271
+              Daporinad                                                [NAMPT]            []                        Metabolism    0.640600                0                0         0.359400
+              CDK9_5576                                                 [CDK9]            []                        Cell cycle    0.641763                0                0         0.358237
+             Luminespib                                                [HSP90]            [] Protein stability and degradation    0.645342                0                0         0.354658
+            Gemcitabine                            [PYRIMIDINE ANTIMETABOLITE]            []                   DNA replication    0.671352                0                0         0.328648
+     Obatoclax Mesylate                            [BCL2, BCL-XL, BCL-W, MCL1]            []              Apoptosis regulation    0.696735                0                1         0.323265
+Telomerase Inhibitor IX                                           [TELOMERASE]            []                  Genome integrity    0.694068                0                0         0.305932
+                GNE-317                                            [PI3KALPHA]            []               PI3K/MTOR signaling    0.699752                0                0         0.300248
+
+Drugs hitting ≥1 top-20 GBM gene in this top-30: 2
+✓ Gap 10 PASS: ranked drug list returned, 2/30 hit top GBM genes
+
+--- Gap 9 test: enrich_with_metabolites(net) ---
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.1): 458
+  Pathways involved: 1530
+  Metabolites linked: 0
+  Drug targets (with compounds): 14
+  Immune-relevant genes: 299
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+Pre-enrichment: net has 0 metabolites
+Enrichment time: 0.01s
+Post-enrichment: net has 314 metabolites
+Genes with metabolite annotations: 103/458
+Sample metabolites: ['deoxyguanosine', 'DHAP', 'methylimidazoleacetic acid', 'acetone', 'histone-N6-acetyl-L-lysine', 'fatty acid pool', '(9E)-octadecenoyl-CoA', 'HCO3-', 'DHA', 'dTTP']
+✓ Gap 9 PASS: metabolite layer populated
+
+Saved enriched net: gbm_disease_net_phase2a.json
+Saved drug ranking: gbm_ranked_drugs_phase2a.csv
+
+======================================================================
+Phase 2A verification done.
+======================================================================

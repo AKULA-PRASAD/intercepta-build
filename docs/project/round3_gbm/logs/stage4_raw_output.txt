@@ -1,0 +1,76 @@
+
+## Stage 4 — ODE Simulation for GBM candidates
+
+**Start:** 14:35:51
+
+### 4.1 ODE module discovery
+WARNING: lifelines not installed. Run: pip install lifelines
+Falling back to median-ratio method (less accurate).
+
+**intercepta_unified_ode_v4_1**
+  Functions: ['Callable', 'Dict', 'List', 'Optional', 'Tuple', 'brca_profile', 'build_drug_library', 'build_initial_state', 'estimate_hr_proper', 'load_velocity_distribution', 'pk_binary', 'pk_continuous_oral']
+  Classes: ['UnifiedODEv4']
+  build_drug_library: function
+  pk_binary: function
+  pk_continuous_oral: function
+  pk_cyclic_cytotoxic: function
+
+**intercepta_three_mechanism_ode**
+  Functions: ['Callable', 'Dict', 'List', 'Optional', 'compute_ec50_per_bin', 'load_velocity_distribution', 'make_pk_continuous', 'make_pk_cytotoxic', 'make_pk_function', 'run_validation', 'solve_ivp']
+  Classes: ['ThreeMechanismODE']
+  DRUG_LIBRARY: dict with 7 entries, keys=['docetaxel', 'cisplatin', 'enzalutamide', 'abiraterone', 'ADT', 'olaparib', 'talazoparib']
+  make_pk_continuous: function
+  make_pk_cytotoxic: function
+  make_pk_function: function
+
+**intercepta_phenotype_ode_v1**
+  Functions: ['Callable', 'Dict', 'List', 'Optional', 'Tuple', 'create_synthetic_velocity_distribution', 'load_velocity_distribution', 'make_pk_function', 'run_step1_validation', 'solve_ivp']
+  Classes: ['Path', 'PhenotypeStructuredODE', 'VirtualCohort']
+  DRUG_EFFECT_LIBRARY: dict with 6 entries, keys=['docetaxel', 'abiraterone', 'olaparib', 'enzalutamide', 'talazoparib', 'ADT']
+  PK_LIBRARY: dict with 6 entries, keys=['docetaxel', 'abiraterone', 'olaparib', 'enzalutamide', 'talazoparib', 'ADT']
+  make_pk_function: function
+
+**aml_ode_v6_resistance**
+  Functions: ['main', 'precompute_pk', 'run_v6', 'solve_ivp']
+  Classes: []
+  precompute_pk: function
+
+### 4.2 Attempting to run three-mechanism ODE for GBM drugs
+Target drugs: Vorinostat (HDAC), Talazoparib (PARP), Afatinib (EGFR/pan-ErbB)
+Loaded intercepta_three_mechanism_ode
+Module surface: ['ALPHA_IND', 'ALPHA_R', 'BETA', 'BRCA_FRAC_OVERALL', 'BRCA_FRAC_SELECTED', 'Callable', 'DRUG_LIBRARY', 'D_NAT', 'Dict', 'G_STATE_MOD', 'K', 'List', 'MU_BASE', 'MU_S_TO_M', 'MU_S_TO_N', 'MU_S_TO_V', 'MU_TREATMENT', 'N_STATES', 'Optional', 'R_MAX', 'STATE_NAMES', 'S_ARDEP', 'S_ARMUT', 'S_ARV7', 'S_NE', 'ThreeMechanismODE', 'compute_ec50_per_bin', 'json', 'load_velocity_distribution', 'make_pk_continuous', 'make_pk_cytotoxic', 'make_pk_function', 'np', 'run_validation', 'solve_ivp', 'time']
+
+Found PK library: `DRUG_LIBRARY` with 7 entries
+Drugs available: ['docetaxel', 'cisplatin', 'enzalutamide', 'abiraterone', 'ADT', 'olaparib', 'talazoparib']
+  Vorinostat: NOT IN PK_LIBRARY
+  Talazoparib: NOT IN PK_LIBRARY
+  Afatinib: NOT IN PK_LIBRARY
+  vorinostat: NOT IN PK_LIBRARY
+  talazoparib: IN PK_LIBRARY
+  afatinib: NOT IN PK_LIBRARY
+
+### 4.3 Checking unified_ode_v4_1 PK library
+Module surface (abridged): ['ALPHA_IND', 'ALPHA_R', 'BETA', 'COHORT_N_PER_ARM', 'D_NAT', 'G_MOD_M', 'G_MOD_N', 'G_MOD_S', 'G_MOD_V', 'K_CAP', 'MU_S_TO_M', 'MU_S_TO_N_BASE', 'MU_S_TO_N_TX', 'MU_S_TO_V', 'N_BINS_DEFAULT', 'PROG_MIN_DAYS_POST_NADIR', 'PROG_THRESHOLD', 'R_MAX', 'SIM_DAYS_DEFAULT', 'build_drug_library']
+
+Simulation-like functions: ['SIM_DAYS_DEFAULT', 'run_validation', 'simulate_cohort', 'solve_ivp']
+  `simulate_cohort(drug_list: List[str], velocity_csv: Optional[str], brca_profile_name: str, state_fracs: Dict[str, float], duration_days: int, n_patients: int, random_state: int = 42, heterogeneous: bool = True) -> numpy.ndarray`
+
+### 4.4 Attempt to simulate GBM drug response
+The three-mechanism ODE was designed for mCRPC states (S/M/V/N: AR-dependent, AR-mutant, AR-V7, neuroendocrine).
+GBM cell states are different (proneural/classical/mesenchymal, or IDH-mutant vs wildtype).
+Without GBM-specific state_sens matrix and PK params for our drugs, the ODE cannot meaningfully simulate GBM.
+Attempting anyway to document the specific failure mode.
+
+Callable functions available: ['Callable', 'Dict', 'List', 'Optional', 'Tuple', 'brca_profile', 'build_drug_library', 'build_initial_state', 'estimate_hr_proper', 'load_velocity_distribution', 'pk_binary', 'pk_continuous_oral', 'pk_cyclic_cytotoxic', 'run_validation', 'simulate_cohort']
+  `Callable(*args, **kwargs)`
+  `Dict(*args, **kwargs)`
+  `List(*args, **kwargs)`
+  `Optional(*args, **kwds)`
+  `Tuple(*args, **kwargs)`
+
+### 4.5 Stage 4 interim verdict
+Simulation actually run for GBM drugs: NO
+Reason: PK_LIBRARY contains mCRPC drugs only; state_sens matrix is prostate-specific; no GBM cell state definitions exist in ODE code.
+Required to run Stage 4 for real: (a) PK params for Vorinostat/Talazoparib/Afatinib, (b) GBM state definitions (proneural/classical/mesenchymal + IDH status), (c) state_sens matrix parameterized for each drug-state pair.
+
+**End Stage 4 (library inspection):** 14:35:52

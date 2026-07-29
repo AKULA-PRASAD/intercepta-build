@@ -1,0 +1,101 @@
+======================================================================
+Phase 2D verification — ChEMBL coverage for any disease
+======================================================================
+
+--- Build GBM net + apply Phase 2B + 2C ---
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.1): 458
+  Pathways involved: 1530
+  Metabolites linked: 0
+  Drug targets (with compounds): 14
+  Immune-relevant genes: 299
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+  STRING aliases loaded: 19,278 ENSP→symbol entries, 19,272 unique symbols
+  STRING edges loaded: 473,860 of 13,715,404 edges at score>=700
+  populate_string_interactions: 445/458 genes enriched, 39385 total edges added
+  Querying UniProt REST API for 458 gene symbols (0 cached)...
+  UniProt API found 453 canonical accessions
+  attach_alphafold_structures: 453/458 genes mapped to canonical UniProt
+  Checking AlphaFold availability for 453 proteins (parallel HEAD)...
+  attach_alphafold_structures: 443/453 have AlphaFold structures available
+
+--- Apply populate_chembl_compounds ---
+(First run: ~15 min for 458 genes × 2 calls × 1.1s rate limit)
+(Cache saves every 20 lookups for resume safety)
+  populate_chembl_compounds: 453 genes have UniProt
+    0 already in ChEMBL cache, 453 need API lookup
+    Estimated API time: 16.6 min (453 × 2 calls × 1.1s rate limit)
+    Progress: 20/453 (4%) — cache saved
+    Progress: 40/453 (9%) — cache saved
+    Progress: 60/453 (13%) — cache saved
+    Progress: 80/453 (18%) — cache saved
+    Progress: 100/453 (22%) — cache saved
+    Progress: 120/453 (26%) — cache saved
+    Progress: 140/453 (31%) — cache saved
+    Progress: 160/453 (35%) — cache saved
+    Progress: 180/453 (40%) — cache saved
+    Progress: 200/453 (44%) — cache saved
+    Progress: 220/453 (49%) — cache saved
+    Progress: 240/453 (53%) — cache saved
+    Progress: 260/453 (57%) — cache saved
+    Progress: 280/453 (62%) — cache saved
+    Progress: 300/453 (66%) — cache saved
+    Progress: 320/453 (71%) — cache saved
+    Progress: 340/453 (75%) — cache saved
+    Progress: 360/453 (79%) — cache saved
+    Progress: 380/453 (84%) — cache saved
+    Progress: 400/453 (88%) — cache saved
+    Progress: 420/453 (93%) — cache saved
+    Progress: 440/453 (97%) — cache saved
+  populate_chembl_compounds done:
+    327/453 genes have ChEMBL target
+    270 genes have ≥1 compound, 7424 compounds total
+
+ChEMBL populate time: 5009.4s (83.5 min)
+
+--- Canonical ChEMBL target check ---
+  ✓ EGFR     → CHEMBL203       (expected CHEMBL203, 31 compounds)
+  ✓ BRAF     → CHEMBL5145      (expected CHEMBL5145, 40 compounds)
+  ✓ TP53     → CHEMBL4096      (expected CHEMBL4096, 0 compounds)
+  ~ PIK3CA   → CHEMBL4005      (expected CHEMBL4040, 37 compounds)
+  ✓ AKT1     → CHEMBL4282      (expected CHEMBL4282, 30 compounds)
+  ✓ MET      → CHEMBL3717      (expected CHEMBL3717, 33 compounds)
+  ✓ ERBB2    → CHEMBL1824      (expected CHEMBL1824, 29 compounds)
+  ~ PTEN     → CHEMBL2052032   (expected CHEMBL2628, 2 compounds)
+
+--- Compound count sanity (top genes) ---
+  EGFR: 31 compounds, top pchembl=11.00
+  BRAF: 40 compounds, top pchembl=10.70
+  PIK3CA: 37 compounds, top pchembl=10.80
+  MET: 33 compounds, top pchembl=10.72
+  TP53: 0 compounds
+
+✓ EGFR has 31 compounds, BRAF has 40
+
+Coverage: 270/458 genes have ChEMBL compounds (59.0%)
+✓ ChEMBL coverage PASS: 270 genes have compounds
+
+Saved: gbm_disease_net_phase2d.json
+
+======================================================================
+Phase 2D verification COMPLETE. Gap 7 closed in 83.5 min.
+======================================================================

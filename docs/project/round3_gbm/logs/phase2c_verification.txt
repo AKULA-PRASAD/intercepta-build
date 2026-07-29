@@ -1,0 +1,66 @@
+======================================================================
+Phase 2C verification — Gap 11 closed
+======================================================================
+
+--- Build GBM net ---
+Loading Universal Net...
+Loading disease associations...
+Loading metabolome...
+Loading immune map...
+Ready. 47030 diseases queryable.
+
+Building net for: glioblastoma multiforme (EFO_0000519)
+=======================================================
+  Genes (score>0.1): 458
+  Pathways involved: 1530
+  Metabolites linked: 0
+  Drug targets (with compounds): 14
+  Immune-relevant genes: 299
+  Structures available: 0
+
+  Top 10 genes:
+    EGFR         score=0.649
+    IDH1         score=0.627
+    TP53         score=0.621
+    PTEN         score=0.603
+    VEGFA        score=0.551
+    GSR          score=0.543
+    BRAF         score=0.533 [compounds=50]
+    ATRX         score=0.524
+    RB1          score=0.520
+    PIK3CA       score=0.511 [compounds=50]
+Build time: 1.5s
+
+--- Apply Phase 2B (STRING) for cache warmup ---
+  STRING aliases loaded: 19,278 ENSP→symbol entries, 19,272 unique symbols
+  STRING edges loaded: 473,860 of 13,715,404 edges at score>=700
+  populate_string_interactions: 445/458 genes enriched, 39385 total edges added
+
+--- Apply attach_alphafold_structures ---
+  STRING UniProt mapping loaded: 19,399 primary + 270 fallback = 19,669 total ENSP→UniProt mappings
+  attach_alphafold_structures: 447/458 genes mapped to UniProt
+  Checking AlphaFold availability for 447 proteins (parallel HEAD requests)...
+  attach_alphafold_structures: 0/447 have AlphaFold structures available
+AlphaFold attach time: 9.5s
+✓ Performance PASS: 9.5s < 90s
+
+--- Canonical UniProt ID check ---
+  ~ EGFR     → O00688 (expected P00533, may be isoform)   ✗ AF missing
+  ✓ IDH1     → O75874   ✗ AF missing
+  ✓ TP53     → P04637   ✗ AF missing
+  ~ PTEN     → B2R904 (expected P60484, may be isoform)   ✗ AF missing
+  ✗ VEGFA    no UniProt mapping (expected P15692)
+  ~ BRAF     → A4D1T4 (expected P15056, may be isoform)   ✗ AF missing
+  ✓ PIK3CA   → P42336   ✗ AF missing
+  ~ AKT1     → B2RAM5 (expected P31749, may be isoform)   ✗ AF missing
+  ~ MET      → A1L467 (expected P08581, may be isoform)   ✗ AF missing
+  ~ ERBB2    → B2RZG3 (expected P04626, may be isoform)   ✗ AF missing
+  ~ CDKN2A   → A5X2G7 (expected P42771, may be isoform)   ✗ AF missing
+  ~ RB1      → A8K5E3 (expected P06400, may be isoform)   ✗ AF missing
+  ✗ MDM2     no UniProt mapping (expected Q00987)
+  ✓ MAP2K1   → Q02750   ✗ AF missing
+
+UniProt mapping: 4 exact, 8 non-canonical (still valid), 2 missing
+Traceback (most recent call last):
+  File "<stdin>", line 82, in <module>
+AssertionError: EGFR has no AlphaFold structure

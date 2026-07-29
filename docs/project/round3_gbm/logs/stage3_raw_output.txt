@@ -1,0 +1,157 @@
+
+## Stage 3 — Drug Scouting
+
+**Start:** 14:29:39
+GBM target set: 458 total genes, top-20 = ['EGFR', 'IDH1', 'TP53', 'PTEN', 'VEGFA', 'GSR', 'BRAF', 'ATRX', 'RB1', 'PIK3CA', 'FGFR1', 'NF1', 'TERT', 'PIK3R1', 'CDKN2B', 'PTPN11', 'PDGFRA', 'MAP2K1', 'STAG2', 'ARID1A']
+
+### 3.1 GDSC data inventory
+Total GDSC files: 10
+  rnaseq_all_data_20220624.csv: 5078.0 MB
+  sanger_model_gene_expression.csv.gz: 897.1 MB
+  rnaseq_tpm_20220624.csv: 245.5 MB
+  rnaseq_fpkm_20220624.csv: 238.5 MB
+  rnaseq_read_count_20220624.csv: 157.4 MB
+  GDSC2_fitted_dose_response.xlsx: 20.3 MB
+  sidg_to_symbol.csv: 0.6 MB
+  Cell_Lines_Details.xlsx: 0.1 MB
+  Cell_line_RMA_proc_basalExp.txt.gz: 0.0 MB
+  rnaseq_gene_info.csv: 0.0 MB
+
+### 3.2 Load GDSC drug-target annotations
+Drug metadata candidates: []
+No direct drug-target metadata found. Trying the kaalcura rerun output instead...
+kaalcura_real_validation_RERUN.csv: shape=(286, 6), columns=['drug', 'auroc', 'coef_prolif', 'coef_emt', 'coef_ddr', 'n_cell_lines']
+
+**Using drug data from:** kaalcura_real_validation_RERUN.csv
+**Drug column:** drug, **Target column:** None
+**Total drug rows:** 286
+
+### 3.3 Filter drugs by GBM target relevance
+
+### 3.4 Biological sanity checks
+
+**GBM standard-of-care drugs in GDSC?**
+  Temozolomide: FOUND ['Temozolomide']
+  Bevacizumab: NOT IN GDSC
+  Carmustine: NOT IN GDSC
+  Lomustine: NOT IN GDSC
+  TMZ: NOT IN GDSC
+
+**GBM-targeted therapies in GDSC?**
+  Erlotinib: FOUND ['Erlotinib']
+  Gefitinib: FOUND ['Gefitinib']
+  Lapatinib: FOUND ['Lapatinib']
+  Afatinib: FOUND ['Afatinib']
+  Sorafenib: FOUND ['Sorafenib']
+  Sunitinib: NOT IN GDSC
+  Pazopanib: NOT IN GDSC
+  Regorafenib: NOT IN GDSC
+  Olaparib: FOUND ['Olaparib']
+  Talazoparib: FOUND ['Talazoparib']
+  Vemurafenib: NOT IN GDSC
+  Dabrafenib: FOUND ['Dabrafenib']
+  Trametinib: FOUND ['Trametinib']
+  Vorinostat: FOUND ['Vorinostat']
+  Panobinostat: NOT IN GDSC
+
+**End Stage 3:** 14:29:39
+/Users/kalki/miniconda3/envs/intercepta-scrna/lib/python3.11/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Unknown extension is not supported and will be removed
+  warn(msg)
+
+### Stage 3.5 — Manual glue: GDSC brain-cancer cell line drug ranking
+
+**Start:** 14:31:46
+
+Cell_Lines_Details.xlsx: (1002, 13), columns: ['Sample Name', 'COSMIC identifier', 'Whole Exome Sequencing (WES)', 'Copy Number Alterations (CNA)', 'Gene Expression', 'Methylation', 'Drug\nResponse', 'GDSC\nTissue descriptor 1', 'GDSC\nTissue\ndescriptor 2', 'Cancer Type\n(matching TCGA label)', 'Microsatellite \ninstability Status (MSI)', 'Screen Medium', 'Growth Properties']
+Tissue-like columns: ['GDSC\nTissue descriptor 1', 'GDSC\nTissue\ndescriptor 2', 'Cancer Type\n(matching TCGA label)']
+  GDSC
+Tissue descriptor 1: 0 brain-related entries
+  GDSC
+Tissue
+descriptor 2: 53 brain-related entries
+  Using column "GDSC
+Tissue
+descriptor 2" for brain filter
+
+**Brain/glioma cell lines in GDSC: 53**
+Name-like columns: ['Sample Name', 'COSMIC identifier']
+
+First 5 brain cancer cell line rows (selected cols):
+    Sample Name  COSMIC identifier Cancer Type\n(matching TCGA label)
+628    42-MG-BA           687561.0                                GBM
+629     8-MG-BA           687562.0                                GBM
+630        A172           687563.0                                GBM
+631       AM-38           910933.0                                GBM
+632      Becker           906746.0                                GBM
+633       CAS-1           910943.0                                GBM
+634   CCF-STTG1           906823.0                                GBM
+635     D-247MG           946367.0                                GBM
+636     D-263MG           946368.0                                GBM
+637     D-336MG           946369.0                                LGG
+
+
+Loading GDSC2_fitted_dose_response.xlsx (20 MB)...
+Load time: 11.0s, shape: (242036, 19)
+Columns: ['DATASET', 'NLME_RESULT_ID', 'NLME_CURVE_ID', 'COSMIC_ID', 'CELL_LINE_NAME', 'SANGER_MODEL_ID', 'TCGA_DESC', 'DRUG_ID', 'DRUG_NAME', 'PUTATIVE_TARGET', 'PATHWAY_NAME', 'COMPANY_ID', 'WEBRELEASE', 'MIN_CONC', 'MAX_CONC', 'LN_IC50', 'AUC', 'RMSE', 'Z_SCORE']
+Sample row: {'DATASET': 'GDSC2', 'NLME_RESULT_ID': 343, 'NLME_CURVE_ID': 15946310, 'COSMIC_ID': 683667, 'CELL_LINE_NAME': 'PFSK-1', 'SANGER_MODEL_ID': 'SIDM01132', 'TCGA_DESC': 'MB', 'DRUG_ID': 1003, 'DRUG_NAME': 'Camptothecin', 'PUTATIVE_TARGET': 'TOP1', 'PATHWAY_NAME': 'DNA replication', 'COMPANY_ID': 1046, 'WEBRELEASE': 'Y', 'MIN_CONC': 0.0001, 'MAX_CONC': 0.1, 'LN_IC50': -1.463887, 'AUC': 0.93022, 'RMSE': 0.089052, 'Z_SCORE': 0.433123}
+
+Identified: drug_col=DRUG_NAME, cell_line_col=CELL_LINE_NAME, auc_col=AUC, cosmic_col=COSMIC_ID
+
+Matching by COSMIC id: 53 brain cell line COSMIC ids
+Dose-response rows matching brain cancer cell lines: 12001
+Unique drugs in brain subset: 286
+Unique cell lines in brain subset: 51
+
+Drugs with ≥3 brain cell lines tested: 286
+
+**Top 30 drugs by lowest median AUC in GBM/brain cell lines (most effective):**
+```
+              DRUG_NAME  median_auc  mean_auc  n_cell_lines
+   Sepantronium bromide    0.151970  0.159161            50
+          Staurosporine    0.276965  0.333281            51
+           Dactinomycin    0.470483  0.590348            80
+                 MG-132    0.520195  0.524611            51
+              CDK9_5038    0.573215  0.573744            30
+             Dinaciclib    0.600203  0.616152            47
+              Daporinad    0.640600  0.685405            35
+              CDK9_5576    0.641763  0.637005            30
+             Luminespib    0.645342  0.652970            50
+             Sabutoclax    0.658729  0.635526            47
+            Gemcitabine    0.671352  0.646172            51
+Telomerase Inhibitor IX    0.694068  0.683300            50
+     Obatoclax Mesylate    0.696735  0.684399            34
+                GNE-317    0.699752  0.696870            48
+                PBD-288    0.720010  0.703142            34
+              Foretinib    0.729878  0.718420            49
+                AZD7762    0.733356  0.725640            50
+                 LMP744    0.738936  0.733228            30
+             Epirubicin    0.741308  0.701567            50
+             Buparlisib    0.751558  0.761291            50
+             Bortezomib    0.752352  0.762247            50
+              ULK1_4989    0.753045  0.732823            30
+                AZD8055    0.753248  0.760108            34
+           Pevonedistat    0.754773  0.730835            50
+      Bleomycin (50 uM)    0.762026  0.746912            33
+      Mycophenolic acid    0.767764  0.766074            34
+            Vinblastine    0.775981  0.728655            33
+                  AZ960    0.777339  0.777351            47
+             Dactolisib    0.780307  0.799915            50
+              Docetaxel    0.781479  0.711521            78
+```
+
+Saved: gbm_drug_ranking_gdsc.csv
+
+**Where do expected GBM drugs rank (lower median_auc = more effective)?**
+  Temozolomide: rank #247 / 286, median AUC=0.976, n=51
+  Erlotinib: rank #161 / 286, median AUC=0.956, n=50
+  Gefitinib: rank #239 / 286, median AUC=0.975, n=50
+  Lapatinib: rank #127 / 286, median AUC=0.937, n=51
+  Afatinib: rank #85 / 286, median AUC=0.894, n=51
+  Sorafenib: rank #89 / 286, median AUC=0.897, n=50
+  Olaparib: rank #150 / 286, median AUC=0.952, n=51
+  Talazoparib: rank #83 / 286, median AUC=0.888, n=50
+  Dabrafenib: rank #224 / 286, median AUC=0.973, n=49
+  Trametinib: rank #109 / 286, median AUC=0.920, n=51
+  Vorinostat: rank #47 / 286, median AUC=0.827, n=50
+
+**End Stage 3.5:** 14:31:58

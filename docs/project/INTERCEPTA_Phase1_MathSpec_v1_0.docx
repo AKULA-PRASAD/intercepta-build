@@ -1,0 +1,484 @@
+**INTERCEPTA**
+
+Phase 1: Mathematical Specification
+
+*Every Equation, Every Parameter, Every Assumption*
+
+Version 1.0 \| March 2026 \| CONFIDENTIAL
+
+**1. Mathematical Architecture Overview**
+
+INTERCEPTA\'s computational engine has four mathematical modules that
+operate in sequence. Each module\'s output feeds the next. This document
+specifies every equation in every module, every parameter, and every
+assumption. The modules are:
+
+**Module 1 --- KAALCURA Biological Axes:** Computes three biologically
+interpretable scores (R_prolif, R_emt, R_ddr) per cell population from
+gene expression, predicting drug sensitivity from transcriptomic state.
+
+**Module 2 --- Pharmacokinetic Model:** Computes drug concentration over
+time C(t) for each drug based on dosing schedule and PK parameters.
+
+**Module 3 --- Two-Population ODE Dynamics:** Models the time evolution
+of sensitive and resistant cell populations under treatment, using
+KAALCURA-predicted drug effects and PK-derived drug concentrations.
+
+**Module 4 --- Synergy Scoring:** Evaluates drug combinations using
+ZIP + Bliss + Loewe + HSA consensus to distinguish true synergy from
+additive effects.
+
+**2. Module 1: KAALCURA Biological Axes**
+
+**2.1 Gene Set Definitions**
+
+Each KAALCURA axis is computed from a curated gene set that captures a
+specific biological program. The gene sets are:
+
+**Proliferation gene set (G_prolif):** MKI67, TOP2A, PCNA, CDK1, CCNB1,
+AURKA, BUB1, PLK1, MCM2, MCM6, FOXM1, BIRC5, NUSAP1, TPX2, CDC20, CENPF,
+KIF11, PRC1, HMGA1, MYBL2. These 20 genes capture active cell division
+state.
+
+**EMT gene set (G_emt):** VIM, CDH2, SNAI1, SNAI2, ZEB1, ZEB2, TWIST1,
+FN1, MMP2, MMP9, CDH1 (negative), CLDN1 (negative), TJP1 (negative). 13
+genes capturing epithelial-to-mesenchymal transition. CDH1, CLDN1, TJP1
+are inverted (high = epithelial, low = mesenchymal).
+
+**DDR gene set (G_ddr):** BRCA1, BRCA2, RAD51, ATM, ATR, CHEK1, CHEK2,
+PARP1, PARP2, XRCC1, MLH1, MSH2, FANCA, FANCD2, RPA1. 15 genes capturing
+DNA damage repair activity.
+
+**2.2 Raw Score Computation**
+
+For a cell (or cell population) with gene expression vector x, the raw
+axis score is the mean z-scored expression of the gene set:
+
+R_raw(axis) = (1/\|G\|) ∑\_{g ∈ G} z(x_g) *\[Eq. 1\]*
+
+where z(x_g) = (x_g - μ_g) / σ_g is the z-score of gene g\'s expression
+relative to the reference population (GDSC cell line panel for training,
+or the scRNA-seq dataset for application).
+
+**2.3 Tissue-of-Origin Residualization (Critical Step)**
+
+Raw scores are confounded by tissue of origin: a brain cancer cell and a
+prostate cancer cell have different baseline expression of proliferation
+genes regardless of their actual proliferative state. KAALCURA removes
+this confound through linear regression residualization:
+
+R_residualized(axis) = R_raw(axis) - \[α + β · tissue_PC1 + γ ·
+tissue_PC2 + \...\] *\[Eq. 2\]*
+
+where tissue_PC1, tissue_PC2, \... are the first k principal components
+of tissue-of-origin expression variation (computed from TCGA pan-cancer
+normal tissue samples). After residualization, R-squared between axis
+score and tissue type drops from \~0.52 to \~0.005, confirming that the
+axes measure tumor biology, not tissue identity.
+
+**Validated performance:** After residualization, the three axes are
+mathematically independent (pairwise \|r\| \< 0.02), and predict drug
+sensitivity in GDSC with AUROC = 0.600 (R_prolif), 0.585 (R_emt), 0.629
+(R_ddr), all p \< 0.001.
+
+**2.4 Drug Sensitivity Prediction**
+
+For each drug d, KAALCURA predicts sensitivity using the logistic model
+trained on GDSC:
+
+P(sensitive \| R_prolif, R_emt, R_ddr) = σ(β₀ + β₁·R_prolif + β₂·R_emt +
+β₃·R_ddr) *\[Eq. 3\]*
+
+where σ(z) = 1/(1 + e\^(-z)) is the sigmoid function, and β₀\...β₃ are
+drug-specific coefficients trained on GDSC IC50 binarized at the median.
+Different drugs weight the axes differently: chemotherapies weight
+R_prolif heavily, EGFR inhibitors weight R_emt, PARP inhibitors weight
+R_ddr.
+
+**2.5 Per-Population Application (INTERCEPTA\'s Innovation)**
+
+Standard KAALCURA computes one score per tumor. INTERCEPTA applies it
+independently to each cell population identified by clustering and RNA
+velocity:
+
+**Step 1:** Cluster scRNA-seq cells using Scanpy (Leiden algorithm,
+resolution optimized per dataset).
+
+**Step 2:** Apply scVelo dynamical mode to compute RNA velocity per
+cell.
+
+**Step 3:** Use CellRank to identify terminal states and assign cells to
+\'sensitive\' (AR-dependent, high-proliferation trajectory) or
+\'resistant\' (DDR-upregulated, EMT-transitioning trajectory).
+
+**Step 4:** Compute KAALCURA axes independently for the sensitive
+cluster and the resistant cluster.
+
+**Step 5:** Predict drug sensitivity independently for each population.
+This reveals: Drug A kills sensitive cells but not resistant cells. Drug
+B kills resistant cells but not sensitive cells. Combination A+B kills
+both.
+
+**3. Module 2: Pharmacokinetic Model**
+
+**3.1 One-Compartment PK Model**
+
+For orally administered drugs (abiraterone, enzalutamide, olaparib,
+talazoparib, prednisone), drug concentration in plasma is modeled as a
+one-compartment model with first-order absorption and elimination:
+
+dA_gut/dt = -k_a · A_gut *\[Eq. 4a\]*
+
+dC/dt = (F · k_a · A_gut) / V_d - k_e · C *\[Eq. 4b\]*
+
+where A_gut is the amount of drug in the gut (mg), k_a is the absorption
+rate constant (h⁻¹), F is oral bioavailability, V_d is volume of
+distribution (L), k_e = ln(2)/t_1/2 is the elimination rate constant,
+and C is plasma concentration (μg/mL or ng/mL).
+
+For each dose event at time t_dose, A_gut is incremented by the dose
+amount. For repeated dosing (e.g., daily), the system reaches
+steady-state concentration after \~5 half-lives.
+
+**3.2 IV Bolus PK Model (Docetaxel)**
+
+For IV-administered docetaxel, a two-compartment model is used:
+
+dC₁/dt = -(k₁₂ + k_e)·C₁ + k₂₁·C₂ + D(t)/V₁ *\[Eq. 5a\]*
+
+dC₂/dt = k₁₂·C₁ - k₂₁·C₂ *\[Eq. 5b\]*
+
+where C₁ is central compartment concentration, C₂ is peripheral
+compartment, k₁₂ and k₂₁ are inter-compartmental transfer rates, and
+D(t) is a pulse function representing IV infusion (75 mg/m² over 1 hour
+every 3 weeks for 6 cycles).
+
+**3.3 Free Drug Concentration**
+
+Only unbound (free) drug reaches tumor cells. The effective drug
+concentration at the tumor site is:
+
+C_free(t) = C(t) · f_u · f_tumor *\[Eq. 6\]*
+
+where f_u = 1 - protein_binding_fraction is the unbound fraction, and
+f_tumor is a tumor penetration factor (disease-specific, typically
+0.3--0.8 for well-vascularized tumors, lower for CNS).
+
+**4. Module 3: Two-Population ODE Tumor Dynamics**
+
+**4.1 Core Equations**
+
+This is the heart of INTERCEPTA\'s computational engine. The tumor is
+modeled as two interacting populations: sensitive cells S(t) and
+resistant cells R(t), competing for resources under a shared carrying
+capacity K:
+
+dS/dt = g_s·S·(1 - (S+R)/K) - μ·S + ν·R - d_s(C,t)·S *\[Eq. 7a\]*
+
+dR/dt = g_r·R·(1 - (S+R)/K) + μ·S - ν·R - d_r(C,t)·R *\[Eq. 7b\]*
+
+**4.2 Parameter Definitions**
+
+  ------------ ------------------------ ---------------- ---------------------
+  **Symbol**   **Biological Meaning**   **Typical        **Source /
+                                        Value**          Derivation**
+
+  g_s          Growth rate of sensitive 0.005--0.02      PSA doubling time
+               cells                    day⁻¹            2--6 months
+
+  g_r          Growth rate of resistant 0.002--0.01      Slower: fitness cost
+               cells                    day⁻¹            of resistance
+
+  K            Shared carrying capacity 10¹--10¹² cells  Estimated from tumor
+                                                         volume
+
+  μ            Sensitive → Resistant    10⁻⁶--10⁻⁴ day⁻¹ Mutation rate +
+               transition rate                           epigenetic switching
+
+  ν            Resistant → Sensitive    0 or 10⁻⁷ day⁻¹  Often negligible;
+               back-transition                           nonzero for
+                                                         epigenetic
+
+  d_s(C,t)     Drug-induced death rate  Drug-dependent   From KAALCURA + PK:
+               of sensitive cells                        Eq. 8
+
+  d_r(C,t)     Drug-induced death rate  Drug-dependent   From KAALCURA + PK:
+               of resistant cells                        Eq. 8
+
+  S(0)         Initial sensitive        0.85--0.95       RNA velocity:
+               population fraction                       majority are
+                                                         sensitive
+
+  R(0)         Initial resistant        0.05--0.15       RNA velocity:
+               population fraction                       pre-resistant
+                                                         minority
+  ------------ ------------------------ ---------------- ---------------------
+
+**4.3 Drug Effect Function (Coupling KAALCURA to ODE)**
+
+The drug-induced death rate for each population is computed using a Hill
+equation that couples free drug concentration C_free(t) from the PK
+model to the KAALCURA-predicted sensitivity:
+
+d_s(C,t) = E_max_s · C_free(t)\^n / (EC50_s\^n + C_free(t)\^n) *\[Eq.
+8a\]*
+
+d_r(C,t) = E_max_r · C_free(t)\^n / (EC50_r\^n + C_free(t)\^n) *\[Eq.
+8b\]*
+
+where E_max is the maximum drug-induced death rate (from KAALCURA: high
+sensitivity = high E_max), EC50 is the half-maximal effective
+concentration (from GDSC IC50, scaled by f_u and f_tumor), and n is the
+Hill coefficient (steepness of dose-response, typically 1--3).
+
+The critical innovation: E_max_s and E_max_r are DIFFERENT because
+KAALCURA computes different axis scores for the sensitive and resistant
+populations. For docetaxel: E_max_s is high (sensitive cells have high
+R_prolif) but E_max_r is low (resistant cells have low R_prolif). For
+olaparib: E_max_r is high (resistant cells have high R_ddr / BRCA
+dependency) but E_max_s is low.
+
+**4.4 Multi-Drug Extension**
+
+For combination therapy with drugs A and B, the death rates become:
+
+d_s(t) = d_s\^A(C_A,t) + d_s\^B(C_B,t) + α_s·d_s\^A·d_s\^B *\[Eq. 9a\]*
+
+d_r(t) = d_r\^A(C_A,t) + d_r\^B(C_B,t) + α_r·d_r\^A·d_r\^B *\[Eq. 9b\]*
+
+where α is the synergy parameter: α \> 0 indicates synergy (drugs
+enhance each other), α = 0 indicates additivity, α \< 0 indicates
+antagonism. The synergy parameter is estimated from Module 4 (synergy
+scoring).
+
+**4.5 Initial Conditions**
+
+**Pre-treatment:** S(0) and R(0) are set from RNA velocity analysis of
+scRNA-seq data. Typical mCRPC: S(0) = 0.85--0.95, R(0) = 0.05--0.15.
+Total initial tumor burden N(0) = S(0) + R(0) estimated from PSA level
+or imaging.
+
+**High-volume disease:** Higher N(0), potentially higher R(0) fraction
+(more heterogeneous). This naturally produces the volume-dependent
+treatment benefit seen in CHAARTED.
+
+**4.6 Simulation Output**
+
+The ODE system (Eq. 7a--7b) is solved numerically using SciPy\'s
+solve_ivp (RK45 adaptive step, relative tolerance 10⁻⁸). Simulation runs
+for 1825 days (5 years). Outputs: S(t), R(t), N(t) = S(t) + R(t) at
+daily resolution. Progression is defined as N(t) \> 1.25 × N_nadir (25%
+increase from nadir). Overall survival is estimated from time of
+progression using established post-progression survival models.
+
+**5. Module 4: Synergy Scoring**
+
+**5.1 Four Reference Models**
+
+For drugs A and B with individual effects E_A(x_A) and E_B(x_B) at doses
+x_A and x_B, and observed combination effect E_AB, synergy is quantified
+as the excess over the expected non-interactive effect:
+
+**HSA (Highest Single Agent):** Expected_HSA = max(E_A, E_B). Synergy
+score S_HSA = E_AB - max(E_A, E_B). The combination must beat the best
+single drug.
+
+**Bliss Independence:** Expected_Bliss = E_A + E_B - E_A·E_B (where
+effects are expressed as fractions 0--1). Synergy score S_Bliss = E_AB -
+Expected_Bliss. Assumes drugs act on independent targets.
+
+**Loewe Additivity:** Expected_Loewe is defined implicitly by x_A/X_A +
+x_B/X_B = 1, where X_A and X_B are the doses of each drug alone that
+produce the combination effect E_AB. Synergy if the actual doses needed
+are less than predicted. Requires fitted dose-response curves.
+
+**ZIP (Zero Interaction Potency):** Combines Bliss and Loewe concepts.
+Models expected response as if drugs do not affect each other\'s
+potency. Uses response surface fitting across the full dose matrix.
+S_ZIP = E_AB - Expected_ZIP.
+
+**5.2 Consensus Scoring (INTERCEPTA\'s Approach)**
+
+Following SynergyFinder 3.0\'s methodology, INTERCEPTA uses a
+Bliss/Loewe consensus score that takes the maximum expected effect among
+the three models (Bliss, Loewe, HSA) at each dose pair. This is the most
+conservative scoring: a combination is only called synergistic if it
+exceeds ALL three reference models\' expectations. This eliminates false
+positive synergy calls.
+
+Expected_consensus(x_A, x_B) = max(Expected_HSA, Expected_Bliss,
+Expected_Loewe) *\[Eq. 10\]*
+
+S_consensus = E_AB - Expected_consensus *\[Eq. 11\]*
+
+**Interpretation:** S_consensus \> 10: strong synergy. S_consensus
+5--10: moderate synergy. S_consensus -5 to 5: additive (no interaction).
+S_consensus \< -5: antagonism.
+
+**5.3 Population-Level Synergy (INTERCEPTA\'s Innovation)**
+
+Standard synergy scoring evaluates combinations at the whole-tumor
+level. INTERCEPTA extends this to population-level synergy: even if Drug
+A + Drug B shows only modest whole-tumor synergy, it may show strong
+population-level synergy because Drug A targets the sensitive population
+and Drug B targets the resistant population. The combination eliminates
+both populations, preventing resistance emergence --- this is the true
+mechanism of combination benefit in mCRPC.
+
+Population-level synergy score:
+
+S_population = w_s·S_consensus(sensitive) + w_r·S_consensus(resistant)
+*\[Eq. 12\]*
+
+where w_s and w_r are the population fractions (from RNA velocity). A
+combination with S_consensus = 0 at whole-tumor level but that kills
+sensitive cells via Drug A and resistant cells via Drug B receives high
+S_population because both populations are eliminated.
+
+**6. From Simulation to Clinical Outcome Prediction**
+
+**6.1 Hazard Ratio Estimation**
+
+To compare our predictions against ground truth trial outcomes, we
+estimate the hazard ratio (HR) by simulating virtual patient cohorts:
+
+**Step 1:** Generate N = 1000 virtual patients by sampling parameter
+distributions: g_s \~ LogNormal(μ_gs, σ_gs), g_r \~ LogNormal(μ_gr,
+σ_gr), S(0)/R(0) \~ Beta(a,b), K \~ LogNormal(μ_K, σ_K). Parameter
+distributions derived from clinical data.
+
+**Step 2:** For each virtual patient, simulate both treatment arm and
+control arm using the ODE model.
+
+**Step 3:** Compute time-to-progression (TTP) for each virtual patient
+in each arm.
+
+**Step 4:** Estimate median OS using TTP + post-progression survival
+model.
+
+**Step 5:** Compute HR using Cox proportional hazards on the virtual
+cohort survival data.
+
+**Step 6:** Compare simulated HR to published trial HR. Pass criterion:
+simulated HR within ±20% of published HR.
+
+**6.2 Confidence Intervals via Bootstrap**
+
+To assess model uncertainty, we use bootstrap resampling (B = 1000
+resamples) of the virtual patient cohort. For each bootstrap sample, we
+re-estimate the HR. The 95% CI of the bootstrap HR distribution is our
+model\'s confidence interval. For validation, the published trial HR
+must fall within our 95% CI.
+
+**7. Parameter Estimation Strategy**
+
+Parameters come from three sources, ordered by preference:
+
+**7.1 Direct Measurement (Preferred)**
+
+**PK parameters:** Directly from FDA drug labels and published
+population PK studies (Cmax, t1/2, F, fu, Vd).
+
+**IC50/EC50:** Directly from GDSC dose-response curves for each drug in
+prostate cancer cell lines.
+
+**KAALCURA coefficients:** Trained via logistic regression on GDSC
+expression + IC50 data.
+
+**7.2 Literature-Derived**
+
+**Growth rates (g_s, g_r):** From PSA doubling time literature for
+mCRPC. Typical PSA-DT of 2--6 months corresponds to g_s = 0.004--0.012
+day⁻¹.
+
+**Transition rate (μ):** From resistance emergence literature.
+Pre-existing resistant fraction of 5--15% at diagnosis constrains μ.
+
+**Carrying capacity (K):** From tumor volume estimates. A 50cm³ prostate
+tumor contains \~5×10¹⁰ cells.
+
+**7.3 Calibration Against Ground Truth**
+
+**Strategy:** After fixing all directly measured and literature-derived
+parameters, the remaining free parameters (synergy α, tumor penetration
+f_tumor, initial R(0) fraction) are calibrated by fitting the model to
+reproduce the CHAARTED control arm (ADT alone) survival curve. Once
+calibrated on CHAARTED, the model is tested (NOT re-calibrated) on
+LATITUDE, PROfound, PROpel, and TALAPRO-2.
+
+This is the scientific integrity of our approach: calibrate on ONE
+trial, validate on FOUR. If the model can reproduce five different
+trials with different drugs, different mechanisms, and different
+populations using the same core parameters, it is validated.
+
+**8. Implementation Specification**
+
+**8.1 Technology Stack**
+
+**Language:** Python 3.11+ (primary), with R for KAALCURA training via
+rpy2 bridge.
+
+**ODE Solver:** scipy.integrate.solve_ivp with RK45 method, rtol=1e-8,
+atol=1e-10.
+
+**scRNA-seq:** scanpy 1.10+, scvelo 0.3+, cellrank 2.0+.
+
+**Statistics:** lifelines (survival analysis), statsmodels (regression),
+scikit-learn (logistic regression for KAALCURA).
+
+**Synergy:** Custom implementation of ZIP/Bliss/Loewe/HSA + consensus,
+validated against SynergyFinder R package output.
+
+**Data formats:** AnnData (.h5ad) for scRNA-seq, pandas DataFrames for
+tabular data, NetworkX for disease net graph.
+
+**8.2 Validation Test Suite**
+
+Before any novel predictions, the implementation must pass automated
+validation tests:
+
+**Test 1:** KAALCURA reproduces published AUROC values (±0.02) on GDSC
+holdout set.
+
+**Test 2:** PK model reproduces published Cmax and AUC values (±15%) for
+all 5 drugs.
+
+**Test 3:** ODE model with known parameters reproduces analytical
+solutions for limiting cases (no drug, single drug, no resistance).
+
+**Test 4:** Synergy scoring reproduces SynergyFinder results on
+NCI-ALMANAC reference dataset (±2 synergy score units).
+
+**Test 5:** Full pipeline reproduces CHAARTED HR within ±20%
+(calibration trial).
+
+**Test 6:** Full pipeline reproduces LATITUDE, PROfound, PROpel,
+TALAPRO-2 HRs within ±20% (validation trials).
+
+**9. Next Step: Implementation**
+
+With all three foundational documents complete:
+
+**Document 1 (Ground Truth):** Defines WHAT our system must reproduce
+--- the exact clinical trial numbers.
+
+**Document 2 (Data Source Audit):** Defines WITH WHAT data we build and
+validate --- every dataset specified.
+
+**Document 3 (This Document):** Defines HOW our system works --- every
+equation, every parameter.
+
+The next step is implementation. We begin coding Module 1 (KAALCURA)
+because it is the foundation that Module 3 (ODE) depends on. The build
+sequence follows Phase 1 of our roadmap: KAALCURA training on GDSC → PK
+model implementation → ODE engine → synergy scoring → full pipeline
+validation against CHAARTED → validation against remaining four trials.
+
+Implementation begins in the next session. The first deliverable will
+be: intercepta_kaalcura_v1.py --- the complete KAALCURA axis computation
+and drug sensitivity prediction module, validated against GDSC.
+
+*Document prepared by Prasad Akula and Claude, Co-Founders of
+INTERCEPTA*
+
+*March 2026 \| Version 1.0*

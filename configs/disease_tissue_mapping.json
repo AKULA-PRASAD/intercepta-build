@@ -1,0 +1,91 @@
+{
+  "_metadata": {
+    "spec": "INTERCEPTA_Selectivity_Redesign_Specification.md (tag: selectivity-redesign-spec)",
+    "schema_version": "1.2",
+    "created": "2026-05-06",
+    "amended": "2026-05-08",
+    "amendment_note": "Tissue names corrected to match GTEx v8 verbatim per audit_gtex_columns.py. Original v1.0 used underscored names (Brain_Cortex, Whole_Blood); GTEx actually uses 'Brain - Cortex' (with spaces and dashes), 'Whole Blood' (with space). | Added NSCLC to active diseases for Workstream B Phase 0. Per spec workstream-b-spec-locked. Single-tissue GTEx mapping (Lung).",
+    "authors": "Prasad Akula and Claude (CSO)",
+    "description": "Master disease-to-GTEx-tissue mapping. Source-of-truth for selectivity layer. Tissue names verified verbatim against GTEx v8 column headers (gtex_columns_audit.txt)."
+  },
+  "diseases": {
+    "mcrpc": {
+      "disease_id": "mcrpc",
+      "disease_full_name": "Metastatic Castration-Resistant Prostate Cancer",
+      "gtex_primary_tissue": "Prostate",
+      "gtex_comparator_tissues": [
+        "Prostate"
+      ],
+      "gtex_comparator_strategy": "single_tissue",
+      "tissue_proxy_caveat": null,
+      "gene_list_path": "configs/genes_mcrpc.json"
+    },
+    "aml": {
+      "disease_id": "aml",
+      "disease_full_name": "Acute Myeloid Leukemia",
+      "gtex_primary_tissue": "Whole Blood",
+      "gtex_comparator_tissues": [
+        "Whole Blood"
+      ],
+      "gtex_comparator_strategy": "single_tissue",
+      "tissue_proxy_caveat": "GTEx has no bone marrow tissue. Whole Blood is closest hematopoietic proxy. Future work could supplement with HPA bone marrow data or BLUEPRINT epigenome.",
+      "gene_list_path": "configs/genes_aml.json"
+    },
+    "gbm": {
+      "disease_id": "gbm",
+      "disease_full_name": "Glioblastoma Multiforme",
+      "gtex_primary_tissue": "Brain - Cortex",
+      "gtex_comparator_tissues": [
+        "Brain - Cortex",
+        "Brain - Cerebellum",
+        "Brain - Cerebellar Hemisphere",
+        "Brain - Hippocampus",
+        "Brain - Frontal Cortex (BA9)",
+        "Brain - Anterior cingulate cortex (BA24)",
+        "Brain - Caudate (basal ganglia)",
+        "Brain - Putamen (basal ganglia)",
+        "Brain - Nucleus accumbens (basal ganglia)",
+        "Brain - Hypothalamus",
+        "Brain - Amygdala",
+        "Brain - Substantia nigra",
+        "Brain - Spinal cord (cervical c-1)"
+      ],
+      "gtex_comparator_strategy": "multi_tissue",
+      "tissue_proxy_caveat": null,
+      "gene_list_path": "configs/genes_gbm.json"
+    },
+    "nsclc": {
+      "disease_id": "nsclc",
+      "disease_full_name": "Non-Small Cell Lung Carcinoma (LUAD + LUSC)",
+      "gtex_primary_tissue": "Lung",
+      "gtex_comparator_tissues": [
+        "Lung"
+      ],
+      "gtex_comparator_strategy": "single_tissue",
+      "tissue_proxy_caveat": null,
+      "gene_list_path": "configs/genes_nsclc.json"
+    }
+  },
+  "selectivity_classification_thresholds": {
+    "_description": "Disease-agnostic safety classification. Replaces old prostate-specific labels (PROSTATE-SEL, LOW-IN-PROST). Thresholds operate on selectivity_vs_mean ratio.",
+    "HIGHLY_SELECTIVE": "selectivity_vs_mean > 10",
+    "TISSUE_SELECTIVE": "3 < selectivity_vs_mean <= 10",
+    "MODERATE_TISSUE_SELECTIVE": "1.5 < selectivity_vs_mean <= 3",
+    "UBIQUITOUS": "0.5 <= selectivity_vs_mean <= 1.5",
+    "LOW_IN_TARGET_TISSUE": "selectivity_vs_mean < 0.5",
+    "NOT_EXPRESSED": "primary_tissue_tpm < 1.0 (overrides others)"
+  },
+  "future_diseases_planned": {
+    "_note": "These are NOT yet in production. Added when their respective rounds begin.",
+    "crc": {
+      "deferred_until": "future",
+      "tentative_gtex_primary_tissue": "Colon - Sigmoid + Colon - Transverse",
+      "tentative_strategy": "multi_tissue"
+    },
+    "brca": {
+      "deferred_until": "future",
+      "tentative_gtex_primary_tissue": "Breast - Mammary Tissue",
+      "tentative_strategy": "single_tissue"
+    }
+  }
+}
