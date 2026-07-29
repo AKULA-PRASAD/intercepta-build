@@ -2,26 +2,19 @@
   "seed": 42,
   "nsim": 300,
   "nperm": 400,
-  "Ns": [
-    50,
-    75,
-    100,
-    150,
-    200,
-    300
-  ],
-  "Ks": [
-    12,
-    20
-  ],
-  "Rs": [
-    0.05,
-    0.07,
-    0.1,
-    0.15
-  ],
-  "prolif_loading": 1.0,
-  "power_table": {
+  "kind": "PLANNING SIMULATION (not a result on real data)",
+  "assumptions": {
+    "prolif_reliability": 0.8,
+    "drug_corr": 0.15,
+    "aim1_effect_sizes_r": [
+      0.05,
+      0.07,
+      0.1,
+      0.15
+    ],
+    "note": "r from observed V9 residual drug-specificity"
+  },
+  "aim1_ideal": {
     "K12_r0.05": {
       "50": 0.317,
       "75": 0.373,
@@ -87,15 +80,116 @@
       "300": 1.0
     }
   },
-  "N_for_80pct_power": {
-    "K=12, r=0.05": 300,
-    "K=12, r=0.07": 150,
-    "K=12, r=0.1": 75,
-    "K=12, r=0.15": 50,
-    "K=20, r=0.05": 150,
-    "K=20, r=0.07": 75,
-    "K=20, r=0.1": 50,
-    "K=20, r=0.15": 50
+  "aim1_realistic": {
+    "K20_r0.05": {
+      "50": 0.33,
+      "75": 0.493,
+      "100": 0.593,
+      "150": 0.727,
+      "200": 0.813,
+      "300": 0.97
+    },
+    "K20_r0.07": {
+      "50": 0.547,
+      "75": 0.713,
+      "100": 0.833,
+      "150": 0.953,
+      "200": 0.983,
+      "300": 0.997
+    },
+    "K20_r0.1": {
+      "50": 0.803,
+      "75": 0.94,
+      "100": 0.993,
+      "150": 1.0,
+      "200": 1.0,
+      "300": 1.0
+    },
+    "K20_r0.15": {
+      "50": 0.987,
+      "75": 1.0,
+      "100": 1.0,
+      "150": 1.0,
+      "200": 1.0,
+      "300": 1.0
+    }
   },
-  "note": "Planning sim (gaussian, true-proliferation residualized). Real power somewhat lower (imperfect proliferation estimate + drug-drug correlation). Effect sizes r from observed V9 (~0.05-0.10)."
+  "aim1_realistic_N_for_80pct_K20": {
+    "r=0.05": 200,
+    "r=0.07": 100,
+    "r=0.1": 50,
+    "r=0.15": 50
+  },
+  "aim2a_binary_response_power": {
+    "auroc0.6": {
+      "50": 0.324,
+      "75": 0.432,
+      "100": 0.509,
+      "150": 0.652,
+      "200": 0.754,
+      "300": 0.888
+    },
+    "auroc0.65": {
+      "50": 0.535,
+      "75": 0.698,
+      "100": 0.81,
+      "150": 0.916,
+      "200": 0.976,
+      "300": 0.996
+    },
+    "auroc0.7": {
+      "50": 0.76,
+      "75": 0.903,
+      "100": 0.958,
+      "150": 0.994,
+      "200": 0.999,
+      "300": 1.0
+    }
+  },
+  "aim2a_N_for_80pct": {
+    "0.6": 300,
+    "0.65": 100,
+    "0.7": 75
+  },
+  "aim2b_survival": {
+    "event_frac_0.6": {
+      "HR1.4": {
+        "events_needed": 70,
+        "N_needed": 116
+      },
+      "HR1.6": {
+        "events_needed": 36,
+        "N_needed": 60
+      },
+      "HR2.0": {
+        "events_needed": 17,
+        "N_needed": 28
+      }
+    },
+    "event_frac_0.4": {
+      "HR1.4": {
+        "events_needed": 70,
+        "N_needed": 174
+      },
+      "HR1.6": {
+        "events_needed": 36,
+        "N_needed": 89
+      },
+      "HR2.0": {
+        "events_needed": 17,
+        "N_needed": 41
+      }
+    }
+  },
+  "recommended_N": {
+    "moderate_effects": {
+      "N": 100,
+      "basis": "Aim1 r=0.07 (N=100), Aim2a AUROC=0.65 (N=100), Aim2b HR=1.6/60%-events (N=60)"
+    },
+    "conservative_effects": {
+      "N": 300,
+      "basis": "Aim1 r=0.05 (N=200), Aim2a AUROC=0.60 (N=300), Aim2b HR=1.4/40%-events (N=174)"
+    },
+    "design_target": 200
+  }
 }

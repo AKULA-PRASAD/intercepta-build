@@ -56,20 +56,31 @@ produce per-drug transfer predictions — **no fitting on the new cohort** (pure
 Simulated the pre-registered proliferation-residualized diagonal−off-diagonal specificity test with permutation,
 under the observed effect range. Power vs cohort size N and panel size K:
 
-| K (drugs) | true ρ | N=50 | N=75 | N=100 | N=150 | N=200 | N=300 |
-|---|---|---|---|---|---|---|---|
-| 20 | 0.05 | 0.45 | 0.59 | 0.70 | **0.84** | 0.91 | 0.97 |
-| 20 | 0.07 | 0.68 | **0.85** | 0.91 | 0.98 | 0.99 | 1.00 |
-| 20 | 0.10 | **0.90** | 0.98 | 0.99 | 1.00 | 1.00 | 1.00 |
-| 12 | 0.07 | 0.49 | 0.57 | 0.76 | **0.84** | 0.94 | 1.00 |
+The simulation now reports both an IDEAL variant (true proliferation, independent drugs) and a **REALISTIC** one
+(imperfect R_prolif estimate, reliability 0.8; pan-drug correlation 0.15) — the realistic number is the one to plan
+against. **Aim-1 power, K=20 (realistic):**
 
-**Smallest N for ≥80% power (K=20):** ρ=0.10→N=50; ρ=0.07→N=75; ρ=0.05→N=150.
-**Recommendation: N=200 with K≥20 gives >90% power across the plausible effect range (ρ=0.05–0.10)**; N=150 is the
-minimum (≥84% at the conservative ρ=0.05). Pooling across ≥20 drugs is what makes even a weak per-drug effect
-detectable. *(Planning caveat: gaussian, true-proliferation-residualized; real power is somewhat lower with
-imperfect proliferation estimation and drug-drug correlation — hence the 200 target, not 75.)*
-**Aim 2 (clinical):** N=150–200 with ~40% response is powered (≈80%) to detect an engine→response AUROC ≥ 0.66
-(standard AUROC power); underpowered below that — reported honestly if so.
+| true ρ | N=50 | N=75 | N=100 | N=150 | N=200 | N=300 |
+|---|---|---|---|---|---|---|
+| 0.05 | 0.33 | 0.49 | 0.59 | 0.73 | **0.81** | 0.97 |
+| 0.07 | 0.55 | 0.71 | **0.83** | 0.95 | 0.98 | 1.00 |
+| 0.10 | **0.80** | 0.94 | 0.99 | 1.00 | 1.00 | 1.00 |
+
+**Smallest N for ≥80% power (K=20, realistic):** ρ=0.10→N=50; ρ=0.07→**N=100**; ρ=0.05→N=200. (The optimistic/ideal
+sim gave N=75 at ρ=0.07; the realistic degradation from imperfect proliferation estimation + drug-drug correlation
+is why the plan uses the higher figure.)
+
+**Aim 2a (binary clinical response, prevalence 0.35, simulated):** N≈**100** for ≥80% power at AUROC 0.65
+(N≈75 at 0.70; N≈300 at 0.60).
+**Aim 2b (survival, per-SD hazard ratio, Hsieh–Lavori analytic):** HR 1.6 needs ~36 events (N≈60 at 60% events,
+≈89 at 40%); HR 1.4 needs ~70 events (N≈116–174).
+
+**Recommendation: DESIGN TARGET N≈200, K≥20.** This powers Aim 1 at the observed ρ=0.07 and both clinical endpoints
+at moderate effect sizes with margin; the **clinical endpoints, not Aim 1, dominate** the requirement. Pooling
+across ≥20 drugs is what makes a weak per-drug effect detectable. The full frozen analysis plan — endpoints, tests,
+confound controls (incl. treatment-timing for survival, per B17), success/falsification thresholds — is
+`prereg/TRACK1_SAP.md`. *(Planning caveat: power figures assume the stated effect sizes; the true clinical effect
+size is unknown — that is what Track-1 measures — so N=200 is a floor, not a guarantee.)*
 
 ## 9. Success & falsification (set in advance)
 - **Aim 1 success:** diagonal−off-diagonal specificity > 0, permutation p<0.05 (replicates V9 at power).
