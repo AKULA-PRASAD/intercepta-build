@@ -87,7 +87,12 @@ cell-line ceiling** for this design (B1, B2; **Fig 1**). This ceiling is **modal
 291 cell lines with matched mass-spec proteomics (CCLE [Nusinow 2020]), DepMap RNA, and GDSC2 response under an
 identical 5-fold protocol (271 drugs), proteomics did **not** beat transcriptomics (mean per-drug ρ 0.328 vs 0.419,
 paired p=10⁻⁴³) and added nothing when combined (0.408 ≤ 0.419) — a second baseline molecular modality hits the
-same wall (B22).
+same wall (B22). The ceiling even holds for a **measured functional** modality: on 498 cell lines with matched
+DepMap CRISPR gene-dependency, dependency alone did not beat RNA (0.459 vs 0.487) and integration added only +0.019
+(below a pre-set materiality bar); critically, once each drug's own target-gene dependency was excluded, the
+functional advantage vanished (dependency 0.504 vs RNA 0.514, p=0.06) — i.e. the only functional signal is a drug's
+*own target* dependency, not a generalizable functional-state predictor (B23). This is the mechanistic explanation
+for why the inferred-dependency layer (§2.8) failed to replicate.
 
 ### 2.2 Verified mutation→drug mechanism in AML, and what does not survive correction
 In BeatAML ex-vivo drug screening, a systematic screen of 3,051 gene×drug pairs (BH-FDR<0.05, FLT3-ITD– and
