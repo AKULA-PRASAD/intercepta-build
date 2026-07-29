@@ -1,0 +1,233 @@
+{
+  "git_sha": "658e6d9002236eb3ac6307e9682cc3b4841fbd0a",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T13:59:10Z",
+  "seed": 42,
+  "K": 2000,
+  "n_pairs": 21,
+  "pairs": [
+    {
+      "drug": "sorafenib",
+      "gene": "FLT3",
+      "src": "PRISM_AUC",
+      "n": 388,
+      "rho_dependency": 0.0462,
+      "rho_expression": -0.0712,
+      "dep_one_sided_p": 0.18216235220821064,
+      "dep_BHq": 0.2125227442429124
+    },
+    {
+      "drug": "quizartinib",
+      "gene": "FLT3",
+      "src": "PRISM_AUC",
+      "n": 373,
+      "rho_dependency": 0.0107,
+      "rho_expression": -0.0688,
+      "dep_one_sided_p": 0.4184632339628813,
+      "dep_BHq": 0.4625119954326583
+    },
+    {
+      "drug": "gilteritinib",
+      "gene": "FLT3",
+      "src": "PRISM_AUC",
+      "n": 362,
+      "rho_dependency": 0.1089,
+      "rho_expression": 0.0724,
+      "dep_one_sided_p": 0.019152518520371215,
+      "dep_BHq": 0.030938683763676582
+    },
+    {
+      "drug": "crenolanib",
+      "gene": "FLT3",
+      "src": "PRISM_AUC",
+      "n": 382,
+      "rho_dependency": -0.0233,
+      "rho_expression": -0.0327,
+      "dep_one_sided_p": 0.674972110592413,
+      "dep_BHq": 0.674972110592413
+    },
+    {
+      "drug": "trametinib",
+      "gene": "MAP2K1",
+      "src": "PRISM_AUC",
+      "n": 390,
+      "rho_dependency": 0.2005,
+      "rho_expression": 0.0296,
+      "dep_one_sided_p": 3.187718915500481e-05,
+      "dep_BHq": 8.367762153188762e-05
+    },
+    {
+      "drug": "selumetinib",
+      "gene": "MAP2K1",
+      "src": "PRISM_AUC",
+      "n": 388,
+      "rho_dependency": 0.1602,
+      "rho_expression": 0.0142,
+      "dep_one_sided_p": 0.0007604569660935127,
+      "dep_BHq": 0.0015969596287963767
+    },
+    {
+      "drug": "pd0325901",
+      "gene": "MAP2K1",
+      "src": "GDSC_LN_IC50",
+      "n": 564,
+      "rho_dependency": 0.1239,
+      "rho_expression": 0.0009,
+      "dep_one_sided_p": 0.001589989181343964,
+      "dep_BHq": 0.0030354338916566584
+    },
+    {
+      "drug": "venetoclax",
+      "gene": "BCL2",
+      "src": "PRISM_AUC",
+      "n": 385,
+      "rho_dependency": 0.078,
+      "rho_expression": -0.0142,
+      "dep_one_sided_p": 0.06330606569408692,
+      "dep_BHq": 0.08862849197172169
+    },
+    {
+      "drug": "erlotinib",
+      "gene": "EGFR",
+      "src": "PRISM_AUC",
+      "n": 390,
+      "rho_dependency": 0.3422,
+      "rho_expression": -0.2936,
+      "dep_one_sided_p": 1.1514103104176023e-12,
+      "dep_BHq": 3.454230931252807e-12
+    },
+    {
+      "drug": "gefitinib",
+      "gene": "EGFR",
+      "src": "PRISM_AUC",
+      "n": 382,
+      "rho_dependency": 0.3613,
+      "rho_expression": -0.258,
+      "dep_one_sided_p": 8.772903727777641e-14,
+      "dep_BHq": 4.605774457083262e-13
+    },
+    {
+      "drug": "afatinib",
+      "gene": "EGFR",
+      "src": "PRISM_AUC",
+      "n": 384,
+      "rho_dependency": 0.3856,
+      "rho_expression": -0.2563,
+      "dep_one_sided_p": 1.036245057955293e-15,
+      "dep_BHq": 7.25371540568705e-15
+    },
+    {
+      "drug": "alpelisib",
+      "gene": "PIK3CA",
+      "src": "PRISM_AUC",
+      "n": 378,
+      "rho_dependency": 0.3488,
+      "rho_expression": 0.037,
+      "dep_one_sided_p": 8.925430339575735e-13,
+      "dep_BHq": 3.2971282188163094e-12
+    },
+    {
+      "drug": "buparlisib",
+      "gene": "PIK3CA",
+      "src": "PRISM_AUC",
+      "n": 366,
+      "rho_dependency": 0.1817,
+      "rho_expression": 0.0599,
+      "dep_one_sided_p": 0.00023200117408012116,
+      "dep_BHq": 0.000541336072853616
+    },
+    {
+      "drug": "ribociclib",
+      "gene": "CDK6",
+      "src": "PRISM_AUC",
+      "n": 390,
+      "rho_dependency": 0.0627,
+      "rho_expression": -0.0053,
+      "dep_one_sided_p": 0.10840141445743157,
+      "dep_BHq": 0.13390762962388605
+    },
+    {
+      "drug": "palbociclib",
+      "gene": "CDK6",
+      "src": "PRISM_AUC",
+      "n": 386,
+      "rho_dependency": 0.3451,
+      "rho_expression": -0.1561,
+      "dep_one_sided_p": 9.42036633947517e-13,
+      "dep_BHq": 3.2971282188163094e-12
+    },
+    {
+      "drug": "dabrafenib",
+      "gene": "BRAF",
+      "src": "PRISM_AUC",
+      "n": 386,
+      "rho_dependency": 0.0986,
+      "rho_expression": 0.0211,
+      "dep_one_sided_p": 0.02643813344495709,
+      "dep_BHq": 0.03965720016743564
+    },
+    {
+      "drug": "vemurafenib",
+      "gene": "BRAF",
+      "src": "PRISM_AUC",
+      "n": 377,
+      "rho_dependency": 0.1339,
+      "rho_expression": -0.0753,
+      "dep_one_sided_p": 0.004591738244627056,
+      "dep_BHq": 0.008035541928097347
+    },
+    {
+      "drug": "encorafenib",
+      "gene": "BRAF",
+      "skipped": "drug<30 cells"
+    },
+    {
+      "drug": "alisertib",
+      "gene": "AURKA",
+      "src": "PRISM_AUC",
+      "n": 386,
+      "rho_dependency": -0.019,
+      "rho_expression": 0.094,
+      "dep_one_sided_p": 0.6450096775919967,
+      "dep_BHq": 0.674972110592413
+    },
+    {
+      "drug": "everolimus",
+      "gene": "MTOR",
+      "src": "PRISM_AUC",
+      "n": 377,
+      "rho_dependency": 0.0678,
+      "rho_expression": -0.0797,
+      "dep_one_sided_p": 0.09455706336482572,
+      "dep_BHq": 0.12410614566633377
+    },
+    {
+      "drug": "idasanutlin",
+      "gene": "MDM2",
+      "src": "PRISM_AUC",
+      "n": 391,
+      "rho_dependency": 0.4746,
+      "rho_expression": -0.4063,
+      "dep_one_sided_p": 1.4375372838562322e-24,
+      "dep_BHq": 3.018828296098088e-23
+    },
+    {
+      "drug": "nutlin-3",
+      "gene": "MDM2",
+      "src": "PRISM_AUC",
+      "n": 361,
+      "rho_dependency": 0.438,
+      "rho_expression": -0.3431,
+      "dep_one_sided_p": 3.106727516683516e-19,
+      "dep_BHq": 3.262063892517692e-18
+    }
+  ],
+  "H1_pooled_rho": 0.187,
+  "H1_perm_p": 0.0004997501249375312,
+  "H1_pass": true,
+  "H2_diff_medabs": 0.0627,
+  "H2_perm_p": 0.015492253873063468,
+  "H2_pass": true,
+  "verdict": "FUNCTIONAL MECHANISM: target dependency predicts drug sensitivity AND beats baseline expression (thesis supported)"
+}
