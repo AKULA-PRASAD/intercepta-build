@@ -43,14 +43,19 @@ validated (B6/LEDGER V13): samples closer to the cell-line training distribution
 absolute accuracy is weak. Per-drug CV reliability did NOT calibrate (B6 H1 null, confirms B3e) and is descriptive
 only. No prediction is ever HIGH confidence on current single-cohort evidence.
 
-## Functional-inference layer (V15–V18) — the program's most promising lead
+## Functional-inference layer (V15–V21) — promising in BeatAML, but externally FALSIFIED
 `fit_dependency(targets)` trains expression→CRISPR gene-dependency models; `infer_dependency(expr)` predicts a
-tumor's functional dependency on target genes **from RNA alone**. Validated (BeatAML ex-vivo, B15): for the
-dependency-driven actionable targets **FLT3, BCL2, CDK9, AURKA** (`RESCUED_TARGETS`), inferred dependency predicts
-ex-vivo drug sensitivity (ρ +0.13…+0.24) where the direct transcriptomic transfer is ~0 or wrong-signed. **Honest
-scope:** NOT a broad win (does not beat direct transfer overall; MEK/EGFR not rescued); BeatAML ex-vivo only, not
-clinical outcome; dependency models trained on pan-cancer DepMap. It is the sharpest, most clinically-relevant,
-patient-translatable lead — the primary Track-1 hypothesis, not a validated clinical tool.
+tumor's functional dependency on target genes **from RNA alone**. Within BeatAML ex-vivo (B14/B15), for the
+dependency-driven actionable targets **FLT3, BCL2, CDK9, AURKA** (`RESCUED_TARGETS`), inferred dependency predicted
+ex-vivo drug sensitivity (ρ +0.13…+0.24) where the direct transcriptomic transfer is ~0 or wrong-signed — and
+inferred-FLT3-dependency beat the FLT3-ITD biomarker (V19/V20), robust to lineage-leakage (B19).
+**Decisive update (do not overclaim):** this **FAILED external replication** in an independent AML cohort
+(FIMM/Malani, B20/B21) — pooled ρ=+0.05, p=0.08; the known FLT3-mutation→inhibitor biology replicated, our
+inferred refinement did not. A matched proteomic modality did not break the ceiling either (B22/V21). **Honest
+scope:** the layer is retained in the engine as a research instrument and as the external-replication protocol, but
+V19/V20 are **BeatAML-specific and NOT a generalizable clinical lead.** The corrected Track-1 hypothesis is that
+functional response must be **measured in patients, not inferred** — this layer is the comparator (measured vs
+inferred, SAP Aim 3), not the validated predictor.
 
 ## Next
 `engine v1` is the validated floor. It becomes clinically meaningful only after external replication on a

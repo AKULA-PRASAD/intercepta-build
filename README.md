@@ -11,6 +11,9 @@ positive guilty until it survives permutation + leakage + multiple-testing + con
 reproduce ×2, never fabricate. Where legacy code docstrings overclaim, the module `README.md` and
 [`LEDGER.md`](LEDGER.md) are authoritative.
 
+> **Reviewing this repo (AI or human)? Start with [`REVIEWERS.md`](REVIEWERS.md)** — a one-page honest map of what
+> is verified, what is falsified (two decisive negatives), how to reproduce, and the forward path.
+
 ## What INTERCEPTA is (the honest one sentence)
 > A prognostic + mechanistic drug-response engine on **known cancer biology**, with a verified transferable
 > cell-line→patient signal and verified mutation→drug mechanisms — **not** (yet) a novel-molecule or

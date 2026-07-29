@@ -86,17 +86,24 @@ Success is defined as **a true engine that clinicians/pharma can trust**, not a 
 rungs that hold. If a rung fails, that failure is a first-class result and it re-sizes the vision honestly —
 which is the only kind of success worth the years. Next action: run L1 (B3).
 
-## Current frontier — the functional-inference reorientation (B12–B14, V15–V17)
+## Current frontier — the functional-inference arc, tested to the end (B12–B22, V15–V21)
 The deepest honest finding of the whole program: **what transcriptomics transfers is proliferation/cancer-type,
 not drug-specific vulnerability** — so baseline-expression drug prediction is intrinsically capped (and clinically
-null under confound control, B10). The breakthrough-relevant pivot, tested on public + BeatAML data (us-only):
-- **Functional gene-dependency (CRISPR) predicts drug response far better than baseline expression** (V15;
-  dependency ρ up to +0.47 vs transfer +0.05–0.07).
-- **Dependency is *learnable from expression*** (V16; CV ρ up to 0.59) → a **patient-translatable functional
-  layer** (needs only RNA at inference).
-- **On real patient samples (BeatAML ex-vivo), this layer RESCUES prediction for the actionable targets where the
-  direct transcriptomic approach fails** (V17): FLT3 inhibitors (+0.13…+0.24) and venetoclax/BCL2 (+0.22), vs a
-  direct transfer that is ~0 or wrong-signed. Weak overall, mechanistically coherent, pre-declared.
-**Reorientation:** the engine's mechanism layer should be **expression-inferred functional dependency**, and the
-Track-1 cohort's primary translational hypothesis is that this layer predicts FLT3-inhibitor / venetoclax
-response in patients. This is the clearest real path — honest, weak-but-directional, not a breakthrough yet.
+null under confound control, B10). We pivoted to a **functional** readout and pushed it all the way to
+falsification (us-only, public + BeatAML + an independent cohort):
+- **Functional gene-dependency (CRISPR) predicts drug response far better than baseline expression** (V15), is
+  **learnable from expression** (V16), and on BeatAML ex-vivo the inferred layer **rescued** the actionable
+  targets FLT3/BCL2/CDK9/AURKA (V17/V18) — inferred-FLT3-dependency even beat the FLT3-ITD biomarker
+  (beyond-mutation, in ITD-wildtype patients, proliferation- and lineage-independent; V19/V20, robust B19).
+- **But it FAILED external replication (B20/B21):** in an independent AML cohort (FIMM/Malani) the known
+  FLT3-mutation→inhibitor biology replicated while our *inferred* refinement did not (pooled ρ=+0.05, p=0.08).
+  A second baseline modality — proteomics — does not break the ceiling either (B22/V21): the limit is
+  **modality-general.**
+- **The corrected lesson (evidence-forced):** V19/V20 are **BeatAML-specific**, not a generalizable lead. No
+  static/baseline profile (RNA or protein) resolves within-lineage drug specificity, and a functional layer
+  *inferred from cell lines* does not transfer between patient cohorts.
+**Reorientation:** the breakthrough requires **functional/perturbation response MEASURED in the patients
+themselves** — not inferred. That is exactly what Track-1 measures (`docs/BREAKTHROUGH_ROADMAP.md`,
+`prereg/TRACK1_SAP.md`). Honest and hard-won: the computational avenues on public data are now exhausted and
+truthfully mapped, and the one real path left is prospective functional data — not a breakthrough yet, but a
+credibly-earned direction.
