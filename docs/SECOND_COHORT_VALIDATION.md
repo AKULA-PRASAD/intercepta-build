@@ -62,3 +62,12 @@ committed (policy in `data/MANIFEST.md`, `INTEGRITY_SWEEP.md`).
 - GI/CRC organoid screens — small n, scattered supplementary.
 CONCLUSION: PDXE was the accessible clean public cohort and has been used. The decisive remaining step is a
 **human clinical** cohort (dbGaP/EGA — a gate); PDMR is the best next PUBLIC add if deeper PDX validation is wanted.
+
+## PDMR feasibility checked (2026-07-29) — not usable for drug-response validation
+NCI PDMR (pdmr.cancer.gov / dctd.cancer.gov) provides PUBLIC molecular data (RNA-seq, WES) + clinical
+annotation, but does NOT offer a bulk public PDX **drug-response** matrix for GDSC-overlapping drugs (drug
+testing is limited/portal-gated; PDMR provides MODELS for others to test, not a large response database).
+Therefore PDMR cannot serve as a second external drug-response cohort. **Conclusion: readily-accessible public
+patient-proxy DRUG-RESPONSE cohorts are exhausted (PDXE was the one).** The decisive remaining external
+validation is a **human clinical** cohort (dbGaP/EGA — a gate); the application draft + frozen protocol above are
+ready to file.
