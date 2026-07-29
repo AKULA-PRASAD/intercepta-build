@@ -54,8 +54,11 @@ and reproduced ×2.
   genuinely drug-specific** cell-line→patient signal: prolif-residualized diag−off = +0.040, perm p=0.010
   (GDSC2 labels); **replicates with independent GDSC1 labels** +0.051, perm p=0.0015 (59 drugs). This is the
   first evidence in the program that the engine carries *drug-level* (not just proliferation) information into
-  real patients. **Caveats (honest):** effect small (ρ≈0.07–0.08); one patient cohort (BeatAML/AML) — needs a
-  SECOND patient cohort and other cancer types for full external validity (that is the next real gate).
+  real patients. **Robust (B3d):** survives drug jackknife, bootstrap-over-drugs CI (excludes 0), and internal
+  patient split-half; best-transferring drugs are AML-relevant agents (venetoclax, cytarabine, sorafenib, MEK
+  inhibitors — the last connecting to verified V5 NRAS→MEK), exploratory but coherent. **Caveats (honest):**
+  effect small (ρ≈0.07–0.08); one patient cohort (BeatAML/AML) — needs a SECOND patient cohort and other cancer
+  types for full external validity (the next real gate); the mechanistic drug ranking is exploratory.
 - **L2 — Controlled clinical cohorts.** [B4, human-gated: dbGaP/EGA] Treatment×biomarker RCT designs to
   revisit the *selection* question with adequate power in non-ER / metastatic settings.
 - **L3 — Calibrated decision support + repurposing ranking.** [conditional on L1 (and ideally L2)] A ranked,
