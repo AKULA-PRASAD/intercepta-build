@@ -61,3 +61,16 @@ Rationale: Constitution rules 2/3/5 — an exploratory ranking looked coherent; 
 negative is recorded as first-class (ledger N1). Net honest state of L1b: the weak drug-specific patient signal
 is REAL, REPLICATED (2 label screens), and ROBUST (drug/patient subsetting) — but its mechanism is unexplained
 and its effect is small. This does NOT change the next gate (D7/D8): a second independent patient cohort.
+
+## 2026-07-29 — D9: Engine > parts (B4) — first evidence the mechanism-anchored engine is more than its verified pieces; bound it honestly
+Decision: B4 tested whether the two INDEPENDENTLY VERIFIED signal types (mutation markers V4–V6 + expression
+transfer V9) are complementary. Result: combined 5-fold CV Spearman beats BOTH single predictors in all 4
+testable drug–marker pairs, and expression transfer contributes independently (correct sign, BHq<5e-8) in 3/4;
+pre-registered rule (≥3 pairs) MET → ledger V10. This is the first evidence toward L3 that the engine predicts
+patient drug response better than either verified part alone. **We bound the claim:** (a) the random-effects
+meta is NOT significant (p=0.21) due to heterogeneity; (b) dasatinib's cell-line→patient transfer is INVERTED
+(honest anomaly, flagged, not hidden); (c) NPM1→cabozantinib (V4) could not be tested (no GDSC2 cabo training
+data); (d) 4 pairs, one cohort. So the headline is "promising, pre-registered rule met, CV shows engine>parts"
+— NOT "validated." Rationale: Constitution rules 3/5/9. Next real gate unchanged: an INDEPENDENT patient
+drug-response cohort to replicate V9/V10 (dbGaP/EGA = human gate). This is the current top of the ladder toward
+L3 (calibrated mechanism-anchored decision support).
