@@ -1,0 +1,37 @@
+{
+  "git_sha": "60097e892fe4deb815c7580b8940c19a2527dd33",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T06:09:51Z",
+  "AML_pathways": [
+    "erk mapk signaling",
+    "rtk signaling"
+  ],
+  "n_usable": 44,
+  "n_annotated": 36,
+  "n_aml": 11,
+  "n_other": 25,
+  "aml_median_resid_rho": 0.0519,
+  "other_median_resid_rho": 0.0513,
+  "H1_gap": 0.0005,
+  "H1_mwu_p": 0.2913417291702677,
+  "H1_perm_p": 0.4987506246876562,
+  "H1_pass": false,
+  "aml_drugs": [
+    "axitinib",
+    "bms-754807",
+    "crizotinib",
+    "dasatinib",
+    "foretinib",
+    "lapatinib",
+    "motesanib",
+    "plx-4720",
+    "selumetinib",
+    "sorafenib",
+    "trametinib"
+  ],
+  "H2_spearman": 0.0424,
+  "H2_perm_p": 0.36231884057971014,
+  "H2_pass": false,
+  "verdict": "Mechanistic coherence NOT confirmed by the pre-declared AML-pathway test (H1 null); H2 also null \u2014 downgrade coherence language honestly"
+}

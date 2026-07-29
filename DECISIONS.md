@@ -51,3 +51,13 @@ believed; it has NOT survived a second patient cohort or cross-cancer test, so t
 (D8): a SECOND independent patient drug-response cohort (other AML functional cohorts, or a solid-tumor
 PDX/ex-vivo cohort) — likely controlled-access = human gate. Also outward/gated and NOT auto-done: publishing
 the repo to GitHub (needs Prasad's remote+auth) and L2 dbGaP/EGA trials — surfaced to Prasad, not faked.
+
+## 2026-07-29 — D8: Mechanistic-coherence claim WITHDRAWN (B3e pre-registered null)
+Decision: the B3d exploratory impression that "AML-relevant drugs transfer best" does NOT survive a
+pre-registered test using GDSC's external pathway annotation. Drugs in the frozen AML driver-signaling axis
+(RTK + ERK MAPK) do not transfer better (MWU p=0.29, perm p=0.50), and transfer strength does not track
+within-cell-line predictability (p=0.36). We WITHDRAW the mechanistic-coherence language from V9+/VISION.
+Rationale: Constitution rules 2/3/5 — an exploratory ranking looked coherent; the falsifying test said no; the
+negative is recorded as first-class (ledger N1). Net honest state of L1b: the weak drug-specific patient signal
+is REAL, REPLICATED (2 label screens), and ROBUST (drug/patient subsetting) — but its mechanism is unexplained
+and its effect is small. This does NOT change the next gate (D7/D8): a second independent patient cohort.
