@@ -1,0 +1,69 @@
+{
+  "git_sha": "9d6a2a33a0c57c2ea3a4841f6a322134777ccd0f",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T14:22:13Z",
+  "seed": 42,
+  "n_drugs": 4,
+  "pairs": [
+    {
+      "drug": "sorafenib",
+      "n": 493,
+      "n_itd": 122,
+      "n_itdwt": 371,
+      "dep_beyond_itd_beta": 8.529,
+      "dep_beyond_itd_p": 1.3048048509092626e-05,
+      "dep_se": 1.9365,
+      "dep_sensitizing": true,
+      "itd_p": 0.0,
+      "itdwt_rho": 0.2846,
+      "dep_BHq": 5.2192194036370506e-05
+    },
+    {
+      "drug": "quizartinib",
+      "n": 460,
+      "n_itd": 112,
+      "n_itdwt": 348,
+      "dep_beyond_itd_beta": 6.589,
+      "dep_beyond_itd_p": 0.0032103089182985768,
+      "dep_se": 2.2241,
+      "dep_sensitizing": true,
+      "itd_p": 0.0,
+      "itdwt_rho": 0.1741,
+      "dep_BHq": 0.004280411891064769
+    },
+    {
+      "drug": "gilteritinib",
+      "n": 278,
+      "n_itd": 74,
+      "n_itdwt": 204,
+      "dep_beyond_itd_beta": 6.749,
+      "dep_beyond_itd_p": 0.054973558087337594,
+      "dep_se": 3.502,
+      "dep_sensitizing": true,
+      "itd_p": 0.0,
+      "itdwt_rho": 0.1156,
+      "dep_BHq": 0.054973558087337594
+    },
+    {
+      "drug": "crenolanib",
+      "n": 446,
+      "n_itd": 109,
+      "n_itdwt": 337,
+      "dep_beyond_itd_beta": 7.626,
+      "dep_beyond_itd_p": 0.001089467197640286,
+      "dep_se": 2.3193,
+      "dep_sensitizing": true,
+      "itd_p": 0.0,
+      "itdwt_rho": 0.2551,
+      "dep_BHq": 0.002178934395280572
+    }
+  ],
+  "H1_meta_beta": 7.5712,
+  "H1_p": 8.219294848341505e-11,
+  "H1_pass": true,
+  "H2_itdwt_pooled_rho": 0.2188,
+  "H2_p": 1.479004627828548e-15,
+  "H2_pass": true,
+  "verdict": "GENUINE ADVANCE: inferred-FLT3-dependency predicts FLT3i response BEYOND FLT3-ITD, including in ITD-WT patients (adds over standard biomarker)"
+}
