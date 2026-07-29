@@ -65,6 +65,12 @@ and reproduced ×2.
   revisit the *selection* question with adequate power in non-ER / metastatic settings.
 - **L3 — Calibrated decision support + repurposing ranking.** [conditional on L1 (and ideally L2)] A ranked,
   mechanism-anchored, uncertainty-calibrated output; pharma/clinical partnership for prospective test.
+  **First evidence (B4/V10):** combining the verified mutation markers (V4–V6) with the expression transfer
+  (V9) beats either alone — combined 5-fold CV Spearman > both single predictors in all 4 testable drug–marker
+  pairs (e.g. sorafenib 0.469 vs marker 0.271 / transfer 0.383), transfer adds independently in 3/4 (BHq<5e-8).
+  The mechanism-anchored engine is more than the sum of its verified parts. Bounded: DL meta null (p=0.21,
+  heterogeneous — dasatinib transfer inverted), NPM1→cabozantinib untestable (no GDSC2 cabo), 4 pairs, one
+  cohort → needs an independent patient cohort before this is "validated decision support."
 - **L4 — Generalization beyond the first cancer(s).** [conditional on L1–L3] Only then is "broader disease"
   an evidenced direction, not a slogan.
 
