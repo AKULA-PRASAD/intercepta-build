@@ -1,0 +1,187 @@
+{
+  "timestamp": "2026-05-09T05:30:03.651016+00:00",
+  "folder": "/Users/kalki/INTERCEPTA/round2_aml",
+  "total_files": 122,
+  "total_size_bytes": 3191374872,
+  "total_size_gb": 3.191,
+  "by_extension": {
+    ".mtx": {
+      "count": 2,
+      "size": 2179230090
+    },
+    ".txt": {
+      "count": 31,
+      "size": 478016971
+    },
+    ".h5ad": {
+      "count": 1,
+      "size": 256208128
+    },
+    ".rds": {
+      "count": 1,
+      "size": 252214149
+    },
+    ".csv": {
+      "count": 23,
+      "size": 18556375
+    },
+    ".gpickle": {
+      "count": 2,
+      "size": 5829478
+    },
+    ".xlsx": {
+      "count": 3,
+      "size": 619646
+    },
+    ".py": {
+      "count": 22,
+      "size": 381405
+    },
+    ".md": {
+      "count": 11,
+      "size": 170480
+    },
+    ".json": {
+      "count": 20,
+      "size": 67046
+    },
+    ".rdata": {
+      "count": 1,
+      "size": 51191
+    },
+    ".r": {
+      "count": 4,
+      "size": 29375
+    },
+    "no_ext": {
+      "count": 1,
+      "size": 538
+    }
+  },
+  "by_subfolder": {
+    "data": {
+      "count": 18,
+      "size": 3169644829
+    },
+    "results": {
+      "count": 67,
+      "size": 21148783
+    },
+    "code": {
+      "count": 26,
+      "size": 410780
+    },
+    "docs": {
+      "count": 11,
+      "size": 170480
+    }
+  },
+  "largest_20_files": [
+    {
+      "path": "data/vangalen2019/exported/data.mtx",
+      "size_bytes": 1505667592,
+      "size_mb": 1505.7
+    },
+    {
+      "path": "data/vangalen2019/exported/counts.mtx",
+      "size_bytes": 673562498,
+      "size_mb": 673.6
+    },
+    {
+      "path": "data/beataml2.0_data-2.0/beataml_waves1to4_norm_exp_dbgap.txt",
+      "size_bytes": 281337180,
+      "size_mb": 281.3
+    },
+    {
+      "path": "data/vangalen2019/vangalen_aml.h5ad",
+      "size_bytes": 256208128,
+      "size_mb": 256.2
+    },
+    {
+      "path": "data/vangalen2019/Seurat_AML.rds",
+      "size_bytes": 252214149,
+      "size_mb": 252.2
+    },
+    {
+      "path": "data/beataml2.0_data-2.0/beataml_waves1to4_counts_dbgap.txt",
+      "size_bytes": 122488199,
+      "size_mb": 122.5
+    },
+    {
+      "path": "data/beataml2.0_data-2.0/beataml_wv1to4_raw_inhibitor_v4_dbgap.txt",
+      "size_bytes": 49363676,
+      "size_mb": 49.4
+    },
+    {
+      "path": "data/beataml2.0_data-2.0/beataml_probit_curve_fits_v4_dbgap.txt",
+      "size_bytes": 19047078,
+      "size_mb": 19.0
+    },
+    {
+      "path": "results/round2_2c/features_rna1000.csv",
+      "size_bytes": 12411933,
+      "size_mb": 12.4
+    },
+    {
+      "path": "data/vangalen2019/exported/cell_metadata.csv",
+      "size_bytes": 4153349,
+      "size_mb": 4.2
+    },
+    {
+      "path": "data/beataml2.0_data-2.0/beataml_wes_wv1to4_mutations_dbgap.txt",
+      "size_bytes": 3668996,
+      "size_mb": 3.7
+    },
+    {
+      "path": "results/aml_net_skeleton.gpickle",
+      "size_bytes": 2916320,
+      "size_mb": 2.9
+    },
+    {
+      "path": "results/aml_net_skeleton_v2.gpickle",
+      "size_bytes": 2913158,
+      "size_mb": 2.9
+    },
+    {
+      "path": "results/round2_2c/drug_response_aligned.csv",
+      "size_bytes": 1407018,
+      "size_mb": 1.4
+    },
+    {
+      "path": "data/vangalen2019/exported/cell_barcodes.txt",
+      "size_bytes": 1050840,
+      "size_mb": 1.1
+    },
+    {
+      "path": "data/beataml2.0_data-2.0/beataml_wv1to4_clinical.xlsx",
+      "size_bytes": 488278,
+      "size_mb": 0.5
+    },
+    {
+      "path": "results/aml_net_round22a_build.txt",
+      "size_bytes": 370996,
+      "size_mb": 0.4
+    },
+    {
+      "path": "results/aml_net_v5_2_build.txt",
+      "size_bytes": 352336,
+      "size_mb": 0.4
+    },
+    {
+      "path": "data/vangalen2019/exported/gene_names.txt",
+      "size_bytes": 208561,
+      "size_mb": 0.2
+    },
+    {
+      "path": "results/round2_2c/features_pathways_raw.csv",
+      "size_bytes": 160426,
+      "size_mb": 0.2
+    }
+  ],
+  "categorized": {
+    "likely_data_size_gb": 0.508,
+    "likely_code_size_gb": 0.479,
+    "should_move_to_data_dir": true,
+    "recommendation": "move large data files to data/ and add to .gitignore"
+  }
+}

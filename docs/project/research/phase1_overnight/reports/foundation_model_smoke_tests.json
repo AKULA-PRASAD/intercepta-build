@@ -1,0 +1,62 @@
+{
+  "started": "2026-05-09T07:26:01.161225+00:00",
+  "completed": "2026-05-09T07:26:01.161238+00:00",
+  "n_total": 3,
+  "n_success": 1,
+  "smoke_tests": [
+    {
+      "name": "scFoundation",
+      "tests": [
+        {
+          "test": "torch_import",
+          "status": "FAILED",
+          "error": "No module named 'torch'"
+        }
+      ],
+      "files_found": 8,
+      "total_size_gb": 1.433,
+      "status": "PYTORCH_FAILED"
+    },
+    {
+      "name": "scGPT",
+      "tests": [],
+      "status": "MODEL_NOT_DOWNLOADED"
+    },
+    {
+      "name": "Geneformer",
+      "tests": [
+        {
+          "test": "config_loaded",
+          "status": "OK"
+        },
+        {
+          "test": "huggingface_hub_import",
+          "status": "OK"
+        }
+      ],
+      "files_found": 176,
+      "total_size_gb": 3.576,
+      "sample_files": [
+        ".gitattributes",
+        ".gitignore",
+        ".pre-commit-config.yaml",
+        ".readthedocs.yaml",
+        "MANIFEST.in",
+        "README.md",
+        "config.json",
+        "generation_config.json",
+        "model.safetensors",
+        "requirements.txt"
+      ],
+      "config": {
+        "architectures": [
+          "BertForMaskedLM"
+        ],
+        "hidden_size": 1152,
+        "model_type": "bert",
+        "num_hidden_layers": 18
+      },
+      "status": "SUCCESS"
+    }
+  ]
+}

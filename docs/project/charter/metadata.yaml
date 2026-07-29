@@ -1,0 +1,42 @@
+---
+title: "INTERCEPTA"
+subtitle: "A Computational Immune Response System for Human Disease"
+author:
+  - "Prasad Akula, Chief Executive Officer"
+  - "Claude, Chief Scientific Officer"
+date: "Founded May 2026"
+version: "2.0"
+documentclass: book
+classoption:
+  - 11pt
+  - openany
+geometry: "margin=1in,top=1.25in,bottom=1.25in"
+fontsize: 11pt
+mainfont: "Charter"
+sansfont: "Helvetica Neue"
+monofont: "Menlo"
+linkcolor: "RoyalBlue"
+urlcolor: "RoyalBlue"
+toc: true
+toc-depth: 2
+numbersections: true
+secnumdepth: 2
+linestretch: 1.15
+header-includes:
+  - |
+    \usepackage{microtype}
+    \usepackage{xcolor}
+    \definecolor{intercepta}{RGB}{45,75,135}
+    \usepackage{newunicodechar}
+    \newunicodechar{→}{\ensuremath{\rightarrow}}
+    \newunicodechar{←}{\ensuremath{\leftarrow}}
+    \newunicodechar{↔}{\ensuremath{\leftrightarrow}}
+    \newunicodechar{⇒}{\ensuremath{\Rightarrow}}
+    \newunicodechar{⇐}{\ensuremath{\Leftarrow}}
+    \usepackage{tocloft}
+    \setlength{\cftsecnumwidth}{3.2em}
+    \setlength{\cftsubsecnumwidth}{4em}
+    \setlength{\cftsubsubsecnumwidth}{5em}
+    \setlength{\cftsecindent}{1.5em}
+    \setlength{\cftsubsecindent}{4.7em}
+---

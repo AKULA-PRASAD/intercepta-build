@@ -12,3 +12,9 @@ derived tables, and bulky binaries (.parquet/.gpickle/.arrow/.h5ad/.rds) — rep
 > - `pareto_ranking_*.json` → some ranking dimensions were **human-assigned** inputs.
 > - `lead_candidate_INTC002.json` → a **computational hypothesis** (ChEMBL novelty 0.266), not a validated drug.
 > The authoritative, verified results are in `../LEDGER.md`, `../verification/`, and `../experiments/`.
+
+## Excluded large derived outputs (regenerable)
+A few "net" graph JSONs are too large to commit and are **regenerable** from `../engine/net/` + `../data/MANIFEST.md`:
+`mcrpc_unified_net.json` (51 MB), `round3_gbm/gbm_disease_net_action1.json` (12 MB), and gbm `phase2b/c/d`
+(3.8–5.7 MB). The smaller disease-net outputs (AML, NSCLC, pancreatic, PDAC, Alzheimer, TB, GBM base/phase2a)
+ARE included here.

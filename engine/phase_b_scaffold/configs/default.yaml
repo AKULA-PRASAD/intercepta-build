@@ -1,0 +1,30 @@
+# INTERCEPTA Phase B default config (Hydra-style)
+# Stage 1 minimum; Stages 2-8 populate specific configs in subdirs
+
+defaults:
+  - _self_
+
+# Identity
+intercepta_version: "0.0.1.dev0"
+phase: "B"
+stage: "1_foundation"
+
+# Reproducibility (Charter v1.2 §1.3 + L4.1 §10.3)
+seed: 42
+
+# Paths
+project_root: "${oc.env:HOME}/INTERCEPTA"
+scratch_root: "/scratch/akula.pra/INTERCEPTA"
+mlflow_uri: "file://${scratch_root}/mlflow"
+
+# Compute (Decision 9 v2)
+device: "cuda:0"
+num_workers: 4
+
+# Ensembles (Decision 5 v2 N=5 BINDING; specific seeds per Amendment D13 Option A)
+ensemble:
+  n_heads: 5
+  random_seeds: [42, 1337, 2023, 9, 31337]
+
+# Logging
+log_level: "INFO"

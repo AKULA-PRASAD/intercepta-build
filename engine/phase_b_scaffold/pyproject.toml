@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intercepta"
+version = "0.0.1.dev0"
+description = "INTERCEPTA — Drug Response Prediction Platform (Phase B)"
+authors = [
+    {name = "Prasad Akula", email = "akula.pra@northeastern.edu"},
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Open per Decision 10 v2; see LICENSE"}
+
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "pandas>=2.2",
+    "scikit-learn>=1.4",
+    "statsmodels>=0.14",
+    "h5py>=3.11",
+    "torch>=2.2",
+    "anndata>=0.10",
+    "scanpy>=1.10",
+    "scvi-tools>=1.1",
+    "captum>=0.7",
+    "shap>=0.45",
+    "hydra-core>=1.3",
+    "mlflow>=2.13",
+    "hypothesis>=6.103",
+    "rdkit>=2024.3",
+    "transformers>=4.41",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+    "pre-commit>=3.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["intercepta*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = [
+    "--cov=intercepta",
+    "--cov-report=term-missing",
+    "--cov-fail-under=80",
+    "-v",
+    "--strict-markers",
+]
+markers = [
+    "gpu: marks tests requiring GPU (deselect with -m 'not gpu')",
+    "slow: marks slow tests (deselect with -m 'not slow')",
+    "integration: marks integration tests",
+    "system: marks end-to-end system tests",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "W",  # pycodestyle + pyflakes
+    "I",            # isort
+    "N",            # pep8-naming
+    "UP",           # pyupgrade
+    "B",            # flake8-bugbear
+    "C4",           # flake8-comprehensions
+]
+ignore = ["E501"]  # line length handled by formatter
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

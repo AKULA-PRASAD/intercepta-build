@@ -1,0 +1,48 @@
+{
+  "started": "2026-05-09T05:54:54.985689+00:00",
+  "steps": [
+    {
+      "step": "clone",
+      "result": {
+        "cmd": "git clone https://github.com/Wang-lab-UCONN/scDrugMap.git /scratch/akula.pra/INTERCEPTA/external/scDrugMap",
+        "returncode": 128,
+        "stdout": "",
+        "stderr": "Cloning into '/scratch/akula.pra/INTERCEPTA/external/scDrugMap'...\nfatal: could not read Username for 'https://github.com': No such device or address\n"
+      }
+    },
+    {
+      "step": "clone_alt",
+      "url": "https://github.com/QSong-github/scDrugMap.git",
+      "result": {
+        "cmd": "git clone https://github.com/QSong-github/scDrugMap.git /scratch/akula.pra/INTERCEPTA/external/scDrugMap",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Cloning into '/scratch/akula.pra/INTERCEPTA/external/scDrugMap'...\n"
+      }
+    },
+    {
+      "step": "no_install",
+      "note": "no requirements.txt/setup.py/pyproject.toml"
+    }
+  ],
+  "repo_inventory": {
+    "total_files": 73,
+    "has_readme": true,
+    "has_requirements": false,
+    "n_py_files": 40,
+    "top_level": [
+      ".git",
+      "LICENSE",
+      "README.md",
+      "Supplementary Data 1.xlsx",
+      "Supplementary Data 2.xlsx",
+      "code",
+      "docker-compose.yml",
+      "env.yaml",
+      "launcher.py",
+      "src"
+    ]
+  },
+  "completed": "2026-05-09T05:54:57.264834+00:00",
+  "status": "COMPLETE"
+}

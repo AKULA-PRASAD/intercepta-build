@@ -1,0 +1,4 @@
+# Operational logs go here per L4.3 §5.3:
+# - failure_log.md
+# - env_drift_log.md
+# - stage_handoff_log.md

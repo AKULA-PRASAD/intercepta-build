@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     viewBox="0 0 1200 900" 
+     font-family="Charter, Georgia, serif">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#fefefe"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#2D4B87">
+    INTERCEPTA Architecture: Immune System as Blueprint
+  </text>
+  <text x="600" y="65" text-anchor="middle" font-size="13" font-style="italic" fill="#555">
+    Biological universality translated to computational architecture
+  </text>
+  
+  <!-- Column headers -->
+  <rect x="60" y="95" width="500" height="40" fill="#E8EEF7" stroke="#2D4B87" stroke-width="1"/>
+  <text x="310" y="120" text-anchor="middle" font-size="16" font-weight="bold" fill="#2D4B87">
+    BIOLOGICAL IMMUNE SYSTEM
+  </text>
+  
+  <rect x="640" y="95" width="500" height="40" fill="#E8EEF7" stroke="#2D4B87" stroke-width="1"/>
+  <text x="890" y="120" text-anchor="middle" font-size="16" font-weight="bold" fill="#2D4B87">
+    INTERCEPTA COMPUTATIONAL ARCHITECTURE
+  </text>
+  
+  <!-- Layer 1: Innate Response -->
+  <rect x="60" y="160" width="500" height="80" fill="#FFF4E0" stroke="#D89F30" stroke-width="1.5" rx="4"/>
+  <text x="80" y="185" font-size="14" font-weight="bold" fill="#9B6F1A">Innate Response (Fast, Generic)</text>
+  <text x="80" y="207" font-size="12" fill="#333">Macrophages, neutrophils, dendritic cells</text>
+  <text x="80" y="224" font-size="12" fill="#555" font-style="italic">Pattern-recognize any threat without prior training</text>
+  
+  <rect x="640" y="160" width="500" height="80" fill="#FFF4E0" stroke="#D89F30" stroke-width="1.5" rx="4"/>
+  <text x="660" y="185" font-size="14" font-weight="bold" fill="#9B6F1A">Foundation Model Layer (Fast, Generic)</text>
+  <text x="660" y="207" font-size="12" fill="#333">scFoundation, Geneformer, UCE</text>
+  <text x="660" y="224" font-size="12" fill="#555" font-style="italic">Embed any cell from any tissue/disease into shared space</text>
+  
+  <!-- Arrow between -->
+  <line x1="565" y1="200" x2="635" y2="200" stroke="#2D4B87" stroke-width="2"/>
+  <polygon points="635,200 625,195 625,205" fill="#2D4B87"/>
+  
+  <!-- Layer 2: Adaptive Response -->
+  <rect x="60" y="260" width="500" height="80" fill="#FFE8E8" stroke="#C44A4A" stroke-width="1.5" rx="4"/>
+  <text x="80" y="285" font-size="14" font-weight="bold" fill="#8A2A2A">Adaptive Response (Slow, Specific)</text>
+  <text x="80" y="307" font-size="12" fill="#333">T-cells, B-cells, antigen-specific learning</text>
+  <text x="80" y="324" font-size="12" fill="#555" font-style="italic">Learn precise recognition through encounter</text>
+  
+  <rect x="640" y="260" width="500" height="80" fill="#FFE8E8" stroke="#C44A4A" stroke-width="1.5" rx="4"/>
+  <text x="660" y="285" font-size="14" font-weight="bold" fill="#8A2A2A">Adaptive Learning Layer</text>
+  <text x="660" y="307" font-size="12" fill="#333">MC-FMA, domain adaptation, mechanism inference</text>
+  <text x="660" y="324" font-size="12" fill="#555" font-style="italic">Disease-specific learning, KAALCURA mechanistic axes</text>
+  
+  <line x1="565" y1="300" x2="635" y2="300" stroke="#2D4B87" stroke-width="2"/>
+  <polygon points="635,300 625,295 625,305" fill="#2D4B87"/>
+  
+  <!-- Layer 3: Memory -->
+  <rect x="60" y="360" width="500" height="80" fill="#E8F5E8" stroke="#3A8A3A" stroke-width="1.5" rx="4"/>
+  <text x="80" y="385" font-size="14" font-weight="bold" fill="#1F5A1F">Memory and Recall</text>
+  <text x="80" y="407" font-size="12" fill="#333">Memory T/B cells, immunological memory</text>
+  <text x="80" y="424" font-size="12" fill="#555" font-style="italic">Faster, stronger response on re-encounter</text>
+  
+  <rect x="640" y="360" width="500" height="80" fill="#E8F5E8" stroke="#3A8A3A" stroke-width="1.5" rx="4"/>
+  <text x="660" y="385" font-size="14" font-weight="bold" fill="#1F5A1F">Scaling Intelligence Layer</text>
+  <text x="660" y="407" font-size="12" fill="#333">Patient encounter database, mechanism patterns</text>
+  <text x="660" y="424" font-size="12" fill="#555" font-style="italic">Each encounter improves predictions for next patient</text>
+  
+  <line x1="565" y1="400" x2="635" y2="400" stroke="#2D4B87" stroke-width="2"/>
+  <polygon points="635,400 625,395 625,405" fill="#2D4B87"/>
+  
+  <!-- Layer 4: Coordination -->
+  <rect x="60" y="460" width="500" height="80" fill="#F0E8FF" stroke="#6B3FA0" stroke-width="1.5" rx="4"/>
+  <text x="80" y="485" font-size="14" font-weight="bold" fill="#4A2870">Coordination via Signaling</text>
+  <text x="80" y="507" font-size="12" fill="#333">Cytokines, chemokines, MHC presentation</text>
+  <text x="80" y="524" font-size="12" fill="#555" font-style="italic">Cell types coordinate response decisions</text>
+  
+  <rect x="640" y="460" width="500" height="80" fill="#F0E8FF" stroke="#6B3FA0" stroke-width="1.5" rx="4"/>
+  <text x="660" y="485" font-size="14" font-weight="bold" fill="#4A2870">Component Coordination Layer</text>
+  <text x="660" y="507" font-size="12" fill="#333">Mechanism + prediction + uncertainty + intervention</text>
+  <text x="660" y="524" font-size="12" fill="#555" font-style="italic">Integrated decision-making across modules</text>
+  
+  <line x1="565" y1="500" x2="635" y2="500" stroke="#2D4B87" stroke-width="2"/>
+  <polygon points="635,500 625,495 625,505" fill="#2D4B87"/>
+  
+  <!-- Layer 5: Self-Tolerance -->
+  <rect x="60" y="560" width="500" height="80" fill="#E0F2F8" stroke="#2A7090" stroke-width="1.5" rx="4"/>
+  <text x="80" y="585" font-size="14" font-weight="bold" fill="#15506A">Self-Tolerance</text>
+  <text x="80" y="607" font-size="12" fill="#333">Regulatory T-cells, central tolerance</text>
+  <text x="80" y="624" font-size="12" fill="#555" font-style="italic">Refuses to attack what it should not attack</text>
+  
+  <rect x="640" y="560" width="500" height="80" fill="#E0F2F8" stroke="#2A7090" stroke-width="1.5" rx="4"/>
+  <text x="660" y="585" font-size="14" font-weight="bold" fill="#15506A">Mechanistic Uncertainty Layer (MFMD)</text>
+  <text x="660" y="607" font-size="12" fill="#333">Calibrated uncertainty, OOD detection</text>
+  <text x="660" y="624" font-size="12" fill="#555" font-style="italic">Refuses to predict beyond competence boundary</text>
+  
+  <line x1="565" y1="600" x2="635" y2="600" stroke="#2D4B87" stroke-width="2"/>
+  <polygon points="635,600 625,595 625,605" fill="#2D4B87"/>
+  
+  <!-- Layer 6: Surveillance -->
+  <rect x="60" y="660" width="500" height="80" fill="#F8E8E0" stroke="#A0552A" stroke-width="1.5" rx="4"/>
+  <text x="80" y="685" font-size="14" font-weight="bold" fill="#6A3818">Surveillance and Prevention</text>
+  <text x="80" y="707" font-size="12" fill="#333">NK cells, patrolling immune cells</text>
+  <text x="80" y="724" font-size="12" fill="#555" font-style="italic">Continuous detection of emerging threats</text>
+  
+  <rect x="640" y="660" width="500" height="80" fill="#F8E8E0" stroke="#A0552A" stroke-width="1.5" rx="4"/>
+  <text x="660" y="685" font-size="14" font-weight="bold" fill="#6A3818">Population Surveillance Layer</text>
+  <text x="660" y="707" font-size="12" fill="#333">Cross-patient pattern detection, drift monitoring</text>
+  <text x="660" y="724" font-size="12" fill="#555" font-style="italic">Early disease detection, mechanism discovery</text>
+  
+  <line x1="565" y1="700" x2="635" y2="700" stroke="#2D4B87" stroke-width="2"/>
+  <polygon points="635,700 625,695 625,705" fill="#2D4B87"/>
+  
+  <!-- Bottom: Failure modes -->
+  <rect x="60" y="775" width="1080" height="90" fill="#FAFAFA" stroke="#888" stroke-width="1" stroke-dasharray="3,3" rx="4"/>
+  <text x="80" y="800" font-size="13" font-weight="bold" fill="#444">Shared Failure Modes</text>
+  <text x="80" y="822" font-size="11" fill="#555">
+    Autoimmune (attacking self) ↔ False positives (claiming response where none exists)
+  </text>
+  <text x="80" y="838" font-size="11" fill="#555">
+    Immunodeficiency (failing to respond) ↔ False negatives (missing real signal)
+  </text>
+  <text x="80" y="854" font-size="11" fill="#555">
+    Allergy (over-response to non-threats) ↔ Miscalibration (overconfidence)
+  </text>
+  
+  <!-- Bottom note -->
+  <text x="600" y="888" text-anchor="middle" font-size="10" font-style="italic" fill="#777">
+    Figure 6.1 — INTERCEPTA Charter v2.0
+  </text>
+</svg>

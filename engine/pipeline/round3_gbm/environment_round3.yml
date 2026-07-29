@@ -1,0 +1,19 @@
+# Round 3 environment requirements — adds Phase 1 fixes for Gap 3
+# Add to existing intercepta-scrna or create new env:
+#   conda env update -n intercepta-scrna -f environment_round3.yml
+name: intercepta-scrna
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - pyarrow              # Gap 3: required for parquet support in disease_net_builder
+    - lifelines            # Required for proper HR estimation (warned by ODE modules)
+    - openpyxl             # For .xlsx reading
+    - pandas
+    - scipy
+    - numpy
+    - scikit-learn
+    - networkx
+    - anndata
+    - scanpy
+    - pyucell

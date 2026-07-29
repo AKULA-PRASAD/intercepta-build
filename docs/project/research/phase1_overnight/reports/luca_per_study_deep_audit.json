@@ -1,0 +1,2630 @@
+{
+  "started": "2026-05-09T04:56:47.485759+00:00",
+  "completed": "2026-05-09T04:56:47.485782+00:00",
+  "n_total": 30,
+  "n_successful": 30,
+  "studies": [
+    {
+      "study_name": "Chen_Zhang_2020_NSCLC",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/Chen_Zhang_2020_NSCLC.h5ad",
+      "file_size_bytes": 818282523,
+      "load_time_sec": 0.45,
+      "shape": [
+        145021,
+        36601
+      ],
+      "n_cells": 145021,
+      "n_genes": 36601,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "dataset",
+        "sample",
+        "accession",
+        "sex",
+        "condition",
+        "origin",
+        "patient",
+        "tissue"
+      ],
+      "n_obs_columns": 8,
+      "sample_unique": 11,
+      "condition_distribution": {
+        "NSCLC": 145021
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 7.0,
+      "x_mean": 0.04749999940395355,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "Habermann_Kropski_2020_pulmonary-fibrosis",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/Habermann_Kropski_2020_pulmonary-fibrosis.h5ad",
+      "file_size_bytes": 1657052772,
+      "load_time_sec": 0.57,
+      "shape": [
+        220213,
+        33694
+      ],
+      "n_cells": 220213,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "orig.ident",
+        "sample",
+        "platform",
+        "sex",
+        "age",
+        "condition",
+        "tobacco",
+        "ethnicity",
+        "processing_site",
+        "tissue",
+        "patient",
+        "dataset",
+        "origin"
+      ],
+      "n_obs_columns": 13,
+      "sample_unique": 30,
+      "condition_distribution": {
+        "IPF": 114968,
+        "healthy_control": 57830,
+        "cHP": 17144,
+        "NSIP": 14096,
+        "Sarcoidosis": 9382,
+        "ILD": 6793
+      },
+      "condition_column_used": "condition",
+      "var_columns": [
+        "gene_ids"
+      ],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 7.0,
+      "x_mean": 0.10570000112056732,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "He_Fan_2021_LUAD",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/He_Fan_2021_LUAD.h5ad",
+      "file_size_bytes": 827237185,
+      "load_time_sec": 0.24,
+      "shape": [
+        123566,
+        36601
+      ],
+      "n_cells": 123566,
+      "n_genes": 36601,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "dataset",
+        "accession",
+        "sample",
+        "origin",
+        "tissue",
+        "age",
+        "sex",
+        "patient",
+        "condition"
+      ],
+      "n_obs_columns": 9,
+      "sample_unique": 10,
+      "condition_distribution": {
+        "LUAD": 123566
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 22.0,
+      "x_mean": 0.06909999996423721,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "Kim_Lee_2020_LUAD",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/Kim_Lee_2020_LUAD.h5ad",
+      "file_size_bytes": 1585128416,
+      "load_time_sec": 0.56,
+      "shape": [
+        208506,
+        29634
+      ],
+      "n_cells": 208506,
+      "n_genes": 29634,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "sample",
+        "patient",
+        "Tissue origins",
+        "histology",
+        "sex",
+        "age",
+        "smoking",
+        "pathology",
+        "EGFR",
+        "tumor_stage",
+        "geo_accession",
+        "tissue_orig",
+        "condition",
+        "dataset",
+        "origin",
+        "tissue"
+      ],
+      "n_obs_columns": 16,
+      "sample_unique": 58,
+      "condition_distribution": {
+        "LUAD": 208506
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 24.0,
+      "x_mean": 0.06750000268220901,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "Reyfman_Misharin_2018_pulmonary-fibrosis",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/Reyfman_Misharin_2018_pulmonary-fibrosis.h5ad",
+      "file_size_bytes": 738724299,
+      "load_time_sec": 0.18,
+      "shape": [
+        80919,
+        33694
+      ],
+      "n_cells": 80919,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "dataset",
+        "geo_accession",
+        "sample",
+        "tissue",
+        "condition",
+        "origin",
+        "patient"
+      ],
+      "n_obs_columns": 7,
+      "sample_unique": 17,
+      "condition_distribution": {
+        "healthy_control": 43632,
+        "IPF": 13973,
+        "SSc-ILD": 11593,
+        "Myositis": 7189,
+        "HP": 2855,
+        "Cryobiopsy": 1677
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 16.0,
+      "x_mean": 0.11420000344514847,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "Travaglini_Krasnow_2020_Lung_10x",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/Travaglini_Krasnow_2020_Lung_10x.h5ad",
+      "file_size_bytes": 1137934222,
+      "load_time_sec": 0.2,
+      "shape": [
+        65662,
+        26485
+      ],
+      "n_cells": 65662,
+      "n_genes": 26485,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "tissue",
+        "region",
+        "sample",
+        "location",
+        "patient",
+        "origin",
+        "condition",
+        "sex",
+        "age",
+        "dataset"
+      ],
+      "n_obs_columns": 10,
+      "sample_unique": 7,
+      "condition_distribution": {
+        "NSCLC": 65662
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [
+        "X_Compartment_tSNE",
+        "X_tSNE"
+      ],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 8.0,
+      "x_mean": 0.05180000141263008,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "Travaglini_Krasnow_2020_Lung_SS2",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/Travaglini_Krasnow_2020_Lung_SS2.h5ad",
+      "file_size_bytes": 723081565,
+      "load_time_sec": 3.46,
+      "shape": [
+        9409,
+        57133
+      ],
+      "n_cells": 9409,
+      "n_genes": 57133,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "tissue",
+        "region",
+        "label",
+        "sample",
+        "location",
+        "patient",
+        "percent.ercc",
+        "origin",
+        "condition",
+        "sex",
+        "age",
+        "dataset"
+      ],
+      "n_obs_columns": 12,
+      "sample_unique": 8,
+      "condition_distribution": {
+        "NSCLC": 9409
+      },
+      "condition_column_used": "condition",
+      "var_columns": [
+        "gene_length"
+      ],
+      "layers": [
+        "counts_length_scaled",
+        "tpm"
+      ],
+      "obsm_keys": [
+        "X_Compartment_tSNE",
+        "X_tSNE"
+      ],
+      "x_dtype": "int64",
+      "x_min": 0.0,
+      "x_max": 12884.0,
+      "x_mean": 36.9726,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "raw_counts",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "Vieira_Teichmann_2019_asthma_dropseq",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/Vieira_Teichmann_2019_asthma_dropseq.h5ad",
+      "file_size_bytes": 24013573,
+      "load_time_sec": 0.1,
+      "shape": [
+        10360,
+        16327
+      ],
+      "n_cells": 10360,
+      "n_genes": 16327,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 39,
+        "coverage_pct": 92.9,
+        "absent_genes": [
+          "CDH2",
+          "PLK1",
+          "TWIST1"
+        ]
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 31,
+        "coverage_pct": 93.9,
+        "absent_genes": [
+          "ALK",
+          "NTRK1"
+        ]
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 15,
+          "coverage_pct": 93.8,
+          "absent": [
+            "PLK1"
+          ]
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 6,
+          "coverage_pct": 75.0,
+          "absent": [
+            "CDH2",
+            "TWIST1"
+          ]
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "orig.ident",
+        "GEO_Sample",
+        "sample",
+        "sex",
+        "age",
+        "smoking_status",
+        "biopsy_segment",
+        "tissue",
+        "condition",
+        "origin",
+        "dataset",
+        "patient"
+      ],
+      "n_obs_columns": 12,
+      "sample_unique": 4,
+      "condition_distribution": {
+        "NSCLC": 10360
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 4.0,
+      "x_mean": 0.025699999183416367,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "adams_kaminski_2020_copd",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/adams_kaminski_2020_copd.h5ad",
+      "file_size_bytes": 3499879284,
+      "load_time_sec": 0.75,
+      "shape": [
+        312928,
+        45947
+      ],
+      "n_cells": 312928,
+      "n_genes": 45947,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 32,
+        "coverage_pct": 97.0,
+        "absent_genes": [
+          "SOX2"
+        ]
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "CellType_Category",
+        "Manuscript_Identity",
+        "Subclass_Cell_Identity",
+        "condition",
+        "patient",
+        "sample",
+        "tissue"
+      ],
+      "n_obs_columns": 7,
+      "sample_unique": 107,
+      "condition_distribution": {
+        "IPF": 147169,
+        "healthy_control": 96303,
+        "COPD": 69456
+      },
+      "condition_column_used": "condition",
+      "var_columns": [
+        "gene_ids"
+      ],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 20.0,
+      "x_mean": 0.17229999601840973,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "batch1_3patients",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/batch1_3patients.h5ad",
+      "file_size_bytes": 269934456,
+      "load_time_sec": 0.2,
+      "shape": [
+        36134,
+        29984
+      ],
+      "n_cells": 36134,
+      "n_genes": 29984,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "patient",
+        "tissue",
+        "tumor_id",
+        "age",
+        "sex",
+        "tumor_type",
+        "condition",
+        "origin",
+        "sample"
+      ],
+      "n_obs_columns": 9,
+      "sample_unique": 6,
+      "condition_distribution": {
+        "NSCLC": 36134
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [
+        "surface_protein"
+      ],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 86.0,
+      "x_mean": 1.2375999689102173,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "goveia_carmeliet_2020_nsclc",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/goveia_carmeliet_2020_nsclc.h5ad",
+      "file_size_bytes": 473857719,
+      "load_time_sec": 0.22,
+      "shape": [
+        100512,
+        18450
+      ],
+      "n_cells": 100512,
+      "n_genes": 18450,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 41,
+        "coverage_pct": 97.6,
+        "absent_genes": [
+          "CDH2"
+        ]
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 7,
+          "coverage_pct": 87.5,
+          "absent": [
+            "CDH2"
+          ]
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "patient",
+        "condition",
+        "origin",
+        "Endothelial cell",
+        "Cluster",
+        "tissue",
+        "sample"
+      ],
+      "n_obs_columns": 7,
+      "sample_unique": 15,
+      "condition_distribution": {
+        "LSCC": 60207,
+        "LUAD": 34632,
+        "LLCC": 5673
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 6.0,
+      "x_mean": 0.04450000077486038,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "guo_zhang_2018_nsclc",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/guo_zhang_2018_nsclc.h5ad",
+      "file_size_bytes": 1026686169,
+      "load_time_sec": 4.93,
+      "shape": [
+        11477,
+        60242
+      ],
+      "n_cells": 11477,
+      "n_genes": 60242,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "patient",
+        "majorCluster",
+        "sampleType",
+        "cell_type",
+        "sample",
+        "condition",
+        "origin",
+        "tissue",
+        "IR_VJ_1_locus",
+        "IR_VJ_2_locus",
+        "IR_VDJ_1_locus",
+        "IR_VDJ_2_locus",
+        "IR_VJ_1_cdr3",
+        "IR_VJ_2_cdr3",
+        "IR_VDJ_1_cdr3",
+        "IR_VDJ_2_cdr3",
+        "IR_VJ_1_cdr3_nt",
+        "IR_VJ_2_cdr3_nt",
+        "IR_VDJ_1_cdr3_nt",
+        "IR_VDJ_2_cdr3_nt",
+        "IR_VJ_1_expr",
+        "IR_VJ_2_expr",
+        "IR_VDJ_1_expr",
+        "IR_VDJ_2_expr",
+        "IR_VJ_1_expr_raw",
+        "IR_VJ_2_expr_raw",
+        "IR_VDJ_1_expr_raw",
+        "IR_VDJ_2_expr_raw",
+        "IR_VJ_1_v_gene",
+        "IR_VJ_2_v_gene",
+        "IR_VDJ_1_v_gene",
+        "IR_VDJ_2_v_gene",
+        "IR_VJ_1_d_gene",
+        "IR_VJ_2_d_gene",
+        "IR_VDJ_1_d_gene",
+        "IR_VDJ_2_d_gene",
+        "IR_VJ_1_j_gene",
+        "IR_VJ_2_j_gene",
+        "IR_VDJ_1_j_gene",
+        "IR_VDJ_2_j_gene",
+        "IR_VJ_1_c_gene",
+        "IR_VJ_2_c_gene",
+        "IR_VDJ_1_c_gene",
+        "IR_VDJ_2_c_gene",
+        "IR_VJ_1_junction_ins",
+        "IR_VJ_2_junction_ins",
+        "IR_VDJ_1_junction_ins",
+        "IR_VDJ_2_junction_ins",
+        "has_ir",
+        "multi_chain"
+      ],
+      "n_obs_columns": 50,
+      "sample_unique": 114,
+      "cell_type_top10": {
+        "CD4": 4963,
+        "CD8": 4209,
+        "Treg": 2305
+      },
+      "cell_type_column_used": "cell_type",
+      "condition_distribution": {
+        "NSCLC": 11477
+      },
+      "condition_column_used": "condition",
+      "var_columns": [
+        "ensg"
+      ],
+      "layers": [
+        "counts_length_scaled",
+        "tpm"
+      ],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 547.0,
+      "x_mean": 0.4119095206260681,
+      "x_is_integer_like": false,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "lambrechts_2018_luad_6149v1",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/lambrechts_2018_luad_6149v1.h5ad",
+      "file_size_bytes": 23683264,
+      "load_time_sec": 0.1,
+      "shape": [
+        4994,
+        36601
+      ],
+      "n_cells": 4994,
+      "n_genes": 36601,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "dataset",
+        "sample",
+        "platform",
+        "patient",
+        "replicate",
+        "origin",
+        "condition",
+        "age",
+        "sex",
+        "tissue"
+      ],
+      "n_obs_columns": 10,
+      "sample_unique": 7,
+      "condition_distribution": {
+        "LUAD": 4994
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 145.0,
+      "x_mean": 0.07460000365972519,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "raw_counts",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "lambrechts_2018_luad_6149v2",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/lambrechts_2018_luad_6149v2.h5ad",
+      "file_size_bytes": 329617034,
+      "load_time_sec": 0.17,
+      "shape": [
+        59562,
+        36601
+      ],
+      "n_cells": 59562,
+      "n_genes": 36601,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "dataset",
+        "sample",
+        "patient",
+        "condition",
+        "platform",
+        "origin",
+        "sex",
+        "age",
+        "tissue"
+      ],
+      "n_obs_columns": 9,
+      "sample_unique": 12,
+      "condition_distribution": {
+        "LUAD": 59562
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 12.0,
+      "x_mean": 0.024299999698996544,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "lambrechts_2018_luad_6653",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/lambrechts_2018_luad_6653.h5ad",
+      "file_size_bytes": 241671934,
+      "load_time_sec": 0.15,
+      "shape": [
+        36589,
+        36601
+      ],
+      "n_cells": 36589,
+      "n_genes": 36601,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "dataset",
+        "sample",
+        "patient",
+        "origin",
+        "condition",
+        "platform",
+        "age",
+        "sex",
+        "tissue"
+      ],
+      "n_obs_columns": 9,
+      "sample_unique": 12,
+      "condition_distribution": {
+        "LUAD": 36589
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 43.0,
+      "x_mean": 0.07460000365972519,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "laughney_massague_2020_nsclc",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/laughney_massague_2020_nsclc.h5ad",
+      "file_size_bytes": 476138619,
+      "load_time_sec": 0.12,
+      "shape": [
+        42847,
+        23278
+      ],
+      "n_cells": 42847,
+      "n_genes": 23278,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "sample",
+        "patient",
+        "origin",
+        "condition",
+        "tissue"
+      ],
+      "n_obs_columns": 5,
+      "sample_unique": 17,
+      "condition_distribution": {
+        "LUAD": 42847
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 49.0,
+      "x_mean": 0.08089999854564667,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "leader_merad_2021_10x_3p_v1_sort",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/leader_merad_2021_10x_3p_v1_sort.h5ad",
+      "file_size_bytes": 15040877,
+      "load_time_sec": 0.09,
+      "shape": [
+        6887,
+        33694
+      ],
+      "n_cells": 6887,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "n_genes",
+        "dataset",
+        "age",
+        "condition",
+        "driver_genes",
+        "ever_smoker",
+        "sex",
+        "uicc_stage",
+        "tumor_stage",
+        "patient",
+        "tissue",
+        "platform",
+        "platform_fine",
+        "library_prep",
+        "origin",
+        "sample",
+        "dataset_batch"
+      ],
+      "n_obs_columns": 17,
+      "sample_unique": 2,
+      "condition_distribution": {
+        "LUAD": 6887
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 17.0,
+      "x_mean": 0.023900000378489494,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "leader_merad_2021_10x_3p_v2_beads",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/leader_merad_2021_10x_3p_v2_beads.h5ad",
+      "file_size_bytes": 1191352730,
+      "load_time_sec": 0.57,
+      "shape": [
+        263136,
+        33694
+      ],
+      "n_cells": 263136,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "n_genes",
+        "dataset",
+        "age",
+        "condition",
+        "driver_genes",
+        "ever_smoker",
+        "sex",
+        "uicc_stage",
+        "tumor_stage",
+        "patient",
+        "tissue",
+        "platform",
+        "platform_fine",
+        "library_prep",
+        "origin",
+        "sample",
+        "dataset_batch"
+      ],
+      "n_obs_columns": 17,
+      "sample_unique": 39,
+      "condition_distribution": {
+        "LUAD": 235407,
+        "LSCC": 27729
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 46.0,
+      "x_mean": 0.05310000106692314,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "leader_merad_2021_10x_3p_v2_beads_cite",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/leader_merad_2021_10x_3p_v2_beads_cite.h5ad",
+      "file_size_bytes": 606341416,
+      "load_time_sec": 1.18,
+      "shape": [
+        266133,
+        33694
+      ],
+      "n_cells": 266133,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "n_genes",
+        "max_hto",
+        "max2_hto",
+        "max_hto_value",
+        "max2_hto_value",
+        "hto_ratio",
+        "dataset",
+        "age",
+        "condition",
+        "driver_genes",
+        "ever_smoker",
+        "sex",
+        "uicc_stage",
+        "tumor_stage",
+        "patient",
+        "tissue",
+        "platform",
+        "platform_fine",
+        "library_prep",
+        "origin",
+        "sample",
+        "dataset_batch"
+      ],
+      "n_obs_columns": 22,
+      "sample_unique": 18,
+      "condition_distribution": {
+        "LUAD": 255191,
+        "LSCC": 10942
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [
+        "cite-seq"
+      ],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 6.0,
+      "x_mean": 0.027799999341368675,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "leader_merad_2021_10x_3p_v2_digest-deadcell_cite",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/leader_merad_2021_10x_3p_v2_digest-deadcell_cite.h5ad",
+      "file_size_bytes": 1208617394,
+      "load_time_sec": 3.76,
+      "shape": [
+        796186,
+        33694
+      ],
+      "n_cells": 796186,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "n_genes",
+        "max_hto",
+        "max2_hto",
+        "max_hto_value",
+        "max2_hto_value",
+        "hto_ratio",
+        "dataset",
+        "age",
+        "condition",
+        "driver_genes",
+        "ever_smoker",
+        "sex",
+        "uicc_stage",
+        "tumor_stage",
+        "patient",
+        "tissue",
+        "platform",
+        "platform_fine",
+        "library_prep",
+        "origin",
+        "sample",
+        "dataset_batch"
+      ],
+      "n_obs_columns": 22,
+      "sample_unique": 22,
+      "condition_distribution": {
+        "LSCC": 595341,
+        "LUAD": 200845
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [
+        "cite-seq"
+      ],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 15.0,
+      "x_mean": 0.017100000753998756,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "leader_merad_2021_10x_3p_v2_sort",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/leader_merad_2021_10x_3p_v2_sort.h5ad",
+      "file_size_bytes": 36667497,
+      "load_time_sec": 0.1,
+      "shape": [
+        11365,
+        33694
+      ],
+      "n_cells": 11365,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "n_genes",
+        "dataset",
+        "age",
+        "condition",
+        "driver_genes",
+        "ever_smoker",
+        "sex",
+        "uicc_stage",
+        "tumor_stage",
+        "patient",
+        "tissue",
+        "platform",
+        "platform_fine",
+        "library_prep",
+        "origin",
+        "sample",
+        "dataset_batch"
+      ],
+      "n_obs_columns": 17,
+      "sample_unique": 8,
+      "condition_distribution": {
+        "LUAD": 11365
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 27.0,
+      "x_mean": 0.03139999881386757,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "leader_merad_2021_10x_3p_v3_beads",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/leader_merad_2021_10x_3p_v3_beads.h5ad",
+      "file_size_bytes": 98867235,
+      "load_time_sec": 0.15,
+      "shape": [
+        15318,
+        33694
+      ],
+      "n_cells": 15318,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "n_genes",
+        "dataset",
+        "age",
+        "condition",
+        "driver_genes",
+        "ever_smoker",
+        "sex",
+        "uicc_stage",
+        "tumor_stage",
+        "patient",
+        "tissue",
+        "platform",
+        "platform_fine",
+        "library_prep",
+        "origin",
+        "sample",
+        "dataset_batch"
+      ],
+      "n_obs_columns": 17,
+      "sample_unique": 2,
+      "condition_distribution": {
+        "LUAD": 15318
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 44.0,
+      "x_mean": 0.06360000371932983,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "leader_merad_2021_10x_5p_v1_CD2",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/leader_merad_2021_10x_5p_v1_CD2.h5ad",
+      "file_size_bytes": 133579727,
+      "load_time_sec": 0.15,
+      "shape": [
+        23088,
+        33694
+      ],
+      "n_cells": 23088,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "n_genes",
+        "dataset",
+        "age",
+        "condition",
+        "driver_genes",
+        "ever_smoker",
+        "sex",
+        "uicc_stage",
+        "tumor_stage",
+        "patient",
+        "tissue",
+        "platform",
+        "platform_fine",
+        "library_prep",
+        "origin",
+        "sample",
+        "dataset_batch"
+      ],
+      "n_obs_columns": 17,
+      "sample_unique": 4,
+      "condition_distribution": {
+        "LUAD": 11895,
+        "LSCC": 11193
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 9.0,
+      "x_mean": 0.05999999865889549,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "leader_merad_2021_10x_5p_v1_beads",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/leader_merad_2021_10x_5p_v1_beads.h5ad",
+      "file_size_bytes": 84719553,
+      "load_time_sec": 0.19,
+      "shape": [
+        11139,
+        33694
+      ],
+      "n_cells": 11139,
+      "n_genes": 33694,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "n_genes",
+        "dataset",
+        "age",
+        "condition",
+        "driver_genes",
+        "ever_smoker",
+        "sex",
+        "uicc_stage",
+        "tumor_stage",
+        "patient",
+        "tissue",
+        "platform",
+        "platform_fine",
+        "library_prep",
+        "origin",
+        "sample",
+        "dataset_batch"
+      ],
+      "n_obs_columns": 17,
+      "sample_unique": 2,
+      "condition_distribution": {
+        "LSCC": 11139
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 12.0,
+      "x_mean": 0.08030000329017639,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "madissoon19_lung.processed",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/madissoon19_lung.processed.h5ad",
+      "file_size_bytes": 209637686,
+      "load_time_sec": 0.91,
+      "shape": [
+        57020,
+        25204
+      ],
+      "n_cells": 57020,
+      "n_genes": 25204,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "CellType",
+        "Donor",
+        "Time",
+        "donor_time",
+        "leiden",
+        "patient",
+        "sample"
+      ],
+      "n_obs_columns": 7,
+      "sample_unique": 19,
+      "cell_type_top10": {
+        "NK": 10418,
+        "T_CD4": 7211,
+        "Monocyte": 6067,
+        "T_CD8_CytT": 5755,
+        "Alveolar_Type2": 4676,
+        "Fibroblast": 4624,
+        "Macrophage_MARCOpos": 4512,
+        "Mast_cells": 2911,
+        "Blood_vessel": 2694,
+        "DC_2": 1605
+      },
+      "cell_type_column_used": "CellType",
+      "var_columns": [
+        "gene.ids.HCATisStab7509734",
+        "gene.ids.HCATisStab7509735",
+        "gene.ids.HCATisStab7509736",
+        "gene.ids.HCATisStab7587202",
+        "gene.ids.HCATisStab7587205",
+        "gene.ids.HCATisStab7587208",
+        "gene.ids.HCATisStab7587211",
+        "gene.ids.HCATisStab7646032",
+        "gene.ids.HCATisStab7646033",
+        "gene.ids.HCATisStab7646034",
+        "gene.ids.HCATisStab7646035",
+        "gene.ids.HCATisStab7659968",
+        "gene.ids.HCATisStab7659969",
+        "gene.ids.HCATisStab7659970",
+        "gene.ids.HCATisStab7659971",
+        "gene.ids.HCATisStab7747197",
+        "gene.ids.HCATisStab7747198",
+        "gene.ids.HCATisStab7747199",
+        "gene.ids.HCATisStab7747200",
+        "n.cells"
+      ],
+      "layers": [],
+      "obsm_keys": [
+        "X_pca",
+        "X_tsne",
+        "X_umap"
+      ],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 8.0,
+      "x_mean": 0.03830000013113022,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "maier_merad_2020_nsclc",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/maier_merad_2020_nsclc.h5ad",
+      "file_size_bytes": 99594428,
+      "load_time_sec": 0.09,
+      "shape": [
+        6506,
+        33660
+      ],
+      "n_cells": 6506,
+      "n_genes": 33660,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "sample",
+        "annot",
+        "tissue",
+        "patient",
+        "condition",
+        "origin"
+      ],
+      "n_obs_columns": 6,
+      "sample_unique": 87,
+      "condition_distribution": {
+        "NSCLC": 6506
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 14.0,
+      "x_mean": 0.057999998331069946,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "maynard2020",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/maynard2020.h5ad",
+      "file_size_bytes": 2278682483,
+      "load_time_sec": 10.92,
+      "shape": [
+        21409,
+        60242
+      ],
+      "n_cells": 21409,
+      "n_genes": 60242,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "age",
+        "sex",
+        "well",
+        "plate",
+        "cell_id",
+        "sample",
+        "patient",
+        "race",
+        "smoking_status",
+        "condition",
+        "driver_gene",
+        "driver_mutation",
+        "secondary_mutation",
+        "Notes",
+        "stage_at_diagnosis",
+        "pathlogy_review",
+        "biopsy_date",
+        "sort_date",
+        "biopsy_type",
+        "tissue",
+        "origin",
+        "biopsy_time_status",
+        "early_treatment_status",
+        "best_response_status",
+        "biopsy_timing",
+        "analysis",
+        "treatment_history",
+        "treatment_history_detail",
+        "line_of_therapy",
+        "treatment_type",
+        "treatment",
+        "percent_PFS_ref_values",
+        "percent.PFS.reference.values",
+        "infections",
+        "early_bx_day",
+        "treatment_start_date",
+        "pfs_over_under",
+        "pfs_day",
+        "pfs_month",
+        "date_of_death",
+        "stageIII.IV_ca_dx_date",
+        "ca_dx_OS",
+        "multi_chain",
+        "IR_VJ_1_locus",
+        "IR_VJ_2_locus",
+        "IR_VDJ_1_locus",
+        "IR_VDJ_2_locus",
+        "IR_VJ_1_cdr3",
+        "IR_VJ_2_cdr3",
+        "IR_VDJ_1_cdr3",
+        "IR_VDJ_2_cdr3",
+        "IR_VJ_1_cdr3_nt",
+        "IR_VJ_2_cdr3_nt",
+        "IR_VDJ_1_cdr3_nt",
+        "IR_VDJ_2_cdr3_nt",
+        "IR_VJ_1_expr",
+        "IR_VJ_2_expr",
+        "IR_VDJ_1_expr",
+        "IR_VDJ_2_expr",
+        "IR_VJ_1_expr_raw",
+        "IR_VJ_2_expr_raw",
+        "IR_VDJ_1_expr_raw",
+        "IR_VDJ_2_expr_raw",
+        "IR_VJ_1_v_gene",
+        "IR_VJ_2_v_gene",
+        "IR_VDJ_1_v_gene",
+        "IR_VDJ_2_v_gene",
+        "IR_VJ_1_d_gene",
+        "IR_VJ_2_d_gene",
+        "IR_VDJ_1_d_gene",
+        "IR_VDJ_2_d_gene",
+        "IR_VJ_1_j_gene",
+        "IR_VJ_2_j_gene",
+        "IR_VDJ_1_j_gene",
+        "IR_VDJ_2_j_gene",
+        "IR_VJ_1_c_gene",
+        "IR_VJ_2_c_gene",
+        "IR_VDJ_1_c_gene",
+        "IR_VDJ_2_c_gene",
+        "IR_VJ_1_junction_ins",
+        "IR_VJ_2_junction_ins",
+        "IR_VDJ_1_junction_ins",
+        "IR_VDJ_2_junction_ins",
+        "has_ir"
+      ],
+      "n_obs_columns": 84,
+      "sample_unique": 44,
+      "condition_distribution": {
+        "LUAD": 20121,
+        "LSCC": 1288
+      },
+      "condition_column_used": "condition",
+      "var_columns": [
+        "ensg"
+      ],
+      "layers": [
+        "counts_length_scaled",
+        "tpm"
+      ],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 544.0,
+      "x_mean": 0.39908280968666077,
+      "x_is_integer_like": false,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "munich_cohort_human_dataset_counts",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/munich_cohort_human_dataset_counts.h5ad",
+      "file_size_bytes": 149693184,
+      "load_time_sec": 0.15,
+      "shape": [
+        38648,
+        32104
+      ],
+      "n_cells": 38648,
+      "n_genes": 32104,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "sample",
+        "patient",
+        "tissue",
+        "origin",
+        "condition",
+        "dataset"
+      ],
+      "n_obs_columns": 6,
+      "sample_unique": 15,
+      "condition_distribution": {
+        "healthy_control": 21122,
+        "IPF": 17526
+      },
+      "condition_column_used": "condition",
+      "var_columns": [
+        "n_cells",
+        "highly_variable",
+        "n_counts",
+        "mt",
+        "n_cells_by_counts",
+        "mean_counts",
+        "log1p_mean_counts",
+        "pct_dropout_by_counts",
+        "total_counts",
+        "log1p_total_counts"
+      ],
+      "n_hvg": 15096,
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 27.0,
+      "x_mean": 0.09960000216960907,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "unknown",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "wu_zhou_2021_nsclc",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/wu_zhou_2021_nsclc.h5ad",
+      "file_size_bytes": 727285472,
+      "load_time_sec": 0.21,
+      "shape": [
+        89887,
+        29527
+      ],
+      "n_cells": 89887,
+      "n_genes": 29527,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "sample",
+        "patient",
+        "tissue",
+        "sex",
+        "age",
+        "origin",
+        "condition",
+        "platform"
+      ],
+      "n_obs_columns": 8,
+      "sample_unique": 42,
+      "condition_distribution": {
+        "NSCLC": 89887
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 10.0,
+      "x_mean": 0.21230000257492065,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    },
+    {
+      "study_name": "zilionis_klein_2019_nsclc",
+      "file_path": "/scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/12_input_adatas/zilionis_klein_2019_nsclc.h5ad",
+      "file_size_bytes": 246188139,
+      "load_time_sec": 0.42,
+      "shape": [
+        173954,
+        41861
+      ],
+      "n_cells": 173954,
+      "n_genes": 41861,
+      "kaalcura_coverage": {
+        "n_total": 42,
+        "n_present": 42,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "nsclc_selectivity_coverage": {
+        "n_total": 33,
+        "n_present": 33,
+        "coverage_pct": 100.0,
+        "absent_genes": []
+      },
+      "kaalcura_by_signature": {
+        "prolif": {
+          "n_total": 16,
+          "n_present": 16,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_pos": {
+          "n_total": 8,
+          "n_present": 8,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "emt_neg": {
+          "n_total": 3,
+          "n_present": 3,
+          "coverage_pct": 100.0,
+          "absent": []
+        },
+        "ddr": {
+          "n_total": 15,
+          "n_present": 15,
+          "coverage_pct": 100.0,
+          "absent": []
+        }
+      },
+      "obs_columns": [
+        "sample",
+        "gsm",
+        "tissue",
+        "sex",
+        "age",
+        "characteristics_ch1.7.treatment received prior to surgery (1= treated; 0=untreated)",
+        "patient",
+        "condition",
+        "origin",
+        "platform"
+      ],
+      "n_obs_columns": 10,
+      "sample_unique": 26,
+      "condition_distribution": {
+        "LUAD": 109249,
+        "LSCC": 64705
+      },
+      "condition_column_used": "condition",
+      "var_columns": [],
+      "layers": [],
+      "obsm_keys": [],
+      "x_dtype": "float32",
+      "x_min": 0.0,
+      "x_max": 7.0,
+      "x_mean": 0.011699999682605267,
+      "x_is_integer_like": true,
+      "x_likely_normalization": "log1p",
+      "status": "SUCCESS"
+    }
+  ]
+}

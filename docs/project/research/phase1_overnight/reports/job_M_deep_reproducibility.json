@@ -1,0 +1,104 @@
+{
+  "started": "2026-05-09T05:51:38.783231+00:00",
+  "checks": [
+    {
+      "name": "canonical_kaalcura_import",
+      "status": "OK",
+      "returncode": 0,
+      "stdout_head": "module imports OK\nfunctions: ['Dict', 'GENE_SETS', 'KAALCURA', 'List', 'LogisticRegression', 'Optional', 'PCA', 'StandardScaler', 'StratifiedKFold', 'Tuple', 'Union', 'create_synthetic_gdsc_data', 'json', 'logger', 'logging', 'np', 'pd', 'roc_auc_score', 'run_full_validation', 'stats']\n",
+      "stderr_head": "",
+      "elapsed_sec": 2.9
+    },
+    {
+      "name": "gdsc_validation_stats",
+      "status": "OK",
+      "stats": {
+        "n_drugs": 286,
+        "n_cols": 6,
+        "columns": [
+          "drug",
+          "auroc",
+          "coef_prolif",
+          "coef_emt",
+          "coef_ddr",
+          "n_cell_lines"
+        ],
+        "mean_auroc": 0.671468555944056,
+        "median_auroc": 0.680153,
+        "max_auroc": 0.769997,
+        "min_auroc": 0.519047,
+        "n_above_0_55": 283,
+        "n_above_0_60": 260,
+        "n_above_0_65": 199,
+        "file_hash": "05b070caac3dd62e2918d1b6130bd3ed1e2d33ad7de6ed3c9667058374e2c786",
+        "parp_inhibitor_check": {
+          "n_found": 5,
+          "drugs": [
+            "Olaparib",
+            "Veliparib",
+            "Niraparib",
+            "Rucaparib",
+            "Talazoparib"
+          ],
+          "all_negative_ddr_coef": true,
+          "mean_ddr_coef": -1.3480366
+        }
+      }
+    },
+    {
+      "name": "mcrpc_file_step3_kaalcura_per_population.csv",
+      "status": "OK",
+      "info": {
+        "path": "results/step3_kaalcura_per_population.csv",
+        "exists": true,
+        "size_bytes": 330,
+        "sha256": "df7546e58d02708fcffeec8d65108c3c3d4d8c34cfbfa230d3454648543c3a21",
+        "mtime": "2026-03-29T13:36:11.859840+00:00"
+      }
+    },
+    {
+      "name": "mcrpc_file_mcrpc_unified_net.json",
+      "status": "OK",
+      "info": {
+        "path": "results/mcrpc_unified_net.json",
+        "exists": true,
+        "size_bytes": 53651679,
+        "sha256": "df857768a7e7198d7c54d8155b73d8253b08f45890e707e89935f83cca92cb72",
+        "mtime": "2026-05-08T02:00:54.715084+00:00"
+      }
+    },
+    {
+      "name": "module_intercepta_kaalcura_v1.py",
+      "status": "OK",
+      "size": 46605,
+      "sha256": "122c85d046d81e93b326b1f196c9b8c17fb71662667cc5665de073d6f9fed8ba"
+    },
+    {
+      "name": "module_step3_fix_kaalcura.py",
+      "status": "OK",
+      "size": 5226,
+      "sha256": "699025b065cc3ada80f2af98ce29fbf47bc47653c9d33d8ca724e73aee1d5158"
+    },
+    {
+      "name": "module_build_unified_net.py",
+      "status": "OK",
+      "size": 21405,
+      "sha256": "410bf66ce6da2dca6d53bc4b3ee5539a0b0a25d9485b105e6412dc39a55eed6a"
+    },
+    {
+      "name": "module_intercepta_pipeline.py",
+      "status": "OK",
+      "size": 43245,
+      "sha256": "70d738f86f716ed44b9c7512b79e106907d3cc49e23ac01c57cd1da30d310f86"
+    },
+    {
+      "name": "module_intercepta_phenotype_ode_v1.py",
+      "status": "OK",
+      "size": 49235,
+      "sha256": "a57b9a0ae2af91326dfe5c023c7414294560d8c3aa290cb0aaa2b725a6503699"
+    }
+  ],
+  "completed": "2026-05-09T05:51:41.937146+00:00",
+  "n_checks": 9,
+  "n_ok": 9
+}
