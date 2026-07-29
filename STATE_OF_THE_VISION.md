@@ -31,12 +31,14 @@ permutation + leakage + multiple-testing + confound + external replication; repr
   dependency — resolves within-lineage *single-agent* drug specificity beyond known biology (six-front proof).
   That specific avenue is exhausted; pursuing the single-agent clinical predictor further on existing data is
   p-hacking.
-- **BUT a different task is genuinely positive — drug COMBINATIONS (V23/B24).** Synergy is a *different signal*,
-  not bound by the +0.212 single-agent ceiling: on open cell-line data it **generalizes to unseen drug
-  combinations** (leave-combination-out Spearman +0.61, Δ=+0.13 over an informed baseline, p≈0) and *meaningfully
-  to novel drugs* (leave-drug-out ρ=0.25). This is the program's **first clearly-positive, generalizing
-  predictor** — a real forward step for the drug-discovery arm of the vision. Honest scope: cell-line Loewe
-  synergy (not clinical), standard benchmark + model (consistent with the field, not SOTA).
+- **BUT a different task is genuinely positive — drug COMBINATIONS (V23/B24, refined by B25).** Synergy is a
+  *different signal*, not bound by the +0.212 single-agent ceiling. It **generalizes to unseen combinations of
+  KNOWN drugs**, and this **replicates across TWO independent open corpora** (O'Neil leave-combination-out ρ=+0.61,
+  Δ+0.13; DrugComb ρ=+0.38, Δ+0.09) — the program's first robust generalizing predictor and the realistic
+  use case (prioritize pairs within a known drug library). **Honestly bounded (self-corrected by B25):** generalization
+  to *novel drugs* does NOT hold — the B24 leave-drug-out ρ=0.25 collapsed to 0.025 on DrugComb's larger drug set,
+  so that number was inflated by O'Neil's chemical redundancy. Scope: cell-line Loewe synergy (not clinical),
+  standard benchmark + model (consistent with field, not SOTA).
 - **Net:** the wall is specific to *single-agent response from molecular profiles*; it is not the whole vision.
   Combinations (and adjacent discovery tasks) are live, positive directions we can build on — just us, open data.
 

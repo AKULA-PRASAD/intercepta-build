@@ -1,0 +1,35 @@
+{
+  "git_sha": "5dbf47d22315d44f4c22e9ab64d2a071234afbfb",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T18:11:19Z",
+  "seed": 42,
+  "data": {
+    "source": "DrugComb via TDC (open) + DepMap cell features",
+    "n": 120000,
+    "n_pairs": 5416,
+    "n_drugs": 124,
+    "n_cells": 41,
+    "subsampled_to": 120000
+  },
+  "leave_combination_out": {
+    "model_spearman": 0.3845,
+    "drug_marginal_baseline_spearman": 0.2904,
+    "delta": 0.0941
+  },
+  "leave_drug_out": {
+    "n_test": 23616,
+    "model_spearman": 0.0251,
+    "ci95": [
+      0.0124,
+      0.0376
+    ],
+    "B24_leave_drug_out_rho": 0.246
+  },
+  "leave_cell_out": {
+    "model_spearman": 0.443
+  },
+  "H1_novel_drug_improves": false,
+  "H2_combination_sanity": true,
+  "verdict": "HONEST BOUND: more chemical diversity (124 drugs) does NOT improve novel-drug generalization (rho=0.025 vs B24 0.25) -> this weakness is closer to INTRINSIC than data-limited; reclassify in WEAKNESS_AUDIT."
+}
