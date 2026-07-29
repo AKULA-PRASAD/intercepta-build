@@ -1,0 +1,296 @@
+{
+  "git_sha": "db5dd575ff711ae35cec6e693df244019626c3cb",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T14:15:31Z",
+  "seed": 42,
+  "K": 2000,
+  "n_drugs": 26,
+  "learnable_targets_cvrho": {
+    "AURKA": 0.256,
+    "BCL2": 0.287,
+    "CDK9": 0.223,
+    "EGFR": 0.564,
+    "ERBB2": 0.392,
+    "FLT3": 0.153,
+    "JAK1": 0.279,
+    "KDR": 0.217,
+    "MAP2K1": 0.269,
+    "MET": 0.17,
+    "SYK": 0.165,
+    "XPO1": 0.216
+  },
+  "pairs": [
+    {
+      "drug": "sorafenib",
+      "target": "FLT3",
+      "n": 494,
+      "rho_inferred": 0.2437,
+      "rho_direct": 0.0409,
+      "inf_p": 1.7838462345091207e-08,
+      "inf_BHq": 4.638000209723714e-07,
+      "rescued": true
+    },
+    {
+      "drug": "quizartinib",
+      "target": "FLT3",
+      "n": 461,
+      "rho_inferred": 0.1349,
+      "rho_direct": -0.1107,
+      "inf_p": 0.0018420799371041494,
+      "inf_BHq": 0.005573929334612767,
+      "rescued": true
+    },
+    {
+      "drug": "gilteritinib",
+      "target": "FLT3",
+      "n": 278,
+      "rho_inferred": 0.1294,
+      "rho_direct": -0.0182,
+      "inf_p": 0.015464895867018462,
+      "inf_BHq": 0.040208729254247996,
+      "rescued": true
+    },
+    {
+      "drug": "crenolanib",
+      "target": "FLT3",
+      "n": 446,
+      "rho_inferred": 0.1606,
+      "rho_direct": -0.1429,
+      "inf_p": 0.0003250898304376467,
+      "inf_BHq": 0.0016904671182757628,
+      "rescued": true
+    },
+    {
+      "drug": "kw-2449",
+      "target": "FLT3",
+      "n": 449,
+      "rho_inferred": 0.1437,
+      "rho_direct": -0.1729,
+      "inf_p": 0.0011231198669245117,
+      "inf_BHq": 0.004866852756672884,
+      "rescued": false
+    },
+    {
+      "drug": "dovitinib",
+      "target": "FLT3",
+      "n": 455,
+      "rho_inferred": 0.2252,
+      "rho_direct": 0.1412,
+      "inf_p": 5.560988645837572e-07,
+      "inf_BHq": 7.229285239588844e-06,
+      "rescued": true
+    },
+    {
+      "drug": "tandutinib",
+      "target": "FLT3",
+      "n": 83,
+      "rho_inferred": -0.0445,
+      "rho_direct": -0.0986,
+      "inf_p": 0.6547151465069022,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "midostaurin",
+      "target": "FLT3",
+      "n": 462,
+      "rho_inferred": 0.0618,
+      "rho_direct": 0.0514,
+      "inf_p": 0.09239390030508482,
+      "inf_BHq": 0.2183855825392914,
+      "rescued": false
+    },
+    {
+      "drug": "venetoclax",
+      "target": "BCL2",
+      "n": 367,
+      "rho_inferred": 0.2176,
+      "rho_direct": 0.0924,
+      "inf_p": 1.2239989939230562e-05,
+      "inf_BHq": 7.955993460499866e-05,
+      "rescued": true
+    },
+    {
+      "drug": "entospletinib",
+      "target": "SYK",
+      "n": 313,
+      "rho_inferred": -0.0466,
+      "rho_direct": null,
+      "inf_p": 0.79402541447784,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "prt062607",
+      "target": "SYK",
+      "n": 447,
+      "rho_inferred": 0.0111,
+      "rho_direct": -0.0366,
+      "inf_p": 0.40759529423808344,
+      "inf_BHq": 0.7064985100126779,
+      "rescued": false
+    },
+    {
+      "drug": "tofacitinib",
+      "target": "JAK1",
+      "n": 458,
+      "rho_inferred": -0.0371,
+      "rho_direct": null,
+      "inf_p": 0.7856855958060782,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "trametinib",
+      "target": "MAP2K1",
+      "n": 484,
+      "rho_inferred": -0.1035,
+      "rho_direct": 0.368,
+      "inf_p": 0.9886669347187099,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "selumetinib",
+      "target": "MAP2K1",
+      "n": 456,
+      "rho_inferred": -0.0238,
+      "rho_direct": 0.211,
+      "inf_p": 0.6937511795672554,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "crizotinib",
+      "target": "MET",
+      "n": 470,
+      "rho_inferred": 0.0216,
+      "rho_direct": -0.0185,
+      "inf_p": 0.3205048003134645,
+      "inf_BHq": 0.5952232005821484,
+      "rescued": false
+    },
+    {
+      "drug": "foretinib",
+      "target": "MET",
+      "n": 453,
+      "rho_inferred": -0.0453,
+      "rho_direct": 0.1674,
+      "inf_p": 0.831860822364797,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "erlotinib",
+      "target": "EGFR",
+      "n": 485,
+      "rho_inferred": -0.0873,
+      "rho_direct": 0.0657,
+      "inf_p": 0.9727118880200637,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "gefitinib",
+      "target": "EGFR",
+      "n": 466,
+      "rho_inferred": -0.0828,
+      "rho_direct": -0.0068,
+      "inf_p": 0.9629368483084193,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "afatinib",
+      "target": "EGFR",
+      "n": 459,
+      "rho_inferred": -0.04,
+      "rho_direct": 0.0936,
+      "inf_p": 0.8036526232941315,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "axitinib",
+      "target": "KDR",
+      "n": 476,
+      "rho_inferred": 0.0401,
+      "rho_direct": 0.0003,
+      "inf_p": 0.19124887971644455,
+      "inf_BHq": 0.41437257271896316,
+      "rescued": false
+    },
+    {
+      "drug": "cediranib",
+      "target": "KDR",
+      "n": 454,
+      "rho_inferred": -0.0847,
+      "rho_direct": -0.2004,
+      "inf_p": 0.9643255512390049,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "alisertib",
+      "target": "AURKA",
+      "n": 459,
+      "rho_inferred": 0.1366,
+      "rho_direct": 0.0498,
+      "inf_p": 0.001668397910758095,
+      "inf_BHq": 0.005573929334612767,
+      "rescued": true
+    },
+    {
+      "drug": "selinexor",
+      "target": "XPO1",
+      "n": 241,
+      "rho_inferred": -0.0934,
+      "rho_direct": -0.0418,
+      "inf_p": 0.925769699277956,
+      "inf_BHq": 0.9886669347187099,
+      "rescued": false
+    },
+    {
+      "drug": "sns-032",
+      "target": "CDK9",
+      "n": 458,
+      "rho_inferred": 0.1346,
+      "rho_direct": null,
+      "inf_p": 0.0019294370773659578,
+      "inf_BHq": 0.005573929334612767,
+      "rescued": true
+    },
+    {
+      "drug": "flavopiridol",
+      "target": "CDK9",
+      "n": 451,
+      "rho_inferred": 0.2015,
+      "rho_direct": null,
+      "inf_p": 7.69538439769215e-06,
+      "inf_BHq": 6.66933314466653e-05,
+      "rescued": true
+    },
+    {
+      "drug": "lapatinib",
+      "target": "ERBB2",
+      "n": 464,
+      "rho_inferred": 0.0337,
+      "rho_direct": -0.0247,
+      "inf_p": 0.2343048432311844,
+      "inf_BHq": 0.4686096864623688,
+      "rescued": false
+    }
+  ],
+  "H1_diff_medabs": 0.0069,
+  "H1_perm_p": 0.39730134932533734,
+  "H1_broad_pass": false,
+  "n_rescued": 9,
+  "rescued_targets": [
+    "AURKA",
+    "BCL2",
+    "CDK9",
+    "FLT3"
+  ],
+  "verdict": "SPECIFIC: functional layer rescues a coherent subset (9/26 drugs; targets ['AURKA', 'BCL2', 'CDK9', 'FLT3']), not broadly \u2014 precise, actionable map"
+}
