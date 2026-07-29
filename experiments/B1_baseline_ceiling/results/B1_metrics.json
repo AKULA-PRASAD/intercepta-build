@@ -1,0 +1,18 @@
+{
+  "git_sha": "d4559153dbf118d898c541969acf8df883f7c6ed",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T05:23:44Z",
+  "topN_genes": 2000,
+  "n_drugs": 100,
+  "leaky_mean_rho": 0.2776,
+  "leaky_median_rho": 0.2996,
+  "strict_mean_rho": 0.2124,
+  "strict_median_rho": 0.1964,
+  "strict_frac_pos": 0.94,
+  "rprolif_mean_rho": 0.0579,
+  "rprolif_median_rho": 0.0499,
+  "wilcoxon_p_strict_vs_rprolif": 1.9267905457755783e-15,
+  "beats_bar_strict": true,
+  "expected_strict_mean_rho_from_kaalcura_V1B": 0.2124
+}
