@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intercepta"
+version = "0.1.0"
+description = "Reproducible cell-line/ex-vivo transcriptomic drug-response + mechanism engine. Honestly scoped: a hypothesis-ranking research engine, NOT a validated human clinical predictor (see LEDGER.md / MANUSCRIPT)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "INTERCEPTA build" }]
+dependencies = [
+    "numpy>=1.26,<2.2",
+    "pandas>=2.0",
+    "scipy>=1.11",
+    "scikit-learn>=1.3",
+    "statsmodels>=0.14",
+    "pyarrow>=12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+intercepta = "intercepta.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

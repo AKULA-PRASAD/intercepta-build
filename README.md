@@ -61,6 +61,17 @@ data/MANIFEST.md        provenance + access class for every external input (noth
 reproduce.sh requirements.txt
 ```
 
+## Install & use as a tool
+```bash
+pip install -e .            # installs the `intercepta` package + CLI
+pytest                      # 10 unit tests (leakage, markers, calibration gate, axes) — no data needed
+intercepta info             # version + HONEST SCOPE
+intercepta rank --expr tumor_expr.csv --drugs trametinib,gemcitabine --out ranking.csv   # needs INTERCEPTA_DATA
+```
+`intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
+**Every prediction is LOW/MODERATE confidence by design** — a research hypothesis, never a clinical decision
+(human clinical response was a well-powered null, see `LEDGER.md` / `papers/intercepta_engine/MANUSCRIPT.md`).
+
 ## Reproduce
 ```bash
 pip install -r requirements.txt
