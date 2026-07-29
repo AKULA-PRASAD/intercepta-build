@@ -8,4 +8,6 @@ PY="${PY:-python3}"
 echo "INTERCEPTA_DATA=$INTERCEPTA_DATA"
 echo "== B1: baseline ceiling =="
 "$PY" experiments/B1_baseline_ceiling/run.py
+echo "== B2: beat the ceiling? =="
+"$PY" experiments/B2_beat_ceiling/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="

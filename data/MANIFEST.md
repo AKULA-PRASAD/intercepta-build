@@ -11,6 +11,7 @@ mismatch. sha256 prefixes match the values recorded in the verified ~/kaalcura V
 | `depmap_expression.csv` | `6b8d5f3c00ce73a5e025922d52b74929e19359e323786a0314410762b0c08a16` | DepMap/CCLE 22Q2 expression |
 | `depmap_meta.csv` | `382c0c26cf57a2fb82449f797c58cb0dfc2313949908d8f83560ebcf3e5bcbaa` | DepMap sample map (COSMIC↔DepMap) |
 | `independent/prism_secondary_screen.csv` | `88d1013506e0cd6f191a51c5f3fdd3fb2be54f8afb4e19a5d1f8538e81fbfec8` | PRISM secondary screen (AUC) |
+| `depmap_mut_try1.csv` | `e99e43789c1c4821ccb737a45cd6f4fbbeac709c5a8cca326846d6d9a16cf5c8` | DepMap somatic mutation MAF (B2) |
 
 All inputs are public repositories (GDSC, DepMap/CCLE, PRISM). No controlled-access data is present or
 required for B1. Any controlled-access acquisition is a logged human gate (see DECISIONS.md).

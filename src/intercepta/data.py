@@ -92,3 +92,25 @@ def load_depmap_expression():
     dx = pd.read_csv(_p("depmap_expression.csv"), index_col=0)
     dx = dx.rename(columns={c: c.split(" (")[0] for c in dx.columns if " (" in c})
     return dx.loc[:, ~dx.columns.duplicated()]
+
+
+# Non-silent coding variant classes (pre-registered "damaging" definition for B2). Silent/Intron/etc excluded.
+NONSILENT = {"Missense_Mutation", "Nonsense_Mutation", "Frame_Shift_Del", "Frame_Shift_Ins",
+             "Splice_Site", "In_Frame_Del", "In_Frame_Ins", "Nonstop_Mutation",
+             "Start_Codon_SNP", "De_novo_Start_OutOfFrame"}
+
+
+def load_damaging_mutations():
+    """DepMap MAF -> dict[DepMap_ID] = set(Hugo_Symbol with a non-silent coding variant).
+
+    Memory-efficient (no dense cell x gene matrix). Keyed by DepMap_ID so it joins directly to CCLE
+    expression cells, and to GDSC cells via COSMIC->DepMap.
+    """
+    verify("depmap_mut_try1.csv", _p("depmap_mut_try1.csv"))
+    maf = pd.read_csv(_p("depmap_mut_try1.csv"),
+                      usecols=["Hugo_Symbol", "Variant_Classification", "DepMap_ID"], low_memory=False).dropna()
+    maf = maf[maf["Variant_Classification"].isin(NONSILENT)]
+    out = {}
+    for dep, sym in zip(maf["DepMap_ID"].values, maf["Hugo_Symbol"].values):
+        out.setdefault(dep, set()).add(sym)
+    return out
