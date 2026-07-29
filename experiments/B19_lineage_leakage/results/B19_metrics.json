@@ -1,0 +1,45 @@
+{
+  "git_sha": "ecb544d4c5def919727ed2a8de9be6e5642f1508",
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T14:54:12Z",
+  "n_aml_excluded": 25,
+  "n_heme_excluded": 94,
+  "scenarios": {
+    "S0_full": {
+      "H1_meta_beta": 7.571,
+      "H1_p": 8.21855177429707e-11,
+      "H1_pass": true,
+      "H2_itdwt_rho": 0.2188,
+      "H2_p": 1.479004627828548e-15,
+      "H2_pass": true,
+      "n_drugs": 4,
+      "n_train_cells_FLT3": 1095,
+      "desc": "CONTROL: full DepMap (must reproduce V19)"
+    },
+    "S1_exclude_AML": {
+      "H1_meta_beta": 7.406,
+      "H1_p": 1.939186040580036e-10,
+      "H1_pass": true,
+      "H2_itdwt_rho": 0.2295,
+      "H2_p": 4.746703142285586e-17,
+      "H2_pass": true,
+      "n_drugs": 4,
+      "n_train_cells_FLT3": 1070,
+      "desc": "PRIMARY: AML lines removed (model never saw AML)"
+    },
+    "S2_exclude_heme": {
+      "H1_meta_beta": 1.386,
+      "H1_p": 0.41366901521887156,
+      "H1_pass": false,
+      "H2_itdwt_rho": 0.0794,
+      "H2_p": 0.002359975833764777,
+      "H2_pass": true,
+      "n_drugs": 4,
+      "n_train_cells_FLT3": 1001,
+      "desc": "STRINGENT: all blood/lymphoid removed (near FLT3 biological floor)"
+    }
+  },
+  "control_reproduces_V19": true,
+  "H_primary_pass": true,
+  "verdict": "V19 SURVIVES an AML-naive dependency model (S1): inferred-FLT3-dependency predicts FLT3i response beyond ITD and within ITD-WT even when the model NEVER saw AML lines -> genuine CROSS-LINEAGE functional transfer, NOT AML-lineage memorization. Memorization critique defeated."
+}

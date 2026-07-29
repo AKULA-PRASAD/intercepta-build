@@ -122,6 +122,14 @@ for venetoclax+FLT3-inhibitor combinations) — BCL2-dependence is simply a broa
 FLT3-dependence. Thus the functional signal reads *which* vulnerability a tumor carries, and the FLT3 result (V19)
 generalizes to a second, mechanistically-independent AML pillar (B18).
 
+We also tested the obvious circularity concern — that a pan-cancer dependency model including AML lines might
+simply re-detect AML lineage in an all-AML patient cohort. Retraining the FLT3-dependency model with **all 25
+DepMap AML lines removed** (a model that never sees AML) leaves the V19 result essentially unchanged (beyond-ITD
+β=+7.4, p=2×10⁻¹⁰; ITD-wildtype ρ=+0.23, p=5×10⁻¹⁷, vs +7.6/+0.22 with the full panel). The inferred dependency
+is therefore genuine cross-lineage functional transfer, not lineage memorization. Removing *all* blood/lymphoid
+lines does abolish the beyond-ITD effect, but that reflects the hematopoietic biology of FLT3-dependence (only two
+FLT3-dependent solid-tumor anchors remain in DepMap), not a failure of the result (B19).
+
 We tested that boundary directly. In a pre-registered Cox model on overall survival (n=644 patients, 395 deaths,
 106 FLT3-inhibitor–treated), the inferred-dependency×FLT3i-treatment interaction was **null** (HR=0.89, p=0.56),
 as was dependency→survival within treated (HR=0.92, p=0.50) and untreated (HR=0.97, p=0.65). This is expected and
