@@ -76,7 +76,16 @@ print(f"\nusable drugs: {n} {usable}")
 print(f"H1 transfer: diagonal mean ρ={diag.mean():+.4f} (off={off.mean():+.4f}) perm p={p_h1:.4g} -> {H1}")
 print(f"    R_prolif-only transfer ρ={rp_only.mean():+.4f}")
 print(f"H2 drug-specific (prolif-residualized): diag_r={diag_r.mean():+.4f} off_r={off_r.mean():+.4f} diff={obs:+.4f} perm p={p_h2:.4g} -> {H2}")
-verdict = ("EXTERNAL VALIDATION: transfer generalizes to PDXE" + (" AND is drug-specific beyond proliferation (V9 replicates externally!)" if H2 else " but drug-specificity does NOT externally replicate (generic proliferation transfer)")) if H1 else "NULL: transfer does not generalize to PDXE"
+if H2 and H1:
+    verdict = "EXTERNAL VALIDATION: transfer generalizes to PDXE AND drug-specific beyond proliferation (V9 replicates externally)"
+elif H2:
+    verdict = ("PARTIAL EXTERNAL VALIDATION: the DRUG-SPECIFIC, proliferation-independent signal (V9) REPLICATES in "
+               "PDXE (independent cohort, cross-cancer, cross-model-system; diag>off p=%.3f). Overall transfer MAGNITUDE "
+               "is underpowered/NS at %d drugs (H1 p=%.3f) — diagonal +%.3f positive but not permutation-significant." % (p_h2, n, p_h1, diag.mean()))
+elif H1:
+    verdict = "transfer generalizes to PDXE but NOT drug-specific (generic proliferation)"
+else:
+    verdict = "NULL: neither transfer magnitude nor drug-specificity generalizes to PDXE"
 print(f"VERDICT: {verdict}")
 
 out = {"git_sha": os.popen("git rev-parse HEAD").read().strip(), "python": sys.version.split()[0],

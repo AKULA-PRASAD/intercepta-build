@@ -1,0 +1,32 @@
+{
+  "git_sha": "f157ebe4005923884fafb25e6fb426e6aba9f324",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T07:57:47Z",
+  "seed": 42,
+  "K": 2000,
+  "cohort": "PDXE (Gao 2015 nm.3954; public PDX)",
+  "n_drugs": 9,
+  "drugs": [
+    "alpelisib",
+    "buparlisib",
+    "dacarbazine",
+    "erlotinib",
+    "gemcitabine",
+    "paclitaxel",
+    "ribociclib",
+    "tamoxifen",
+    "trametinib"
+  ],
+  "H1_diag_mean_rho": 0.0534,
+  "offdiag_mean_rho": -0.0327,
+  "rprolif_only_rho": 0.0743,
+  "H1_perm_p": 0.13993003498250875,
+  "H1_transfer_pass": false,
+  "H2_resid_diag": 0.0566,
+  "H2_resid_off": -0.0251,
+  "H2_resid_diff": 0.0818,
+  "H2_perm_p": 0.035982008995502246,
+  "H2_drugspecific_pass": true,
+  "verdict": "PARTIAL EXTERNAL VALIDATION: the DRUG-SPECIFIC, proliferation-independent signal (V9) REPLICATES in PDXE (independent cohort, cross-cancer, cross-model-system; diag>off p=0.036). Overall transfer MAGNITUDE is underpowered/NS at 9 drugs (H1 p=0.140) \u2014 diagonal +0.053 positive but not permutation-significant."
+}

@@ -17,6 +17,7 @@ mismatch. sha256 prefixes match the values recorded in the verified ~/kaalcura V
 | `independent/gdsc1/GDSC1_fitted_dose_response.xlsx` | `837b0686500fde75179e490de08f034abd9f882d8b0253d637bafe83e156dafd` | GDSC1 independent screen (B3c external replication) |
 | `beataml_wv1to4_clinical.xlsx` | `bc692f647f93945e1cf883271af5501bf75c8af3e681676241093c198ed167ad` | BeatAML clinical/WES (B4; INTERCEPTA_BEATAML) |
 | `beataml_wes_wv1to4_mutations_dbgap.txt` | `5a5a5eb8f492b1385aebe85c490b9333f65590f09391a7c1951b04dd1dba1680` | BeatAML clinical/WES (B4; INTERCEPTA_BEATAML) |
+| `pdxe.xlsx` (Gao 2015 nm.3954 MOESM10) | `c4b9a6903a4d1f76e3ddca4199039776d56bb99970aa5b7abe4f3abd732a0c6d` | PUBLIC PDX Encyclopedia — RNAseq_fpkm + PCT curve metrics (B7 external validation); INTERCEPTA_PDXE |
 
 The rows above are the reproduced Phase-B inputs with pinned sha256 (verified at load). The table below is the
 **full external-data provenance for all of INTERCEPTA** — no data is committed; each row says where to get it
