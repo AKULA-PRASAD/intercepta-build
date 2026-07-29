@@ -19,3 +19,13 @@ Constitution rules 3 & 8 — bar before boast, positives guilty until proven inn
 ## 2026-07-29 — D4: Data referenced by sha256 manifest, never committed
 Decision: inputs stay out of git; `INTERCEPTA_DATA` env var + `data/MANIFEST.md` sha256 verification at load.
 Rationale: reproducibility without shipping 1.5 GB of public data or risking a silent data swap.
+
+## 2026-07-29 — D5: B2 is a null → stop tuning models, pursue the missing data next
+Decision: B2 confirmed +0.212 as the public cell-line ceiling (adding R_prolif and driver mutations both
+null, reproduced ×2). We will NOT keep adding features/architectures to chase a public-data ceiling that the
+evidence says is real. Rationale: Constitution rules 4–5 (compress; negatives first-class) — the informative
+next lever is DATA, not modeling. Next experiments target the two things the ledger says are missing:
+(B3) patient transfer — does the GDSC-trained map rank response in a real tumor cohort (TCGA/clinical
+expression), the first cell-line→patient generalization test; and (B4, human-gated) controlled-access
+RCTs with treatment×biomarker design to revisit the falsified selective-axis question with adequate power.
+No more "beat the ceiling on cell lines" experiments unless a new public dataset materially changes the setup.

@@ -13,6 +13,7 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
 | V4 | NPM1 → Cabozantinib sensitivity (AML) | BeatAML MW p=4.4e-11; ITD-adjusted OLS β=−21.9 p=3.3e-5; split-replicates both halves | beataml_npm1_cabo_metrics.json, ..._split_replication.json |
 | V5 | NRAS → MEK-inhibitor sensitivity (AML) | 3 drugs consistent, p~1e-9 to 3e-11 (known biology) | beataml_other_claims_metrics.json |
 | V6 | DNMT3A → Dasatinib sensitivity (AML), independent of NPM1/FLT3-ITD | MW p=1.6e-5; OLS β=−23.7 p=1.2e-4 | beataml_other_claims_metrics.json |
+| V7 | +0.212 is the public cell-line cross-dataset ceiling (well-powered null, B2) | Adding R_prolif Δρ=+0.0000 p=0.98; adding 50 driver mutations Δρ=+0.0004 p=0.37 BHq=0.74 — neither verified signal beats transcriptome-only | B2_metrics.json |
 
 ## FALSIFIED (removed from the working hypothesis, with the killing test)
 - **Therapy-SELECTION coordinate system** — 0/16 subtype-adjusted axis×arm interactions survive BH in I-SPY2
