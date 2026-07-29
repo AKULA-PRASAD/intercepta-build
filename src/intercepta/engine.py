@@ -113,6 +113,7 @@ class InterceptaEngine:
         """
         pred = self.predict_transfer(expr)                       # samples x drugs (z LN_IC50; higher=resistant)
         ood = self.ood_score(expr)                               # per-sample OOD distance
+        ood_med = ood.median()                                   # B6-validated confidence gate (low OOD = more accurate)
         rows = []
         for s in pred.index:
             for dk in pred.columns:
@@ -125,12 +126,16 @@ class InterceptaEngine:
                         marker_val = float(mutations.loc[s, mk_name])
                         bonus = -direction * marker_val          # sensitizing mutation -> +bonus (more sensitive)
                 combined = -tz + bonus                           # higher = more sensitive
+                od = float(ood.get(s, np.nan))
+                # confidence from the ONLY validated axis (B6 H2): low-OOD samples are more accurate.
+                # Still capped at MODERATE — absolute accuracy is weak; reliability axis was NOT calibrated (B6 H1 null).
+                conf = "LOW" if not np.isfinite(od) else ("MODERATE" if od <= ood_med else "LOW")
                 rows.append({"sample": s, "drug": dk, "transfer_z": round(tz, 4),
                              "marker": mk_name, "marker_present": marker_val,
                              "combined_score": round(combined, 4),
                              "drug_cv_reliability": (round(self.drug_cv_rho_[dk], 4) if dk in self.drug_cv_rho_ else np.nan),
-                             "ood_distance": (round(float(ood[s]), 4) if np.isfinite(ood.get(s, np.nan)) else np.nan),
-                             "confidence": "LOW"})                # honest default; see B6 — not yet validated to raise
+                             "ood_distance": (round(od, 4) if np.isfinite(od) else np.nan),
+                             "confidence": conf})
         return pd.DataFrame(rows)
 
 

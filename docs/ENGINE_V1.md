@@ -36,6 +36,13 @@ V10 — this re-demonstrates an already-validated result through the shipped cod
   untested — see `../LEDGER.md`, `../INTEGRITY_SWEEP.md`).
 - Cabozantinib (NPM1, V4) is not rankable here — GDSC2 has no cabozantinib to train the transfer model.
 
+## Confidence (B6-validated)
+Each prediction carries `ood_distance` + `drug_cv_reliability` + a `confidence` tier. Only the **OOD** axis is
+validated (B6/LEDGER V13): samples closer to the cell-line training distribution are measurably more accurate
+(+0.051, p=0.0055), so confidence = MODERATE for low-OOD samples, LOW otherwise — **capped at MODERATE** because
+absolute accuracy is weak. Per-drug CV reliability did NOT calibrate (B6 H1 null, confirms B3e) and is descriptive
+only. No prediction is ever HIGH confidence on current single-cohort evidence.
+
 ## Next
 `engine v1` is the validated floor. It becomes clinically meaningful only after external replication on a
 **second independent patient drug-response cohort** (see repo README "what's next"). Until then it is an honest,

@@ -1,0 +1,18 @@
+{
+  "git_sha": "9967f0dfa2ffa538b94dae76c2eb0138cac646b6",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T07:46:38Z",
+  "seed": 42,
+  "K": 2000,
+  "n_drugs_H1": 44,
+  "H1_spearman_cvrho_vs_patientrho": 0.02,
+  "H1_perm_p": 0.4512743628185907,
+  "H1_pass": false,
+  "H2_n_drugs": 43,
+  "H2_diff_lowOOD_minus_highOOD": 0.0508,
+  "H2_perm_p": 0.005497251374312844,
+  "H2_pass": true,
+  "confidence_calibrated": true,
+  "verdict": "CALIBRATED: OOD axis validated"
+}
