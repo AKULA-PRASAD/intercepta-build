@@ -18,11 +18,14 @@ from . import data as D
 from .axes import compute_r_prolif
 
 # Verified drug -> (marker, direction). direction=-1: mutation increases sensitivity (lowers AUC/IC50).
-# Provenance: NRAS/NPM1/DNMT3A = LEDGER V4-V6 (deconfounded, split-replicated); FLT3-ITD->FLT3i = established.
+# Provenance: the GENOME-WIDE-ROBUST screen B5 (BH-FDR<0.05 + FLT3-ITD/prolif-deconfounded + split-replicated;
+# experiments/B5_marker_discovery/results/discovered_markers.json). NRAS->MEK confirmed genome-wide;
+# FLT3-ITD->FLT3i is the dominant robust axis (sorafenib BHq=4e-26, cabozantinib BHq=3.5e-17).
+# CHANGED after B5: cabozantinib marker is FLT3_ITD (NOT NPM1); DNMT3A->dasatinib REMOVED — it did NOT survive
+# genome-wide BH-FDR (modest pairwise effect only). See LEDGER V4/V6 refinement note + V12.
 VERIFIED_MARKERS = {
     "trametinib": ("NRAS", -1), "selumetinib": ("NRAS", -1),
-    "cabozantinib": ("NPM1", -1), "dasatinib": ("DNMT3A", -1),
-    "sorafenib": ("FLT3_ITD", -1),
+    "sorafenib": ("FLT3_ITD", -1), "cabozantinib": ("FLT3_ITD", -1),
 }
 
 

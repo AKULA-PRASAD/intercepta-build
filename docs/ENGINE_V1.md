@@ -6,8 +6,9 @@
 The first runnable INTERCEPTA engine that wires together **only the verified signals** (`../LEDGER.md`):
 1. **Transfer (V1/V9):** per-drug Ridge trained on DepMap RNA-seq → GDSC LN_IC50, applied to a query tumor's
    expression → predicted per-drug resistance (z).
-2. **Mechanism markers (V4–V6):** verified mutation→drug sensitizers — NRAS→MEK (trametinib/selumetinib),
-   NPM1→Cabozantinib, DNMT3A→Dasatinib, FLT3-ITD→FLT3i (sorafenib).
+2. **Mechanism markers (genome-wide-robust, from B5):** NRAS→MEK (trametinib/selumetinib), FLT3-ITD→FLT3i
+   (sorafenib, cabozantinib). Sourced from the B5 genome-wide screen (BH-FDR + deconfounded + split-replicated).
+   NOTE: NPM1→Cabo and DNMT3A→Dasatinib were DROPPED — they did not survive genome-wide correction (LEDGER V4/V6 refinement).
 3. **Integration (V10):** `combined_score = −transfer_z + marker_bonus` (higher = predicted more sensitive).
 
 ## Usage

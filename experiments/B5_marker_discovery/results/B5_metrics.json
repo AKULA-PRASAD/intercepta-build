@@ -1,0 +1,1615 @@
+{
+  "git_sha": "277ab3e1a8d679ce23a006fdf87c3065e450103a",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T07:38:58Z",
+  "min_gene_subj": 20,
+  "min_drug_subj": 30,
+  "n_genes": 23,
+  "n_drugs": 155,
+  "n_pairs_tested": 3051,
+  "n_discovered_BHq05": 177,
+  "n_verified_grade": 177,
+  "positive_controls": {
+    "NPM1_clin~cabozantinib": false,
+    "NRAS~trametinib": true,
+    "NRAS~selumetinib": true,
+    "DNMT3A~dasatinib": false
+  },
+  "pipeline_valid": true,
+  "verified_grade_markers": [
+    {
+      "gene": "FLT3_ITD",
+      "drug": "sorafenib",
+      "direction": "sensitizing",
+      "n": 453,
+      "n_mut": 114,
+      "beta": -56.668,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "sunitinib",
+      "direction": "sensitizing",
+      "n": 451,
+      "n_mut": 112,
+      "beta": -49.773,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "kw-2449",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 107,
+      "beta": -58.391,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "cabozantinib",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 106,
+      "beta": -58.437,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "dovitinib",
+      "direction": "sensitizing",
+      "n": 425,
+      "n_mut": 109,
+      "beta": -52.992,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "foretinib",
+      "direction": "sensitizing",
+      "n": 423,
+      "n_mut": 106,
+      "beta": -53.434,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "crenolanib",
+      "direction": "sensitizing",
+      "n": 413,
+      "n_mut": 101,
+      "beta": -48.464,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "quizartinib",
+      "direction": "sensitizing",
+      "n": 427,
+      "n_mut": 105,
+      "beta": -45.611,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "azd1152-hqpa",
+      "direction": "sensitizing",
+      "n": 425,
+      "n_mut": 109,
+      "beta": -44.215,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "regorafenib",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 104,
+      "beta": -34.375,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "nvp-tae684",
+      "direction": "sensitizing",
+      "n": 421,
+      "n_mut": 106,
+      "beta": -41.379,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "ly-333531",
+      "direction": "sensitizing",
+      "n": 388,
+      "n_mut": 97,
+      "beta": -29.779,
+      "BHq": 0.0
+    },
+    {
+      "gene": "NRAS",
+      "drug": "selumetinib",
+      "direction": "sensitizing",
+      "n": 395,
+      "n_mut": 70,
+      "beta": -62.838,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "mgcd-265",
+      "direction": "sensitizing",
+      "n": 418,
+      "n_mut": 104,
+      "beta": -38.794,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "vargetef",
+      "direction": "sensitizing",
+      "n": 424,
+      "n_mut": 107,
+      "beta": -41.131,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "midostaurin",
+      "direction": "sensitizing",
+      "n": 433,
+      "n_mut": 107,
+      "beta": -41.451,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "linifanib",
+      "direction": "sensitizing",
+      "n": 425,
+      "n_mut": 108,
+      "beta": -41.741,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "17-aag",
+      "direction": "sensitizing",
+      "n": 421,
+      "n_mut": 106,
+      "beta": -35.466,
+      "BHq": 0.0
+    },
+    {
+      "gene": "NRAS",
+      "drug": "trametinib",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 73,
+      "beta": -54.159,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "pazopanib",
+      "direction": "sensitizing",
+      "n": 432,
+      "n_mut": 109,
+      "beta": -30.479,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "tozasertib",
+      "direction": "sensitizing",
+      "n": 428,
+      "n_mut": 109,
+      "beta": -29.579,
+      "BHq": 0.0
+    },
+    {
+      "gene": "NRAS",
+      "drug": "ci-1040",
+      "direction": "sensitizing",
+      "n": 400,
+      "n_mut": 68,
+      "beta": -40.879,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "vandetanib",
+      "direction": "sensitizing",
+      "n": 444,
+      "n_mut": 112,
+      "beta": -30.042,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "entospletinib",
+      "direction": "sensitizing",
+      "n": 291,
+      "n_mut": 76,
+      "beta": -40.849,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "ponatinib",
+      "direction": "sensitizing",
+      "n": 281,
+      "n_mut": 68,
+      "beta": -42.529,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "tivozanib",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 106,
+      "beta": -40.571,
+      "BHq": 0.0
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "pelitinib",
+      "direction": "sensitizing",
+      "n": 421,
+      "n_mut": 108,
+      "beta": -31.853,
+      "BHq": 1e-06
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "crizotinib",
+      "direction": "sensitizing",
+      "n": 433,
+      "n_mut": 105,
+      "beta": -26.721,
+      "BHq": 1e-06
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "lenvatinib",
+      "direction": "sensitizing",
+      "n": 321,
+      "n_mut": 80,
+      "beta": -36.119,
+      "BHq": 1e-06
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "jnj-28312141",
+      "direction": "sensitizing",
+      "n": 298,
+      "n_mut": 78,
+      "beta": -43.907,
+      "BHq": 2e-06
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "gefitinib",
+      "direction": "sensitizing",
+      "n": 431,
+      "n_mut": 106,
+      "beta": -20.076,
+      "BHq": 3e-06
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "erlotinib",
+      "direction": "sensitizing",
+      "n": 448,
+      "n_mut": 110,
+      "beta": -20.66,
+      "BHq": 5e-06
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "gilteritinib",
+      "direction": "sensitizing",
+      "n": 261,
+      "n_mut": 69,
+      "beta": -45.046,
+      "BHq": 7e-06
+    },
+    {
+      "gene": "NRAS",
+      "drug": "flavopiridol",
+      "direction": "sensitizing",
+      "n": 391,
+      "n_mut": 68,
+      "beta": -42.158,
+      "BHq": 2e-05
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "nvp-adw742",
+      "direction": "sensitizing",
+      "n": 415,
+      "n_mut": 101,
+      "beta": -26.371,
+      "BHq": 3.4e-05
+    },
+    {
+      "gene": "KRAS",
+      "drug": "saracatinib",
+      "direction": "resistance",
+      "n": 394,
+      "n_mut": 24,
+      "beta": 44.466,
+      "BHq": 3.6e-05
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "canertinib",
+      "direction": "sensitizing",
+      "n": 424,
+      "n_mut": 108,
+      "beta": -21.468,
+      "BHq": 3.8e-05
+    },
+    {
+      "gene": "KRAS",
+      "drug": "nvp-tae684",
+      "direction": "resistance",
+      "n": 391,
+      "n_mut": 22,
+      "beta": 52.92,
+      "BHq": 3.8e-05
+    },
+    {
+      "gene": "KRAS",
+      "drug": "vargetef",
+      "direction": "resistance",
+      "n": 394,
+      "n_mut": 23,
+      "beta": 56.728,
+      "BHq": 4.2e-05
+    },
+    {
+      "gene": "NRAS",
+      "drug": "pazopanib",
+      "direction": "resistance",
+      "n": 402,
+      "n_mut": 70,
+      "beta": 27.802,
+      "BHq": 5.8e-05
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "pha-665752",
+      "direction": "sensitizing",
+      "n": 421,
+      "n_mut": 106,
+      "beta": -25.011,
+      "BHq": 7.5e-05
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "bosutinib",
+      "direction": "sensitizing",
+      "n": 425,
+      "n_mut": 106,
+      "beta": -26.921,
+      "BHq": 7.5e-05
+    },
+    {
+      "gene": "KRAS",
+      "drug": "cabozantinib",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 23,
+      "beta": 56.057,
+      "BHq": 7.5e-05
+    },
+    {
+      "gene": "KRAS",
+      "drug": "sunitinib",
+      "direction": "resistance",
+      "n": 419,
+      "n_mut": 25,
+      "beta": 40.19,
+      "BHq": 8.6e-05
+    },
+    {
+      "gene": "IDH2",
+      "drug": "gsk-1838705a",
+      "direction": "sensitizing",
+      "n": 393,
+      "n_mut": 50,
+      "beta": -31.824,
+      "BHq": 8.8e-05
+    },
+    {
+      "gene": "NPM1",
+      "drug": "ibrutinib",
+      "direction": "sensitizing",
+      "n": 382,
+      "n_mut": 93,
+      "beta": -30.821,
+      "BHq": 0.000103
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "ibrutinib",
+      "direction": "sensitizing",
+      "n": 407,
+      "n_mut": 101,
+      "beta": -29.011,
+      "BHq": 0.000119
+    },
+    {
+      "gene": "KRAS",
+      "drug": "foretinib",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 24,
+      "beta": 52.853,
+      "BHq": 0.000119
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "cytarabine",
+      "direction": "sensitizing",
+      "n": 306,
+      "n_mut": 78,
+      "beta": -30.531,
+      "BHq": 0.000246
+    },
+    {
+      "gene": "KRAS",
+      "drug": "su11274",
+      "direction": "resistance",
+      "n": 352,
+      "n_mut": 20,
+      "beta": 45.001,
+      "BHq": 0.000284
+    },
+    {
+      "gene": "IDH2",
+      "drug": "nvp-tae684",
+      "direction": "sensitizing",
+      "n": 391,
+      "n_mut": 52,
+      "beta": -32.261,
+      "BHq": 0.000315
+    },
+    {
+      "gene": "NRAS",
+      "drug": "tivozanib",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 67,
+      "beta": 36.759,
+      "BHq": 0.000317
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "prt062607",
+      "direction": "sensitizing",
+      "n": 418,
+      "n_mut": 105,
+      "beta": -22.763,
+      "BHq": 0.00039
+    },
+    {
+      "gene": "KRAS",
+      "drug": "dovitinib",
+      "direction": "resistance",
+      "n": 396,
+      "n_mut": 24,
+      "beta": 48.462,
+      "BHq": 0.000474
+    },
+    {
+      "gene": "KRAS",
+      "drug": "crizotinib",
+      "direction": "resistance",
+      "n": 402,
+      "n_mut": 25,
+      "beta": 37.668,
+      "BHq": 0.000474
+    },
+    {
+      "gene": "KRAS",
+      "drug": "lenvatinib",
+      "direction": "resistance",
+      "n": 307,
+      "n_mut": 20,
+      "beta": 48.492,
+      "BHq": 0.000518
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "neratinib",
+      "direction": "sensitizing",
+      "n": 425,
+      "n_mut": 107,
+      "beta": -22.866,
+      "BHq": 0.000655
+    },
+    {
+      "gene": "KRAS",
+      "drug": "kw-2449",
+      "direction": "resistance",
+      "n": 389,
+      "n_mut": 22,
+      "beta": 48.869,
+      "BHq": 0.000675
+    },
+    {
+      "gene": "NPM1",
+      "drug": "cabozantinib",
+      "direction": "sensitizing",
+      "n": 393,
+      "n_mut": 94,
+      "beta": -28.879,
+      "BHq": 0.000721
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "venetoclax",
+      "direction": "sensitizing",
+      "n": 340,
+      "n_mut": 85,
+      "beta": -41.42,
+      "BHq": 0.000724
+    },
+    {
+      "gene": "KRAS",
+      "drug": "gw-2580",
+      "direction": "resistance",
+      "n": 382,
+      "n_mut": 24,
+      "beta": 42.996,
+      "BHq": 0.000748
+    },
+    {
+      "gene": "NRAS",
+      "drug": "vemurafenib",
+      "direction": "resistance",
+      "n": 325,
+      "n_mut": 63,
+      "beta": 24.292,
+      "BHq": 0.000753
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "agi-6780",
+      "direction": "sensitizing",
+      "n": 279,
+      "n_mut": 67,
+      "beta": -26.946,
+      "BHq": 0.000858
+    },
+    {
+      "gene": "IDH2",
+      "drug": "pha-665752",
+      "direction": "sensitizing",
+      "n": 391,
+      "n_mut": 52,
+      "beta": -28.179,
+      "BHq": 0.000861
+    },
+    {
+      "gene": "IDH2",
+      "drug": "vandetanib",
+      "direction": "sensitizing",
+      "n": 413,
+      "n_mut": 53,
+      "beta": -26.212,
+      "BHq": 0.000965
+    },
+    {
+      "gene": "KRAS",
+      "drug": "tivozanib",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 23,
+      "beta": 54.132,
+      "BHq": 0.001042
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "a-674563",
+      "direction": "sensitizing",
+      "n": 432,
+      "n_mut": 110,
+      "beta": -22.879,
+      "BHq": 0.001042
+    },
+    {
+      "gene": "NRAS",
+      "drug": "masitinib",
+      "direction": "resistance",
+      "n": 389,
+      "n_mut": 67,
+      "beta": 26.378,
+      "BHq": 0.001409
+    },
+    {
+      "gene": "KRAS",
+      "drug": "bosutinib",
+      "direction": "resistance",
+      "n": 395,
+      "n_mut": 24,
+      "beta": 41.74,
+      "BHq": 0.001417
+    },
+    {
+      "gene": "KRAS",
+      "drug": "dasatinib",
+      "direction": "resistance",
+      "n": 421,
+      "n_mut": 24,
+      "beta": 50.772,
+      "BHq": 0.001417
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "nf-kb activation inhibitor",
+      "direction": "sensitizing",
+      "n": 415,
+      "n_mut": 105,
+      "beta": -28.013,
+      "BHq": 0.001654
+    },
+    {
+      "gene": "KRAS",
+      "drug": "erlotinib",
+      "direction": "resistance",
+      "n": 417,
+      "n_mut": 25,
+      "beta": 28.633,
+      "BHq": 0.001695
+    },
+    {
+      "gene": "IDH2",
+      "drug": "dbz",
+      "direction": "sensitizing",
+      "n": 328,
+      "n_mut": 46,
+      "beta": -27.925,
+      "BHq": 0.00179
+    },
+    {
+      "gene": "NRAS",
+      "drug": "pd173955",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 69,
+      "beta": 33.534,
+      "BHq": 0.001952
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "cyt387",
+      "direction": "sensitizing",
+      "n": 426,
+      "n_mut": 109,
+      "beta": -21.052,
+      "BHq": 0.00199
+    },
+    {
+      "gene": "IDH2",
+      "drug": "vargetef",
+      "direction": "sensitizing",
+      "n": 394,
+      "n_mut": 52,
+      "beta": -31.695,
+      "BHq": 0.002073
+    },
+    {
+      "gene": "KRAS",
+      "drug": "midostaurin",
+      "direction": "resistance",
+      "n": 402,
+      "n_mut": 23,
+      "beta": 48.003,
+      "BHq": 0.0021
+    },
+    {
+      "gene": "KRAS",
+      "drug": "pd173955",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 23,
+      "beta": 52.756,
+      "BHq": 0.002359
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "ink-128",
+      "direction": "sensitizing",
+      "n": 428,
+      "n_mut": 109,
+      "beta": -23.847,
+      "BHq": 0.002449
+    },
+    {
+      "gene": "KRAS",
+      "drug": "jnj-28312141",
+      "direction": "resistance",
+      "n": 275,
+      "n_mut": 13,
+      "beta": 64.828,
+      "BHq": 0.003003
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "vatalanib",
+      "direction": "sensitizing",
+      "n": 423,
+      "n_mut": 106,
+      "beta": -18.937,
+      "BHq": 0.00439
+    },
+    {
+      "gene": "NPM1",
+      "drug": "agi-5198",
+      "direction": "sensitizing",
+      "n": 268,
+      "n_mut": 64,
+      "beta": -22.324,
+      "BHq": 0.004498
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "jak inhibitor i",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 105,
+      "beta": -20.71,
+      "BHq": 0.004961
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "saracatinib",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 103,
+      "beta": -18.369,
+      "BHq": 0.005961
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "roscovitine",
+      "direction": "sensitizing",
+      "n": 432,
+      "n_mut": 109,
+      "beta": -15.829,
+      "BHq": 0.005961
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "sr9011",
+      "direction": "sensitizing",
+      "n": 250,
+      "n_mut": 64,
+      "beta": -20.155,
+      "BHq": 0.006111
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "azd1480",
+      "direction": "sensitizing",
+      "n": 425,
+      "n_mut": 107,
+      "beta": -18.383,
+      "BHq": 0.006126
+    },
+    {
+      "gene": "NPM1",
+      "drug": "mk-2206",
+      "direction": "resistance",
+      "n": 391,
+      "n_mut": 94,
+      "beta": 27.705,
+      "BHq": 0.006297
+    },
+    {
+      "gene": "NPM1",
+      "drug": "kw-2449",
+      "direction": "sensitizing",
+      "n": 389,
+      "n_mut": 94,
+      "beta": -23.624,
+      "BHq": 0.006468
+    },
+    {
+      "gene": "NPM1",
+      "drug": "regorafenib",
+      "direction": "sensitizing",
+      "n": 394,
+      "n_mut": 96,
+      "beta": -18.536,
+      "BHq": 0.006585
+    },
+    {
+      "gene": "GATA2",
+      "drug": "ink-128",
+      "direction": "resistance",
+      "n": 398,
+      "n_mut": 19,
+      "beta": 46.361,
+      "BHq": 0.00701
+    },
+    {
+      "gene": "KRAS",
+      "drug": "quizartinib",
+      "direction": "resistance",
+      "n": 399,
+      "n_mut": 23,
+      "beta": 37.273,
+      "BHq": 0.007429
+    },
+    {
+      "gene": "KRAS",
+      "drug": "raf265",
+      "direction": "resistance",
+      "n": 391,
+      "n_mut": 24,
+      "beta": 38.59,
+      "BHq": 0.007517
+    },
+    {
+      "gene": "GATA2",
+      "drug": "at7519",
+      "direction": "resistance",
+      "n": 387,
+      "n_mut": 18,
+      "beta": 37.076,
+      "BHq": 0.007517
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "imatinib",
+      "direction": "sensitizing",
+      "n": 463,
+      "n_mut": 115,
+      "beta": -16.366,
+      "BHq": 0.007517
+    },
+    {
+      "gene": "KRAS",
+      "drug": "venetoclax",
+      "direction": "resistance",
+      "n": 325,
+      "n_mut": 21,
+      "beta": 61.838,
+      "BHq": 0.007627
+    },
+    {
+      "gene": "NRAS",
+      "drug": "sunitinib",
+      "direction": "resistance",
+      "n": 419,
+      "n_mut": 72,
+      "beta": 19.487,
+      "BHq": 0.007739
+    },
+    {
+      "gene": "NRAS",
+      "drug": "nvp-tae684",
+      "direction": "resistance",
+      "n": 391,
+      "n_mut": 68,
+      "beta": 23.789,
+      "BHq": 0.008214
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "bay 11-7085",
+      "direction": "sensitizing",
+      "n": 320,
+      "n_mut": 77,
+      "beta": -19.825,
+      "BHq": 0.008214
+    },
+    {
+      "gene": "KRAS",
+      "drug": "sorafenib",
+      "direction": "resistance",
+      "n": 423,
+      "n_mut": 25,
+      "beta": 32.277,
+      "BHq": 0.008214
+    },
+    {
+      "gene": "NPM1_clin",
+      "drug": "mk-2206",
+      "direction": "resistance",
+      "n": 418,
+      "n_mut": 113,
+      "beta": 24.552,
+      "BHq": 0.008821
+    },
+    {
+      "gene": "KRAS",
+      "drug": "gsk-1838705a",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 24,
+      "beta": 33.451,
+      "BHq": 0.00933
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "palbociclib",
+      "direction": "sensitizing",
+      "n": 276,
+      "n_mut": 69,
+      "beta": -23.342,
+      "BHq": 0.00955
+    },
+    {
+      "gene": "KRAS",
+      "drug": "pha-665752",
+      "direction": "resistance",
+      "n": 391,
+      "n_mut": 24,
+      "beta": 33.786,
+      "BHq": 0.00955
+    },
+    {
+      "gene": "U2AF1",
+      "drug": "cediranib",
+      "direction": "sensitizing",
+      "n": 394,
+      "n_mut": 15,
+      "beta": -34.149,
+      "BHq": 0.009579
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "raf265",
+      "direction": "sensitizing",
+      "n": 421,
+      "n_mut": 106,
+      "beta": -20.331,
+      "BHq": 0.009811
+    },
+    {
+      "gene": "NPM1",
+      "drug": "lenvatinib",
+      "direction": "sensitizing",
+      "n": 307,
+      "n_mut": 77,
+      "beta": -23.125,
+      "BHq": 0.011241
+    },
+    {
+      "gene": "NPM1_clin",
+      "drug": "agi-5198",
+      "direction": "sensitizing",
+      "n": 280,
+      "n_mut": 78,
+      "beta": -19.095,
+      "BHq": 0.01156
+    },
+    {
+      "gene": "NRAS",
+      "drug": "mk-2206",
+      "direction": "sensitizing",
+      "n": 391,
+      "n_mut": 68,
+      "beta": -28.585,
+      "BHq": 0.01156
+    },
+    {
+      "gene": "IDH2",
+      "drug": "tozasertib",
+      "direction": "sensitizing",
+      "n": 398,
+      "n_mut": 50,
+      "beta": -21.452,
+      "BHq": 0.01156
+    },
+    {
+      "gene": "KRAS",
+      "drug": "selumetinib",
+      "direction": "sensitizing",
+      "n": 395,
+      "n_mut": 24,
+      "beta": -51.196,
+      "BHq": 0.012105
+    },
+    {
+      "gene": "TP53",
+      "drug": "cytarabine",
+      "direction": "resistance",
+      "n": 294,
+      "n_mut": 29,
+      "beta": 34.877,
+      "BHq": 0.012105
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "vx-745",
+      "direction": "sensitizing",
+      "n": 427,
+      "n_mut": 109,
+      "beta": -20.042,
+      "BHq": 0.012751
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "pd173955",
+      "direction": "sensitizing",
+      "n": 423,
+      "n_mut": 109,
+      "beta": -24.12,
+      "BHq": 0.013824
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "ampk inhibitor",
+      "direction": "sensitizing",
+      "n": 82,
+      "n_mut": 20,
+      "beta": -37.628,
+      "BHq": 0.014024
+    },
+    {
+      "gene": "KRAS",
+      "drug": "s31-201",
+      "direction": "resistance",
+      "n": 355,
+      "n_mut": 20,
+      "beta": 41.875,
+      "BHq": 0.01454
+    },
+    {
+      "gene": "KRAS",
+      "drug": "jnj-38877605",
+      "direction": "resistance",
+      "n": 398,
+      "n_mut": 24,
+      "beta": 30.325,
+      "BHq": 0.01454
+    },
+    {
+      "gene": "NPM1",
+      "drug": "sorafenib",
+      "direction": "sensitizing",
+      "n": 423,
+      "n_mut": 104,
+      "beta": -17.302,
+      "BHq": 0.01661
+    },
+    {
+      "gene": "TP53",
+      "drug": "nutlin 3a",
+      "direction": "resistance",
+      "n": 289,
+      "n_mut": 29,
+      "beta": 35.946,
+      "BHq": 0.01661
+    },
+    {
+      "gene": "GATA2",
+      "drug": "nf-kb activation inhibitor",
+      "direction": "sensitizing",
+      "n": 387,
+      "n_mut": 19,
+      "beta": -48.403,
+      "BHq": 0.016629
+    },
+    {
+      "gene": "IDH2",
+      "drug": "afatinib",
+      "direction": "sensitizing",
+      "n": 401,
+      "n_mut": 51,
+      "beta": -21.811,
+      "BHq": 0.017289
+    },
+    {
+      "gene": "KRAS",
+      "drug": "pazopanib",
+      "direction": "resistance",
+      "n": 402,
+      "n_mut": 25,
+      "beta": 29.735,
+      "BHq": 0.017289
+    },
+    {
+      "gene": "IDH2",
+      "drug": "pd173955",
+      "direction": "sensitizing",
+      "n": 393,
+      "n_mut": 50,
+      "beta": -31.184,
+      "BHq": 0.017613
+    },
+    {
+      "gene": "SF3B1",
+      "drug": "venetoclax",
+      "direction": "resistance",
+      "n": 325,
+      "n_mut": 20,
+      "beta": 57.896,
+      "BHq": 0.017821
+    },
+    {
+      "gene": "IDH2",
+      "drug": "mln8054",
+      "direction": "sensitizing",
+      "n": 396,
+      "n_mut": 49,
+      "beta": -17.875,
+      "BHq": 0.01804
+    },
+    {
+      "gene": "NRAS",
+      "drug": "nf-kb activation inhibitor",
+      "direction": "resistance",
+      "n": 387,
+      "n_mut": 67,
+      "beta": 27.864,
+      "BHq": 0.018351
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "axitinib",
+      "direction": "sensitizing",
+      "n": 438,
+      "n_mut": 110,
+      "beta": -17.952,
+      "BHq": 0.018549
+    },
+    {
+      "gene": "CEBPA",
+      "drug": "gdc-0941",
+      "direction": "resistance",
+      "n": 373,
+      "n_mut": 27,
+      "beta": 32.277,
+      "BHq": 0.018549
+    },
+    {
+      "gene": "TP53",
+      "drug": "17-aag",
+      "direction": "resistance",
+      "n": 396,
+      "n_mut": 36,
+      "beta": 28.547,
+      "BHq": 0.019498
+    },
+    {
+      "gene": "KRAS",
+      "drug": "masitinib",
+      "direction": "resistance",
+      "n": 389,
+      "n_mut": 24,
+      "beta": 32.592,
+      "BHq": 0.021398
+    },
+    {
+      "gene": "KRAS",
+      "drug": "trametinib",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 25,
+      "beta": -44.622,
+      "BHq": 0.021713
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "azacytidine",
+      "direction": "sensitizing",
+      "n": 344,
+      "n_mut": 86,
+      "beta": -19.349,
+      "BHq": 0.021724
+    },
+    {
+      "gene": "FLT3",
+      "drug": "quizartinib",
+      "direction": "sensitizing",
+      "n": 399,
+      "n_mut": 46,
+      "beta": -24.281,
+      "BHq": 0.021982
+    },
+    {
+      "gene": "GATA2",
+      "drug": "axitinib",
+      "direction": "resistance",
+      "n": 407,
+      "n_mut": 19,
+      "beta": 36.582,
+      "BHq": 0.023786
+    },
+    {
+      "gene": "NPM1_clin",
+      "drug": "ibrutinib",
+      "direction": "sensitizing",
+      "n": 406,
+      "n_mut": 113,
+      "beta": -19.545,
+      "BHq": 0.025809
+    },
+    {
+      "gene": "ASXL1",
+      "drug": "sunitinib",
+      "direction": "resistance",
+      "n": 419,
+      "n_mut": 47,
+      "beta": 20.406,
+      "BHq": 0.026115
+    },
+    {
+      "gene": "WT1",
+      "drug": "raf265",
+      "direction": "sensitizing",
+      "n": 391,
+      "n_mut": 26,
+      "beta": -32.602,
+      "BHq": 0.026296
+    },
+    {
+      "gene": "TP53",
+      "drug": "otx-015",
+      "direction": "resistance",
+      "n": 261,
+      "n_mut": 25,
+      "beta": 36.443,
+      "BHq": 0.027881
+    },
+    {
+      "gene": "ASXL1",
+      "drug": "foretinib",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 47,
+      "beta": 26.655,
+      "BHq": 0.028352
+    },
+    {
+      "gene": "NRAS",
+      "drug": "bortezomib",
+      "direction": "sensitizing",
+      "n": 401,
+      "n_mut": 68,
+      "beta": -24.671,
+      "BHq": 0.028541
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "pp242",
+      "direction": "sensitizing",
+      "n": 428,
+      "n_mut": 109,
+      "beta": -17.992,
+      "BHq": 0.030403
+    },
+    {
+      "gene": "KRAS",
+      "drug": "vandetanib",
+      "direction": "resistance",
+      "n": 413,
+      "n_mut": 25,
+      "beta": 27.729,
+      "BHq": 0.032686
+    },
+    {
+      "gene": "IDH2",
+      "drug": "volasertib",
+      "direction": "sensitizing",
+      "n": 313,
+      "n_mut": 42,
+      "beta": -22.34,
+      "BHq": 0.033244
+    },
+    {
+      "gene": "STAG2",
+      "drug": "h-89",
+      "direction": "sensitizing",
+      "n": 359,
+      "n_mut": 27,
+      "beta": -32.564,
+      "BHq": 0.033244
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "su11274",
+      "direction": "sensitizing",
+      "n": 375,
+      "n_mut": 92,
+      "beta": -16.351,
+      "BHq": 0.033703
+    },
+    {
+      "gene": "BCOR",
+      "drug": "raf265",
+      "direction": "sensitizing",
+      "n": 391,
+      "n_mut": 24,
+      "beta": -32.892,
+      "BHq": 0.034025
+    },
+    {
+      "gene": "IDH2",
+      "drug": "motesanib",
+      "direction": "resistance",
+      "n": 392,
+      "n_mut": 50,
+      "beta": 24.809,
+      "BHq": 0.034775
+    },
+    {
+      "gene": "IDH2",
+      "drug": "gw-2580",
+      "direction": "sensitizing",
+      "n": 382,
+      "n_mut": 50,
+      "beta": -22.392,
+      "BHq": 0.035056
+    },
+    {
+      "gene": "KRAS",
+      "drug": "vatalanib",
+      "direction": "resistance",
+      "n": 395,
+      "n_mut": 24,
+      "beta": 28.875,
+      "BHq": 0.037059
+    },
+    {
+      "gene": "NPM1",
+      "drug": "jnj-7706621",
+      "direction": "sensitizing",
+      "n": 398,
+      "n_mut": 98,
+      "beta": -11.171,
+      "BHq": 0.037059
+    },
+    {
+      "gene": "NPM1_clin",
+      "drug": "regorafenib",
+      "direction": "sensitizing",
+      "n": 419,
+      "n_mut": 115,
+      "beta": -14.359,
+      "BHq": 0.037987
+    },
+    {
+      "gene": "NRAS",
+      "drug": "lapatinib",
+      "direction": "resistance",
+      "n": 399,
+      "n_mut": 67,
+      "beta": 14.443,
+      "BHq": 0.038218
+    },
+    {
+      "gene": "GATA2",
+      "drug": "dasatinib",
+      "direction": "resistance",
+      "n": 421,
+      "n_mut": 20,
+      "beta": 41.203,
+      "BHq": 0.039426
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "go6976",
+      "direction": "sensitizing",
+      "n": 82,
+      "n_mut": 20,
+      "beta": -37.941,
+      "BHq": 0.039525
+    },
+    {
+      "gene": "TP53",
+      "drug": "regorafenib",
+      "direction": "resistance",
+      "n": 394,
+      "n_mut": 36,
+      "beta": 22.3,
+      "BHq": 0.039525
+    },
+    {
+      "gene": "NRAS",
+      "drug": "vargetef",
+      "direction": "resistance",
+      "n": 394,
+      "n_mut": 66,
+      "beta": 22.387,
+      "BHq": 0.041632
+    },
+    {
+      "gene": "U2AF1",
+      "drug": "pelitinib",
+      "direction": "sensitizing",
+      "n": 391,
+      "n_mut": 17,
+      "beta": -36.533,
+      "BHq": 0.041674
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "ki20227",
+      "direction": "sensitizing",
+      "n": 378,
+      "n_mut": 93,
+      "beta": -22.125,
+      "BHq": 0.041674
+    },
+    {
+      "gene": "IDH2",
+      "drug": "doramapimod",
+      "direction": "sensitizing",
+      "n": 396,
+      "n_mut": 50,
+      "beta": -26.369,
+      "BHq": 0.041674
+    },
+    {
+      "gene": "IDH2",
+      "drug": "saracatinib",
+      "direction": "sensitizing",
+      "n": 394,
+      "n_mut": 49,
+      "beta": -19.538,
+      "BHq": 0.041674
+    },
+    {
+      "gene": "NPM1",
+      "drug": "ponatinib",
+      "direction": "sensitizing",
+      "n": 258,
+      "n_mut": 59,
+      "beta": -22.537,
+      "BHq": 0.041674
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "jnj-38877605",
+      "direction": "sensitizing",
+      "n": 423,
+      "n_mut": 105,
+      "beta": -14.404,
+      "BHq": 0.041674
+    },
+    {
+      "gene": "NRAS",
+      "drug": "vandetanib",
+      "direction": "resistance",
+      "n": 413,
+      "n_mut": 72,
+      "beta": 17.098,
+      "BHq": 0.041674
+    },
+    {
+      "gene": "GATA2",
+      "drug": "cediranib",
+      "direction": "resistance",
+      "n": 394,
+      "n_mut": 18,
+      "beta": 26.735,
+      "BHq": 0.041913
+    },
+    {
+      "gene": "NPM1_clin",
+      "drug": "jnj-7706621",
+      "direction": "sensitizing",
+      "n": 427,
+      "n_mut": 117,
+      "beta": -10.225,
+      "BHq": 0.042212
+    },
+    {
+      "gene": "NPM1",
+      "drug": "palbociclib",
+      "direction": "sensitizing",
+      "n": 265,
+      "n_mut": 72,
+      "beta": -20.764,
+      "BHq": 0.042212
+    },
+    {
+      "gene": "FLT3",
+      "drug": "sorafenib",
+      "direction": "sensitizing",
+      "n": 423,
+      "n_mut": 48,
+      "beta": -19.944,
+      "BHq": 0.043054
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "pi-103",
+      "direction": "sensitizing",
+      "n": 423,
+      "n_mut": 108,
+      "beta": -17.899,
+      "BHq": 0.043054
+    },
+    {
+      "gene": "IDH2",
+      "drug": "selumetinib",
+      "direction": "resistance",
+      "n": 395,
+      "n_mut": 52,
+      "beta": 31.156,
+      "BHq": 0.043054
+    },
+    {
+      "gene": "SRSF2",
+      "drug": "h-89",
+      "direction": "sensitizing",
+      "n": 359,
+      "n_mut": 52,
+      "beta": -23.427,
+      "BHq": 0.044649
+    },
+    {
+      "gene": "NPM1",
+      "drug": "agi-6780",
+      "direction": "sensitizing",
+      "n": 267,
+      "n_mut": 64,
+      "beta": -19.522,
+      "BHq": 0.04477
+    },
+    {
+      "gene": "GATA2",
+      "drug": "quizartinib",
+      "direction": "resistance",
+      "n": 399,
+      "n_mut": 20,
+      "beta": 32.493,
+      "BHq": 0.046292
+    },
+    {
+      "gene": "ASXL1",
+      "drug": "cabozantinib",
+      "direction": "resistance",
+      "n": 393,
+      "n_mut": 46,
+      "beta": 25.619,
+      "BHq": 0.046906
+    },
+    {
+      "gene": "DNMT3A",
+      "drug": "saracatinib",
+      "direction": "sensitizing",
+      "n": 394,
+      "n_mut": 84,
+      "beta": -15.777,
+      "BHq": 0.048132
+    },
+    {
+      "gene": "GATA2",
+      "drug": "prt062607",
+      "direction": "resistance",
+      "n": 392,
+      "n_mut": 17,
+      "beta": 31.956,
+      "BHq": 0.04837
+    },
+    {
+      "gene": "FLT3_ITD",
+      "drug": "dbz",
+      "direction": "sensitizing",
+      "n": 344,
+      "n_mut": 86,
+      "beta": -16.742,
+      "BHq": 0.04837
+    },
+    {
+      "gene": "NPM1_clin",
+      "drug": "lenvatinib",
+      "direction": "sensitizing",
+      "n": 321,
+      "n_mut": 91,
+      "beta": -18.301,
+      "BHq": 0.049572
+    }
+  ]
+}

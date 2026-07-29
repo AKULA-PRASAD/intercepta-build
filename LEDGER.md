@@ -19,7 +19,9 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
 | V9+ | V9 is ROBUST to drug- and patient-subsetting (B3d) | Drug jackknife all leave-one-out >0 (min +0.033); bootstrap 95% CI over drugs [+0.008,+0.074] excludes 0; internal patient split-half both halves >0 (+0.053/+0.027). Not driven by any single drug or patient subset. | B3d_metrics.json |
 | N1 | The robust transfer signal is NOT explained by AML mechanism (pre-registered NULL, B3e) | H1: drugs in GDSC pathways {RTK signaling, ERK MAPK signaling} (frozen a priori as the AML driver-signaling axis) do NOT transfer better — median resid ρ +0.0519 vs +0.0513, gap +0.0005, one-sided MWU p=0.29, perm p=0.50. H2: transfer ρ does not track within-cell-line CV predictability (Spearman +0.042, p=0.36). B3d's exploratory "AML-relevant drugs transfer best" ranking did NOT survive a rigorous pre-registered test — the visually-striking top drugs were selection, not signal. **Coherence claim withdrawn.** | B3e_metrics.json |
 | V10 | The two verified signal types are COMPLEMENTARY — combining mutation marker + expression transfer beats either alone (B4, pre-registered) | On verified drug–marker pairs: combined 5-fold CV Spearman > BOTH single predictors in all 4 testable pairs (trametinib 0.336 vs mk 0.078/tr 0.257; selumetinib 0.380 vs 0.177/0.288; dasatinib 0.213 vs 0.050/0.180; sorafenib 0.469 vs 0.271/0.383). Expression transfer adds beyond the marker (partial p<0.05, correct sign, BHq<5e-8) in 3/4 pairs; complementary (both add) in 3/4. Pre-registered rule (≥3 pairs) MET. **Caveats (honest):** (a) DL random-effects meta is NULL (p=0.21) due to heterogeneity; (b) dasatinib's transfer is INVERTED (β<0, strongly anti-predictive — cell-line dasatinib biology ≠ patient); (c) cabozantinib/NPM1 (V4) NOT testable — no GDSC2 cabozantinib training data; (d) 4 pairs, single cohort (BeatAML), needs an INDEPENDENT cohort. | B4_metrics.json |
-| V11 | engine v1 (shipped) faithfully embodies V10 | Combining verified markers + transfer beats transfer-alone at predicting BeatAML ex-vivo response in 4/4 verified pairs (sorafenib ρ=−0.47 vs −0.39 etc.); reproduced ×2. Honest scope: LOW confidence, one cohort, most correlation is generic proliferation (V8/N1); drug-specific-beyond-prolif remains weak (V9). | engine_v1_metrics.json |
+| V11 | engine v1 (shipped) faithfully embodies V10, using genome-wide-robust markers | Markers now sourced from B5 (genome-wide screen). Combining marker+transfer beats transfer-alone at predicting BeatAML ex-vivo response in 3/3 genome-wide-robust pairs (sorafenib ρ=−0.47 vs −0.39; selumetinib −0.31 vs −0.25; trametinib −0.30 vs −0.24); reproduced ×2. LOW confidence, one cohort, most correlation is generic proliferation (V8/N1). | engine_v1_metrics.json |
+| V12 | Genome-wide mutation→drug marker screen (B5): 177 robust markers | 3051 gene×drug pairs in BeatAML; 177 survive BH-FDR<0.05 + FLT3-ITD/prolif-deconfounding + split-half direction-replication. Dominated by **FLT3-ITD→FLT3 inhibitors** (66; sorafenib BHq=4e-26) and **RAS(KRAS/NRAS)→MEK** — textbook actionable AML biology. 114 sensitizing / 63 resistance (incl. TP53→resistance). ONE cohort — needs external replication. | B5_metrics.json, discovered_markers.json |
+
 
 ## FALSIFIED (removed from the working hypothesis, with the killing test)
 - **Therapy-SELECTION coordinate system** — 0/16 subtype-adjusted axis×arm interactions survive BH in I-SPY2
@@ -30,6 +32,12 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
   r(R_prolif,MKI67)=0.43 → same two known axes (compression_metrics.json).
 - **PI3K mechanistic specificity** — flips on GDSC1 external (m5b_external_gdsc1_metrics.json).
 - **Scout-2 "de novo generative design"** — corrected to scaffold-hopping (INTERCEPTA VISION_AUDIT).
+
+## REFINED by the genome-wide screen (B5) — earlier pairwise claims tightened
+- **V4 NPM1→Cabozantinib** and **V6 DNMT3A→Dasatinib** do NOT independently survive genome-wide BH-FDR when
+  co-adjusted for FLT3-ITD. They are real but MODEST pairwise effects; cabozantinib sensitivity is largely the
+  co-occurring **FLT3-ITD** (the genome-wide-robust cabo marker). **V5 NRAS→MEK is CONFIRMED genome-wide.**
+  The engine's marker table was updated accordingly (cabo→FLT3-ITD; DNMT3A→dasatinib dropped).
 
 ## NOT TESTABLE ON CURRENT DATA (Constitution outcome 3 — with the exact missing data)
 - **RNA-velocity "time machine" (pre-resistance detection)** — velocity outputs are pseudotime/magnitude only;

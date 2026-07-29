@@ -1,8 +1,8 @@
 {
-  "git_sha": "a15934484d63ad03473031aeda894933bfe7222d",
+  "git_sha": "277ab3e1a8d679ce23a006fdf87c3065e450103a",
   "python": "3.11.14",
   "sklearn": "1.8.0",
-  "timestamp_utc": "2026-07-29T07:27:50Z",
+  "timestamp_utc": "2026-07-29T07:40:27Z",
   "fitted_drugs": [
     "dasatinib",
     "selumetinib",
@@ -10,14 +10,6 @@
     "trametinib"
   ],
   "pairs": [
-    {
-      "drug": "dasatinib",
-      "marker": "DNMT3A",
-      "n": 493,
-      "rho_combined": 0.1442,
-      "rho_transfer_only": 0.1979,
-      "combined_beats_transfer": true
-    },
     {
       "drug": "selumetinib",
       "marker": "NRAS",
@@ -43,8 +35,8 @@
       "combined_beats_transfer": true
     }
   ],
-  "n_pairs": 4,
-  "n_combined_beats": 4,
+  "n_pairs": 3,
+  "n_combined_beats": 3,
   "engine_valid": true,
   "note": "Re-demonstrates LEDGER V10 through the shipped engine API. Weak effects; one cohort; confidence=LOW."
 }
