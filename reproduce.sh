@@ -26,4 +26,6 @@ echo "== B4: mechanism-anchored integration =="
 "$PY" experiments/B4_mechanism_integration/run.py
 echo "== engine v1 validation =="
 "$PY" experiments/engine_v1_validation/run.py
+echo "== B5 marker discovery =="
+"$PY" experiments/B5_marker_discovery/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="
