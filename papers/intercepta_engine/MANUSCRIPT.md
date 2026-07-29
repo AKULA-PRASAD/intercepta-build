@@ -1,4 +1,4 @@
-# A reproducible cell-line–derived transcriptomic drug-response engine: where transfer works, where it doesn't, and an honest human-validation null
+# A reproducible cell-line–derived transcriptomic drug-response engine: where transfer works, where it doesn't, and two decisive replication nulls (clinical and functional)
 
 **INTERCEPTA build.** Draft manuscript v1 (2026-07-29). Every quantitative claim traces to a committed,
 reproduced-×2 metrics file in `experiments/`, `verification/`, and `LEDGER.md` of
@@ -119,8 +119,9 @@ not venetoclax (ρ=−0.03) — and venetoclax is predicted only by BCL2-depende
 The one asymmetry is biologically expected rather than artifactual: BCL2-dependency also carries some signal for
 FLT3 inhibitors (ρ=+0.10), consistent with FLT3-ITD AML being BCL2-dependent/venetoclax-sensitive (the rationale
 for venetoclax+FLT3-inhibitor combinations) — BCL2-dependence is simply a broader apoptotic-priming feature than
-FLT3-dependence. Thus the functional signal reads *which* vulnerability a tumor carries, and the FLT3 result (V19)
-generalizes to a second, mechanistically-independent AML pillar (B18).
+FLT3-dependence. Thus, *within BeatAML*, the functional signal reads *which* vulnerability a tumor carries, extending the FLT3
+result (V19) to a second, mechanistically-independent AML pillar (B18) — a within-cohort property that, as the
+next paragraphs show, did not survive external replication.
 
 We also tested the obvious circularity concern — that a pan-cancer dependency model including AML lines might
 simply re-detect AML lineage in an all-AML patient cohort. Retraining the FLT3-dependency model with **all 25
@@ -130,44 +131,56 @@ is therefore genuine cross-lineage functional transfer, not lineage memorization
 lines does abolish the beyond-ITD effect, but that reflects the hematopoietic biology of FLT3-dependence (only two
 FLT3-dependent solid-tumor anchors remain in DepMap), not a failure of the result (B19).
 
-The decisive test of any biomarker is independent replication, and here the functional-inference result did not
-pass it. We repeated the analysis in the FIMM/Malani AML cohort (Zenodo 7370747; Helsinki; DSRT drug-sensitivity-
-score assay — a different institution and readout from BeatAML), 163 patients with matched RNA, seven FLT3
-inhibitors, venetoclax, and FLT3/NPM1 status, all pre-registered (B20). The known biology replicated cleanly:
-FLT3-mutation strongly predicted FLT3-inhibitor sensitivity for all five testable inhibitors (p=10⁻⁵–10⁻³), and
-the inferred dependency itself remained coherent (it tracked FLT3 expression, ρ=+0.38, with 96.5% feature-gene
-overlap) — so this is a fair test, not a normalization artifact. But the claim of interest failed: inferred-FLT3-
-dependency did not robustly predict FLT3-inhibitor response (proliferation-adjusted pooled ρ=+0.05, p=0.08; per
-drug inconsistent, e.g. sorafenib −0.13, quizartinib +0.11), it added nothing beyond the mutation (meta β=−0.02,
-p=0.92), and the target-specificity double dissociation did not reach significance (permutation p=0.13; only the
-venetoclax→BCL2 direction was weakly consistent). We therefore report V19/V20 honestly as **BeatAML-specific and
-externally non-replicated**: the standard FLT3-mutation→FLT3-inhibitor relationship generalizes across cohorts,
-but our expression-inferred refinement does not. This is a first-class negative. It suggests that a functional
-layer with genuine, transferable value likely requires perturbation data measured *in the patients themselves*
-(the prospective functional-precision design, Track-1) rather than dependency inferred from a pan-cancer cell-line
-map — and it is exactly the kind of result that a single-cohort analysis would have overstated.
+Within BeatAML the signal was thus robust and target-specific — so we escalated the tests. First, does the
+ex-vivo signal reach a *clinical* endpoint? In a pre-registered Cox model on overall survival (n=644 patients,
+395 deaths, 106 FLT3-inhibitor–treated), the inferred-dependency×FLT3i-treatment interaction was **null**
+(HR=0.89, p=0.56), as was dependency→survival within treated (HR=0.92, p=0.50) and untreated (HR=0.97, p=0.65).
+This is honest and expected: BeatAML records no treatment dates and no first-line FLT3i, so immortal-time and
+confounding-by-indication bias *toward* a spurious positive — making the null the interpretable result. A survival
+benefit is not establishable from retrospective data of this kind and requires a prospective design (B17).
 
-We tested that boundary directly. In a pre-registered Cox model on overall survival (n=644 patients, 395 deaths,
-106 FLT3-inhibitor–treated), the inferred-dependency×FLT3i-treatment interaction was **null** (HR=0.89, p=0.56),
-as was dependency→survival within treated (HR=0.92, p=0.50) and untreated (HR=0.97, p=0.65). This is expected and
-honest: BeatAML records no treatment dates and no first-line FLT3i, so immortal-time and confounding-by-indication
-bias *toward* a spurious positive — making the null the interpretable result. The strong *ex-vivo* signal thus
-does not, and on this retrospective design cannot, establish a *survival* benefit. It bounds the lead precisely:
-the clinical endpoint requires a prospective design, not more observational data (B17).
+Second, and decisively, does the signal even replicate *ex-vivo* in an independent cohort? The decisive test of any
+biomarker is independent replication, and here the functional-inference result did not pass it. We repeated the
+analysis in the FIMM/Malani AML cohort (Zenodo 7370747; Helsinki; DSRT drug-sensitivity-score assay — a different
+institution and readout from BeatAML), 163 patients with matched RNA, seven FLT3 inhibitors, venetoclax, and
+FLT3/NPM1 status, all pre-registered (B20). The known biology replicated cleanly: FLT3-mutation strongly predicted
+FLT3-inhibitor sensitivity for all five testable inhibitors (p=10⁻⁵–10⁻³), and the inferred dependency itself
+remained coherent (it tracked FLT3 expression, ρ=+0.38, with 96.5% feature-gene overlap) — so this is a fair test,
+not a normalization artifact. But the claim of interest failed: inferred-FLT3-dependency did not robustly predict
+FLT3-inhibitor response (proliferation-adjusted pooled ρ=+0.05, p=0.08; per drug inconsistent, e.g. sorafenib
+−0.13, quizartinib +0.11), it added nothing beyond the mutation (meta β=−0.02, p=0.92), and the target-specificity
+double dissociation did not reach significance (permutation p=0.13; only the venetoclax→BCL2 direction was weakly
+consistent). A focused post-hoc test of whether the signal at least survives for the FLT3-*selective* inhibitors
+(quizartinib, crenolanib) consistently across both cohorts was also negative — per-drug effects are unstable
+across cohorts (sorafenib, the strongest in BeatAML, flips sign in FIMM) and selectivity does not separate them
+(B21). We therefore report V19/V20 honestly as **BeatAML-specific and externally non-replicated**: the standard
+FLT3-mutation→FLT3-inhibitor relationship generalizes across cohorts, but our expression-inferred refinement does
+not. This is a first-class negative. It suggests that a functional layer with genuine, transferable value likely
+requires perturbation data measured *in the patients themselves* (the prospective functional-precision design,
+Track-1) rather than dependency inferred from a pan-cancer cell-line map — and it is exactly the kind of result
+that a single-cohort analysis would have overstated.
 
 ## 3. Discussion
 
 The honest arc is: transcriptomic transfer is **real but weak** where the readout is a direct in-vitro/ex-vivo
 drug measurement (cell lines, AML ex-vivo), and it **fails** at the clinical endpoint once cancer type is
-controlled. Three points deserve emphasis. First, **leakage and baselines matter**: the same pipeline reports
+controlled. Four points deserve emphasis. First, **leakage and baselines matter**: the same pipeline reports
 +0.278 (leaky) vs +0.212 (clean) vs a +0.058 parameter-free floor — reporting only the first would triple-count
 the achievement. Second, **hand-picked associations can evaporate under genome-wide correction** (NPM1→
-cabozantinib), while the truly robust markers are the textbook ones (FLT3-ITD, RAS). Third, and most important,
-**the cell-line→human gap is not closed by better models but is bounded by confounding**: observational human
-response is dominated by cancer type, stage, and regimen (multi-drug), so a per-drug transcriptomic predictor
-cannot be validated at the drug level from data of this kind. A dbGaP/EGA application for more observational data
-would face the identical ceiling; genuine clinical prediction requires **prospective, controlled, single-agent**
-cohorts.
+cabozantinib), while the truly robust markers are the textbook ones (FLT3-ITD, RAS). Third, **the cell-line→human
+gap is not closed by better models but is bounded by confounding**: observational human response is dominated by
+cancer type, stage, and regimen (multi-drug), so a per-drug transcriptomic predictor cannot be validated at the
+drug level from data of this kind. A dbGaP/EGA application for more observational data would face the identical
+ceiling; genuine clinical prediction requires **prospective, controlled, single-agent** cohorts. Fourth, and most
+instructive, our single most promising positive — a functional-inference layer that, in BeatAML, appeared to beat
+the standard FLT3-ITD biomarker (proliferation-independent, mutation-independent, target-specific, and robust to
+lineage-leakage) — **did not survive independent replication**. It is a clean illustration of why external
+replication, not internal robustness, is the decisive test: every within-cohort control passed, yet the effect
+was BeatAML-specific. The recurring wall across this entire program is the same — signals that recover *known*
+biology (proliferation, cancer type, established markers) generalize; putatively *novel*, drug-specific,
+single-cohort refinements do not. The implication is consistent and constructive: a functional layer with real,
+transferable value must be built on perturbation data measured *in the target patients* (prospective
+functional-precision cohorts, Track-1), not inferred from a pan-cancer cell-line map.
 
 **Limitations.** Cross-platform normalization is crude (per-gene z). PDX/ex-vivo are proxies. TCGA response is
 coarse and regimen-attributed. Effect sizes throughout are small. We make no novel-molecule, therapy-selection,
@@ -194,10 +207,12 @@ Full methods, code, pre-registrations, and per-experiment metrics are in the rep
 Code, all pre-registrations (`prereg/`), all metrics (`experiments/*/results/`), the evidence ledger
 (`LEDGER.md`), and the integrity record (`INTEGRITY_SWEEP.md`) are public at
 `github.com/AKULA-PRASAD/intercepta-build`. Inputs are public (GDSC, DepMap/CCLE, PRISM, PDXE [Gao et al. 2015],
-TCGA via UCSC Xena + curated clinical drug response) except BeatAML (dbGaP phs001657, controlled). No patient-
-level data is redistributed; `data/MANIFEST.md` gives sha256 + access class for every input.
+TCGA via UCSC Xena + curated clinical drug response, and the FIMM/Malani AML functional-precision cohort [Zenodo
+7370747, CC-BY 4.0, used for the external-replication test B20/B21]) except BeatAML (dbGaP phs001657, controlled).
+No patient-level data is redistributed; `data/MANIFEST.md` gives sha256/MD5 + access class for every input.
 
 ## 6. Key references
 GDSC (Yang 2013); DepMap/CCLE (Ghandi 2019); PRISM (Corsello 2020); BeatAML (Tyner 2018); PDXE (Gao 2015);
-TCGA-CDR (Liu 2018); UCSC Xena (Goldman 2020); curated TCGA drug response (lifeome). Full citations to be
+TCGA-CDR (Liu 2018); UCSC Xena (Goldman 2020); curated TCGA drug response (lifeome); FIMM/Malani functional
+precision medicine AML cohort (Malani et al., Cancer Discovery 2022; Zenodo 7370747). Full citations to be
 completed for submission.
