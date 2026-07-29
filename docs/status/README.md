@@ -1,3 +1,5 @@
+> ⚠️ SUPERSEDED stale README — contains retracted claims (5/5 trials, universal/any-disease). See /README.md and /LEDGER.md.
+
 # INTERCEPTA
 
 **Universal Computational Drug Discovery Platform**
