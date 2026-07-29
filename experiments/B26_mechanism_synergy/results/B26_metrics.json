@@ -1,0 +1,43 @@
+{
+  "git_sha": "6fcf9940d80a1e88f3f1bce16dd9745015519405",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T18:26:26Z",
+  "seed": 42,
+  "data": {
+    "source": "O'Neil (TDC) + DepMap CRISPR/expr",
+    "n": 13315,
+    "n_pairs": 410,
+    "n_drugs": 31,
+    "n_cells": 32
+  },
+  "leave_combination_out_spearman": {
+    "FP": 0.6291,
+    "MECH": 0.458,
+    "FP+MECH": 0.6418,
+    "cell_only": 0.1298
+  },
+  "leave_drug_out": {
+    "FP": {
+      "spearman": 0.1615,
+      "n": 2414
+    },
+    "MECH": {
+      "spearman": 0.0759,
+      "n": 2414
+    },
+    "FP+MECH": {
+      "spearman": 0.1735,
+      "n": 2414
+    },
+    "cell_only": {
+      "spearman": -0.0997,
+      "n": 2414
+    }
+  },
+  "mech_vs_fp_drugout_delta_p": 0.001,
+  "H_mech_novel_drug": false,
+  "H_add": true,
+  "H_sanity": true,
+  "verdict": "HONEST NEGATIVE: mechanism (target-dependency) features do NOT beat fingerprints for novel drugs (MECH 0.0759 vs FP 0.1615) -> target co-dependency does not encode transferable synergy beyond chemistry. The known-drug-combination capability (V23) stands."
+}

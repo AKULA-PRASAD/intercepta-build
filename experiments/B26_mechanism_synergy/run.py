@@ -48,9 +48,10 @@ syn = syn.copy(); syn["ach"] = syn["Cell_Line_ID"].map(lambda c: name2ach.get(no
 # keep rows with mapped CRISPR cell + both drugs curated + targets present in CRISPR
 crispr_genes = set(cr.columns)
 def tgt_ok(d): return d in TARGETS and any(g in crispr_genes for g in TARGETS[d])
-syn = syn[syn["ach"].isin(set(cr.index)) & syn["Drug1_ID"].map(tgt_ok) & syn["Drug2_ID"].map(tgt_ok)].reset_index(drop=True)
+ok_cells = set(cr.index) & set(rna.index)   # cell must have BOTH CRISPR dependency and expression
+syn = syn[syn["ach"].isin(ok_cells) & syn["Drug1_ID"].map(tgt_ok) & syn["Drug2_ID"].map(tgt_ok)].reset_index(drop=True)
 cells = sorted(syn["ach"].unique())
-y = syn["Synergy_Loewe"].values.astype(float)
+y = syn["Y"].values.astype(float)   # O'Neil Loewe synergy (cached column name)
 pair_key = (syn["Drug1_ID"] + "|" + syn["Drug2_ID"]).apply(lambda s: "|".join(sorted(s.split("|")))).values
 print(f"B26 mechanism-synergy | n={len(y)} pairs={len(set(pair_key))} drugs={len(set(syn['Drug1_ID'])|set(syn['Drug2_ID']))} cells={len(cells)}", flush=True)
 
