@@ -1,0 +1,31 @@
+DRUG_NAME,target_str,pathway_name,median_auc,n_cell_lines,targets,n_top_gene_hits,n_any_gene_hits,top_gene_hits,composite_score
+Sepantronium bromide,BIRC5,Apoptosis regulation,0.15197,50,['BIRC5'],0,1,[],0.8680300000000001
+Staurosporine,Broad spectrum kinase inhibitor,RTK signaling,0.276965,51,['BROAD SPECTRUM KINASE INHIBITOR'],0,0,[],0.723035
+Foretinib,"MET, KDR, TIE2, VEGFR3/FLT4, RON, PDGFR, FGFR1, EGFR",RTK signaling,0.729878,49,"['MET', 'KDR', 'TIE2', 'VEGFR3/FLT4', 'RON', 'PDGFR', 'FGFR1', 'EGFR']",2,4,"['FGFR1', 'EGFR']",0.550122
+Dactinomycin,RNA polymerase,Other,0.4704825,80,['RNA POLYMERASE'],0,0,[],0.5295175
+MG-132,"Proteasome, CAPN1",Protein stability and degradation,0.520195,51,"['PROTEASOME', 'CAPN1']",0,0,[],0.47980500000000004
+Dinaciclib,"CDK1, CDK2, CDK5, CDK9",Cell cycle,0.600203,47,"['CDK1', 'CDK2', 'CDK5', 'CDK9']",0,2,[],0.43979699999999994
+CDK9_5038,CDK9,Cell cycle,0.5732155,30,['CDK9'],0,0,[],0.4267845
+Sabutoclax,"BCL2,  BCL-XL,  BFL1, MCL1",Apoptosis regulation,0.658729,47,"['BCL2', 'BCL-XL', 'BFL1', 'MCL1']",0,1,[],0.361271
+Daporinad,NAMPT,Metabolism,0.6406,35,['NAMPT'],0,0,[],0.35940000000000005
+CDK9_5576,CDK9,Cell cycle,0.6417625,30,['CDK9'],0,0,[],0.3582375
+Luminespib,HSP90,Protein stability and degradation,0.6453415,50,['HSP90'],0,0,[],0.3546585
+Gemcitabine,Pyrimidine antimetabolite,DNA replication,0.671352,51,['PYRIMIDINE ANTIMETABOLITE'],0,0,[],0.32864800000000005
+Obatoclax Mesylate,"BCL2, BCL-XL, BCL-W, MCL1",Apoptosis regulation,0.6967355,34,"['BCL2', 'BCL-XL', 'BCL-W', 'MCL1']",0,1,[],0.32326450000000007
+Telomerase Inhibitor IX,Telomerase,Genome integrity,0.6940675000000001,50,['TELOMERASE'],0,0,[],0.30593249999999994
+GNE-317,PI3Kalpha,PI3K/MTOR signaling,0.6997519999999999,48,['PI3KALPHA'],0,0,[],0.30024800000000007
+Romidepsin,"HDAC1, HDAC2, HDAC3, HDAC8",Chromatin histone acetylation,0.7825,30,"['HDAC1', 'HDAC2', 'HDAC3', 'HDAC8']",0,4,[],0.29750000000000004
+AZD7762,"CHEK1, CHEK2",Cell cycle,0.7333565,50,"['CHEK1', 'CHEK2']",0,1,[],0.28664350000000005
+LMP744,TOP1,DNA replication,0.738936,30,['TOP1'],0,1,[],0.281064
+PBD-288,,Unclassified,0.72001,34,[],0,0,[],0.27998999999999996
+AZ960,"JAK2, JAK3","Other, kinases",0.777339,47,"['JAK2', 'JAK3']",0,2,[],0.262661
+Epirubicin,Anthracycline,DNA replication,0.7413084999999999,50,['ANTHRACYCLINE'],0,0,[],0.2586915000000001
+BI-2536,"PLK1, PLK2, PLK3",Cell cycle,0.7820965,50,"['PLK1', 'PLK2', 'PLK3']",0,2,[],0.2579035
+MK-1775,"WEE1, PLK1",Cell cycle,0.784096,51,"['WEE1', 'PLK1']",0,2,[],0.25590399999999996
+Cediranib,"VEGFR, FLT1, FLT2, FLT3, FLT4, KIT, PDGFRB",RTK signaling,0.851208,50,"['VEGFR', 'FLT1', 'FLT2', 'FLT3', 'FLT4', 'KIT', 'PDGFRB']",0,5,[],0.24879200000000004
+Buparlisib,"PI3Kalpha, PI3Kdelta, PI3Kbeta, PI3Kgamma",PI3K/MTOR signaling,0.751558,50,"['PI3KALPHA', 'PI3KDELTA', 'PI3KBETA', 'PI3KGAMMA']",0,0,[],0.24844200000000005
+Bortezomib,Proteasome,Protein stability and degradation,0.7523525,50,['PROTEASOME'],0,0,[],0.24764750000000002
+ULK1_4989,ULK1,"Other, kinases",0.7530445,30,['ULK1'],0,0,[],0.2469555
+AZD8055,"MTORC1, MTORC2",PI3K/MTOR signaling,0.7532475000000001,34,"['MTORC1', 'MTORC2']",0,0,[],0.24675249999999993
+Afatinib,"EGFR, ERBB2",EGFR signaling,0.893779,51,"['EGFR', 'ERBB2']",1,2,['EGFR'],0.24622100000000002
+Pevonedistat,NAE,Other,0.7547735,50,['NAE'],0,0,[],0.24522650000000001

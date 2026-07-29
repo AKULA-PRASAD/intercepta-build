@@ -1,0 +1,11 @@
+{
+  "method": "linear regression R_ddr ~ alpha + beta * R_prolif, fit on BeatAML",
+  "reference": "Peterson & Kovyrshina 2019 Cancers 11:501 (PCNA metagene residualization)",
+  "fit_cohort": "BeatAML (n=707 samples)",
+  "alpha": 0.37896430267358094,
+  "beta": 0.3483341121414258,
+  "regression_r": 0.7891349817303881,
+  "regression_r_squared": 0.62273401939062,
+  "regression_p_value": 2.230816016837813e-151,
+  "sanity_check_corr_after_residualization_on_beataml": 3.2987761748728326e-08
+}

@@ -1,0 +1,57 @@
+{
+  "status": "SUCCESS",
+  "target": "AURKA",
+  "crystal_structure": "PDB 4J8M",
+  "validation": {
+    "co_crystal_ligand": "CD532",
+    "redock_score": -13.34,
+    "redock_all_modes": [
+      -13.34,
+      -12.3,
+      -10.51,
+      -10.09,
+      -9.969,
+      -9.688,
+      -9.568,
+      -9.545,
+      -9.298
+    ],
+    "validation": "PASS"
+  },
+  "alisertib": {
+    "best_affinity_kcal": -8.441,
+    "all_modes": [
+      -8.441,
+      -8.236,
+      -8.031,
+      -8.022,
+      -7.991,
+      -7.795,
+      -7.595,
+      -7.189,
+      -7.088
+    ],
+    "known_ic50_nM": 1.2,
+    "verdict": "STRONG binding \u2014 consistent with nM IC50"
+  },
+  "method": "AutoDock Vina v1.2.5 + PDB crystal + OpenBabel prep",
+  "box_center": [
+    117.9,
+    106.2,
+    157.4
+  ],
+  "box_size": [
+    22,
+    22,
+    22
+  ],
+  "exhaustiveness": 32,
+  "honest_interpretation": {
+    "alisertib_binds_aurka": true,
+    "binding_strength": "STRONG (-8.4 kcal/mol)",
+    "score_paradox": "Alisertib scores weaker than CD532 despite better IC50",
+    "explanation": "Crystal conformation optimized for CD532; Vina does not model induced fit",
+    "conclusion": "Confirms binding, does not replace measured IC50",
+    "utility": "Protocol validated for screening novel AURKA molecules (Scout 2)"
+  }
+}

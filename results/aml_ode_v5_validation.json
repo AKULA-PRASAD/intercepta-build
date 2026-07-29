@@ -1,0 +1,54 @@
+{
+  "model": "AML 3-compartment competition (blast+LSC+normal)",
+  "mechanism": "Active suppression of normal hematopoiesis by blasts",
+  "parameters": {
+    "r_blast": 0.039,
+    "d_blast": 0.026,
+    "r_lsc": 0.003,
+    "d_lsc": 0.001,
+    "K": 1.0,
+    "diff_rate": 0.01,
+    "dediff_base": 1e-06,
+    "dediff_stress": 0.0005,
+    "B0": 0.3,
+    "L0": 3e-07,
+    "r_normal": 0.05,
+    "d_normal": 0.02,
+    "N0": 0.6,
+    "death_threshold": 0.1,
+    "suppress": 0.11
+  },
+  "suppress_derivation": "From N=0.60\u21920.10 in 90 days (untreated OS)",
+  "untreated": {
+    "cr": false,
+    "cr_mo": null,
+    "rel_mo": null,
+    "death_mo": 4.4,
+    "lsc_nadir": 0.0,
+    "normal_at_death": 0.1
+  },
+  "induction": {
+    "cr": true,
+    "cr_mo": 0.2,
+    "rel_mo": null,
+    "death_mo": null,
+    "lsc_nadir": 0.022,
+    "normal_at_death": null
+  },
+  "venaza": {
+    "cr": true,
+    "cr_mo": 0.8,
+    "rel_mo": null,
+    "death_mo": 2.3,
+    "lsc_nadir": 0.018,
+    "normal_at_death": 0.099
+  },
+  "gilteritinib": {
+    "cr": true,
+    "cr_mo": 1.0,
+    "rel_mo": null,
+    "death_mo": 4.7,
+    "lsc_nadir": 0.161,
+    "normal_at_death": 0.1
+  }
+}

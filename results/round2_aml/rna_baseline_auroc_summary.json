@@ -1,0 +1,29 @@
+{
+  "n_drugs_evaluated": 56,
+  "n_drugs_failed": 3,
+  "auroc_mean": 0.6696369183395311,
+  "auroc_median": 0.6904951465288208,
+  "auroc_std": 0.09646500849104296,
+  "auroc_q25": 0.5917313409248388,
+  "auroc_q75": 0.7293617706412027,
+  "auroc_min": 0.4532758380859647,
+  "auroc_max": 0.917573587537782,
+  "n_drugs_auroc_ge_0_55": 50,
+  "n_drugs_auroc_ge_0_60": 41,
+  "n_drugs_auroc_ge_0_65": 34,
+  "n_drugs_auroc_ge_0_70": 23,
+  "method": "LightGBM defaults, top-1000 variable genes, 5-fold StratifiedKFold",
+  "task": "binarized AUC<100 sensitivity prediction",
+  "random_state": 42,
+  "n_top_var_genes": 1000,
+  "n_cv_folds": 5,
+  "auc_threshold": 100.0,
+  "min_sensitive": 20,
+  "min_resistant": 20,
+  "comparators": {
+    "kaalcura_round22b_mean_auroc": 0.526,
+    "kaalcura_round22b_n_drugs_trained": 141,
+    "kaalcura_round22b_n_drugs_ge_0_60": 27,
+    "note": "Round 2.2b filter was looser (>=10 each class). This baseline uses >=20 each class."
+  }
+}

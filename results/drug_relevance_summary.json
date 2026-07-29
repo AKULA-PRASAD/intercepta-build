@@ -1,0 +1,8 @@
+{
+  "total_drugs": 248,
+  "relevant": 31,
+  "possibly_relevant": 116,
+  "not_relevant": 101,
+  "method": "GTEx expression + SU2C mutation + KEGG pathway overlap",
+  "fix_for": "Audit Failure 1: 0/286 drugs predicted ineffective"
+}

@@ -1,0 +1,287 @@
+drug,targets,category,score,reasons
+Camptothecin,TOP1,NOT_RELEVANT,0,Not relevant
+Vinblastine,Microtubule destabiliser,CYTOTOXIC,3,Cytotoxic
+Cisplatin,DNA crosslinker,CYTOTOXIC,3,Cytotoxic
+Cytarabine,Antimetabolite,CYTOTOXIC,3,Cytotoxic
+Docetaxel,Microtubule stabiliser,CYTOTOXIC,3,Cytotoxic
+Methotrexate,Antimetabolite,CYTOTOXIC,3,Cytotoxic
+Tretinoin,Retinoic acid,NOT_RELEVANT,0,Not relevant
+Gefitinib,EGFR,NOT_RELEVANT,0,Not relevant
+Navitoclax,"BCL2, BCL-XL, BCL-W",NOT_RELEVANT,0,Not relevant
+Vorinostat,"HDAC inhibitor Class I, IIa, IIb, IV",NOT_RELEVANT,0,Not relevant
+Nilotinib,ABL,NOT_RELEVANT,0,Not relevant
+Refametinib,"MEK1, MEK2",NOT_RELEVANT,0,Not relevant
+Temsirolimus,MTOR,RELEVANT,2,MTOR mutated 1.6% mCRPC; MTOR in cancer pathway
+Olaparib,"PARP1, PARP2",MARGINAL,1,PARP1 in cancer pathway
+Veliparib,"PARP1, PARP2",MARGINAL,1,PARP1 in cancer pathway
+Bosutinib,"SRC, ABL, TEC",NOT_RELEVANT,0,Not relevant
+Lenalidomide,CRBN,NOT_RELEVANT,0,Not relevant
+Axitinib,"PDGFR, KIT, VEGFR",NOT_RELEVANT,0,Not relevant
+AZD7762,"CHEK1, CHEK2",RELEVANT,2,CHEK2 mutated 1.4% mCRPC; CHEK2 in cancer pathway
+GW441756,NTRK1,MARGINAL,1,NTRK1 prostate-enriched (5x)
+Lestaurtinib,"FLT3, JAK2, NTRK1, NTRK2, NTRK3",MARGINAL,1,JAK2 in cancer pathway
+SB216763,"GSK3A, GSK3B",NOT_RELEVANT,0,Not relevant
+Tanespimycin,HSP90,NOT_RELEVANT,0,Not relevant
+Motesanib,"VEGFR, RET, KIT, PDGFR",NOT_RELEVANT,0,Not relevant
+KU-55933,ATM,HIGHLY_RELEVANT,3,ATM mutated 5.9% mCRPC; ATM in cancer pathway
+Elesclomol,HSP90,NOT_RELEVANT,0,Not relevant
+Afatinib,"EGFR, ERBB2",MARGINAL,1,ERBB2 mutated 1.2% mCRPC
+Vismodegib,SMO,NOT_RELEVANT,0,Not relevant
+Staurosporine,Broad spectrum kinase inhibitor,CYTOTOXIC,3,Cytotoxic
+PLX-4720,BRAF,RELEVANT,2,BRAF mutated 1.2% mCRPC; BRAF in cancer pathway
+BX795,"TBK1, PDK1 (PDPK1), IKK, AURKB, AURKC",NOT_RELEVANT,0,Not relevant
+NU7441,DNAPK,NOT_RELEVANT,0,Not relevant
+SL0101,"RSK, AURKB, PIM1, PIM3",NOT_RELEVANT,0,Not relevant
+Doramapimod,"p38, JNK2",NOT_RELEVANT,0,Not relevant
+JNK Inhibitor VIII,JNK,NOT_RELEVANT,0,Not relevant
+Wee1 Inhibitor,"WEE1, CHEK1",MARGINAL,1,CHEK1 in cancer pathway
+Nutlin-3a (-),MDM2,MARGINAL,1,MDM2 in cancer pathway
+Mirin,MRE11,NOT_RELEVANT,0,Not relevant
+PD173074,"FGFR1, FGFR2, FGFR3",MARGINAL,1,FGFR1 in cancer pathway
+ZM447439,"AURKA, AURKB",MARGINAL,1,AURKA in cancer pathway
+Alisertib,AURKA,MARGINAL,1,AURKA in cancer pathway
+RO-3306,CDK1,NOT_RELEVANT,0,Not relevant
+MK-2206,"AKT1, AKT2",MARGINAL,1,AKT1 in cancer pathway
+Palbociclib,"CDK4, CDK6",MARGINAL,1,CDK4 in cancer pathway
+Dactolisib,"PI3K (class 1), MTORC1, MTORC2",NOT_RELEVANT,0,Not relevant
+Pictilisib,PI3K (class 1),NOT_RELEVANT,0,Not relevant
+AZD8055,"MTORC1, MTORC2",NOT_RELEVANT,0,Not relevant
+PD0325901,"MEK1, MEK2",NOT_RELEVANT,0,Not relevant
+SB590885,BRAF,RELEVANT,2,BRAF mutated 1.2% mCRPC; BRAF in cancer pathway
+Selumetinib,"MEK1, MEK2",NOT_RELEVANT,0,Not relevant
+CCT007093,PPM1D,NOT_RELEVANT,0,Not relevant
+Obatoclax Mesylate,"BCL2, BCL-XL, BCL-W, MCL1",NOT_RELEVANT,0,Not relevant
+EHT-1864,"RAC1, RAC2, RAC3",NOT_RELEVANT,0,Not relevant
+Avagacestat,"Amyloid beta20, Amyloid beta40",NOT_RELEVANT,0,Not relevant
+5-Fluorouracil,Antimetabolite (DNA & RNA),NOT_RELEVANT,0,Not relevant
+Dasatinib,"ABL, SRC, Ephrins, PDGFR, KIT",NOT_RELEVANT,0,Not relevant
+Paclitaxel,Microtubule stabiliser,CYTOTOXIC,3,Cytotoxic
+Crizotinib,"MET, ALK, ROS1",RELEVANT,2,MET mutated 1.6% mCRPC; MET in cancer pathway
+Rapamycin,MTORC1,NOT_RELEVANT,0,Not relevant
+Sorafenib,"PDGFR, KIT, VEGFR, RAF",NOT_RELEVANT,0,Not relevant
+BI-2536,"PLK1, PLK2, PLK3",MARGINAL,1,PLK1 mutated 1.4% mCRPC
+Irinotecan,TOP1,NOT_RELEVANT,0,Not relevant
+Oxaliplatin,DNA alkylating agent,CYTOTOXIC,3,Cytotoxic
+BMS-536924,"IGF1R, IR",MARGINAL,1,IGF1R mutated 1.4% mCRPC
+GSK1904529A,"IGF1R, IR",MARGINAL,1,IGF1R mutated 1.4% mCRPC
+Tozasertib,"AURKA, AURKB, AURKC, others",MARGINAL,1,AURKA in cancer pathway
+PF-4708671,S6K1,NOT_RELEVANT,0,Not relevant
+PRIMA-1MET,TP53 activation,NOT_RELEVANT,0,Not relevant
+Serdemetan,MDM2,MARGINAL,1,MDM2 in cancer pathway
+TW 37,"BCL2, BCL-XL, MCL1",NOT_RELEVANT,0,Not relevant
+Erlotinib,EGFR,NOT_RELEVANT,0,Not relevant
+CCT-018159,HSP90,NOT_RELEVANT,0,Not relevant
+Rucaparib,"PARP1, PARP2",MARGINAL,1,PARP1 in cancer pathway
+Niraparib,"PARP1, PARP2",MARGINAL,1,PARP1 in cancer pathway
+MK-1775,"WEE1, PLK1",MARGINAL,1,PLK1 mutated 1.4% mCRPC
+Dinaciclib,"CDK1, CDK2, CDK5, CDK9",NOT_RELEVANT,0,Not relevant
+Gemcitabine,Pyrimidine antimetabolite,NOT_RELEVANT,0,Not relevant
+Bortezomib,Proteasome,NOT_RELEVANT,0,Not relevant
+GSK269962A,"ROCK1, ROCK2",NOT_RELEVANT,0,Not relevant
+SB505124,"TGFBR1, ACVR1B, ACVR1C",NOT_RELEVANT,0,Not relevant
+Tamoxifen,ESR1,NOT_RELEVANT,0,Not relevant
+Fulvestrant,ESR,NOT_RELEVANT,0,Not relevant
+EPZ004777,DOT1L,MARGINAL,1,DOT1L mutated 1.2% mCRPC
+YK-4-279,RNA helicase A,NOT_RELEVANT,0,Not relevant
+Piperlongumine,Induces reactive oxygen species,NOT_RELEVANT,0,Not relevant
+Daporinad,NAMPT,NOT_RELEVANT,0,Not relevant
+BMS-345541,"IKK-1, IKK-2",NOT_RELEVANT,0,Not relevant
+AZ960,"JAK2, JAK3",MARGINAL,1,JAK2 in cancer pathway
+Talazoparib,"PARP1, PARP2",MARGINAL,1,PARP1 in cancer pathway
+XAV939,"TNKS1, TNKS2",NOT_RELEVANT,0,Not relevant
+Trametinib,"MEK1, MEK2",NOT_RELEVANT,0,Not relevant
+Dabrafenib,BRAF,RELEVANT,2,BRAF mutated 1.2% mCRPC; BRAF in cancer pathway
+Temozolomide,DNA alkylating agent,CYTOTOXIC,3,Cytotoxic
+Bleomycin (50 uM),dsDNA break induction,NOT_RELEVANT,0,Not relevant
+AZD5438,CDK2,NOT_RELEVANT,0,Not relevant
+IAP_5620,IAP,NOT_RELEVANT,0,Not relevant
+AZD2014,"mTORC1, mTORC2",NOT_RELEVANT,0,Not relevant
+AZD1208,"PIM1, PIM2, PIM3",NOT_RELEVANT,0,Not relevant
+AZD1332,"NTRK1, NTRK2, NTRK3",MARGINAL,1,NTRK1 prostate-enriched (5x)
+SN-38,TOP1,NOT_RELEVANT,0,Not relevant
+Bicalutamide,AR,HIGHLY_RELEVANT,5,AR mutated 14% mCRPC; AR prostate-enriched (3x); AR in cancer pathway
+Ruxolitinib,"JAK1, JAK2",RELEVANT,2,JAK1 mutated 2.6% mCRPC; JAK1 in cancer pathway
+Linsitinib,IGF1R,MARGINAL,1,IGF1R mutated 1.4% mCRPC
+Epirubicin,Anthracycline,NOT_RELEVANT,0,Not relevant
+Cyclophosphamide,Alkylating agent,NOT_RELEVANT,0,Not relevant
+Pevonedistat,NAE,NOT_RELEVANT,0,Not relevant
+Sapitinib,"EGFR, ERBB2, ERBB3",MARGINAL,1,ERBB2 mutated 1.2% mCRPC
+Uprosertib,"AKT1, AKT2, AKT3",MARGINAL,1,AKT1 in cancer pathway
+LCL161,"XIAP, IAP1, IAP2",NOT_RELEVANT,0,Not relevant
+Lapatinib,"EGFR, ERBB2",MARGINAL,1,ERBB2 mutated 1.2% mCRPC
+Luminespib,HSP90,NOT_RELEVANT,0,Not relevant
+Alpelisib,PI3Kalpha,NOT_RELEVANT,0,Not relevant
+Taselisib,PI3K (beta sparing),NOT_RELEVANT,0,Not relevant
+EPZ5676,DOT1L,MARGINAL,1,DOT1L mutated 1.2% mCRPC
+SCH772984,"ERK1, ERK2",NOT_RELEVANT,0,Not relevant
+IWP-2,PORCN,NOT_RELEVANT,0,Not relevant
+Leflunomide,Pyrimidine synthesis inhibitor,NOT_RELEVANT,0,Not relevant
+GSK2801,nan,NOT_RELEVANT,0,Not relevant
+Bromosporine,"CECR2, BRD2, BRD4, BRD9",MARGINAL,1,BRD4 mutated 1.2% mCRPC
+SGC-CBP30,"EP300, CBP",NOT_RELEVANT,0,Not relevant
+GSK-LSD1,KDM1,NOT_RELEVANT,0,Not relevant
+BDOCA000347a,"BRPF1, BRPF2, BRPF3",MARGINAL,1,BRPF1 mutated 1.6% mCRPC
+BDF00022089a,"BRPF1, BRPF2, BRPF3",MARGINAL,1,BRPF1 mutated 1.6% mCRPC
+BDILV000379a,"BAZ2A, BAZ2B",MARGINAL,1,BAZ2A mutated 1.4% mCRPC
+Entinostat,"HDAC1, HDAC3",NOT_RELEVANT,0,Not relevant
+OSI-027,"MTORC1, MTORC2",NOT_RELEVANT,0,Not relevant
+LGK974,PORCN,NOT_RELEVANT,0,Not relevant
+VE-822,ATR,MARGINAL,1,ATR mutated 1.4% mCRPC
+WZ4003,"NUAK1, NUAK2",NOT_RELEVANT,0,Not relevant
+CZC24832,PI3Kgamma,NOT_RELEVANT,0,Not relevant
+AZD5582,"XIAP, cIAP",NOT_RELEVANT,0,Not relevant
+GSK2606414,PERK,NOT_RELEVANT,0,Not relevant
+PFI3,"Polybromo 1, SMARCA4, SMARCA2",MARGINAL,1,SMARCA2 mutated 1.4% mCRPC
+PCI-34051,"HDAC8, HDAC6, HDAC1",NOT_RELEVANT,0,Not relevant
+Wnt-C59,PORCN,NOT_RELEVANT,0,Not relevant
+I-BET-762,"BRD2, BRD3, BRD4",MARGINAL,1,BRD3 mutated 1.2% mCRPC
+RVX-208,BRD4,MARGINAL,1,BRD4 mutated 1.2% mCRPC
+OTX015,"BRD2, BRD3, BRD4",MARGINAL,1,BRD3 mutated 1.2% mCRPC
+GSK343,EZH2,NOT_RELEVANT,0,Not relevant
+ML323,"USP1, UAF1",NOT_RELEVANT,0,Not relevant
+Entospletinib,SYK,NOT_RELEVANT,0,Not relevant
+PRT062607,SYK,NOT_RELEVANT,0,Not relevant
+Ribociclib,"CDK4, CDK6",MARGINAL,1,CDK4 in cancer pathway
+AGI-6780,IDH2 R140Q mutant,NOT_RELEVANT,0,Not relevant
+Picolinici-acid,Inflammatory related,NOT_RELEVANT,0,Not relevant
+AZD5153,BRD4,MARGINAL,1,BRD4 mutated 1.2% mCRPC
+CDK9_5576,CDK9,NOT_RELEVANT,0,Not relevant
+CDK9_5038,CDK9,NOT_RELEVANT,0,Not relevant
+Eg5_9814,KSP11,NOT_RELEVANT,0,Not relevant
+ERK_2440,"ERK1,ERK2",NOT_RELEVANT,0,Not relevant
+ERK_6604,"ERK1,ERK2",NOT_RELEVANT,0,Not relevant
+IRAK4_4710,IRAK4,NOT_RELEVANT,0,Not relevant
+JAK1_8709,JAK1,RELEVANT,2,JAK1 mutated 2.6% mCRPC; JAK1 in cancer pathway
+AZD5991,MCL1,NOT_RELEVANT,0,Not relevant
+PAK_5339,"PAK1, PAK2",NOT_RELEVANT,0,Not relevant
+TAF1_5496,TAF1,NOT_RELEVANT,0,Not relevant
+ULK1_4989,ULK1,MARGINAL,1,ULK1 mutated 1.2% mCRPC
+VSP34_8731,VSP34,NOT_RELEVANT,0,Not relevant
+IGF1R_3801,IGFR1,NOT_RELEVANT,0,Not relevant
+JAK_8517,"JAK1, JAK2",RELEVANT,2,JAK1 mutated 2.6% mCRPC; JAK1 in cancer pathway
+GSK2256098C,FAK1,NOT_RELEVANT,0,Not relevant
+GSK2276186C,"JAK1, JAK2, JAK3",RELEVANT,2,JAK1 mutated 2.6% mCRPC; JAK1 in cancer pathway
+GSK2110183B,"AKT1, AKT2, AKT3",MARGINAL,1,AKT1 in cancer pathway
+GSK626616AC,DYRK1A,NOT_RELEVANT,0,Not relevant
+GSK3337463A,NIK,NOT_RELEVANT,0,Not relevant
+GSK2830371A,PPM1D,NOT_RELEVANT,0,Not relevant
+LMB_AB1,"ADRA1A, ADRB1",NOT_RELEVANT,0,Not relevant
+LMB_AB2,GADD34,NOT_RELEVANT,0,Not relevant
+LMB_AB3,PPP1R15B,NOT_RELEVANT,0,Not relevant
+AZD4547,"FGFR1, FGFR2, FGFR3",MARGINAL,1,FGFR1 in cancer pathway
+Ibrutinib,BTK,NOT_RELEVANT,0,Not relevant
+Zoledronate,,NOT_RELEVANT,0,Not relevant
+Acetalax,nan,NOT_RELEVANT,0,Not relevant
+Topotecan,TOP1,NOT_RELEVANT,0,Not relevant
+Teniposide,nan,NOT_RELEVANT,0,Not relevant
+Mitoxantrone,TOP2,NOT_RELEVANT,0,Not relevant
+Dactinomycin,RNA polymerase,NOT_RELEVANT,0,Not relevant
+Bleomycin,dsDNA break induction,NOT_RELEVANT,0,Not relevant
+Fludarabine,Antimetabolite,CYTOTOXIC,3,Cytotoxic
+Nelarabine,nan,NOT_RELEVANT,0,Not relevant
+Dacarbazine,CP11A,NOT_RELEVANT,0,Not relevant
+Romidepsin,"HDAC1, HDAC2, HDAC3, HDAC8",MARGINAL,1,HDAC2 mutated 1.4% mCRPC
+123829,nan,NOT_RELEVANT,0,Not relevant
+765771,nan,NOT_RELEVANT,0,Not relevant
+123138,nan,NOT_RELEVANT,0,Not relevant
+Podophyllotoxin bromide,nan,NOT_RELEVANT,0,Not relevant
+50869,nan,NOT_RELEVANT,0,Not relevant
+Dihydrorotenone,nan,NOT_RELEVANT,0,Not relevant
+720427,nan,NOT_RELEVANT,0,Not relevant
+667880,nan,NOT_RELEVANT,0,Not relevant
+Gallibiscoquinazole,nan,NOT_RELEVANT,0,Not relevant
+L-Oxonoreleagnine,nan,NOT_RELEVANT,0,Not relevant
+729189,nan,NOT_RELEVANT,0,Not relevant
+741909,nan,NOT_RELEVANT,0,Not relevant
+743380,nan,NOT_RELEVANT,0,Not relevant
+Elephantin,nan,NOT_RELEVANT,0,Not relevant
+150412,nan,NOT_RELEVANT,0,Not relevant
+Sinularin,nan,NOT_RELEVANT,0,Not relevant
+615590,nan,NOT_RELEVANT,0,Not relevant
+630600,nan,NOT_RELEVANT,0,Not relevant
+LMP744,TOP1,NOT_RELEVANT,0,Not relevant
+776928,nan,NOT_RELEVANT,0,Not relevant
+Schweinfurthin A,nan,NOT_RELEVANT,0,Not relevant
+BEN,nan,NOT_RELEVANT,0,Not relevant
+Sabutoclax,"BCL2,  BCL-XL,  BFL1, MCL1",NOT_RELEVANT,0,Not relevant
+LY2109761,TGFB1,NOT_RELEVANT,0,Not relevant
+OF-1,"BRPF1B, BRPF2",NOT_RELEVANT,0,Not relevant
+MN-64,"TNKS1, TNKS2",NOT_RELEVANT,0,Not relevant
+KRAS (G12C) Inhibitor-12,KRAS (G12C),NOT_RELEVANT,0,Not relevant
+MG-132,"Proteasome, CAPN1",MARGINAL,1,CAPN1 mutated 1.4% mCRPC
+BDP-00009066,MRCKB_HUMAN,NOT_RELEVANT,0,Not relevant
+Buparlisib,"PI3Kalpha, PI3Kdelta, PI3Kbeta, PI3Kgamma",NOT_RELEVANT,0,Not relevant
+Ulixertinib,"ERK1, ERK2",NOT_RELEVANT,0,Not relevant
+Venetoclax,BCL2,NOT_RELEVANT,0,Not relevant
+ABT737,"BCL2, BCL-XL,  BCL-W, BCL-B, BFL1",NOT_RELEVANT,0,Not relevant
+Afuresertib,"AKT1, AKT2, AKT3",MARGINAL,1,AKT1 in cancer pathway
+AGI-5198,IDH1 (R132H),NOT_RELEVANT,0,Not relevant
+AZD3759,EGFR,NOT_RELEVANT,0,Not relevant
+AZD5363,"AKT1, AKT2, AKT3, ROCK2",MARGINAL,1,AKT1 in cancer pathway
+AZD6738,ATR,MARGINAL,1,ATR mutated 1.4% mCRPC
+AZD8186,"PI3Kalpha, PI3Kbeta",NOT_RELEVANT,0,Not relevant
+Osimertinib,EGFR,NOT_RELEVANT,0,Not relevant
+Cediranib,"VEGFR, FLT1, FLT2, FLT3, FLT4, KIT, PDGFRB",MARGINAL,1,FLT1 mutated 1.4% mCRPC
+Ipatasertib,"AKT1, AKT, AKT3",MARGINAL,1,AKT1 in cancer pathway
+GDC0810,"ESR1, ESR2",NOT_RELEVANT,0,Not relevant
+GNE-317,PI3Kalpha,NOT_RELEVANT,0,Not relevant
+GSK2578215A,LRRK2,RELEVANT,2,LRRK2 mutated 4.4% mCRPC
+I-BRD9,BRD9,NOT_RELEVANT,0,Not relevant
+Telomerase Inhibitor IX,Telomerase,NOT_RELEVANT,0,Not relevant
+MIRA-1,TP53,HIGHLY_RELEVANT,4,TP53 mutated 37% mCRPC; TP53 in cancer pathway
+NVP-ADW742,IGF1R,MARGINAL,1,IGF1R mutated 1.4% mCRPC
+P22077,"USP7, USP47",RELEVANT,2,USP7 mutated 3.0% mCRPC; USP7 in cancer pathway
+Savolitinib,MET,RELEVANT,2,MET mutated 1.6% mCRPC; MET in cancer pathway
+UMI-77,MCL1,NOT_RELEVANT,0,Not relevant
+WIKI4,"TNKS1, TNKS2",NOT_RELEVANT,0,Not relevant
+Sepantronium bromide,BIRC5,NOT_RELEVANT,0,Not relevant
+MIM1,MCL1,NOT_RELEVANT,0,Not relevant
+WEHI-539,BCL-XL,NOT_RELEVANT,0,Not relevant
+BPD-00008900,nan,NOT_RELEVANT,0,Not relevant
+N25720-51-A1,nan,NOT_RELEVANT,0,Not relevant
+N27922-53-1,nan,NOT_RELEVANT,0,Not relevant
+N30652-18-1,nan,NOT_RELEVANT,0,Not relevant
+N29087-69-1,nan,NOT_RELEVANT,0,Not relevant
+HKMTI-1-005,nan,NOT_RELEVANT,0,Not relevant
+ICL-SIRT078,SIR2,NOT_RELEVANT,0,Not relevant
+UNC0638,"G9A, GLP",NOT_RELEVANT,0,Not relevant
+AGK2,"BAZ2A, BAZ2B",MARGINAL,1,BAZ2A mutated 1.4% mCRPC
+Foretinib,"MET, KDR, TIE2, VEGFR3/FLT4, RON, PDGFR, FGFR1, EGFR",RELEVANT,2,MET mutated 1.6% mCRPC; MET in cancer pathway
+BIBR-1532,TERT,NOT_RELEVANT,0,Not relevant
+Pyridostatin,G-quadruplex stabiliser,NOT_RELEVANT,0,Not relevant
+AMG-319,PI3K (beta sparing),NOT_RELEVANT,0,Not relevant
+MK-8776,"CHEK1, CHEK2, CDK2",RELEVANT,2,CHEK2 mutated 1.4% mCRPC; CHEK2 in cancer pathway
+Vinorelbine,Microtubule destabiliser,CYTOTOXIC,3,Cytotoxic
+Mycophenolic acid,nan,NOT_RELEVANT,0,Not relevant
+Remodelin,nan,NOT_RELEVANT,0,Not relevant
+VX-11e,ERK2,NOT_RELEVANT,0,Not relevant
+LJI308,"RSK2, RSK1, RSK3",NOT_RELEVANT,0,Not relevant
+AZ6102,"TNKS1, TNKS2",NOT_RELEVANT,0,Not relevant
+GSK591,PMRT5,NOT_RELEVANT,0,Not relevant
+VE821,ATR,MARGINAL,1,ATR mutated 1.4% mCRPC
+VTP-A,nan,NOT_RELEVANT,0,Not relevant
+VTP-B,nan,NOT_RELEVANT,0,Not relevant
+PBD-288,nan,NOT_RELEVANT,0,Not relevant
+POMHEX,nan,NOT_RELEVANT,0,Not relevant
+CT7033-2,"KDM4A, KDM4C, KDM4E, KDM3A, KDM6B",MARGINAL,1,KDM6B mutated 1.2% mCRPC
+GSK-LSD1-2HCl ,LSD1,NOT_RELEVANT,0,Not relevant
+5-azacytidine,DNA methyltransferases,NOT_RELEVANT,0,Not relevant
+A-366,"EHMT1, EHMT2",MARGINAL,1,EHMT1 mutated 1.6% mCRPC
+CPI-637,EP300,NOT_RELEVANT,0,Not relevant
+UNC0379,SETD8,NOT_RELEVANT,0,Not relevant
+AZD6482,PI3Kbeta,NOT_RELEVANT,0,Not relevant
+AT13148,AKT1,MARGINAL,1,AKT1 in cancer pathway
+BMS-754807,"IGF1R, IR",MARGINAL,1,IGF1R mutated 1.4% mCRPC
+JQ1,"BRD2, BRD3, BRD4, BRDT",MARGINAL,1,BRD3 mutated 1.2% mCRPC
+PFI-1,BRD4,MARGINAL,1,BRD4 mutated 1.2% mCRPC
+IOX2,EGLN1,NOT_RELEVANT,0,Not relevant
+CHIR-99021,"GSK3A, GSK3B",NOT_RELEVANT,0,Not relevant
+SGC0946,DOT1L,MARGINAL,1,DOT1L mutated 1.2% mCRPC
+GSK2830371,WIP1,NOT_RELEVANT,0,Not relevant
+THR-101,Mutant RAS,NOT_RELEVANT,0,Not relevant
+THR-102,Mutant RAS,NOT_RELEVANT,0,Not relevant
+THR-103,Mutant RAS,NOT_RELEVANT,0,Not relevant
+ascorbate (vitamin C),anti-oxidant proteins,NOT_RELEVANT,0,Not relevant
+glutathione,anti-oxidant proteins,NOT_RELEVANT,0,Not relevant
+alpha-lipoic acid,Metabolism,NOT_RELEVANT,0,Not relevant
+N-acetyl cysteine,Metabolism,NOT_RELEVANT,0,Not relevant

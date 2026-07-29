@@ -1,0 +1,39 @@
+gene,primary_tissue,primary_tissue_tpm,other_tissues_mean_tpm,other_tissues_max_tpm,selectivity_vs_mean,selectivity_vs_max,safety_classification,max_other_tissue
+KLK3,Prostate,4285.71,0.2467,2.4521,16695.5821,1740.6484,HIGHLY_SELECTIVE,Colon - Transverse
+FOLH1,Prostate,50.9607,4.2101,60.7309,12.078,0.8391,HIGHLY_SELECTIVE,Brain - Spinal cord (cervical c-1)
+AR,Prostate,21.0523,6.2642,41.0659,3.357,0.5128,TISSUE_SELECTIVE,Cervix - Endocervix
+TMPRSS2,Prostate,178.073,9.5302,113.642,18.6665,1.5669,HIGHLY_SELECTIVE,Stomach
+NKX3-1,Prostate,250.549,3.4325,67.2078,72.7845,3.7276,HIGHLY_SELECTIVE,Minor Salivary Gland
+FOXA1,Prostate,71.4145,2.419,28.7767,29.4047,2.4812,HIGHLY_SELECTIVE,Stomach
+TP53,Prostate,20.3002,16.1313,72.9493,1.2583,0.2784,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+PTEN,Prostate,27.2498,25.9223,62.4455,1.0512,0.4365,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+RB1,Prostate,15.2014,15.2413,60.606,0.9974,0.2509,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+BRCA2,Prostate,0.272,0.6541,11.1998,0.4246,0.0252,NOT_EXPRESSED,Cells - EBV-transformed lymphocytes
+BRCA1,Prostate,1.3808,2.1012,19.7684,0.6588,0.0703,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+ATM,Prostate,7.0738,7.4357,21.0283,0.9514,0.3367,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+MYC,Prostate,39.9892,57.9323,298.818,0.6903,0.1339,UBIQUITOUS,Skin - Not Sun Exposed (Suprapubic)
+PARP1,Prostate,32.0166,34.3385,173.97,0.9324,0.1841,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+PARP2,Prostate,24.5751,26.5253,79.6078,0.9265,0.3088,UBIQUITOUS,Brain - Cerebellar Hemisphere
+CDK4,Prostate,53.2521,49.1944,154.326,1.0825,0.3451,UBIQUITOUS,Cells - Cultured fibroblasts
+CDK6,Prostate,4.9219,6.0094,32.3,0.8193,0.1526,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+MTOR,Prostate,16.5626,13.8972,35.5128,1.1917,0.4665,UBIQUITOUS,Testis
+PIK3CA,Prostate,9.8873,10.5601,23.1876,0.9364,0.4267,UBIQUITOUS,Artery - Tibial
+SPOP,Prostate,49.7782,33.7776,106.326,1.4736,0.4682,UBIQUITOUS,Colon - Sigmoid
+CDK12,Prostate,13.7234,10.7847,30.2864,1.2722,0.4533,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+EZH2,Prostate,3.3245,5.66,54.6972,0.5881,0.061,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+AURKA,Prostate,1.1979,3.6626,51.32,0.3289,0.0235,LOW_IN_TARGET_TISSUE,Cells - EBV-transformed lymphocytes
+CCND1,Prostate,71.5256,35.3528,202.003,2.0229,0.3541,MODERATE_TISSUE_SELECTIVE,Cells - Cultured fibroblasts
+VEGFA,Prostate,182.111,80.2555,615.368,2.269,0.2959,MODERATE_TISSUE_SELECTIVE,Thyroid
+EGFR,Prostate,27.0509,18.9474,78.3374,1.4275,0.3454,UBIQUITOUS,Skin - Sun Exposed (Lower leg)
+ERBB2,Prostate,83.7738,36.991,130.131,2.2644,0.6438,MODERATE_TISSUE_SELECTIVE,Nerve - Tibial
+BCL2,Prostate,7.7148,7.3026,49.6889,1.0564,0.1554,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+MCL1,Prostate,149.122,176.7438,474.739,0.8437,0.3141,UBIQUITOUS,Lung
+SYP,Prostate,2.064,51.0042,446.746,0.0407,0.0046,LOW_IN_TARGET_TISSUE,Brain - Frontal Cortex (BA9)
+CHGA,Prostate,7.9323,41.5341,740.783,0.1912,0.0107,LOW_IN_TARGET_TISSUE,Pituitary
+ENO2,Prostate,43.8843,135.1821,1320.98,0.3247,0.0332,LOW_IN_TARGET_TISSUE,Brain - Cerebellar Hemisphere
+NR3C1,Prostate,15.8265,16.7122,55.2542,0.947,0.2866,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+STAT3,Prostate,93.6048,77.3258,172.983,1.2105,0.5411,UBIQUITOUS,Lung
+KLK2,Prostate,1878.28,0.4916,14.804,3744.6928,126.7915,HIGHLY_SELECTIVE,Testis
+STEAP2,Prostate,76.356,9.4084,25.6376,8.1082,2.9775,TISSUE_SELECTIVE,Cells - Cultured fibroblasts
+ACPP,Prostate,1281.35,2.4348,40.6303,524.1221,31.5293,HIGHLY_SELECTIVE,Esophagus - Mucosa
+SLC45A3,Prostate,242.22,6.2587,49.306,38.6412,4.9118,HIGHLY_SELECTIVE,Brain - Spinal cord (cervical c-1)

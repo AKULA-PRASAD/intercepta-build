@@ -1,0 +1,81 @@
+{
+  "rules": {
+    "MTOR": {
+      "escapes": [
+        {
+          "gene": "PTEN",
+          "type": "deletion",
+          "freq": 0.4,
+          "mechanism": "PTEN deletion (40% mCRPC) \u2192 PI3K constitutively active \u2192 mTOR inhibition bypassed",
+          "source": "Robinson Cell 2015, Carver Nature 2011"
+        },
+        {
+          "gene": "PIK3CA",
+          "type": "gain",
+          "freq": 0.033,
+          "mechanism": "PIK3CA activating mutation \u2192 AKT always on",
+          "source": "SU2C data"
+        }
+      ],
+      "total_escape_freq": 0.43
+    },
+    "BRAF": {
+      "escapes": [
+        {
+          "gene": "KRAS",
+          "type": "gain",
+          "freq": 0.009,
+          "mechanism": "KRAS mutation \u2192 MEK activated independently",
+          "source": "Prahallad Nature 2012"
+        }
+      ],
+      "total_escape_freq": 0.009
+    },
+    "EGFR": {
+      "escapes": [
+        {
+          "gene": "KRAS",
+          "type": "gain",
+          "freq": 0.009,
+          "mechanism": "KRAS downstream of EGFR \u2192 EGFR inhibition irrelevant",
+          "source": "Karapetis NEJM 2008"
+        }
+      ],
+      "total_escape_freq": 0.009
+    }
+  },
+  "alteration_sources": {
+    "PTEN": {
+      "loss_freq": 0.4,
+      "source": "Robinson Cell 2015: 40% any PTEN loss in mCRPC"
+    },
+    "PIK3CA": {
+      "gain_freq": 0.033,
+      "source": "SU2C SNV data"
+    },
+    "RB1": {
+      "loss_freq": 0.15,
+      "source": "Robinson Cell 2015: 15% RB1 loss"
+    },
+    "AR": {
+      "amp_freq": 0.3,
+      "source": "Viswanathan Cell 2018: 30% AR amplification"
+    },
+    "TP53": {
+      "loss_freq": 0.37,
+      "source": "SU2C: 37.2% TP53 mutation"
+    },
+    "BRCA2": {
+      "loss_freq": 0.08,
+      "source": "SU2C: 8% BRCA2 mutation"
+    },
+    "KRAS": {
+      "gain_freq": 0.009,
+      "source": "SU2C: 0.9% KRAS mutation"
+    },
+    "MYC": {
+      "amp_freq": 0.15,
+      "source": "Robinson Cell 2015: 15% MYC amplification"
+    }
+  }
+}

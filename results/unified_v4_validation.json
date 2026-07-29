@@ -1,0 +1,193 @@
+{
+  "model": "INTERCEPTA Unified ODE v4",
+  "compartments": 80,
+  "n_patients_per_arm": 50,
+  "random_seed": 42,
+  "heterogeneous_cohort": true,
+  "parameter_CVs": {
+    "r_max": 0.3,
+    "alpha_r": 0.2,
+    "alpha_ind": 0.3,
+    "d_nat": 0.4,
+    "mu_s_to_n_tx": 0.5,
+    "emax_per_drug": 0.25,
+    "ec50_per_drug": 0.3,
+    "burden": 0.25
+  },
+  "parameters": {
+    "R_MAX": 0.00678,
+    "ALPHA_R": 0.4,
+    "ALPHA_IND": 0.005,
+    "BETA": 0.000827,
+    "K_CAP": 1.0,
+    "D_NAT": 0.001,
+    "MU_S_TO_M": 0.0001,
+    "MU_S_TO_V": 5e-05,
+    "MU_S_TO_N_BASE": 1e-06,
+    "MU_S_TO_N_TX": 0.00017,
+    "PROG_THRESHOLD": 1.25,
+    "PROG_MIN_DAYS_POST_NADIR": 60
+  },
+  "trials": {
+    "TAX-327": {
+      "trial": "TAX-327",
+      "treatment": [
+        "docetaxel"
+      ],
+      "control": [
+        "mitoxantrone"
+      ],
+      "brca_profile": "overall",
+      "target_hr": 0.76,
+      "cox_hr": 0.029929315702737214,
+      "cox_hr_ci": [
+        0.011807582475382387,
+        0.07586344963515512
+      ],
+      "cox_reliable": true,
+      "logrank_p": 6.759635875434363e-25,
+      "median_ctrl_mo": 2.037910355718468,
+      "median_trt_mo": 5.522079673559721,
+      "benefit_mo": 3.484169317841252,
+      "n_events_ctrl": 50,
+      "n_events_trt": 50,
+      "pass_criterion": "HR in [0.6, 0.92] with reliable Cox",
+      "passed": false
+    },
+    "PREVAIL": {
+      "trial": "PREVAIL",
+      "treatment": [
+        "ADT",
+        "enzalutamide"
+      ],
+      "control": [
+        "ADT"
+      ],
+      "brca_profile": "overall",
+      "target_hr": null,
+      "cox_hr": 0.8096184898699305,
+      "cox_hr_ci": [
+        0.5413675932035957,
+        1.2107893183269194
+      ],
+      "cox_reliable": true,
+      "logrank_p": 0.3024757105146292,
+      "median_ctrl_mo": 15.382936233487793,
+      "median_trt_mo": 16.007457148949904,
+      "benefit_mo": 0.62452091546211,
+      "n_events_ctrl": 50,
+      "n_events_trt": 50,
+      "pass_criterion": "median trt PFS in [14.0, 22.0] mo",
+      "passed": true
+    },
+    "LATITUDE": {
+      "trial": "LATITUDE",
+      "treatment": [
+        "ADT",
+        "abiraterone"
+      ],
+      "control": [
+        "ADT"
+      ],
+      "brca_profile": "overall",
+      "target_hr": 0.66,
+      "cox_hr": 0.727684855871593,
+      "cox_hr_ci": [
+        0.4876761516957874,
+        1.085813295613396
+      ],
+      "cox_reliable": true,
+      "logrank_p": 0.11981264407993701,
+      "median_ctrl_mo": 19.393017901191875,
+      "median_trt_mo": 20.674929253982523,
+      "benefit_mo": 1.2819113527906503,
+      "n_events_ctrl": 50,
+      "n_events_trt": 50,
+      "pass_criterion": "HR in [0.52, 0.82] with reliable Cox",
+      "passed": true
+    },
+    "CHAARTED": {
+      "trial": "CHAARTED",
+      "treatment": [
+        "ADT",
+        "docetaxel"
+      ],
+      "control": [
+        "ADT"
+      ],
+      "brca_profile": "overall",
+      "target_hr": 0.61,
+      "cox_hr": 1.183450591504701,
+      "cox_hr_ci": [
+        0.795074632325828,
+        1.7615394147789487
+      ],
+      "cox_reliable": true,
+      "logrank_p": 0.4007505160685736,
+      "median_ctrl_mo": 19.393017901191875,
+      "median_trt_mo": 17.32223802360698,
+      "benefit_mo": -2.0707798775848936,
+      "n_events_ctrl": 50,
+      "n_events_trt": 50,
+      "pass_criterion": "HR in [0.47, 0.77] with reliable Cox",
+      "passed": false
+    },
+    "PROfound": {
+      "trial": "PROfound",
+      "treatment": [
+        "ADT",
+        "olaparib"
+      ],
+      "control": [
+        "ADT",
+        "enzalutamide"
+      ],
+      "brca_profile": "biallelic_cohort",
+      "target_hr": 0.34,
+      "cox_hr": 3.397531543434201e-10,
+      "cox_hr_ci": [
+        0.0,
+        Infinity
+      ],
+      "cox_reliable": false,
+      "logrank_p": 3.7263018031824704e-28,
+      "median_ctrl_mo": 11.800158350047258,
+      "median_trt_mo": 59.95400788436268,
+      "benefit_mo": 48.15384953431542,
+      "n_events_ctrl": 50,
+      "n_events_trt": 0,
+      "pass_criterion": "HR in [0.22, 0.48] with reliable Cox",
+      "passed": false
+    },
+    "TALAPRO-2": {
+      "trial": "TALAPRO-2",
+      "treatment": [
+        "ADT",
+        "enzalutamide",
+        "talazoparib"
+      ],
+      "control": [
+        "ADT",
+        "enzalutamide"
+      ],
+      "brca_profile": "hrr_cohort",
+      "target_hr": 0.45,
+      "cox_hr": 0.009435458368036595,
+      "cox_hr_ci": [
+        0.002172932958695134,
+        0.04097129378000405
+      ],
+      "cox_reliable": true,
+      "logrank_p": 3.1092095312911603e-27,
+      "median_ctrl_mo": 14.331111533762131,
+      "median_trt_mo": 59.95400788436268,
+      "benefit_mo": 45.62289635060055,
+      "n_events_ctrl": 50,
+      "n_events_trt": 2,
+      "pass_criterion": "HR in [0.33, 0.6] with reliable Cox",
+      "passed": false
+    }
+  },
+  "pass_count": 2,
+  "pass_total": 6
+}

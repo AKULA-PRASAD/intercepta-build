@@ -1,0 +1,88 @@
+/Users/kalki/INTERCEPTA/round2_aml/code/assemble_vangalen_anndata.py:116: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('anndata')` instead.
+  print(f"  anndata  : {ad.__version__}")
+
+========================================================================
+Step 0: Dependency check
+========================================================================
+  numpy    : 2.4.3
+  pandas   : 2.3.3
+  scipy    : 1.17.1
+  anndata  : 0.12.10
+
+========================================================================
+Step 1: Verify input files
+========================================================================
+  [OK] counts.mtx                   642.4 MB  /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported/counts.mtx
+  [OK] data.mtx                    1435.9 MB  /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported/data.mtx
+  [OK] gene_names.txt                 0.2 MB  /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported/gene_names.txt
+  [OK] cell_barcodes.txt              1.0 MB  /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported/cell_barcodes.txt
+  [OK] cell_metadata.csv              4.0 MB  /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported/cell_metadata.csv
+
+========================================================================
+Step 2: Load components
+========================================================================
+  Reading gene_names.txt...
+    27,899 genes  (first 3: ['A1BG', 'A1BG-AS1', 'A1CF'])
+  Reading cell_barcodes.txt...
+    44,823 cells  (first 3: ['BM1_AGGCGGGCGTGN', 'BM1_ATAACATTTCAC', 'BM1_ACGCTCTGGCCN'])
+  Reading cell_metadata.csv...
+    44,823 rows x 11 columns
+    columns: ['barcode', 'orig.ident', 'NumberOfReads', 'CyclingScore', 'CyclingBinary', 'MutTranscripts', 'WtTranscripts', 'PredictionRefined', 'CellType', 'nCount_RNA', 'nFeature_RNA']
+  Reading counts.mtx (this takes 30-60 sec for 50M nnz)...
+    loaded in 0.8s, shape (27899, 44823), nnz 50,456,694, dtype int64
+  Reading data.mtx (this takes 60-120 sec for log-norm values)...
+    loaded in 0.7s, shape (27899, 44823), nnz 50,456,694, dtype float64
+
+========================================================================
+Step 3: Build AnnData
+========================================================================
+  Transposing matrices (genes x cells -> cells x genes)...
+  Creating AnnData...
+  AnnData: 44,823 cells x 27,899 genes
+  X shape: (44823, 27899), dtype float64
+  layers['counts'] shape: (44823, 27899), dtype int64
+  obs columns: ['barcode', 'orig.ident', 'NumberOfReads', 'CyclingScore', 'CyclingBinary', 'MutTranscripts', 'WtTranscripts', 'PredictionRefined', 'CellType', 'nCount_RNA', 'nFeature_RNA']
+
+========================================================================
+Step 4: Integrity validation
+========================================================================
+  Cell type distribution: all 21 types match inspector counts ✓
+  PredictionRefined distribution: {'normal': 23005, 'malignant': 20685, 'unclear': 1133}
+  PredictionRefined values match expected set ✓
+  X sample max (first 1000 cells): 7.58
+  X values consistent with log-normalized data ✓
+
+========================================================================
+Step 5: Scientific validation — LSC signature in HSC-like cells
+========================================================================
+  Testing: are LSC-signature genes over-expressed in 'HSC-like'
+  cells vs committed malignant blasts ['GMP-like', 'ProMono-like', 'Mono-like', 'cDC-like']?
+  Signature: ['HLF', 'HOPX', 'CD34', 'MEIS1', 'CDK6', 'MLLT3']
+
+  HSC-like cells:          2,175
+  Committed blast cells:   11,489
+  ✓ HLF      mean(HSC-like)= 0.011  mean(blast)= 0.005  ratio= 2.20  p=2.64e-03
+  ✓ HOPX     mean(HSC-like)= 0.551  mean(blast)= 0.048  ratio=11.56  p=0.00e+00
+  ✓ CD34     mean(HSC-like)= 0.750  mean(blast)= 0.143  ratio= 5.26  p=1.61e-299
+  ✓ MEIS1    mean(HSC-like)= 0.276  mean(blast)= 0.103  ratio= 2.69  p=3.33e-41
+  ✓ CDK6     mean(HSC-like)= 1.369  mean(blast)= 0.991  ratio= 1.38  p=3.20e-41
+  ✓ MLLT3    mean(HSC-like)= 0.493  mean(blast)= 0.157  ratio= 3.14  p=2.65e-75
+
+  Passing LSC genes: 6 / 6
+
+========================================================================
+Step 6: Verdict
+========================================================================
+  ✓ PASS  cell_type_distribution
+  ✓ PASS  prediction_refined_values
+  ✓ PASS  X_is_log_normalized
+  ✓ PASS  lsc_signature_4_of_6
+
+  VERDICT: PASS
+
+========================================================================
+Step 7: Save AnnData
+========================================================================
+  Writing /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/vangalen_aml.h5ad ...
+  Wrote in 9.7s, size 244.3 MB
+  Summary JSON: /Users/kalki/INTERCEPTA/round2_aml/results/vangalen_anndata_summary.json

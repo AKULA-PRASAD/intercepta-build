@@ -1,0 +1,73 @@
+========================================================================
+INTERCEPTA v5 — g-RATE VALIDATION
+  Stein/Wilkerson/Fojo framework
+========================================================================
+Velocity: ../results/velocity_star_latent_time.csv
+Cohort:   50 patients per regimen (heterogeneous)
+Model:    UnifiedODEv4.1 + g-fit v5.2 (audit-corrected boundary logic)
+Endpoint: biexponential g via scipy.curve_fit on simulated N(t)
+
+--- enza_first_line_noHRR ---
+  Drugs: ['ADT', 'enzalutamide']
+  Target: enzalutamide_non_HRR  (CONFIRMED)
+  Fit success: 50/50  (g-fits: 50)
+  Model types: {'gd': 50, 'g_only': 0, 'd_only': 0}
+  Published g: 0.000784/day  (DT 884 days)
+  Model g:     0.002827/day  (DT 245 days)
+  Ratio model/published: 3.61x
+  Acceptable window: [0.0004, 0.0015]/day  |  FAIL
+
+--- enza_first_line_HRR ---
+  Drugs: ['ADT', 'enzalutamide']
+  Target: enzalutamide_HRR_altered  (CONFIRMED)
+  Fit success: 50/50  (g-fits: 50)
+  Model types: {'gd': 50, 'g_only': 0, 'd_only': 0}
+  Published g: 0.001889/day  (DT 367 days)
+  Model g:     0.003191/day  (DT 217 days)
+  Ratio model/published: 1.69x
+  Acceptable window: [0.001, 0.003]/day  |  FAIL
+
+--- untreated_mCRPC ---
+  Drugs: (none — untreated)
+  Target: mCRPC_pretreatment  (CONFIRMED)
+  Fit success: 50/50  (g-fits: 50)
+  Model types: {'gd': 1, 'g_only': 49, 'd_only': 0}
+  Published g: 0.0075/day  (DT 92 days)
+  Model g:     0.002776/day  (DT 250 days)
+  Ratio model/published: 0.37x
+  Acceptable window: [0.005, 0.012]/day  |  FAIL
+
+--- docetaxel_mono_mCRPC ---
+  Drugs: ['docetaxel']
+  Target: docetaxel_mCRPC  (UNVERIFIED)
+  Fit success: 50/50  (g-fits: 50)
+  Model types: {'gd': 41, 'g_only': 9, 'd_only': 0}
+  Model g:     0.0029/day  (DT 239 days)  OBSERVATIONAL
+  Note: Wilkerson 2017 reports that g increased ~5x after docetaxel discontinuation. If off-treatment g ~0.005-0.010/day, then on-docetaxel g ~0.001-0.002/day. Needs exact value from paper.
+
+--- mitoxantrone_mono_mCRPC ---
+  Drugs: ['mitoxantrone']
+  Target: mitoxantrone_mCRPC  (UNVERIFIED)
+  Fit success: 50/50  (g-fits: 50)
+  Model types: {'gd': 5, 'g_only': 45, 'd_only': 0}
+  Model g:     0.00272/day  (DT 255 days)  OBSERVATIONAL
+  Note: Wilkerson 2017: g differentiated docetaxel from mitoxantrone. Mitoxantrone g should be faster than docetaxel g, likely ~0.003-0.006/day. Needs exact value.
+
+--- olaparib_HRR_post_ARSI ---
+  Drugs: ['ADT', 'olaparib']
+  Target: olaparib_HRR_altered  (UNVERIFIED)
+  Fit success: 50/50  (g-fits: 10)
+  Model types: {'gd': 10, 'g_only': 0, 'd_only': 40}
+  Model g:     0.004279/day  (DT 162 days)  OBSERVATIONAL
+
+========================================================================
+CONFIRMED TARGETS: 0/3 pass
+OBSERVATIONAL:     3 regimens
+========================================================================
+
+Confirmed targets are those with g-published values verified
+from the literature. Observational regimens produce model g-values
+to be compared once target g-values are retrieved from the source
+papers (Wilkerson 2017, Leuva 2020, Zhou 2024 full text).
+
+Results saved: ../results/unified_v5_2_g_validation.json

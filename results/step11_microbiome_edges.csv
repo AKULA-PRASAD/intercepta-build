@@ -1,0 +1,1070 @@
+microbiome_gene,partner,score,function
+TLR2,CD4,814,Pattern recognition (gram-positive bacteria)
+TLR2,DCN,990,Pattern recognition (gram-positive bacteria)
+TLR2,TNFRSF1A,745,Pattern recognition (gram-positive bacteria)
+TLR2,APOH,836,Pattern recognition (gram-positive bacteria)
+TLR2,NFKBIA,749,Pattern recognition (gram-positive bacteria)
+TLR2,LBP,712,Pattern recognition (gram-positive bacteria)
+TLR2,RIPK2,799,Pattern recognition (gram-positive bacteria)
+TLR2,NOD1,855,Pattern recognition (gram-positive bacteria)
+TLR2,CCL2,790,Pattern recognition (gram-positive bacteria)
+TLR2,NFKB1,992,Pattern recognition (gram-positive bacteria)
+TLR2,SPI1,703,Pattern recognition (gram-positive bacteria)
+TLR2,APOC3,963,Pattern recognition (gram-positive bacteria)
+TLR2,IFNG,918,Pattern recognition (gram-positive bacteria)
+TLR2,CLEC4A,711,Pattern recognition (gram-positive bacteria)
+TLR2,IL4,834,Pattern recognition (gram-positive bacteria)
+TLR2,TICAM1,975,Pattern recognition (gram-positive bacteria)
+TLR2,LGALS3,948,Pattern recognition (gram-positive bacteria)
+TLR2,MYBPH,836,Pattern recognition (gram-positive bacteria)
+TLR2,CD180,871,Pattern recognition (gram-positive bacteria)
+TLR2,IRAK2,793,Pattern recognition (gram-positive bacteria)
+TLR2,GYPC,802,Pattern recognition (gram-positive bacteria)
+TLR2,SYK,701,Pattern recognition (gram-positive bacteria)
+TLR2,SCARB2,996,Pattern recognition (gram-positive bacteria)
+TLR2,CCR2,764,Pattern recognition (gram-positive bacteria)
+TLR2,CLEC4E,835,Pattern recognition (gram-positive bacteria)
+TLR2,CD209,791,Pattern recognition (gram-positive bacteria)
+TLR2,CD86,805,Pattern recognition (gram-positive bacteria)
+TLR2,TRAF6,909,Pattern recognition (gram-positive bacteria)
+TLR2,SNCA,906,Pattern recognition (gram-positive bacteria)
+TLR2,TLR6,999,Pattern recognition (gram-positive bacteria)
+TLR2,NLRP3,849,Pattern recognition (gram-positive bacteria)
+TLR2,CX3CR1,741,Pattern recognition (gram-positive bacteria)
+TLR2,TLR1,999,Pattern recognition (gram-positive bacteria)
+TLR2,HSPA1B,998,Pattern recognition (gram-positive bacteria)
+TLR2,CXCR4,894,Pattern recognition (gram-positive bacteria)
+TLR2,CD40LG,753,Pattern recognition (gram-positive bacteria)
+TLR2,CD44,874,Pattern recognition (gram-positive bacteria)
+TLR2,TNF,951,Pattern recognition (gram-positive bacteria)
+TLR2,IL1B,969,Pattern recognition (gram-positive bacteria)
+TLR2,HSPD1,976,Pattern recognition (gram-positive bacteria)
+TLR2,IRAK1,962,Pattern recognition (gram-positive bacteria)
+TLR2,CASP1,809,Pattern recognition (gram-positive bacteria)
+TLR2,ENSG00000198001,935,Pattern recognition (gram-positive bacteria)
+TLR2,IL13,702,Pattern recognition (gram-positive bacteria)
+TLR2,SCARF1,807,Pattern recognition (gram-positive bacteria)
+TLR2,ICAM1,714,Pattern recognition (gram-positive bacteria)
+TLR2,IL18,847,Pattern recognition (gram-positive bacteria)
+TLR2,IL1A,870,Pattern recognition (gram-positive bacteria)
+TLR2,CCL4,763,Pattern recognition (gram-positive bacteria)
+TLR2,CXCR2,832,Pattern recognition (gram-positive bacteria)
+TLR2,LILRB2,705,Pattern recognition (gram-positive bacteria)
+TLR2,TOLLIP,997,Pattern recognition (gram-positive bacteria)
+TLR2,HSP90AA1,982,Pattern recognition (gram-positive bacteria)
+TLR2,FN1,917,Pattern recognition (gram-positive bacteria)
+TLR2,S100A1,755,Pattern recognition (gram-positive bacteria)
+TLR2,S100A9,861,Pattern recognition (gram-positive bacteria)
+TLR2,SOCS3,732,Pattern recognition (gram-positive bacteria)
+TLR2,CCL3,787,Pattern recognition (gram-positive bacteria)
+TLR2,BGN,989,Pattern recognition (gram-positive bacteria)
+TLR2,ITGAM,893,Pattern recognition (gram-positive bacteria)
+TLR2,CXCL10,902,Pattern recognition (gram-positive bacteria)
+TLR2,HSP90AB1,982,Pattern recognition (gram-positive bacteria)
+TLR2,IL17A,766,Pattern recognition (gram-positive bacteria)
+TLR2,HSPA4,992,Pattern recognition (gram-positive bacteria)
+TLR2,ATG16L1,773,Pattern recognition (gram-positive bacteria)
+TLR2,RELA,956,Pattern recognition (gram-positive bacteria)
+TLR2,ITGB2,791,Pattern recognition (gram-positive bacteria)
+TLR2,IL6,942,Pattern recognition (gram-positive bacteria)
+TLR2,CXCL2,774,Pattern recognition (gram-positive bacteria)
+TLR2,FCER1G,715,Pattern recognition (gram-positive bacteria)
+TLR2,CXCL9,739,Pattern recognition (gram-positive bacteria)
+TLR2,PRG4,773,Pattern recognition (gram-positive bacteria)
+TLR2,FCGR2A,785,Pattern recognition (gram-positive bacteria)
+TLR2,HSPA2,909,Pattern recognition (gram-positive bacteria)
+TLR2,HSPA9,914,Pattern recognition (gram-positive bacteria)
+TLR2,VCAN,923,Pattern recognition (gram-positive bacteria)
+TLR2,CXCL8,883,Pattern recognition (gram-positive bacteria)
+TLR2,IL10,956,Pattern recognition (gram-positive bacteria)
+TLR2,FCGR2B,727,Pattern recognition (gram-positive bacteria)
+TLR2,AKT1,704,Pattern recognition (gram-positive bacteria)
+TLR2,EGFR,933,Pattern recognition (gram-positive bacteria)
+TLR2,FSTL1,963,Pattern recognition (gram-positive bacteria)
+TLR2,MMP9,802,Pattern recognition (gram-positive bacteria)
+TLR2,TLR9,961,Pattern recognition (gram-positive bacteria)
+TLR2,IL1R1,867,Pattern recognition (gram-positive bacteria)
+TLR2,CLEC7A,998,Pattern recognition (gram-positive bacteria)
+TLR2,IFNB1,910,Pattern recognition (gram-positive bacteria)
+TLR2,C5AR1,922,Pattern recognition (gram-positive bacteria)
+TLR2,CAMP,707,Pattern recognition (gram-positive bacteria)
+TLR2,IRAK3,852,Pattern recognition (gram-positive bacteria)
+TLR2,VDAC1,788,Pattern recognition (gram-positive bacteria)
+TLR2,SCARB1,996,Pattern recognition (gram-positive bacteria)
+TLR2,IL33,814,Pattern recognition (gram-positive bacteria)
+TLR2,VCAM1,723,Pattern recognition (gram-positive bacteria)
+TLR2,ALB,733,Pattern recognition (gram-positive bacteria)
+TLR2,TIRAP,999,Pattern recognition (gram-positive bacteria)
+TLR2,CD8A,748,Pattern recognition (gram-positive bacteria)
+TLR2,HSPA8,953,Pattern recognition (gram-positive bacteria)
+TLR2,ERVW-1,700,Pattern recognition (gram-positive bacteria)
+TLR2,CCL5,739,Pattern recognition (gram-positive bacteria)
+TLR2,CXCL1,879,Pattern recognition (gram-positive bacteria)
+TLR2,CD163,835,Pattern recognition (gram-positive bacteria)
+TLR2,CD80,749,Pattern recognition (gram-positive bacteria)
+TLR2,ENSG00000268500,709,Pattern recognition (gram-positive bacteria)
+TLR2,HSPA1L,910,Pattern recognition (gram-positive bacteria)
+TLR2,C3AR1,753,Pattern recognition (gram-positive bacteria)
+TLR2,FCGR3A,777,Pattern recognition (gram-positive bacteria)
+TLR2,HSPA6,926,Pattern recognition (gram-positive bacteria)
+TLR2,CSF2,798,Pattern recognition (gram-positive bacteria)
+TLR2,DDX58,743,Pattern recognition (gram-positive bacteria)
+TLR2,DEFB4A,758,Pattern recognition (gram-positive bacteria)
+TLR2,TLR8,893,Pattern recognition (gram-positive bacteria)
+TLR2,NLRC4,701,Pattern recognition (gram-positive bacteria)
+TLR2,HMGB1,998,Pattern recognition (gram-positive bacteria)
+TLR2,CD14,992,Pattern recognition (gram-positive bacteria)
+TLR2,CD47,783,Pattern recognition (gram-positive bacteria)
+TLR2,AGER,814,Pattern recognition (gram-positive bacteria)
+TLR2,TLR10,992,Pattern recognition (gram-positive bacteria)
+TLR2,TLR5,982,Pattern recognition (gram-positive bacteria)
+TLR2,ENO1,709,Pattern recognition (gram-positive bacteria)
+TLR2,CD40,911,Pattern recognition (gram-positive bacteria)
+TLR2,HSP90B1,977,Pattern recognition (gram-positive bacteria)
+TLR2,NOD2,983,Pattern recognition (gram-positive bacteria)
+TLR2,MYD88,999,Pattern recognition (gram-positive bacteria)
+TLR2,LY96,997,Pattern recognition (gram-positive bacteria)
+TLR2,PTGS2,756,Pattern recognition (gram-positive bacteria)
+TLR2,S100A8,858,Pattern recognition (gram-positive bacteria)
+TLR2,ITGAX,763,Pattern recognition (gram-positive bacteria)
+TLR2,IRF7,784,Pattern recognition (gram-positive bacteria)
+TLR2,CD36,998,Pattern recognition (gram-positive bacteria)
+TLR2,TLR4,999,Pattern recognition (gram-positive bacteria)
+TLR2,PTPRC,712,Pattern recognition (gram-positive bacteria)
+TLR2,CSF1R,765,Pattern recognition (gram-positive bacteria)
+TLR2,MARCO,814,Pattern recognition (gram-positive bacteria)
+TLR2,CYBB,786,Pattern recognition (gram-positive bacteria)
+TLR2,MSR1,732,Pattern recognition (gram-positive bacteria)
+TLR2,TMED7-TICAM2,783,Pattern recognition (gram-positive bacteria)
+TLR2,DEFB103A,854,Pattern recognition (gram-positive bacteria)
+TLR2,TLR3,854,Pattern recognition (gram-positive bacteria)
+TLR2,IRF3,876,Pattern recognition (gram-positive bacteria)
+TLR2,IFNA1,792,Pattern recognition (gram-positive bacteria)
+TLR2,TICAM2,989,Pattern recognition (gram-positive bacteria)
+TLR4,CD4,902,LPS recognition (gram-negative bacteria)
+TLR4,DCN,988,LPS recognition (gram-negative bacteria)
+TLR4,TNFRSF1A,949,LPS recognition (gram-negative bacteria)
+TLR4,APOH,842,LPS recognition (gram-negative bacteria)
+TLR4,HMOX1,719,LPS recognition (gram-negative bacteria)
+TLR4,TAB1,767,LPS recognition (gram-negative bacteria)
+TLR4,RIPK3,832,LPS recognition (gram-negative bacteria)
+TLR4,NFKBIA,872,LPS recognition (gram-negative bacteria)
+TLR4,LBP,979,LPS recognition (gram-negative bacteria)
+TLR4,MEFV,724,LPS recognition (gram-negative bacteria)
+TLR4,RIPK2,756,LPS recognition (gram-negative bacteria)
+TLR4,RETN,993,LPS recognition (gram-negative bacteria)
+TLR4,TGFB1,721,LPS recognition (gram-negative bacteria)
+TLR4,PIK3R2,912,LPS recognition (gram-negative bacteria)
+TLR4,NOD1,801,LPS recognition (gram-negative bacteria)
+TLR4,SERPINE1,721,LPS recognition (gram-negative bacteria)
+TLR4,MPO,728,LPS recognition (gram-negative bacteria)
+TLR4,CSF3,757,LPS recognition (gram-negative bacteria)
+TLR4,CCL2,847,LPS recognition (gram-negative bacteria)
+TLR4,NFKB1,993,LPS recognition (gram-negative bacteria)
+TLR4,IL2,731,LPS recognition (gram-negative bacteria)
+TLR4,IFNG,946,LPS recognition (gram-negative bacteria)
+TLR4,MAPK14,762,LPS recognition (gram-negative bacteria)
+TLR4,IL4,869,LPS recognition (gram-negative bacteria)
+TLR4,LTF,827,LPS recognition (gram-negative bacteria)
+TLR4,LRP1,774,LPS recognition (gram-negative bacteria)
+TLR4,IRF1,818,LPS recognition (gram-negative bacteria)
+TLR4,TNFSF9,792,LPS recognition (gram-negative bacteria)
+TLR4,PYCARD,760,LPS recognition (gram-negative bacteria)
+TLR4,TICAM1,999,LPS recognition (gram-negative bacteria)
+TLR4,CD68,726,LPS recognition (gram-negative bacteria)
+TLR4,APOE,777,LPS recognition (gram-negative bacteria)
+TLR4,LGALS3,938,LPS recognition (gram-negative bacteria)
+TLR4,CD180,904,LPS recognition (gram-negative bacteria)
+TLR4,IRAK2,935,LPS recognition (gram-negative bacteria)
+TLR4,NMBR,774,LPS recognition (gram-negative bacteria)
+TLR4,TANK,745,LPS recognition (gram-negative bacteria)
+TLR4,IL1RN,752,LPS recognition (gram-negative bacteria)
+TLR4,RIPK1,962,LPS recognition (gram-negative bacteria)
+TLR4,TLR2,999,LPS recognition (gram-negative bacteria)
+TLR4,IRAK3,822,LPS recognition (gram-negative bacteria)
+TLR4,SCARB1,996,LPS recognition (gram-negative bacteria)
+TLR4,TYROBP,736,LPS recognition (gram-negative bacteria)
+TLR4,PIK3R3,909,LPS recognition (gram-negative bacteria)
+TLR4,CNPY4,760,LPS recognition (gram-negative bacteria)
+TLR4,MAPK3,824,LPS recognition (gram-negative bacteria)
+TLR4,NOX4,996,LPS recognition (gram-negative bacteria)
+TLR4,IL1A,974,LPS recognition (gram-negative bacteria)
+TLR4,IL1B,986,LPS recognition (gram-negative bacteria)
+TLR4,BIRC3,797,LPS recognition (gram-negative bacteria)
+TLR4,SELP,885,LPS recognition (gram-negative bacteria)
+TLR4,PIK3CA,928,LPS recognition (gram-negative bacteria)
+TLR4,CD80,801,LPS recognition (gram-negative bacteria)
+TLR4,STAT3,846,LPS recognition (gram-negative bacteria)
+TLR4,ICAM1,768,LPS recognition (gram-negative bacteria)
+TLR4,SCARB2,996,LPS recognition (gram-negative bacteria)
+TLR4,ITIH4,704,LPS recognition (gram-negative bacteria)
+TLR4,ECSIT,700,LPS recognition (gram-negative bacteria)
+TLR4,FCGR2A,818,LPS recognition (gram-negative bacteria)
+TLR4,CTSK,820,LPS recognition (gram-negative bacteria)
+TLR4,AHSG,988,LPS recognition (gram-negative bacteria)
+TLR4,EGFR,739,LPS recognition (gram-negative bacteria)
+TLR4,IFNA1,807,LPS recognition (gram-negative bacteria)
+TLR4,IL18,908,LPS recognition (gram-negative bacteria)
+TLR4,TMED7-TICAM2,847,LPS recognition (gram-negative bacteria)
+TLR4,LY96,999,LPS recognition (gram-negative bacteria)
+TLR4,CSF1R,800,LPS recognition (gram-negative bacteria)
+TLR4,PPARG,738,LPS recognition (gram-negative bacteria)
+TLR4,NCF1,733,LPS recognition (gram-negative bacteria)
+TLR4,S100B,844,LPS recognition (gram-negative bacteria)
+TLR4,S100A1,836,LPS recognition (gram-negative bacteria)
+TLR4,CCR2,738,LPS recognition (gram-negative bacteria)
+TLR4,CCR5,788,LPS recognition (gram-negative bacteria)
+TLR4,VCAM1,772,LPS recognition (gram-negative bacteria)
+TLR4,FSTL1,775,LPS recognition (gram-negative bacteria)
+TLR4,RETNLB,991,LPS recognition (gram-negative bacteria)
+TLR4,ALB,821,LPS recognition (gram-negative bacteria)
+TLR4,CCR1,725,LPS recognition (gram-negative bacteria)
+TLR4,CAMP,851,LPS recognition (gram-negative bacteria)
+TLR4,TLR3,907,LPS recognition (gram-negative bacteria)
+TLR4,CSF2,781,LPS recognition (gram-negative bacteria)
+TLR4,HSPA9,917,LPS recognition (gram-negative bacteria)
+TLR4,HSP90B1,988,LPS recognition (gram-negative bacteria)
+TLR4,NOD2,899,LPS recognition (gram-negative bacteria)
+TLR4,FADD,861,LPS recognition (gram-negative bacteria)
+TLR4,CLEC7A,978,LPS recognition (gram-negative bacteria)
+TLR4,HSPA4,996,LPS recognition (gram-negative bacteria)
+TLR4,DEFB4A,986,LPS recognition (gram-negative bacteria)
+TLR4,IL13,806,LPS recognition (gram-negative bacteria)
+TLR4,CXCL10,969,LPS recognition (gram-negative bacteria)
+TLR4,CXCL8,933,LPS recognition (gram-negative bacteria)
+TLR4,CASP3,740,LPS recognition (gram-negative bacteria)
+TLR4,TLR8,712,LPS recognition (gram-negative bacteria)
+TLR4,TOLLIP,990,LPS recognition (gram-negative bacteria)
+TLR4,CD209,779,LPS recognition (gram-negative bacteria)
+TLR4,UBE2N,932,LPS recognition (gram-negative bacteria)
+TLR4,NCL,728,LPS recognition (gram-negative bacteria)
+TLR4,CXCR2,807,LPS recognition (gram-negative bacteria)
+TLR4,CALR,953,LPS recognition (gram-negative bacteria)
+TLR4,TAC1,723,LPS recognition (gram-negative bacteria)
+TLR4,NOS2,754,LPS recognition (gram-negative bacteria)
+TLR4,BGN,994,LPS recognition (gram-negative bacteria)
+TLR4,TBK1,957,LPS recognition (gram-negative bacteria)
+TLR4,SOCS3,784,LPS recognition (gram-negative bacteria)
+TLR4,P2RX7,725,LPS recognition (gram-negative bacteria)
+TLR4,CD86,841,LPS recognition (gram-negative bacteria)
+TLR4,F3,717,LPS recognition (gram-negative bacteria)
+TLR4,HSP90AA1,987,LPS recognition (gram-negative bacteria)
+TLR4,NLRP3,874,LPS recognition (gram-negative bacteria)
+TLR4,CAV1,962,LPS recognition (gram-negative bacteria)
+TLR4,HSPD1,999,LPS recognition (gram-negative bacteria)
+TLR4,HMGB1,999,LPS recognition (gram-negative bacteria)
+TLR4,ANXA2,968,LPS recognition (gram-negative bacteria)
+TLR4,FN1,995,LPS recognition (gram-negative bacteria)
+TLR4,OCLN,746,LPS recognition (gram-negative bacteria)
+TLR4,CASP8,885,LPS recognition (gram-negative bacteria)
+TLR4,CD163,814,LPS recognition (gram-negative bacteria)
+TLR4,TLR9,979,LPS recognition (gram-negative bacteria)
+TLR4,STAT1,867,LPS recognition (gram-negative bacteria)
+TLR4,TLR1,996,LPS recognition (gram-negative bacteria)
+TLR4,CD47,768,LPS recognition (gram-negative bacteria)
+TLR4,AGT,866,LPS recognition (gram-negative bacteria)
+TLR4,TAB2,785,LPS recognition (gram-negative bacteria)
+TLR4,PTGS2,787,LPS recognition (gram-negative bacteria)
+TLR4,FCGR3A,941,LPS recognition (gram-negative bacteria)
+TLR4,IL6R,712,LPS recognition (gram-negative bacteria)
+TLR4,S100A8,907,LPS recognition (gram-negative bacteria)
+TLR4,S100A12,970,LPS recognition (gram-negative bacteria)
+TLR4,S100A9,969,LPS recognition (gram-negative bacteria)
+TLR4,MAP3K7,972,LPS recognition (gram-negative bacteria)
+TLR4,IRAK1,998,LPS recognition (gram-negative bacteria)
+TLR4,CHUK,852,LPS recognition (gram-negative bacteria)
+TLR4,CD40LG,889,LPS recognition (gram-negative bacteria)
+TLR4,JUN,741,LPS recognition (gram-negative bacteria)
+TLR4,HSP90AB1,988,LPS recognition (gram-negative bacteria)
+TLR4,CARD9,749,LPS recognition (gram-negative bacteria)
+TLR4,GHITM,921,LPS recognition (gram-negative bacteria)
+TLR4,CD40,918,LPS recognition (gram-negative bacteria)
+TLR4,MMP9,934,LPS recognition (gram-negative bacteria)
+TLR4,CNPY3,806,LPS recognition (gram-negative bacteria)
+TLR4,TREM2,762,LPS recognition (gram-negative bacteria)
+TLR4,SRC,880,LPS recognition (gram-negative bacteria)
+TLR4,MBL2,720,LPS recognition (gram-negative bacteria)
+TLR4,ACE2,714,LPS recognition (gram-negative bacteria)
+TLR4,TLR5,992,LPS recognition (gram-negative bacteria)
+TLR4,TAB3,718,LPS recognition (gram-negative bacteria)
+TLR4,NMB,747,LPS recognition (gram-negative bacteria)
+TLR4,CD14,995,LPS recognition (gram-negative bacteria)
+TLR4,THBD,739,LPS recognition (gram-negative bacteria)
+TLR4,AGER,940,LPS recognition (gram-negative bacteria)
+TLR4,DDX58,815,LPS recognition (gram-negative bacteria)
+TLR4,NLRC4,881,LPS recognition (gram-negative bacteria)
+TLR4,PIK3R1,925,LPS recognition (gram-negative bacteria)
+TLR4,IRF3,947,LPS recognition (gram-negative bacteria)
+TLR4,TICAM2,999,LPS recognition (gram-negative bacteria)
+TLR4,CYBB,902,LPS recognition (gram-negative bacteria)
+TLR4,MRC1,790,LPS recognition (gram-negative bacteria)
+TLR4,FCGR3B,912,LPS recognition (gram-negative bacteria)
+TLR4,PTPRC,768,LPS recognition (gram-negative bacteria)
+TLR4,CD36,998,LPS recognition (gram-negative bacteria)
+TLR4,MYD88,999,LPS recognition (gram-negative bacteria)
+TLR4,ITGAX,769,LPS recognition (gram-negative bacteria)
+TLR4,IRF7,898,LPS recognition (gram-negative bacteria)
+TLR4,IFIH1,811,LPS recognition (gram-negative bacteria)
+TLR4,TRIL,957,LPS recognition (gram-negative bacteria)
+TLR4,IL1R1,944,LPS recognition (gram-negative bacteria)
+TLR4,IFNB1,998,LPS recognition (gram-negative bacteria)
+TLR4,SIGIRR,923,LPS recognition (gram-negative bacteria)
+TLR4,AKT1,769,LPS recognition (gram-negative bacteria)
+TLR4,DEFB4B,901,LPS recognition (gram-negative bacteria)
+TLR4,IKBKE,888,LPS recognition (gram-negative bacteria)
+TLR4,IKBKG,960,LPS recognition (gram-negative bacteria)
+TLR4,CXCL12,821,LPS recognition (gram-negative bacteria)
+TLR4,IL10,943,LPS recognition (gram-negative bacteria)
+TLR4,CCL5,820,LPS recognition (gram-negative bacteria)
+TLR4,CXCL1,717,LPS recognition (gram-negative bacteria)
+TLR4,ERVW-1,982,LPS recognition (gram-negative bacteria)
+TLR4,CD8A,847,LPS recognition (gram-negative bacteria)
+TLR4,IL33,843,LPS recognition (gram-negative bacteria)
+TLR4,TIRAP,999,LPS recognition (gram-negative bacteria)
+TLR4,GDF5,725,LPS recognition (gram-negative bacteria)
+TLR4,ITGAM,920,LPS recognition (gram-negative bacteria)
+TLR4,FPR1,765,LPS recognition (gram-negative bacteria)
+TLR4,CCL3,815,LPS recognition (gram-negative bacteria)
+TLR4,LY86,854,LPS recognition (gram-negative bacteria)
+TLR4,ERV3-1,750,LPS recognition (gram-negative bacteria)
+TLR4,ERVFRD-1,750,LPS recognition (gram-negative bacteria)
+TLR4,CCL4,749,LPS recognition (gram-negative bacteria)
+TLR4,CREB1,749,LPS recognition (gram-negative bacteria)
+TLR4,IL6,973,LPS recognition (gram-negative bacteria)
+TLR4,CXCL2,849,LPS recognition (gram-negative bacteria)
+TLR4,ELANE,732,LPS recognition (gram-negative bacteria)
+TLR4,PRG4,717,LPS recognition (gram-negative bacteria)
+TLR4,PTAFR,723,LPS recognition (gram-negative bacteria)
+TLR4,RELA,966,LPS recognition (gram-negative bacteria)
+TLR4,SAA1,744,LPS recognition (gram-negative bacteria)
+TLR4,BIRC2,804,LPS recognition (gram-negative bacteria)
+TLR4,PIK3CB,924,LPS recognition (gram-negative bacteria)
+TLR4,TLR7,940,LPS recognition (gram-negative bacteria)
+TLR4,IL17A,867,LPS recognition (gram-negative bacteria)
+TLR4,SARM1,974,LPS recognition (gram-negative bacteria)
+TLR4,HSPA1B,941,LPS recognition (gram-negative bacteria)
+TLR4,TNF,969,LPS recognition (gram-negative bacteria)
+TLR4,CXCR4,824,LPS recognition (gram-negative bacteria)
+TLR4,PIK3CD,934,LPS recognition (gram-negative bacteria)
+TLR4,CD44,983,LPS recognition (gram-negative bacteria)
+TLR4,TLR6,999,LPS recognition (gram-negative bacteria)
+TLR4,SNCA,752,LPS recognition (gram-negative bacteria)
+TLR4,BTK,831,LPS recognition (gram-negative bacteria)
+TLR4,JAK2,793,LPS recognition (gram-negative bacteria)
+TLR4,TRAF6,999,LPS recognition (gram-negative bacteria)
+TLR4,SYK,971,LPS recognition (gram-negative bacteria)
+TLR4,IKBKB,903,LPS recognition (gram-negative bacteria)
+TLR4,AIF1,722,LPS recognition (gram-negative bacteria)
+TLR4,XDH,820,LPS recognition (gram-negative bacteria)
+TLR4,CIRBP,854,LPS recognition (gram-negative bacteria)
+TLR4,FPR2,724,LPS recognition (gram-negative bacteria)
+TLR4,TRAF3,990,LPS recognition (gram-negative bacteria)
+TLR4,GAPDH,761,LPS recognition (gram-negative bacteria)
+TLR4,ACTB,745,LPS recognition (gram-negative bacteria)
+TLR4,INS,710,LPS recognition (gram-negative bacteria)
+TLR4,BCL2,724,LPS recognition (gram-negative bacteria)
+TLR4,SELL,743,LPS recognition (gram-negative bacteria)
+TLR4,CASP1,916,LPS recognition (gram-negative bacteria)
+TLR4,ENSG00000198001,999,LPS recognition (gram-negative bacteria)
+TLR5,NFKBIA,719,Flagellin recognition
+TLR5,NOD1,744,Flagellin recognition
+TLR5,NFKB1,977,Flagellin recognition
+TLR5,IFNG,769,Flagellin recognition
+TLR5,TLR2,982,Flagellin recognition
+TLR5,IRAK3,731,Flagellin recognition
+TLR5,IL1A,841,Flagellin recognition
+TLR5,IL1B,830,Flagellin recognition
+TLR5,IL18,767,Flagellin recognition
+TLR5,LY96,888,Flagellin recognition
+TLR5,FSTL1,723,Flagellin recognition
+TLR5,NOD2,867,Flagellin recognition
+TLR5,CXCL8,791,Flagellin recognition
+TLR5,TLR8,731,Flagellin recognition
+TLR5,PFN4,709,Flagellin recognition
+TLR5,HMGB1,896,Flagellin recognition
+TLR5,PFN3,702,Flagellin recognition
+TLR5,TLR1,860,Flagellin recognition
+TLR5,IRAK1,900,Flagellin recognition
+TLR5,TLR4,992,Flagellin recognition
+TLR5,TLR7,778,Flagellin recognition
+TLR5,TIRAP,940,Flagellin recognition
+TLR5,RELA,946,Flagellin recognition
+TLR5,NLRC4,758,Flagellin recognition
+TLR5,IL6,824,Flagellin recognition
+TLR5,IL1R1,838,Flagellin recognition
+TLR5,TLR6,852,Flagellin recognition
+TLR5,TNF,834,Flagellin recognition
+TLR5,SIGIRR,846,Flagellin recognition
+TLR5,IL10,818,Flagellin recognition
+TLR5,TRAF6,969,Flagellin recognition
+TLR5,ENSG00000198001,719,Flagellin recognition
+TLR5,MYD88,999,Flagellin recognition
+TLR9,CD4,868,Bacterial CpG DNA recognition
+TLR9,NFKBIA,719,Bacterial CpG DNA recognition
+TLR9,NFKB1,828,Bacterial CpG DNA recognition
+TLR9,IL2,777,Bacterial CpG DNA recognition
+TLR9,UNC93B1,970,Bacterial CpG DNA recognition
+TLR9,IFNG,891,Bacterial CpG DNA recognition
+TLR9,IL4,780,Bacterial CpG DNA recognition
+TLR9,IRF1,701,Bacterial CpG DNA recognition
+TLR9,CCR7,701,Bacterial CpG DNA recognition
+TLR9,TICAM1,969,Bacterial CpG DNA recognition
+TLR9,IRAK2,846,Bacterial CpG DNA recognition
+TLR9,TLR2,961,Bacterial CpG DNA recognition
+TLR9,TNFRSF13B,722,Bacterial CpG DNA recognition
+TLR9,IL1A,897,Bacterial CpG DNA recognition
+TLR9,IL1B,975,Bacterial CpG DNA recognition
+TLR9,CD80,740,Bacterial CpG DNA recognition
+TLR9,ICAM1,708,Bacterial CpG DNA recognition
+TLR9,FCGR2A,756,Bacterial CpG DNA recognition
+TLR9,IFNA1,899,Bacterial CpG DNA recognition
+TLR9,IL18,808,Bacterial CpG DNA recognition
+TLR9,LY96,808,Bacterial CpG DNA recognition
+TLR9,FGFR4,709,Bacterial CpG DNA recognition
+TLR9,CAMP,967,Bacterial CpG DNA recognition
+TLR9,TLR3,856,Bacterial CpG DNA recognition
+TLR9,HSP90B1,806,Bacterial CpG DNA recognition
+TLR9,NOD2,920,Bacterial CpG DNA recognition
+TLR9,CLEC7A,783,Bacterial CpG DNA recognition
+TLR9,IRS1,741,Bacterial CpG DNA recognition
+TLR9,CXCL10,761,Bacterial CpG DNA recognition
+TLR9,CXCL8,776,Bacterial CpG DNA recognition
+TLR9,TLR8,869,Bacterial CpG DNA recognition
+TLR9,CD19,710,Bacterial CpG DNA recognition
+TLR9,EEA1,820,Bacterial CpG DNA recognition
+TLR9,TBK1,857,Bacterial CpG DNA recognition
+TLR9,IFNL1,767,Bacterial CpG DNA recognition
+TLR9,CD86,747,Bacterial CpG DNA recognition
+TLR9,NLRP3,746,Bacterial CpG DNA recognition
+TLR9,HMGB1,997,Bacterial CpG DNA recognition
+TLR9,CASP1,771,Bacterial CpG DNA recognition
+TLR9,IRAK1,988,Bacterial CpG DNA recognition
+TLR9,ENSG00000198001,942,Bacterial CpG DNA recognition
+TLR9,TRAF3,796,Bacterial CpG DNA recognition
+TLR9,BECN1,861,Bacterial CpG DNA recognition
+TLR9,BTK,911,Bacterial CpG DNA recognition
+TLR9,TRAF6,982,Bacterial CpG DNA recognition
+TLR9,SYK,824,Bacterial CpG DNA recognition
+TLR9,FGFR1,701,Bacterial CpG DNA recognition
+TLR9,TNF,896,Bacterial CpG DNA recognition
+TLR9,CHUK,726,Bacterial CpG DNA recognition
+TLR9,CD40LG,847,Bacterial CpG DNA recognition
+TLR9,IFNA2,833,Bacterial CpG DNA recognition
+TLR9,TLR7,992,Bacterial CpG DNA recognition
+TLR9,IL6,895,Bacterial CpG DNA recognition
+TLR9,CCL4,709,Bacterial CpG DNA recognition
+TLR9,FPR1,724,Bacterial CpG DNA recognition
+TLR9,ITGAM,797,Bacterial CpG DNA recognition
+TLR9,IFNA17,744,Bacterial CpG DNA recognition
+TLR9,CD8A,850,Bacterial CpG DNA recognition
+TLR9,CNPY3,748,Bacterial CpG DNA recognition
+TLR9,TIRAP,988,Bacterial CpG DNA recognition
+TLR9,FCGR3A,755,Bacterial CpG DNA recognition
+TLR9,IKBKE,711,Bacterial CpG DNA recognition
+TLR9,IL10,868,Bacterial CpG DNA recognition
+TLR9,CGAS,812,Bacterial CpG DNA recognition
+TLR9,IFIH1,720,Bacterial CpG DNA recognition
+TLR9,IFNB1,874,Bacterial CpG DNA recognition
+TLR9,IL1R1,801,Bacterial CpG DNA recognition
+TLR9,FCGR3B,758,Bacterial CpG DNA recognition
+TLR9,FLT3LG,752,Bacterial CpG DNA recognition
+TLR9,PTPRC,751,Bacterial CpG DNA recognition
+TLR9,TLR4,979,Bacterial CpG DNA recognition
+TLR9,MYD88,999,Bacterial CpG DNA recognition
+TLR9,FGFR2,704,Bacterial CpG DNA recognition
+TLR9,IRF7,969,Bacterial CpG DNA recognition
+TLR9,ITGAX,816,Bacterial CpG DNA recognition
+TLR9,IRF3,895,Bacterial CpG DNA recognition
+TLR9,TICAM2,943,Bacterial CpG DNA recognition
+TLR9,DDX58,902,Bacterial CpG DNA recognition
+TLR9,CD40,845,Bacterial CpG DNA recognition
+TLR9,AIM2,701,Bacterial CpG DNA recognition
+TLR9,AGER,795,Bacterial CpG DNA recognition
+NOD1,PGLYRP1,728,Intracellular peptidoglycan sensing
+NOD1,TAB1,824,Intracellular peptidoglycan sensing
+NOD1,RIPK2,999,Intracellular peptidoglycan sensing
+NOD1,IRAK2,744,Intracellular peptidoglycan sensing
+NOD1,RPS27A,900,Intracellular peptidoglycan sensing
+NOD1,IKBKG,709,Intracellular peptidoglycan sensing
+NOD1,PYCARD,821,Intracellular peptidoglycan sensing
+NOD1,UBC,949,Intracellular peptidoglycan sensing
+NOD1,SUGT1,973,Intracellular peptidoglycan sensing
+NOD1,MYD88,744,Intracellular peptidoglycan sensing
+NOD1,NOD2,975,Intracellular peptidoglycan sensing
+NOD1,TLR4,801,Intracellular peptidoglycan sensing
+NOD1,CASP9,885,Intracellular peptidoglycan sensing
+NOD1,TLR5,744,Intracellular peptidoglycan sensing
+NOD1,BIRC3,759,Intracellular peptidoglycan sensing
+NOD1,ARHGEF2,902,Intracellular peptidoglycan sensing
+NOD1,NLRC4,746,Intracellular peptidoglycan sensing
+NOD1,APAF1,719,Intracellular peptidoglycan sensing
+NOD1,DDX58,785,Intracellular peptidoglycan sensing
+NOD1,NFKB1,727,Intracellular peptidoglycan sensing
+NOD1,UBB,904,Intracellular peptidoglycan sensing
+NOD1,IL18,765,Intracellular peptidoglycan sensing
+NOD1,CARD9,795,Intracellular peptidoglycan sensing
+NOD1,IRAK1,742,Intracellular peptidoglycan sensing
+NOD1,CASP1,974,Intracellular peptidoglycan sensing
+NOD1,CHUK,706,Intracellular peptidoglycan sensing
+NOD1,TNF,828,Intracellular peptidoglycan sensing
+NOD1,IL1B,780,Intracellular peptidoglycan sensing
+NOD1,CASP4,791,Intracellular peptidoglycan sensing
+NOD1,TLR1,783,Intracellular peptidoglycan sensing
+NOD1,MAVS,710,Intracellular peptidoglycan sensing
+NOD1,UBA52,901,Intracellular peptidoglycan sensing
+NOD1,IKBKB,734,Intracellular peptidoglycan sensing
+NOD1,TRAF6,815,Intracellular peptidoglycan sensing
+NOD1,NLRP1,775,Intracellular peptidoglycan sensing
+NOD1,BIRC2,861,Intracellular peptidoglycan sensing
+NOD1,ATG16L1,999,Intracellular peptidoglycan sensing
+NOD1,TLR2,855,Intracellular peptidoglycan sensing
+NOD1,CASP2,731,Intracellular peptidoglycan sensing
+NOD1,CASP8,800,Intracellular peptidoglycan sensing
+NOD1,CARD6,889,Intracellular peptidoglycan sensing
+NOD1,HSP90AA1,856,Intracellular peptidoglycan sensing
+NOD2,PGLYRP1,710,Muramyl dipeptide sensing (Crohn disease)
+NOD2,SLC22A4,841,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TAB1,717,Muramyl dipeptide sensing (Crohn disease)
+NOD2,NFKBIA,708,Muramyl dipeptide sensing (Crohn disease)
+NOD2,MEFV,749,Muramyl dipeptide sensing (Crohn disease)
+NOD2,RIPK2,999,Muramyl dipeptide sensing (Crohn disease)
+NOD2,NOD1,975,Muramyl dipeptide sensing (Crohn disease)
+NOD2,NFKB1,776,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IFNG,770,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TLR2,983,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TRAF4,847,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IL1B,866,Muramyl dipeptide sensing (Crohn disease)
+NOD2,BIRC3,825,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IL18,829,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TLR3,722,Muramyl dipeptide sensing (Crohn disease)
+NOD2,SLC22A5,739,Muramyl dipeptide sensing (Crohn disease)
+NOD2,CLEC7A,709,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IFIH1,855,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TLR9,920,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IKBKG,867,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IL10,701,Muramyl dipeptide sensing (Crohn disease)
+NOD2,RNF31,864,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TNFSF15,770,Muramyl dipeptide sensing (Crohn disease)
+NOD2,MAP3K7,877,Muramyl dipeptide sensing (Crohn disease)
+NOD2,CCDC122,704,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TLR5,867,Muramyl dipeptide sensing (Crohn disease)
+NOD2,SHARPIN,831,Muramyl dipeptide sensing (Crohn disease)
+NOD2,DUOX2,759,Muramyl dipeptide sensing (Crohn disease)
+NOD2,RBCK1,830,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IRGM,898,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TLR8,828,Muramyl dipeptide sensing (Crohn disease)
+NOD2,NLRC4,921,Muramyl dipeptide sensing (Crohn disease)
+NOD2,CARD14,771,Muramyl dipeptide sensing (Crohn disease)
+NOD2,DDX58,891,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TNFAIP3,854,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IL23R,909,Muramyl dipeptide sensing (Crohn disease)
+NOD2,ERBIN,993,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TLR4,899,Muramyl dipeptide sensing (Crohn disease)
+NOD2,MYD88,854,Muramyl dipeptide sensing (Crohn disease)
+NOD2,CHUK,780,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TNF,852,Muramyl dipeptide sensing (Crohn disease)
+NOD2,MAVS,995,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TLR1,841,Muramyl dipeptide sensing (Crohn disease)
+NOD2,DLG5,891,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TRAF6,862,Muramyl dipeptide sensing (Crohn disease)
+NOD2,CYLD,888,Muramyl dipeptide sensing (Crohn disease)
+NOD2,ATG5,967,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IKBKB,807,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TAB2,775,Muramyl dipeptide sensing (Crohn disease)
+NOD2,CARD9,995,Muramyl dipeptide sensing (Crohn disease)
+NOD2,XIAP,806,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IRAK1,759,Muramyl dipeptide sensing (Crohn disease)
+NOD2,CASP1,923,Muramyl dipeptide sensing (Crohn disease)
+NOD2,OAS2,891,Muramyl dipeptide sensing (Crohn disease)
+NOD2,BID,708,Muramyl dipeptide sensing (Crohn disease)
+NOD2,AAMP,952,Muramyl dipeptide sensing (Crohn disease)
+NOD2,IL6,805,Muramyl dipeptide sensing (Crohn disease)
+NOD2,NLRP1,996,Muramyl dipeptide sensing (Crohn disease)
+NOD2,BIRC2,832,Muramyl dipeptide sensing (Crohn disease)
+NOD2,TLR7,714,Muramyl dipeptide sensing (Crohn disease)
+NOD2,ATG16L1,999,Muramyl dipeptide sensing (Crohn disease)
+NOD2,ATG12,953,Muramyl dipeptide sensing (Crohn disease)
+MYD88,CD4,850,TLR signaling adaptor
+MYD88,TNFRSF1A,818,TLR signaling adaptor
+MYD88,BCL3,702,TLR signaling adaptor
+MYD88,TAB1,979,TLR signaling adaptor
+MYD88,NFKBIA,903,TLR signaling adaptor
+MYD88,RIPK2,712,TLR signaling adaptor
+MYD88,RELB,766,TLR signaling adaptor
+MYD88,NOD1,744,TLR signaling adaptor
+MYD88,CCL2,728,TLR signaling adaptor
+MYD88,NFKB1,972,TLR signaling adaptor
+MYD88,IL2,714,TLR signaling adaptor
+MYD88,UNC93B1,808,TLR signaling adaptor
+MYD88,IFNG,899,TLR signaling adaptor
+MYD88,MAPK14,810,TLR signaling adaptor
+MYD88,IL4,797,TLR signaling adaptor
+MYD88,IL1RL1,971,TLR signaling adaptor
+MYD88,IRF1,965,TLR signaling adaptor
+MYD88,PYCARD,843,TLR signaling adaptor
+MYD88,TICAM1,928,TLR signaling adaptor
+MYD88,IRAK2,999,TLR signaling adaptor
+MYD88,RIPK1,893,TLR signaling adaptor
+MYD88,TLR2,999,TLR signaling adaptor
+MYD88,IRAK3,969,TLR signaling adaptor
+MYD88,TNFRSF13B,827,TLR signaling adaptor
+MYD88,MAPK3,734,TLR signaling adaptor
+MYD88,IL1A,997,TLR signaling adaptor
+MYD88,IL1B,999,TLR signaling adaptor
+MYD88,BIRC3,926,TLR signaling adaptor
+MYD88,IL1RL2,726,TLR signaling adaptor
+MYD88,STAT3,838,TLR signaling adaptor
+MYD88,IRF8,705,TLR signaling adaptor
+MYD88,TP53,721,TLR signaling adaptor
+MYD88,IFNA1,861,TLR signaling adaptor
+MYD88,IL18,961,TLR signaling adaptor
+MYD88,TMED7-TICAM2,795,TLR signaling adaptor
+MYD88,LY96,999,TLR signaling adaptor
+MYD88,TLR3,999,TLR signaling adaptor
+MYD88,NOD2,854,TLR signaling adaptor
+MYD88,FADD,995,TLR signaling adaptor
+MYD88,CLEC7A,800,TLR signaling adaptor
+MYD88,IL13,728,TLR signaling adaptor
+MYD88,CXCL10,795,TLR signaling adaptor
+MYD88,CXCL8,816,TLR signaling adaptor
+MYD88,TLR10,964,TLR signaling adaptor
+MYD88,TLR8,999,TLR signaling adaptor
+MYD88,TOLLIP,998,TLR signaling adaptor
+MYD88,IL1RAP,958,TLR signaling adaptor
+MYD88,UBE2N,739,TLR signaling adaptor
+MYD88,FLII,814,TLR signaling adaptor
+MYD88,TBK1,988,TLR signaling adaptor
+MYD88,SOCS3,716,TLR signaling adaptor
+MYD88,CD86,780,TLR signaling adaptor
+MYD88,NLRP3,747,TLR signaling adaptor
+MYD88,LRRFIP2,848,TLR signaling adaptor
+MYD88,UBE2V1,738,TLR signaling adaptor
+MYD88,TRADD,822,TLR signaling adaptor
+MYD88,HMGB1,812,TLR signaling adaptor
+MYD88,CASP8,742,TLR signaling adaptor
+MYD88,PELI1,748,TLR signaling adaptor
+MYD88,TLR9,999,TLR signaling adaptor
+MYD88,STAT1,877,TLR signaling adaptor
+MYD88,TLR1,998,TLR signaling adaptor
+MYD88,BECN1,990,TLR signaling adaptor
+MYD88,TAB2,990,TLR signaling adaptor
+MYD88,PTGS2,742,TLR signaling adaptor
+MYD88,DHX9,952,TLR signaling adaptor
+MYD88,MAP3K7,999,TLR signaling adaptor
+MYD88,NFKB2,725,TLR signaling adaptor
+MYD88,IRAK1,999,TLR signaling adaptor
+MYD88,CHUK,985,TLR signaling adaptor
+MYD88,JUN,756,TLR signaling adaptor
+MYD88,CARD9,847,TLR signaling adaptor
+MYD88,CD40,922,TLR signaling adaptor
+MYD88,SRC,877,TLR signaling adaptor
+MYD88,CXCR3,798,TLR signaling adaptor
+MYD88,TRAF1,736,TLR signaling adaptor
+MYD88,TLR4,999,TLR signaling adaptor
+MYD88,MAP3K20,714,TLR signaling adaptor
+MYD88,HSPA1B,856,TLR signaling adaptor
+MYD88,SYK,879,TLR signaling adaptor
+MYD88,FOXP3,719,TLR signaling adaptor
+MYD88,HDAC6,739,TLR signaling adaptor
+MYD88,CYBB,739,TLR signaling adaptor
+MYD88,TAB3,975,TLR signaling adaptor
+MYD88,DDX58,865,TLR signaling adaptor
+MYD88,IFNB1,955,TLR signaling adaptor
+MYD88,TLR7,999,TLR signaling adaptor
+MYD88,IRF4,983,TLR signaling adaptor
+MYD88,IL33,954,TLR signaling adaptor
+MYD88,SQSTM1,739,TLR signaling adaptor
+MYD88,LRRFIP1,763,TLR signaling adaptor
+MYD88,TIRAP,999,TLR signaling adaptor
+MYD88,TRAF3,996,TLR signaling adaptor
+MYD88,SPOP,851,TLR signaling adaptor
+MYD88,SPP1,729,TLR signaling adaptor
+MYD88,MVP,724,TLR signaling adaptor
+MYD88,MAPK8,709,TLR signaling adaptor
+MYD88,IRF7,999,TLR signaling adaptor
+MYD88,MX1,707,TLR signaling adaptor
+MYD88,RELA,850,TLR signaling adaptor
+MYD88,IL6,949,TLR signaling adaptor
+MYD88,IL1R1,999,TLR signaling adaptor
+MYD88,CD8A,942,TLR signaling adaptor
+MYD88,TLR6,995,TLR signaling adaptor
+MYD88,TNF,939,TLR signaling adaptor
+MYD88,MAVS,835,TLR signaling adaptor
+MYD88,SIGIRR,928,TLR signaling adaptor
+MYD88,IL10,898,TLR signaling adaptor
+MYD88,TICAM2,880,TLR signaling adaptor
+MYD88,DHX36,928,TLR signaling adaptor
+MYD88,IRF5,995,TLR signaling adaptor
+MYD88,IKBKB,955,TLR signaling adaptor
+MYD88,CASP1,921,TLR signaling adaptor
+MYD88,TRAF6,999,TLR signaling adaptor
+MYD88,AKT1,823,TLR signaling adaptor
+MYD88,ITGAX,703,TLR signaling adaptor
+MYD88,IKBKE,844,TLR signaling adaptor
+MYD88,SARM1,966,TLR signaling adaptor
+MYD88,STAP2,751,TLR signaling adaptor
+MYD88,IRF3,929,TLR signaling adaptor
+MYD88,BIRC2,903,TLR signaling adaptor
+MYD88,ENSG00000198001,999,TLR signaling adaptor
+MYD88,BTK,984,TLR signaling adaptor
+MYD88,IKBKG,999,TLR signaling adaptor
+MYD88,ENSG00000285082,871,TLR signaling adaptor
+MYD88,TLR5,999,TLR signaling adaptor
+MYD88,SOCS1,778,TLR signaling adaptor
+MYD88,ISG15,737,TLR signaling adaptor
+MYD88,ITGAM,796,TLR signaling adaptor
+MYD88,IFIH1,779,TLR signaling adaptor
+MYD88,IL17A,824,TLR signaling adaptor
+MYD88,JAK1,760,TLR signaling adaptor
+CARD9,MAPK13,913,Fungal recognition signaling
+CARD9,MAPK12,938,Fungal recognition signaling
+CARD9,MAPK1,916,Fungal recognition signaling
+CARD9,RIPK2,971,Fungal recognition signaling
+CARD9,NOD1,795,Fungal recognition signaling
+CARD9,MAPK14,939,Fungal recognition signaling
+CARD9,PYCARD,774,Fungal recognition signaling
+CARD9,MAPK3,926,Fungal recognition signaling
+CARD9,FCER1G,812,Fungal recognition signaling
+CARD9,TRIM62,894,Fungal recognition signaling
+CARD9,AIRE,716,Fungal recognition signaling
+CARD9,CLEC4E,877,Fungal recognition signaling
+CARD9,CLEC4D,715,Fungal recognition signaling
+CARD9,NOD2,995,Fungal recognition signaling
+CARD9,CLEC7A,973,Fungal recognition signaling
+CARD9,IL23R,709,Fungal recognition signaling
+CARD9,PRKCD,955,Fungal recognition signaling
+CARD9,MAPK11,943,Fungal recognition signaling
+CARD9,NLRP3,756,Fungal recognition signaling
+CARD9,CASP8,998,Fungal recognition signaling
+CARD9,CHUK,928,Fungal recognition signaling
+CARD9,IKBKG,929,Fungal recognition signaling
+CARD9,IFIH1,765,Fungal recognition signaling
+CARD9,MAPK9,909,Fungal recognition signaling
+CARD9,DDX58,845,Fungal recognition signaling
+CARD9,MAPK8,921,Fungal recognition signaling
+CARD9,TLR4,749,Fungal recognition signaling
+CARD9,MALT1,999,Fungal recognition signaling
+CARD9,MYD88,847,Fungal recognition signaling
+CARD9,CARD11,821,Fungal recognition signaling
+CARD9,IRF3,936,Fungal recognition signaling
+CARD9,TRAF6,759,Fungal recognition signaling
+CARD9,SYK,999,Fungal recognition signaling
+CARD9,IKBKB,949,Fungal recognition signaling
+CARD9,BCL10,999,Fungal recognition signaling
+CARD9,CASP1,814,Fungal recognition signaling
+CARD9,CLEC6A,922,Fungal recognition signaling
+IL17A,CD4,972,Th17 response to commensals
+IL17A,TNFRSF1A,826,Th17 response to commensals
+IL17A,TBX21,937,Th17 response to commensals
+IL17A,OSM,799,Th17 response to commensals
+IL17A,GZMB,730,Th17 response to commensals
+IL17A,NFKBIA,732,Th17 response to commensals
+IL17A,TIMP1,713,Th17 response to commensals
+IL17A,TGFB1,903,Th17 response to commensals
+IL17A,CSF3,928,Th17 response to commensals
+IL17A,CCL2,874,Th17 response to commensals
+IL17A,NFKB1,791,Th17 response to commensals
+IL17A,IL2,984,Th17 response to commensals
+IL17A,CD69,738,Th17 response to commensals
+IL17A,IL23A,920,Th17 response to commensals
+IL17A,IL26,832,Th17 response to commensals
+IL17A,IFNG,978,Th17 response to commensals
+IL17A,IL4,959,Th17 response to commensals
+IL17A,IL5,939,Th17 response to commensals
+IL17A,CCR7,704,Th17 response to commensals
+IL17A,LIF,776,Th17 response to commensals
+IL17A,CRP,751,Th17 response to commensals
+IL17A,TLR2,766,Th17 response to commensals
+IL17A,IL12RB2,761,Th17 response to commensals
+IL17A,MAPK3,724,Th17 response to commensals
+IL17A,ITGAE,713,Th17 response to commensals
+IL17A,IL1A,929,Th17 response to commensals
+IL17A,IL1B,962,Th17 response to commensals
+IL17A,IL7,833,Th17 response to commensals
+IL17A,CD80,809,Th17 response to commensals
+IL17A,FGF2,747,Th17 response to commensals
+IL17A,STAT3,944,Th17 response to commensals
+IL17A,IL9,896,Th17 response to commensals
+IL17A,IFNA1,790,Th17 response to commensals
+IL17A,IL18,835,Th17 response to commensals
+IL17A,IL17RB,918,Th17 response to commensals
+IL17A,CCR2,751,Th17 response to commensals
+IL17A,CCR5,760,Th17 response to commensals
+IL17A,ALB,800,Th17 response to commensals
+IL17A,IL17RC,999,Th17 response to commensals
+IL17A,CXCL5,794,Th17 response to commensals
+IL17A,IL17RD,737,Th17 response to commensals
+IL17A,IL15,916,Th17 response to commensals
+IL17A,IL3,757,Th17 response to commensals
+IL17A,CSF2,888,Th17 response to commensals
+IL17A,RAG1,708,Th17 response to commensals
+IL17A,MMP3,763,Th17 response to commensals
+IL17A,STAT6,877,Th17 response to commensals
+IL17A,CCL11,818,Th17 response to commensals
+IL17A,CLEC7A,757,Th17 response to commensals
+IL17A,IL16,779,Th17 response to commensals
+IL17A,IL13,940,Th17 response to commensals
+IL17A,CXCL10,850,Th17 response to commensals
+IL17A,IL7R,813,Th17 response to commensals
+IL17A,CXCL8,924,Th17 response to commensals
+IL17A,CD19,732,Th17 response to commensals
+IL17A,ICOS,800,Th17 response to commensals
+IL17A,IL17RA,999,Th17 response to commensals
+IL17A,IL23R,927,Th17 response to commensals
+IL17A,MMP1,712,Th17 response to commensals
+IL17A,CD28,867,Th17 response to commensals
+IL17A,RORC,933,Th17 response to commensals
+IL17A,IL25,892,Th17 response to commensals
+IL17A,SOCS3,772,Th17 response to commensals
+IL17A,CD86,752,Th17 response to commensals
+IL17A,PDCD1,728,Th17 response to commensals
+IL17A,IL17F,994,Th17 response to commensals
+IL17A,TSLP,836,Th17 response to commensals
+IL17A,STAT5A,746,Th17 response to commensals
+IL17A,CCR6,889,Th17 response to commensals
+IL17A,TRAF3IP2,849,Th17 response to commensals
+IL17A,CCRL2,873,Th17 response to commensals
+IL17A,STAT4,779,Th17 response to commensals
+IL17A,CCL20,806,Th17 response to commensals
+IL17A,STAT1,819,Th17 response to commensals
+IL17A,CXCL9,830,Th17 response to commensals
+IL17A,IFNGR1,761,Th17 response to commensals
+IL17A,FCGR3A,808,Th17 response to commensals
+IL17A,CD40LG,732,Th17 response to commensals
+IL17A,CD40,856,Th17 response to commensals
+IL17A,MMP9,814,Th17 response to commensals
+IL17A,LCN2,838,Th17 response to commensals
+IL17A,CXCR3,726,Th17 response to commensals
+IL17A,TLR4,867,Th17 response to commensals
+IL17A,FOXP3,953,Th17 response to commensals
+IL17A,MOG,856,Th17 response to commensals
+IL17A,IL31,782,Th17 response to commensals
+IL17A,GATA3,793,Th17 response to commensals
+IL17A,IL2RA,805,Th17 response to commensals
+IL17A,IFNB1,718,Th17 response to commensals
+IL17A,IL33,852,Th17 response to commensals
+IL17A,CD274,704,Th17 response to commensals
+IL17A,CLEC6A,704,Th17 response to commensals
+IL17A,IL17RE,771,Th17 response to commensals
+IL17A,CXCL1,902,Th17 response to commensals
+IL17A,IL4R,724,Th17 response to commensals
+IL17A,TNFSF11,744,Th17 response to commensals
+IL17A,IL6,980,Th17 response to commensals
+IL17A,IL1R1,723,Th17 response to commensals
+IL17A,CD8A,936,Th17 response to commensals
+IL17A,PRF1,714,Th17 response to commensals
+IL17A,CD44,720,Th17 response to commensals
+IL17A,TNF,958,Th17 response to commensals
+IL17A,LTA,732,Th17 response to commensals
+IL17A,PTPRC,782,Th17 response to commensals
+IL17A,IL10,980,Th17 response to commensals
+IL17A,IDO1,804,Th17 response to commensals
+IL17A,IGLL5,911,Th17 response to commensals
+IL17A,FCGR3B,808,Th17 response to commensals
+IL17A,IL22,976,Th17 response to commensals
+IL17A,IDO2,764,Th17 response to commensals
+IL17A,IGKV2D-28,900,Th17 response to commensals
+IL17A,ITGAX,867,Th17 response to commensals
+IL17A,IL12RB1,799,Th17 response to commensals
+IL17A,CCL5,849,Th17 response to commensals
+IL17A,CCL3,847,Th17 response to commensals
+IL17A,RAG2,737,Th17 response to commensals
+IL17A,ENSG00000277856,900,Th17 response to commensals
+IL17A,CCL4,822,Th17 response to commensals
+IL17A,ITGAM,783,Th17 response to commensals
+IL17A,CTLA4,880,Th17 response to commensals
+IL17A,IL21,701,Th17 response to commensals
+IL17A,MYD88,824,Th17 response to commensals
+IL17A,SELL,744,Th17 response to commensals
+IL22,CD4,913,Epithelial barrier maintenance
+IL22,TBX21,774,Epithelial barrier maintenance
+IL22,IL2RB,831,Epithelial barrier maintenance
+IL22,GZMB,712,Epithelial barrier maintenance
+IL22,IL2,860,Epithelial barrier maintenance
+IL22,IL10RA,938,Epithelial barrier maintenance
+IL22,IL23A,892,Epithelial barrier maintenance
+IL22,IL26,883,Epithelial barrier maintenance
+IL22,IFNG,939,Epithelial barrier maintenance
+IL22,IL4,851,Epithelial barrier maintenance
+IL22,IL5,850,Epithelial barrier maintenance
+IL22,IL9R,748,Epithelial barrier maintenance
+IL22,IL17C,757,Epithelial barrier maintenance
+IL22,IL12RB2,824,Epithelial barrier maintenance
+IL22,IL1A,775,Epithelial barrier maintenance
+IL22,IL1B,846,Epithelial barrier maintenance
+IL22,IL27RA,769,Epithelial barrier maintenance
+IL22,STAT3,926,Epithelial barrier maintenance
+IL22,IFNAR1,867,Epithelial barrier maintenance
+IL22,IL22RA1,999,Epithelial barrier maintenance
+IL22,REG3G,865,Epithelial barrier maintenance
+IL22,OSMR,706,Epithelial barrier maintenance
+IL22,IL9,866,Epithelial barrier maintenance
+IL22,EGFR,749,Epithelial barrier maintenance
+IL22,IFNA1,764,Epithelial barrier maintenance
+IL22,IL18,837,Epithelial barrier maintenance
+IL22,IL10RB,999,Epithelial barrier maintenance
+IL22,IL17RC,810,Epithelial barrier maintenance
+IL22,CXCL5,733,Epithelial barrier maintenance
+IL22,IL15,706,Epithelial barrier maintenance
+IL22,CSF2,802,Epithelial barrier maintenance
+IL22,IL22RA2,999,Epithelial barrier maintenance
+IL22,DEFB4A,756,Epithelial barrier maintenance
+IL22,IL13,847,Epithelial barrier maintenance
+IL22,IL7R,872,Epithelial barrier maintenance
+IL22,CXCL8,720,Epithelial barrier maintenance
+IL22,IL20RA,951,Epithelial barrier maintenance
+IL22,IL17RA,822,Epithelial barrier maintenance
+IL22,IL23R,947,Epithelial barrier maintenance
+IL22,RORC,850,Epithelial barrier maintenance
+IL22,IFNLR1,915,Epithelial barrier maintenance
+IL22,IL3RA,755,Epithelial barrier maintenance
+IL22,IL25,868,Epithelial barrier maintenance
+IL22,IL20RB,907,Epithelial barrier maintenance
+IL22,IFNL1,784,Epithelial barrier maintenance
+IL22,IFNL2,901,Epithelial barrier maintenance
+IL22,IL17F,971,Epithelial barrier maintenance
+IL22,IL21R,823,Epithelial barrier maintenance
+IL22,CCR6,785,Epithelial barrier maintenance
+IL22,IFNAR2,822,Epithelial barrier maintenance
+IL22,CCRL2,773,Epithelial barrier maintenance
+IL22,CCL20,755,Epithelial barrier maintenance
+IL22,STAT1,757,Epithelial barrier maintenance
+IL22,IFNGR1,771,Epithelial barrier maintenance
+IL22,IL6R,810,Epithelial barrier maintenance
+IL22,S100A7,799,Epithelial barrier maintenance
+IL22,CD40LG,729,Epithelial barrier maintenance
+IL22,IL13RA1,758,Epithelial barrier maintenance
+IL22,IL13RA2,739,Epithelial barrier maintenance
+IL22,IL2RG,837,Epithelial barrier maintenance
+IL22,FOXP3,779,Epithelial barrier maintenance
+IL22,IL31,722,Epithelial barrier maintenance
+IL22,GATA3,721,Epithelial barrier maintenance
+IL22,IL2RA,822,Epithelial barrier maintenance
+IL22,IFNB1,738,Epithelial barrier maintenance
+IL22,IL6ST,744,Epithelial barrier maintenance
+IL22,IL33,735,Epithelial barrier maintenance
+IL22,CRLF2,758,Epithelial barrier maintenance
+IL22,IL24,855,Epithelial barrier maintenance
+IL22,CXCL1,718,Epithelial barrier maintenance
+IL22,IL4R,811,Epithelial barrier maintenance
+IL22,IL6,863,Epithelial barrier maintenance
+IL22,CD8A,771,Epithelial barrier maintenance
+IL22,TNF,827,Epithelial barrier maintenance
+IL22,IL5RA,728,Epithelial barrier maintenance
+IL22,IL10,944,Epithelial barrier maintenance
+IL22,TYK2,786,Epithelial barrier maintenance
+IL22,IL11RA,709,Epithelial barrier maintenance
+IL22,IL17A,976,Epithelial barrier maintenance
+IL22,ITGAX,729,Epithelial barrier maintenance
+IL22,IL19,830,Epithelial barrier maintenance
+IL22,JAK1,779,Epithelial barrier maintenance
+IL22,IFNL3,757,Epithelial barrier maintenance
+IL22,IL12RB1,891,Epithelial barrier maintenance
+REG3G,REG3A,894,Antimicrobial peptide
+REG3G,IL22RA2,759,Antimicrobial peptide
+REG3G,IL22,865,Antimicrobial peptide
+DEFB1,LTF,716,Beta-defensin (antimicrobial)
+DEFB1,H4C6,889,Beta-defensin (antimicrobial)
+DEFB1,DEFB129,701,Beta-defensin (antimicrobial)
+DEFB1,DEFB118,781,Beta-defensin (antimicrobial)
+DEFB1,BRD4,984,Beta-defensin (antimicrobial)
+DEFB1,CAMP,866,Beta-defensin (antimicrobial)
+DEFB1,DEFA4,912,Beta-defensin (antimicrobial)
+DEFB1,DEFA6,849,Beta-defensin (antimicrobial)
+DEFB1,S100A7,809,Beta-defensin (antimicrobial)
+DEFB1,BRDT,930,Beta-defensin (antimicrobial)
+DEFB1,DEFB127,749,Beta-defensin (antimicrobial)
+DEFB1,BRD2,838,Beta-defensin (antimicrobial)
+DEFB1,DEFB132,725,Beta-defensin (antimicrobial)
+DEFB1,DEFB106B,900,Beta-defensin (antimicrobial)
+DEFB1,DEFB105A,901,Beta-defensin (antimicrobial)
+DEFB1,DEFB104A,956,Beta-defensin (antimicrobial)
+DEFB1,DEFA5,927,Beta-defensin (antimicrobial)
+DEFB1,DEFA3,915,Beta-defensin (antimicrobial)
+DEFB1,H4C7,891,Beta-defensin (antimicrobial)
+DEFB1,DEFB119,741,Beta-defensin (antimicrobial)
+DEFB1,DEFB126,780,Beta-defensin (antimicrobial)
+DEFB1,CCR6,994,Beta-defensin (antimicrobial)
+DEFB1,DEFB105B,773,Beta-defensin (antimicrobial)
+DEFB1,DEFA1B,955,Beta-defensin (antimicrobial)
+DEFB1,DEFA1,881,Beta-defensin (antimicrobial)
+DEFB1,DEFB103A,995,Beta-defensin (antimicrobial)
+DEFB1,DEFB107A,838,Beta-defensin (antimicrobial)
+DEFB1,DEFB110,711,Beta-defensin (antimicrobial)
+DEFB1,DEFB4A,997,Beta-defensin (antimicrobial)
+DEFB1,DEFB114,711,Beta-defensin (antimicrobial)
+DEFB1,DEFB108B,807,Beta-defensin (antimicrobial)
+DEFB1,DEFB104B,872,Beta-defensin (antimicrobial)
+DEFB1,BRD3,705,Beta-defensin (antimicrobial)
+DEFB1,CCRL2,989,Beta-defensin (antimicrobial)
+MUC2,KRT20,811,Mucin barrier
+MUC2,CLCA1,708,Mucin barrier
+MUC2,MUC17,945,Mucin barrier
+MUC2,GALNT14,854,Mucin barrier
+MUC2,KRT7,742,Mucin barrier
+MUC2,OCLN,710,Mucin barrier
+MUC2,C17orf97,786,Mucin barrier
+MUC2,GALNT12,703,Mucin barrier
+MUC2,MUC21,808,Mucin barrier
+MUC2,MUC3A,908,Mucin barrier
+MUC2,CDX2,868,Mucin barrier
+MUC2,MUC16,886,Mucin barrier
+MUC2,MUC6,993,Mucin barrier
+MUC2,MUC7,966,Mucin barrier
+MUC2,MUC20,930,Mucin barrier
+MUC2,MUC4,972,Mucin barrier
+MUC2,TFF3,901,Mucin barrier
+MUC2,FAU,806,Mucin barrier
+MUC2,MUC15,887,Mucin barrier
+MUC2,GALNT4,811,Mucin barrier
+MUC2,MUC5B,898,Mucin barrier
+MUC2,MUC12,951,Mucin barrier
+MUC2,FCGBP,885,Mucin barrier
+MUC2,MUC1,972,Mucin barrier
+MUC2,MUC13,961,Mucin barrier
+MUC2,MUC5AC,909,Mucin barrier
+MUC2,MUC19,859,Mucin barrier
+FUT2,EXOC6,959,Fucosyltransferase (secretor status)
+FUT2,FUT6,988,Fucosyltransferase (secretor status)
+FUT2,FUT9,960,Fucosyltransferase (secretor status)
+FUT2,B3GNT2,930,Fucosyltransferase (secretor status)
+FUT2,FUT3,997,Fucosyltransferase (secretor status)
+FUT2,B4GALT2,921,Fucosyltransferase (secretor status)
+FUT2,FUT1,907,Fucosyltransferase (secretor status)
+FUT2,B3GNT4,921,Fucosyltransferase (secretor status)
+FUT2,B3GNT3,950,Fucosyltransferase (secretor status)
+FUT2,HBG1,725,Fucosyltransferase (secretor status)
+FUT2,FUT4,986,Fucosyltransferase (secretor status)
+FUT2,B3GALT2,927,Fucosyltransferase (secretor status)
+FUT2,B4GALT1,933,Fucosyltransferase (secretor status)
+FUT2,EXOC1,700,Fucosyltransferase (secretor status)
+FUT2,B3GALT1,935,Fucosyltransferase (secretor status)
+FUT2,ST3GAL2,931,Fucosyltransferase (secretor status)
+FUT2,B3GALT5,958,Fucosyltransferase (secretor status)
+FUT2,B4GALT4,920,Fucosyltransferase (secretor status)
+FUT2,B4GALT3,914,Fucosyltransferase (secretor status)
+FUT2,FUT5,986,Fucosyltransferase (secretor status)
+FUT2,ST3GAL4,943,Fucosyltransferase (secretor status)
+FUT2,ABO,927,Fucosyltransferase (secretor status)
+FUT2,GCNT2,933,Fucosyltransferase (secretor status)
+FUT2,EPHX2,790,Fucosyltransferase (secretor status)
+FUT2,ST3GAL6,929,Fucosyltransferase (secretor status)
+FUT2,ST3GAL1,940,Fucosyltransferase (secretor status)
+FUT2,SETBP1,778,Fucosyltransferase (secretor status)
+AHR,CYP1B1,763,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,HSP90AB1,995,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,ARNTL2,711,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,HSP90AA1,992,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,NCOA1,702,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,CYP1A2,866,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,ARNT2,940,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,AIP,999,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,CYP1A1,973,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,ESR1,906,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,ENSG00000283321,904,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,ARNT,999,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,RB1,727,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,AIPL1,856,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,NCOA2,705,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,ARNTL,792,Aryl hydrocarbon receptor (microbial metabolites)
+AHR,PTGES3,908,Aryl hydrocarbon receptor (microbial metabolites)

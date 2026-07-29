@@ -1,0 +1,26 @@
+{
+  "parameter": "N0/K",
+  "value": 0.15,
+  "range": [
+    0.1,
+    0.3
+  ],
+  "derivation": {
+    "BSI_median_mCRPC": 3.1,
+    "BSI_IQR": [
+      1.3,
+      7.1
+    ],
+    "BSI_unit": "percent of total skeletal mass",
+    "source": "Armstrong et al. Clin Genitourin Cancer 2022; 169 mCRPC patients",
+    "reasoning": "BSI ~3% at diagnosis, doubles at progression (~6%), max observed ~10-20%. Ratio diagnosis/max \u2248 0.15-0.30",
+    "N0_K_chosen": 0.15,
+    "note": "Low end of range. Could be 0.20-0.25. Affects TTP absolute value but not HR ratio."
+  },
+  "clinical_check": {
+    "untreated_TTP_model": "6.8 months at N0/K=0.15",
+    "mCRPC_untreated_not_observed": "all patients receive treatment, no true untreated control",
+    "TAX327_mitoxantrone_OS": "16.5 months (weak treatment, not untreated)"
+  },
+  "tuned_to_clinical": false
+}

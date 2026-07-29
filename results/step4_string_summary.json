@@ -1,0 +1,10 @@
+{
+  "source": "STRING v12.0 full human (9606)",
+  "filter": "combined_score >= 700",
+  "total_raw": 13715404,
+  "high_confidence": 473860,
+  "mapped_to_genes": 473854,
+  "unique_edges": 236837,
+  "unique_genes": 16194,
+  "file": "results/step4_string_full_interactome.csv"
+}

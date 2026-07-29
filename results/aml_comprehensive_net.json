@@ -1,0 +1,3077 @@
+{
+  "disease": "Acute Myeloid Leukemia",
+  "build_date": "2026-04-09",
+  "n_core_genes": 498,
+  "n_expanded_genes": 4558,
+  "total_edges": 152046,
+  "layers": {
+    "L1": {
+      "n_genes": 498,
+      "top": [
+        [
+          "DNMT3A",
+          {
+            "association_score": 0.8501,
+            "mutation_frequency": 0.0094,
+            "n_drug_correlations": 20,
+            "metabolites": [
+              "DNA",
+              "SAM",
+              "DNA-5-methylcytosine",
+              "SAH",
+              "se-adenosylselenomethionine",
+              "se-adenosyl-L-selenohomocysteine"
+            ],
+            "immune_top_cell": "T cell, CD8, naive",
+            "immune_top_tpm": 106.3
+          }
+        ],
+        [
+          "CEBPA",
+          {
+            "association_score": 0.8324,
+            "mutation_frequency": 0,
+            "n_drug_correlations": 20
+          }
+        ],
+        [
+          "FLT3",
+          {
+            "association_score": 0.8317,
+            "mutation_frequency": 0.007,
+            "n_drug_correlations": 20,
+            "immune_top_cell": "Monocyte, classical",
+            "immune_top_tpm": 13.4
+          }
+        ],
+        [
+          "IDH1",
+          {
+            "association_score": 0.7727,
+            "mutation_frequency": 0,
+            "n_drug_correlations": 20,
+            "metabolites": [
+              "isocitrate",
+              "AKG"
+            ],
+            "immune_top_cell": "Monocyte, classical",
+            "immune_top_tpm": 29.7
+          }
+        ],
+        [
+          "RUNX1",
+          {
+            "association_score": 0.7589,
+            "mutation_frequency": 0.0094,
+            "n_drug_correlations": 14,
+            "immune_top_cell": "T cell, CD4, naive",
+            "immune_top_tpm": 39.0
+          }
+        ],
+        [
+          "TET2",
+          {
+            "association_score": 0.756,
+            "mutation_frequency": 0.0094,
+            "n_drug_correlations": 9,
+            "immune_top_cell": "Monocyte, non-classical",
+            "immune_top_tpm": 65.9
+          }
+        ],
+        [
+          "KRAS",
+          {
+            "association_score": 0.7558,
+            "mutation_frequency": 0.0094,
+            "n_drug_correlations": 20,
+            "n_interactions": 17,
+            "pathways": [
+              {
+                "id": "hsa01521",
+                "name": "EGFR tyrosine kinase inhibitor resistance",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa01522",
+                "name": "Endocrine resistance",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04010",
+                "name": "MAPK signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04012",
+                "name": "ErbB signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04014",
+                "name": "Ras signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04015",
+                "name": "Rap1 signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04062",
+                "name": "Chemokine signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04068",
+                "name": "FoxO signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04071",
+                "name": "Sphingolipid signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04072",
+                "name": "Phospholipase D signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04137",
+                "name": "Mitophagy - animal",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04140",
+                "name": "Autophagy - animal",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04150",
+                "name": "mTOR signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04151",
+                "name": "PI3K-Akt signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04210",
+                "name": "Apoptosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04211",
+                "name": "Longevity regulating pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04213",
+                "name": "Longevity regulating pathway - multiple species",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04218",
+                "name": "Cellular senescence",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04360",
+                "name": "Axon guidance",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04370",
+                "name": "VEGF signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04371",
+                "name": "Apelin signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04519",
+                "name": "Cadherin signaling",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04540",
+                "name": "Gap junction",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04550",
+                "name": "Signaling pathways regulating pluripotency of stem cells",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04625",
+                "name": "C-type lectin receptor signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04650",
+                "name": "Natural killer cell mediated cytotoxicity",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04660",
+                "name": "T cell receptor signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04662",
+                "name": "B cell receptor signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04664",
+                "name": "Fc epsilon RI signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04714",
+                "name": "Thermogenesis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04720",
+                "name": "Long-term potentiation",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04722",
+                "name": "Neurotrophin signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04725",
+                "name": "Cholinergic synapse",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04726",
+                "name": "Serotonergic synapse",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04730",
+                "name": "Long-term depression",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04810",
+                "name": "Regulation of actin cytoskeleton",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04910",
+                "name": "Insulin signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04912",
+                "name": "GnRH signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04914",
+                "name": "Progesterone-mediated oocyte maturation",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04915",
+                "name": "Estrogen signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04916",
+                "name": "Melanogenesis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04917",
+                "name": "Prolactin signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04919",
+                "name": "Thyroid hormone signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04921",
+                "name": "Oxytocin signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04926",
+                "name": "Relaxin signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04929",
+                "name": "GnRH secretion",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04933",
+                "name": "AGE-RAGE signaling pathway in diabetic complications",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04935",
+                "name": "Growth hormone synthesis, secretion and action",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04960",
+                "name": "Aldosterone-regulated sodium reabsorption",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05010",
+                "name": "Alzheimer disease",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05022",
+                "name": "Pathways of neurodegeneration - multiple diseases",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05034",
+                "name": "Alcoholism",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05160",
+                "name": "Hepatitis C",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05161",
+                "name": "Hepatitis B",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05163",
+                "name": "Human cytomegalovirus infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05165",
+                "name": "Human papillomavirus infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05166",
+                "name": "Human T-cell leukemia virus 1 infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05167",
+                "name": "Kaposi sarcoma-associated herpesvirus infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05170",
+                "name": "Human immunodeficiency virus 1 infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05200",
+                "name": "Pathways in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05203",
+                "name": "Viral carcinogenesis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05205",
+                "name": "Proteoglycans in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05206",
+                "name": "MicroRNAs in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05207",
+                "name": "Chemical carcinogenesis - receptor activation",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05208",
+                "name": "Chemical carcinogenesis - reactive oxygen species",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05210",
+                "name": "Colorectal cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05211",
+                "name": "Renal cell carcinoma",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05212",
+                "name": "Pancreatic cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05213",
+                "name": "Endometrial cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05214",
+                "name": "Glioma",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05215",
+                "name": "Prostate cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05216",
+                "name": "Thyroid cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05218",
+                "name": "Melanoma",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05219",
+                "name": "Bladder cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05220",
+                "name": "Chronic myeloid leukemia",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05221",
+                "name": "Acute myeloid leukemia",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05223",
+                "name": "Non-small cell lung cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05224",
+                "name": "Breast cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05225",
+                "name": "Hepatocellular carcinoma",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05226",
+                "name": "Gastric cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05230",
+                "name": "Central carbon metabolism in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05231",
+                "name": "Choline metabolism in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05235",
+                "name": "PD-L1 expression and PD-1 checkpoint pathway in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05417",
+                "name": "Lipid and atherosclerosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "R-BTA-1169092",
+                "name": "Activation of RAS in B cells",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-1250347",
+                "name": "SHC1 events in ERBB4 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-1433557",
+                "name": "Signaling by SCF-KIT",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-171007",
+                "name": "p38MAPK events",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-179812",
+                "name": "GRB2 events in EGFR signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-180336",
+                "name": "SHC1 events in EGFR signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-186763",
+                "name": "Downstream signal transduction",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-1963640",
+                "name": "GRB2 events in ERBB2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-210993",
+                "name": "Tie2 Signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-2179392",
+                "name": "EGFR Transactivation by Gastrin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-2424491",
+                "name": "DAP12 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-2871796",
+                "name": "FCERI mediated MAPK activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-375165",
+                "name": "NCAM signaling for neurite out-growth",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5218921",
+                "name": "VEGFR2 mediated cell proliferation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5654688",
+                "name": "SHC-mediated cascade:FGFR1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5654693",
+                "name": "FRS-mediated FGFR1 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5654699",
+                "name": "SHC-mediated cascade:FGFR2",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5654700",
+                "name": "FRS-mediated FGFR2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5654704",
+                "name": "SHC-mediated cascade:FGFR3",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5654706",
+                "name": "FRS-mediated FGFR3 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5654712",
+                "name": "FRS-mediated FGFR4 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5654719",
+                "name": "SHC-mediated cascade:FGFR4",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5673000",
+                "name": "RAF activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5673001",
+                "name": "RAF/MAP kinase cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5674135",
+                "name": "MAP2K and MAPK activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5675221",
+                "name": "Negative regulation of MAPK pathway",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-8849471",
+                "name": "PTK6 Regulates RHO GTPases, RAS GTPase and MAP kinases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-8851805",
+                "name": "MET activates RAS signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9607240",
+                "name": "FLT3 Signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9634635",
+                "name": "Estrogen-stimulated signaling through PRKCZ",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9648002",
+                "name": "RAS processing",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9674555",
+                "name": "Signaling by CSF3 (G-CSF)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-1169092",
+                "name": "Activation of RAS in B cells",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-1250347",
+                "name": "SHC1 events in ERBB4 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-1433557",
+                "name": "Signaling by SCF-KIT",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-171007",
+                "name": "p38MAPK events",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-179812",
+                "name": "GRB2 events in EGFR signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-180336",
+                "name": "SHC1 events in EGFR signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-186763",
+                "name": "Downstream signal transduction",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-1963640",
+                "name": "GRB2 events in ERBB2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-210993",
+                "name": "Tie2 Signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-2179392",
+                "name": "EGFR Transactivation by Gastrin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-2424491",
+                "name": "DAP12 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-2871796",
+                "name": "FCERI mediated MAPK activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-375165",
+                "name": "NCAM signaling for neurite out-growth",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-4086398",
+                "name": "Ca2+ pathway",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5218921",
+                "name": "VEGFR2 mediated cell proliferation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5621575",
+                "name": "CD209 (DC-SIGN) signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5654688",
+                "name": "SHC-mediated cascade:FGFR1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5654693",
+                "name": "FRS-mediated FGFR1 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5654699",
+                "name": "SHC-mediated cascade:FGFR2",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5654700",
+                "name": "FRS-mediated FGFR2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5654704",
+                "name": "SHC-mediated cascade:FGFR3",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5654706",
+                "name": "FRS-mediated FGFR3 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5654712",
+                "name": "FRS-mediated FGFR4 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5654719",
+                "name": "SHC-mediated cascade:FGFR4",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5658442",
+                "name": "Regulation of RAS by GAPs",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5673000",
+                "name": "RAF activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5673001",
+                "name": "RAF/MAP kinase cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5674135",
+                "name": "MAP2K and MAPK activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5675221",
+                "name": "Negative regulation of MAPK pathway",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-8849471",
+                "name": "PTK6 Regulates RHO GTPases, RAS GTPase and MAP kinases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-8851805",
+                "name": "MET activates RAS signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-9607240",
+                "name": "FLT3 Signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-9634635",
+                "name": "Estrogen-stimulated signaling through PRKCZ",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-9648002",
+                "name": "RAS processing",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-9674555",
+                "name": "Signaling by CSF3 (G-CSF)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-112412",
+                "name": "SOS-mediated signalling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1169092",
+                "name": "Activation of RAS in B cells",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1236382",
+                "name": "Constitutive Signaling by Ligand-Responsive EGFR Cancer Variants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1250196",
+                "name": "SHC1 events in ERBB2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1250347",
+                "name": "SHC1 events in ERBB4 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1433557",
+                "name": "Signaling by SCF-KIT",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-167044",
+                "name": "Signalling to RAS",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-171007",
+                "name": "p38MAPK events",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-179812",
+                "name": "GRB2 events in EGFR signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-180336",
+                "name": "SHC1 events in EGFR signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-186763",
+                "name": "Downstream signal transduction",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1963640",
+                "name": "GRB2 events in ERBB2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-210993",
+                "name": "Tie2 Signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2179392",
+                "name": "EGFR Transactivation by Gastrin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2424491",
+                "name": "DAP12 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2428933",
+                "name": "SHC-related events triggered by IGF1R",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2871796",
+                "name": "FCERI mediated MAPK activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-375165",
+                "name": "NCAM signaling for neurite out-growth",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-4086398",
+                "name": "Ca2+ pathway",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-442982",
+                "name": "Ras activation upon Ca2+ influx through NMDA receptor",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5218921",
+                "name": "VEGFR2 mediated cell proliferation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5621575",
+                "name": "CD209 (DC-SIGN) signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5637810",
+                "name": "Constitutive Signaling by EGFRvIII",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5654688",
+                "name": "SHC-mediated cascade:FGFR1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5654693",
+                "name": "FRS-mediated FGFR1 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5654699",
+                "name": "SHC-mediated cascade:FGFR2",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5654700",
+                "name": "FRS-mediated FGFR2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5654704",
+                "name": "SHC-mediated cascade:FGFR3",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5654706",
+                "name": "FRS-mediated FGFR3 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5654712",
+                "name": "FRS-mediated FGFR4 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5654719",
+                "name": "SHC-mediated cascade:FGFR4",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5655253",
+                "name": "Signaling by FGFR2 in disease",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5655291",
+                "name": "Signaling by FGFR4 in disease",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5655302",
+                "name": "Signaling by FGFR1 in disease",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5655332",
+                "name": "Signaling by FGFR3 in disease",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5658442",
+                "name": "Regulation of RAS by GAPs",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5673000",
+                "name": "RAF activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5673001",
+                "name": "RAF/MAP kinase cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5674135",
+                "name": "MAP2K and MAPK activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5675221",
+                "name": "Negative regulation of MAPK pathway",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6802946",
+                "name": "Signaling by moderate kinase activity BRAF mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6802948",
+                "name": "Signaling by high-kinase activity BRAF mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6802952",
+                "name": "Signaling by BRAF and RAF1 fusions",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6802953",
+                "name": "RAS signaling downstream of NF1 loss-of-function variants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6802955",
+                "name": "Paradoxical activation of RAF signaling by kinase inactive BRAF",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-74751",
+                "name": "Insulin receptor signalling cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8849471",
+                "name": "PTK6 Regulates RHO GTPases, RAS GTPase and MAP kinases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8851805",
+                "name": "MET activates RAS signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8951936",
+                "name": "RUNX3 regulates p14-ARF",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9026519",
+                "name": "Activated NTRK2 signals through RAS",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9027284",
+                "name": "Erythropoietin activates RAS",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9028731",
+                "name": "Activated NTRK2 signals through FRS2 and FRS3",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9034864",
+                "name": "Activated NTRK3 signals through RAS",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9607240",
+                "name": "FLT3 Signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9634285",
+                "name": "Constitutive Signaling by Overexpressed ERBB2",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9634635",
+                "name": "Estrogen-stimulated signaling through PRKCZ",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9648002",
+                "name": "RAS processing",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9649948",
+                "name": "Signaling downstream of RAS mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9656223",
+                "name": "Signaling by RAF1 mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9664565",
+                "name": "Signaling by ERBB2 KD Mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9665348",
+                "name": "Signaling by ERBB2 ECD mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9665686",
+                "name": "Signaling by ERBB2 TMD/JMD mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9670439",
+                "name": "Signaling by phosphorylated juxtamembrane, extracellular and kinase domain KIT mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9673767",
+                "name": "Signaling by PDGFRA transmembrane, juxtamembrane and kinase domain mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9673770",
+                "name": "Signaling by PDGFRA extracellular domain mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9674555",
+                "name": "Signaling by CSF3 (G-CSF)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9680350",
+                "name": "Signaling by CSF1 (M-CSF) in myeloid cells",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9703465",
+                "name": "Signaling by FLT3 fusion proteins",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9703648",
+                "name": "Signaling by FLT3 ITD and TKD mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9753510",
+                "name": "Signaling by RAS GAP mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9753512",
+                "name": "Signaling by RAS GTPase mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-1169092",
+                "name": "Activation of RAS in B cells",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-1250347",
+                "name": "SHC1 events in ERBB4 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-1433557",
+                "name": "Signaling by SCF-KIT",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-171007",
+                "name": "p38MAPK events",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-179812",
+                "name": "GRB2 events in EGFR signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-180336",
+                "name": "SHC1 events in EGFR signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-186763",
+                "name": "Downstream signal transduction",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-1963640",
+                "name": "GRB2 events in ERBB2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-210993",
+                "name": "Tie2 Signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-2179392",
+                "name": "EGFR Transactivation by Gastrin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-2424491",
+                "name": "DAP12 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-2871796",
+                "name": "FCERI mediated MAPK activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-375165",
+                "name": "NCAM signaling for neurite out-growth",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5218921",
+                "name": "VEGFR2 mediated cell proliferation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5654688",
+                "name": "SHC-mediated cascade:FGFR1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5654693",
+                "name": "FRS-mediated FGFR1 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5654699",
+                "name": "SHC-mediated cascade:FGFR2",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5654700",
+                "name": "FRS-mediated FGFR2 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5654704",
+                "name": "SHC-mediated cascade:FGFR3",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5654706",
+                "name": "FRS-mediated FGFR3 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5654712",
+                "name": "FRS-mediated FGFR4 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5654719",
+                "name": "SHC-mediated cascade:FGFR4",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5658442",
+                "name": "Regulation of RAS by GAPs",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5673000",
+                "name": "RAF activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5673001",
+                "name": "RAF/MAP kinase cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5674135",
+                "name": "MAP2K and MAPK activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5675221",
+                "name": "Negative regulation of MAPK pathway",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-8849471",
+                "name": "PTK6 Regulates RHO GTPases, RAS GTPase and MAP kinases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-8851805",
+                "name": "MET activates RAS signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9607240",
+                "name": "FLT3 Signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9634635",
+                "name": "Estrogen-stimulated signaling through PRKCZ",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9648002",
+                "name": "RAS processing",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9674555",
+                "name": "Signaling by CSF3 (G-CSF)",
+                "source": "Reactome"
+              }
+            ],
+            "immune_top_cell": "T cell, CD4, naive TREG",
+            "immune_top_tpm": 454.6
+          }
+        ],
+        [
+          "GATA2",
+          {
+            "association_score": 0.7451,
+            "mutation_frequency": 0.007,
+            "n_drug_correlations": 20
+          }
+        ],
+        [
+          "SRSF2",
+          {
+            "association_score": 0.7332,
+            "mutation_frequency": 0,
+            "n_drug_correlations": 20,
+            "immune_top_cell": "T cell, CD4, naive [activated]",
+            "immune_top_tpm": 512.5
+          }
+        ],
+        [
+          "KIT",
+          {
+            "association_score": 0.7309,
+            "mutation_frequency": 0.0094,
+            "n_drug_correlations": 11,
+            "alphafold": {
+              "uniprot": "P10721",
+              "n_atoms": 7725
+            }
+          }
+        ],
+        [
+          "ASXL1",
+          {
+            "association_score": 0.7292,
+            "mutation_frequency": 0.0211,
+            "n_drug_correlations": 11,
+            "n_interactions": 1,
+            "pathways": [
+              {
+                "id": "hsa03083",
+                "name": "Polycomb repressive complex",
+                "source": "KEGG"
+              },
+              {
+                "id": "R-BTA-5689603",
+                "name": "UCH proteinases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-5689603",
+                "name": "UCH proteinases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5689603",
+                "name": "UCH proteinases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5689603",
+                "name": "UCH proteinases",
+                "source": "Reactome"
+              }
+            ],
+            "immune_top_cell": "T cell, CD4, memory TREG",
+            "immune_top_tpm": 203.4
+          }
+        ],
+        [
+          "TP53",
+          {
+            "association_score": 0.7243,
+            "mutation_frequency": 0.3724,
+            "n_drug_correlations": 20,
+            "n_interactions": 25,
+            "pathways": [
+              {
+                "id": "hsa01522",
+                "name": "Endocrine resistance",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa01524",
+                "name": "Platinum drug resistance",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04010",
+                "name": "MAPK signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04071",
+                "name": "Sphingolipid signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04110",
+                "name": "Cell cycle",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04115",
+                "name": "p53 signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04137",
+                "name": "Mitophagy - animal",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04151",
+                "name": "PI3K-Akt signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04210",
+                "name": "Apoptosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04211",
+                "name": "Longevity regulating pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04216",
+                "name": "Ferroptosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04218",
+                "name": "Cellular senescence",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04310",
+                "name": "Wnt signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04722",
+                "name": "Neurotrophin signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04919",
+                "name": "Thyroid hormone signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05012",
+                "name": "Parkinson disease",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05014",
+                "name": "Amyotrophic lateral sclerosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05016",
+                "name": "Huntington disease",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05131",
+                "name": "Shigellosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05160",
+                "name": "Hepatitis C",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05161",
+                "name": "Hepatitis B",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05162",
+                "name": "Measles",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05163",
+                "name": "Human cytomegalovirus infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05165",
+                "name": "Human papillomavirus infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05166",
+                "name": "Human T-cell leukemia virus 1 infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05167",
+                "name": "Kaposi sarcoma-associated herpesvirus infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05168",
+                "name": "Herpes simplex virus 1 infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05169",
+                "name": "Epstein-Barr virus infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05200",
+                "name": "Pathways in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05202",
+                "name": "Transcriptional misregulation in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05203",
+                "name": "Viral carcinogenesis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05205",
+                "name": "Proteoglycans in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05206",
+                "name": "MicroRNAs in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05210",
+                "name": "Colorectal cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05212",
+                "name": "Pancreatic cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05213",
+                "name": "Endometrial cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05214",
+                "name": "Glioma",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05215",
+                "name": "Prostate cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05216",
+                "name": "Thyroid cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05217",
+                "name": "Basal cell carcinoma",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05218",
+                "name": "Melanoma",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05219",
+                "name": "Bladder cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05220",
+                "name": "Chronic myeloid leukemia",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05222",
+                "name": "Small cell lung cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05223",
+                "name": "Non-small cell lung cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05224",
+                "name": "Breast cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05225",
+                "name": "Hepatocellular carcinoma",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05226",
+                "name": "Gastric cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05230",
+                "name": "Central carbon metabolism in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05417",
+                "name": "Lipid and atherosclerosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05418",
+                "name": "Fluid shear stress and atherosclerosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "R-BTA-2559580",
+                "name": "Oxidative Stress Induced Senescence",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-2559586",
+                "name": "DNA Damage/Telomere Stress Induced Senescence",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-349425",
+                "name": "Autodegradation of the E3 ubiquitin ligase COP1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5689880",
+                "name": "Ub-specific processing proteases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5689896",
+                "name": "Ovarian tumor domain proteases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5693565",
+                "name": "Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6804754",
+                "name": "Regulation of TP53 Expression",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6804756",
+                "name": "Regulation of TP53 Activity through Phosphorylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6804757",
+                "name": "Regulation of TP53 Degradation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6804758",
+                "name": "Regulation of TP53 Activity through Acetylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6804759",
+                "name": "Regulation of TP53 Activity through Association with Co-factors",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6804760",
+                "name": "Regulation of TP53 Activity through Methylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6811555",
+                "name": "PI5P Regulates TP53 Acetylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-69473",
+                "name": "G2/M DNA damage checkpoint",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-69481",
+                "name": "G2/M Checkpoints",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-69541",
+                "name": "Stabilization of p53",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-69895",
+                "name": "Transcriptional  activation of  cell cycle inhibitor p21 ",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-8852276",
+                "name": "The role of GTSE1 in G2/M progression after G2 checkpoint",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-8941855",
+                "name": "RUNX3 regulates CDKN1A transcription",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9833482",
+                "name": "PKR-mediated signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-111448",
+                "name": "Activation of NOXA and translocation to mitochondria",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-139915",
+                "name": "Activation of PUMA and translocation to mitochondria",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1912408",
+                "name": "Pre-NOTCH Transcription and Translation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2559580",
+                "name": "Oxidative Stress Induced Senescence",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2559584",
+                "name": "Formation of Senescence-Associated Heterochromatin Foci (SAHF)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2559585",
+                "name": "Oncogene Induced Senescence",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2559586",
+                "name": "DNA Damage/Telomere Stress Induced Senescence",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-3232118",
+                "name": "SUMOylation of transcription factors",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-349425",
+                "name": "Autodegradation of the E3 ubiquitin ligase COP1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-390471",
+                "name": "Association of TriC/CCT with target proteins during biosynthesis",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5620971",
+                "name": "Pyroptosis",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5628897",
+                "name": "TP53 Regulates Metabolic Genes",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5689880",
+                "name": "Ub-specific processing proteases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5689896",
+                "name": "Ovarian tumor domain proteases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5693565",
+                "name": "Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6785807",
+                "name": "Interleukin-4 and Interleukin-13 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6796648",
+                "name": "TP53 Regulates Transcription of DNA Repair Genes",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6803204",
+                "name": "TP53 Regulates Transcription of Genes Involved in Cytochrome C Release",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6803205",
+                "name": "TP53 regulates transcription of several additional cell death genes whose specific roles in p53-dependent apoptosis remain uncertain",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6803207",
+                "name": "TP53 Regulates Transcription of Caspase Activators and Caspases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6803211",
+                "name": "TP53 Regulates Transcription of Death Receptors and Ligands",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804114",
+                "name": "TP53 Regulates Transcription of Genes Involved in G2 Cell Cycle Arrest",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804115",
+                "name": "TP53 regulates transcription of additional cell cycle genes whose exact role in the p53 pathway remain uncertain",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804116",
+                "name": "TP53 Regulates Transcription of Genes Involved in G1 Cell Cycle Arrest",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804754",
+                "name": "Regulation of TP53 Expression",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804756",
+                "name": "Regulation of TP53 Activity through Phosphorylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804757",
+                "name": "Regulation of TP53 Degradation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804758",
+                "name": "Regulation of TP53 Activity through Acetylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804759",
+                "name": "Regulation of TP53 Activity through Association with Co-factors",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6804760",
+                "name": "Regulation of TP53 Activity through Methylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6811555",
+                "name": "PI5P Regulates TP53 Acetylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-69473",
+                "name": "G2/M DNA damage checkpoint",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-69481",
+                "name": "G2/M Checkpoints",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-69541",
+                "name": "Stabilization of p53",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-69895",
+                "name": "Transcriptional  activation of  cell cycle inhibitor p21 ",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-70635",
+                "name": "Urea cycle",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8852276",
+                "name": "The role of GTSE1 in G2/M progression after G2 checkpoint",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8853884",
+                "name": "Transcriptional Regulation by VENTX",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8941855",
+                "name": "RUNX3 regulates CDKN1A transcription",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8943724",
+                "name": "Regulation of PTEN gene transcription",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9723905",
+                "name": "Loss of function of TP53 in cancer due to loss of tetramerization ability",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9725370",
+                "name": "Signaling by ALK fusions and activated point mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9758274",
+                "name": "Regulation of NF-kappa B signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9819196",
+                "name": "Zygotic genome activation (ZGA)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-983231",
+                "name": "Factors involved in megakaryocyte development and platelet production",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9833482",
+                "name": "PKR-mediated signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-2559580",
+                "name": "Oxidative Stress Induced Senescence",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-2559584",
+                "name": "Formation of Senescence-Associated Heterochromatin Foci (SAHF)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-2559586",
+                "name": "DNA Damage/Telomere Stress Induced Senescence",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-349425",
+                "name": "Autodegradation of the E3 ubiquitin ligase COP1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5689880",
+                "name": "Ub-specific processing proteases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5689896",
+                "name": "Ovarian tumor domain proteases",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5693565",
+                "name": "Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6804754",
+                "name": "Regulation of TP53 Expression",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6804756",
+                "name": "Regulation of TP53 Activity through Phosphorylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6804757",
+                "name": "Regulation of TP53 Degradation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6804758",
+                "name": "Regulation of TP53 Activity through Acetylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6804759",
+                "name": "Regulation of TP53 Activity through Association with Co-factors",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6804760",
+                "name": "Regulation of TP53 Activity through Methylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6811555",
+                "name": "PI5P Regulates TP53 Acetylation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-69473",
+                "name": "G2/M DNA damage checkpoint",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-69481",
+                "name": "G2/M Checkpoints",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-69541",
+                "name": "Stabilization of p53",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-69895",
+                "name": "Transcriptional  activation of  cell cycle inhibitor p21 ",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-8852276",
+                "name": "The role of GTSE1 in G2/M progression after G2 checkpoint",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-8941855",
+                "name": "RUNX3 regulates CDKN1A transcription",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9833482",
+                "name": "PKR-mediated signaling",
+                "source": "Reactome"
+              }
+            ],
+            "alphafold": {
+              "uniprot": "P04637",
+              "n_atoms": 3060
+            },
+            "immune_top_cell": "T cell, CD8, naive [activated]",
+            "immune_top_tpm": 43.6,
+            "selectivity": {
+              "prostate_tpm": 20.3,
+              "other_mean_tpm": 16.13,
+              "other_max_tpm": 72.95,
+              "ratio_vs_mean": 1.26,
+              "safety_class": "UBIQUITOUS",
+              "max_other_tissue": "Cells - EBV-transformed lymphocytes"
+            },
+            "cna": {
+              "n_patients": 17,
+              "amp": 2,
+              "del": 15
+            }
+          }
+        ],
+        [
+          "TERT",
+          {
+            "association_score": 0.7083,
+            "mutation_frequency": 0.0047,
+            "n_drug_correlations": 20
+          }
+        ],
+        [
+          "DDX41",
+          {
+            "association_score": 0.7043,
+            "mutation_frequency": 0.0023,
+            "n_drug_correlations": 20,
+            "immune_top_cell": "T cell, CD8, naive [activated]",
+            "immune_top_tpm": 68.5
+          }
+        ],
+        [
+          "NRAS",
+          {
+            "association_score": 0.6998,
+            "mutation_frequency": 0,
+            "n_drug_correlations": 20,
+            "immune_top_cell": "B cell, naive",
+            "immune_top_tpm": 741.3
+          }
+        ],
+        [
+          "IDH2",
+          {
+            "association_score": 0.6812,
+            "mutation_frequency": 0.0117,
+            "n_drug_correlations": 20,
+            "n_interactions": 2,
+            "metabolites": [
+              "isocitrate",
+              "AKG"
+            ],
+            "immune_top_cell": "NK cell, CD56dim CD16+",
+            "immune_top_tpm": 155.6
+          }
+        ],
+        [
+          "NSD1",
+          {
+            "association_score": 0.6795,
+            "mutation_frequency": 0.0211,
+            "n_drug_correlations": 20,
+            "pathways": [
+              {
+                "id": "hsa00310",
+                "name": "Lysine degradation",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa01100",
+                "name": "Metabolic pathways",
+                "source": "KEGG"
+              },
+              {
+                "id": "R-BTA-3214841",
+                "name": "PKMTs methylate histone lysines",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-CFA-3214841",
+                "name": "PKMTs methylate histone lysines",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-3214841",
+                "name": "PKMTs methylate histone lysines",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-3214841",
+                "name": "PKMTs methylate histone lysines",
+                "source": "Reactome"
+              }
+            ],
+            "metabolites": [
+              "histone-N6-methyl-L-lysine",
+              "SAH",
+              "histone-L-lysine",
+              "SAM",
+              "[protein]-L-lysine",
+              "[protein]-N6-methyl-L-lysine",
+              "[protein]-N6,N6-dimethyl-L-lysine",
+              "[protein]-N6,N6,N6-trimethyl-L-lysine"
+            ],
+            "immune_top_cell": "NK cell, CD56dim CD16+",
+            "immune_top_tpm": 93.0
+          }
+        ],
+        [
+          "JAK2",
+          {
+            "association_score": 0.6675,
+            "mutation_frequency": 0.0047,
+            "n_drug_correlations": 20,
+            "n_interactions": 9,
+            "pathways": [
+              {
+                "id": "hsa01521",
+                "name": "EGFR tyrosine kinase inhibitor resistance",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04062",
+                "name": "Chemokine signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04081",
+                "name": "Hormone signaling",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04148",
+                "name": "Efferocytosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04151",
+                "name": "PI3K-Akt signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04217",
+                "name": "Necroptosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04550",
+                "name": "Signaling pathways regulating pluripotency of stem cells",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04630",
+                "name": "JAK-STAT signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04658",
+                "name": "Th1 and Th2 cell differentiation",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04659",
+                "name": "Th17 cell differentiation",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04725",
+                "name": "Cholinergic synapse",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04917",
+                "name": "Prolactin signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04920",
+                "name": "Adipocytokine signaling pathway",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04933",
+                "name": "AGE-RAGE signaling pathway in diabetic complications",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa04935",
+                "name": "Growth hormone synthesis, secretion and action",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05140",
+                "name": "Leishmaniasis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05145",
+                "name": "Toxoplasmosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05152",
+                "name": "Tuberculosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05161",
+                "name": "Hepatitis B",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05164",
+                "name": "Influenza A",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05167",
+                "name": "Kaposi sarcoma-associated herpesvirus infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05168",
+                "name": "Herpes simplex virus 1 infection",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05200",
+                "name": "Pathways in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05207",
+                "name": "Chemical carcinogenesis - receptor activation",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05235",
+                "name": "PD-L1 expression and PD-1 checkpoint pathway in cancer",
+                "source": "KEGG"
+              },
+              {
+                "id": "hsa05417",
+                "name": "Lipid and atherosclerosis",
+                "source": "KEGG"
+              },
+              {
+                "id": "R-BTA-1059683",
+                "name": "Interleukin-6 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-110056",
+                "name": "MAPK3 (ERK1) activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-1170546",
+                "name": "Prolactin receptor signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-1433557",
+                "name": "Signaling by SCF-KIT",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-512988",
+                "name": "Interleukin-3, Interleukin-5 and GM-CSF signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5673000",
+                "name": "RAF activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-5673001",
+                "name": "RAF/MAP kinase cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6785807",
+                "name": "Interleukin-4 and Interleukin-13 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-6788467",
+                "name": "IL-6-type cytokine receptor ligand interactions",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-69231",
+                "name": "Cyclin D associated events in G1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-877300",
+                "name": "Interferon gamma signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-877312",
+                "name": "Regulation of IFNG signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-8854691",
+                "name": "Interleukin-20 family signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-8984722",
+                "name": "Interleukin-35 Signalling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9006335",
+                "name": "Signaling by Erythropoietin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9020591",
+                "name": "Interleukin-12 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9020933",
+                "name": "Interleukin-23 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9020956",
+                "name": "Interleukin-27 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9027276",
+                "name": "Erythropoietin activates Phosphoinositide-3-kinase (PI3K)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9027284",
+                "name": "Erythropoietin activates RAS",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-912526",
+                "name": "Interleukin receptor SHC signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9674555",
+                "name": "Signaling by CSF3 (G-CSF)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9705462",
+                "name": "Inactivation of CSF3 (G-CSF) signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-9732724",
+                "name": "IFNG signaling activates MAPKs",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-982772",
+                "name": "Growth hormone receptor signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-BTA-983231",
+                "name": "Factors involved in megakaryocyte development and platelet production",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-1059683",
+                "name": "Interleukin-6 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-1170546",
+                "name": "Prolactin receptor signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-1433557",
+                "name": "Signaling by SCF-KIT",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-512988",
+                "name": "Interleukin-3, Interleukin-5 and GM-CSF signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-5673000",
+                "name": "RAF activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-5673001",
+                "name": "RAF/MAP kinase cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-6785807",
+                "name": "Interleukin-4 and Interleukin-13 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-6788467",
+                "name": "IL-6-type cytokine receptor ligand interactions",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-69231",
+                "name": "Cyclin D associated events in G1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-877300",
+                "name": "Interferon gamma signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-877312",
+                "name": "Regulation of IFNG signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-8854691",
+                "name": "Interleukin-20 family signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-8984722",
+                "name": "Interleukin-35 Signalling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-9006335",
+                "name": "Signaling by Erythropoietin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-9020591",
+                "name": "Interleukin-12 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-9020933",
+                "name": "Interleukin-23 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-9027276",
+                "name": "Erythropoietin activates Phosphoinositide-3-kinase (PI3K)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-912526",
+                "name": "Interleukin receptor SHC signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-9705462",
+                "name": "Inactivation of CSF3 (G-CSF) signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-9732724",
+                "name": "IFNG signaling activates MAPKs",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-982772",
+                "name": "Growth hormone receptor signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-GGA-983231",
+                "name": "Factors involved in megakaryocyte development and platelet production",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1059683",
+                "name": "Interleukin-6 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-110056",
+                "name": "MAPK3 (ERK1) activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-112411",
+                "name": "MAPK1 (ERK2) activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1170546",
+                "name": "Prolactin receptor signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-1433557",
+                "name": "Signaling by SCF-KIT",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-2586552",
+                "name": "Signaling by Leptin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-3214858",
+                "name": "RMTs methylate histone arginines",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-512988",
+                "name": "Interleukin-3, Interleukin-5 and GM-CSF signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5673000",
+                "name": "RAF activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-5673001",
+                "name": "RAF/MAP kinase cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6785807",
+                "name": "Interleukin-4 and Interleukin-13 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6788467",
+                "name": "IL-6-type cytokine receptor ligand interactions",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6802946",
+                "name": "Signaling by moderate kinase activity BRAF mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6802952",
+                "name": "Signaling by BRAF and RAF1 fusions",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-6802955",
+                "name": "Paradoxical activation of RAF signaling by kinase inactive BRAF",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-69231",
+                "name": "Cyclin D associated events in G1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-877300",
+                "name": "Interferon gamma signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-877312",
+                "name": "Regulation of IFNG signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8854691",
+                "name": "Interleukin-20 family signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-8984722",
+                "name": "Interleukin-35 Signalling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9006335",
+                "name": "Signaling by Erythropoietin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9020591",
+                "name": "Interleukin-12 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9020933",
+                "name": "Interleukin-23 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9020956",
+                "name": "Interleukin-27 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9027276",
+                "name": "Erythropoietin activates Phosphoinositide-3-kinase (PI3K)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9027277",
+                "name": "Erythropoietin activates Phospholipase C gamma (PLCG)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9027283",
+                "name": "Erythropoietin activates STAT5",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9027284",
+                "name": "Erythropoietin activates RAS",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-912526",
+                "name": "Interleukin receptor SHC signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9649948",
+                "name": "Signaling downstream of RAS mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9656223",
+                "name": "Signaling by RAF1 mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9670439",
+                "name": "Signaling by phosphorylated juxtamembrane, extracellular and kinase domain KIT mutants",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9674555",
+                "name": "Signaling by CSF3 (G-CSF)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9679191",
+                "name": "Potential therapeutics for SARS",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9705462",
+                "name": "Inactivation of CSF3 (G-CSF) signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-9732724",
+                "name": "IFNG signaling activates MAPKs",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-982772",
+                "name": "Growth hormone receptor signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-HSA-983231",
+                "name": "Factors involved in megakaryocyte development and platelet production",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-1059683",
+                "name": "Interleukin-6 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-112411",
+                "name": "MAPK1 (ERK2) activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-1170546",
+                "name": "Prolactin receptor signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-1433557",
+                "name": "Signaling by SCF-KIT",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-512988",
+                "name": "Interleukin-3, Interleukin-5 and GM-CSF signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5673000",
+                "name": "RAF activation",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-5673001",
+                "name": "RAF/MAP kinase cascade",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6785807",
+                "name": "Interleukin-4 and Interleukin-13 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-6788467",
+                "name": "IL-6-type cytokine receptor ligand interactions",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-69231",
+                "name": "Cyclin D associated events in G1",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-877300",
+                "name": "Interferon gamma signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-877312",
+                "name": "Regulation of IFNG signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-8854691",
+                "name": "Interleukin-20 family signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-8984722",
+                "name": "Interleukin-35 Signalling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9006335",
+                "name": "Signaling by Erythropoietin",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9020591",
+                "name": "Interleukin-12 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9020933",
+                "name": "Interleukin-23 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9020956",
+                "name": "Interleukin-27 signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9027276",
+                "name": "Erythropoietin activates Phosphoinositide-3-kinase (PI3K)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9027284",
+                "name": "Erythropoietin activates RAS",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-912526",
+                "name": "Interleukin receptor SHC signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9674555",
+                "name": "Signaling by CSF3 (G-CSF)",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9705462",
+                "name": "Inactivation of CSF3 (G-CSF) signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-9732724",
+                "name": "IFNG signaling activates MAPKs",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-982772",
+                "name": "Growth hormone receptor signaling",
+                "source": "Reactome"
+              },
+              {
+                "id": "R-SSC-983231",
+                "name": "Factors involved in megakaryocyte development and platelet production",
+                "source": "Reactome"
+              }
+            ],
+            "immune_top_cell": "Monocyte, non-classical",
+            "immune_top_tpm": 140.0
+          }
+        ],
+        [
+          "POLD1",
+          {
+            "association_score": 0.6594,
+            "mutation_frequency": 0.0094,
+            "n_drug_correlations": 20,
+            "metabolites": [
+              "dATP",
+              "dCTP",
+              "dGTP",
+              "dTTP",
+              "DNA"
+            ],
+            "immune_top_cell": "T cell, CD4, TFH",
+            "immune_top_tpm": 13.3
+          }
+        ],
+        [
+          "POLE",
+          {
+            "association_score": 0.6583,
+            "mutation_frequency": 0.0047,
+            "n_drug_correlations": 20,
+            "metabolites": [
+              "dATP",
+              "dCTP",
+              "dGTP",
+              "dTTP",
+              "DNA"
+            ],
+            "immune_top_cell": "T cell, CD4, memory TREG",
+            "immune_top_tpm": 25.9
+          }
+        ]
+      ]
+    },
+    "L4": {
+      "n_edges": 113181,
+      "hubs": {
+        "AKT1": 396,
+        "EGFR": 329,
+        "ACTB": 320,
+        "CTNNB1": 305,
+        "BRCA1": 295,
+        "EP300": 290,
+        "MED1": 257,
+        "H3C13": 248,
+        "CD74": 231,
+        "H4C6": 223
+      }
+    },
+    "L5": {
+      "n_edges": 5645,
+      "n_pathways": 2411
+    },
+    "L7": {
+      "n_activities": 23119
+    },
+    "L8": {
+      "n_edges": 10101
+    },
+    "L15": {
+      "n_genes": 4409
+    },
+    "patient": {
+      "source": "BeatAML",
+      "n_patients": 569,
+      "n_drugs": 166
+    }
+  },
+  "sample_genes": [
+    "A1BG",
+    "AAAS",
+    "AAK1",
+    "AAMP",
+    "AASDH",
+    "AATF",
+    "ABCA1",
+    "ABCC8",
+    "ABCE1",
+    "ABI1",
+    "ABI2",
+    "ABL1",
+    "ABL2",
+    "ABRAXAS1",
+    "ABT1",
+    "ACACA",
+    "ACD",
+    "ACKR3",
+    "ACLY",
+    "ACO1",
+    "ACO2",
+    "ACSL3",
+    "ACTA1",
+    "ACTA2",
+    "ACTB",
+    "ACTC1",
+    "ACTG1",
+    "ACTG2",
+    "ACTL6A",
+    "ACTL6B",
+    "ACTN4",
+    "ACTR5",
+    "ACTR8",
+    "ACVR1",
+    "ACVR1B",
+    "ACVR1C",
+    "ACVR2A",
+    "ACVR2B",
+    "ACVRL1",
+    "ADA",
+    "ADA2",
+    "ADAM10",
+    "ADAM17",
+    "ADAM9",
+    "ADAR",
+    "ADCY1",
+    "ADCY10",
+    "ADCY2",
+    "ADCY3",
+    "ADCY4"
+  ]
+}

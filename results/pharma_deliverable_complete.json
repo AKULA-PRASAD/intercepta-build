@@ -1,0 +1,272 @@
+[
+  {
+    "name": "Enzalutamide + Alisertib",
+    "pareto_rank": 1,
+    "composite_score": 76.5,
+    "item_1_structure": {
+      "drug_a": "Enzalutamide",
+      "smiles_a": "CNC(=O)c1ccc(N2C(=S)N(c3cc(C(F)(F)F)c(F)c(F)c3)C(=O)C2(C)C)cc1F",
+      "drug_b": "Alisertib (MLN8237)",
+      "smiles_b": "COc1cc2c(cc1OC)N(C(=O)c1ccc(Cl)cc1)C(=O)/C2=C\\c1[nH]c2ccc(F)cc2c1C",
+      "target_a": "AR",
+      "target_b": "AURKA"
+    },
+    "item_2_mechanism": "Enzalutamide competitively blocks the Androgen Receptor (AR), which is the primary growth driver in castration-resistant prostate cancer. AR is expressed 3.4x higher in prostate than average tissue (PROSTATE-SELECTIVE). When AR is blocked, AR-dependent tumor cells stop proliferating and die. Healthy prostate cells are also affected but AR blockade is tolerable because prostate function is not essential for survival. \nAlisertib (MLN8237) inhibits Aurora Kinase A (AURKA), which has 122 protein interaction partners including TPX2, TACC3, MYCN. AURKA drives neuroendocrine transdifferentiation via the AURKA/N-MYC axis. When AR is blocked by enzalutamide, ~10-25% of tumor cells escape through NE differentiation. Alisertib blocks this escape route, trapping cells between AR blockade and NE blockade.",
+    "item_3_outcomes": {
+      "model": "Unified ODE (80 compartments)",
+      "PFS_months": 18.6,
+      "PFS_clinical": 18.0,
+      "combo_PFS_NE_high": 17.6,
+      "combo_benefit_NE_high": "+10.2 months (escape route ODE)",
+      "combo_benefit_unselected": "+2.2 months",
+      "combo_benefit_NE_low": "+0.1 months (no benefit)",
+      "honest": "Escape route ODE uses estimated transition rates. Unified ODE alisertib combo collapsed (Cmax << EC50)."
+    },
+    "item_4_resistance": {
+      "mechanism": "4-state escape: AR-dependent \u2192 AR-mutant (22%) + AR-V7 (15%) + NE-like (63%) at 2 years",
+      "drug_a_covers": "AR-dependent sensitive cells (S state)",
+      "drug_b_covers": "NE-like escape cells (N state) via AURKA inhibition",
+      "uncovered": "AR-mutant (T878A, F877L) and AR-V7 splice variants remain untargeted",
+      "predicted_residual_2y": "37% of resistant tumor (M + V states)",
+      "honest": "NE fraction 63% overpredicts vs clinical 10-25%. Transition rates estimated."
+    },
+    "item_5_safety": {
+      "Enzalutamide": {
+        "mw": 475.4,
+        "logp": 4.4,
+        "tpsa": 52.7,
+        "cyp3a4": "HIGH RISK",
+        "herg": "FLAG",
+        "hepatotoxicity": "OK",
+        "alerts": [
+          "none"
+        ],
+        "soft_spots": [
+          "N_dealkylation"
+        ]
+      },
+      "Enzalutamide_synth": {
+        "sa_score": 2.91,
+        "category": "EASY",
+        "concerns": [
+          "none"
+        ]
+      },
+      "Enzalutamide_selectivity": {
+        "target": "AR",
+        "prostate_tpm": 21.1,
+        "ratio": 3.4
+      },
+      "Alisertib (MLN8237)": {
+        "mw": 490.9,
+        "logp": 6.01,
+        "tpsa": 71.6,
+        "cyp3a4": "HIGH RISK",
+        "herg": "FLAG",
+        "hepatotoxicity": "FLAG",
+        "alerts": [
+          "michael_acceptor"
+        ],
+        "soft_spots": [
+          "N_dealkylation"
+        ]
+      },
+      "Alisertib (MLN8237)_synth": {
+        "sa_score": 2.66,
+        "category": "EASY",
+        "concerns": [
+          "none"
+        ]
+      },
+      "Alisertib (MLN8237)_selectivity": {
+        "target": "AURKA",
+        "prostate_tpm": 1.2,
+        "ratio": 0.3
+      }
+    },
+    "item_6_synthesis": {
+      "method": "SA_Score (Ertl-Schuffenhauer 2009) + commercial availability",
+      "drug_a": "FDA-approved, commercially manufactured",
+      "drug_b": "Phase II completed (Millennium/Takeda)"
+    },
+    "item_7_novelty": {
+      "search": "Enzalutamide + Alisertib (MLN8237) + prostate cancer",
+      "result": "0 trials"
+    },
+    "item_8_vs_standard": {
+      "standard": "Docetaxel (HR=0.76) or Enzalutamide (PFS 18mo)",
+      "this_candidate": {
+        "model": "Unified ODE (80 compartments)",
+        "PFS_months": 18.6,
+        "PFS_clinical": 18.0,
+        "combo_PFS_NE_high": 17.6,
+        "combo_benefit_NE_high": "+10.2 months (escape route ODE)",
+        "combo_benefit_unselected": "+2.2 months",
+        "combo_benefit_NE_low": "+0.1 months (no benefit)",
+        "honest": "Escape route ODE uses estimated transition rates. Unified ODE alisertib combo collapsed (Cmax << EC50)."
+      },
+      "advantage": "Targets NE escape (unaddressed by current therapy)"
+    },
+    "item_9_trial": {
+      "phase": "Phase II randomized",
+      "biomarker": "AURKA/N-MYC overexpression OR TP53+RB1 co-loss",
+      "arms": [
+        "Enzalutamide alone",
+        "Enzalutamide + Alisertib (MLN8237)"
+      ],
+      "primary_endpoint": "Radiographic PFS",
+      "sample_size": "~120 patients (60 per arm)"
+    }
+  },
+  {
+    "name": "Olaparib + CHK1 inhibitor",
+    "pareto_rank": 1,
+    "composite_score": 67.5,
+    "item_1_structure": {
+      "drug_a": "Olaparib",
+      "smiles_a": "O=C(c1cc2ccccc2c(=O)[nH]1)N1CCN(C(=O)c2ncc3ccccc3n2)CC1",
+      "drug_b": "Prexasertib (CHK1i)",
+      "smiles_b": null,
+      "target_a": "PARP1",
+      "target_b": "CHEK1"
+    },
+    "item_2_mechanism": "Olaparib inhibits PARP1 (poly-ADP-ribose polymerase 1), which repairs single-strand DNA breaks. PARP1 is ubiquitous (UBIQUITOUS) \u2014 expressed in all cells. Selectivity comes from SYNTHETIC LETHALITY: cells with BRCA2 loss cannot repair double-strand breaks, so blocking single-strand repair (PARP) is lethal. BRCA2 is mutated in 8.0% of mCRPC (SU2C data). Healthy cells with intact BRCA2 tolerate PARP inhibition because they have backup repair. \nPrexasertib (CHK1i) inhibits CHK1 (checkpoint kinase 1), which is the DNA damage checkpoint. When PARP inhibition creates unrepaired DNA damage, CHK1 activates cell cycle arrest to buy repair time. Blocking CHK1 forces damaged cells into mitosis with unrepaired DNA \u2192 mitotic catastrophe \u2192 cell death. This closes the BRCA2 \u2192 CHEK1 escape route identified in our net analysis.",
+    "item_3_outcomes": {
+      "model": "Escape route ODE (BRCA2-loss pathway)",
+      "expected_PFS": "14-16 months (PROfound: 14.7mo for BRCA-mutated)",
+      "honest": "Not directly simulated in our ODE yet. PROfound data used as reference."
+    },
+    "item_4_resistance": {
+      "mechanism": "BRCA2-loss synthetic lethality. Resistance via: BRCA2 reversion mutations, 53BP1 loss, ABCB1 efflux upregulation",
+      "escape_route": "BRCA2 \u2192 CHEK1 (DNA damage checkpoint) identified in net analysis"
+    },
+    "item_5_safety": {
+      "Olaparib": {
+        "mw": 413.4,
+        "logp": 2.07,
+        "tpsa": 99.3,
+        "cyp3a4": "LOW RISK",
+        "herg": "OK",
+        "hepatotoxicity": "OK",
+        "alerts": [
+          "none"
+        ],
+        "soft_spots": [
+          "none"
+        ]
+      },
+      "Olaparib_synth": {
+        "sa_score": 2.4,
+        "category": "EASY",
+        "concerns": [
+          "none"
+        ]
+      },
+      "Olaparib_selectivity": {
+        "target": "PARP1",
+        "prostate_tpm": 32.0,
+        "ratio": 0.9
+      },
+      "Prexasertib (CHK1i)_selectivity": {
+        "target": "CHEK1",
+        "prostate_tpm": 2.3,
+        "ratio": 0.9
+      }
+    },
+    "item_6_synthesis": {
+      "method": "SA_Score (Ertl-Schuffenhauer 2009) + commercial availability",
+      "drug_a": "FDA-approved, commercially manufactured",
+      "drug_b": "In clinical trials"
+    },
+    "item_7_novelty": {
+      "search": "Olaparib + Prexasertib (CHK1i) + prostate cancer",
+      "result": "Novel combination"
+    },
+    "item_8_vs_standard": {
+      "standard": "Docetaxel (HR=0.76) or Enzalutamide (PFS 18mo)",
+      "this_candidate": {
+        "model": "Escape route ODE (BRCA2-loss pathway)",
+        "expected_PFS": "14-16 months (PROfound: 14.7mo for BRCA-mutated)",
+        "honest": "Not directly simulated in our ODE yet. PROfound data used as reference."
+      },
+      "advantage": "Targets BRCA2-loss via synthetic lethality"
+    },
+    "item_9_trial": {
+      "phase": "Phase II randomized",
+      "biomarker": "BRCA2 loss (germline or somatic)",
+      "arms": [
+        "Olaparib alone",
+        "Olaparib + Prexasertib (CHK1i)"
+      ],
+      "primary_endpoint": "Radiographic PFS",
+      "sample_size": "~120 patients (60 per arm)"
+    }
+  },
+  {
+    "name": "Docetaxel (standard of care)",
+    "pareto_rank": 3,
+    "composite_score": 37.5,
+    "item_1_structure": {
+      "drug_a": "Docetaxel",
+      "smiles_a": null,
+      "drug_b": null,
+      "smiles_b": null,
+      "target_a": "Tubulin",
+      "target_b": null
+    },
+    "item_2_mechanism": "Docetaxel stabilizes microtubules, blocking cell division in ALL actively dividing cancer cells. It is not selective \u2014 it kills both cancer and healthy dividing cells (hair follicles, gut lining, bone marrow). Efficacy comes from cancer cells dividing faster than healthy cells.",
+    "item_3_outcomes": {
+      "model": "Unified ODE (80 compartments, 4 states x 20 bins)",
+      "HR": 0.692,
+      "HR_clinical": 0.76,
+      "HR_CI95": [
+        0.58,
+        0.79
+      ],
+      "clinical_in_CI": true,
+      "control_PFS_months": 6.8,
+      "drug_PFS_months": 10.0
+    },
+    "item_4_resistance": {
+      "mechanism": "Continuous resistance: cells along phenotype gradient survive proportionally to resistance level",
+      "bins_killed": "Bins 0-10 (sensitive half) killed effectively",
+      "bins_surviving": "Bins 15-19 (resistant tail) survive and regrow",
+      "time_to_resistance": "Regrowth begins ~4 months, dominates by 12 months"
+    },
+    "item_5_safety": {},
+    "item_6_synthesis": {
+      "method": "SA_Score (Ertl-Schuffenhauer 2009) + commercial availability",
+      "drug_a": "FDA-approved, commercially manufactured",
+      "drug_b": "N/A"
+    },
+    "item_7_novelty": {
+      "search": "Docetaxel + None + prostate cancer",
+      "result": "Standard of care"
+    },
+    "item_8_vs_standard": {
+      "standard": "Docetaxel (HR=0.76) or Enzalutamide (PFS 18mo)",
+      "this_candidate": {
+        "model": "Unified ODE (80 compartments, 4 states x 20 bins)",
+        "HR": 0.692,
+        "HR_clinical": 0.76,
+        "HR_CI95": [
+          0.58,
+          0.79
+        ],
+        "clinical_in_CI": true,
+        "control_PFS_months": 6.8,
+        "drug_PFS_months": 10.0
+      },
+      "advantage": "IS the standard of care"
+    },
+    "item_9_trial": {
+      "phase": "N/A (already approved)",
+      "biomarker": "None (unselected)",
+      "arms": [
+        "Standard"
+      ],
+      "primary_endpoint": "Radiographic PFS",
+      "sample_size": "N/A"
+    }
+  }
+]

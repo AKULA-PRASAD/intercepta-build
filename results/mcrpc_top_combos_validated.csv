@@ -1,0 +1,9 @@
+scenario,combination,label,ctrl_drug,hr,ctrl_ttp_mo,combo_ttp_mo,benefit_mo
+standard_mCRPC,abiraterone+talazoparib,Novel: abi+tala,abiraterone,0.327,11.8,36.0,24.2
+standard_mCRPC,abiraterone+olaparib,PROpel-like,abiraterone,0.332,11.8,35.4,23.7
+standard_mCRPC,enzalutamide+olaparib,Novel: enz+ola,enzalutamide,0.355,8.8,24.8,16.0
+BRCA_mutated,olaparib+talazoparib,Dual PARPi (BRCA),olaparib,0.624,4.8,7.7,2.9
+BRCA_mutated,enzalutamide+talazoparib,TALAPRO-like (BRCA),enzalutamide,0.726,4.4,6.1,1.7
+BRCA_mutated,abiraterone+olaparib,PROpel-like (BRCA),abiraterone,0.741,5.0,6.7,1.7
+BRCA_mutated,docetaxel+olaparib,Doc+Ola (BRCA),docetaxel,0.93,7.0,7.5,0.5
+standard_mCRPC,docetaxel+olaparib,Novel: doc+ola,docetaxel,0.949,7.4,7.8,0.4

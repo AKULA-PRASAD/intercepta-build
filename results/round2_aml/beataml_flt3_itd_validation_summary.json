@@ -1,0 +1,195 @@
+{
+  "validation_query": "drugs most potent vs FLT3-ITD+ BeatAML 2.0 cohort",
+  "verdict": "PARTIAL",
+  "message": "Only 2 FLT3 inhibitor in top 10 (expected 3+). Check drug family assignments, cohort size, and whether quality filters were too strict.",
+  "n_flt3_itd_positive_patients": 185,
+  "n_flt3_itd_negative_patients": 619,
+  "n_drugs_tested_in_itd_cohort": 158,
+  "n_drugs_after_min_n_filter": 132,
+  "min_n_patients_required": 10,
+  "flt3_targeting_drugs_beataml": [
+    "AST-487",
+    "AZD1152-HQPA (AZD2811)",
+    "Crenolanib",
+    "Dovitinib (CHIR-258)",
+    "Foretinib (XL880)",
+    "JNJ-28312141",
+    "KW-2449",
+    "Linifanib (ABT-869)",
+    "Midostaurin",
+    "Quizartinib (AC220)",
+    "SU14813",
+    "Sorafenib",
+    "Sunitinib",
+    "TG101348",
+    "Tandutinib (MLN518)",
+    "Tozasertib (VX-680)",
+    "Vargetef"
+  ],
+  "flt3_in_top_10": 2,
+  "flt3_in_top_20": 4,
+  "top_10": [
+    {
+      "rank": 1,
+      "drug": "Elesclomol",
+      "median_auc": 36.0771753049266,
+      "n_patients": 67,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 2,
+      "drug": "Panobinostat",
+      "median_auc": 58.22686967923645,
+      "n_patients": 42,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 3,
+      "drug": "Foretinib (XL880)",
+      "median_auc": 70.9130019423807,
+      "n_patients": 134,
+      "is_flt3_targeter": true
+    },
+    {
+      "rank": 4,
+      "drug": "Venetoclax",
+      "median_auc": 71.901856445487,
+      "n_patients": 77,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 5,
+      "drug": "SNS-032 (BMS-387032)",
+      "median_auc": 81.49706050902884,
+      "n_patients": 138,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 6,
+      "drug": "JNJ-28312141",
+      "median_auc": 95.2789953118157,
+      "n_patients": 77,
+      "is_flt3_targeter": true
+    },
+    {
+      "rank": 7,
+      "drug": "Selinexor",
+      "median_auc": 96.3208408643585,
+      "n_patients": 66,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 8,
+      "drug": "Ralimetinib (LY2228820)",
+      "median_auc": 97.3821684128613,
+      "n_patients": 13,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 9,
+      "drug": "Ponatinib (AP24534)",
+      "median_auc": 99.8285439441948,
+      "n_patients": 93,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 10,
+      "drug": "INK-128",
+      "median_auc": 101.38217988516749,
+      "n_patients": 130,
+      "is_flt3_targeter": false
+    }
+  ],
+  "flt3_drugs_ranked": [
+    {
+      "rank": 3,
+      "drug": "Foretinib (XL880)",
+      "median_auc": 70.9130019423807,
+      "n_patients": 134
+    },
+    {
+      "rank": 6,
+      "drug": "JNJ-28312141",
+      "median_auc": 95.2789953118157,
+      "n_patients": 77
+    },
+    {
+      "rank": 17,
+      "drug": "Dovitinib (CHIR-258)",
+      "median_auc": 116.0112552088595,
+      "n_patients": 118
+    },
+    {
+      "rank": 18,
+      "drug": "Quizartinib (AC220)",
+      "median_auc": 117.58956475419,
+      "n_patients": 123
+    },
+    {
+      "rank": 35,
+      "drug": "TG101348",
+      "median_auc": 135.2214247705005,
+      "n_patients": 24
+    },
+    {
+      "rank": 36,
+      "drug": "Vargetef",
+      "median_auc": 135.92297801987,
+      "n_patients": 117
+    },
+    {
+      "rank": 39,
+      "drug": "Crenolanib",
+      "median_auc": 139.026642699872,
+      "n_patients": 55
+    },
+    {
+      "rank": 46,
+      "drug": "Linifanib (ABT-869)",
+      "median_auc": 144.291815228107,
+      "n_patients": 109
+    },
+    {
+      "rank": 48,
+      "drug": "Midostaurin",
+      "median_auc": 144.613856049201,
+      "n_patients": 79
+    },
+    {
+      "rank": 49,
+      "drug": "Sorafenib",
+      "median_auc": 145.387673089961,
+      "n_patients": 122
+    },
+    {
+      "rank": 54,
+      "drug": "KW-2449",
+      "median_auc": 150.926622725035,
+      "n_patients": 111
+    },
+    {
+      "rank": 55,
+      "drug": "Sunitinib",
+      "median_auc": 151.213703291625,
+      "n_patients": 113
+    },
+    {
+      "rank": 64,
+      "drug": "AZD1152-HQPA (AZD2811)",
+      "median_auc": 159.05143892338702,
+      "n_patients": 68
+    },
+    {
+      "rank": 71,
+      "drug": "Tandutinib (MLN518)",
+      "median_auc": 164.447709071593,
+      "n_patients": 13
+    },
+    {
+      "rank": 96,
+      "drug": "Tozasertib (VX-680)",
+      "median_auc": 180.204014538146,
+      "n_patients": 99
+    }
+  ]
+}

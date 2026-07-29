@@ -1,0 +1,136 @@
+/Users/kalki/INTERCEPTA/round2_aml/code/build_aml_net_v3_integrated.py:154: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+  print(f"  scanpy    : {sc.__version__}")
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+/Users/kalki/miniconda3/lib/python3.13/site-packages/scanpy/tools/_rank_genes_groups.py:457: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.stats[group_name, "names"] = self.var_names[global_indices]
+/Users/kalki/miniconda3/lib/python3.13/site-packages/scanpy/tools/_rank_genes_groups.py:459: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.stats[group_name, "scores"] = scores[global_indices]
+/Users/kalki/miniconda3/lib/python3.13/site-packages/scanpy/tools/_rank_genes_groups.py:462: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.stats[group_name, "pvals"] = pvals[global_indices]
+/Users/kalki/miniconda3/lib/python3.13/site-packages/scanpy/tools/_rank_genes_groups.py:472: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.stats[group_name, "pvals_adj"] = pvals_adj[global_indices]
+/Users/kalki/miniconda3/lib/python3.13/site-packages/scanpy/tools/_rank_genes_groups.py:483: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  self.stats[group_name, "logfoldchanges"] = np.log2(
+
+========================================================================
+Step 0: Dependency check
+========================================================================
+  numpy     : 2.4.3
+  pandas    : 2.3.3
+  networkx  : 3.6.1
+  scanpy    : 1.12
+
+========================================================================
+Step 1: Load Round 2.1b skeleton and Round 2.1c AnnData
+========================================================================
+  Loading skeleton: /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_skeleton_v2.gpickle
+    1,201 nodes, 33,191 edges
+  Loading AnnData: /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/vangalen_aml.h5ad
+    loaded in 2.1s, 44,823 cells x 27,899 genes
+  Skeleton layer inventory:
+    L1_genome: 5 nodes
+    L7_pharmacome: 430 nodes
+    L9_disease_map: 766 nodes
+
+========================================================================
+Step 2: Compute top enriched genes per cell type (scanpy Wilcoxon)
+========================================================================
+  Using scanpy.rank_genes_groups with Wilcoxon test
+  Top 50 genes per cell type, log fc > 0.5
+  Wilcoxon completed in 17.9s
+
+  Per-cell-type enriched gene counts:
+    B                     50 genes
+    CTL                   50 genes
+    GMP                   50 genes
+    GMP-like              50 genes
+    HSC                   50 genes
+    HSC-like              50 genes
+    Mono                  50 genes
+    Mono-like             50 genes
+    NK                    50 genes
+    Plasma                50 genes
+    ProB                  50 genes
+    ProMono               50 genes
+    ProMono-like          50 genes
+    Prog                  50 genes
+    Prog-like             50 genes
+    T                     50 genes
+    cDC                   50 genes
+    cDC-like              50 genes
+    earlyEry              50 genes
+    lateEry               50 genes
+    pDC                   50 genes
+
+========================================================================
+Step 3: Add Layer 2 (transcriptome) to the net
+========================================================================
+  Added 21 cell-type nodes
+  Added 549 new gene nodes (not in skeleton)
+  Added 1050 cell-type -> gene edges
+
+========================================================================
+Step 4: Add transitive drug -> cell-type edges
+========================================================================
+  Gene -> drug index: 265 targeted genes, 651 drug-gene relationships
+  Added 74 drug -> cell-type edges
+  Net now has 1,771 nodes, 34,315 edges
+
+  Final layer inventory:
+    L1_genome: 5 nodes
+    L2_transcriptome: 570 nodes
+    L7_pharmacome: 430 nodes
+    L9_disease_map: 766 nodes
+
+========================================================================
+Step 5: Validation queries
+========================================================================
+  FLT3-targeting drugs per graph: 20
+
+========================================================================
+Query A: HSC-like cell-type top drugs (LSC biology)
+========================================================================
+  Rank Drug                               Score  FLT3?
+  1    Vargetef                            2.05  YES   
+  2    Sunitinib                           2.05  YES   
+  3    AST-487                             2.05  YES   
+  4    KW-2449                             2.05  YES   
+  5    Foretinib (XL880)                   2.05  YES   
+  6    Quizartinib (AC220)                 2.05  YES   
+  7    Sorafenib                           2.05  YES   
+  8    TG101348                            2.05  YES   
+  9    Midostaurin                         2.05  YES   
+  10   Crenolanib                          2.05  YES   
+
+  Venetoclax in top 10: False
+  FLT3 inhibitors in top 10: 10
+
+========================================================================
+Query B: Prog-like cell-type top drugs (progenitor biology)
+========================================================================
+  Rank Drug                               Score  FLT3?
+  1    Palbociclib                         1.39     
+  2    17-AAG (Tanespimycin)               1.34     
+
+  FLT3 inhibitors in top 10: 0
+
+========================================================================
+Query C: HSC-like vs Prog-like distinguishability
+========================================================================
+  HSC-like top 10 drugs:  ['AST-487', 'Crenolanib', 'Foretinib (XL880)', 'KW-2449', 'Midostaurin', 'Quizartinib (AC220)', 'Sorafenib', 'Sunitinib', 'TG101348', 'Vargetef']
+  Prog-like top 10 drugs: ['17-AAG (Tanespimycin)', 'Palbociclib']
+  Overlap (0): []
+  Jaccard: 0.00
+
+========================================================================
+Step 6: Verdict
+========================================================================
+  Query A (LSC biology, venetoclax+/FLT3 not dominant):  FAIL
+  Query B (Prog biology, >=2 FLT3 inhibitors):          FAIL
+  Query C (HSC/Prog distinguishable, Jaccard<0.6):      PASS
+
+  VERDICT: FAIL
+
+  One or more validation queries failed.
+  Graph NOT saved — investigate before proceeding.
+  Diagnostic summary: /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_v3_summary.json

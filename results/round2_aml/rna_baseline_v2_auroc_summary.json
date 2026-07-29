@@ -1,0 +1,34 @@
+{
+  "version": "v2_sex_filtered_10_10",
+  "n_drugs_evaluated": 85,
+  "n_drugs_failed": 0,
+  "auroc_mean": 0.6452899509185569,
+  "auroc_median": 0.6529598606521685,
+  "auroc_std": 0.10485661695885655,
+  "auroc_q25": 0.5650546983880317,
+  "auroc_q75": 0.7231533458077163,
+  "auroc_min": 0.39691011235955054,
+  "auroc_max": 0.9192460668061692,
+  "n_drugs_auroc_ge_0_55": 72,
+  "n_drugs_auroc_ge_0_60": 54,
+  "n_drugs_auroc_ge_0_65": 44,
+  "n_drugs_auroc_ge_0_70": 30,
+  "method": "LightGBM, top-1000 var genes after chrX/chrY filter, 5-fold CV",
+  "task": "binarized AUC<100 sensitivity prediction",
+  "min_sensitive": 10,
+  "min_resistant": 10,
+  "comparators": {
+    "kaalcura_round22b_mean_auroc": 0.526,
+    "kaalcura_round22b_n_drugs_trained": 141,
+    "kaalcura_round22b_n_drugs_ge_0_60": 27,
+    "rna_baseline_v1_mean_auroc": 0.67,
+    "rna_baseline_v1_n_drugs": 56,
+    "rna_baseline_v1_top5_genes": [
+      "XIST",
+      "RPS4Y1",
+      "KDM5D",
+      "TXLNG2P",
+      "DDX3Y"
+    ]
+  }
+}

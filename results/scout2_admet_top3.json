@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Alisertib (reference)",
+    "smiles": "COc1cc2c(cc1OC)N(C(=O)c1ccc(Cl)cc1)C(=O)/C2=C\\c1[nH]c2ccc(F)cc2c1C",
+    "basic": {
+      "mw": 490.9,
+      "logp": 6.01,
+      "hbd": 1,
+      "hba": 4,
+      "tpsa": 71.6,
+      "rotatable_bonds": 4,
+      "rings": 5,
+      "aromatic_rings": 4,
+      "heavy_atoms": 35
+    },
+    "drug_likeness": {
+      "lipinski_violations": 1,
+      "lipinski": "PASS",
+      "veber": "PASS",
+      "ghose": "FAIL",
+      "egan": "FAIL",
+      "muegge": "FAIL"
+    },
+    "absorption": {
+      "gut_absorption": "HIGH",
+      "bbb_penetration": "YES",
+      "pgp_substrate": "UNLIKELY",
+      "solubility_logS": -9.37,
+      "solubility_class": "VERY LOW"
+    },
+    "metabolism": {
+      "soft_spots": [
+        "N_dealkylation"
+      ],
+      "n_soft_spots": 1
+    },
+    "toxicity_alerts": {
+      "structural_alerts": [
+        "Michael_acceptor"
+      ],
+      "n_alerts": 1
+    }
+  },
+  {
+    "name": "INTC-001",
+    "smiles": "Cc1c(/C=C2\\C(=O)N(C(=O)c3ccc(Cl)cc3)c3cc(O)c(CO)cc32)[nH]c2ccc(F)cc12",
+    "basic": {
+      "mw": 476.9,
+      "logp": 5.19,
+      "hbd": 3,
+      "hba": 4,
+      "tpsa": 93.6,
+      "rotatable_bonds": 3,
+      "rings": 5,
+      "aromatic_rings": 4,
+      "heavy_atoms": 34
+    },
+    "drug_likeness": {
+      "lipinski_violations": 1,
+      "lipinski": "PASS",
+      "veber": "PASS",
+      "ghose": "FAIL",
+      "egan": "PASS",
+      "muegge": "FAIL"
+    },
+    "absorption": {
+      "gut_absorption": "HIGH",
+      "bbb_penetration": "NO",
+      "pgp_substrate": "LIKELY",
+      "solubility_logS": -8.83,
+      "solubility_class": "VERY LOW"
+    },
+    "metabolism": {
+      "soft_spots": [
+        "primary_alcohol_ADH_substrate",
+        "phenol_glucuronidation",
+        "N_dealkylation"
+      ],
+      "n_soft_spots": 3
+    },
+    "toxicity_alerts": {
+      "structural_alerts": [
+        "Michael_acceptor"
+      ],
+      "n_alerts": 1
+    }
+  },
+  {
+    "name": "INTC-002",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C(C)C)c3c2)no1",
+    "basic": {
+      "mw": 432.5,
+      "logp": 3.91,
+      "hbd": 3,
+      "hba": 6,
+      "tpsa": 128.1,
+      "rotatable_bonds": 5,
+      "rings": 4,
+      "aromatic_rings": 4,
+      "heavy_atoms": 32
+    },
+    "drug_likeness": {
+      "lipinski_violations": 0,
+      "lipinski": "PASS",
+      "veber": "PASS",
+      "ghose": "FAIL",
+      "egan": "PASS",
+      "muegge": "PASS"
+    },
+    "absorption": {
+      "gut_absorption": "HIGH",
+      "bbb_penetration": "NO",
+      "pgp_substrate": "LIKELY",
+      "solubility_logS": -7.61,
+      "solubility_class": "VERY LOW"
+    },
+    "metabolism": {
+      "soft_spots": [
+        "none_detected"
+      ],
+      "n_soft_spots": 0
+    },
+    "toxicity_alerts": {
+      "structural_alerts": [
+        "none_detected"
+      ],
+      "n_alerts": 0
+    }
+  },
+  {
+    "name": "INTC-003",
+    "smiles": "COc1cc2c(cc1OC)N(C(=O)NCCN1CCOCC1)C(=O)/C2=C\\c1[nH]c2ccc(F)cc2c1C",
+    "basic": {
+      "mw": 508.6,
+      "logp": 3.56,
+      "hbd": 2,
+      "hba": 6,
+      "tpsa": 96.1,
+      "rotatable_bonds": 6,
+      "rings": 5,
+      "aromatic_rings": 3,
+      "heavy_atoms": 37
+    },
+    "drug_likeness": {
+      "lipinski_violations": 1,
+      "lipinski": "PASS",
+      "veber": "PASS",
+      "ghose": "FAIL",
+      "egan": "PASS",
+      "muegge": "PASS"
+    },
+    "absorption": {
+      "gut_absorption": "HIGH",
+      "bbb_penetration": "NO",
+      "pgp_substrate": "UNLIKELY",
+      "solubility_logS": -7.06,
+      "solubility_class": "VERY LOW"
+    },
+    "metabolism": {
+      "soft_spots": [
+        "primary_alcohol_ADH_substrate",
+        "N_dealkylation"
+      ],
+      "n_soft_spots": 2
+    },
+    "toxicity_alerts": {
+      "structural_alerts": [
+        "Michael_acceptor"
+      ],
+      "n_alerts": 1
+    }
+  }
+]

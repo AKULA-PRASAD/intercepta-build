@@ -1,0 +1,7 @@
+{
+  "model": "AML 4-comp with BeatAML-derived resist_factor=0.34",
+  "source": "BeatAML venetoclax AUC ratio sensitive/resistant = 3.0x",
+  "cr": true,
+  "rel_mo": null,
+  "os_mo": null
+}

@@ -1,0 +1,18 @@
+{
+  "method": "LightGBM defaults on 3 KAALCURA axes (R_prolif, R_emt, R_ddr)",
+  "axis_source": "/Users/kalki/INTERCEPTA/round2_aml/results/beataml_ucell_residual_axes_round22b.csv",
+  "n_drugs_evaluated": 85,
+  "auroc_mean": 0.532291155269868,
+  "auroc_median": 0.5210158616292044,
+  "auroc_std": 0.0776077329495041,
+  "n_drugs_auroc_ge_0_55": 33,
+  "n_drugs_auroc_ge_0_60": 19,
+  "n_drugs_auroc_ge_0_65": 6,
+  "min_sensitive": 10,
+  "min_resistant": 10,
+  "comparators": {
+    "kaalcura_3axis_logreg_mean_auroc": 0.526,
+    "rna_baseline_v1_mean_auroc": 0.67,
+    "rna_baseline_v2_mean_auroc": "see rna_baseline_v2_auroc_summary.json"
+  }
+}

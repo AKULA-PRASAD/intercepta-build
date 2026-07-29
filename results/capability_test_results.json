@@ -1,0 +1,17 @@
+{
+  "test_date": "2026-04-09 20:54",
+  "passed": 26,
+  "warnings": 1,
+  "failed": 1,
+  "tnbc_genes": 11905,
+  "disease_matcher": {
+    "found": 20,
+    "correct": 18,
+    "total": 20
+  },
+  "pathway_coverage": {
+    "in_pathways": 9,
+    "in_string": 20,
+    "total": 20
+  }
+}

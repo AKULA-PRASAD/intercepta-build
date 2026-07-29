@@ -1,0 +1,9 @@
+{
+  "model": "Unified 4-state x 20-bin ODE",
+  "compartments": 80,
+  "control_pfs": 6.800262812089356,
+  "docetaxel_hr": 0.692,
+  "docetaxel_pfs": 9.822601839684625,
+  "enzalutamide_pfs": 18.626806833114323,
+  "combo_pfs": 18.988173455978973
+}

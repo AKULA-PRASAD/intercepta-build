@@ -1,0 +1,710 @@
+{
+  "tier1": [
+    {
+      "drug": "docetaxel",
+      "tier": 1,
+      "hr": 0.9292,
+      "ttp_months": 7.4,
+      "ctrl_ttp_months": 6.9,
+      "nadir_fraction": 0.9973,
+      "mechanism": "cytotoxic",
+      "relevant": true,
+      "source": "ODE simulation (PK_LIBRARY + DRUG_EFFECT_LIBRARY)",
+      "velocity_source": "GSE137829 mCRPC scRNA-seq (proxy for other diseases)"
+    },
+    {
+      "drug": "abiraterone",
+      "tier": 1,
+      "hr": 1.0,
+      "ttp_months": 6.9,
+      "ctrl_ttp_months": 6.9,
+      "nadir_fraction": 1.0,
+      "mechanism": "AR_inhibitor",
+      "relevant": true,
+      "source": "ODE simulation (PK_LIBRARY + DRUG_EFFECT_LIBRARY)",
+      "velocity_source": "GSE137829 mCRPC scRNA-seq (proxy for other diseases)"
+    },
+    {
+      "drug": "olaparib",
+      "tier": 1,
+      "hr": 0.8936,
+      "ttp_months": 7.7,
+      "ctrl_ttp_months": 6.9,
+      "nadir_fraction": 1.0,
+      "mechanism": "PARP_inhibitor",
+      "relevant": true,
+      "source": "ODE simulation (PK_LIBRARY + DRUG_EFFECT_LIBRARY)",
+      "velocity_source": "GSE137829 mCRPC scRNA-seq (proxy for other diseases)"
+    },
+    {
+      "drug": "enzalutamide",
+      "tier": 1,
+      "hr": 0.7394,
+      "ttp_months": 9.3,
+      "ctrl_ttp_months": 6.9,
+      "nadir_fraction": 1.0,
+      "mechanism": "AR_inhibitor",
+      "relevant": true,
+      "source": "ODE simulation (PK_LIBRARY + DRUG_EFFECT_LIBRARY)",
+      "velocity_source": "GSE137829 mCRPC scRNA-seq (proxy for other diseases)"
+    },
+    {
+      "drug": "talazoparib",
+      "tier": 1,
+      "hr": 1.0,
+      "ttp_months": 6.9,
+      "ctrl_ttp_months": 6.9,
+      "nadir_fraction": 1.0,
+      "mechanism": "PARP_inhibitor",
+      "relevant": true,
+      "source": "ODE simulation (PK_LIBRARY + DRUG_EFFECT_LIBRARY)",
+      "velocity_source": "GSE137829 mCRPC scRNA-seq (proxy for other diseases)"
+    },
+    {
+      "drug": "ADT",
+      "tier": 1,
+      "hr": 0.6709,
+      "ttp_months": 10.3,
+      "ctrl_ttp_months": 6.9,
+      "nadir_fraction": 1.0,
+      "mechanism": "androgen_suppression",
+      "relevant": true,
+      "source": "ODE simulation (PK_LIBRARY + DRUG_EFFECT_LIBRARY)",
+      "velocity_source": "GSE137829 mCRPC scRNA-seq (proxy for other diseases)"
+    }
+  ],
+  "tier2": [
+    {
+      "drug": "Sabutoclax",
+      "tier": 2,
+      "target": "BCL2",
+      "ic50_uM": 0.7178,
+      "n_cell_lines": 892,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Lestaurtinib",
+      "tier": 2,
+      "target": "NTRK1",
+      "ic50_uM": 1.0027,
+      "n_cell_lines": 947,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "AZD7762",
+      "tier": 2,
+      "target": "CHEK2",
+      "ic50_uM": 1.1022,
+      "n_cell_lines": 961,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Obatoclax Mesylate",
+      "tier": 2,
+      "target": "BCL2",
+      "ic50_uM": 1.5896,
+      "n_cell_lines": 785,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Foretinib",
+      "tier": 2,
+      "target": "FGFR1",
+      "ic50_uM": 2.55,
+      "n_cell_lines": 953,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Temsirolimus",
+      "tier": 2,
+      "target": "MTOR",
+      "ic50_uM": 3.1233,
+      "n_cell_lines": 922,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "TW 37",
+      "tier": 2,
+      "target": "BCL2",
+      "ic50_uM": 3.36,
+      "n_cell_lines": 376,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Dasatinib",
+      "tier": 2,
+      "target": "SRC",
+      "ic50_uM": 4.716,
+      "n_cell_lines": 962,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Afatinib",
+      "tier": 2,
+      "target": "ERBB2",
+      "ic50_uM": 5.2133,
+      "n_cell_lines": 966,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "AZD6738",
+      "tier": 2,
+      "target": "ATR",
+      "ic50_uM": 7.1827,
+      "n_cell_lines": 958,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "BMS-536924",
+      "tier": 2,
+      "target": "IGF1R",
+      "ic50_uM": 7.9168,
+      "n_cell_lines": 958,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Navitoclax",
+      "tier": 2,
+      "target": "BCL2",
+      "ic50_uM": 8.1885,
+      "n_cell_lines": 967,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "BMS-754807",
+      "tier": 2,
+      "target": "IGF1R",
+      "ic50_uM": 9.255,
+      "n_cell_lines": 949,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "ABT737",
+      "tier": 2,
+      "target": "BCL2",
+      "ic50_uM": 9.4577,
+      "n_cell_lines": 957,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Venetoclax",
+      "tier": 2,
+      "target": "BCL2",
+      "ic50_uM": 9.8324,
+      "n_cell_lines": 958,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Afuresertib",
+      "tier": 2,
+      "target": "AKT1",
+      "ic50_uM": 11.212,
+      "n_cell_lines": 957,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Crizotinib",
+      "tier": 2,
+      "target": "MET",
+      "ic50_uM": 12.4395,
+      "n_cell_lines": 966,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "UMI-77",
+      "tier": 2,
+      "target": "MCL1",
+      "ic50_uM": 13.5719,
+      "n_cell_lines": 743,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "AZD4547",
+      "tier": 2,
+      "target": "FGFR1",
+      "ic50_uM": 14.4391,
+      "n_cell_lines": 959,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "NVP-ADW742",
+      "tier": 2,
+      "target": "IGF1R",
+      "ic50_uM": 15.3249,
+      "n_cell_lines": 958,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Bosutinib",
+      "tier": 2,
+      "target": "SRC",
+      "ic50_uM": 15.7604,
+      "n_cell_lines": 949,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "MK-2206",
+      "tier": 2,
+      "target": "AKT1",
+      "ic50_uM": 15.8289,
+      "n_cell_lines": 968,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Savolitinib",
+      "tier": 2,
+      "target": "MET",
+      "ic50_uM": 16.2567,
+      "n_cell_lines": 957,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Uprosertib",
+      "tier": 2,
+      "target": "AKT1",
+      "ic50_uM": 16.7938,
+      "n_cell_lines": 1634,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "AZD5363",
+      "tier": 2,
+      "target": "AKT1",
+      "ic50_uM": 17.5493,
+      "n_cell_lines": 958,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "JAK_8517",
+      "tier": 2,
+      "target": "JAK1",
+      "ic50_uM": 19.2652,
+      "n_cell_lines": 717,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Lapatinib",
+      "tier": 2,
+      "target": "ERBB2",
+      "ic50_uM": 21.1169,
+      "n_cell_lines": 966,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "VE-822",
+      "tier": 2,
+      "target": "ATR",
+      "ic50_uM": 23.0041,
+      "n_cell_lines": 894,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "MK-8776",
+      "tier": 2,
+      "target": "CHEK2",
+      "ic50_uM": 24.2192,
+      "n_cell_lines": 952,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "GSK343",
+      "tier": 2,
+      "target": "EZH2",
+      "ic50_uM": 28.4215,
+      "n_cell_lines": 1634,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "AT13148",
+      "tier": 2,
+      "target": "AKT1",
+      "ic50_uM": 30.9501,
+      "n_cell_lines": 954,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "GW441756",
+      "tier": 2,
+      "target": "NTRK1",
+      "ic50_uM": 32.0454,
+      "n_cell_lines": 953,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Ipatasertib",
+      "tier": 2,
+      "target": "AKT1",
+      "ic50_uM": 32.8009,
+      "n_cell_lines": 958,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "GSK2110183B",
+      "tier": 2,
+      "target": "AKT1",
+      "ic50_uM": 33.296,
+      "n_cell_lines": 717,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Serdemetan",
+      "tier": 2,
+      "target": "MDM2",
+      "ic50_uM": 41.155,
+      "n_cell_lines": 948,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "PD173074",
+      "tier": 2,
+      "target": "FGFR1",
+      "ic50_uM": 46.2956,
+      "n_cell_lines": 967,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "AZD1332",
+      "tier": 2,
+      "target": "NTRK1",
+      "ic50_uM": 47.2201,
+      "n_cell_lines": 717,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "MIM1",
+      "tier": 2,
+      "target": "MCL1",
+      "ic50_uM": 49.0221,
+      "n_cell_lines": 743,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Tamoxifen",
+      "tier": 2,
+      "target": "ESR1",
+      "ic50_uM": 50.6296,
+      "n_cell_lines": 957,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "VE821",
+      "tier": 2,
+      "target": "ATR",
+      "ic50_uM": 51.3527,
+      "n_cell_lines": 951,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Sapitinib",
+      "tier": 2,
+      "target": "ERBB2",
+      "ic50_uM": 57.4275,
+      "n_cell_lines": 966,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "JAK1_8709",
+      "tier": 2,
+      "target": "JAK1",
+      "ic50_uM": 58.0132,
+      "n_cell_lines": 717,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Linsitinib",
+      "tier": 2,
+      "target": "IGF1R",
+      "ic50_uM": 59.8787,
+      "n_cell_lines": 966,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "GSK1904529A",
+      "tier": 2,
+      "target": "IGF1R",
+      "ic50_uM": 77.3824,
+      "n_cell_lines": 965,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "AZD5991",
+      "tier": 2,
+      "target": "MCL1",
+      "ic50_uM": 98.0552,
+      "n_cell_lines": 713,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "SL0101",
+      "tier": 2,
+      "target": "PIM1",
+      "ic50_uM": 114.5353,
+      "n_cell_lines": 225,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Bicalutamide",
+      "tier": 2,
+      "target": "AR",
+      "ic50_uM": 114.7671,
+      "n_cell_lines": 225,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Nutlin-3a (-)",
+      "tier": 2,
+      "target": "MDM2",
+      "ic50_uM": 118.4526,
+      "n_cell_lines": 968,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "Ruxolitinib",
+      "tier": 2,
+      "target": "JAK1",
+      "ic50_uM": 135.1142,
+      "n_cell_lines": 898,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    },
+    {
+      "drug": "GSK2276186C",
+      "tier": 2,
+      "target": "JAK1",
+      "ic50_uM": 145.314,
+      "n_cell_lines": 717,
+      "source": "GDSC measured IC50",
+      "note": "No ODE simulation (PK parameters not available)"
+    }
+  ],
+  "tier3": [
+    {
+      "drug_a": "PD173074",
+      "drug_b": "AZD4547",
+      "target_a": "FGFR1",
+      "escape_gene": "FGFR2",
+      "shared_pathways": 10,
+      "string_score": 853,
+      "rationale": "PD173074 blocks FGFR1. Network analysis: FGFR2 shares 10 pathways with FGFR1 (STRING score 853). AZD4547 blocks FGFR2 escape route."
+    },
+    {
+      "drug_a": "PD173074",
+      "drug_b": "Afatinib",
+      "target_a": "FGFR1",
+      "escape_gene": "ERBB2",
+      "shared_pathways": 10,
+      "string_score": 737,
+      "rationale": "PD173074 blocks FGFR1. Network analysis: ERBB2 shares 10 pathways with FGFR1 (STRING score 737). Afatinib blocks ERBB2 escape route."
+    },
+    {
+      "drug_a": "PD173074",
+      "drug_b": "Sapitinib",
+      "target_a": "FGFR1",
+      "escape_gene": "ERBB2",
+      "shared_pathways": 10,
+      "string_score": 737,
+      "rationale": "PD173074 blocks FGFR1. Network analysis: ERBB2 shares 10 pathways with FGFR1 (STRING score 737). Sapitinib blocks ERBB2 escape route."
+    },
+    {
+      "drug_a": "AZD4547",
+      "drug_b": "Afatinib",
+      "target_a": "FGFR1",
+      "escape_gene": "ERBB2",
+      "shared_pathways": 10,
+      "string_score": 737,
+      "rationale": "AZD4547 blocks FGFR1. Network analysis: ERBB2 shares 10 pathways with FGFR1 (STRING score 737). Afatinib blocks ERBB2 escape route."
+    },
+    {
+      "drug_a": "AZD4547",
+      "drug_b": "Sapitinib",
+      "target_a": "FGFR1",
+      "escape_gene": "ERBB2",
+      "shared_pathways": 10,
+      "string_score": 737,
+      "rationale": "AZD4547 blocks FGFR1. Network analysis: ERBB2 shares 10 pathways with FGFR1 (STRING score 737). Sapitinib blocks ERBB2 escape route."
+    },
+    {
+      "drug_a": "Obatoclax Mesylate",
+      "drug_b": "Navitoclax",
+      "target_a": "MCL1",
+      "escape_gene": "BCL2",
+      "shared_pathways": 4,
+      "string_score": 764,
+      "rationale": "Obatoclax Mesylate blocks MCL1. Network analysis: BCL2 shares 4 pathways with MCL1 (STRING score 764). Navitoclax blocks BCL2 escape route."
+    },
+    {
+      "drug_a": "TW 37",
+      "drug_b": "Navitoclax",
+      "target_a": "MCL1",
+      "escape_gene": "BCL2",
+      "shared_pathways": 4,
+      "string_score": 764,
+      "rationale": "TW 37 blocks MCL1. Network analysis: BCL2 shares 4 pathways with MCL1 (STRING score 764). Navitoclax blocks BCL2 escape route."
+    },
+    {
+      "drug_a": "TW 37",
+      "drug_b": "Obatoclax Mesylate",
+      "target_a": "MCL1",
+      "escape_gene": "BCL2",
+      "shared_pathways": 4,
+      "string_score": 764,
+      "rationale": "TW 37 blocks MCL1. Network analysis: BCL2 shares 4 pathways with MCL1 (STRING score 764). Obatoclax Mesylate blocks BCL2 escape route."
+    },
+    {
+      "drug_a": "Obatoclax Mesylate",
+      "drug_b": "MIRA-1",
+      "target_a": "MCL1",
+      "escape_gene": "TP53",
+      "shared_pathways": 3,
+      "string_score": 918,
+      "rationale": "Obatoclax Mesylate blocks MCL1. Network analysis: TP53 shares 3 pathways with MCL1 (STRING score 918). MIRA-1 blocks TP53 escape route."
+    },
+    {
+      "drug_a": "TW 37",
+      "drug_b": "MIRA-1",
+      "target_a": "MCL1",
+      "escape_gene": "TP53",
+      "shared_pathways": 3,
+      "string_score": 918,
+      "rationale": "TW 37 blocks MCL1. Network analysis: TP53 shares 3 pathways with MCL1 (STRING score 918). MIRA-1 blocks TP53 escape route."
+    },
+    {
+      "drug_a": "GSK343",
+      "drug_b": "MIRA-1",
+      "target_a": "EZH2",
+      "escape_gene": "TP53",
+      "shared_pathways": 5,
+      "string_score": 899,
+      "rationale": "GSK343 blocks EZH2. Network analysis: TP53 shares 5 pathways with EZH2 (STRING score 899). MIRA-1 blocks TP53 escape route."
+    },
+    {
+      "drug_a": "AZD7762",
+      "drug_b": "KU-55933",
+      "target_a": "CHEK2",
+      "escape_gene": "ATM",
+      "shared_pathways": 31,
+      "string_score": 999,
+      "rationale": "AZD7762 blocks CHEK2. Network analysis: ATM shares 31 pathways with CHEK2 (STRING score 999). KU-55933 blocks ATM escape route."
+    },
+    {
+      "drug_a": "MK-8776",
+      "drug_b": "KU-55933",
+      "target_a": "CHEK2",
+      "escape_gene": "ATM",
+      "shared_pathways": 31,
+      "string_score": 999,
+      "rationale": "MK-8776 blocks CHEK2. Network analysis: ATM shares 31 pathways with CHEK2 (STRING score 999). KU-55933 blocks ATM escape route."
+    },
+    {
+      "drug_a": "AZD7762",
+      "drug_b": "MIRA-1",
+      "target_a": "CHEK2",
+      "escape_gene": "TP53",
+      "shared_pathways": 20,
+      "string_score": 999,
+      "rationale": "AZD7762 blocks CHEK2. Network analysis: TP53 shares 20 pathways with CHEK2 (STRING score 999). MIRA-1 blocks TP53 escape route."
+    },
+    {
+      "drug_a": "MK-8776",
+      "drug_b": "MIRA-1",
+      "target_a": "CHEK2",
+      "escape_gene": "TP53",
+      "shared_pathways": 20,
+      "string_score": 999,
+      "rationale": "MK-8776 blocks CHEK2. Network analysis: TP53 shares 20 pathways with CHEK2 (STRING score 999). MIRA-1 blocks TP53 escape route."
+    },
+    {
+      "drug_a": "Crizotinib",
+      "drug_b": "Afatinib",
+      "target_a": "MET",
+      "escape_gene": "ERBB2",
+      "shared_pathways": 14,
+      "string_score": 847,
+      "rationale": "Crizotinib blocks MET. Network analysis: ERBB2 shares 14 pathways with MET (STRING score 847). Afatinib blocks ERBB2 escape route."
+    },
+    {
+      "drug_a": "Crizotinib",
+      "drug_b": "Sapitinib",
+      "target_a": "MET",
+      "escape_gene": "ERBB2",
+      "shared_pathways": 14,
+      "string_score": 847,
+      "rationale": "Crizotinib blocks MET. Network analysis: ERBB2 shares 14 pathways with MET (STRING score 847). Sapitinib blocks ERBB2 escape route."
+    },
+    {
+      "drug_a": "Savolitinib",
+      "drug_b": "Afatinib",
+      "target_a": "MET",
+      "escape_gene": "ERBB2",
+      "shared_pathways": 14,
+      "string_score": 847,
+      "rationale": "Savolitinib blocks MET. Network analysis: ERBB2 shares 14 pathways with MET (STRING score 847). Afatinib blocks ERBB2 escape route."
+    },
+    {
+      "drug_a": "Savolitinib",
+      "drug_b": "Sapitinib",
+      "target_a": "MET",
+      "escape_gene": "ERBB2",
+      "shared_pathways": 14,
+      "string_score": 847,
+      "rationale": "Savolitinib blocks MET. Network analysis: ERBB2 shares 14 pathways with MET (STRING score 847). Sapitinib blocks ERBB2 escape route."
+    },
+    {
+      "drug_a": "Bosutinib",
+      "drug_b": "MK-2206",
+      "target_a": "SRC",
+      "escape_gene": "AKT1",
+      "shared_pathways": 29,
+      "string_score": 995,
+      "rationale": "Bosutinib blocks SRC. Network analysis: AKT1 shares 29 pathways with SRC (STRING score 995). MK-2206 blocks AKT1 escape route."
+    }
+  ]
+}

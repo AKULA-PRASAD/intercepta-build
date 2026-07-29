@@ -1,0 +1,47 @@
+{
+  "retracted": {
+    "claim": "p38 MAPK inhibitors in DNMT3A/IDH2-mut AML",
+    "reason": "Fails BH FDR correction (p=0.024 nominal, n=16 only)",
+    "original_n_reported": "165 (WRONG \u2014 was total mut, not tested)",
+    "actual_n_tested": 16
+  },
+  "validated_findings": {
+    "NRAS_MEK": {
+      "drugs": [
+        "Selumetinib",
+        "Trametinib",
+        "CI-1040"
+      ],
+      "p_values": [
+        4.6e-11,
+        2.9e-11,
+        6e-10
+      ],
+      "status": "FDR significant but KNOWN biology"
+    },
+    "NPM1_multikinase": {
+      "drugs": [
+        "Cabozantinib",
+        "Ponatinib",
+        "Foretinib",
+        "Ralimetinib"
+      ],
+      "p_values": [
+        2.9e-12,
+        7.3e-08,
+        4.5e-09,
+        0.0066
+      ],
+      "status": "FDR significant \u2014 WORTH INVESTIGATING",
+      "strongest": "NPM1 + Cabozantinib (n=131, p=2.9e-12, diff=+45)"
+    },
+    "DNMT3A_dasatinib": {
+      "p_value": 0.00014,
+      "n": 125,
+      "diff": 39,
+      "status": "FDR significant \u2014 novel finding"
+    }
+  },
+  "total_fdr_significant": 65,
+  "total_tests": 1072
+}

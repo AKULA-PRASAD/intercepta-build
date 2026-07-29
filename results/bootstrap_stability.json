@@ -1,0 +1,18 @@
+{
+  "n_bootstrap": 200,
+  "doc_hr_mean": 0.687,
+  "doc_hr_median": 0.681,
+  "doc_hr_ci95": [
+    0.58,
+    0.79
+  ],
+  "clinical_in_ci": true,
+  "virtual_cohort": {
+    "n_patients": 200,
+    "median_hr": 0.71,
+    "hr_iqr": [
+      0.591,
+      0.812
+    ]
+  }
+}

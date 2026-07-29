@@ -1,0 +1,90 @@
+
+========================================================================
+Round 2.2c — Step 3: Six-Gate Evaluator
+========================================================================
+Started: 2026-05-06 20:44:13
+
+========================================================================
+Step 1: Load Step 2 outputs
+========================================================================
+  per_drug_full: 85 drugs
+  per_drug_ablation: 85 drugs
+  feature_importance: 2550 rows (85 drugs)
+
+========================================================================
+Step 2: Evaluate Q_C — Within-dataset utility
+========================================================================
+  mean AUROC: 0.643 (threshold ≥ 0.7)
+  drugs ≥0.65: 44/85 (52%, threshold ≥60%)
+  Verdict: FAIL
+
+========================================================================
+Step 3: Evaluate Q_C2 — Class imbalance robustness
+========================================================================
+  mean balanced acc: 0.532 (threshold ≥ 0.65)
+  Verdict: FAIL
+
+========================================================================
+Step 4: Evaluate Q_D — Cross-dataset preservation
+========================================================================
+  Van Galen sample column: 'Unnamed: 0'
+  Van Galen Prog-like R_prolif: 0.823
+  FLT3-related drugs in eval set: ['Foretinib (XL880)']
+  Verdict: INDETERMINATE
+
+========================================================================
+Step 5: Evaluate Q_E — KAALCURA contribution
+========================================================================
+  Path a (KAALCURA in top-20 for ≥50% drugs): 8% [FAIL]
+  Path b (ablation delta ≥0.005): -0.0004 [FAIL]
+  Verdict (a OR b): FAIL
+
+========================================================================
+Step 6: Evaluate Q_F — Cell-type distinguishability
+========================================================================
+  Jaccard: 0.25 (Round 2.2b Q_E result (preserved per P16))
+  Verdict: PASS (INHERITED_FROM_2.2B)
+
+========================================================================
+Step 7: Evaluate Q_G — No overfitting
+========================================================================
+  mean train-test gap: 0.346 (threshold ≤ 0.1)
+  Verdict: FAIL
+
+========================================================================
+Step 8: Aggregate verdict
+========================================================================
+
+  Gate verdicts:
+    Q_C  : FAIL    — Within-dataset utility
+    Q_C2 : FAIL    — Class imbalance robustness
+    Q_D  : INDETERMINATE  — Cross-dataset preservation
+    Q_E  : FAIL    — KAALCURA contribution
+    Q_F  : PASS    — Cell-type distinguishability (HSC-like vs Prog-like)
+    Q_G  : FAIL    — No overfitting
+
+  Overall: 1 PASS, 4 FAIL, 1 INDETERMINATE
+  Round 2.2c overall verdict: FAIL
+
+========================================================================
+Step 9: Comparator deltas
+========================================================================
+  Multi-modal full      : 0.643
+  vs RNA-only baseline  : -0.002
+  vs KAALCURA-LightGBM  : +0.111
+  vs Round 2.2b LogReg  : +0.117
+  Q_C threshold 0.70    : -0.057
+
+========================================================================
+Step 10: Save final summary
+========================================================================
+  Summary: /Users/kalki/INTERCEPTA/round2_aml/results/round2_2c/multimodal_predictor_summary.json
+  Closure data: /Users/kalki/INTERCEPTA/round2_aml/results/round2_2c/round2_2c_closure_data.json
+
+========================================================================
+DONE — Step 3 of 3 complete. Round 2.2c evaluation finished.
+========================================================================
+Finished: 2026-05-06 20:44:13
+
+Next: write Round 2.2c closure document based on these results.
+      Closure document tag: round2-2c-fail.

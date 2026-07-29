@@ -1,0 +1,105 @@
+{
+  "IDH1": {
+    "n_compensators": 10,
+    "n_druggable": 2,
+    "top_compensator": {
+      "gene": "HDAC3",
+      "compensation_score": -0.0112,
+      "drugs": [
+        "Entinostat",
+        "Romidepsin"
+      ]
+    },
+    "combo_disruption": 6.3,
+    "single_disruption": 0
+  },
+  "IDH2": {
+    "n_compensators": 10,
+    "n_druggable": 4,
+    "top_compensator": {
+      "gene": "ERBB2",
+      "compensation_score": -0.0072,
+      "drugs": [
+        "Afatinib",
+        "Sapitinib",
+        "Lapatinib"
+      ]
+    },
+    "combo_disruption": 4.0,
+    "single_disruption": 0
+  },
+  "DNMT3A": {
+    "n_compensators": 10,
+    "n_druggable": 4,
+    "top_compensator": {
+      "gene": "ERBB2",
+      "compensation_score": -0.0091,
+      "drugs": [
+        "Afatinib",
+        "Sapitinib",
+        "Lapatinib"
+      ]
+    },
+    "combo_disruption": 6.3,
+    "single_disruption": 0
+  },
+  "KIT": {
+    "n_compensators": 10,
+    "n_druggable": 2,
+    "top_compensator": {
+      "gene": "HDAC3",
+      "compensation_score": -0.0075,
+      "drugs": [
+        "Entinostat",
+        "Romidepsin"
+      ]
+    },
+    "combo_disruption": 8.5,
+    "single_disruption": 0
+  },
+  "RUNX1": {
+    "n_compensators": 10,
+    "n_druggable": 2,
+    "top_compensator": {
+      "gene": "ERBB2",
+      "compensation_score": -0.0247,
+      "drugs": [
+        "Afatinib",
+        "Sapitinib",
+        "Lapatinib"
+      ]
+    },
+    "combo_disruption": 14.2,
+    "single_disruption": 0
+  },
+  "CEBPA": {
+    "n_compensators": 10,
+    "n_druggable": 4,
+    "top_compensator": {
+      "gene": "ERBB2",
+      "compensation_score": -0.0116,
+      "drugs": [
+        "Afatinib",
+        "Sapitinib",
+        "Lapatinib"
+      ]
+    },
+    "combo_disruption": 8.5,
+    "single_disruption": 0
+  },
+  "TET2": {
+    "n_compensators": 10,
+    "n_druggable": 3,
+    "top_compensator": {
+      "gene": "ERBB2",
+      "compensation_score": -0.028,
+      "drugs": [
+        "Afatinib",
+        "Sapitinib",
+        "Lapatinib"
+      ]
+    },
+    "combo_disruption": 10.8,
+    "single_disruption": 0
+  }
+}

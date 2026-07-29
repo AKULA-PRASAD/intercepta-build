@@ -1,0 +1,65 @@
+
+========================================================================
+Step 1: Load validated BeatAML 2.0 data
+========================================================================
+  clinical rows: 942 (805 patients)
+  drug-gene edges: 651 (117 drugs)
+  drug sensitivity rows after QC: 33,250
+
+========================================================================
+Step 2: Collapse clinical to per-patient mutation profiles
+========================================================================
+  FLT3-ITD              pos= 185  neg= 619  total_annotated= 804
+  NPM1                  pos= 202  neg= 601  total_annotated= 803
+  RUNX1                 pos=   0  neg= 102  total_annotated= 102
+  ASXL1                 pos=   0  neg=  90  total_annotated=  90
+  TP53                  pos=   0  neg=  81  total_annotated=  81
+
+  AML patients with mutation profiles: 765
+
+========================================================================
+Step 3: Construct the AML net skeleton
+========================================================================
+  Graph: 1,200 nodes, 32,927 edges
+    L1_genome: 5 nodes
+    L7_pharmacome: 430 nodes
+    L9_disease_map: 765 nodes
+
+========================================================================
+Step 4: Graph-based prediction for FLT3-ITD+ / NPM1+ genotype
+========================================================================
+  Query genotype: {'FLT3-ITD': 'positive', 'NPM1': 'positive'}
+  Patients matching genotype: 96
+
+  Top 15 drugs by net prediction (median AUC, lower=better):
+  Rank  Drug                              median_AUC    n  FLT3?  tags
+  1     Elesclomol                              32.0   34       
+  2     Panobinostat                            56.4   26       
+  3     Foretinib (XL880)                       62.8   69  YES  
+  4     Venetoclax                              72.5   44       ← BCL2 / SOC partner
+  5     SNS-032 (BMS-387032)                    74.5   71       
+  6     Ponatinib (AP24534)                     82.7   42       
+  7     Ralimetinib (LY2228820)                 88.2    9       
+  8     Gilteritinib                            97.1   37       
+  9     Selinexor                               99.2   42       
+  10    JNJ-28312141                           101.1   45  YES  
+  11    INK-128                                102.2   69       
+  12    Flavopiridol                           103.4   63       
+  13    AKT Inhibitor IV                       103.6    9       
+  14    Dovitinib (CHIR-258)                   103.9   62  YES  
+  15    A-674563                               105.3   69       
+
+========================================================================
+Step 5: 2.1b validation verdict
+========================================================================
+  FLT3-targeting drugs in top 10:  2
+  Venetoclax in top 10:            YES
+
+  VERDICT: PASS
+  Top 10 predictions for FLT3-ITD+/NPM1+ genotype include both FLT3-targeting drug(s) (2) AND venetoclax. Net reproduces ELN 2022 / 2024-2025 standard-of-care signal. Round 2.1b skeleton validated.
+
+========================================================================
+Step 6: Save graph and results
+========================================================================
+  Graph pickled: /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_skeleton.gpickle
+  Summary JSON:  /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_skeleton_summary.json

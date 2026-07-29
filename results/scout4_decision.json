@@ -1,0 +1,14 @@
+{
+  "scout4_status": "REDEFINED",
+  "original_plan": "Network topology simulation for compensation",
+  "what_failed": "Heat diffusion (v0), Boolean (v2) \u2014 0 compensators",
+  "root_cause": "Simple models cannot capture quantitative compensation",
+  "new_definition": "Data-driven perturbation from patient drug sensitivity",
+  "implementation": "BeatAML complementary drug analysis (already built)",
+  "evidence": "376 complementary pairs from 569 AML patients",
+  "assets_retained": {
+    "signor_directed_edges": 19727,
+    "feedback_loops": 247,
+    "dependency_mapping": "FLT3\u2192STAT5 validated"
+  }
+}

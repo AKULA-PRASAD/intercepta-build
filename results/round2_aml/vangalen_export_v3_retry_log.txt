@@ -1,0 +1,60 @@
+Seurat version:       5.5.0 
+SeuratObject version: 5.4.0 
+Matrix version:       1.7.4 
+R_MAX_VSIZE:          64Gb 
+
+Input:   /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/Seurat_AML.rds 
+Output:  /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported 
+
+========================================================================
+Loading RDS
+========================================================================
+Loaded in 10.8 sec
+Cells: 44823   Features: 27899 
+Object size in memory: 14 Gb 
+Available layers: counts, data 
+
+========================================================================
+Exporting layer: counts
+========================================================================
+Class:      matrix,array 
+Dim:        27899 x 44823 
+Memory:     4.7 Gb 
+Coercing to dgCMatrix...
+  class after coerce: dgCMatrix 
+Writing /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported/counts.mtx ...
+  done in 7.1 sec, file size: 642.4 MB
+
+========================================================================
+Exporting layer: data
+========================================================================
+Class:      matrix,array 
+Dim:        27899 x 44823 
+Memory:     9.3 Gb 
+Coercing to dgCMatrix...
+  class after coerce: dgCMatrix 
+Writing /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported/data.mtx ...
+  done in 113.8 sec, file size: 1435.9 MB
+
+========================================================================
+Exporting gene names and cell barcodes
+========================================================================
+gene_names.txt:     27899 rows
+cell_barcodes.txt:  44823 rows
+
+========================================================================
+Exporting cell metadata
+========================================================================
+cell_metadata.csv: 44823 rows x 11 cols
+Columns: barcode, orig.ident, NumberOfReads, CyclingScore, CyclingBinary, MutTranscripts, WtTranscripts, PredictionRefined, CellType, nCount_RNA, nFeature_RNA 
+
+========================================================================
+Export complete
+========================================================================
+  cell_barcodes.txt              1.0 MB
+  cell_metadata.csv              4.0 MB
+  counts.mtx                   642.4 MB
+  data.mtx                    1435.9 MB
+  gene_names.txt                 0.2 MB
+
+Ready for Python assembly step.

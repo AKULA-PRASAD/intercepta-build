@@ -1,0 +1,55 @@
+========================================================================
+INTERCEPTA Selectivity v2 Phase 3 — CSV Backward-Compat Exports
+========================================================================
+Started: 2026-05-08T08:12:29
+
+Processing 4 diseases: ['aml', 'gbm', 'mcrpc', 'nsclc']
+
+  Reading GTEx for full-genome CSV...
+  GTEx matrix: 54,592 genes × 54 tissues
+
+────────────────────────────────────────────────────────────
+  Disease: aml
+    Disease-aware CSV: step6_selectivity_aml_disease_aware.csv
+
+────────────────────────────────────────────────────────────
+  Disease: gbm
+    Disease-aware CSV: step6_selectivity_gbm_disease_aware.csv
+
+────────────────────────────────────────────────────────────
+  Disease: mcrpc
+    Legacy selectivity_map.csv: step6_selectivity_map.csv
+  Computing full-genome selectivity for 54,592 genes (legacy CSV for mCRPC backward compat)...
+    Legacy full_selectivity.csv: step6_full_selectivity.csv
+    Disease-aware CSV: step6_selectivity_mcrpc_disease_aware.csv
+
+────────────────────────────────────────────────────────────
+  Disease: nsclc
+    Disease-aware CSV: step6_selectivity_nsclc_disease_aware.csv
+
+════════════════════════════════════════════════════════════
+  mCRPC regression: top-20 overlap with old module
+════════════════════════════════════════════════════════════
+
+  New top-5 by ratio_vs_mean:
+    KLK3           16695.58
+    KLK2            3744.69
+    ACPP             524.12
+    NKX3-1            72.78
+    SLC45A3           38.64
+
+  REGRESSION PASS: KLK3 ratio_vs_mean = 16696 (>10000)
+  Top genes are recognizably mCRPC-specific.
+
+════════════════════════════════════════════════════════════
+  Summary
+════════════════════════════════════════════════════════════
+  aml: {'legacy_map_csv': None, 'legacy_full_csv': None, 'disease_aware_csv': 'step6_selectivity_aml_disease_aware.csv'}
+  gbm: {'legacy_map_csv': None, 'legacy_full_csv': None, 'disease_aware_csv': 'step6_selectivity_gbm_disease_aware.csv'}
+  mcrpc: {'legacy_map_csv': 'step6_selectivity_map.csv', 'legacy_full_csv': 'step6_full_selectivity.csv', 'disease_aware_csv': 'step6_selectivity_mcrpc_disease_aware.csv'}
+  nsclc: {'legacy_map_csv': None, 'legacy_full_csv': None, 'disease_aware_csv': 'step6_selectivity_nsclc_disease_aware.csv'}
+
+Finished: 2026-05-08T08:12:30
+
+Downstream consumers (build_unified_net.py, intercepta_pipeline.py)
+will continue reading the legacy mCRPC CSVs without code change.

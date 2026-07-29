@@ -1,0 +1,2223 @@
+{
+  "disease": "tuberculosis",
+  "disease_id": "MONDO_0018076",
+  "n_genes": 211,
+  "genes": {
+    "LTF": {
+      "association_score": 0.5052,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 1
+    },
+    "KPNB1": {
+      "association_score": 0.5036,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 411.8
+    },
+    "KPNA1": {
+      "association_score": 0.5036,
+      "mutation_frequency": 0.0047,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 89.1
+    },
+    "TLR2": {
+      "association_score": 0.4709,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 10,
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 387.6
+    },
+    "UBC": {
+      "association_score": 0.4671,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 922.4
+    },
+    "RPS27A": {
+      "association_score": 0.4671,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive",
+      "immune_top_tpm": 718.1
+    },
+    "UBB": {
+      "association_score": 0.4671,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 1,
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 672.3
+    },
+    "UBA52": {
+      "association_score": 0.4671,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, TH17",
+      "immune_top_tpm": 2278.8
+    },
+    "RAB7A": {
+      "association_score": 0.4632,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 541.5
+    },
+    "CORO1A": {
+      "association_score": 0.3773,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 527.4
+    },
+    "MAPK3": {
+      "association_score": 0.3756,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 5,
+      "immune_top_cell": "T cell, CD4, TFH",
+      "immune_top_tpm": 96.5
+    },
+    "TRIM27": {
+      "association_score": 0.3747,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 35.7
+    },
+    "DUSP16": {
+      "association_score": 0.374,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 226.2
+    },
+    "B2M": {
+      "association_score": 0.3735,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 4,
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 11518.8
+    },
+    "MAPK1": {
+      "association_score": 0.3726,
+      "mutation_frequency": 0.0023,
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 887.4
+    },
+    "MRC1": {
+      "association_score": 0.3725,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 3
+    },
+    "CTSG": {
+      "association_score": 0.3723,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "albumin",
+        "alanine",
+        "arginine",
+        "asparagine",
+        "aspartate",
+        "cysteine",
+        "glutamate",
+        "glutamine",
+        "glycine",
+        "histidine",
+        "isoleucine",
+        "leucine",
+        "lysine",
+        "methionine",
+        "phenylalanine",
+        "proline",
+        "serine",
+        "threonine",
+        "tryptophan",
+        "tyrosine"
+      ]
+    },
+    "RNF213": {
+      "association_score": 0.372,
+      "mutation_frequency": 0.0351,
+      "n_drug_correlations": 16,
+      "pathways": [
+        {
+          "id": "R-CFA-983168",
+          "name": "Antigen processing: Ubiquitination & Proteasome degradation",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-983168",
+          "name": "Antigen processing: Ubiquitination & Proteasome degradation",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-9635465",
+          "name": "Suppression of apoptosis",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-9725370",
+          "name": "Signaling by ALK fusions and activated point mutants",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-983168",
+          "name": "Antigen processing: Ubiquitination & Proteasome degradation",
+          "source": "Reactome"
+        }
+      ],
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 323.0
+    },
+    "RAB5A": {
+      "association_score": 0.3713,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, TH1/17",
+      "immune_top_tpm": 95.4
+    },
+    "ATP6V1H": {
+      "association_score": 0.3709,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 12,
+      "immune_top_cell": "T cell, CD4, naive",
+      "immune_top_tpm": 16.9
+    },
+    "ENO1": {
+      "association_score": 0.3706,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 12,
+      "metabolites": [
+        "PEP"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 1682.2
+    },
+    "PGK1": {
+      "association_score": 0.37,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 4,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 822.7
+    },
+    "GSK3A": {
+      "association_score": 0.37,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 77.4
+    },
+    "HGS": {
+      "association_score": 0.37,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 36.2
+    },
+    "VPS33B": {
+      "association_score": 0.37,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, TH1",
+      "immune_top_tpm": 25.6
+    },
+    "SFPQ": {
+      "association_score": 0.37,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "B cell, naive",
+      "immune_top_tpm": 560.7
+    },
+    "NR3C1": {
+      "association_score": 0.3465,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 10,
+      "n_interactions": 3,
+      "pathways": [
+        {
+          "id": "hsa04080",
+          "name": "Neuroactive ligand-receptor interaction",
+          "source": "KEGG"
+        },
+        {
+          "id": "R-BTA-3371497",
+          "name": "HSP90 chaperone cycle for steroid hormone receptors (SHR) in the presence of ligand",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-BTA-383280",
+          "name": "Nuclear Receptor transcription pathway",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-BTA-4090294",
+          "name": "SUMOylation of intracellular receptors",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-CFA-3371497",
+          "name": "HSP90 chaperone cycle for steroid hormone receptors (SHR) in the presence of ligand",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-CFA-383280",
+          "name": "Nuclear Receptor transcription pathway",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-3371497",
+          "name": "HSP90 chaperone cycle for steroid hormone receptors (SHR) in the presence of ligand",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-383280",
+          "name": "Nuclear Receptor transcription pathway",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-4090294",
+          "name": "SUMOylation of intracellular receptors",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-3371497",
+          "name": "HSP90 chaperone cycle for steroid hormone receptors (SHR) in the presence of ligand",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-383280",
+          "name": "Nuclear Receptor transcription pathway",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-4090294",
+          "name": "SUMOylation of intracellular receptors",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-8849473",
+          "name": "PTK6 Expression",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-8939902",
+          "name": "Regulation of RUNX2 expression and activity",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-9615017",
+          "name": "FOXO-mediated transcription of oxidative stress, metabolic and neuronal genes",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-9679191",
+          "name": "Potential therapeutics for SARS",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-9768777",
+          "name": "Regulation of NPAS4 gene transcription",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-3371497",
+          "name": "HSP90 chaperone cycle for steroid hormone receptors (SHR) in the presence of ligand",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-383280",
+          "name": "Nuclear Receptor transcription pathway",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-4090294",
+          "name": "SUMOylation of intracellular receptors",
+          "source": "Reactome"
+        }
+      ],
+      "n_compounds": 50,
+      "immune_top_cell": "T cell, CD4, TH2",
+      "immune_top_tpm": 216.4,
+      "selectivity": {
+        "prostate_tpm": 15.83,
+        "other_mean_tpm": 16.71,
+        "other_max_tpm": 55.25,
+        "ratio_vs_mean": 0.95,
+        "safety_class": "UBIQUITOUS",
+        "max_other_tissue": "Cells - EBV-transformed lymphocytes"
+      }
+    },
+    "NDUFB4": {
+      "association_score": 0.3363,
+      "mutation_frequency": 0
+    },
+    "UAP1": {
+      "association_score": 0.323,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "N-acetylglucosamine-1-phosphate",
+        "UTP",
+        "UDP-N-acetylglucosamine"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 45.1
+    },
+    "ASAP1": {
+      "association_score": 0.3168,
+      "mutation_frequency": 0.0141,
+      "n_drug_correlations": 20,
+      "n_interactions": 1,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 111.2
+    },
+    "LMX1B": {
+      "association_score": 0.3152,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 20
+    },
+    "NAT2": {
+      "association_score": 0.3142,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "acetanilide",
+        "acetyl-CoA",
+        "aniline"
+      ]
+    },
+    "GUCY1A1": {
+      "association_score": 0.3118,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "cAMP",
+        "cGMP"
+      ],
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 49.1
+    },
+    "EMC2": {
+      "association_score": 0.3022,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 21.6
+    },
+    "PTGS2": {
+      "association_score": 0.2974,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "arachidonate",
+        "(R)-HETE",
+        "prostaglandin G2",
+        "prostaglandin H2",
+        "dihomo-gamma-linolenate",
+        "prostaglandin G1",
+        "prostaglandin H1",
+        "(S)-HPODE",
+        "EPA",
+        "(R)-HpEPE",
+        "PGH3",
+        "(18R)-HEPE"
+      ],
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 143.8
+    },
+    "FAM241A": {
+      "association_score": 0.2949,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 715.3
+    },
+    "TEX26": {
+      "association_score": 0.2922,
+      "mutation_frequency": 0.0047
+    },
+    "ETS2": {
+      "association_score": 0.2893,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 2,
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 370.3
+    },
+    "DYNC1I2": {
+      "association_score": 0.2882,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 34.8
+    },
+    "ASB15": {
+      "association_score": 0.2863,
+      "mutation_frequency": 0.0117
+    },
+    "DPH6": {
+      "association_score": 0.286,
+      "mutation_frequency": 0
+    },
+    "MYT1L": {
+      "association_score": 0.2828,
+      "mutation_frequency": 0.0141,
+      "n_drug_correlations": 20
+    },
+    "VDR": {
+      "association_score": 0.2782,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 95.6
+    },
+    "DPP10": {
+      "association_score": 0.2776,
+      "mutation_frequency": 0.0117,
+      "n_drug_correlations": 5,
+      "n_interactions": 1
+    },
+    "SYT14": {
+      "association_score": 0.2774,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 11
+    },
+    "ERBIN": {
+      "association_score": 0.2756,
+      "mutation_frequency": 0.0141,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive",
+      "immune_top_tpm": 161.1
+    },
+    "NDUFB7": {
+      "association_score": 0.2747,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 2,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 96.4
+    },
+    "NDUFAB1": {
+      "association_score": 0.274,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "octanoyl-[ACP]",
+        "[protein]-N6-(octanoyl)lysine",
+        "mitoACP",
+        "ubiquinone",
+        "ubiquinol",
+        "cysteine",
+        "alanine",
+        "Fe2S iron-sulfur cluster"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 259.5
+    },
+    "MT-ND2": {
+      "association_score": 0.2733,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 9,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, TH1/17",
+      "immune_top_tpm": 9556.4
+    },
+    "PPFIA2": {
+      "association_score": 0.2732,
+      "mutation_frequency": 0.0281,
+      "n_drug_correlations": 20,
+      "n_interactions": 1,
+      "pathways": [
+        {
+          "id": "hsa04517",
+          "name": "IgSF CAM signaling",
+          "source": "KEGG"
+        },
+        {
+          "id": "R-BTA-181429",
+          "name": "Serotonin Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-BTA-181430",
+          "name": "Norepinephrine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-BTA-210500",
+          "name": "Glutamate Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-BTA-212676",
+          "name": "Dopamine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-BTA-264642",
+          "name": "Acetylcholine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-BTA-388844",
+          "name": "Receptor-type tyrosine-protein phosphatases",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-CFA-388844",
+          "name": "Receptor-type tyrosine-protein phosphatases",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-181429",
+          "name": "Serotonin Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-181430",
+          "name": "Norepinephrine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-212676",
+          "name": "Dopamine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-264642",
+          "name": "Acetylcholine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-GGA-388844",
+          "name": "Receptor-type tyrosine-protein phosphatases",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-181429",
+          "name": "Serotonin Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-181430",
+          "name": "Norepinephrine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-210500",
+          "name": "Glutamate Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-212676",
+          "name": "Dopamine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-264642",
+          "name": "Acetylcholine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-388844",
+          "name": "Receptor-type tyrosine-protein phosphatases",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-181429",
+          "name": "Serotonin Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-181430",
+          "name": "Norepinephrine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-210500",
+          "name": "Glutamate Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-212676",
+          "name": "Dopamine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-264642",
+          "name": "Acetylcholine Neurotransmitter Release Cycle",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-388844",
+          "name": "Receptor-type tyrosine-protein phosphatases",
+          "source": "Reactome"
+        }
+      ]
+    },
+    "PLSCR4": {
+      "association_score": 0.273,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20
+    },
+    "NDUFA6": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 2,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 233.3
+    },
+    "NDUFAF1": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 34.9
+    },
+    "NDUFS1": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 16,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 87.2
+    },
+    "MT-ND5": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 7,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive",
+      "immune_top_tpm": 6207.6
+    },
+    "NDUFA3": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 8,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 54.2
+    },
+    "NDUFA9": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 3,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 15.5
+    },
+    "NDUFB5": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0
+    },
+    "NDUFS6": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 4,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 86.8
+    },
+    "NDUFS2": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, naive TREG",
+      "immune_top_tpm": 64.3
+    },
+    "NDUFS4": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 12,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, naive",
+      "immune_top_tpm": 49.7
+    },
+    "NDUFC1": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 2,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, naive TREG",
+      "immune_top_tpm": 26.7
+    },
+    "NDUFAF2": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 7,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 52.7
+    },
+    "GPD2": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "sn-glycerol-3-phosphate",
+        "DHAP",
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 41.8
+    },
+    "MT-ND4L": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive",
+      "immune_top_tpm": 10102.1
+    },
+    "NDUFA1": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0
+    },
+    "MT-ND3": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive",
+      "immune_top_tpm": 9641.7
+    },
+    "NDUFS7": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ]
+    },
+    "NDUFA13": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ]
+    },
+    "NDUFS3": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 60.8
+    },
+    "MT-ND6": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 6,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 5064.9
+    },
+    "NDUFAF3": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 7,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 72.3
+    },
+    "NDUFV2": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, TH2",
+      "immune_top_tpm": 60.4
+    },
+    "NDUFA5": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, TH1/17",
+      "immune_top_tpm": 29.2
+    },
+    "NDUFB3": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 3,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 156.8
+    },
+    "NDUFA7": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ]
+    },
+    "NDUFV3": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 4,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 42.2
+    },
+    "NDUFB6": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 4,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 110.8
+    },
+    "NDUFA11": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 29.1
+    },
+    "NDUFB8": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 56.8
+    },
+    "NDUFS5": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 2,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 501.8
+    },
+    "NDUFAF4": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 208.8
+    },
+    "NDUFA2": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 1,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 40.3
+    },
+    "NDUFV1": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 94.7
+    },
+    "NDUFB2": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 8,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 105.7
+    },
+    "COXFA4L2": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0
+    },
+    "NDUFA12": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0
+    },
+    "COXFA4": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0
+    },
+    "MT-ND1": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 1,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 6433.2
+    },
+    "NDUFB9": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 1,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 100.8
+    },
+    "NDUFS8": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, TFH",
+      "immune_top_tpm": 21.4
+    },
+    "NDUFB10": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 5,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 101.5
+    },
+    "NDUFA10": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 6,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, naive",
+      "immune_top_tpm": 56.7
+    },
+    "NDUFA8": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 9,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 67.3
+    },
+    "MT-ND4": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD8, naive",
+      "immune_top_tpm": 20204.5
+    },
+    "NDUFB1": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 2,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 34.3
+    },
+    "NDUFC2": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 8,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, TH1/17",
+      "immune_top_tpm": 82.1
+    },
+    "NDUFB11": {
+      "association_score": 0.2729,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "ubiquinone",
+        "ubiquinol"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 218.0
+    },
+    "ITGA8": {
+      "association_score": 0.27,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20
+    },
+    "SPATS1": {
+      "association_score": 0.2675,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 10
+    },
+    "ANKRD26": {
+      "association_score": 0.2665,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive",
+      "immune_top_tpm": 14.8
+    },
+    "SMOC1": {
+      "association_score": 0.2633,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 8
+    },
+    "KDM4C": {
+      "association_score": 0.2606,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "B cell, naive",
+      "immune_top_tpm": 106.6
+    },
+    "CHRNA4": {
+      "association_score": 0.2599,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 6
+    },
+    "CHRNB2": {
+      "association_score": 0.259,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20
+    },
+    "GRHL2": {
+      "association_score": 0.2587,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 20
+    },
+    "CCDC3": {
+      "association_score": 0.2583,
+      "mutation_frequency": 0.0141,
+      "n_drug_correlations": 6
+    },
+    "VPS13B": {
+      "association_score": 0.2561,
+      "mutation_frequency": 0.0398,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "B cell, naive",
+      "immune_top_tpm": 45.6
+    },
+    "CSMD1": {
+      "association_score": 0.2523,
+      "mutation_frequency": 0.0539,
+      "n_drug_correlations": 20
+    },
+    "NCKAP5": {
+      "association_score": 0.2523,
+      "mutation_frequency": 0.0117,
+      "n_drug_correlations": 1
+    },
+    "GPC5": {
+      "association_score": 0.2523,
+      "mutation_frequency": 0.007
+    },
+    "FAT3": {
+      "association_score": 0.2491,
+      "mutation_frequency": 0.0609,
+      "n_drug_correlations": 20,
+      "pathways": [
+        {
+          "id": "hsa04519",
+          "name": "Cadherin signaling",
+          "source": "KEGG"
+        }
+      ]
+    },
+    "HMGCR": {
+      "association_score": 0.2457,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 6,
+      "metabolites": [
+        "HMG-CoA",
+        "(R)-mevalonate"
+      ],
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 112.1
+    },
+    "SORCS1": {
+      "association_score": 0.2431,
+      "mutation_frequency": 0.0234,
+      "n_drug_correlations": 11
+    },
+    "STPG2": {
+      "association_score": 0.2431,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 3
+    },
+    "WT1": {
+      "association_score": 0.2408,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20
+    },
+    "TJP1": {
+      "association_score": 0.2366,
+      "mutation_frequency": 0.0117,
+      "n_drug_correlations": 20,
+      "n_interactions": 3
+    },
+    "DYM": {
+      "association_score": 0.2343,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "B cell, naive",
+      "immune_top_tpm": 33.8
+    },
+    "MFN2": {
+      "association_score": 0.2332,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 3,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 109.6
+    },
+    "FSTL5": {
+      "association_score": 0.2311,
+      "mutation_frequency": 0.0141,
+      "n_drug_correlations": 1
+    },
+    "DPP6": {
+      "association_score": 0.2276,
+      "mutation_frequency": 0.0164,
+      "n_drug_correlations": 11,
+      "n_interactions": 1
+    },
+    "CDC14C": {
+      "association_score": 0.2272,
+      "mutation_frequency": 0
+    },
+    "CCDC88C": {
+      "association_score": 0.2187,
+      "mutation_frequency": 0.0211,
+      "n_drug_correlations": 20,
+      "pathways": [
+        {
+          "id": "hsa04310",
+          "name": "Wnt signaling pathway",
+          "source": "KEGG"
+        },
+        {
+          "id": "R-HSA-5368598",
+          "name": "Negative regulation of TCF-dependent signaling by DVL-interacting proteins",
+          "source": "Reactome"
+        }
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 133.3
+    },
+    "CTAGE1": {
+      "association_score": 0.2073,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 7
+    },
+    "RBL1": {
+      "association_score": 0.204,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, TH2",
+      "immune_top_tpm": 38.1
+    },
+    "EPHA4": {
+      "association_score": 0.2007,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, TH2",
+      "immune_top_tpm": 71.5
+    },
+    "SERPINA9": {
+      "association_score": 0.1966,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20
+    },
+    "PCED1B": {
+      "association_score": 0.1953,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 12,
+      "immune_top_cell": "T cell, CD8, naive",
+      "immune_top_tpm": 217.0
+    },
+    "RAB28": {
+      "association_score": 0.1903,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 58.3
+    },
+    "RXFP2": {
+      "association_score": 0.1876,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 3
+    },
+    "GPR149": {
+      "association_score": 0.1856,
+      "mutation_frequency": 0.0047
+    },
+    "NPVF": {
+      "association_score": 0.1792,
+      "mutation_frequency": 0.0047
+    },
+    "GALNT2": {
+      "association_score": 0.1754,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 13,
+      "metabolites": [
+        "UDP-N-acetyl-D-galactosamine",
+        "Protein-Linked Serine Or Threonine Residue (O-Glycosylation Site)",
+        "Tn-antigen",
+        "UDP",
+        "[protein]-L-serine"
+      ],
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 16.3
+    },
+    "DSCAML1": {
+      "association_score": 0.1683,
+      "mutation_frequency": 0.0258,
+      "n_drug_correlations": 12,
+      "pathways": [
+        {
+          "id": "R-CFA-376172",
+          "name": "DSCAM interactions",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-HSA-376172",
+          "name": "DSCAM interactions",
+          "source": "Reactome"
+        },
+        {
+          "id": "R-SSC-376172",
+          "name": "DSCAM interactions",
+          "source": "Reactome"
+        }
+      ]
+    },
+    "GRID2": {
+      "association_score": 0.1644,
+      "mutation_frequency": 0.0117,
+      "n_interactions": 1
+    },
+    "TMC3": {
+      "association_score": 0.1631,
+      "mutation_frequency": 0.0094
+    },
+    "TLE4": {
+      "association_score": 0.1609,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 63.0
+    },
+    "AGPAT4": {
+      "association_score": 0.1583,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 19,
+      "metabolites": [
+        "acyl-CoA pool",
+        "phosphatidate-CL pool",
+        "phosphatidate-LD-TAG pool",
+        "phosphatidate-LD-PC pool",
+        "phosphatidate-LD-PE pool",
+        "phosphatidate-LD-PS pool",
+        "phosphatidate-LD-PI pool",
+        "phosphatidate-LD-SM pool",
+        "acyl-CoA-bile-PC pool",
+        "phosphatidate-bile-PC pool"
+      ],
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 181.5
+    },
+    "GHITM": {
+      "association_score": 0.1578,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 3,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 567.9
+    },
+    "TDRD15": {
+      "association_score": 0.1578,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 13
+    },
+    "CKM": {
+      "association_score": 0.149,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "creatine",
+        "creatine-phosphate"
+      ]
+    },
+    "CACNA2D3": {
+      "association_score": 0.1482,
+      "mutation_frequency": 0.0117,
+      "n_drug_correlations": 3,
+      "n_interactions": 3,
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 13.9
+    },
+    "MDP1": {
+      "association_score": 0.1473,
+      "mutation_frequency": 0.0047,
+      "metabolites": [
+        "phosphatidylinositol-3,4,5-trisphosphate",
+        "phosphatidylinositol-3,5-bisphosphate"
+      ]
+    },
+    "LYPD1": {
+      "association_score": 0.145,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20
+    },
+    "SMAD7": {
+      "association_score": 0.1373,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 78.8
+    },
+    "ENOX1": {
+      "association_score": 0.1259,
+      "mutation_frequency": 0.0117,
+      "n_drug_correlations": 11
+    },
+    "PDCD6IP": {
+      "association_score": 0.1186,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 3,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 151.8
+    },
+    "TNF": {
+      "association_score": 0.117,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 2679.4
+    },
+    "CD4": {
+      "association_score": 0.1104,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 399.8
+    },
+    "CRP": {
+      "association_score": 0.1097,
+      "mutation_frequency": 0.0023
+    },
+    "MMP8": {
+      "association_score": 0.109,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20
+    },
+    "MMP1": {
+      "association_score": 0.1063,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20
+    },
+    "IL6": {
+      "association_score": 0.1062,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "B cell, naive",
+      "immune_top_tpm": 121.5
+    },
+    "TSC1": {
+      "association_score": 0.1032,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive",
+      "immune_top_tpm": 106.5
+    },
+    "TSC2": {
+      "association_score": 0.1032,
+      "mutation_frequency": 0.0187,
+      "n_drug_correlations": 6,
+      "n_interactions": 1,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 33.9
+    },
+    "IFNG": {
+      "association_score": 0.1026,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 659.5
+    },
+    "MMP7": {
+      "association_score": 0.1014,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20
+    },
+    "PTGS1": {
+      "association_score": 0.1013,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 15,
+      "metabolites": [
+        "arachidonate",
+        "(R)-HETE",
+        "prostaglandin G2",
+        "prostaglandin H2",
+        "dihomo-gamma-linolenate",
+        "prostaglandin G1",
+        "prostaglandin H1",
+        "(S)-HPODE",
+        "EPA",
+        "(R)-HpEPE",
+        "PGH3",
+        "(18R)-HEPE"
+      ],
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 111.8
+    },
+    "MMP13": {
+      "association_score": 0.1011,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 19
+    },
+    "RPL17": {
+      "association_score": 0.0966,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "B cell, naive",
+      "immune_top_tpm": 37.0
+    },
+    "BACE1": {
+      "association_score": 0.096,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 40.6
+    },
+    "CD8A": {
+      "association_score": 0.092,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 8,
+      "immune_top_cell": "T cell, CD8, naive",
+      "immune_top_tpm": 1690.3
+    },
+    "TGFB1": {
+      "association_score": 0.0907,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 551.5
+    },
+    "SELENOK": {
+      "association_score": 0.0877,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 4,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 286.0
+    },
+    "CD209": {
+      "association_score": 0.0867,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 2
+    },
+    "IL2": {
+      "association_score": 0.0855,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 1,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 8158.1
+    },
+    "SPP1": {
+      "association_score": 0.085,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20
+    },
+    "IL4": {
+      "association_score": 0.0846,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 4
+    },
+    "IL7R": {
+      "association_score": 0.0828,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 15,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 3863.6
+    },
+    "AGO2": {
+      "association_score": 0.0828,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 239.2
+    },
+    "CD274": {
+      "association_score": 0.082,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 439.6
+    },
+    "IL10": {
+      "association_score": 0.0815,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 116.6
+    },
+    "IDO1": {
+      "association_score": 0.0814,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "tryptophan",
+        "L-formylkynurenine",
+        "melatonin",
+        "formyl-N-acetyl-5-methoxykynurenamine",
+        "serotonin",
+        "formyl-5-hydroxykynurenamine"
+      ]
+    },
+    "COX6C": {
+      "association_score": 0.0806,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 18,
+      "metabolites": [
+        "ferrocytochrome C",
+        "ferricytochrome C",
+        "O2-"
+      ],
+      "immune_top_cell": "T cell, CD4, naive",
+      "immune_top_tpm": 227.7
+    },
+    "VSX1": {
+      "association_score": 0.0805,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 10
+    },
+    "CCN6": {
+      "association_score": 0.0805,
+      "mutation_frequency": 0.0023
+    },
+    "HPD": {
+      "association_score": 0.0805,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 3,
+      "metabolites": [
+        "phenylpyruvate",
+        "homogentisate"
+      ]
+    },
+    "HAMP": {
+      "association_score": 0.0795,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 11
+    },
+    "IL7": {
+      "association_score": 0.0795,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 10,
+      "immune_top_cell": "B cell, naive",
+      "immune_top_tpm": 10.6
+    },
+    "IL17F": {
+      "association_score": 0.0789,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 1
+    },
+    "LGALS9": {
+      "association_score": 0.0789,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 132.7
+    },
+    "KIT": {
+      "association_score": 0.0772,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 11,
+      "alphafold": {
+        "uniprot": "P10721",
+        "n_atoms": 7725
+      }
+    },
+    "SLC11A1": {
+      "association_score": 0.0752,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 192.4
+    },
+    "BCR": {
+      "association_score": 0.075,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 5,
+      "immune_top_cell": "T cell, CD4, TH1",
+      "immune_top_tpm": 29.8
+    },
+    "ABL1": {
+      "association_score": 0.0748,
+      "mutation_frequency": 0.0117,
+      "n_drug_correlations": 3,
+      "n_interactions": 1,
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 45.3
+    },
+    "PDGFRB": {
+      "association_score": 0.074,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 35.9
+    },
+    "DEFB1": {
+      "association_score": 0.0724,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 18
+    },
+    "CXCL10": {
+      "association_score": 0.0722,
+      "mutation_frequency": 0
+    },
+    "GPR68": {
+      "association_score": 0.0701,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 35.0
+    },
+    "TIGIT": {
+      "association_score": 0.0692,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 655.4
+    },
+    "IL22": {
+      "association_score": 0.0682,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 3
+    },
+    "GBP5": {
+      "association_score": 0.0678,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD8, naive [activated]",
+      "immune_top_tpm": 911.9
+    },
+    "CCL2": {
+      "association_score": 0.0651,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20
+    },
+    "MTNR1B": {
+      "association_score": 0.0651,
+      "mutation_frequency": 0.0023
+    },
+    "PRKN": {
+      "association_score": 0.0651,
+      "mutation_frequency": 0.007,
+      "metabolites": [
+        "[protein]-L-lysine",
+        "ubiquitin",
+        "[protein]-N-ubiquityllysine"
+      ]
+    },
+    "CCDC122": {
+      "association_score": 0.0648,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20
+    },
+    "IFNA1": {
+      "association_score": 0.0627,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20
+    },
+    "IL1A": {
+      "association_score": 0.058,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20
+    },
+    "CYRIB": {
+      "association_score": 0.0577,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "NK cell, CD56dim CD16+",
+      "immune_top_tpm": 171.5
+    },
+    "IL17A": {
+      "association_score": 0.0565,
+      "mutation_frequency": 0
+    },
+    "OOSP3": {
+      "association_score": 0.0561,
+      "mutation_frequency": 0
+    },
+    "IL26": {
+      "association_score": 0.0559,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20
+    },
+    "DNMT3A": {
+      "association_score": 0.0555,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "DNA",
+        "SAM",
+        "DNA-5-methylcytosine",
+        "SAH",
+        "se-adenosylselenomethionine",
+        "se-adenosyl-L-selenohomocysteine"
+      ],
+      "immune_top_cell": "T cell, CD8, naive",
+      "immune_top_tpm": 106.3
+    },
+    "DNMT1": {
+      "association_score": 0.0555,
+      "mutation_frequency": 0.007,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "DNA",
+        "SAM",
+        "DNA-5-methylcytosine",
+        "SAH",
+        "se-adenosylselenomethionine",
+        "se-adenosyl-L-selenohomocysteine"
+      ],
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 74.6
+    },
+    "OLR1": {
+      "association_score": 0.0539,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, classical",
+      "immune_top_tpm": 18.2
+    },
+    "CEP164": {
+      "association_score": 0.0525,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 11,
+      "immune_top_cell": "T cell, CD4, memory TREG",
+      "immune_top_tpm": 33.6
+    },
+    "SOD1": {
+      "association_score": 0.0525,
+      "mutation_frequency": 0.0047,
+      "n_drug_correlations": 9,
+      "metabolites": [
+        "O2-",
+        "H2O2"
+      ],
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 213.6
+    },
+    "SLC8A3": {
+      "association_score": 0.0515,
+      "mutation_frequency": 0.0094,
+      "n_drug_correlations": 19
+    },
+    "HMOX1": {
+      "association_score": 0.0511,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "metabolites": [
+        "heme",
+        "biliverdin",
+        "hemoglobin",
+        "globin"
+      ],
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 759.9
+    },
+    "LACC1": {
+      "association_score": 0.0508,
+      "mutation_frequency": 0.0023,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "Monocyte, non-classical",
+      "immune_top_tpm": 66.4
+    },
+    "CCL20": {
+      "association_score": 0.0506,
+      "mutation_frequency": 0,
+      "n_drug_correlations": 20,
+      "immune_top_cell": "T cell, CD4, naive [activated]",
+      "immune_top_tpm": 140.4
+    }
+  },
+  "pathways": [
+    "R-GGA-3371497",
+    "R-GGA-212676",
+    "R-HSA-181430",
+    "R-HSA-3371497",
+    "R-CFA-983168",
+    "R-CFA-376172",
+    "R-HSA-4090294",
+    "R-BTA-212676",
+    "R-SSC-388844",
+    "R-HSA-9679191",
+    "hsa04310",
+    "R-HSA-9635465",
+    "R-HSA-264642",
+    "hsa04519",
+    "R-GGA-983168",
+    "R-BTA-3371497",
+    "R-BTA-4090294",
+    "R-GGA-388844",
+    "hsa04080",
+    "R-HSA-9615017",
+    "R-HSA-210500",
+    "R-SSC-4090294",
+    "R-SSC-212676",
+    "R-BTA-264642",
+    "R-CFA-383280",
+    "R-HSA-8849473",
+    "R-HSA-9768777",
+    "R-HSA-212676",
+    "R-SSC-181430",
+    "R-HSA-5368598",
+    "R-HSA-9725370",
+    "R-BTA-181429",
+    "R-HSA-376172",
+    "R-HSA-8939902",
+    "R-SSC-181429",
+    "R-SSC-210500",
+    "R-HSA-181429",
+    "R-CFA-388844",
+    "R-SSC-264642",
+    "R-SSC-3371497",
+    "R-BTA-210500",
+    "R-HSA-983168",
+    "R-BTA-181430",
+    "R-GGA-383280",
+    "R-GGA-4090294",
+    "R-HSA-383280",
+    "hsa04517",
+    "R-BTA-388844",
+    "R-GGA-181429",
+    "R-GGA-181430",
+    "R-GGA-264642",
+    "R-SSC-383280",
+    "R-BTA-383280",
+    "R-SSC-376172",
+    "R-HSA-388844",
+    "R-CFA-3371497"
+  ],
+  "metabolites": [
+    "biliverdin",
+    "albumin",
+    "SAM",
+    "phosphatidylinositol-3,5-bisphosphate",
+    "aniline",
+    "acyl-CoA pool",
+    "glycine",
+    "UDP-N-acetyl-D-galactosamine",
+    "sn-glycerol-3-phosphate",
+    "UDP",
+    "histidine",
+    "O2-",
+    "phosphatidate-LD-PE pool",
+    "[protein]-N6-(octanoyl)lysine",
+    "asparagine",
+    "glutamate",
+    "phosphatidate-CL pool",
+    "serine",
+    "[protein]-L-lysine",
+    "phosphatidylinositol-3,4,5-trisphosphate",
+    "alanine",
+    "lysine",
+    "phosphatidate-LD-SM pool",
+    "(R)-mevalonate",
+    "tyrosine",
+    "cGMP",
+    "se-adenosylselenomethionine",
+    "(R)-HETE",
+    "PEP",
+    "arginine",
+    "se-adenosyl-L-selenohomocysteine",
+    "methionine",
+    "EPA",
+    "octanoyl-[ACP]",
+    "formyl-N-acetyl-5-methoxykynurenamine",
+    "prostaglandin G2",
+    "glutamine",
+    "phenylpyruvate",
+    "cAMP",
+    "phosphatidate-LD-PI pool",
+    "creatine",
+    "hemoglobin",
+    "H2O2",
+    "UDP-N-acetylglucosamine",
+    "arachidonate",
+    "ubiquinone",
+    "homogentisate",
+    "prostaglandin G1",
+    "SAH",
+    "[protein]-N-ubiquityllysine",
+    "aspartate",
+    "Fe2S iron-sulfur cluster",
+    "ubiquitin",
+    "phosphatidate-bile-PC pool",
+    "acetyl-CoA",
+    "(R)-HpEPE",
+    "(S)-HPODE",
+    "acyl-CoA-bile-PC pool",
+    "UTP",
+    "serotonin",
+    "phosphatidate-LD-PS pool",
+    "N-acetylglucosamine-1-phosphate",
+    "PGH3",
+    "mitoACP",
+    "proline",
+    "globin",
+    "tryptophan",
+    "DNA-5-methylcytosine",
+    "[protein]-L-serine",
+    "isoleucine",
+    "acetanilide",
+    "ubiquinol",
+    "melatonin",
+    "threonine",
+    "phenylalanine",
+    "phosphatidate-LD-PC pool",
+    "prostaglandin H2",
+    "Tn-antigen",
+    "phosphatidate-LD-TAG pool",
+    "dihomo-gamma-linolenate",
+    "HMG-CoA",
+    "DHAP",
+    "heme",
+    "(18R)-HEPE",
+    "prostaglandin H1",
+    "creatine-phosphate",
+    "ferrocytochrome C",
+    "Protein-Linked Serine Or Threonine Residue (O-Glycosylation Site)",
+    "DNA",
+    "cysteine",
+    "ferricytochrome C",
+    "leucine",
+    "L-formylkynurenine",
+    "formyl-5-hydroxykynurenamine"
+  ],
+  "drug_targets": [
+    "NR3C1"
+  ],
+  "immune_relevant": [
+    "KPNB1",
+    "KPNA1",
+    "TLR2",
+    "UBC",
+    "RPS27A",
+    "UBB",
+    "UBA52",
+    "RAB7A",
+    "CORO1A",
+    "MAPK3",
+    "TRIM27",
+    "DUSP16",
+    "B2M",
+    "MAPK1",
+    "RNF213",
+    "RAB5A",
+    "ATP6V1H",
+    "ENO1",
+    "PGK1",
+    "GSK3A",
+    "HGS",
+    "VPS33B",
+    "SFPQ",
+    "NR3C1",
+    "UAP1",
+    "ASAP1",
+    "GUCY1A1",
+    "EMC2",
+    "PTGS2",
+    "FAM241A",
+    "ETS2",
+    "DYNC1I2",
+    "VDR",
+    "ERBIN",
+    "NDUFB7",
+    "NDUFAB1",
+    "MT-ND2",
+    "NDUFA6",
+    "NDUFAF1",
+    "NDUFS1",
+    "MT-ND5",
+    "NDUFA3",
+    "NDUFA9",
+    "NDUFS6",
+    "NDUFS2",
+    "NDUFS4",
+    "NDUFC1",
+    "NDUFAF2",
+    "GPD2",
+    "MT-ND4L",
+    "MT-ND3",
+    "NDUFS3",
+    "MT-ND6",
+    "NDUFAF3",
+    "NDUFV2",
+    "NDUFA5",
+    "NDUFB3",
+    "NDUFV3",
+    "NDUFB6",
+    "NDUFA11",
+    "NDUFB8",
+    "NDUFS5",
+    "NDUFAF4",
+    "NDUFA2",
+    "NDUFV1",
+    "NDUFB2",
+    "MT-ND1",
+    "NDUFB9",
+    "NDUFS8",
+    "NDUFB10",
+    "NDUFA10",
+    "NDUFA8",
+    "MT-ND4",
+    "NDUFB1",
+    "NDUFC2",
+    "NDUFB11",
+    "ANKRD26",
+    "KDM4C",
+    "VPS13B",
+    "HMGCR",
+    "DYM",
+    "MFN2",
+    "CCDC88C",
+    "RBL1",
+    "EPHA4",
+    "PCED1B",
+    "RAB28",
+    "GALNT2",
+    "TLE4",
+    "AGPAT4",
+    "GHITM",
+    "CACNA2D3",
+    "SMAD7",
+    "PDCD6IP",
+    "TNF",
+    "CD4",
+    "IL6",
+    "TSC1",
+    "TSC2",
+    "IFNG",
+    "PTGS1",
+    "RPL17",
+    "BACE1",
+    "CD8A",
+    "TGFB1",
+    "SELENOK",
+    "IL2",
+    "IL7R",
+    "AGO2",
+    "CD274",
+    "IL10",
+    "COX6C",
+    "IL7",
+    "LGALS9",
+    "SLC11A1",
+    "BCR",
+    "ABL1",
+    "PDGFRB",
+    "GPR68",
+    "TIGIT",
+    "GBP5",
+    "CYRIB",
+    "DNMT3A",
+    "DNMT1",
+    "OLR1",
+    "CEP164",
+    "SOD1",
+    "HMOX1",
+    "LACC1",
+    "CCL20"
+  ],
+  "structures_available": [
+    "KIT"
+  ],
+  "mutation_profile": {}
+}

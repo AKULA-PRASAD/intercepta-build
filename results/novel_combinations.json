@@ -1,0 +1,38 @@
+[
+  {
+    "combo": "Enzalutamide + Tozasertib",
+    "target_escape": "AR \u2192 AURKA",
+    "novel": true,
+    "biology_strength": "STRONG",
+    "evidence": "AURKA overexpressed in enzalutamide-resistant CRPC (Beltran 2011, Mosquera 2013)",
+    "concern": "Tozasertib (VX-680/MK-0457) development discontinued by Merck 2007 due to QTc prolongation",
+    "alternative": "Alisertib (MLN8237) \u2014 selective AURKA inhibitor, Phase II in CRPC exists",
+    "verdict": "BIOLOGY CORRECT but lead drug has safety issues. Alisertib is better candidate.",
+    "published_validation": {
+      "preclinical": "Liadi & Odero-Marah AACR 2023: enza + alisertib in LNCaP-HMGA2",
+      "phase_II_single_agent": "Beltran et al. CCR 2019: alisertib in NEPC, exceptional responders with AURKA/N-myc",
+      "biomarker": "AURKA/N-myc overexpression identifies responders",
+      "intercepta_addition": "RNA velocity identifies NE-like trajectory at diagnosis for patient selection"
+    }
+  },
+  {
+    "combo": "Enzalutamide + Dabrafenib",
+    "target_escape": "AR \u2192 BRAF/MAPK",
+    "novel": true,
+    "biology_strength": "MODERATE",
+    "evidence": "MAPK activation in CRPC lineage plasticity (Bluemn 2017)",
+    "concern": "BRAF mutations rare in prostate (~1%). Dabrafenib works in BRAF-mutant tumors.",
+    "alternative": "MEK inhibitors (trametinib) may be more relevant \u2014 target downstream of BRAF",
+    "verdict": "BIOLOGY PLAUSIBLE but BRAF may not be the right node. MEK inhibitor combo more rational."
+  },
+  {
+    "combo": "Olaparib + AZD7762 (CHK1 inhibitor)",
+    "target_escape": "BRCA2 loss \u2192 CHEK1",
+    "novel": true,
+    "biology_strength": "STRONG",
+    "evidence": "PARP + CHK1 synthetic lethality published (Booth 2013, Sen 2017)",
+    "concern": "AZD7762 had cardiac toxicity in trials. Prexasertib (LY2606368) is current CHK1 inhibitor.",
+    "alternative": "Olaparib + prexasertib \u2014 more clinically viable",
+    "verdict": "BIOLOGY VERY STRONG. Need better CHK1 inhibitor than AZD7762."
+  }
+]

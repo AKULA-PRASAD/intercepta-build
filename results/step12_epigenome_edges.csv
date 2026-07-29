@@ -1,0 +1,2477 @@
+modifier,target,score,modifier_function,effect
+DNMT3A,CBX5,875,DNA methyltransferase,methylation
+DNMT3A,AHCY,937,DNA methyltransferase,methylation
+DNMT3A,SPI1,939,DNA methyltransferase,methylation
+DNMT3A,CCND1,708,DNA methyltransferase,methylation
+DNMT3A,FLT3,851,DNA methyltransferase,methylation
+DNMT3A,SNAI1,805,DNA methyltransferase,methylation
+DNMT3A,H4C6,974,DNA methyltransferase,methylation
+DNMT3A,MBD4,901,DNA methyltransferase,methylation
+DNMT3A,TRIM28,942,DNA methyltransferase,methylation
+DNMT3A,RARA,715,DNA methyltransferase,methylation
+DNMT3A,H3-3B,999,DNA methyltransferase,methylation
+DNMT3A,MBD2,920,DNA methyltransferase,methylation
+DNMT3A,TET3,802,DNA methyltransferase,methylation
+DNMT3A,AHCYL1,915,DNA methyltransferase,methylation
+DNMT3A,H3-4,998,DNA methyltransferase,methylation
+DNMT3A,HDAC1,997,DNA methyltransferase,methylation
+DNMT3A,H3C6,923,DNA methyltransferase,methylation
+DNMT3A,CEBPA,718,DNA methyltransferase,methylation
+DNMT3A,GATA2,731,DNA methyltransferase,methylation
+DNMT3A,NKX2-2,865,DNA methyltransferase,methylation
+DNMT3A,H3-2,998,DNA methyltransferase,methylation
+DNMT3A,EHMT2,993,DNA methyltransferase,methylation
+DNMT3A,TCL1A,952,DNA methyltransferase,methylation
+DNMT3A,HELLS,808,DNA methyltransferase,methylation
+DNMT3A,ZBTB18,863,DNA methyltransferase,methylation
+DNMT3A,DOT1L,710,DNA methyltransferase,methylation
+DNMT3A,EZH2,999,DNA methyltransferase,methylation
+DNMT3A,H3-3A,931,DNA methyltransferase,methylation
+DNMT3A,H3C12,999,DNA methyltransferase,methylation
+DNMT3A,TP53,835,DNA methyltransferase,methylation
+DNMT3A,TRDMT1,926,DNA methyltransferase,methylation
+DNMT3A,UHRF2,769,DNA methyltransferase,methylation
+DNMT3A,RUNX1,777,DNA methyltransferase,methylation
+DNMT3A,H3C13,999,DNA methyltransferase,methylation
+DNMT3A,H4C7,750,DNA methyltransferase,methylation
+DNMT3A,PRAM1,730,DNA methyltransferase,methylation
+DNMT3A,SRSF2,776,DNA methyltransferase,methylation
+DNMT3A,DNMT1,999,DNA methyltransferase,methylation
+DNMT3A,PRMT5,924,DNA methyltransferase,methylation
+DNMT3A,SUV39H1,996,DNA methyltransferase,methylation
+DNMT3A,H3C3,922,DNA methyltransferase,methylation
+DNMT3A,IDH1,797,DNA methyltransferase,methylation
+DNMT3A,ATRX,747,DNA methyltransferase,methylation
+DNMT3A,ARID1A,720,DNA methyltransferase,methylation
+DNMT3A,SMARCA4,957,DNA methyltransferase,methylation
+DNMT3A,EED,804,DNA methyltransferase,methylation
+DNMT3A,H2AX,722,DNA methyltransferase,methylation
+DNMT3A,ZRSR2,720,DNA methyltransferase,methylation
+DNMT3A,MYC,991,DNA methyltransferase,methylation
+DNMT3A,MECP2,949,DNA methyltransferase,methylation
+DNMT3A,TDG,933,DNA methyltransferase,methylation
+DNMT3A,MAT2A,931,DNA methyltransferase,methylation
+DNMT3A,UHRF1,967,DNA methyltransferase,methylation
+DNMT3A,AGO4,875,DNA methyltransferase,methylation
+DNMT3A,DNMT3L,999,DNA methyltransferase,methylation
+DNMT3A,H2AC20,775,DNA methyltransferase,methylation
+DNMT3A,CBX1,898,DNA methyltransferase,methylation
+DNMT3A,AHCYL2,913,DNA methyltransferase,methylation
+DNMT3A,SUZ12,798,DNA methyltransferase,methylation
+DNMT3A,NR6A1,765,DNA methyltransferase,methylation
+DNMT3A,H3C4,912,DNA methyltransferase,methylation
+DNMT3A,MAT1A,924,DNA methyltransferase,methylation
+DNMT3A,JARID2,715,DNA methyltransferase,methylation
+DNMT3A,H3-5,998,DNA methyltransferase,methylation
+DNMT3A,KMT2A,746,DNA methyltransferase,methylation
+DNMT3A,H3C1,964,DNA methyltransferase,methylation
+DNMT3A,TLE3,914,DNA methyltransferase,methylation
+DNMT3A,TET1,886,DNA methyltransferase,methylation
+DNMT3A,MIS18A,816,DNA methyltransferase,methylation
+DNMT3A,HDAC2,970,DNA methyltransferase,methylation
+DNMT3A,ASXL1,939,DNA methyltransferase,methylation
+DNMT3A,ASXL2,735,DNA methyltransferase,methylation
+DNMT3A,MAT2B,932,DNA methyltransferase,methylation
+DNMT3A,H3C10,909,DNA methyltransferase,methylation
+DNMT3A,H3C2,914,DNA methyltransferase,methylation
+DNMT3A,MPHOSPH8,993,DNA methyltransferase,methylation
+DNMT3A,H2BC21,747,DNA methyltransferase,methylation
+DNMT3A,NPM1,794,DNA methyltransferase,methylation
+DNMT3A,SETDB1,996,DNA methyltransferase,methylation
+DNMT3A,KMT5B,915,DNA methyltransferase,methylation
+DNMT3A,H3C7,909,DNA methyltransferase,methylation
+DNMT3A,CKAP5,734,DNA methyltransferase,methylation
+DNMT3A,DNMT3B,998,DNA methyltransferase,methylation
+DNMT3A,H2AC18,776,DNA methyltransferase,methylation
+DNMT3A,IDH2,793,DNA methyltransferase,methylation
+DNMT3A,H3C14,910,DNA methyltransferase,methylation
+DNMT3A,PHB2,784,DNA methyltransferase,methylation
+DNMT3A,NRAS,732,DNA methyltransferase,methylation
+DNMT3A,H3C8,910,DNA methyltransferase,methylation
+DNMT3A,TET2,946,DNA methyltransferase,methylation
+DNMT3A,ZBTB17,738,DNA methyltransferase,methylation
+DNMT3A,H2AZ1,784,DNA methyltransferase,methylation
+DNMT3A,H3C15,910,DNA methyltransferase,methylation
+DNMT3A,U2AF1,776,DNA methyltransferase,methylation
+DNMT3A,H3C11,910,DNA methyltransferase,methylation
+DNMT3A,KDM1A,751,DNA methyltransferase,methylation
+DNMT3A,AGO1,846,DNA methyltransferase,methylation
+DNMT3B,CBX5,932,DNA methyltransferase,methylation
+DNMT3B,SIRT1,926,DNA methyltransferase,methylation
+DNMT3B,AHCY,950,DNA methyltransferase,methylation
+DNMT3B,NANOG,831,DNA methyltransferase,methylation
+DNMT3B,ZBTB24,711,DNA methyltransferase,methylation
+DNMT3B,EGR1,709,DNA methyltransferase,methylation
+DNMT3B,H4C6,739,DNA methyltransferase,methylation
+DNMT3B,MBD4,960,DNA methyltransferase,methylation
+DNMT3B,TRIM28,894,DNA methyltransferase,methylation
+DNMT3B,H3-3B,971,DNA methyltransferase,methylation
+DNMT3B,MBD2,711,DNA methyltransferase,methylation
+DNMT3B,POU5F1,830,DNA methyltransferase,methylation
+DNMT3B,HDAC4,702,DNA methyltransferase,methylation
+DNMT3B,DNMT3A,998,DNA methyltransferase,methylation
+DNMT3B,DNMT3L,999,DNA methyltransferase,methylation
+DNMT3B,SETDB1,985,DNA methyltransferase,methylation
+DNMT3B,CENPC,978,DNA methyltransferase,methylation
+DNMT3B,H2BC1,720,DNA methyltransferase,methylation
+DNMT3B,PRDM14,735,DNA methyltransferase,methylation
+DNMT3B,UHRF2,765,DNA methyltransferase,methylation
+DNMT3B,SMARCA5,942,DNA methyltransferase,methylation
+DNMT3B,H2BC5,821,DNA methyltransferase,methylation
+DNMT3B,MIS18A,747,DNA methyltransferase,methylation
+DNMT3B,H2AZ1,706,DNA methyltransferase,methylation
+DNMT3B,ZHX1,795,DNA methyltransferase,methylation
+DNMT3B,MAT2A,934,DNA methyltransferase,methylation
+DNMT3B,AHCYL2,913,DNA methyltransferase,methylation
+DNMT3B,SUZ12,895,DNA methyltransferase,methylation
+DNMT3B,EZH2,999,DNA methyltransferase,methylation
+DNMT3B,H2BC4,715,DNA methyltransferase,methylation
+DNMT3B,SOX2,766,DNA methyltransferase,methylation
+DNMT3B,MAT2B,924,DNA methyltransferase,methylation
+DNMT3B,H3C15,906,DNA methyltransferase,methylation
+DNMT3B,H2BC9,820,DNA methyltransferase,methylation
+DNMT3B,H3C11,903,DNA methyltransferase,methylation
+DNMT3B,H3C8,903,DNA methyltransferase,methylation
+DNMT3B,TET2,852,DNA methyltransferase,methylation
+DNMT3B,H2BU1,712,DNA methyltransferase,methylation
+DNMT3B,CBX3,767,DNA methyltransferase,methylation
+DNMT3B,H2AC18,823,DNA methyltransferase,methylation
+DNMT3B,H3C14,906,DNA methyltransferase,methylation
+DNMT3B,H3C7,903,DNA methyltransferase,methylation
+DNMT3B,H3C10,904,DNA methyltransferase,methylation
+DNMT3B,H3C2,905,DNA methyltransferase,methylation
+DNMT3B,H2BC21,991,DNA methyltransferase,methylation
+DNMT3B,CHD8,852,DNA methyltransferase,methylation
+DNMT3B,TET1,831,DNA methyltransferase,methylation
+DNMT3B,HDAC2,994,DNA methyltransferase,methylation
+DNMT3B,E2F6,754,DNA methyltransferase,methylation
+DNMT3B,MAFG,952,DNA methyltransferase,methylation
+DNMT3B,H3C1,928,DNA methyltransferase,methylation
+DNMT3B,NR6A1,721,DNA methyltransferase,methylation
+DNMT3B,ENSG00000274559,945,DNA methyltransferase,methylation
+DNMT3B,H3C4,905,DNA methyltransferase,methylation
+DNMT3B,CDKN2A,727,DNA methyltransferase,methylation
+DNMT3B,MAT1A,931,DNA methyltransferase,methylation
+DNMT3B,H3-5,943,DNA methyltransferase,methylation
+DNMT3B,H2AC20,824,DNA methyltransferase,methylation
+DNMT3B,UHRF1,985,DNA methyltransferase,methylation
+DNMT3B,MYC,842,DNA methyltransferase,methylation
+DNMT3B,MECP2,864,DNA methyltransferase,methylation
+DNMT3B,LIN28A,754,DNA methyltransferase,methylation
+DNMT3B,TDG,905,DNA methyltransferase,methylation
+DNMT3B,H2BS1,974,DNA methyltransferase,methylation
+DNMT3B,EED,923,DNA methyltransferase,methylation
+DNMT3B,H2AX,883,DNA methyltransferase,methylation
+DNMT3B,SUV39H1,990,DNA methyltransferase,methylation
+DNMT3B,RBBP7,738,DNA methyltransferase,methylation
+DNMT3B,RBBP4,744,DNA methyltransferase,methylation
+DNMT3B,ESR1,783,DNA methyltransferase,methylation
+DNMT3B,H3C3,915,DNA methyltransferase,methylation
+DNMT3B,SIN3A,858,DNA methyltransferase,methylation
+DNMT3B,BAZ2A,906,DNA methyltransferase,methylation
+DNMT3B,DNMT1,999,DNA methyltransferase,methylation
+DNMT3B,H2BC11,767,DNA methyltransferase,methylation
+DNMT3B,H2BC17,984,DNA methyltransferase,methylation
+DNMT3B,H3C12,997,DNA methyltransferase,methylation
+DNMT3B,TRDMT1,933,DNA methyltransferase,methylation
+DNMT3B,H3C13,996,DNA methyltransferase,methylation
+DNMT3B,H2BC12,974,DNA methyltransferase,methylation
+DNMT3B,H3-2,994,DNA methyltransferase,methylation
+DNMT3B,H2BC15,713,DNA methyltransferase,methylation
+DNMT3B,EHMT2,933,DNA methyltransferase,methylation
+DNMT3B,TCL1A,710,DNA methyltransferase,methylation
+DNMT3B,HELLS,945,DNA methyltransferase,methylation
+DNMT3B,SETD2,724,DNA methyltransferase,methylation
+DNMT3B,AHCYL1,913,DNA methyltransferase,methylation
+DNMT3B,TET3,783,DNA methyltransferase,methylation
+DNMT3B,H3C6,915,DNA methyltransferase,methylation
+DNMT3B,H3-4,994,DNA methyltransferase,methylation
+DNMT3B,HDAC1,999,DNA methyltransferase,methylation
+DNMT1,CBX5,928,Maintenance methyltransferase,methylation
+DNMT1,SIRT1,922,Maintenance methyltransferase,methylation
+DNMT1,AHCY,952,Maintenance methyltransferase,methylation
+DNMT1,MSH2,718,Maintenance methyltransferase,methylation
+DNMT1,MSH6,781,Maintenance methyltransferase,methylation
+DNMT1,SNAI1,995,Maintenance methyltransferase,methylation
+DNMT1,H4C6,873,Maintenance methyltransferase,methylation
+DNMT1,MBD4,925,Maintenance methyltransferase,methylation
+DNMT1,TRIM28,985,Maintenance methyltransferase,methylation
+DNMT1,RARA,764,Maintenance methyltransferase,methylation
+DNMT1,RFX1,754,Maintenance methyltransferase,methylation
+DNMT1,H3-3B,987,Maintenance methyltransferase,methylation
+DNMT1,KMT5C,813,Maintenance methyltransferase,methylation
+DNMT1,MBD2,983,Maintenance methyltransferase,methylation
+DNMT1,CDK4,738,Maintenance methyltransferase,methylation
+DNMT1,CDH1,768,Maintenance methyltransferase,methylation
+DNMT1,RBL2,823,Maintenance methyltransferase,methylation
+DNMT1,RCOR1,788,Maintenance methyltransferase,methylation
+DNMT1,TCF3,724,Maintenance methyltransferase,methylation
+DNMT1,BRD4,791,Maintenance methyltransferase,methylation
+DNMT1,PHRF1,840,Maintenance methyltransferase,methylation
+DNMT1,HDAC4,759,Maintenance methyltransferase,methylation
+DNMT1,STAT3,957,Maintenance methyltransferase,methylation
+DNMT1,DNMT3A,999,Maintenance methyltransferase,methylation
+DNMT1,DAXX,928,Maintenance methyltransferase,methylation
+DNMT1,RB1,765,Maintenance methyltransferase,methylation
+DNMT1,NCOR1,899,Maintenance methyltransferase,methylation
+DNMT1,TP53,997,Maintenance methyltransferase,methylation
+DNMT1,DNMT3L,921,Maintenance methyltransferase,methylation
+DNMT1,SETDB1,962,Maintenance methyltransferase,methylation
+DNMT1,RPS27A,944,Maintenance methyltransferase,methylation
+DNMT1,SETD7,936,Maintenance methyltransferase,methylation
+DNMT1,UHRF2,941,Maintenance methyltransferase,methylation
+DNMT1,MTA2,743,Maintenance methyltransferase,methylation
+DNMT1,HNMT,746,Maintenance methyltransferase,methylation
+DNMT1,SMARCA5,886,Maintenance methyltransferase,methylation
+DNMT1,H2AZ1,723,Maintenance methyltransferase,methylation
+DNMT1,SAP30,706,Maintenance methyltransferase,methylation
+DNMT1,RUNX1,743,Maintenance methyltransferase,methylation
+DNMT1,MAT2A,936,Maintenance methyltransferase,methylation
+DNMT1,KMT5B,819,Maintenance methyltransferase,methylation
+DNMT1,HNRNPD,968,Maintenance methyltransferase,methylation
+DNMT1,HIC1,761,Maintenance methyltransferase,methylation
+DNMT1,AHCYL2,919,Maintenance methyltransferase,methylation
+DNMT1,SUZ12,911,Maintenance methyltransferase,methylation
+DNMT1,EZH2,999,Maintenance methyltransferase,methylation
+DNMT1,MAT2B,940,Maintenance methyltransferase,methylation
+DNMT1,DNMT3B,999,Maintenance methyltransferase,methylation
+DNMT1,SP1,773,Maintenance methyltransferase,methylation
+DNMT1,H2AC20,854,Maintenance methyltransferase,methylation
+DNMT1,H3C13,998,Maintenance methyltransferase,methylation
+DNMT1,MTA1,785,Maintenance methyltransferase,methylation
+DNMT1,CBX3,892,Maintenance methyltransferase,methylation
+DNMT1,SUV39H1,998,Maintenance methyltransferase,methylation
+DNMT1,EED,921,Maintenance methyltransferase,methylation
+DNMT1,H3-5,975,Maintenance methyltransferase,methylation
+DNMT1,KAT5,844,Maintenance methyltransferase,methylation
+DNMT1,JARID2,700,Maintenance methyltransferase,methylation
+DNMT1,USP7,999,Maintenance methyltransferase,methylation
+DNMT1,SMARCA4,759,Maintenance methyltransferase,methylation
+DNMT1,E2F1,964,Maintenance methyltransferase,methylation
+DNMT1,SUV39H2,770,Maintenance methyltransferase,methylation
+DNMT1,H3C12,998,Maintenance methyltransferase,methylation
+DNMT1,KDM1A,998,Maintenance methyltransferase,methylation
+DNMT1,KDM6A,829,Maintenance methyltransferase,methylation
+DNMT1,H3C11,915,Maintenance methyltransferase,methylation
+DNMT1,H3C15,915,Maintenance methyltransferase,methylation
+DNMT1,TET2,874,Maintenance methyltransferase,methylation
+DNMT1,H3C8,915,Maintenance methyltransferase,methylation
+DNMT1,E2F4,860,Maintenance methyltransferase,methylation
+DNMT1,H3C14,918,Maintenance methyltransferase,methylation
+DNMT1,ENSG00000131845,799,Maintenance methyltransferase,methylation
+DNMT1,H2AC18,803,Maintenance methyltransferase,methylation
+DNMT1,CTCF,778,Maintenance methyltransferase,methylation
+DNMT1,BMI1,791,Maintenance methyltransferase,methylation
+DNMT1,AKT1,822,Maintenance methyltransferase,methylation
+DNMT1,H3C7,915,Maintenance methyltransferase,methylation
+DNMT1,H2BC21,797,Maintenance methyltransferase,methylation
+DNMT1,SUMO1,725,Maintenance methyltransferase,methylation
+DNMT1,NR2C2,819,Maintenance methyltransferase,methylation
+DNMT1,H3C2,920,Maintenance methyltransferase,methylation
+DNMT1,UBC,923,Maintenance methyltransferase,methylation
+DNMT1,H3C10,917,Maintenance methyltransferase,methylation
+DNMT1,WT1,722,Maintenance methyltransferase,methylation
+DNMT1,H2BC3,715,Maintenance methyltransferase,methylation
+DNMT1,HDAC2,999,Maintenance methyltransferase,methylation
+DNMT1,TET1,902,Maintenance methyltransferase,methylation
+DNMT1,BCL11A,899,Maintenance methyltransferase,methylation
+DNMT1,CTNNB1,817,Maintenance methyltransferase,methylation
+DNMT1,H3C1,961,Maintenance methyltransferase,methylation
+DNMT1,COMMD3-BMI1,783,Maintenance methyltransferase,methylation
+DNMT1,MAT1A,929,Maintenance methyltransferase,methylation
+DNMT1,EHMT1,881,Maintenance methyltransferase,methylation
+DNMT1,CDKN2A,703,Maintenance methyltransferase,methylation
+DNMT1,H3C4,918,Maintenance methyltransferase,methylation
+DNMT1,UBB,956,Maintenance methyltransferase,methylation
+DNMT1,CHEK1,711,Maintenance methyltransferase,methylation
+DNMT1,CBX1,923,Maintenance methyltransferase,methylation
+DNMT1,ACTB,714,Maintenance methyltransferase,methylation
+DNMT1,UHRF1,999,Maintenance methyltransferase,methylation
+DNMT1,CHD4,831,Maintenance methyltransferase,methylation
+DNMT1,TDG,794,Maintenance methyltransferase,methylation
+DNMT1,MECP2,998,Maintenance methyltransferase,methylation
+DNMT1,MYC,837,Maintenance methyltransferase,methylation
+DNMT1,PARP1,952,Maintenance methyltransferase,methylation
+DNMT1,H2AX,882,Maintenance methyltransferase,methylation
+DNMT1,SIN3A,918,Maintenance methyltransferase,methylation
+DNMT1,ATRX,814,Maintenance methyltransferase,methylation
+DNMT1,BRCA1,799,Maintenance methyltransferase,methylation
+DNMT1,H3C3,929,Maintenance methyltransferase,methylation
+DNMT1,UBA52,934,Maintenance methyltransferase,methylation
+DNMT1,RBBP4,858,Maintenance methyltransferase,methylation
+DNMT1,RBBP7,781,Maintenance methyltransferase,methylation
+DNMT1,ZEB1,897,Maintenance methyltransferase,methylation
+DNMT1,DMAP1,998,Maintenance methyltransferase,methylation
+DNMT1,BAZ2A,870,Maintenance methyltransferase,methylation
+DNMT1,PCNA,991,Maintenance methyltransferase,methylation
+DNMT1,HELLS,703,Maintenance methyltransferase,methylation
+DNMT1,EHMT2,998,Maintenance methyltransferase,methylation
+DNMT1,H3-2,997,Maintenance methyltransferase,methylation
+DNMT1,MCM3,700,Maintenance methyltransferase,methylation
+DNMT1,CDKL5,738,Maintenance methyltransferase,methylation
+DNMT1,H3-4,987,Maintenance methyltransferase,methylation
+DNMT1,HDAC1,999,Maintenance methyltransferase,methylation
+DNMT1,PAX6,770,Maintenance methyltransferase,methylation
+DNMT1,H3C6,929,Maintenance methyltransferase,methylation
+DNMT1,TET3,881,Maintenance methyltransferase,methylation
+DNMT1,AHCYL1,923,Maintenance methyltransferase,methylation
+TET1,NANOG,993,DNA demethylase,demethylation
+TET1,POU5F1,789,DNA demethylase,demethylation
+TET1,ARID4B,765,DNA demethylase,demethylation
+TET1,DNMT3A,886,DNA demethylase,demethylation
+TET1,PRDM14,883,DNA demethylase,demethylation
+TET1,PPARG,842,DNA demethylase,demethylation
+TET1,PRMT5,887,DNA demethylase,demethylation
+TET1,EZH2,764,DNA demethylase,demethylation
+TET1,DNMT3B,831,DNA demethylase,demethylation
+TET1,ARID4A,823,DNA demethylase,demethylation
+TET1,DNMT1,902,DNA demethylase,demethylation
+TET1,GADD45A,947,DNA demethylase,demethylation
+TET1,HDAC1,951,DNA demethylase,demethylation
+TET1,TET3,779,DNA demethylase,demethylation
+TET1,SIN3A,959,DNA demethylase,demethylation
+TET1,TDG,885,DNA demethylase,demethylation
+TET1,MECP2,781,DNA demethylase,demethylation
+TET1,OGT,950,DNA demethylase,demethylation
+TET1,HDAC2,862,DNA demethylase,demethylation
+TET1,KDM1A,750,DNA demethylase,demethylation
+TET1,TET2,860,DNA demethylase,demethylation
+TET2,STAG2,717,DNA demethylase,demethylation
+TET2,SPI1,919,DNA demethylase,demethylation
+TET2,NANOG,963,DNA demethylase,demethylation
+TET2,FLT3,852,DNA demethylase,demethylation
+TET2,TCF3,728,DNA demethylase,demethylation
+TET2,DNMT3A,946,DNA demethylase,demethylation
+TET2,TP53,755,DNA demethylase,demethylation
+TET2,DNMT3L,880,DNA demethylase,demethylation
+TET2,PRDM14,854,DNA demethylase,demethylation
+TET2,KIT,786,DNA demethylase,demethylation
+TET2,U2AF1,800,DNA demethylase,demethylation
+TET2,STAT5B,771,DNA demethylase,demethylation
+TET2,SNIP1,782,DNA demethylase,demethylation
+TET2,NPM1,776,DNA demethylase,demethylation
+TET2,RUNX1,869,DNA demethylase,demethylation
+TET2,CXXC5,946,DNA demethylase,demethylation
+TET2,ZRSR2,774,DNA demethylase,demethylation
+TET2,HCFC1,818,DNA demethylase,demethylation
+TET2,CD34,710,DNA demethylase,demethylation
+TET2,PRMT5,813,DNA demethylase,demethylation
+TET2,EZH2,875,DNA demethylase,demethylation
+TET2,EBF1,976,DNA demethylase,demethylation
+TET2,DNMT3B,852,DNA demethylase,demethylation
+TET2,PHF6,706,DNA demethylase,demethylation
+TET2,IDH2,871,DNA demethylase,demethylation
+TET2,STAT5A,807,DNA demethylase,demethylation
+TET2,SH2B3,839,DNA demethylase,demethylation
+TET2,DNMT1,874,DNA demethylase,demethylation
+TET2,NRAS,766,DNA demethylase,demethylation
+TET2,HDAC1,882,DNA demethylase,demethylation
+TET2,TET1,860,DNA demethylase,demethylation
+TET2,OGT,985,DNA demethylase,demethylation
+TET2,KLF4,795,DNA demethylase,demethylation
+TET2,ASXL1,975,DNA demethylase,demethylation
+TET2,WT1,868,DNA demethylase,demethylation
+TET2,JAK2,917,DNA demethylase,demethylation
+TET2,SRSF2,841,DNA demethylase,demethylation
+TET2,TDG,751,DNA demethylase,demethylation
+TET2,CXXC4,923,DNA demethylase,demethylation
+TET2,ETV6,794,DNA demethylase,demethylation
+TET2,RELA,702,DNA demethylase,demethylation
+TET2,TET3,964,DNA demethylase,demethylation
+TET2,IDH1,914,DNA demethylase,demethylation
+TET2,DCAF1,833,DNA demethylase,demethylation
+TET2,CEBPA,718,DNA demethylase,demethylation
+TET2,HDAC2,989,DNA demethylase,demethylation
+TET2,SETBP1,748,DNA demethylase,demethylation
+TET3,NANOG,886,DNA demethylase,demethylation
+TET3,DNMT3A,802,DNA demethylase,demethylation
+TET3,HCFC1,711,DNA demethylase,demethylation
+TET3,PRMT5,882,DNA demethylase,demethylation
+TET3,DNMT3B,783,DNA demethylase,demethylation
+TET3,DNMT1,881,DNA demethylase,demethylation
+TET3,TET1,779,DNA demethylase,demethylation
+TET3,OGT,975,DNA demethylase,demethylation
+TET3,TDG,809,DNA demethylase,demethylation
+TET3,SIN3A,860,DNA demethylase,demethylation
+TET3,TET2,964,DNA demethylase,demethylation
+EZH2,SNAI2,843,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HDAC7,713,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CBX5,746,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SIRT1,942,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CBX7,996,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,AURKA,761,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,AGO2,779,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RELB,801,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,DDX5,802,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PCGF1,985,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EGR1,798,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,TWIST1,773,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SNAI1,998,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C6,977,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SOX4,874,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SCML2,958,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,TRIM28,887,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RARA,866,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3-3B,990,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KDM6B,942,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PHC2,955,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MDM2,945,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EPC2,836,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,DAB2IP,749,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,POU5F1,736,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KMT2C,792,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,YY1,998,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RCOR1,909,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CREBBP,818,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,E2F3,732,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EPC1,817,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EP300,963,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,BRD4,850,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RBBP5,876,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HDAC4,739,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,STAT3,973,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,DNMT3A,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CDK2,702,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RB1,861,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PML,741,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,NCOR1,812,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ASXL3,810,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,TP53,899,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CBX8,968,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CBX4,969,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,DNMT3L,892,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MEIS1,703,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EGFR,741,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MTA2,816,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MYCN,952,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SMARCA5,856,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PPARG,778,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,U2AF1,725,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,STAT5B,901,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AZ1,784,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MELK,738,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RUNX1,703,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HDAC3,989,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC8,956,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PTGDR,817,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CBX2,980,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,REST,721,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SUZ12,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SCMH1,724,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PRMT5,870,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CHD3,829,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KDM4A,736,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,STAT5A,896,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MYC,984,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MECP2,732,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C9,839,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PCGF2,971,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ACTB,702,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CBX1,847,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CDYL,900,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC20,872,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,UHRF1,810,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CHD4,993,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CAMKMT,824,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C2,843,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SH2B3,746,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,BRCA1,926,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ESR1,915,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RBBP7,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SUV39H1,957,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RBBP4,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,JAK2,768,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ARID1A,877,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RNF2,998,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SIN3A,847,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ATRX,933,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,IDH1,721,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ZBTB16,852,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CDKN1A,739,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RING1,989,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,WDR5,904,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,AR,978,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KDM5A,829,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AX,828,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SMARCA4,909,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EED,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC13,938,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4-16,845,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PAXIP1,758,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PHF19,989,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,FOXM1,778,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3C12,985,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,JUN,852,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3C13,998,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HNRNPK,797,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PRMT1,781,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,RELA,915,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SRSF2,738,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,POU3F3,860,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2BC11,929,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC15,823,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C5,839,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC6,908,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,DNMT1,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,BAP1,937,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PCGF5,936,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CBX6,948,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C8,836,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C11,836,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,UBAP2L,906,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3-4,989,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HSP90AA1,714,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HDAC1,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2BC12,928,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3-2,972,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HIF1A,715,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC4,823,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,POLR2A,762,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,DOT1L,867,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ASH2L,857,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KDM2B,863,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,FOXP3,931,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EHMT2,953,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EPOP,947,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,TET2,875,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MEN1,777,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,NRAS,811,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PRDM1,769,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CTCFL,706,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PCGF3,937,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SOX2,770,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HOXB3,711,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PCGF6,941,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C13,841,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KDM6A,965,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,TMC6,850,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3C15,932,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PTEN,760,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C12,834,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,AGO1,921,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC17,842,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KDM1A,997,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,BCL6,795,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SMARCB1,779,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,SKIDA1,700,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CDK1,965,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,GATA4,748,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CD244,879,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PHC3,918,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EZHIP,825,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PHF1,998,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,BMI1,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,AKT1,867,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,DNMT3B,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MTF2,998,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CBX3,818,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C1,837,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3C14,940,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HDAC8,836,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ARNTL,910,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,IDH2,708,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC18,873,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CTCF,916,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HDAC2,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,UBE3A,701,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KLF4,715,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,TET1,764,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,USP7,898,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,VAV1,978,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ASXL1,998,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,AEBP2,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,WT1,824,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,HDAC9,706,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,E2F6,903,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,ASXL2,857,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C14,840,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2BC21,886,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CARM1,775,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC11,827,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,JARID2,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C3,840,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,MACROH2A1,700,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,COMMD3-BMI1,985,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,LCOR,900,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CDKN2A,813,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,KDM5B,845,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3-5,972,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,E2F1,916,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C15,834,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,E2F2,718,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,PHC1,982,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CLOCK,710,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H3C1,887,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,CTNNB1,986,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,EZH1,999,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H4C4,840,Histone methyltransferase,H3K27me3 (silencing)
+EZH2,H2AC16,823,Histone methyltransferase,H3K27me3 (silencing)
+KDM6A,TBX21,703,Histone demethylase,removes H3K27me3
+KDM6A,ATP5F1D,912,Histone demethylase,removes H3K27me3
+KDM6A,SIX4,784,Histone demethylase,removes H3K27me3
+KDM6A,STAG2,722,Histone demethylase,removes H3K27me3
+KDM6A,POLR2C,795,Histone demethylase,removes H3K27me3
+KDM6A,H4C6,827,Histone demethylase,removes H3K27me3
+KDM6A,H3-3B,962,Histone demethylase,removes H3K27me3
+KDM6A,KDM6B,747,Histone demethylase,removes H3K27me3
+KDM6A,KMT2C,999,Histone demethylase,removes H3K27me3
+KDM6A,CREBBP,811,Histone demethylase,removes H3K27me3
+KDM6A,SETD1A,927,Histone demethylase,removes H3K27me3
+KDM6A,EP300,902,Histone demethylase,removes H3K27me3
+KDM6A,RBBP5,999,Histone demethylase,removes H3K27me3
+KDM6A,NCOR1,721,Histone demethylase,removes H3K27me3
+KDM6A,TP53,710,Histone demethylase,removes H3K27me3
+KDM6A,H2BC1,704,Histone demethylase,removes H3K27me3
+KDM6A,ATM,712,Histone demethylase,removes H3K27me3
+KDM6A,ATP5MC3,701,Histone demethylase,removes H3K27me3
+KDM6A,ATP5PO,782,Histone demethylase,removes H3K27me3
+KDM6A,H2AZ1,773,Histone demethylase,removes H3K27me3
+KDM6A,KMT2D,999,Histone demethylase,removes H3K27me3
+KDM6A,ATP5PD,828,Histone demethylase,removes H3K27me3
+KDM6A,TBX5,848,Histone demethylase,removes H3K27me3
+KDM6A,SUZ12,912,Histone demethylase,removes H3K27me3
+KDM6A,EZH2,965,Histone demethylase,removes H3K27me3
+KDM6A,KDM5D,782,Histone demethylase,removes H3K27me3
+KDM6A,TUFM,740,Histone demethylase,removes H3K27me3
+KDM6A,SOX2,790,Histone demethylase,removes H3K27me3
+KDM6A,PAGR1,997,Histone demethylase,removes H3K27me3
+KDM6A,NKX2-5,850,Histone demethylase,removes H3K27me3
+KDM6A,ATP6V0C,701,Histone demethylase,removes H3K27me3
+KDM6A,H2AC20,819,Histone demethylase,removes H3K27me3
+KDM6A,H3C13,956,Histone demethylase,removes H3K27me3
+KDM6A,SUV39H1,741,Histone demethylase,removes H3K27me3
+KDM6A,EED,844,Histone demethylase,removes H3K27me3
+KDM6A,H3-5,916,Histone demethylase,removes H3K27me3
+KDM6A,ASH2L,998,Histone demethylase,removes H3K27me3
+KDM6A,SMARCA4,848,Histone demethylase,removes H3K27me3
+KDM6A,DPY30,993,Histone demethylase,removes H3K27me3
+KDM6A,ATP5F1C,899,Histone demethylase,removes H3K27me3
+KDM6A,H2BC12,705,Histone demethylase,removes H3K27me3
+KDM6A,WDR5,999,Histone demethylase,removes H3K27me3
+KDM6A,H3C12,959,Histone demethylase,removes H3K27me3
+KDM6A,DNMT1,829,Histone demethylase,removes H3K27me3
+KDM6A,MT-ATP6,912,Histone demethylase,removes H3K27me3
+KDM6A,HOXB1,813,Histone demethylase,removes H3K27me3
+KDM6A,H3-4,938,Histone demethylase,removes H3K27me3
+KDM6A,H3-3A,734,Histone demethylase,removes H3K27me3
+KDM6A,RNF2,722,Histone demethylase,removes H3K27me3
+KDM6A,H2BC21,783,Histone demethylase,removes H3K27me3
+KDM6A,H3C14,726,Histone demethylase,removes H3K27me3
+KDM6A,H2AC18,821,Histone demethylase,removes H3K27me3
+KDM6A,ATP5PB,792,Histone demethylase,removes H3K27me3
+KDM6A,KDM4A,799,Histone demethylase,removes H3K27me3
+KDM6A,RBBP4,761,Histone demethylase,removes H3K27me3
+KDM6A,KLF4,724,Histone demethylase,removes H3K27me3
+KDM6A,AR,765,Histone demethylase,removes H3K27me3
+KDM6A,NCOA6,999,Histone demethylase,removes H3K27me3
+KDM6A,KDM5C,923,Histone demethylase,removes H3K27me3
+KDM6A,ASXL1,828,Histone demethylase,removes H3K27me3
+KDM6A,KDM2B,703,Histone demethylase,removes H3K27me3
+KDM6A,H2AC6,700,Histone demethylase,removes H3K27me3
+KDM6A,DDX3X,843,Histone demethylase,removes H3K27me3
+KDM6A,KMT2B,715,Histone demethylase,removes H3K27me3
+KDM6A,H3C6,786,Histone demethylase,removes H3K27me3
+KDM6A,SETD2,890,Histone demethylase,removes H3K27me3
+KDM6A,ZFX,804,Histone demethylase,removes H3K27me3
+KDM6A,H3-2,916,Histone demethylase,removes H3K27me3
+KDM6A,POLR2B,779,Histone demethylase,removes H3K27me3
+KDM6A,POLR2E,737,Histone demethylase,removes H3K27me3
+KDM6A,RBBP7,738,Histone demethylase,removes H3K27me3
+KDM6A,H3C3,786,Histone demethylase,removes H3K27me3
+KDM6A,PAXIP1,999,Histone demethylase,removes H3K27me3
+KDM6A,SETD1B,773,Histone demethylase,removes H3K27me3
+KDM6A,KDM5A,768,Histone demethylase,removes H3K27me3
+KDM6A,H2AX,731,Histone demethylase,removes H3K27me3
+KDM6A,ASXL2,772,Histone demethylase,removes H3K27me3
+KDM6A,ATP5MC2,701,Histone demethylase,removes H3K27me3
+KDM6A,KMT2A,869,Histone demethylase,removes H3K27me3
+KDM6A,ATP5MC1,701,Histone demethylase,removes H3K27me3
+KDM6A,UTY,735,Histone demethylase,removes H3K27me3
+KDM6A,EZH1,780,Histone demethylase,removes H3K27me3
+KDM6A,H3C1,807,Histone demethylase,removes H3K27me3
+KDM6A,ATP5F1A,913,Histone demethylase,removes H3K27me3
+KDM6A,KDM1A,820,Histone demethylase,removes H3K27me3
+KDM6A,ATP6V0B,701,Histone demethylase,removes H3K27me3
+KDM6A,H2BC9,701,Histone demethylase,removes H3K27me3
+KDM6A,ENSG00000249209,782,Histone demethylase,removes H3K27me3
+KDM6A,GATA4,821,Histone demethylase,removes H3K27me3
+KDM6A,KDM4C,761,Histone demethylase,removes H3K27me3
+KDM6A,CTCF,721,Histone demethylase,removes H3K27me3
+KDM6A,KDM7A,704,Histone demethylase,removes H3K27me3
+HDAC1,SNAI2,924,Histone deacetylase,gene silencing
+HDAC1,HDAC7,886,Histone deacetylase,gene silencing
+HDAC1,BCL3,909,Histone deacetylase,gene silencing
+HDAC1,SIRT1,993,Histone deacetylase,gene silencing
+HDAC1,FKBP3,928,Histone deacetylase,gene silencing
+HDAC1,BRMS1L,992,Histone deacetylase,gene silencing
+HDAC1,SALL4,771,Histone deacetylase,gene silencing
+HDAC1,CSNK2A1,961,Histone deacetylase,gene silencing
+HDAC1,HNRNPL,775,Histone deacetylase,gene silencing
+HDAC1,DDX5,944,Histone deacetylase,gene silencing
+HDAC1,KAT2A,974,Histone deacetylase,gene silencing
+HDAC1,HDAC5,818,Histone deacetylase,gene silencing
+HDAC1,NFKB1,996,Histone deacetylase,gene silencing
+HDAC1,SPI1,765,Histone deacetylase,gene silencing
+HDAC1,CCND1,833,Histone deacetylase,gene silencing
+HDAC1,NANOG,719,Histone deacetylase,gene silencing
+HDAC1,TBP,865,Histone deacetylase,gene silencing
+HDAC1,NR3C1,929,Histone deacetylase,gene silencing
+HDAC1,DUSP1,711,Histone deacetylase,gene silencing
+HDAC1,EGR1,859,Histone deacetylase,gene silencing
+HDAC1,PFN2,795,Histone deacetylase,gene silencing
+HDAC1,TWIST1,734,Histone deacetylase,gene silencing
+HDAC1,SNAI1,999,Histone deacetylase,gene silencing
+HDAC1,H4C6,984,Histone deacetylase,gene silencing
+HDAC1,IRF1,985,Histone deacetylase,gene silencing
+HDAC1,FOSB,957,Histone deacetylase,gene silencing
+HDAC1,SIRT2,859,Histone deacetylase,gene silencing
+HDAC1,MYOD1,926,Histone deacetylase,gene silencing
+HDAC1,FOXA1,724,Histone deacetylase,gene silencing
+HDAC1,TRIM28,968,Histone deacetylase,gene silencing
+HDAC1,GSE1,952,Histone deacetylase,gene silencing
+HDAC1,RARA,874,Histone deacetylase,gene silencing
+HDAC1,NR0B2,798,Histone deacetylase,gene silencing
+HDAC1,RFX1,938,Histone deacetylase,gene silencing
+HDAC1,SMARCC1,909,Histone deacetylase,gene silencing
+HDAC1,H3-3B,986,Histone deacetylase,gene silencing
+HDAC1,MBD2,999,Histone deacetylase,gene silencing
+HDAC1,BHLHE40,825,Histone deacetylase,gene silencing
+HDAC1,MDM2,963,Histone deacetylase,gene silencing
+HDAC1,POU5F1,896,Histone deacetylase,gene silencing
+HDAC1,CDK2AP1,947,Histone deacetylase,gene silencing
+HDAC1,CDH1,775,Histone deacetylase,gene silencing
+HDAC1,RBL2,991,Histone deacetylase,gene silencing
+HDAC1,SMAD7,825,Histone deacetylase,gene silencing
+HDAC1,SMAD2,980,Histone deacetylase,gene silencing
+HDAC1,YY1,999,Histone deacetylase,gene silencing
+HDAC1,RCOR1,999,Histone deacetylase,gene silencing
+HDAC1,CREBBP,960,Histone deacetylase,gene silencing
+HDAC1,CHD5,962,Histone deacetylase,gene silencing
+HDAC1,SETD1A,805,Histone deacetylase,gene silencing
+HDAC1,EP300,999,Histone deacetylase,gene silencing
+HDAC1,BRD4,954,Histone deacetylase,gene silencing
+HDAC1,KAT2B,976,Histone deacetylase,gene silencing
+HDAC1,ARID4B,990,Histone deacetylase,gene silencing
+HDAC1,HDAC4,781,Histone deacetylase,gene silencing
+HDAC1,STAT3,984,Histone deacetylase,gene silencing
+HDAC1,MECOM,968,Histone deacetylase,gene silencing
+HDAC1,DNMT3A,997,Histone deacetylase,gene silencing
+HDAC1,KLF1,754,Histone deacetylase,gene silencing
+HDAC1,LEF1,966,Histone deacetylase,gene silencing
+HDAC1,KAT6A,779,Histone deacetylase,gene silencing
+HDAC1,DAXX,922,Histone deacetylase,gene silencing
+HDAC1,RB1,999,Histone deacetylase,gene silencing
+HDAC1,PML,903,Histone deacetylase,gene silencing
+HDAC1,CBFA2T3,882,Histone deacetylase,gene silencing
+HDAC1,NCOR1,999,Histone deacetylase,gene silencing
+HDAC1,TP53,999,Histone deacetylase,gene silencing
+HDAC1,DNMT3L,989,Histone deacetylase,gene silencing
+HDAC1,MEF2D,724,Histone deacetylase,gene silencing
+HDAC1,SETDB1,992,Histone deacetylase,gene silencing
+HDAC1,H2BC1,860,Histone deacetylase,gene silencing
+HDAC1,EGFR,765,Histone deacetylase,gene silencing
+HDAC1,NONO,812,Histone deacetylase,gene silencing
+HDAC1,UHRF2,940,Histone deacetylase,gene silencing
+HDAC1,ATM,948,Histone deacetylase,gene silencing
+HDAC1,MTA2,999,Histone deacetylase,gene silencing
+HDAC1,ARID5B,774,Histone deacetylase,gene silencing
+HDAC1,MYCN,914,Histone deacetylase,gene silencing
+HDAC1,SMARCA5,969,Histone deacetylase,gene silencing
+HDAC1,ELMSAN1,971,Histone deacetylase,gene silencing
+HDAC1,PPARG,857,Histone deacetylase,gene silencing
+HDAC1,GATAD1,824,Histone deacetylase,gene silencing
+HDAC1,APPL1,721,Histone deacetylase,gene silencing
+HDAC1,H2BC5,762,Histone deacetylase,gene silencing
+HDAC1,CTBP1,999,Histone deacetylase,gene silencing
+HDAC1,TAL1,795,Histone deacetylase,gene silencing
+HDAC1,GFI1,957,Histone deacetylase,gene silencing
+HDAC1,H2AZ1,886,Histone deacetylase,gene silencing
+HDAC1,SAP30,999,Histone deacetylase,gene silencing
+HDAC1,H2AC1,771,Histone deacetylase,gene silencing
+HDAC1,SAP30L,978,Histone deacetylase,gene silencing
+HDAC1,RUNX1,998,Histone deacetylase,gene silencing
+HDAC1,DDB1,888,Histone deacetylase,gene silencing
+HDAC1,UBTF,713,Histone deacetylase,gene silencing
+HDAC1,HSPA4,921,Histone deacetylase,gene silencing
+HDAC1,HDAC3,925,Histone deacetylase,gene silencing
+HDAC1,H2AC8,786,Histone deacetylase,gene silencing
+HDAC1,PWWP2A,731,Histone deacetylase,gene silencing
+HDAC1,CEBPB,991,Histone deacetylase,gene silencing
+HDAC1,FOS,823,Histone deacetylase,gene silencing
+HDAC1,ING2,990,Histone deacetylase,gene silencing
+HDAC1,H2AZ2,797,Histone deacetylase,gene silencing
+HDAC1,HCFC1,745,Histone deacetylase,gene silencing
+HDAC1,SP3,873,Histone deacetylase,gene silencing
+HDAC1,PPARD,756,Histone deacetylase,gene silencing
+HDAC1,CASP3,738,Histone deacetylase,gene silencing
+HDAC1,REST,994,Histone deacetylase,gene silencing
+HDAC1,CTBP2,974,Histone deacetylase,gene silencing
+HDAC1,KMT2E,818,Histone deacetylase,gene silencing
+HDAC1,STAT2,909,Histone deacetylase,gene silencing
+HDAC1,SUZ12,960,Histone deacetylase,gene silencing
+HDAC1,RUVBL1,801,Histone deacetylase,gene silencing
+HDAC1,EZH2,999,Histone deacetylase,gene silencing
+HDAC1,ARID1A,793,Histone deacetylase,gene silencing
+HDAC1,ING3,829,Histone deacetylase,gene silencing
+HDAC1,H2BC4,760,Histone deacetylase,gene silencing
+HDAC1,ZMYM3,908,Histone deacetylase,gene silencing
+HDAC1,SOX2,966,Histone deacetylase,gene silencing
+HDAC1,ZBTB7A,965,Histone deacetylase,gene silencing
+HDAC1,SMARCE1,751,Histone deacetylase,gene silencing
+HDAC1,TCHP,732,Histone deacetylase,gene silencing
+HDAC1,PPP1CA,734,Histone deacetylase,gene silencing
+HDAC1,ZFPM1,936,Histone deacetylase,gene silencing
+HDAC1,NRIP1,811,Histone deacetylase,gene silencing
+HDAC1,TGIF1,831,Histone deacetylase,gene silencing
+HDAC1,HMG20B,998,Histone deacetylase,gene silencing
+HDAC1,DNMT3B,999,Histone deacetylase,gene silencing
+HDAC1,SP1,991,Histone deacetylase,gene silencing
+HDAC1,PHF12,987,Histone deacetylase,gene silencing
+HDAC1,MORF4L1,995,Histone deacetylase,gene silencing
+HDAC1,IKZF1,987,Histone deacetylase,gene silencing
+HDAC1,H2AC20,877,Histone deacetylase,gene silencing
+HDAC1,SMAD3,980,Histone deacetylase,gene silencing
+HDAC1,H3C13,984,Histone deacetylase,gene silencing
+HDAC1,MTA1,999,Histone deacetylase,gene silencing
+HDAC1,HSP90AA1,764,Histone deacetylase,gene silencing
+HDAC1,CBX3,963,Histone deacetylase,gene silencing
+HDAC1,MEN1,722,Histone deacetylase,gene silencing
+HDAC1,SINHCAF,967,Histone deacetylase,gene silencing
+HDAC1,SUV39H1,994,Histone deacetylase,gene silencing
+HDAC1,ZBTB16,949,Histone deacetylase,gene silencing
+HDAC1,EED,952,Histone deacetylase,gene silencing
+HDAC1,RERE,973,Histone deacetylase,gene silencing
+HDAC1,CIR1,921,Histone deacetylase,gene silencing
+HDAC1,H3-5,967,Histone deacetylase,gene silencing
+HDAC1,KAT5,985,Histone deacetylase,gene silencing
+HDAC1,MEF2C,865,Histone deacetylase,gene silencing
+HDAC1,SMARCB1,932,Histone deacetylase,gene silencing
+HDAC1,ASH2L,732,Histone deacetylase,gene silencing
+HDAC1,RBPJL,921,Histone deacetylase,gene silencing
+HDAC1,SMAD4,972,Histone deacetylase,gene silencing
+HDAC1,PPP1CC,757,Histone deacetylase,gene silencing
+HDAC1,LIN54,741,Histone deacetylase,gene silencing
+HDAC1,USP7,929,Histone deacetylase,gene silencing
+HDAC1,SMARCA4,989,Histone deacetylase,gene silencing
+HDAC1,ATF3,918,Histone deacetylase,gene silencing
+HDAC1,GFI1B,888,Histone deacetylase,gene silencing
+HDAC1,RBPJ,986,Histone deacetylase,gene silencing
+HDAC1,E2F1,999,Histone deacetylase,gene silencing
+HDAC1,H2AB2,707,Histone deacetylase,gene silencing
+HDAC1,H2BW2,760,Histone deacetylase,gene silencing
+HDAC1,ARID4A,986,Histone deacetylase,gene silencing
+HDAC1,UBE2I,860,Histone deacetylase,gene silencing
+HDAC1,H2BC12,764,Histone deacetylase,gene silencing
+HDAC1,BCL11B,947,Histone deacetylase,gene silencing
+HDAC1,SFPQ,921,Histone deacetylase,gene silencing
+HDAC1,SAP130,922,Histone deacetylase,gene silencing
+HDAC1,WDR5,950,Histone deacetylase,gene silencing
+HDAC1,H2AC13,849,Histone deacetylase,gene silencing
+HDAC1,SMARCAD1,715,Histone deacetylase,gene silencing
+HDAC1,H3C12,986,Histone deacetylase,gene silencing
+HDAC1,DNMT1,999,Histone deacetylase,gene silencing
+HDAC1,ZNF148,739,Histone deacetylase,gene silencing
+HDAC1,STAT1,969,Histone deacetylase,gene silencing
+HDAC1,ZEB1,975,Histone deacetylase,gene silencing
+HDAC1,H2BW1,760,Histone deacetylase,gene silencing
+HDAC1,ZNF521,736,Histone deacetylase,gene silencing
+HDAC1,H3-4,976,Histone deacetylase,gene silencing
+HDAC1,PARP1,900,Histone deacetylase,gene silencing
+HDAC1,KDM5B,986,Histone deacetylase,gene silencing
+HDAC1,CDC73,708,Histone deacetylase,gene silencing
+HDAC1,RNF2,868,Histone deacetylase,gene silencing
+HDAC1,POU2F1,734,Histone deacetylase,gene silencing
+HDAC1,GATAD2B,999,Histone deacetylase,gene silencing
+HDAC1,BUB3,717,Histone deacetylase,gene silencing
+HDAC1,NR2E1,719,Histone deacetylase,gene silencing
+HDAC1,PRDM1,785,Histone deacetylase,gene silencing
+HDAC1,H2BC21,891,Histone deacetylase,gene silencing
+HDAC1,H2AC18,911,Histone deacetylase,gene silencing
+HDAC1,PRMT6,869,Histone deacetylase,gene silencing
+HDAC1,JUN,967,Histone deacetylase,gene silencing
+HDAC1,RUNX2,879,Histone deacetylase,gene silencing
+HDAC1,ZNF217,987,Histone deacetylase,gene silencing
+HDAC1,HSP90AB1,751,Histone deacetylase,gene silencing
+HDAC1,KDM4A,758,Histone deacetylase,gene silencing
+HDAC1,DNTTIP1,994,Histone deacetylase,gene silencing
+HDAC1,AGO1,909,Histone deacetylase,gene silencing
+HDAC1,MACROH2A2,733,Histone deacetylase,gene silencing
+HDAC1,RBBP4,999,Histone deacetylase,gene silencing
+HDAC1,H2AX,816,Histone deacetylase,gene silencing
+HDAC1,KDM5A,925,Histone deacetylase,gene silencing
+HDAC1,AR,964,Histone deacetylase,gene silencing
+HDAC1,SETD1B,706,Histone deacetylase,gene silencing
+HDAC1,PHF21A,998,Histone deacetylase,gene silencing
+HDAC1,SPEN,739,Histone deacetylase,gene silencing
+HDAC1,H2BC13,762,Histone deacetylase,gene silencing
+HDAC1,ESR1,998,Histone deacetylase,gene silencing
+HDAC1,BRCA1,958,Histone deacetylase,gene silencing
+HDAC1,RBBP7,999,Histone deacetylase,gene silencing
+HDAC1,RCOR3,862,Histone deacetylase,gene silencing
+HDAC1,ZEB2,839,Histone deacetylase,gene silencing
+HDAC1,MIER3,802,Histone deacetylase,gene silencing
+HDAC1,MEF2A,864,Histone deacetylase,gene silencing
+HDAC1,SIN3A,999,Histone deacetylase,gene silencing
+HDAC1,RING1,849,Histone deacetylase,gene silencing
+HDAC1,CDKN1A,903,Histone deacetylase,gene silencing
+HDAC1,H2BE1,760,Histone deacetylase,gene silencing
+HDAC1,ACTB,766,Histone deacetylase,gene silencing
+HDAC1,CBX1,877,Histone deacetylase,gene silencing
+HDAC1,TBL1Y,734,Histone deacetylase,gene silencing
+HDAC1,CDYL,883,Histone deacetylase,gene silencing
+HDAC1,GAPDH,762,Histone deacetylase,gene silencing
+HDAC1,UHRF1,996,Histone deacetylase,gene silencing
+HDAC1,CHD4,999,Histone deacetylase,gene silencing
+HDAC1,TRIM27,803,Histone deacetylase,gene silencing
+HDAC1,IFRD1,837,Histone deacetylase,gene silencing
+HDAC1,TGIF2,804,Histone deacetylase,gene silencing
+HDAC1,CHD3,999,Histone deacetylase,gene silencing
+HDAC1,MYC,991,Histone deacetylase,gene silencing
+HDAC1,MECP2,999,Histone deacetylase,gene silencing
+HDAC1,TCF7L2,926,Histone deacetylase,gene silencing
+HDAC1,TOP2A,809,Histone deacetylase,gene silencing
+HDAC1,H2BS1,760,Histone deacetylase,gene silencing
+HDAC1,TXNIP,814,Histone deacetylase,gene silencing
+HDAC1,HDAC6,735,Histone deacetylase,gene silencing
+HDAC1,EMSY,794,Histone deacetylase,gene silencing
+HDAC1,SUMO2,730,Histone deacetylase,gene silencing
+HDAC1,SNW1,817,Histone deacetylase,gene silencing
+HDAC1,HIF1A,983,Histone deacetylase,gene silencing
+HDAC1,H3-2,969,Histone deacetylase,gene silencing
+HDAC1,NKX2-2,906,Histone deacetylase,gene silencing
+HDAC1,BRMS1,992,Histone deacetylase,gene silencing
+HDAC1,GATA3,911,Histone deacetylase,gene silencing
+HDAC1,DOT1L,703,Histone deacetylase,gene silencing
+HDAC1,HELLS,785,Histone deacetylase,gene silencing
+HDAC1,GATA1,888,Histone deacetylase,gene silencing
+HDAC1,FOXP3,909,Histone deacetylase,gene silencing
+HDAC1,TRERF1,869,Histone deacetylase,gene silencing
+HDAC1,EHMT2,999,Histone deacetylase,gene silencing
+HDAC1,H2BC15,759,Histone deacetylase,gene silencing
+HDAC1,TP73,745,Histone deacetylase,gene silencing
+HDAC1,CREB1,877,Histone deacetylase,gene silencing
+HDAC1,RXRA,755,Histone deacetylase,gene silencing
+HDAC1,TBL1XR1,883,Histone deacetylase,gene silencing
+HDAC1,TBL1X,857,Histone deacetylase,gene silencing
+HDAC1,FOXO1,728,Histone deacetylase,gene silencing
+HDAC1,CEBPA,939,Histone deacetylase,gene silencing
+HDAC1,HMG20A,878,Histone deacetylase,gene silencing
+HDAC1,BAZ2A,967,Histone deacetylase,gene silencing
+HDAC1,MBD3,996,Histone deacetylase,gene silencing
+HDAC1,DDIT3,742,Histone deacetylase,gene silencing
+HDAC1,H2BC11,760,Histone deacetylase,gene silencing
+HDAC1,ZNF516,798,Histone deacetylase,gene silencing
+HDAC1,ING1,997,Histone deacetylase,gene silencing
+HDAC1,MORF4L2,911,Histone deacetylase,gene silencing
+HDAC1,RUVBL2,946,Histone deacetylase,gene silencing
+HDAC1,NSD2,901,Histone deacetylase,gene silencing
+HDAC1,PHB,923,Histone deacetylase,gene silencing
+HDAC1,H2BC17,777,Histone deacetylase,gene silencing
+HDAC1,BDNF,726,Histone deacetylase,gene silencing
+HDAC1,LIN52,829,Histone deacetylase,gene silencing
+HDAC1,H4C7,831,Histone deacetylase,gene silencing
+HDAC1,H2BC18,770,Histone deacetylase,gene silencing
+HDAC1,PRMT1,907,Histone deacetylase,gene silencing
+HDAC1,SIN3B,999,Histone deacetylase,gene silencing
+HDAC1,RELA,998,Histone deacetylase,gene silencing
+HDAC1,SMARCA2,848,Histone deacetylase,gene silencing
+HDAC1,BANP,960,Histone deacetylase,gene silencing
+HDAC1,PHB2,946,Histone deacetylase,gene silencing
+HDAC1,GTF2I,837,Histone deacetylase,gene silencing
+HDAC1,SOX6,952,Histone deacetylase,gene silencing
+HDAC1,MTA3,999,Histone deacetylase,gene silencing
+HDAC1,CDK1,840,Histone deacetylase,gene silencing
+HDAC1,TFDP1,802,Histone deacetylase,gene silencing
+HDAC1,RUNX1T1,898,Histone deacetylase,gene silencing
+HDAC1,ZMYM2,947,Histone deacetylase,gene silencing
+HDAC1,RREB1,727,Histone deacetylase,gene silencing
+HDAC1,SMARCC2,771,Histone deacetylase,gene silencing
+HDAC1,SERPINB5,779,Histone deacetylase,gene silencing
+HDAC1,AKT1,758,Histone deacetylase,gene silencing
+HDAC1,BMI1,718,Histone deacetylase,gene silencing
+HDAC1,HSF1,722,Histone deacetylase,gene silencing
+HDAC1,DDX17,936,Histone deacetylase,gene silencing
+HDAC1,KLF5,711,Histone deacetylase,gene silencing
+HDAC1,H2BC9,762,Histone deacetylase,gene silencing
+HDAC1,GATAD2A,999,Histone deacetylase,gene silencing
+HDAC1,BAHD1,801,Histone deacetylase,gene silencing
+HDAC1,KDM1A,999,Histone deacetylase,gene silencing
+HDAC1,BCL6,935,Histone deacetylase,gene silencing
+HDAC1,ZMYND8,705,Histone deacetylase,gene silencing
+HDAC1,SATB1,949,Histone deacetylase,gene silencing
+HDAC1,NCOR2,999,Histone deacetylase,gene silencing
+HDAC1,SATB2,742,Histone deacetylase,gene silencing
+HDAC1,SUDS3,999,Histone deacetylase,gene silencing
+HDAC1,TET2,882,Histone deacetylase,gene silencing
+HDAC1,SAP18,998,Histone deacetylase,gene silencing
+HDAC1,E2F4,996,Histone deacetylase,gene silencing
+HDAC1,TCF12,705,Histone deacetylase,gene silencing
+HDAC1,H2BU1,832,Histone deacetylase,gene silencing
+HDAC1,SPHK2,933,Histone deacetylase,gene silencing
+HDAC1,CTNNB1,985,Histone deacetylase,gene silencing
+HDAC1,H3C1,700,Histone deacetylase,gene silencing
+HDAC1,H2BC14,761,Histone deacetylase,gene silencing
+HDAC1,TLE3,982,Histone deacetylase,gene silencing
+HDAC1,SLBP,768,Histone deacetylase,gene silencing
+HDAC1,NOTCH1,790,Histone deacetylase,gene silencing
+HDAC1,MACROH2A1,945,Histone deacetylase,gene silencing
+HDAC1,NFATC2,782,Histone deacetylase,gene silencing
+HDAC1,CDKN2A,794,Histone deacetylase,gene silencing
+HDAC1,CCNA2,806,Histone deacetylase,gene silencing
+HDAC1,EHMT1,942,Histone deacetylase,gene silencing
+HDAC1,KMT2A,809,Histone deacetylase,gene silencing
+HDAC1,TLE1,943,Histone deacetylase,gene silencing
+HDAC1,NR2C2,728,Histone deacetylase,gene silencing
+HDAC1,E2F5,816,Histone deacetylase,gene silencing
+HDAC1,SUMO1,820,Histone deacetylase,gene silencing
+HDAC1,MBD3L1,864,Histone deacetylase,gene silencing
+HDAC1,KDM5C,969,Histone deacetylase,gene silencing
+HDAC1,HDAC2,999,Histone deacetylase,gene silencing
+HDAC1,PBX1,706,Histone deacetylase,gene silencing
+HDAC1,RBL1,796,Histone deacetylase,gene silencing
+HDAC1,MIER1,981,Histone deacetylase,gene silencing
+HDAC1,KLF4,735,Histone deacetylase,gene silencing
+HDAC1,BCL11A,913,Histone deacetylase,gene silencing
+HDAC1,TET1,951,Histone deacetylase,gene silencing
+HDAC1,TLE4,830,Histone deacetylase,gene silencing
+HDAC1,H2BC3,824,Histone deacetylase,gene silencing
+HDAC1,HDAC9,982,Histone deacetylase,gene silencing
+HDAC1,E2F6,716,Histone deacetylase,gene silencing
+HDAC2,SNAI2,828,Histone deacetylase,gene silencing
+HDAC2,HDAC7,836,Histone deacetylase,gene silencing
+HDAC2,SIRT1,898,Histone deacetylase,gene silencing
+HDAC2,CBX7,994,Histone deacetylase,gene silencing
+HDAC2,L3MBTL2,759,Histone deacetylase,gene silencing
+HDAC2,HDAC10,834,Histone deacetylase,gene silencing
+HDAC2,FKBP3,899,Histone deacetylase,gene silencing
+HDAC2,BRMS1L,926,Histone deacetylase,gene silencing
+HDAC2,CSNK2A1,972,Histone deacetylase,gene silencing
+HDAC2,DDX5,763,Histone deacetylase,gene silencing
+HDAC2,KAT2A,948,Histone deacetylase,gene silencing
+HDAC2,HDAC5,751,Histone deacetylase,gene silencing
+HDAC2,NFKB1,803,Histone deacetylase,gene silencing
+HDAC2,NANOG,809,Histone deacetylase,gene silencing
+HDAC2,NR3C1,862,Histone deacetylase,gene silencing
+HDAC2,PCGF1,912,Histone deacetylase,gene silencing
+HDAC2,EGR1,700,Histone deacetylase,gene silencing
+HDAC2,SNAI1,998,Histone deacetylase,gene silencing
+HDAC2,H4C6,976,Histone deacetylase,gene silencing
+HDAC2,IRF1,927,Histone deacetylase,gene silencing
+HDAC2,FOSB,930,Histone deacetylase,gene silencing
+HDAC2,SIRT2,840,Histone deacetylase,gene silencing
+HDAC2,MYOD1,714,Histone deacetylase,gene silencing
+HDAC2,SCML2,908,Histone deacetylase,gene silencing
+HDAC2,GSE1,868,Histone deacetylase,gene silencing
+HDAC2,H3-3B,936,Histone deacetylase,gene silencing
+HDAC2,MBD2,982,Histone deacetylase,gene silencing
+HDAC2,PHC2,927,Histone deacetylase,gene silencing
+HDAC2,SPECC1,904,Histone deacetylase,gene silencing
+HDAC2,CDK2AP1,887,Histone deacetylase,gene silencing
+HDAC2,CDH1,842,Histone deacetylase,gene silencing
+HDAC2,SMAD7,770,Histone deacetylase,gene silencing
+HDAC2,SMAD2,721,Histone deacetylase,gene silencing
+HDAC2,YY1,999,Histone deacetylase,gene silencing
+HDAC2,RCOR1,999,Histone deacetylase,gene silencing
+HDAC2,CREBBP,934,Histone deacetylase,gene silencing
+HDAC2,CHD5,929,Histone deacetylase,gene silencing
+HDAC2,SETD1A,718,Histone deacetylase,gene silencing
+HDAC2,TCF3,723,Histone deacetylase,gene silencing
+HDAC2,EP300,944,Histone deacetylase,gene silencing
+HDAC2,BRD4,754,Histone deacetylase,gene silencing
+HDAC2,KAT2B,950,Histone deacetylase,gene silencing
+HDAC2,ARID4B,988,Histone deacetylase,gene silencing
+HDAC2,HDAC4,827,Histone deacetylase,gene silencing
+HDAC2,STAT3,906,Histone deacetylase,gene silencing
+HDAC2,MECOM,929,Histone deacetylase,gene silencing
+HDAC2,DNMT3A,970,Histone deacetylase,gene silencing
+HDAC2,MIER2,791,Histone deacetylase,gene silencing
+HDAC2,KAT6A,748,Histone deacetylase,gene silencing
+HDAC2,DAXX,911,Histone deacetylase,gene silencing
+HDAC2,RB1,986,Histone deacetylase,gene silencing
+HDAC2,PML,859,Histone deacetylase,gene silencing
+HDAC2,CBFA2T3,729,Histone deacetylase,gene silencing
+HDAC2,NCOR1,994,Histone deacetylase,gene silencing
+HDAC2,TP53,990,Histone deacetylase,gene silencing
+HDAC2,CBX8,939,Histone deacetylase,gene silencing
+HDAC2,CBX4,929,Histone deacetylase,gene silencing
+HDAC2,DNMT3L,755,Histone deacetylase,gene silencing
+HDAC2,SETDB1,816,Histone deacetylase,gene silencing
+HDAC2,H2BC1,864,Histone deacetylase,gene silencing
+HDAC2,MTA2,999,Histone deacetylase,gene silencing
+HDAC2,MYCN,812,Histone deacetylase,gene silencing
+HDAC2,SMARCA5,973,Histone deacetylase,gene silencing
+HDAC2,ELMSAN1,713,Histone deacetylase,gene silencing
+HDAC2,PPARG,784,Histone deacetylase,gene silencing
+HDAC2,GATAD1,805,Histone deacetylase,gene silencing
+HDAC2,H2BC5,751,Histone deacetylase,gene silencing
+HDAC2,CTBP1,999,Histone deacetylase,gene silencing
+HDAC2,TAL1,771,Histone deacetylase,gene silencing
+HDAC2,GFI1,877,Histone deacetylase,gene silencing
+HDAC2,H2AZ1,917,Histone deacetylase,gene silencing
+HDAC2,SAP30,999,Histone deacetylase,gene silencing
+HDAC2,NPM1,838,Histone deacetylase,gene silencing
+HDAC2,H2AC1,768,Histone deacetylase,gene silencing
+HDAC2,SAP30L,945,Histone deacetylase,gene silencing
+HDAC2,RUNX1,984,Histone deacetylase,gene silencing
+HDAC2,RCOR2,745,Histone deacetylase,gene silencing
+HDAC2,HSPA4,741,Histone deacetylase,gene silencing
+HDAC2,HDAC3,906,Histone deacetylase,gene silencing
+HDAC2,FOS,784,Histone deacetylase,gene silencing
+HDAC2,ING2,988,Histone deacetylase,gene silencing
+HDAC2,H2AZ2,789,Histone deacetylase,gene silencing
+HDAC2,CBX2,950,Histone deacetylase,gene silencing
+HDAC2,SP3,827,Histone deacetylase,gene silencing
+HDAC2,REST,964,Histone deacetylase,gene silencing
+HDAC2,CTBP2,980,Histone deacetylase,gene silencing
+HDAC2,SUZ12,995,Histone deacetylase,gene silencing
+HDAC2,PRMT5,757,Histone deacetylase,gene silencing
+HDAC2,EZH2,999,Histone deacetylase,gene silencing
+HDAC2,H2BC4,755,Histone deacetylase,gene silencing
+HDAC2,ZMYM3,879,Histone deacetylase,gene silencing
+HDAC2,SMARCE1,771,Histone deacetylase,gene silencing
+HDAC2,HMG20B,996,Histone deacetylase,gene silencing
+HDAC2,DNMT3B,994,Histone deacetylase,gene silencing
+HDAC2,SP1,916,Histone deacetylase,gene silencing
+HDAC2,PHF12,985,Histone deacetylase,gene silencing
+HDAC2,MORF4L1,998,Histone deacetylase,gene silencing
+HDAC2,IKZF1,928,Histone deacetylase,gene silencing
+HDAC2,H2AC20,905,Histone deacetylase,gene silencing
+HDAC2,H3C13,937,Histone deacetylase,gene silencing
+HDAC2,MTA1,999,Histone deacetylase,gene silencing
+HDAC2,CBX3,864,Histone deacetylase,gene silencing
+HDAC2,SINHCAF,976,Histone deacetylase,gene silencing
+HDAC2,PCGF5,909,Histone deacetylase,gene silencing
+HDAC2,SUV39H1,941,Histone deacetylase,gene silencing
+HDAC2,EED,988,Histone deacetylase,gene silencing
+HDAC2,RERE,968,Histone deacetylase,gene silencing
+HDAC2,CIR1,927,Histone deacetylase,gene silencing
+HDAC2,H3-5,877,Histone deacetylase,gene silencing
+HDAC2,SMARCB1,854,Histone deacetylase,gene silencing
+HDAC2,H2AC7,703,Histone deacetylase,gene silencing
+HDAC2,RBPJL,918,Histone deacetylase,gene silencing
+HDAC2,JARID2,713,Histone deacetylase,gene silencing
+HDAC2,SMARCA4,999,Histone deacetylase,gene silencing
+HDAC2,GFI1B,834,Histone deacetylase,gene silencing
+HDAC2,RBPJ,969,Histone deacetylase,gene silencing
+HDAC2,H2AB2,702,Histone deacetylase,gene silencing
+HDAC2,H2BW2,754,Histone deacetylase,gene silencing
+HDAC2,ARID4A,944,Histone deacetylase,gene silencing
+HDAC2,H2BC12,753,Histone deacetylase,gene silencing
+HDAC2,BCL11B,922,Histone deacetylase,gene silencing
+HDAC2,SAP130,850,Histone deacetylase,gene silencing
+HDAC2,WDR5,787,Histone deacetylase,gene silencing
+HDAC2,H3C12,936,Histone deacetylase,gene silencing
+HDAC2,DNMT1,999,Histone deacetylase,gene silencing
+HDAC2,ZNF219,790,Histone deacetylase,gene silencing
+HDAC2,ZEB1,894,Histone deacetylase,gene silencing
+HDAC2,H2BW1,754,Histone deacetylase,gene silencing
+HDAC2,PCGF3,903,Histone deacetylase,gene silencing
+HDAC2,H2AW,709,Histone deacetylase,gene silencing
+HDAC2,H3-4,909,Histone deacetylase,gene silencing
+HDAC2,PARP1,882,Histone deacetylase,gene silencing
+HDAC2,RNF2,941,Histone deacetylase,gene silencing
+HDAC2,GATAD2B,998,Histone deacetylase,gene silencing
+HDAC2,NR2E1,799,Histone deacetylase,gene silencing
+HDAC2,PRDM1,901,Histone deacetylase,gene silencing
+HDAC2,H2BC21,916,Histone deacetylase,gene silencing
+HDAC2,H2AC18,872,Histone deacetylase,gene silencing
+HDAC2,PCGF6,957,Histone deacetylase,gene silencing
+HDAC2,JUN,846,Histone deacetylase,gene silencing
+HDAC2,ZNF217,989,Histone deacetylase,gene silencing
+HDAC2,DMAP1,911,Histone deacetylase,gene silencing
+HDAC2,DNTTIP1,798,Histone deacetylase,gene silencing
+HDAC2,MACROH2A2,777,Histone deacetylase,gene silencing
+HDAC2,RBBP4,999,Histone deacetylase,gene silencing
+HDAC2,HDAC1,999,Histone deacetylase,gene silencing
+HDAC2,TET1,862,Histone deacetylase,gene silencing
+HDAC2,RING1,954,Histone deacetylase,gene silencing
+HDAC2,KLF4,949,Histone deacetylase,gene silencing
+HDAC2,KDM5C,876,Histone deacetylase,gene silencing
+HDAC2,ASXL1,917,Histone deacetylase,gene silencing
+HDAC2,ING1,985,Histone deacetylase,gene silencing
+HDAC2,HDAC6,741,Histone deacetylase,gene silencing
+HDAC2,BMI1,977,Histone deacetylase,gene silencing
+HDAC2,H2BC13,770,Histone deacetylase,gene silencing
+HDAC2,GATA3,844,Histone deacetylase,gene silencing
+HDAC2,SIN3B,999,Histone deacetylase,gene silencing
+HDAC2,RBBP7,999,Histone deacetylase,gene silencing
+HDAC2,CHD3,999,Histone deacetylase,gene silencing
+HDAC2,MIER3,832,Histone deacetylase,gene silencing
+HDAC2,HMG20A,919,Histone deacetylase,gene silencing
+HDAC2,SMARCA2,800,Histone deacetylase,gene silencing
+HDAC2,NSD2,706,Histone deacetylase,gene silencing
+HDAC2,SUMO1,841,Histone deacetylase,gene silencing
+HDAC2,HELLS,705,Histone deacetylase,gene silencing
+HDAC2,SIN3A,999,Histone deacetylase,gene silencing
+HDAC2,TRPS1,705,Histone deacetylase,gene silencing
+HDAC2,EHMT2,982,Histone deacetylase,gene silencing
+HDAC2,DDX17,795,Histone deacetylase,gene silencing
+HDAC2,SOX10,909,Histone deacetylase,gene silencing
+HDAC2,CDYL,847,Histone deacetylase,gene silencing
+HDAC2,AEBP2,921,Histone deacetylase,gene silencing
+HDAC2,KDM5A,878,Histone deacetylase,gene silencing
+HDAC2,KDM1A,999,Histone deacetylase,gene silencing
+HDAC2,MIER1,958,Histone deacetylase,gene silencing
+HDAC2,NCOR2,993,Histone deacetylase,gene silencing
+HDAC2,RELA,986,Histone deacetylase,gene silencing
+HDAC2,CBX6,923,Histone deacetylase,gene silencing
+HDAC2,GATAD2A,999,Histone deacetylase,gene silencing
+HDAC2,MTA3,998,Histone deacetylase,gene silencing
+HDAC2,CREB1,769,Histone deacetylase,gene silencing
+HDAC2,UBAP2L,907,Histone deacetylase,gene silencing
+HDAC2,MORF4L2,857,Histone deacetylase,gene silencing
+HDAC2,ZNF516,700,Histone deacetylase,gene silencing
+HDAC2,MECP2,997,Histone deacetylase,gene silencing
+HDAC2,BRMS1,929,Histone deacetylase,gene silencing
+HDAC2,ACTL6A,714,Histone deacetylase,gene silencing
+HDAC2,PHF21A,991,Histone deacetylase,gene silencing
+HDAC2,EZH1,943,Histone deacetylase,gene silencing
+HDAC2,ESR1,903,Histone deacetylase,gene silencing
+HDAC2,TBL1XR1,762,Histone deacetylase,gene silencing
+HDAC2,SUMO2,717,Histone deacetylase,gene silencing
+HDAC2,MBD3,987,Histone deacetylase,gene silencing
+HDAC2,RCOR3,895,Histone deacetylase,gene silencing
+HDAC2,BAP1,913,Histone deacetylase,gene silencing
+HDAC2,EHMT1,852,Histone deacetylase,gene silencing
+HDAC2,BRCA1,953,Histone deacetylase,gene silencing
+HDAC2,RXRA,730,Histone deacetylase,gene silencing
+HDAC2,PHC3,908,Histone deacetylase,gene silencing
+HDAC2,MACROH2A1,927,Histone deacetylase,gene silencing
+HDAC2,NR4A1,820,Histone deacetylase,gene silencing
+HDAC2,H2BC11,753,Histone deacetylase,gene silencing
+HDAC2,H2BC17,757,Histone deacetylase,gene silencing
+HDAC2,H2BC18,757,Histone deacetylase,gene silencing
+HDAC2,H4C7,865,Histone deacetylase,gene silencing
+HDAC2,HIF1A,781,Histone deacetylase,gene silencing
+HDAC2,H3-2,877,Histone deacetylase,gene silencing
+HDAC2,SNW1,805,Histone deacetylase,gene silencing
+HDAC2,BANF1,749,Histone deacetylase,gene silencing
+HDAC2,H2BC15,752,Histone deacetylase,gene silencing
+HDAC2,TBL1X,855,Histone deacetylase,gene silencing
+HDAC2,HOPX,973,Histone deacetylase,gene silencing
+HDAC2,CHD4,999,Histone deacetylase,gene silencing
+HDAC2,MYC,838,Histone deacetylase,gene silencing
+HDAC2,PCGF2,917,Histone deacetylase,gene silencing
+HDAC2,EMSY,744,Histone deacetylase,gene silencing
+HDAC2,H2BS1,754,Histone deacetylase,gene silencing
+HDAC2,H2AB1,705,Histone deacetylase,gene silencing
+HDAC2,H2AX,885,Histone deacetylase,gene silencing
+HDAC2,ZEB2,718,Histone deacetylase,gene silencing
+HDAC2,H2BE1,754,Histone deacetylase,gene silencing
+HDAC2,MBD3L1,882,Histone deacetylase,gene silencing
+HDAC2,BCL11A,833,Histone deacetylase,gene silencing
+HDAC2,CIITA,842,Histone deacetylase,gene silencing
+HDAC2,H2BC3,822,Histone deacetylase,gene silencing
+HDAC2,H2BC14,767,Histone deacetylase,gene silencing
+HDAC2,SPHK2,921,Histone deacetylase,gene silencing
+HDAC2,PHC1,935,Histone deacetylase,gene silencing
+HDAC2,H2BC9,754,Histone deacetylase,gene silencing
+HDAC2,SAP18,997,Histone deacetylase,gene silencing
+HDAC2,SUDS3,999,Histone deacetylase,gene silencing
+HDAC2,TET2,989,Histone deacetylase,gene silencing
+HDAC2,H2BU1,779,Histone deacetylase,gene silencing
+HDAC2,GTF2I,875,Histone deacetylase,gene silencing
+HDAC2,GATA4,752,Histone deacetylase,gene silencing
+HDAC2,SMARCC2,723,Histone deacetylase,gene silencing
+HDAC2,ZMYM2,935,Histone deacetylase,gene silencing
+KAT2A,HDAC7,761,Histone acetyltransferase,gene activation
+KAT2A,SIRT1,943,Histone acetyltransferase,gene activation
+KAT2A,HDAC10,855,Histone acetyltransferase,gene activation
+KAT2A,KAT14,990,Histone acetyltransferase,gene activation
+KAT2A,USP22,998,Histone acetyltransferase,gene activation
+KAT2A,HDAC11,820,Histone acetyltransferase,gene activation
+KAT2A,MBIP,974,Histone acetyltransferase,gene activation
+KAT2A,RUVBL2,875,Histone acetyltransferase,gene activation
+KAT2A,MAML3,831,Histone acetyltransferase,gene activation
+KAT2A,EP300,994,Histone acetyltransferase,gene activation
+KAT2A,TP53,909,Histone acetyltransferase,gene activation
+KAT2A,H3C12,973,Histone acetyltransferase,gene activation
+KAT2A,XRCC6,727,Histone acetyltransferase,gene activation
+KAT2A,TAF7,936,Histone acetyltransferase,gene activation
+KAT2A,KAT5,987,Histone acetyltransferase,gene activation
+KAT2A,RELA,847,Histone acetyltransferase,gene activation
+KAT2A,SF3B3,942,Histone acetyltransferase,gene activation
+KAT2A,H2AZ2,709,Histone acetyltransferase,gene activation
+KAT2A,H4C7,907,Histone acetyltransferase,gene activation
+KAT2A,H3C13,972,Histone acetyltransferase,gene activation
+KAT2A,H2BC18,702,Histone acetyltransferase,gene activation
+KAT2A,ELP3,843,Histone acetyltransferase,gene activation
+KAT2A,ESCO1,764,Histone acetyltransferase,gene activation
+KAT2A,H3-2,956,Histone acetyltransferase,gene activation
+KAT2A,H2BC15,701,Histone acetyltransferase,gene activation
+KAT2A,GLYATL1,917,Histone acetyltransferase,gene activation
+KAT2A,TAF6,993,Histone acetyltransferase,gene activation
+KAT2A,TRRAP,999,Histone acetyltransferase,gene activation
+KAT2A,YEATS4,781,Histone acetyltransferase,gene activation
+KAT2A,TADA2A,999,Histone acetyltransferase,gene activation
+KAT2A,TAF9,999,Histone acetyltransferase,gene activation
+KAT2A,H3-3B,987,Histone acetyltransferase,gene activation
+KAT2A,HDAC1,974,Histone acetyltransferase,gene activation
+KAT2A,HDAC5,729,Histone acetyltransferase,gene activation
+KAT2A,H3-4,977,Histone acetyltransferase,gene activation
+KAT2A,HDAC4,795,Histone acetyltransferase,gene activation
+KAT2A,MAML1,937,Histone acetyltransferase,gene activation
+KAT2A,H2AC20,910,Histone acetyltransferase,gene activation
+KAT2A,TEP1,805,Histone acetyltransferase,gene activation
+KAT2A,AGXT,969,Histone acetyltransferase,gene activation
+KAT2A,SUPT20H,994,Histone acetyltransferase,gene activation
+KAT2A,NCOA1,872,Histone acetyltransferase,gene activation
+KAT2A,KAT7,771,Histone acetyltransferase,gene activation
+KAT2A,MYC,996,Histone acetyltransferase,gene activation
+KAT2A,DDB1,758,Histone acetyltransferase,gene activation
+KAT2A,H4C6,986,Histone acetyltransferase,gene activation
+KAT2A,NAT8,726,Histone acetyltransferase,gene activation
+KAT2A,SIRT2,748,Histone acetyltransferase,gene activation
+KAT2A,KAT6B,756,Histone acetyltransferase,gene activation
+KAT2A,ENY2,997,Histone acetyltransferase,gene activation
+KAT2A,HDAC6,798,Histone acetyltransferase,gene activation
+KAT2A,SGF29,999,Histone acetyltransferase,gene activation
+KAT2A,HDAC3,856,Histone acetyltransferase,gene activation
+KAT2A,POLE4,911,Histone acetyltransferase,gene activation
+KAT2A,SMARCA4,947,Histone acetyltransferase,gene activation
+KAT2A,H2AX,742,Histone acetyltransferase,gene activation
+KAT2A,KAT2B,969,Histone acetyltransferase,gene activation
+KAT2A,MED1,801,Histone acetyltransferase,gene activation
+KAT2A,SAP130,805,Histone acetyltransferase,gene activation
+KAT2A,TAF6L,994,Histone acetyltransferase,gene activation
+KAT2A,TAF2,969,Histone acetyltransferase,gene activation
+KAT2A,WDR5,999,Histone acetyltransferase,gene activation
+KAT2A,ENSG00000036549,970,Histone acetyltransferase,gene activation
+KAT2A,SF3B5,770,Histone acetyltransferase,gene activation
+KAT2A,CUL2,960,Histone acetyltransferase,gene activation
+KAT2A,ATXN7,997,Histone acetyltransferase,gene activation
+KAT2A,H2BC21,921,Histone acetyltransferase,gene activation
+KAT2A,RBPJ,988,Histone acetyltransferase,gene activation
+KAT2A,TAF10,999,Histone acetyltransferase,gene activation
+KAT2A,TAF12,998,Histone acetyltransferase,gene activation
+KAT2A,NCOA3,893,Histone acetyltransferase,gene activation
+KAT2A,HDAC2,948,Histone acetyltransferase,gene activation
+KAT2A,SUPT7L,995,Histone acetyltransferase,gene activation
+KAT2A,TAF5L,995,Histone acetyltransferase,gene activation
+KAT2A,HDAC9,776,Histone acetyltransferase,gene activation
+KAT2A,TACC3,758,Histone acetyltransferase,gene activation
+KAT2A,H2BC3,778,Histone acetyltransferase,gene activation
+KAT2A,KAT8,786,Histone acetyltransferase,gene activation
+KAT2A,ATXN7L1,855,Histone acetyltransferase,gene activation
+KAT2A,TAF5,990,Histone acetyltransferase,gene activation
+KAT2A,PPARGC1A,789,Histone acetyltransferase,gene activation
+KAT2A,H2BC14,700,Histone acetyltransferase,gene activation
+KAT2A,H3C1,856,Histone acetyltransferase,gene activation
+KAT2A,CTNNB1,826,Histone acetyltransferase,gene activation
+KAT2A,TBP,959,Histone acetyltransferase,gene activation
+KAT2A,CREBBP,964,Histone acetyltransferase,gene activation
+KAT2A,NCOR1,843,Histone acetyltransferase,gene activation
+KAT2A,TADA1,996,Histone acetyltransferase,gene activation
+KAT2A,SUPT3H,999,Histone acetyltransferase,gene activation
+KAT2A,NOTCH1,767,Histone acetyltransferase,gene activation
+KAT2A,TAF4,987,Histone acetyltransferase,gene activation
+KAT2A,YEATS2,974,Histone acetyltransferase,gene activation
+KAT2A,CHD1,729,Histone acetyltransferase,gene activation
+KAT2A,E2F1,888,Histone acetyltransferase,gene activation
+KAT2A,POLE3,869,Histone acetyltransferase,gene activation
+KAT2A,H3-5,956,Histone acetyltransferase,gene activation
+KAT2A,HAT1,700,Histone acetyltransferase,gene activation
+KAT2A,H2AZ1,845,Histone acetyltransferase,gene activation
+KAT2A,SARS1,785,Histone acetyltransferase,gene activation
+KAT2A,KAT6A,830,Histone acetyltransferase,gene activation
+KAT2A,TADA2B,996,Histone acetyltransferase,gene activation
+KAT2A,ORC5,772,Histone acetyltransferase,gene activation
+KAT2A,TAF9B,991,Histone acetyltransferase,gene activation
+KAT2A,NCOA2,872,Histone acetyltransferase,gene activation
+KAT2A,ATXN7L3,994,Histone acetyltransferase,gene activation
+KAT2A,NCOR2,828,Histone acetyltransferase,gene activation
+KAT2A,RBPJL,910,Histone acetyltransferase,gene activation
+KAT2A,SOD2,986,Histone acetyltransferase,gene activation
+KAT2A,SMARCA5,803,Histone acetyltransferase,gene activation
+KAT2A,TADA3,999,Histone acetyltransferase,gene activation
+KAT2A,MAP3K7,807,Histone acetyltransferase,gene activation
+KAT2A,H2BU1,710,Histone acetyltransferase,gene activation
+KAT2A,ATXN7L2,864,Histone acetyltransferase,gene activation
+KAT2A,ESCO2,761,Histone acetyltransferase,gene activation
+KAT2A,SMARCA2,826,Histone acetyltransferase,gene activation
+KAT2A,MED17,784,Histone acetyltransferase,gene activation
+KAT2A,H2AC18,824,Histone acetyltransferase,gene activation
+KAT2A,MED16,756,Histone acetyltransferase,gene activation
+KAT2A,HDAC8,862,Histone acetyltransferase,gene activation
+KAT2A,CDK8,804,Histone acetyltransferase,gene activation
+KAT2A,DR1,964,Histone acetyltransferase,gene activation
+KAT2A,MAML2,831,Histone acetyltransferase,gene activation
+KAT2A,COMMD1,986,Histone acetyltransferase,gene activation
+KAT2A,H2BC1,700,Histone acetyltransferase,gene activation
+EP300,CREB3L3,912,Histone acetyltransferase,gene activation
+EP300,HDAC7,940,Histone acetyltransferase,gene activation
+EP300,SIRT1,972,Histone acetyltransferase,gene activation
+EP300,MAPK1,818,Histone acetyltransferase,gene activation
+EP300,HDAC10,726,Histone acetyltransferase,gene activation
+EP300,APEX1,944,Histone acetyltransferase,gene activation
+EP300,NFKBIA,734,Histone acetyltransferase,gene activation
+EP300,STAG2,794,Histone acetyltransferase,gene activation
+EP300,TGFB1,793,Histone acetyltransferase,gene activation
+EP300,USF2,890,Histone acetyltransferase,gene activation
+EP300,DDX5,917,Histone acetyltransferase,gene activation
+EP300,KAT2A,994,Histone acetyltransferase,gene activation
+EP300,HDAC5,821,Histone acetyltransferase,gene activation
+EP300,NFKB1,998,Histone acetyltransferase,gene activation
+EP300,SPI1,946,Histone acetyltransferase,gene activation
+EP300,CCND1,974,Histone acetyltransferase,gene activation
+EP300,MAPK14,741,Histone acetyltransferase,gene activation
+EP300,TBP,946,Histone acetyltransferase,gene activation
+EP300,SKP1,732,Histone acetyltransferase,gene activation
+EP300,NR3C1,914,Histone acetyltransferase,gene activation
+EP300,PRDM2,713,Histone acetyltransferase,gene activation
+EP300,ADAT2,720,Histone acetyltransferase,gene activation
+EP300,EGR1,952,Histone acetyltransferase,gene activation
+EP300,NFYB,904,Histone acetyltransferase,gene activation
+EP300,TWIST1,886,Histone acetyltransferase,gene activation
+EP300,EGR2,923,Histone acetyltransferase,gene activation
+EP300,SNAI1,847,Histone acetyltransferase,gene activation
+EP300,H4C6,999,Histone acetyltransferase,gene activation
+EP300,IRF1,984,Histone acetyltransferase,gene activation
+EP300,SOX9,940,Histone acetyltransferase,gene activation
+EP300,FOSB,735,Histone acetyltransferase,gene activation
+EP300,NR1D1,766,Histone acetyltransferase,gene activation
+EP300,KLF2,780,Histone acetyltransferase,gene activation
+EP300,SIRT2,907,Histone acetyltransferase,gene activation
+EP300,MYOD1,991,Histone acetyltransferase,gene activation
+EP300,FOXA1,933,Histone acetyltransferase,gene activation
+EP300,APOE,724,Histone acetyltransferase,gene activation
+EP300,JUND,933,Histone acetyltransferase,gene activation
+EP300,HBZ,860,Histone acetyltransferase,gene activation
+EP300,RARA,883,Histone acetyltransferase,gene activation
+EP300,FUS,763,Histone acetyltransferase,gene activation
+EP300,SMARCC1,702,Histone acetyltransferase,gene activation
+EP300,H3-3B,962,Histone acetyltransferase,gene activation
+EP300,KDM6B,754,Histone acetyltransferase,gene activation
+EP300,KRAS,757,Histone acetyltransferase,gene activation
+EP300,CCNB1,816,Histone acetyltransferase,gene activation
+EP300,VHL,881,Histone acetyltransferase,gene activation
+EP300,NOTCH2,814,Histone acetyltransferase,gene activation
+EP300,DDB2,803,Histone acetyltransferase,gene activation
+EP300,MDM2,999,Histone acetyltransferase,gene activation
+EP300,MED4,747,Histone acetyltransferase,gene activation
+EP300,TTC5,990,Histone acetyltransferase,gene activation
+EP300,KAT7,822,Histone acetyltransferase,gene activation
+EP300,TGS1,794,Histone acetyltransferase,gene activation
+EP300,THBS1,706,Histone acetyltransferase,gene activation
+EP300,RORA,960,Histone acetyltransferase,gene activation
+EP300,ANAPC5,754,Histone acetyltransferase,gene activation
+EP300,ATF1,734,Histone acetyltransferase,gene activation
+EP300,SMAD7,842,Histone acetyltransferase,gene activation
+EP300,SMAD2,987,Histone acetyltransferase,gene activation
+EP300,KMT2C,884,Histone acetyltransferase,gene activation
+EP300,YY1,999,Histone acetyltransferase,gene activation
+EP300,CREBBP,999,Histone acetyltransferase,gene activation
+EP300,SRCAP,911,Histone acetyltransferase,gene activation
+EP300,SETD1A,854,Histone acetyltransferase,gene activation
+EP300,ELL,803,Histone acetyltransferase,gene activation
+EP300,TCF3,941,Histone acetyltransferase,gene activation
+EP300,MED15,771,Histone acetyltransferase,gene activation
+EP300,BRD4,988,Histone acetyltransferase,gene activation
+EP300,MEF2C,806,Histone acetyltransferase,gene activation
+EP300,H2BC11,968,Histone acetyltransferase,gene activation
+EP300,MAML3,934,Histone acetyltransferase,gene activation
+EP300,XRCC5,716,Histone acetyltransferase,gene activation
+EP300,XPA,928,Histone acetyltransferase,gene activation
+EP300,SP3,735,Histone acetyltransferase,gene activation
+EP300,H4C5,903,Histone acetyltransferase,gene activation
+EP300,ATF2,976,Histone acetyltransferase,gene activation
+EP300,HDAC11,851,Histone acetyltransferase,gene activation
+EP300,YBX1,898,Histone acetyltransferase,gene activation
+EP300,ZEB1,932,Histone acetyltransferase,gene activation
+EP300,FBXW7,755,Histone acetyltransferase,gene activation
+EP300,MED12,805,Histone acetyltransferase,gene activation
+EP300,NR4A1,984,Histone acetyltransferase,gene activation
+EP300,EBF1,791,Histone acetyltransferase,gene activation
+EP300,KMT2B,755,Histone acetyltransferase,gene activation
+EP300,TCEA1,911,Histone acetyltransferase,gene activation
+EP300,DDIT3,784,Histone acetyltransferase,gene activation
+EP300,HIF3A,726,Histone acetyltransferase,gene activation
+EP300,PTMA,775,Histone acetyltransferase,gene activation
+EP300,H4C7,741,Histone acetyltransferase,gene activation
+EP300,H3C13,922,Histone acetyltransferase,gene activation
+EP300,SRC,959,Histone acetyltransferase,gene activation
+EP300,RUNX1,989,Histone acetyltransferase,gene activation
+EP300,CREB3L1,917,Histone acetyltransferase,gene activation
+EP300,KAT5,966,Histone acetyltransferase,gene activation
+EP300,PRMT1,994,Histone acetyltransferase,gene activation
+EP300,PRKACB,850,Histone acetyltransferase,gene activation
+EP300,RELA,999,Histone acetyltransferase,gene activation
+EP300,STAT3,999,Histone acetyltransferase,gene activation
+EP300,NFE2L2,933,Histone acetyltransferase,gene activation
+EP300,FOXM1,957,Histone acetyltransferase,gene activation
+EP300,HSP90AB1,739,Histone acetyltransferase,gene activation
+EP300,TP53,999,Histone acetyltransferase,gene activation
+EP300,H3C12,984,Histone acetyltransferase,gene activation
+EP300,EZH2,963,Histone acetyltransferase,gene activation
+EP300,JUN,999,Histone acetyltransferase,gene activation
+EP300,MEF2D,923,Histone acetyltransferase,gene activation
+EP300,CAMK4,922,Histone acetyltransferase,gene activation
+EP300,SNIP1,781,Histone acetyltransferase,gene activation
+EP300,SMAD4,994,Histone acetyltransferase,gene activation
+EP300,CEBPB,996,Histone acetyltransferase,gene activation
+EP300,FEN1,879,Histone acetyltransferase,gene activation
+EP300,NUPR1,781,Histone acetyltransferase,gene activation
+EP300,GATA3,959,Histone acetyltransferase,gene activation
+EP300,FOXP3,891,Histone acetyltransferase,gene activation
+EP300,GATA1,984,Histone acetyltransferase,gene activation
+EP300,ASH2L,751,Histone acetyltransferase,gene activation
+EP300,PCNA,900,Histone acetyltransferase,gene activation
+EP300,DEK,704,Histone acetyltransferase,gene activation
+EP300,PIAS3,811,Histone acetyltransferase,gene activation
+EP300,MAGEA11,709,Histone acetyltransferase,gene activation
+EP300,EHMT2,764,Histone acetyltransferase,gene activation
+EP300,TP73,927,Histone acetyltransferase,gene activation
+EP300,SNW1,823,Histone acetyltransferase,gene activation
+EP300,H2BC12,959,Histone acetyltransferase,gene activation
+EP300,H3-2,849,Histone acetyltransferase,gene activation
+EP300,IRF4,715,Histone acetyltransferase,gene activation
+EP300,HIF1A,999,Histone acetyltransferase,gene activation
+EP300,PGR,776,Histone acetyltransferase,gene activation
+EP300,H2AC4,803,Histone acetyltransferase,gene activation
+EP300,CBFB,800,Histone acetyltransferase,gene activation
+EP300,NEUROD1,845,Histone acetyltransferase,gene activation
+EP300,TXN,819,Histone acetyltransferase,gene activation
+EP300,ING4,879,Histone acetyltransferase,gene activation
+EP300,SREBF1,963,Histone acetyltransferase,gene activation
+EP300,GATA2,766,Histone acetyltransferase,gene activation
+EP300,FOXO4,983,Histone acetyltransferase,gene activation
+EP300,CDC25A,864,Histone acetyltransferase,gene activation
+EP300,CITED4,955,Histone acetyltransferase,gene activation
+EP300,HDAC4,887,Histone acetyltransferase,gene activation
+EP300,MAML1,997,Histone acetyltransferase,gene activation
+EP300,H2AC21,748,Histone acetyltransferase,gene activation
+EP300,CEBPA,902,Histone acetyltransferase,gene activation
+EP300,H4C8,903,Histone acetyltransferase,gene activation
+EP300,PAX6,888,Histone acetyltransferase,gene activation
+EP300,RPS6KA5,711,Histone acetyltransferase,gene activation
+EP300,H3C6,849,Histone acetyltransferase,gene activation
+EP300,H4C11,905,Histone acetyltransferase,gene activation
+EP300,HSP90AA1,809,Histone acetyltransferase,gene activation
+EP300,HDAC1,999,Histone acetyltransferase,gene activation
+EP300,H3-4,966,Histone acetyltransferase,gene activation
+EP300,ARRB1,781,Histone acetyltransferase,gene activation
+EP300,CREB1,999,Histone acetyltransferase,gene activation
+EP300,SETD2,761,Histone acetyltransferase,gene activation
+EP300,RBBP5,768,Histone acetyltransferase,gene activation
+EP300,RXRA,934,Histone acetyltransferase,gene activation
+EP300,RERE,867,Histone acetyltransferase,gene activation
+EP300,FOXO1,984,Histone acetyltransferase,gene activation
+EP300,EWSR1,802,Histone acetyltransferase,gene activation
+EP300,SMAD3,999,Histone acetyltransferase,gene activation
+EP300,TRRAP,758,Histone acetyltransferase,gene activation
+EP300,SUZ12,745,Histone acetyltransferase,gene activation
+EP300,NCOA1,999,Histone acetyltransferase,gene activation
+EP300,H4C2,906,Histone acetyltransferase,gene activation
+EP300,HNF4A,978,Histone acetyltransferase,gene activation
+EP300,RAD21,754,Histone acetyltransferase,gene activation
+EP300,H2AC8,983,Histone acetyltransferase,gene activation
+EP300,HCFC1,749,Histone acetyltransferase,gene activation
+EP300,SMC3,748,Histone acetyltransferase,gene activation
+EP300,MED13L,729,Histone acetyltransferase,gene activation
+EP300,THRA,785,Histone acetyltransferase,gene activation
+EP300,DYRK1B,708,Histone acetyltransferase,gene activation
+EP300,ATM,904,Histone acetyltransferase,gene activation
+EP300,ACTB,778,Histone acetyltransferase,gene activation
+EP300,JUNB,855,Histone acetyltransferase,gene activation
+EP300,GREB1,882,Histone acetyltransferase,gene activation
+EP300,FOSL1,803,Histone acetyltransferase,gene activation
+EP300,TCF7,928,Histone acetyltransferase,gene activation
+EP300,ING2,929,Histone acetyltransferase,gene activation
+EP300,GAPDH,787,Histone acetyltransferase,gene activation
+EP300,H2AC20,952,Histone acetyltransferase,gene activation
+EP300,NOTCH4,742,Histone acetyltransferase,gene activation
+EP300,CHD4,933,Histone acetyltransferase,gene activation
+EP300,KLF15,716,Histone acetyltransferase,gene activation
+EP300,MAFK,792,Histone acetyltransferase,gene activation
+EP300,TCF7L2,975,Histone acetyltransferase,gene activation
+EP300,BAZ1B,772,Histone acetyltransferase,gene activation
+EP300,BCL2,869,Histone acetyltransferase,gene activation
+EP300,H4C9,928,Histone acetyltransferase,gene activation
+EP300,DDB1,891,Histone acetyltransferase,gene activation
+EP300,CREB3,949,Histone acetyltransferase,gene activation
+EP300,KAT6B,729,Histone acetyltransferase,gene activation
+EP300,HDAC6,990,Histone acetyltransferase,gene activation
+EP300,GRIP1,710,Histone acetyltransferase,gene activation
+EP300,ASCL1,888,Histone acetyltransferase,gene activation
+EP300,TDG,890,Histone acetyltransferase,gene activation
+EP300,STAT5A,946,Histone acetyltransferase,gene activation
+EP300,CREB3L2,922,Histone acetyltransferase,gene activation
+EP300,ARNT2,793,Histone acetyltransferase,gene activation
+EP300,THRB,731,Histone acetyltransferase,gene activation
+EP300,OGA,712,Histone acetyltransferase,gene activation
+EP300,PARP1,881,Histone acetyltransferase,gene activation
+EP300,RUNX2,885,Histone acetyltransferase,gene activation
+EP300,ERCC6,860,Histone acetyltransferase,gene activation
+EP300,ETS1,954,Histone acetyltransferase,gene activation
+EP300,MYC,999,Histone acetyltransferase,gene activation
+EP300,MED6,703,Histone acetyltransferase,gene activation
+EP300,MYSM1,839,Histone acetyltransferase,gene activation
+EP300,CHUK,742,Histone acetyltransferase,gene activation
+EP300,KAT2B,999,Histone acetyltransferase,gene activation
+EP300,ZNF148,784,Histone acetyltransferase,gene activation
+EP300,MED1,918,Histone acetyltransferase,gene activation
+EP300,IL1B,710,Histone acetyltransferase,gene activation
+EP300,USF1,912,Histone acetyltransferase,gene activation
+EP300,CAMK2A,908,Histone acetyltransferase,gene activation
+EP300,NFATC1,712,Histone acetyltransferase,gene activation
+EP300,H4-16,903,Histone acetyltransferase,gene activation
+EP300,PAXIP1,734,Histone acetyltransferase,gene activation
+EP300,AR,952,Histone acetyltransferase,gene activation
+EP300,SETD1B,734,Histone acetyltransferase,gene activation
+EP300,H2AX,713,Histone acetyltransferase,gene activation
+EP300,MAPT,714,Histone acetyltransferase,gene activation
+EP300,LEF1,981,Histone acetyltransferase,gene activation
+EP300,UBE2I,809,Histone acetyltransferase,gene activation
+EP300,HDAC3,958,Histone acetyltransferase,gene activation
+EP300,SMARCA4,969,Histone acetyltransferase,gene activation
+EP300,ARID1A,855,Histone acetyltransferase,gene activation
+EP300,CREB3L4,916,Histone acetyltransferase,gene activation
+EP300,STAT1,998,Histone acetyltransferase,gene activation
+EP300,MEF2A,989,Histone acetyltransferase,gene activation
+EP300,SIN3A,816,Histone acetyltransferase,gene activation
+EP300,CDKN1A,920,Histone acetyltransferase,gene activation
+EP300,ZBTB16,844,Histone acetyltransferase,gene activation
+EP300,GADD45A,765,Histone acetyltransferase,gene activation
+EP300,CITED1,975,Histone acetyltransferase,gene activation
+EP300,WDR5,896,Histone acetyltransferase,gene activation
+EP300,ESR2,811,Histone acetyltransferase,gene activation
+EP300,BRCA1,986,Histone acetyltransferase,gene activation
+EP300,H3C3,847,Histone acetyltransferase,gene activation
+EP300,POU2F1,917,Histone acetyltransferase,gene activation
+EP300,ESR1,997,Histone acetyltransferase,gene activation
+EP300,PPARA,829,Histone acetyltransferase,gene activation
+EP300,SUV39H1,734,Histone acetyltransferase,gene activation
+EP300,CDC20,750,Histone acetyltransferase,gene activation
+EP300,HNF1A,824,Histone acetyltransferase,gene activation
+EP300,PRMT5,780,Histone acetyltransferase,gene activation
+EP300,H4C14,929,Histone acetyltransferase,gene activation
+EP300,KMT2E,749,Histone acetyltransferase,gene activation
+EP300,REL,903,Histone acetyltransferase,gene activation
+EP300,CDK9,725,Histone acetyltransferase,gene activation
+EP300,NFYA,939,Histone acetyltransferase,gene activation
+EP300,ATF4,988,Histone acetyltransferase,gene activation
+EP300,CREB5,924,Histone acetyltransferase,gene activation
+EP300,TCF7L1,948,Histone acetyltransferase,gene activation
+EP300,SUMO1,828,Histone acetyltransferase,gene activation
+EP300,NPM1,788,Histone acetyltransferase,gene activation
+EP300,EID1,878,Histone acetyltransferase,gene activation
+EP300,RBPJ,980,Histone acetyltransferase,gene activation
+EP300,H2BC21,960,Histone acetyltransferase,gene activation
+EP300,NUP98,709,Histone acetyltransferase,gene activation
+EP300,IRF3,999,Histone acetyltransferase,gene activation
+EP300,CARM1,999,Histone acetyltransferase,gene activation
+EP300,NR2F2,847,Histone acetyltransferase,gene activation
+EP300,H3C2,827,Histone acetyltransferase,gene activation
+EP300,EGR3,918,Histone acetyltransferase,gene activation
+EP300,TGFBR1,712,Histone acetyltransferase,gene activation
+EP300,H3C10,814,Histone acetyltransferase,gene activation
+EP300,BTRC,741,Histone acetyltransferase,gene activation
+EP300,MITF,877,Histone acetyltransferase,gene activation
+EP300,MAF,729,Histone acetyltransferase,gene activation
+EP300,UBC,791,Histone acetyltransferase,gene activation
+EP300,NUTM1,876,Histone acetyltransferase,gene activation
+EP300,ARNT,999,Histone acetyltransferase,gene activation
+EP300,MAPK8,700,Histone acetyltransferase,gene activation
+EP300,ELF3,729,Histone acetyltransferase,gene activation
+EP300,HDAC9,964,Histone acetyltransferase,gene activation
+EP300,H2BC3,933,Histone acetyltransferase,gene activation
+EP300,NRIP1,880,Histone acetyltransferase,gene activation
+EP300,NCOA3,999,Histone acetyltransferase,gene activation
+EP300,HDAC2,944,Histone acetyltransferase,gene activation
+EP300,IRF7,979,Histone acetyltransferase,gene activation
+EP300,TP63,850,Histone acetyltransferase,gene activation
+EP300,KLF4,945,Histone acetyltransferase,gene activation
+EP300,CRTC2,961,Histone acetyltransferase,gene activation
+EP300,STAT2,937,Histone acetyltransferase,gene activation
+EP300,PRKACA,851,Histone acetyltransferase,gene activation
+EP300,NR1H3,723,Histone acetyltransferase,gene activation
+EP300,CTBP1,955,Histone acetyltransferase,gene activation
+EP300,PKM,725,Histone acetyltransferase,gene activation
+EP300,TLE3,855,Histone acetyltransferase,gene activation
+EP300,H4C4,903,Histone acetyltransferase,gene activation
+EP300,MEIS1,775,Histone acetyltransferase,gene activation
+EP300,PPARG,997,Histone acetyltransferase,gene activation
+EP300,MLXIPL,815,Histone acetyltransferase,gene activation
+EP300,PRKACG,849,Histone acetyltransferase,gene activation
+EP300,NCOR1,959,Histone acetyltransferase,gene activation
+EP300,CEBPD,736,Histone acetyltransferase,gene activation
+EP300,CLOCK,994,Histone acetyltransferase,gene activation
+EP300,PPARGC1A,990,Histone acetyltransferase,gene activation
+EP300,H3C1,998,Histone acetyltransferase,gene activation
+EP300,CTNNB1,999,Histone acetyltransferase,gene activation
+EP300,TAL1,889,Histone acetyltransferase,gene activation
+EP300,LYL1,871,Histone acetyltransferase,gene activation
+EP300,KMT2A,831,Histone acetyltransferase,gene activation
+EP300,ETS2,795,Histone acetyltransferase,gene activation
+EP300,H3-5,849,Histone acetyltransferase,gene activation
+EP300,STAT6,945,Histone acetyltransferase,gene activation
+EP300,MYOCD,803,Histone acetyltransferase,gene activation
+EP300,E2F1,973,Histone acetyltransferase,gene activation
+EP300,H4C15,903,Histone acetyltransferase,gene activation
+EP300,NAP1L1,774,Histone acetyltransferase,gene activation
+EP300,SP1,999,Histone acetyltransferase,gene activation
+EP300,NOTCH1,940,Histone acetyltransferase,gene activation
+EP300,H4C3,903,Histone acetyltransferase,gene activation
+EP300,NPAS2,948,Histone acetyltransferase,gene activation
+EP300,H3C4,814,Histone acetyltransferase,gene activation
+EP300,KLF1,758,Histone acetyltransferase,gene activation
+EP300,SMC1A,786,Histone acetyltransferase,gene activation
+EP300,CCNA2,812,Histone acetyltransferase,gene activation
+EP300,CDKN2A,859,Histone acetyltransferase,gene activation
+EP300,HMGN1,947,Histone acetyltransferase,gene activation
+EP300,KDM1A,899,Histone acetyltransferase,gene activation
+EP300,TEAD4,852,Histone acetyltransferase,gene activation
+EP300,TFAP2A,856,Histone acetyltransferase,gene activation
+EP300,KAT6A,956,Histone acetyltransferase,gene activation
+EP300,GTF2B,966,Histone acetyltransferase,gene activation
+EP300,H3C11,814,Histone acetyltransferase,gene activation
+EP300,DDX17,870,Histone acetyltransferase,gene activation
+EP300,SOX2,705,Histone acetyltransferase,gene activation
+EP300,H4C13,904,Histone acetyltransferase,gene activation
+EP300,KDM2A,771,Histone acetyltransferase,gene activation
+EP300,KLF5,931,Histone acetyltransferase,gene activation
+EP300,KDM6A,902,Histone acetyltransferase,gene activation
+EP300,PCK1,710,Histone acetyltransferase,gene activation
+EP300,BRD7,925,Histone acetyltransferase,gene activation
+EP300,RB1,808,Histone acetyltransferase,gene activation
+EP300,FOS,964,Histone acetyltransferase,gene activation
+EP300,H4C12,903,Histone acetyltransferase,gene activation
+EP300,H2AZ1,753,Histone acetyltransferase,gene activation
+EP300,NCOA6,911,Histone acetyltransferase,gene activation
+EP300,REST,766,Histone acetyltransferase,gene activation
+EP300,TCF12,912,Histone acetyltransferase,gene activation
+EP300,EPAS1,998,Histone acetyltransferase,gene activation
+EP300,CPT1A,794,Histone acetyltransferase,gene activation
+EP300,SMARCA5,794,Histone acetyltransferase,gene activation
+EP300,TADA3,791,Histone acetyltransferase,gene activation
+EP300,ZBTB17,818,Histone acetyltransferase,gene activation
+EP300,EP400,859,Histone acetyltransferase,gene activation
+EP300,NCOR2,877,Histone acetyltransferase,gene activation
+EP300,MYB,996,Histone acetyltransferase,gene activation
+EP300,CTBP2,950,Histone acetyltransferase,gene activation
+EP300,RBPJL,925,Histone acetyltransferase,gene activation
+EP300,FOXO3,991,Histone acetyltransferase,gene activation
+EP300,H3C8,814,Histone acetyltransferase,gene activation
+EP300,STAT5B,907,Histone acetyltransferase,gene activation
+EP300,APP,959,Histone acetyltransferase,gene activation
+EP300,SKP2,942,Histone acetyltransferase,gene activation
+EP300,E2F4,863,Histone acetyltransferase,gene activation
+EP300,GABPA,743,Histone acetyltransferase,gene activation
+EP300,NCOA2,998,Histone acetyltransferase,gene activation
+EP300,CITED2,999,Histone acetyltransferase,gene activation
+EP300,HIPK2,886,Histone acetyltransferase,gene activation
+EP300,MRTFA,710,Histone acetyltransferase,gene activation
+EP300,KDM3A,743,Histone acetyltransferase,gene activation
+EP300,RUNX3,948,Histone acetyltransferase,gene activation
+EP300,HDAC8,773,Histone acetyltransferase,gene activation
+EP300,ERCC5,869,Histone acetyltransferase,gene activation
+EP300,ING5,934,Histone acetyltransferase,gene activation
+EP300,ARNTL,986,Histone acetyltransferase,gene activation
+EP300,MAML2,950,Histone acetyltransferase,gene activation
+EP300,CTCF,959,Histone acetyltransferase,gene activation
+EP300,H2AC18,785,Histone acetyltransferase,gene activation
+EP300,HEY1,730,Histone acetyltransferase,gene activation
+EP300,PML,852,Histone acetyltransferase,gene activation
+EP300,H4C1,905,Histone acetyltransferase,gene activation
+EP300,STAT4,724,Histone acetyltransferase,gene activation
+EP300,KMT2D,896,Histone acetyltransferase,gene activation
+EP300,MAX,712,Histone acetyltransferase,gene activation
+EP300,JMY,995,Histone acetyltransferase,gene activation
+EP300,CDK2,925,Histone acetyltransferase,gene activation
+EP300,PROX1,703,Histone acetyltransferase,gene activation
+EP300,RXRG,710,Histone acetyltransferase,gene activation
+EP300,AKT1,954,Histone acetyltransferase,gene activation
+EP300,GPS2,840,Histone acetyltransferase,gene activation
+EP300,CAMK2B,903,Histone acetyltransferase,gene activation
+EP300,HNRNPU,821,Histone acetyltransferase,gene activation
+EP300,CDK1,726,Histone acetyltransferase,gene activation
+EP300,SMAD1,835,Histone acetyltransferase,gene activation
+EP300,GATA4,973,Histone acetyltransferase,gene activation
+EP300,H3C7,814,Histone acetyltransferase,gene activation
+CREBBP,CREB3L3,910,Histone acetyltransferase,gene activation
+CREBBP,HDAC7,712,Histone acetyltransferase,gene activation
+CREBBP,SIRT1,754,Histone acetyltransferase,gene activation
+CREBBP,MAPK1,803,Histone acetyltransferase,gene activation
+CREBBP,NFKBIA,741,Histone acetyltransferase,gene activation
+CREBBP,MYBL2,768,Histone acetyltransferase,gene activation
+CREBBP,KAT2A,964,Histone acetyltransferase,gene activation
+CREBBP,HDAC5,812,Histone acetyltransferase,gene activation
+CREBBP,NFKB1,913,Histone acetyltransferase,gene activation
+CREBBP,CCND1,986,Histone acetyltransferase,gene activation
+CREBBP,NR3C1,943,Histone acetyltransferase,gene activation
+CREBBP,EGR1,834,Histone acetyltransferase,gene activation
+CREBBP,EGR2,920,Histone acetyltransferase,gene activation
+CREBBP,SNAI1,759,Histone acetyltransferase,gene activation
+CREBBP,H4C6,995,Histone acetyltransferase,gene activation
+CREBBP,SOX9,754,Histone acetyltransferase,gene activation
+CREBBP,MYOD1,923,Histone acetyltransferase,gene activation
+CREBBP,RARA,889,Histone acetyltransferase,gene activation
+CREBBP,H3-3B,985,Histone acetyltransferase,gene activation
+CREBBP,NOTCH2,818,Histone acetyltransferase,gene activation
+CREBBP,MDM2,909,Histone acetyltransferase,gene activation
+CREBBP,CDH1,744,Histone acetyltransferase,gene activation
+CREBBP,ATF1,746,Histone acetyltransferase,gene activation
+CREBBP,SMAD2,986,Histone acetyltransferase,gene activation
+CREBBP,KMT2C,822,Histone acetyltransferase,gene activation
+CREBBP,YY1,951,Histone acetyltransferase,gene activation
+CREBBP,MAML2,888,Histone acetyltransferase,gene activation
+CREBBP,ARNTL,983,Histone acetyltransferase,gene activation
+CREBBP,H3C14,907,Histone acetyltransferase,gene activation
+CREBBP,CDK8,702,Histone acetyltransferase,gene activation
+CREBBP,HDAC8,721,Histone acetyltransferase,gene activation
+CREBBP,E2F3,802,Histone acetyltransferase,gene activation
+CREBBP,PML,829,Histone acetyltransferase,gene activation
+CREBBP,SMARCA2,740,Histone acetyltransferase,gene activation
+CREBBP,PTOV1,700,Histone acetyltransferase,gene activation
+CREBBP,KMT2D,870,Histone acetyltransferase,gene activation
+CREBBP,STAT4,702,Histone acetyltransferase,gene activation
+CREBBP,H4C1,903,Histone acetyltransferase,gene activation
+CREBBP,CDK2,918,Histone acetyltransferase,gene activation
+CREBBP,AKT1,854,Histone acetyltransferase,gene activation
+CREBBP,CAMK2B,910,Histone acetyltransferase,gene activation
+CREBBP,H3C7,907,Histone acetyltransferase,gene activation
+CREBBP,SMAD1,782,Histone acetyltransferase,gene activation
+CREBBP,TFDP1,775,Histone acetyltransferase,gene activation
+CREBBP,KAT6A,939,Histone acetyltransferase,gene activation
+CREBBP,SRCAP,944,Histone acetyltransferase,gene activation
+CREBBP,KDM6A,811,Histone acetyltransferase,gene activation
+CREBBP,H4C13,903,Histone acetyltransferase,gene activation
+CREBBP,KLF5,707,Histone acetyltransferase,gene activation
+CREBBP,H3C11,907,Histone acetyltransferase,gene activation
+CREBBP,GTF2B,769,Histone acetyltransferase,gene activation
+CREBBP,MAPK3,701,Histone acetyltransferase,gene activation
+CREBBP,H2AZ1,774,Histone acetyltransferase,gene activation
+CREBBP,H4C12,903,Histone acetyltransferase,gene activation
+CREBBP,FOS,943,Histone acetyltransferase,gene activation
+CREBBP,H3C15,907,Histone acetyltransferase,gene activation
+CREBBP,TCF12,937,Histone acetyltransferase,gene activation
+CREBBP,EPAS1,986,Histone acetyltransferase,gene activation
+CREBBP,NCOA6,962,Histone acetyltransferase,gene activation
+CREBBP,APP,781,Histone acetyltransferase,gene activation
+CREBBP,STAT5B,934,Histone acetyltransferase,gene activation
+CREBBP,H3C8,907,Histone acetyltransferase,gene activation
+CREBBP,FOXO3,995,Histone acetyltransferase,gene activation
+CREBBP,RBPJL,926,Histone acetyltransferase,gene activation
+CREBBP,MYB,999,Histone acetyltransferase,gene activation
+CREBBP,NCOR2,872,Histone acetyltransferase,gene activation
+CREBBP,HIPK2,805,Histone acetyltransferase,gene activation
+CREBBP,CITED2,995,Histone acetyltransferase,gene activation
+CREBBP,NCOA2,997,Histone acetyltransferase,gene activation
+CREBBP,KPNA2,760,Histone acetyltransferase,gene activation
+CREBBP,H4C4,903,Histone acetyltransferase,gene activation
+CREBBP,CTBP1,820,Histone acetyltransferase,gene activation
+CREBBP,PRKACG,835,Histone acetyltransferase,gene activation
+CREBBP,PPARG,998,Histone acetyltransferase,gene activation
+CREBBP,CLOCK,976,Histone acetyltransferase,gene activation
+CREBBP,CEBPD,710,Histone acetyltransferase,gene activation
+CREBBP,NCOR1,947,Histone acetyltransferase,gene activation
+CREBBP,ATXN3,778,Histone acetyltransferase,gene activation
+CREBBP,H3C1,989,Histone acetyltransferase,gene activation
+CREBBP,CTNNB1,999,Histone acetyltransferase,gene activation
+CREBBP,PPARGC1A,860,Histone acetyltransferase,gene activation
+CREBBP,H3-5,959,Histone acetyltransferase,gene activation
+CREBBP,STAT6,957,Histone acetyltransferase,gene activation
+CREBBP,IRF5,718,Histone acetyltransferase,gene activation
+CREBBP,ETS2,817,Histone acetyltransferase,gene activation
+CREBBP,KMT2A,995,Histone acetyltransferase,gene activation
+CREBBP,ONECUT1,715,Histone acetyltransferase,gene activation
+CREBBP,H4C15,903,Histone acetyltransferase,gene activation
+CREBBP,E2F1,882,Histone acetyltransferase,gene activation
+CREBBP,H4C3,903,Histone acetyltransferase,gene activation
+CREBBP,NOTCH1,783,Histone acetyltransferase,gene activation
+CREBBP,SP1,992,Histone acetyltransferase,gene activation
+CREBBP,CDKN2A,751,Histone acetyltransferase,gene activation
+CREBBP,CCNA2,764,Histone acetyltransferase,gene activation
+CREBBP,EID3,714,Histone acetyltransferase,gene activation
+CREBBP,KLF1,808,Histone acetyltransferase,gene activation
+CREBBP,H3C4,907,Histone acetyltransferase,gene activation
+CREBBP,H2BC21,776,Histone acetyltransferase,gene activation
+CREBBP,RBPJ,939,Histone acetyltransferase,gene activation
+CREBBP,EID1,705,Histone acetyltransferase,gene activation
+CREBBP,SUMO1,998,Histone acetyltransferase,gene activation
+CREBBP,CREB5,925,Histone acetyltransferase,gene activation
+CREBBP,TCF7L1,921,Histone acetyltransferase,gene activation
+CREBBP,ATF4,987,Histone acetyltransferase,gene activation
+CREBBP,REL,753,Histone acetyltransferase,gene activation
+CREBBP,H4C14,903,Histone acetyltransferase,gene activation
+CREBBP,CARM1,981,Histone acetyltransferase,gene activation
+CREBBP,IRF3,999,Histone acetyltransferase,gene activation
+CREBBP,NUP98,815,Histone acetyltransferase,gene activation
+CREBBP,EGR3,919,Histone acetyltransferase,gene activation
+CREBBP,CDC27,706,Histone acetyltransferase,gene activation
+CREBBP,H3C2,916,Histone acetyltransferase,gene activation
+CREBBP,POU1F1,780,Histone acetyltransferase,gene activation
+CREBBP,H3C10,907,Histone acetyltransferase,gene activation
+CREBBP,ARNT,968,Histone acetyltransferase,gene activation
+CREBBP,AIRE,733,Histone acetyltransferase,gene activation
+CREBBP,USP7,751,Histone acetyltransferase,gene activation
+CREBBP,CIITA,753,Histone acetyltransferase,gene activation
+CREBBP,H2BC3,778,Histone acetyltransferase,gene activation
+CREBBP,HDAC9,824,Histone acetyltransferase,gene activation
+CREBBP,IRF7,976,Histone acetyltransferase,gene activation
+CREBBP,HDAC2,934,Histone acetyltransferase,gene activation
+CREBBP,NCOA3,999,Histone acetyltransferase,gene activation
+CREBBP,PRKACA,835,Histone acetyltransferase,gene activation
+CREBBP,STAT2,997,Histone acetyltransferase,gene activation
+CREBBP,HELZ2,942,Histone acetyltransferase,gene activation
+CREBBP,BNIP3L,771,Histone acetyltransferase,gene activation
+CREBBP,CRTC2,984,Histone acetyltransferase,gene activation
+CREBBP,KLF4,867,Histone acetyltransferase,gene activation
+CREBBP,CAMK2A,919,Histone acetyltransferase,gene activation
+CREBBP,MED1,740,Histone acetyltransferase,gene activation
+CREBBP,KAT2B,999,Histone acetyltransferase,gene activation
+CREBBP,CHUK,824,Histone acetyltransferase,gene activation
+CREBBP,FGFR1,923,Histone acetyltransferase,gene activation
+CREBBP,H4-16,905,Histone acetyltransferase,gene activation
+CREBBP,UBE2I,908,Histone acetyltransferase,gene activation
+CREBBP,LEF1,961,Histone acetyltransferase,gene activation
+CREBBP,KDM5A,701,Histone acetyltransferase,gene activation
+CREBBP,AR,960,Histone acetyltransferase,gene activation
+CREBBP,TCF4,916,Histone acetyltransferase,gene activation
+CREBBP,SMARCA4,944,Histone acetyltransferase,gene activation
+CREBBP,HDAC3,873,Histone acetyltransferase,gene activation
+CREBBP,SIN3A,790,Histone acetyltransferase,gene activation
+CREBBP,STAT1,999,Histone acetyltransferase,gene activation
+CREBBP,CREB3L4,917,Histone acetyltransferase,gene activation
+CREBBP,ARID1A,849,Histone acetyltransferase,gene activation
+CREBBP,CITED1,809,Histone acetyltransferase,gene activation
+CREBBP,CCND3,861,Histone acetyltransferase,gene activation
+CREBBP,CDKN1A,904,Histone acetyltransferase,gene activation
+CREBBP,ESR1,993,Histone acetyltransferase,gene activation
+CREBBP,H3C3,914,Histone acetyltransferase,gene activation
+CREBBP,TCF3,917,Histone acetyltransferase,gene activation
+CREBBP,BRCA1,968,Histone acetyltransferase,gene activation
+CREBBP,IKBKB,801,Histone acetyltransferase,gene activation
+CREBBP,HNF1A,751,Histone acetyltransferase,gene activation
+CREBBP,RBBP4,811,Histone acetyltransferase,gene activation
+CREBBP,PPARA,838,Histone acetyltransferase,gene activation
+CREBBP,DAXX,842,Histone acetyltransferase,gene activation
+CREBBP,RBBP7,812,Histone acetyltransferase,gene activation
+CREBBP,HNF4A,960,Histone acetyltransferase,gene activation
+CREBBP,H4C2,905,Histone acetyltransferase,gene activation
+CREBBP,NCOA1,999,Histone acetyltransferase,gene activation
+CREBBP,THRA,706,Histone acetyltransferase,gene activation
+CREBBP,TCF7,920,Histone acetyltransferase,gene activation
+CREBBP,GREB1,826,Histone acetyltransferase,gene activation
+CREBBP,MAFK,735,Histone acetyltransferase,gene activation
+CREBBP,H4C9,903,Histone acetyltransferase,gene activation
+CREBBP,BCL2,739,Histone acetyltransferase,gene activation
+CREBBP,TCF7L2,966,Histone acetyltransferase,gene activation
+CREBBP,HDAC6,742,Histone acetyltransferase,gene activation
+CREBBP,CREB3,917,Histone acetyltransferase,gene activation
+CREBBP,CREB3L2,921,Histone acetyltransferase,gene activation
+CREBBP,STAT5A,975,Histone acetyltransferase,gene activation
+CREBBP,TDG,896,Histone acetyltransferase,gene activation
+CREBBP,MYC,945,Histone acetyltransferase,gene activation
+CREBBP,ETS1,895,Histone acetyltransferase,gene activation
+CREBBP,RUNX2,783,Histone acetyltransferase,gene activation
+CREBBP,PARP1,738,Histone acetyltransferase,gene activation
+CREBBP,THRB,709,Histone acetyltransferase,gene activation
+CREBBP,GATA3,801,Histone acetyltransferase,gene activation
+CREBBP,POLR2A,779,Histone acetyltransferase,gene activation
+CREBBP,CEBPB,880,Histone acetyltransferase,gene activation
+CREBBP,CDH2,934,Histone acetyltransferase,gene activation
+CREBBP,HIF1A,999,Histone acetyltransferase,gene activation
+CREBBP,H3-2,959,Histone acetyltransferase,gene activation
+CREBBP,SNW1,843,Histone acetyltransferase,gene activation
+CREBBP,CEBPA,711,Histone acetyltransferase,gene activation
+CREBBP,MAML1,903,Histone acetyltransferase,gene activation
+CREBBP,HDAC4,745,Histone acetyltransferase,gene activation
+CREBBP,CITED4,841,Histone acetyltransferase,gene activation
+CREBBP,FOXO4,984,Histone acetyltransferase,gene activation
+CREBBP,RPS6KA1,847,Histone acetyltransferase,gene activation
+CREBBP,SREBF1,845,Histone acetyltransferase,gene activation
+CREBBP,HTT,997,Histone acetyltransferase,gene activation
+CREBBP,H3-4,986,Histone acetyltransferase,gene activation
+CREBBP,HDAC1,960,Histone acetyltransferase,gene activation
+CREBBP,H4C11,903,Histone acetyltransferase,gene activation
+CREBBP,PAX6,855,Histone acetyltransferase,gene activation
+CREBBP,H3C6,913,Histone acetyltransferase,gene activation
+CREBBP,H4C8,903,Histone acetyltransferase,gene activation
+CREBBP,CREB1,999,Histone acetyltransferase,gene activation
+CREBBP,TBL1XR1,706,Histone acetyltransferase,gene activation
+CREBBP,SMAD3,995,Histone acetyltransferase,gene activation
+CREBBP,EWSR1,728,Histone acetyltransferase,gene activation
+CREBBP,FOXO1,993,Histone acetyltransferase,gene activation
+CREBBP,RXRA,977,Histone acetyltransferase,gene activation
+CREBBP,SETD2,805,Histone acetyltransferase,gene activation
+CREBBP,MAML3,851,Histone acetyltransferase,gene activation
+CREBBP,KHDRBS1,776,Histone acetyltransferase,gene activation
+CREBBP,BRD4,710,Histone acetyltransferase,gene activation
+CREBBP,CREM,845,Histone acetyltransferase,gene activation
+CREBBP,MED12,738,Histone acetyltransferase,gene activation
+CREBBP,FBXW7,728,Histone acetyltransferase,gene activation
+CREBBP,HDAC11,761,Histone acetyltransferase,gene activation
+CREBBP,ATF2,992,Histone acetyltransferase,gene activation
+CREBBP,H4C5,903,Histone acetyltransferase,gene activation
+CREBBP,EBF1,834,Histone acetyltransferase,gene activation
+CREBBP,SREBF2,760,Histone acetyltransferase,gene activation
+CREBBP,CREB3L1,923,Histone acetyltransferase,gene activation
+CREBBP,RUNX1,977,Histone acetyltransferase,gene activation
+CREBBP,SRC,940,Histone acetyltransferase,gene activation
+CREBBP,H3C13,979,Histone acetyltransferase,gene activation
+CREBBP,RELA,999,Histone acetyltransferase,gene activation
+CREBBP,PRKACB,835,Histone acetyltransferase,gene activation
+CREBBP,PRMT1,778,Histone acetyltransferase,gene activation
+CREBBP,KAT5,817,Histone acetyltransferase,gene activation
+CREBBP,FOXM1,834,Histone acetyltransferase,gene activation
+CREBBP,NFE2L2,942,Histone acetyltransferase,gene activation
+CREBBP,STAT3,935,Histone acetyltransferase,gene activation
+CREBBP,SMAD4,917,Histone acetyltransferase,gene activation
+CREBBP,CAMK4,937,Histone acetyltransferase,gene activation
+CREBBP,JUN,994,Histone acetyltransferase,gene activation
+CREBBP,H3-3A,921,Histone acetyltransferase,gene activation
+CREBBP,EZH2,818,Histone acetyltransferase,gene activation
+CREBBP,H3C12,984,Histone acetyltransferase,gene activation
+CREBBP,MED25,732,Histone acetyltransferase,gene activation
+CREBBP,TP53,999,Histone acetyltransferase,gene activation
+CREBBP,BDNF,886,Histone acetyltransferase,gene activation
+CREBBP,EP300,999,Histone acetyltransferase,gene activation
+ARID1A,ACTL6B,978,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,CCND1,752,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,NR3C1,758,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,MSH2,974,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,MSH6,726,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C6,954,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,DPF2,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,FUS,703,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCC1,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H3-3B,884,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,KRAS,873,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,CDK4,713,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCD3,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,KMT2C,823,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,CREBBP,849,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,EP300,855,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BRD4,818,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,PIK3CA,913,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,DNMT3A,720,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,RB1,786,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,TP53,961,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,PPARG,914,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,NCR1,720,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,KMT2D,813,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,TERT,781,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BICRAL,952,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,EZH2,877,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,DPF3,995,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C9,800,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BAZ1B,713,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCD2,997,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,KDM3B,762,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,ARID1B,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C2,800,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,CHD4,726,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,ACTB,995,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,ATRX,782,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,ACTL6A,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SS18L1,887,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BRCA1,801,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCD1,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4-16,805,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCA4,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,PPP2R1A,914,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SS18,993,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BRD9,996,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H3-3A,854,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H2BC17,833,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C5,808,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCE1,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C11,800,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,HDAC1,793,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C8,800,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H2AC21,805,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BICRA,980,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BANF1,734,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BCL11B,944,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,PGR,752,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,ACTG1,841,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,ARID2,998,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,ADNP,754,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCB1,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BCL6,720,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BCL7C,995,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,PTEN,743,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C12,803,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BRD7,972,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C13,800,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,DPF1,998,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SOX2,741,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCC2,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BRAF,702,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,KDM3A,738,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C1,800,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,SMARCA2,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BCL7A,996,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BCL11A,975,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,PBRM1,999,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C14,800,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,BCL7B,992,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,PHF10,991,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C15,800,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,CDKN2A,720,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C3,803,SWI/SNF chromatin remodeler,chromatin accessibility
+ARID1A,H4C4,802,SWI/SNF chromatin remodeler,chromatin accessibility
+SMARCA4,KDM4B,783,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ACTL6B,980,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CBX5,923,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,DDX5,782,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,KAT2A,947,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CCND1,718,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NR3C1,924,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,WDR77,798,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,EGR2,843,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C6,990,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,IRF1,730,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,MYOD1,957,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,DPF2,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,TRIM28,893,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,FUS,873,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCC1,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3-3B,983,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,KDM6B,935,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,VHL,917,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,DDB2,813,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CDK4,750,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,POU5F1,818,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMAD2,717,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCD3,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,YY1,709,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RCOR1,786,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ELOB,820,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CREBBP,944,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SETD1A,714,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,EP300,969,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BRD4,957,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,KAT2B,946,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,TOP2B,719,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,DNMT3A,957,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,LEF1,758,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RB1,979,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NCOR1,820,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,TP53,993,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SHPRH,768,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NONO,868,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ATM,786,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,TCF7L1,715,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCA5,908,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PPARG,966,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NCR1,720,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,STAT5B,783,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BMP10,730,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2AZ1,831,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RAD21,772,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RUNX1,761,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CEBPB,788,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BPTF,777,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,HLTF,708,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,TERT,990,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,TBX5,885,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RBM14,716,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ZMIZ2,705,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BICRAL,974,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,STAT2,799,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SWI5,750,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RUVBL1,711,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PRMT5,977,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,EZH2,909,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PKM,796,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ARID1A,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2BC4,869,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SOX2,823,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCE1,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,STK11,920,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CARM1,784,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,KDM3B,745,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NKX2-5,910,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SP1,812,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BRWD1,949,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,IKZF1,715,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2AC20,820,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2AC21,849,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SS18L1,859,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C13,946,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ARID2,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CBX3,763,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SUV39H1,847,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3-5,936,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCB1,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,STAT5A,702,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PHF10,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,FOXM1,750,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BAZ1B,874,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2BC8,837,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C6,949,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PAX6,708,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ALK,736,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C8,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3-4,966,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,HDAC1,989,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C11,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CREB1,818,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,EWSR1,728,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,POLR2A,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BANF1,998,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ELOC,850,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,EHMT2,801,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NF1,751,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BICRA,990,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,HIF1A,715,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3-2,913,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BCL11B,967,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C7,765,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SS18,996,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2BC7,832,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2BC17,872,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3-3A,930,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C12,995,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BRD9,998,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RUVBL2,732,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2AC6,848,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C5,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ATF3,908,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,DNMT1,759,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,FBXW7,808,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ZEB1,962,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BAZ1A,776,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NR4A1,741,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ACTL6A,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,STAT1,850,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SIN3A,948,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2BC6,830,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,WDR5,720,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCD1,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,FANCA,925,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ESR1,859,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C3,950,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BRCA1,983,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RBBP4,755,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2BC10,830,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NFATC1,746,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4-16,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2AX,876,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,AR,874,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C9,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,DPF3,990,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ARID1B,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCD2,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PARP1,996,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,MYC,974,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,MECP2,729,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C2,930,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ACTB,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,POTEF,737,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CHD4,966,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C15,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C3,930,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCA1,958,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C4,931,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CDKN2A,811,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C4,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CTNNB1,998,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C1,970,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BCL7A,997,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,HDAC9,935,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,HDAC2,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PBX1,755,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BCL11A,956,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,KLF4,742,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C14,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2BC21,961,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,GNL3,878,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PBRM1,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C2,944,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C10,932,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BCL7B,993,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CHD7,787,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,RAD51,765,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCC2,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C7,931,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,GATA4,853,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,KDM3A,972,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,MRTFA,743,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H2AC18,822,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,CTCF,738,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SMARCA2,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C1,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,TAF1,736,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,ACTG1,884,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C8,933,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,SOX10,937,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,NCOA2,713,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BCL7C,994,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,KDM1A,894,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,HSF1,702,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H3C11,931,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,KDM6A,848,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,DPF1,987,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C13,930,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BRD7,999,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,BRD2,885,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,H4C12,929,SWI/SNF ATPase,chromatin remodeling
+SMARCA4,PTEN,705,SWI/SNF ATPase,chromatin remodeling
+IDH1,DLD,777,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ACO2,998,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,IDH3G,996,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GSR,776,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,PDHX,727,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,TPI1,704,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,FLT3,814,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GOT2,952,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,KRAS,762,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,PDGFRA,727,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,IREB2,867,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,DHTKD1,784,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,PIK3CA,713,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,DNMT3A,797,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,SDHA,852,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,L2HGDH,721,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,TP53,845,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,PGD,877,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,EGFR,795,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GLUD1,973,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,DLAT,770,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,U2AF1,763,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ACOX1,778,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,NPM1,800,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ALDH1A1,739,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,IDH3A,987,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,RUNX1,720,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,MGMT,934,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GOT1L1,883,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ASL,875,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ACO1,998,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,TERT,781,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ALDH5A1,891,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,D2HGDH,895,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,NDUFS8,779,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,EZH2,721,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,TALDO1,727,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,MDH2,970,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GLUD2,963,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,IDH2,961,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,DLST,815,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,CS,993,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GPT2,879,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,RIMKLB,816,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,NF1,750,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,FH,957,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,H3-3A,726,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,NRAS,777,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ME1,752,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GOT1,929,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,PTEN,841,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,PGK1,726,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ATRX,888,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,OGDHL,981,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,SDHB,887,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ASXL1,899,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,NADK,886,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GLDC,711,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,SRSF2,769,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,G6PD,781,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,SUCLG1,856,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,NIT2,825,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GPT,890,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ETV6,709,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GAPDH,704,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,NFE2L2,849,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,OGDH,990,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,FGFR2,762,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ENO1,765,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,HSD17B4,813,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,CDKN2A,744,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,SUCLG2,784,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,IDH3B,988,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,TET2,914,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,LDHA,826,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,GPI,740,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ENO2,707,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,H6PD,801,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,BRAF,799,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,SUCLA2,854,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ACLY,935,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,PC,761,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,BCAT1,709,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,CEBPA,710,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,ADSL,860,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,MYC,740,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH1,IL4I1,814,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,DLD,770,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ACO2,998,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,IDH3G,998,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GSR,733,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,PDHX,738,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,TPI1,748,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,FLT3,797,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GOT2,960,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ACSS2,748,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,KRAS,712,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,IREB2,864,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,DHTKD1,796,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,NNT,898,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,DNMT3A,793,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SDHA,869,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,L2HGDH,881,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,TP53,783,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,PGD,805,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,EGFR,720,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GLUD1,972,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,DLAT,775,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,LDHAL6A,702,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,U2AF1,731,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,NPM1,791,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,IDH3A,997,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,RUNX1,720,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,MGMT,893,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GOT1L1,885,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ASL,880,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ACO1,998,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ALDH5A1,894,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,D2HGDH,933,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,NDUFS8,790,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,EZH2,708,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,PKM,730,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,MDH2,985,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GLUD2,959,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GPI,806,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,NRAS,768,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,LDHA,820,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SOD2,794,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,TET2,871,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,RIMKLB,816,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,IDH3B,997,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SUCLG2,798,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GPT2,883,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,BRAF,731,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SUCLA2,857,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,H6PD,803,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,DLST,823,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,MDH1B,712,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,OGDHL,983,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ASXL1,818,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,CS,994,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,OGDH,991,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GPT,892,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,NIT2,820,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,PGK1,722,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ENO1,785,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ADSL,858,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GOT1,916,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,FH,934,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,FRYL,716,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GAPDH,786,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SUCLG1,878,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SIRT3,921,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,IDH1,961,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ATRX,727,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,NADK,881,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,IL4I1,815,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,PC,769,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,GLDC,705,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SDHB,885,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SIRT5,811,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SRSF2,732,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,ACLY,900,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,G6PD,816,Isocitrate dehydrogenase,2-HG → blocks TET/KDM
+IDH2,SHMT2,714,Isocitrate dehydrogenase,2-HG → blocks TET/KDM

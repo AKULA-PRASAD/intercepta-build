@@ -1,0 +1,21 @@
+gene,type,rationale,chembl_id,n_compounds,n_potent
+AR,prostate-selective,"Primary driver, amplified in 58%",,0,0
+KLK3,prostate-selective,"PSA, 37.9x selective",CHEMBL2000,957,738
+FOLH1,prostate-selective,"PSMA, 10.2x selective, radioligand target",CHEMBL1892,516,542
+TMPRSS2,prostate-selective,"4.6x selective, fusion partner",CHEMBL1795140,45,32
+PARP1,synthetic-lethality,PARPi target for BRCA-mutant (13%),,0,0
+PARP2,synthetic-lethality,PARPi target,CHEMBL5366,724,595
+PIK3CA,escape-route,PI3K activates when PTEN lost (31%),CHEMBL4005,940,688
+AKT1,escape-route,PI3K/AKT/mTOR escape pathway,CHEMBL1255161,32,30
+MTOR,escape-route,mTOR downstream of PI3K,CHEMBL2842,888,771
+CDK4,cell-cycle,"Cell cycle, connected to RB1 (12%)",,0,0
+CDK6,cell-cycle,Cell cycle,CHEMBL2508,748,914
+AURKA,cell-cycle,"Aurora kinase, mitotic",CHEMBL5910,2,1
+EZH2,epigenetic,"Polycomb, NE differentiation",CHEMBL2189110,440,844
+BRAF,MAPK,MAPK escape route,CHEMBL5145,725,645
+MDM2,p53-pathway,"p53 regulator, targetable",CHEMBL5023,763,584
+CHEK1,DDR,DNA damage checkpoint,CHEMBL4630,892,831
+CHEK2,DDR,DNA damage checkpoint,CHEMBL2527,774,680
+NR3C1,escape-route,Glucocorticoid receptor substitutes AR,CHEMBL2034,505,910
+BCL2,apoptosis,"Anti-apoptotic, venetoclax target",CHEMBL4860,783,680
+MCL1,apoptosis,BCL2 family resistance mechanism,CHEMBL4361,954,68

@@ -1,0 +1,19 @@
+{
+  "Emax": {
+    "value": 0.153,
+    "derivation": "GDSC_invitro * in_vivo_correction",
+    "GDSC_invitro": 0.85,
+    "correction_factor": 0.18,
+    "correction_range": [
+      0.06,
+      0.27
+    ],
+    "correction_components": {
+      "growth_fraction": "0.3-0.5 (literature)",
+      "tumor_penetration": "0.3-0.6 (Ernsting 2013)",
+      "microenvironment": "0.7-0.9 (literature)"
+    },
+    "tuned_to_clinical": false,
+    "note": "Center of correction range, not matched to outcome"
+  }
+}

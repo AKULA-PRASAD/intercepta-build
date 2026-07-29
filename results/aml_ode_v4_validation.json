@@ -1,0 +1,71 @@
+{
+  "model": "AML two-population ODE v4 (published parameters)",
+  "parameters": {
+    "r_blast": 0.039,
+    "d_blast": 0.026,
+    "r_lsc": 0.003,
+    "d_lsc": 0.001,
+    "K": 1.0,
+    "diff_rate": 0.01,
+    "dediff_base": 1e-06,
+    "dediff_stress": 0.0005,
+    "B0": 0.3,
+    "L0": 3e-07
+  },
+  "parameter_sources": {
+    "Tc": "Raza 1991, 5 AML patients, median 90h",
+    "GF": "BM biopsy labeling index 21%",
+    "OS_untreated": "median 2-4 months, multiple studies",
+    "LSC_freq": "Dick lab, 1 in 10^6, confirmed by LDA",
+    "proliferation_dynamics": "Taussig Nature Comms 2018"
+  },
+  "untreated": {
+    "cr": false,
+    "cr_mo": null,
+    "rel_mo": 1.0,
+    "os_mo": null,
+    "nadir": 0.3000003,
+    "nadir_day": 0.0,
+    "lsc_at_nadir": 0.0,
+    "final_total": 0.3330140384394976,
+    "final_B": 0.332978620743544,
+    "final_L": 3.5417695953607064e-05
+  },
+  "induction_73": {
+    "cr": true,
+    "cr_mo": 0.2,
+    "rel_mo": 9.2,
+    "os_mo": null,
+    "nadir": 0.008039501765097464,
+    "nadir_day": 9.0,
+    "lsc_at_nadir": 0.0333,
+    "final_total": 0.3321641652864894,
+    "final_B": 0.33212813027384197,
+    "final_L": 3.603501264745254e-05
+  },
+  "venaza": {
+    "cr": true,
+    "cr_mo": 0.8,
+    "rel_mo": null,
+    "os_mo": null,
+    "nadir": 1.5176080240963825e-05,
+    "nadir_day": 542.0,
+    "lsc_at_nadir": 0.9114,
+    "final_total": 0.010152723740080222,
+    "final_B": 0.01015206957265491,
+    "final_L": 6.541674253121499e-07
+  },
+  "gilteritinib": {
+    "cr": true,
+    "cr_mo": 1.1,
+    "rel_mo": null,
+    "os_mo": null,
+    "nadir": 6.085477071016937e-05,
+    "nadir_day": 437.0,
+    "lsc_at_nadir": 0.8188,
+    "final_total": 0.0014885184925127388,
+    "final_B": 0.0014836492194136536,
+    "final_L": 4.869273099085274e-06
+  },
+  "note": "ALL parameters from published data. Zero tuning. One build."
+}

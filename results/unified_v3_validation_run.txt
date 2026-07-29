@@ -1,0 +1,38 @@
+/Users/kalki/miniconda3/lib/python3.13/site-packages/lifelines/fitters/coxph_fitter.py:1607: ConvergenceWarning: Newton-Raphson convergence completed successfully but norm(delta) is still high, 0.503. This may imply non-unique solutions to the maximum likelihood. Perhaps there is collinearity or complete separation in the dataset?
+
+  warnings.warn(
+/Users/kalki/INTERCEPTA/code/hr_estimator_fixed.py:101: RuntimeWarning: overflow encountered in exp
+  hr_ci_upper = float(np.exp(summary.loc['arm', 'coef upper 95%']))
+========================================================================
+INTERCEPTA UNIFIED ODE v3 — VALIDATION
+========================================================================
+Velocity data: ../results/velocity_star_latent_time.csv
+Cohort size:   50 patients per arm
+Random seed:   42 (reproducible)
+Endpoint:      Cox HR via lifelines on virtual cohort TTPs
+Parameters:    ONE set. No per-trial tuning.
+
+--- TAX-327 ---
+  Treatment: ['docetaxel']
+  Control:   ['mitoxantrone']
+  BRCA profile: overall
+  Cox HR: 0.000 [95% CI 0.000–inf]  log-rank p=2.34e-28
+  Median: ctrl=2.0mo  trt=5.6mo  benefit=+3.6mo
+  Events: ctrl=50/50  trt=50/50
+  Clinical HR: 0.76  |  Our HR: 0.000  |  FAIL
+
+--- PREVAIL ---
+  Treatment: ['ADT', 'enzalutamide']
+  Control:   ['ADT']
+  BRCA profile: overall
+  Cox HR: 0.470 [95% CI 0.314–0.704]  log-rank p=0.000173
+  Median: ctrl=13.8mo  trt=14.7mo  benefit=+0.9mo
+  Events: ctrl=50/50  trt=50/50
+Traceback (most recent call last):
+  File "/Users/kalki/INTERCEPTA/code/intercepta_unified_ode_v3.py", line 823, in <module>
+    run_validation(n_patients=args.n, save_path=args.out)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalki/INTERCEPTA/code/intercepta_unified_ode_v3.py", line 778, in run_validation
+    f"|  Our: {hr_res['median_trt_mo']:.1f}mo  "
+               ~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'median_trt_mo'

@@ -1,0 +1,7 @@
+{
+  "source": "Open Targets v26.03 + CARD 4.6MB downloaded",
+  "n_diseases": 642,
+  "n_gene_associations": 150114,
+  "n_unique_genes": 16430,
+  "honest": "Host factors from Open Targets. CARD downloaded but not parsed yet."
+}

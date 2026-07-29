@@ -1,0 +1,643 @@
+id,name
+GO_0009615,response to virus
+HP_0000010,Recurrent urinary tract infections
+HP_0001581,Recurrent skin infections
+HP_0002205,Recurrent respiratory infections
+HP_0002719,Recurrent infections
+HP_0002783,Recurrent lower respiratory tract infections
+HP_0002788,Recurrent upper respiratory tract infections
+HP_0004787,Fulminant hepatitis
+HP_0004798,Recurrent infection of the gastrointestinal tract
+HP_0006538,Recurrent bronchopulmonary infections
+HP_0011947,Respiratory tract infection
+HP_0012115,Hepatitis
+HP_0031690,Opportunistic infection
+HP_0031694,Severe adenovirus infection
+HP_0040187,Neonatal sepsis
+HP_0100806,Sepsis
+HP_0200119,Acute hepatitis
+HP_0410257,Neutrophilia in presence of infection
+MONDO_0000166,"encephalopathy, acute, infection-induced"
+MONDO_0000286,Epstein-Barr virus hepatitis
+MONDO_0000307,parasitic Ichthyosporea infectious disease
+MONDO_0000314,primary bacterial infectious disease
+MONDO_0000315,commensal bacterial infectious disease
+MONDO_0000316,opportunistic bacterial infectious disease
+MONDO_0000368,extrapulmonary tuberculosis
+MONDO_0000369,abdominal tuberculosis
+MONDO_0000565,infective endocarditis
+MONDO_0000890,Zika virus congenital syndrome
+MONDO_0000916,intestinal infectious disease
+MONDO_0001052,chronic fungal otitis externa
+MONDO_0001114,bacterial myocarditis
+MONDO_0001507,viral labyrinthitis
+MONDO_0001649,fungal esophagitis
+MONDO_0001678,intestinal tuberculosis
+MONDO_0001812,parasitic eyelid infestation
+MONDO_0001832,bacterial esophagitis
+MONDO_0002041,fungal infectious disease
+MONDO_0002137,noninfectious dermatoses of eyelid
+MONDO_0002270,viral gastritis
+MONDO_0002428,protozoa infectious disease
+MONDO_0002429,idiopathic interstitial pneumonia
+MONDO_0002646,viral laryngitis
+MONDO_0002812,infectious otitis interna
+MONDO_0002842,bacterial gastritis
+MONDO_0002843,fungal gastritis
+MONDO_0002875,parasitic ectoparasitic infectious disease
+MONDO_0003846,viral esophagitis
+MONDO_0004189,esophageal tuberculosis
+MONDO_0004272,urinary bladder tuberculosis
+MONDO_0004369,renal infectious disease
+MONDO_0004517,ureter tuberculosis
+MONDO_0004522,infectious peritonitis
+MONDO_0004649,anaerobic pneumonia
+MONDO_0004806,chronic eosinophilic pneumonia
+MONDO_0005247,bacterial urinary tract infection
+MONDO_0005784,hantavirus hemorrhagic fever with renal syndrome
+MONDO_0006751,Erysipelothrix infectious disease
+MONDO_0007818,"hyper-IgE recurrent infection syndrome 1, autosomal dominant"
+MONDO_0010455,"X-linked immunodeficiency with magnesium defect, Epstein-Barr virus infection and neoplasia"
+MONDO_0012839,pyogenic bacterial infections due to MyD88 deficiency
+MONDO_0013487,recurrent Neisseria infections due to factor D deficiency
+MONDO_0013576,recurrent infections associated with rare immunoglobulin isotypes deficiency
+MONDO_0013599,autoimmune enteropathy and endocrinopathy - susceptibility to chronic infections syndrome
+MONDO_0013607,monocytopenia with susceptibility to infections
+MONDO_0014715,primary immunodeficiency with post-measles-mumps-rubella vaccine viral infection
+MONDO_0014892,micrognathia-recurrent infections-behavioral abnormalities-mild intellectual disability syndrome
+MONDO_0015157,human herpesvirus 8-related tumor
+MONDO_0015289,infectious epithelial keratitis
+MONDO_0015821,mycosis fungoides and variants
+MONDO_0016087,progressive non-infectious anterior vertebral fusion
+MONDO_0016126,viral myositis
+MONDO_0016127,bacterial myositis
+MONDO_0016130,fungal myositis
+MONDO_0016468,toxin-mediated infectious botulism
+MONDO_0016511,infectious embryofetopathy
+MONDO_0017209,infectious posterior uveitis
+MONDO_0017210,infectious anterior uveitis
+MONDO_0017341,virus associated tumor
+MONDO_0017342,Epstein-Barr virus-related tumor
+MONDO_0017343,Epstein-Barr virus-associated lymphoproliferative disorder
+MONDO_0017344,Epstein-Barr virus-associated carcinoma
+MONDO_0017345,Epstein-Barr virus-associated mesenchymal tumor
+MONDO_0017346,Epstein-Barr virus-positive diffuse large B-cell lymphoma of the elderly
+MONDO_0017375,congenital enterovirus infection
+MONDO_0017381,congenital herpes simplex virus infection
+MONDO_0017634,non-infectious anterior uveitis
+MONDO_0017992,autoinflammatory syndrome with pyogenic bacterial infection and amylopectinosis
+MONDO_0018076,tuberculosis
+MONDO_0018087,viral hemorrhagic fever
+MONDO_0018109,fulminant viral hepatitis
+MONDO_0018316,fatal post-viral neurodegenerative disorder
+MONDO_0018317,growth retardation-mild developmental delay-chronic hepatitis syndrome
+MONDO_0018469,pulmonary non-tuberculous mycobacterial infection
+MONDO_0018661,Zika virus infectious disease
+MONDO_0018837,postinfectious vasculitis
+MONDO_0020010,infectious disorder of the nervous system
+MONDO_0020067,infectious encephalitis
+MONDO_0020068,postinfectious encephalitis
+MONDO_0020590,mycobacterial infectious disease
+MONDO_0020601,mosquito-borne viral encephalitis
+MONDO_0020656,human papillomavirus-related penile squamous cell carcinoma
+MONDO_0020657,human papillomavirus-related squamous cell carcinoma
+MONDO_0020753,Orthocoronavirinae infectious disease
+MONDO_0020944,fungal infection of eye
+MONDO_0020947,parasitic eye infection
+MONDO_0020950,viral eye infection
+MONDO_0021201,skin infection
+MONDO_0021666,ear infection
+MONDO_0021669,post-infectious disorder
+MONDO_0021677,post-infectious neuralgia
+MONDO_0021678,gram-negative bacterial infections
+MONDO_0021679,gram-positive bacterial infections
+MONDO_0021682,viral sexually transmitted disease
+MONDO_0021747,Acanthamoeba infectious disease
+MONDO_0021804,silicotuberculosis
+MONDO_0021948,cutaneous tuberculosis
+MONDO_0022529,BK-virus nephropathy
+MONDO_0023143,fetal enterovirus syndrome
+MONDO_0023149,infection due to clostridium perfringens
+MONDO_0023161,viral myocarditis
+MONDO_0023164,viral pericarditis
+MONDO_0023557,infective vaginitis
+MONDO_0023865,corneal infection
+MONDO_0024294,skin disorder caused by infection
+MONDO_0024295,skin disease caused by bacterial infection
+MONDO_0024315,parasitic endophthalmitis
+MONDO_0024318,viral infection of central nervous system
+MONDO_0024330,infectious otitis media
+MONDO_0024352,viral respiratory tract infection
+MONDO_0024354,cytomegalovirus pneumonia
+MONDO_0024355,respiratory tract infectious disorder
+MONDO_0024389,anaerobic bacteria infectious disease
+MONDO_0024487,nail infection
+MONDO_0024610,parasitic skin disorder
+MONDO_0024618,poliovirus infection
+MONDO_0024620,meningitis caused by poliovirus
+MONDO_0024969,"parasitic disease, non-human animal"
+MONDO_0025294,tick-borne infectious disease
+MONDO_0025371,Parvoviridae infectious disease
+MONDO_0025598,pneumonia caused by chlamydia
+MONDO_0030069,"hyper-IgE recurrent infection syndrome 5, autosomal recessive"
+MONDO_0030602,Klebsiella pneumonia
+MONDO_0030603,Klebsiella infectious disease
+MONDO_0030813,immunodeficiency 101 (varicella zoster virus-specific)
+MONDO_0030970,"immunodeficiency 106, susceptibility to viral infections"
+MONDO_0031030,"immunodeficiency 107, susceptibility to invasive staphylococcus aureus infection"
+MONDO_0032654,"hyper-IgE recurrent infection syndrome 3, autosomal recessive"
+MONDO_0032848,"immunodeficiency 65, susceptibility to viral infections"
+MONDO_0033821,fungal keratitis
+MONDO_0034103,infection-related hemolytic uremic syndrome
+MONDO_0037398,pneumonia caused by pseudomonas aeruginosa infection
+MONDO_0040732,Pseudomonas aeruginosa infectious disease
+MONDO_0040998,Pasteurella multocida infectious disease
+MONDO_0041806,drug-resistant tuberculosis
+MONDO_0041825,bacterial meningitis caused by gram-negative bacteria
+MONDO_0041850,pneumonia caused by gram negative bacteria
+MONDO_0041879,staphylococcus aureus pneumonia
+MONDO_0041903,gonococcal infection of joint
+MONDO_0042485,infective arthritis
+MONDO_0042488,Cestode infectious disease
+MONDO_0042971,congenital herpes virus infection
+MONDO_0043424,digestive system infectious disorder
+MONDO_0043479,adenoviridae infectious disease
+MONDO_0043544,nosocomial infection
+MONDO_0043836,"tuberculosis, spinal"
+MONDO_0043885,eye infectious disorder
+MONDO_0043953,burkholderia infectious disease
+MONDO_0044750,lassa virus infectious disease
+MONDO_0100110,adenovirus renal infection
+MONDO_0100286,respiratory syncytial virus bronchiolitis
+MONDO_0100329,primary viral infectious disease
+MONDO_0100330,disease arising from reactivation of latent virus
+MONDO_0100353,HHV-7 infectious disease
+MONDO_0100370,acute hepatitis B virus infection
+MONDO_0600003,bacterial hemorrhagic fever
+MONDO_0700049,"infectious disease, non-human animal"
+MONDO_0700053,"viral infectious disease, non-human animal"
+MONDO_0700072,"Rhabdoviridae infectious disease, non-human animal"
+MONDO_0700203,"pestivirus infectious disease, non-human animal"
+MONDO_0700206,"Parvoviridae infectious disease, non-human animal"
+MONDO_0800131,"hyper-IgE recurrent infection syndrome 4A, autosomal dominant"
+MONDO_0859370,"respiratory infections, recurrent, and failure to thrive with or without diarrhea"
+MONDO_0957421,borna virus encephalitis
+MONDO_0957561,"encephalitis, acute, infection-induced, susceptibility to, 12"
+MONDO_0957807,"hyper-IgE syndrome 6, autosomal dominant, with recurrent infections"
+MONDO_0975847,autoimmune disease with susceptibility to mycobacterium tuberculosis
+MONDO_1030003,Mycoplasmoides infection
+MONDO_1040015,infectious disease with sepsis
+MONDO_1040019,Enterococcus infectious disease
+MONDO_8000003,streptococcus pneumoniae discitis
+MONDO_8000005,fungal discitis
+OBA_2040053,trait in response to antiviral drug
+OBA_2040193,level of fungal/metazoan cullin-1 in blood serum
+OBA_2040384,level of poliovirus receptor in blood serum
+OBA_2040416,level of baculoviral IAP repeat-containing protein 7 in blood serum
+OBA_2040801,level of baculoviral IAP repeat-containing protein 2 in blood serum
+OBA_2040814,level of BCL2/adenovirus E1B 19 kDa protein-interacting protein 3 in blood serum
+OBA_2040815,level of BCL2/adenovirus E1B 19 kDa protein-interacting protein 3-like in blood serum
+OBA_2041205,level of coxsackievirus and adenovirus receptor in blood serum
+OBA_2042417,level of modulator of retrovirus infection in blood serum
+OBA_2044278,level of antiviral innate immune response receptor RIG-I in blood serum
+OBA_2044558,level of endogenous retrovirus group V member 1 Env polyprotein in blood serum
+OBA_2045049,level of Sphingofungin B in blood serum
+OBA_2045258,susceptibility to urinary tract infection
+OBA_2051010,level of antiviral innate immune response receptor RIG-I in blood
+OBA_2051181,level of baculoviral IAP repeat-containing protein 4 in blood
+OBA_2051260,level of BCL2/adenovirus E1B 19 kDa protein-interacting protein 2 in blood
+OBA_2051394,level of ecotropic viral integration site 5 protein in blood
+OBA_2051463,level of hepatitis B virus X-interacting protein in blood
+OBA_2051523,level of mitochondrial antiviral-signaling protein in blood
+OBA_2052019,amount of hepatitis A virus cellular receptor 2 (human) in blood
+OBA_2052088,amount of baculoviral IAP repeat-containing protein 2 (human) in blood
+OBA_2052239,amount of mitochondrial antiviral-signaling protein (human) in blood
+OBA_2052278,amount of antiviral innate immune response receptor RIG-I (human) in blood
+OBA_2052413,amount of coxsackievirus and adenovirus receptor (human) in blood
+OBA_2052860,amount of poliovirus receptor (human) in blood
+OBA_2052873,amount of hepatitis A virus cellular receptor 1 (human) in blood
+OBA_2055889,level of endogenous retrovirus group V member 1 Env polyprotein (human) in cerebrospinal fluid
+OBA_2056097,level of baculoviral IAP repeat-containing protein 5 (human) in cerebrospinal fluid
+OBA_2056222,level of BCL2/adenovirus E1B 19 kDa protein-interacting protein 3-like (human) in cerebrospinal fluid
+OBA_2056541,level of antiviral innate immune response receptor RIG-I (human) in cerebrospinal fluid
+OBA_2057180,level of poliovirus receptor (human) in cerebrospinal fluid
+OBA_2057249,level of bactericidal permeability-increasing protein (human) in cerebrospinal fluid
+OBA_2058355,level of coxsackievirus and adenovirus receptor (human) in cerebrospinal fluid
+OBA_2058623,level of BCL2/adenovirus E1B 19 kDa protein-interacting protein 3 (human) in cerebrospinal fluid
+OBA_2058694,level of baculoviral IAP repeat-containing protein 3 (human) in cerebrospinal fluid
+OBA_2058695,level of baculoviral IAP repeat-containing protein 2 (human) in cerebrospinal fluid
+OBA_2080013,level of hepatitis A virus cellular receptor 2 (human) in cerebrospinal fluid
+OBA_2080325,level of hepatitis A virus cellular receptor 1 (human) in cerebrospinal fluid
+OBA_2081985,level of baculoviral IAP repeat-containing protein 7 (human) in cerebrospinal fluid
+OBA_2090002,level of anti-Helicobacter pylori IgG in blood
+OBI_1110021,infection process
+EFO_0000180,HIV-1 infection
+EFO_0000544,infection
+EFO_0000584,infectious meningitis
+EFO_0000648,period of infection
+EFO_0000763,viral disease
+EFO_0000764,HIV infection
+EFO_0000769,Epstein-Barr virus infection
+EFO_0000771,bacterial disease
+EFO_0000772,pneumococcal infection
+EFO_0000776,Aeromonas hydrophila infection
+EFO_0000778,anthrax infection
+EFO_0000779,Drosophila C virus infection
+EFO_0000780,Enterococcus faecalis infection
+EFO_0000781,Pectobacterium carotovorum infection
+EFO_0000782,Hibiscus chlorotic ringspot virus infection
+EFO_0001062,cytomegalovirus infection
+EFO_0001067,parasitic infection
+EFO_0001068,malaria
+EFO_0001076,Pseudomonas infection
+EFO_0001077,Pseudomonas aeruginosa CF5 infection
+EFO_0001078,Pseudomonas aeruginosa PA14 infection
+EFO_0001668,human papilloma virus infection
+EFO_0001675,simian immunodeficiency virus infection
+EFO_0002612,human herpesvirus 8 infection
+EFO_0002622,rotavirus infection
+EFO_0002629,viral cardiomyopathy
+EFO_0003033,bacteriemia
+EFO_0003047,hepatitis C virus infection
+EFO_0003103,urinary tract infection
+EFO_0003106,pneumonia
+EFO_0003932,bacterial vaginosis
+EFO_0003955,bacterial sexually transmitted disease
+EFO_0004196,viral human hepatitis infection
+EFO_0004197,hepatitis B virus infection
+EFO_0004220,chronic hepatitis C virus infection
+EFO_0004239,chronic hepatitis B virus infection
+EFO_0004249,meningococcal infection
+EFO_0004595,HIV mother to child transmission
+EFO_0005129,hepatitis C induced liver cirrhosis
+EFO_0005528,parasitemia measurement
+EFO_0005676,Autoimmune Hepatitis
+EFO_0005681,Staphylococcus aureus infection
+EFO_0005741,infectious disease
+EFO_0006319,HIV viral set point measurement
+EFO_0006509,Varicella Zoster infection
+EFO_0006843,infectious disease biomarker
+EFO_0006857,cerebral malaria
+EFO_0007035,Chlamydia pneumoniae seropositivity
+EFO_0007036,herpes virus seropositivity
+EFO_0007037,cytomegalovirus seropositivity
+EFO_0007039,human herpesvirus 8 seropositivity
+EFO_0007048,human herpesvirus 6 seropositivity
+EFO_0007142,Alphavirus infectious disease
+EFO_0007150,Arenaviridae infectious disease
+EFO_0007151,Arenavirus hemorrhagic fever
+EFO_0007152,Arterivirus infectious disease
+EFO_0007156,Ascaridida infectious disease
+EFO_0007158,Astroviridae infectious disease
+EFO_0007161,Avulavirus infectious disease
+EFO_0007173,Blastocystis hominis infectious disease
+EFO_0007181,bovine virus diarrhea-mucosal disease
+EFO_0007184,bronchopneumonia
+EFO_0007188,Bunyaviridae infectious disease
+EFO_0007189,Caliciviridae infectious disease
+EFO_0007190,campylobacteriosis
+EFO_0007194,Cardiovirus infectious disease
+EFO_0007199,central nervous system tuberculosis
+EFO_0007205,Chlamydia trachomatis infectious disease
+EFO_0007209,Ciliophora infectious disease
+EFO_0007221,contagious pleuropneumonia
+EFO_0007223,Coronaviridae infectious disease
+EFO_0007224,coronavirus infectious disease
+EFO_0007226,coxsackievirus infectious disease
+EFO_0007235,Dictyocaulus infectious disease
+EFO_0007247,echovirus infectious disease
+EFO_0007253,Enoplea infectious disease
+EFO_0007255,Enterovirus infectious disease
+EFO_0007256,enzootic pneumonia of calves
+EFO_0007257,eosinophilic pneumonia
+EFO_0007263,equine infectious anemia
+EFO_0007273,Filoviridae infectious disease
+EFO_0007274,Flaviviridae infectious disease
+EFO_0007278,fungal lung infectious disease
+EFO_0007280,gastrointestinal tuberculosis
+EFO_0007295,Hantavirus infectious disease
+EFO_0007296,hantavirus pulmonary syndrome
+EFO_0007300,Henipavirus infectious disease
+EFO_0007301,Hepadnaviridae infectious disease
+EFO_0007302,hepatic tuberculosis
+EFO_0007303,hepatitis E virus infection
+EFO_0007304,hepatitis D virus infection
+EFO_0007305,hepatitis A virus infection
+EFO_0007307,Herpes simplex virus gingivostomatitis
+EFO_0007308,Herpes simplex virus keratitis
+EFO_0007309,Herpesviridae infectious disease
+EFO_0007311,HIV enteropathy
+EFO_0007312,HIV wasting syndrome
+EFO_0007313,HIV-associated nephropathy
+EFO_0007314,hookworm infectious disease
+EFO_0007316,Human T-lymphotropic virus 1 infectious disease
+EFO_0007325,infectious ectromelia
+EFO_0007326,infectious mononucleosis
+EFO_0007327,infectious myxomatosis
+EFO_0007337,laryngeal tuberculosis
+EFO_0007345,lipid pneumonia
+EFO_0007350,lymph node tuberculosis
+EFO_0007368,miliary tuberculosis
+EFO_0007376,Mononegavirales infectious disease
+EFO_0007377,Morbillivirus infectious disease
+EFO_0007381,multidrug-resistant tuberculosis
+EFO_0007383,Mumps virus infectious disease
+EFO_0007386,Mycobacterium avium complex disease
+EFO_0007387,Mycoplasma pneumoniae pneumonia
+EFO_0007391,Nematoda infectious disease
+EFO_0007396,Nidovirales infectious disease
+EFO_0007407,oral tuberculosis
+EFO_0007411,Orthomyxoviridae infectious disease
+EFO_0007419,Paramyxoviridae infectious disease
+EFO_0007426,pericardial tuberculosis
+EFO_0007431,peste des petits ruminants infectious disease
+EFO_0007432,Pestivirus infectious disease
+EFO_0007433,phagocyte bactericidal dysfunction
+EFO_0007438,Picornaviridae infectious disease
+EFO_0007444,Plasmodium falciparum malaria
+EFO_0007445,Plasmodium vivax malaria
+EFO_0007446,pleural tuberculosis
+EFO_0007447,Pneumocystis infectious disease
+EFO_0007451,Polyomavirus infectious disease
+EFO_0007461,recurrent pneumonia
+EFO_0007463,renal tuberculosis
+EFO_0007464,Reoviridae infectious disease
+EFO_0007465,Respirovirus infectious disease
+EFO_0007468,Rhabditida infectious disease
+EFO_0007469,Rhabdoviridae infectious disease
+EFO_0007472,rickettsial pneumonia
+EFO_0007474,Roseolovirus infectious disease
+EFO_0007479,screw worm infectious disease
+EFO_0007487,skeletal tuberculosis
+EFO_0007492,splenic tuberculosis
+EFO_0007496,staphylococcal pneumonia
+EFO_0007499,streptococcal pneumonia
+EFO_0007500,Strongylida infectious disease
+EFO_0007513,Togaviridae infectious disease
+EFO_0007514,Torovirus infectious disease
+EFO_0007531,urogenital tuberculosis
+EFO_0007538,viral encephalitis
+EFO_0007539,viral hemorrhagic septicemia
+EFO_0007540,animal viral hepatitis
+EFO_0007541,viral pneumonia
+EFO_0007790,Epstein Barr virus nuclear antigen 1 IgG measurement
+EFO_0007904,susceptibility to childhood ear infection measurement
+EFO_0007918,response to anti-tuberculosis drug
+EFO_0007948,HIV-associated neurocognitive disorder
+EFO_0008140,"gp41 C34 peptide, HIV measurement"
+EFO_0008151,hepatitis A virus cellular receptor 2 measurement
+EFO_0008322,decreased susceptibility to bacterial infection
+EFO_0008405,susceptibility to hepatitis B infection measurement
+EFO_0008407,susceptibility to Mycobacterium tuberculosis infection measurement
+EFO_0008410,susceptibility to pneumonia measurement
+EFO_0008411,susceptibility to bacterial meningitis measurement
+EFO_0008412,susceptibility to vaginal yeast infection measurement
+EFO_0008415,susceptibility to hepatitis A infection measurement
+EFO_0008418,susceptibility to rubella infection measurement
+EFO_0008419,susceptibility to chronic sinus infection measurement
+EFO_0008422,susceptibility to infectious disease measurement
+EFO_0008496,chronic hepatitis
+EFO_0008503,hepatitis B virus induced hepatocellular carcinoma
+EFO_0008504,hepatitis C virus induced hepatocellular carcinoma
+EFO_0008505,hepatitis virus-related hepatocellular carcinoma
+EFO_0008555,Methicillin-Resistant Staphylococcus Aureus Infection
+EFO_0008556,Methicillin-Resistant Staphylococcus Aureus Pneumonia
+EFO_0008557,Methicillin-Susceptible Staphylococcus Aureus Infection
+EFO_0008558,Vancomycin-Resistant Staphylococcus Aureus Infection
+EFO_0008571,viral conjunctivitis
+EFO_0009087,non-typhoidal Salmonella bacteremia
+EFO_0009130,clostridium difficile infection
+EFO_0009157,susceptibility to malaria
+EFO_0009194,Pulmonary arterial hypertension associated with HIV infection
+EFO_0009271,Epstein Barr virus nuclear antigen-1 seropositivity
+EFO_0009272,Epstein Barr viral capsid antigen seropositivity
+EFO_0009274,Epstein Barr viral capsid antigen IgG measurement
+EFO_0009338,Epstein-Barr virus early antigen seropositivity
+EFO_0009339,Herpes simplex virus 2 seropositivity
+EFO_0009340,Varicella zoster virus seropositivity
+EFO_0009341,Helicobacter pylori seropositivity
+EFO_0009342,Measles virus seropositivity
+EFO_0009343,Mumps virus seropositivity
+EFO_0009344,Rubella virus seropositivity
+EFO_0009345,Hepatitis B virus surface antigen seropositivity
+EFO_0009346,Hepatitis B virus core antigen seropositivity
+EFO_0009347,Anti-cytomegalovirus IgG measurement
+EFO_0009348,Anti-Epstein-Barr virus early antigen IgG measurement
+EFO_0009349,Anti-herpes simplex virus 1 IgG measurement
+EFO_0009350,Anti-herpes simplex virus 2 IgG measurement
+EFO_0009351,Anti-varicella zoster virus IgG measurement
+EFO_0009352,Anti-Helicobacter pylori IgG measurement
+EFO_0009354,Anti-influenza A virus IgG measurement
+EFO_0009355,Anti-measles virus IgG measurement
+EFO_0009356,Anti-mumps virus IgG measurement
+EFO_0009357,Anti-rubella virus IgG measurement
+EFO_0009358,Anti-hepatitis B virus surface antigen IgG measurement
+EFO_0009359,Anti-hepatitis B virus core antigen IgG measurement
+EFO_0009424,Yersinia enterocolitica infectious disease
+EFO_0009425,Yersinia pestis infectious disease
+EFO_0009429,Mycobacterium infection
+EFO_0009553,HIV-associated cancer
+EFO_0009561,parasitic intestinal disease
+EFO_0009567,Spirochaetales Infections
+EFO_0010060,chronic human papillomavirus infection
+EFO_0010101,decreased susceptibility to hepatitis C infection
+EFO_0010123,response to antiviral drug
+EFO_0010125,viral load
+EFO_0010234,viral subtype carrier status
+EFO_0010271,bacterial pathogen genotype measurement
+EFO_0010691,retroperitoneal infection
+EFO_0010692,subcutaneous tissue infection
+EFO_0010716,coinfection
+EFO_0010758,anti-Kaposi's sarcoma-associated herpesvirus antibody measurement
+EFO_0010899,anti-merkel cell virus antibody measurement
+EFO_0010900,anti-polyomavirus 2 antibody measurement
+EFO_0010904,anti-BK polyomavirus antibody measurement
+EFO_0010905,BK polyomavirus seropositivity
+EFO_0010906,merkel cell virus seropositivity
+EFO_0010907,polyomavirus 2 seropositivity
+EFO_0010908,Epstein-Barr virus seropositivity
+EFO_0010966,pneumonia severity measurement
+EFO_0010970,severe malarial anemia
+EFO_0011037,anti-human herpes virus 6 antibody measurement
+EFO_0011038,anti-human herpes virus 7 antibody measurement
+EFO_0020106,cytomegalovirus virus reactivation
+EFO_0020172,bactericidal permeability-increasing protein measurement
+EFO_0020173,baculoviral IAP repeat-containing protein 3 measurement
+EFO_0020174,baculoviral IAP repeat-containing protein 5 measurement
+EFO_0020175,baculoviral IAP repeat-containing protein 7 isoform beta measurement
+EFO_0020926,noninfective encephalitis
+EFO_0020933,HIV resevoir measurement
+EFO_0022933,infective spondylopathy
+EFO_0600006,human herpesvirus 7 seropositivity
+EFO_0600030,response to antiparasitic agent
+EFO_0600072,human polyomavirus 6 seropositivity
+EFO_0700108,non-infectious posterior uveitis
+EFO_0801092,anti-Theiler's virus IgG measurement
+EFO_0801565,endogenous retrovirus group V member 1 Env polyprotein measurement
+EFO_0802008,retroviral-like aspartic protease 1 measurement
+EFO_0802304,BCL2/adenovirus E1B 19 kDa protein-interacting protein 3 measurement
+EFO_0802305,BCL2/adenovirus E1B 19 kDa protein-interacting protein 3-like measurement
+EFO_0802431,coxsackievirus and adenovirus receptor measurement
+EFO_0802546,feline leukemia virus subgroup C receptor-related protein 1 measurement
+EFO_0802875,poliovirus receptor measurement
+EFO_0803477,3-vinylbacteriochlorophyllide a measurement
+EFO_0803593,bacteria seropositivity
+EFO_0803595,virus seropositivity
+EFO_0803598,fungus seropositivity
+EFO_0803606,bacteroidaceae seropositivity
+EFO_0803607,bacteroidales seropositivity
+EFO_0803608,bacteroides seropositivity
+EFO_0803611,bifidobacterium seropositivity
+EFO_0803615,campylobacter seropositivity
+EFO_0803619,enterobacteriaceae seropositivity
+EFO_0803622,eubacterium seropositivity
+EFO_0803623,faecalibacterium seropositivity
+EFO_0803627,gammaproteobacteria seropositivity
+EFO_0803635,mycobacterium tuberculosis seropositivity
+EFO_0803636,mycoplasma pneumoniae seropositivity
+EFO_0803638,odoribacter seropositivity
+EFO_0803639,parabacteroides seropositivity
+EFO_0803643,proteobacteria seropositivity
+EFO_0803654,bacillus phage virus seropositivity
+EFO_0803655,bacteriodes phage virus seropositivity
+EFO_0803656,campylobacter phage virus seropositivity
+EFO_0803657,clostridium phage virus seropositivity
+EFO_0803658,enterobacter phage virus seropositivity
+EFO_0803659,enterococcus phage virus seropositivity
+EFO_0803660,escherichia phage virus seropositivity
+EFO_0803661,geobacillus phage virus seropositivity
+EFO_0803662,klebsiella phage virus seropositivity
+EFO_0803663,lactobacillus phage virus seropositivity
+EFO_0803664,lactococcus phage virus seropositivity
+EFO_0803665,listeria phage virus seropositivity
+EFO_0803666,pelagibacter phage virus seropositivity
+EFO_0803667,proteus phage virus seropositivity
+EFO_0803668,pseudomonas phage virus seropositivity
+EFO_0803669,salmonella phage virus seropositivity
+EFO_0803670,shigella phage virus seropositivity
+EFO_0803671,staphylococcus phage virus seropositivity
+EFO_0803672,streptococcus virus phage virus seropositivity
+EFO_0803674,adenoviridae virus seropositivity
+EFO_0803675,alphapapillomavirus 9 virus seropositivity
+EFO_0803676,calicivirus seropositivity
+EFO_0803677,chikungunya virus seropositivity
+EFO_0803678,coxsackievirus seropositivity
+EFO_0803679,dengue virus seropositivity
+EFO_0803680,foot-and-mouth disease virus seropositivity
+EFO_0803681,hepatitis A virus seropositivity
+EFO_0803682,hepatitis C virus seropositivity
+EFO_0803683,hepatitis E virus seropositivity
+EFO_0803685,pneumoviridae virus seropositivity
+EFO_0803686,poliovirus seropositivity
+EFO_0803687,respiratory syncytial virus seropositivity
+EFO_0803688,SARS coronavirus seropositivity
+EFO_0803690,anti-hepatitis E virus antibody measurement
+EFO_0803692,anti-hepatitis B virus antibody measurement
+EFO_1000035,infectious colitis
+EFO_1000039,meningeal tuberculosis
+EFO_1000049,pulmonary tuberculosis
+EFO_1000671,bacterial exanthem
+EFO_1000693,erythema infectiosum
+EFO_1000776,viral exanthem
+EFO_1000792,Acinetobacter infectious disease
+EFO_1000793,Actinobacillus infectious disease
+EFO_1000829,bacterial conjunctivitis
+EFO_1000830,bacterial endocarditis
+EFO_1000831,bacterial meningitis
+EFO_1000832,Bacteroides infectious disease
+EFO_1000842,Borrelia infectious disease
+EFO_1000863,Chlamydophila infectious disease
+EFO_1000872,commensal Bacteroidaceae infectious disease
+EFO_1000873,commensal Bifidobacteriales infectious disease
+EFO_1000874,commensal Clostridium infectious disease
+EFO_1000875,commensal Desulfovibrionaceae infectious disease
+EFO_1000905,drug-induced hepatitis
+EFO_1000917,endocrine tuberculosis
+EFO_1000928,Erysipelothrix rhusiopathiae infectious disease
+EFO_1000935,female genital tuberculosis
+EFO_1000942,fungal meningitis
+EFO_1000943,Fusobacterium infectious disease
+EFO_1000961,Helicobacter pylori infectious disease
+EFO_1001030,male genital tuberculosis
+EFO_1001051,mycosis fungoides
+EFO_1001070,ocular tuberculosis
+EFO_1001072,opportunistic Moraxellaceae infectious disease
+EFO_1001122,primary Actinomycetales infectious disease
+EFO_1001123,primary Anaplasmataceae infectious disease
+EFO_1001124,primary Bacillaceae infectious disease
+EFO_1001125,primary Bartonellaceae infectious disease
+EFO_1001126,primary Fusobacteriaceae infectious disease
+EFO_1001127,primary Haemophilus infectious disease
+EFO_1001128,Rickettsiaceae infectious disease
+EFO_1001130,Proteus infectious disease
+EFO_1001193,subacute bacterial endocarditis
+EFO_1001217,Treponema infectious disease
+EFO_1001235,Vibrio infectious disease
+EFO_1001236,viral meningitis
+EFO_1001245,Yersinia infectious disease
+EFO_1001246,Yersinia pseudotuberculosis infectious disease
+EFO_1001249,non-alcoholic steatohepatitis
+EFO_1001259,Adenoviridae Infections
+EFO_1001269,Arbovirus Infections
+EFO_1001272,bacterial pneumonia
+EFO_1001275,Bordetella Infections
+EFO_1001280,Burkholderia Infections
+EFO_1001287,Cestode Infections
+EFO_1001288,Chlamydiaceae Infections
+EFO_1001292,Circoviridae Infections
+EFO_1001300,Cryptogenic Organizing Pneumonia
+EFO_1001302,Cytomegalovirus Retinitis
+EFO_1001303,Deltaretrovirus Infections
+EFO_1001313,Enterobacteriaceae Infections
+EFO_1001318,Escherichia coli Infections
+EFO_1001319,Euglenozoa Infections
+EFO_1001326,Flavivirus Infections
+EFO_1001327,Flavobacteriaceae Infections
+EFO_1001345,"Hepatitis, Alcoholic"
+EFO_1001348,HIV-Associated Lipodystrophy Syndrome
+EFO_1001349,Human T-lymphotropic virus 2 infectious disease
+EFO_1001351,infectious arthritis
+EFO_1001353,Klebsiella Infections
+EFO_1001357,Lentivirus Infections
+EFO_1001374,Mycoplasmatales Infections
+EFO_1001377,Neisseriaceae Infections
+EFO_1001386,Pasteurellaceae Infections
+EFO_1001392,Perimeningeal Infections
+EFO_1001397,Piscirickettsiaceae Infections
+EFO_1001399,"Pneumonia, Aspiration"
+EFO_1001401,Pneumovirus Infections
+EFO_1001406,Prosthesis-Related Infections
+EFO_1001407,Puerperal Infection
+EFO_1001413,Respiratory Syncytial Virus Infection
+EFO_1001418,Salmonella Infections
+EFO_1001421,Serratia Infections
+EFO_1001438,Trematode Infections
+EFO_1001440,"Tuberculosis, Avian"
+EFO_1001441,"Tuberculosis, Bovine"
+EFO_1001442,cardiac tuberculosis
+EFO_1001443,"Tuberculosis, Cutaneous"
+EFO_1001456,central nervous system infection
+EFO_1001474,pneumococcal pneumonia
+EFO_1001476,streptococcal infection
+EFO_1001489,skin and soft tissue Staphylococcus aureus infection
+EFO_1001498,disseminated atypical mycobacterial infection
+EFO_1001764,Birnaviridae Infections
+EFO_1001849,staphylococcal skin infections
+EFO_1001865,ventilator-associated pneumonia
+EFO_1001888,eye infection
+EFO_1001925,pneumococcal bacteremia
+EFO_1001954,Epstein-Barr virus-related Burkitts lymphoma
+EFO_1002022,Herpes simplex infection
+Orphanet_1229,Congenital intrauterine infection-like syndrome
+Orphanet_169142,Recurrent infection due to specific granule deficiency
+Orphanet_183710,Genetic susceptibility to infections due to particular pathogens
+Orphanet_251523,Recurrent infections - inflammatory syndrome due to zinc metabolism disorder
+Orphanet_275517,Autoimmune lymphoproliferative syndrome with recurrent viral infections
+Orphanet_319535,Autosomal recessive mendelian susceptibility to mycobacterial diseases due to a complete deficiency
+Orphanet_319539,Autosomal recessive mendelian susceptibility to mycobacterial diseases due to a partial deficiency
+Orphanet_319543,Autosomal dominant mendelian susceptibility to mycobacterial diseases due to a partial deficiency
+Orphanet_319547,Mendelian susceptibility to mycobacterial diseases due to complete IFNgammaR2 deficiency
+Orphanet_369852,Recurrent infections-myelofibrosis-nephromegaly syndrome
+Orphanet_391311,Susceptibility to viral and mycobacterial infections
+Orphanet_391487,Autoimmune enteropathy and endocrinopathy-susceptibility to chronic infections syndrome
+Orphanet_748,Mendelian susceptibility to mycobacterial diseases

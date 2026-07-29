@@ -1,0 +1,432 @@
+{
+  "method": "AML-specific STRING escape routes + BeatAML patient data",
+  "n_interactions": 969,
+  "n_drivers_with_routes": 20,
+  "escape_routes": {
+    "FLT3": {
+      "total": 21,
+      "druggable": 0
+    },
+    "IDH1": {
+      "total": 15,
+      "druggable": 4
+    },
+    "IDH2": {
+      "total": 8,
+      "druggable": 1
+    },
+    "DNMT3A": {
+      "total": 10,
+      "druggable": 4
+    },
+    "NPM1": {
+      "total": 13,
+      "druggable": 4
+    },
+    "KIT": {
+      "total": 18,
+      "druggable": 0
+    },
+    "TP53": {
+      "total": 18,
+      "druggable": 6
+    },
+    "NRAS": {
+      "total": 25,
+      "druggable": 10
+    },
+    "KRAS": {
+      "total": 24,
+      "druggable": 11
+    },
+    "RUNX1": {
+      "total": 29,
+      "druggable": 5
+    },
+    "CEBPA": {
+      "total": 19,
+      "druggable": 4
+    },
+    "TET2": {
+      "total": 31,
+      "druggable": 7
+    },
+    "GATA2": {
+      "total": 14,
+      "druggable": 3
+    },
+    "SRSF2": {
+      "total": 10,
+      "druggable": 0
+    },
+    "ASXL1": {
+      "total": 20,
+      "druggable": 4
+    },
+    "WT1": {
+      "total": 14,
+      "druggable": 4
+    },
+    "SF3B1": {
+      "total": 1,
+      "druggable": 0
+    },
+    "STAG2": {
+      "total": 13,
+      "druggable": 2
+    },
+    "U2AF1": {
+      "total": 8,
+      "druggable": 0
+    },
+    "BCOR": {
+      "total": 7,
+      "druggable": 0
+    }
+  },
+  "n_combinations": 309,
+  "combinations": [
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "TP53",
+      "drug_b": "MIRA-1",
+      "drug_b_role": "blocks TP53 escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, TP53 compensates \u2192 MIRA-1 blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "TP53",
+      "drug_b": "MIRA-1",
+      "drug_b_role": "blocks TP53 escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, TP53 compensates \u2192 MIRA-1 blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "TP53",
+      "drug_b": "MIRA-1",
+      "drug_b_role": "blocks TP53 escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, TP53 compensates \u2192 MIRA-1 blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Lestaurtinib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, FLT3 compensates \u2192 Lestaurtinib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Lestaurtinib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, FLT3 compensates \u2192 Lestaurtinib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Lestaurtinib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, FLT3 compensates \u2192 Lestaurtinib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Cediranib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, FLT3 compensates \u2192 Cediranib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Cediranib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, FLT3 compensates \u2192 Cediranib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Cediranib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, FLT3 compensates \u2192 Cediranib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "PLX-4720",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, BRAF compensates \u2192 PLX-4720 blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "PLX-4720",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, BRAF compensates \u2192 PLX-4720 blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "PLX-4720",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, BRAF compensates \u2192 PLX-4720 blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "SB590885",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, BRAF compensates \u2192 SB590885 blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "SB590885",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, BRAF compensates \u2192 SB590885 blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "SB590885",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, BRAF compensates \u2192 SB590885 blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "Dabrafenib",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, BRAF compensates \u2192 Dabrafenib blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "Dabrafenib",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, BRAF compensates \u2192 Dabrafenib blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "Dabrafenib",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, BRAF compensates \u2192 Dabrafenib blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "EGFR",
+      "drug_b": "Gefitinib",
+      "drug_b_role": "blocks EGFR escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, EGFR compensates \u2192 Gefitinib blocks escape"
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "EGFR",
+      "drug_b": "Gefitinib",
+      "drug_b_role": "blocks EGFR escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, EGFR compensates \u2192 Gefitinib blocks escape"
+    }
+  ],
+  "novel": [
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "TP53",
+      "drug_b": "MIRA-1",
+      "drug_b_role": "blocks TP53 escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, TP53 compensates \u2192 MIRA-1 blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "TP53",
+      "drug_b": "MIRA-1",
+      "drug_b_role": "blocks TP53 escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, TP53 compensates \u2192 MIRA-1 blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "TP53",
+      "drug_b": "MIRA-1",
+      "drug_b_role": "blocks TP53 escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, TP53 compensates \u2192 MIRA-1 blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Lestaurtinib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, FLT3 compensates \u2192 Lestaurtinib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Lestaurtinib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, FLT3 compensates \u2192 Lestaurtinib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Lestaurtinib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, FLT3 compensates \u2192 Lestaurtinib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Cediranib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, FLT3 compensates \u2192 Cediranib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "SNS-032 (BMS-387032)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Cediranib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with SNS-032 (BMS-387032); if IDH1 pathway blocked, FLT3 compensates \u2192 Cediranib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Ralimetinib (LY2228820)",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "FLT3",
+      "drug_b": "Cediranib",
+      "drug_b_role": "blocks FLT3 escape (STRING)",
+      "rationale": "IDH1-mut treated with Ralimetinib (LY2228820); if IDH1 pathway blocked, FLT3 compensates \u2192 Cediranib blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    },
+    {
+      "mutation": "IDH1",
+      "n_patients": 60,
+      "drug_a": "Elesclomol",
+      "drug_a_role": "best for IDH1-mut (BeatAML)",
+      "escape_gene": "BRAF",
+      "drug_b": "PLX-4720",
+      "drug_b_role": "blocks BRAF escape (STRING)",
+      "rationale": "IDH1-mut treated with Elesclomol; if IDH1 pathway blocked, BRAF compensates \u2192 PLX-4720 blocks escape",
+      "n_trials": 0,
+      "is_novel": true
+    }
+  ]
+}

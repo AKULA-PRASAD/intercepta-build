@@ -1,0 +1,190 @@
+{
+  "verdict": "FAIL",
+  "mechanism": "mean target gene expression per cell type (v4 correction)",
+  "graph_stats": {
+    "n_nodes": 1222,
+    "n_edges": 35648,
+    "layers": {
+      "L1_genome": 5,
+      "L7_pharmacome": 430,
+      "L9_disease_map": 766,
+      "L2_transcriptome": 21
+    }
+  },
+  "query_A_HSC_like": {
+    "venetoclax_in_top10": false,
+    "flt3_in_top10": 3,
+    "top_15": [
+      {
+        "drug": "17-AAG (Tanespimycin)",
+        "score": 1.94333366756398,
+        "n_targets": 2
+      },
+      {
+        "drug": "Palbociclib",
+        "score": 0.5218789301834823,
+        "n_targets": 3
+      },
+      {
+        "drug": "JNJ-28312141",
+        "score": 0.3768875925630324,
+        "n_targets": 4
+      },
+      {
+        "drug": "H-89",
+        "score": 0.3727106498059946,
+        "n_targets": 2
+      },
+      {
+        "drug": "Olaparib",
+        "score": 0.36917092344632113,
+        "n_targets": 2
+      },
+      {
+        "drug": "Bortezomib (Velcade)",
+        "score": 0.32798588165098563,
+        "n_targets": 38
+      },
+      {
+        "drug": "JAK Inhibitor I",
+        "score": 0.3176360576035145,
+        "n_targets": 3
+      },
+      {
+        "drug": "Tandutinib (MLN518)",
+        "score": 0.30266998381231447,
+        "n_targets": 5
+      },
+      {
+        "drug": "AZD1152-HQPA (AZD2811)",
+        "score": 0.2916793032196193,
+        "n_targets": 5
+      },
+      {
+        "drug": "SYK Inhibitor",
+        "score": 0.2896086642661339,
+        "n_targets": 1
+      },
+      {
+        "drug": "SU14813",
+        "score": 0.2852829629551885,
+        "n_targets": 5
+      },
+      {
+        "drug": "Rapamycin",
+        "score": 0.28050365727005516,
+        "n_targets": 2
+      },
+      {
+        "drug": "KU-55933",
+        "score": 0.2798043336294856,
+        "n_targets": 1
+      },
+      {
+        "drug": "TG101348",
+        "score": 0.27508526380447124,
+        "n_targets": 5
+      },
+      {
+        "drug": "Ruxolitinib (INCB018424)",
+        "score": 0.25864679403814106,
+        "n_targets": 4
+      }
+    ],
+    "pass": false
+  },
+  "query_B_Prog_like": {
+    "flt3_in_top10": 1,
+    "top_15": [
+      {
+        "drug": "17-AAG (Tanespimycin)",
+        "score": 2.447121992939718,
+        "n_targets": 2
+      },
+      {
+        "drug": "Palbociclib",
+        "score": 0.6303208901218355,
+        "n_targets": 3
+      },
+      {
+        "drug": "Olaparib",
+        "score": 0.4547814905388837,
+        "n_targets": 2
+      },
+      {
+        "drug": "Bortezomib (Velcade)",
+        "score": 0.4468369887461817,
+        "n_targets": 38
+      },
+      {
+        "drug": "Rapamycin",
+        "score": 0.31577562515594115,
+        "n_targets": 2
+      },
+      {
+        "drug": "JNJ-28312141",
+        "score": 0.2949572291272701,
+        "n_targets": 4
+      },
+      {
+        "drug": "H-89",
+        "score": 0.2899452871094787,
+        "n_targets": 2
+      },
+      {
+        "drug": "SYK Inhibitor",
+        "score": 0.2732070896558239,
+        "n_targets": 1
+      },
+      {
+        "drug": "SB-202190",
+        "score": 0.24674499358062524,
+        "n_targets": 1
+      },
+      {
+        "drug": "PH-797804",
+        "score": 0.24674499358062524,
+        "n_targets": 1
+      },
+      {
+        "drug": "Idelalisib",
+        "score": 0.24102967514658827,
+        "n_targets": 3
+      },
+      {
+        "drug": "JAK Inhibitor I",
+        "score": 0.240618103277363,
+        "n_targets": 3
+      },
+      {
+        "drug": "Tandutinib (MLN518)",
+        "score": 0.23477198023324627,
+        "n_targets": 5
+      },
+      {
+        "drug": "PI-103",
+        "score": 0.23173538461822957,
+        "n_targets": 8
+      },
+      {
+        "drug": "AZD1152-HQPA (AZD2811)",
+        "score": 0.22249048247409386,
+        "n_targets": 5
+      }
+    ],
+    "pass": false
+  },
+  "query_C_distinguishability": {
+    "jaccard": 0.5384615384615384,
+    "overlap": [
+      "17-AAG (Tanespimycin)",
+      "Bortezomib (Velcade)",
+      "H-89",
+      "JNJ-28312141",
+      "Olaparib",
+      "Palbociclib",
+      "SYK Inhibitor"
+    ],
+    "pass": true
+  }
+}

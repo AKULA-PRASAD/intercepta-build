@@ -1,0 +1,70 @@
+
+========================================================================
+KAALCURA-3-Axes-into-LightGBM Baseline
+========================================================================
+Started: 2026-05-06 19:48:07
+
+========================================================================
+Step 1: Dependencies
+========================================================================
+  lightgbm: 4.6.0
+
+========================================================================
+Step 2: Load KAALCURA axes
+========================================================================
+  Using Round 2.2b residualized axes: beataml_ucell_residual_axes_round22b.csv
+  Shape: (707, 4)
+  Columns: ['Unnamed: 0', 'R_prolif', 'R_emt', 'R_ddr']
+  Detected sample column: 'Unnamed: 0'
+  Axis columns: ['R_prolif', 'R_emt', 'R_ddr']
+  After dropna: 707 samples
+
+========================================================================
+Step 3: Load drug response
+========================================================================
+  Loaded 55681 (sample, drug, auc) rows, 165 drugs
+
+========================================================================
+Step 4: Filter drugs (≥10 sensitive AND ≥10 resistant)
+========================================================================
+  Drugs passing filter: 85
+
+========================================================================
+Step 5: Sample alignment
+========================================================================
+  KAALCURA samples: 707, Drug samples: 542, Common: 520
+
+========================================================================
+Step 6: Per-drug evaluation with LightGBM on 3 axes
+========================================================================
+  [30/85] last='KU-55933' AUROC=0.433 | elapsed=24s
+  [60/85] last='Elesclomol' AUROC=0.559 | elapsed=48s
+  [85/85] last='Ralimetinib (LY2228820)' AUROC=0.500 | elapsed=60s
+
+  Evaluated: 85, Failed: 0
+
+========================================================================
+Step 7: Save
+========================================================================
+  CSV: /Users/kalki/INTERCEPTA/round2_aml/results/kaalcura_lightgbm_auroc_per_drug.csv
+
+========================================================================
+Step 8: Triangulation summary
+========================================================================
+
+  Triangulation:
+    Same features (3 axes), different model:
+      LogisticRegression : 0.526 (Round 2.2b)
+      LightGBM           : 0.532 (this run)
+
+    Same model (LightGBM), different features:
+      3 KAALCURA axes    : 0.532 (this run)
+      1000 RNA genes (v1, sex+20/20): 0.670
+      1000 RNA genes (v2, no-sex+10/10): TBD
+
+    Diagnostic:
+      Model effect: minimal — LightGBM ≈ LogReg on 3 axes (model is not the gap)
+
+========================================================================
+DONE
+========================================================================

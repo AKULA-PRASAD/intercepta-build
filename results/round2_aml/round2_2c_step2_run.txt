@@ -1,0 +1,101 @@
+
+========================================================================
+Round 2.2c — Step 2: Multi-Modal Predictor Trainer
+========================================================================
+Started: 2026-05-06 20:23:05
+
+========================================================================
+Step 1: Dependencies
+========================================================================
+  shap: NOT INSTALLED — will use gain importance only (no per-feature-class SHAP)
+
+========================================================================
+Step 2: Load Step 1 outputs
+========================================================================
+  Loading Step 1 outputs...
+  KAALCURA   : (707, 4)
+  RNA        : (707, 1001)
+  Mutations  : (942, 16)
+  Pathways   : (707, 13)
+  Drug-target: (85, 5)
+  Response   : (34262, 4)
+
+  Merging sample-level features...
+  Samples in all 4 feature classes: 671
+  Per-sample feature matrix: (671, 1031)
+
+  Feature group sizes:
+    kaalcura: 3
+    rna: 1000
+    mutation: 15
+    pathway: 12
+    drug_target: 4
+
+========================================================================
+Step 3: Build per-(sample, drug) data structure
+========================================================================
+  Drugs in response: 85
+  Drugs in drug-target file: 85
+  Drugs in BOTH (will evaluate): 85
+  Drugs missing drug-target features: 0
+
+========================================================================
+Step 4: Per-drug evaluation — FULL feature stack
+========================================================================
+  [20/85] last='BEZ235' AUROC=0.578 BAcc=0.504 | elapsed=40s ETA=130s
+  [40/85] last='Linifanib (ABT-869)' AUROC=0.632 BAcc=0.500 | elapsed=82s ETA=92s
+  [60/85] last='Selumetinib (AZD6244)' AUROC=0.780 BAcc=0.525 | elapsed=131s ETA=55s
+  [80/85] last='Entrectinib' AUROC=0.575 BAcc=0.498 | elapsed=175s ETA=11s
+  [85/85] last='Ralimetinib (LY2228820)' AUROC=0.500 BAcc=0.500 | elapsed=177s ETA=0s
+
+  Full-stack: evaluated 85, failed 0
+
+========================================================================
+Step 5: Per-drug evaluation — LEAVE-KAALCURA-OUT (Q_E ablation)
+========================================================================
+  Ablation [20/85] elapsed=47s
+  Ablation [40/85] elapsed=93s
+  Ablation [60/85] elapsed=140s
+  Ablation [80/85] elapsed=178s
+  Ablation [85/85] elapsed=179s
+
+  Ablation: evaluated 85 drugs
+
+========================================================================
+Step 6: Save per-drug metrics
+========================================================================
+  Full: /Users/kalki/INTERCEPTA/round2_aml/results/round2_2c/per_drug_full.csv
+  Ablation: /Users/kalki/INTERCEPTA/round2_aml/results/round2_2c/per_drug_no_kaalcura.csv
+
+========================================================================
+Step 7: Save per-drug feature importance (top-30)
+========================================================================
+  Importance: /Users/kalki/INTERCEPTA/round2_aml/results/round2_2c/feature_importance_full.csv
+
+========================================================================
+Step 8: Aggregate per-feature-class contribution (gain proxy for SHAP)
+========================================================================
+  Per-class summary: /Users/kalki/INTERCEPTA/round2_aml/results/round2_2c/shap_summary.csv
+feature_class  n_features  gain_share_mean  gain_share_std  gain_share_median  gain_share_per_feature
+     kaalcura           3         0.002855        0.003922       1.263525e-03                0.000952
+          rna        1000         0.956088        0.150106       9.852420e-01                0.000956
+     mutation          15         0.006228        0.020436       4.627200e-09                0.000415
+      pathway          12         0.011299        0.010423       8.561780e-03                0.000942
+  drug_target           4         0.000000        0.000000       0.000000e+00                0.000000
+
+========================================================================
+Step 9: Aggregate metrics + save train summary
+========================================================================
+  Summary: /Users/kalki/INTERCEPTA/round2_aml/results/round2_2c/train_summary.json
+
+  Full-stack mean AUROC: 0.643
+  Ablation mean AUROC  : 0.643
+  KAALCURA contribution: -0.0004 (mean delta)
+  vs RNA-only baseline : -0.002
+  vs KAALCURA-LightGBM : +0.111
+
+========================================================================
+DONE — Step 2 of 3 complete
+========================================================================
+Finished: 2026-05-06 20:29:03
+Next: run evaluate_round2_2c_gates.py (Step 3 of 3)

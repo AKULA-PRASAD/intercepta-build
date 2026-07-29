@@ -1,0 +1,118 @@
+
+========================================================================
+Step 0: Dependency check
+========================================================================
+  numpy     : 2.4.3
+  pandas    : 2.3.3
+  networkx  : 3.6.1
+
+========================================================================
+Step 1: Load Round 2.1b skeleton and Round 2.1c AnnData
+========================================================================
+  Loading skeleton: /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_skeleton_v2.gpickle
+    1,201 nodes, 33,191 edges
+  Loading AnnData: /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/vangalen_aml.h5ad
+    loaded in 2.2s, 44,823 cells x 27,899 genes
+  Cell types: 21
+
+========================================================================
+Step 2: Compute per-celltype mean expression matrix
+========================================================================
+  Matrix: 21 cell types x 27,899 genes
+  Using log-normalized data in adata.X
+  This is the CORRECTED mechanism vs v3:
+    v3 used rank_genes_groups DE scores (lineage markers bias)
+    v4 uses raw mean expression (druggable-target biology)
+  Computed mean expression in 0.3s
+    CD34     HSC-like=0.750  Prog-like=0.551  GMP-like=0.309  Mono-like=0.012
+    MEIS1    HSC-like=0.276  Prog-like=0.137  GMP-like=0.084  Mono-like=0.074
+    HOPX     HSC-like=0.551  Prog-like=0.312  GMP-like=0.057  Mono-like=0.015
+    FLT3     HSC-like=1.064  Prog-like=0.597  GMP-like=0.561  Mono-like=0.403
+    BCL2     HSC-like=0.150  Prog-like=0.157  GMP-like=0.135  Mono-like=0.024
+    MPO      HSC-like=0.214  Prog-like=0.403  GMP-like=1.708  Mono-like=0.089
+    ELANE    HSC-like=0.036  Prog-like=0.041  GMP-like=0.979  Mono-like=0.239
+
+========================================================================
+Step 3: Build drug-target-gene map from graph
+========================================================================
+  117 drugs with target annotations, 651 drug-gene edges
+
+========================================================================
+Step 4: Score drug-celltype activity via target expression
+========================================================================
+  score(drug, celltype) = mean over drug's target genes of
+                          expression of target in celltype
+  Computed 2457 drug-celltype scores
+
+========================================================================
+Step 5: Add Layer 2 cell-type nodes and drug-celltype edges to net
+========================================================================
+  Added 21 cell-type nodes
+  Added 2457 drug -> cell-type edges
+  Final graph: 1,222 nodes, 35,648 edges
+
+  Layer inventory:
+    L1_genome: 5 nodes
+    L2_transcriptome: 21 nodes
+    L7_pharmacome: 430 nodes
+    L9_disease_map: 766 nodes
+
+========================================================================
+Step 6: Validation queries
+========================================================================
+  FLT3-targeting drugs per graph: 17
+
+========================================================================
+Query A: HSC-like top drugs (LSC biology)
+========================================================================
+  Rank Drug                               Score  Nt  FLT3?  tag
+  1    17-AAG (Tanespimycin)              1.943   2         
+  2    Palbociclib                        0.522   3         
+  3    JNJ-28312141                       0.377   4   YES   
+  4    H-89                               0.373   2         
+  5    Olaparib                           0.369   2         
+  6    Bortezomib (Velcade)               0.328  38         
+  7    JAK Inhibitor I                    0.318   3         
+  8    Tandutinib (MLN518)                0.303   5   YES   
+  9    AZD1152-HQPA (AZD2811)             0.292   5   YES   
+  10   SYK Inhibitor                      0.290   1         
+
+  Venetoclax in top 10: False
+  FLT3 inhibitors in top 10: 3
+
+========================================================================
+Query B: Prog-like top drugs (progenitor biology)
+========================================================================
+  Rank Drug                               Score  Nt  FLT3?
+  1    17-AAG (Tanespimycin)              2.447   2      
+  2    Palbociclib                        0.630   3      
+  3    Olaparib                           0.455   2      
+  4    Bortezomib (Velcade)               0.447  38      
+  5    Rapamycin                          0.316   2      
+  6    JNJ-28312141                       0.295   4   YES
+  7    H-89                               0.290   2      
+  8    SYK Inhibitor                      0.273   1      
+  9    SB-202190                          0.247   1      
+  10   PH-797804                          0.247   1      
+
+  FLT3 inhibitors in top 10: 1
+
+========================================================================
+Query C: HSC-like vs Prog-like distinguishability
+========================================================================
+  HSC-like top 10:  ['17-AAG (Tanespimycin)', 'AZD1152-HQPA (AZD2811)', 'Bortezomib (Velcade)', 'H-89', 'JAK Inhibitor I', 'JNJ-28312141', 'Olaparib', 'Palbociclib', 'SYK Inhibitor', 'Tandutinib (MLN518)']
+  Prog-like top 10: ['17-AAG (Tanespimycin)', 'Bortezomib (Velcade)', 'H-89', 'JNJ-28312141', 'Olaparib', 'PH-797804', 'Palbociclib', 'Rapamycin', 'SB-202190', 'SYK Inhibitor']
+  Overlap (7): ['17-AAG (Tanespimycin)', 'Bortezomib (Velcade)', 'H-89', 'JNJ-28312141', 'Olaparib', 'Palbociclib', 'SYK Inhibitor']
+  Jaccard: 0.54
+
+========================================================================
+Step 7: Verdict
+========================================================================
+  Query A (LSC, venetoclax+/FLT3 not dominant):  FAIL
+  Query B (Prog, >=2 FLT3):                      FAIL
+  Query C (distinguishable, Jaccard<0.6):         PASS
+
+  VERDICT: FAIL
+  Summary JSON: /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_v4_summary.json
+
+  Graph NOT saved.

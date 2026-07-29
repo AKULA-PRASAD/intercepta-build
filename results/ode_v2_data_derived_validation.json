@@ -1,0 +1,155 @@
+{
+  "version": "2.0_data_derived",
+  "date": "2026-04-07",
+  "model": "TumorODE_v2_treatment_dependent_mu",
+  "novel_contribution": "Treatment-dependent transition rate mu(t)",
+  "parameters": {
+    "S0": 0.9948,
+    "R0": 0.0052,
+    "g_s": 0.006,
+    "g_r": 0.002,
+    "mu_base": 1e-06,
+    "mu_treatment": 0.0005,
+    "K": 1.0,
+    "d_natural": 0.001
+  },
+  "ec50": {
+    "docetaxel": 0.011826076001783651,
+    "abiraterone": 4.144677637399749e-05,
+    "enzalutamide": 0.17716040907605513,
+    "olaparib": 0.13996865749013956,
+    "talazoparib": 0.0006302745121100026
+  },
+  "drug_configs": {
+    "docetaxel": {
+      "emax_s": 0.025,
+      "emax_r": 0.005
+    },
+    "abiraterone": {
+      "emax_s": 0.015,
+      "emax_r": 0.001
+    },
+    "enzalutamide": {
+      "emax_s": 0.012,
+      "emax_r": 0.001
+    },
+    "olaparib": {
+      "emax_s": 0.008,
+      "emax_r": 0.015
+    },
+    "talazoparib": {
+      "emax_s": 0.006,
+      "emax_r": 0.018
+    }
+  },
+  "drug_rationale": {
+    "docetaxel": "Microtubule stabilizer targets dividing cells. KAALCURA: Epithelial R_prolif=+0.062 (sensitive), NE-like R_prolif=-0.051 (resistant)",
+    "abiraterone": "AR pathway inhibitor. Effective only on AR-dependent cells. NE-like cells lack AR expression (literature: PMC4396194)",
+    "enzalutamide": "AR antagonist. NE-like cells do not express AR.",
+    "olaparib": "PARP inhibitor exploits DNA repair deficiency. KAALCURA: NE-like R_ddr=-0.026 (compromised DDR = PARP-sensitive). This is why olaparib targets the undead.",
+    "talazoparib": "Potent PARP trapper. Stronger than olaparib on DDR-low cells."
+  },
+  "trials": {
+    "CHAARTED": {
+      "target": 0.61,
+      "simulated": 6.222,
+      "pass": false,
+      "benefit_months": 0.0,
+      "ctrl_median_months": 60.0,
+      "trt_median_months": 60.0,
+      "n_patients": 100,
+      "params_used": {
+        "g_s": 0.006,
+        "g_r": 0.002,
+        "K": 1.0,
+        "mu": 1e-06,
+        "nu": 0,
+        "S0": 0.9948,
+        "R0": 0.0052,
+        "d_natural": 0.001
+      },
+      "notes": "High-volume mHSPC. ADT is background (not modeled as drug)."
+    },
+    "LATITUDE": {
+      "target": 0.66,
+      "simulated": 0.0,
+      "pass": false,
+      "benefit_months": 0.0,
+      "ctrl_median_months": 60.0,
+      "trt_median_months": 60.0,
+      "n_patients": 100,
+      "params_used": {
+        "g_s": 0.006,
+        "g_r": 0.002,
+        "K": 1.0,
+        "mu": 1e-06,
+        "nu": 0,
+        "S0": 0.9948,
+        "R0": 0.0052,
+        "d_natural": 0.001
+      },
+      "notes": "High-risk mHSPC."
+    },
+    "PROfound": {
+      "target": 0.69,
+      "simulated": 1.0,
+      "pass": false,
+      "benefit_months": 0.0,
+      "ctrl_median_months": 60.0,
+      "trt_median_months": 60.0,
+      "n_patients": 100,
+      "params_used": {
+        "g_s": 0.006,
+        "g_r": 0.002,
+        "K": 1.0,
+        "mu": 1e-06,
+        "nu": 0,
+        "S0": 0.85,
+        "R0": 0.15,
+        "d_natural": 0.001
+      },
+      "notes": "BRCA/ATM mutated. Higher R0 = more DDR-deficient cells."
+    },
+    "PROpel_BRCA": {
+      "target": 0.29,
+      "simulated": 0.0,
+      "pass": false,
+      "benefit_months": 0.0,
+      "ctrl_median_months": 60.0,
+      "trt_median_months": 60.0,
+      "n_patients": 100,
+      "params_used": {
+        "g_s": 0.01,
+        "g_r": 0.005,
+        "K": 1.0,
+        "mu": 5e-05,
+        "nu": 0,
+        "S0": 0.7,
+        "R0": 0.3,
+        "d_natural": 0.001
+      },
+      "notes": "BRCA+ means high DDR deficiency. Aggressive disease. Olaparib kills resistant, abiraterone kills sensitive. Synergy: combo blocks both populations AND escape routes."
+    },
+    "TALAPRO2_C2": {
+      "target": 0.622,
+      "simulated": 1.0,
+      "pass": false,
+      "benefit_months": 0.0,
+      "ctrl_median_months": 60.0,
+      "trt_median_months": 60.0,
+      "n_patients": 100,
+      "params_used": {
+        "g_s": 0.006,
+        "g_r": 0.002,
+        "K": 1.0,
+        "mu": 1e-06,
+        "nu": 0,
+        "S0": 0.9,
+        "R0": 0.1,
+        "d_natural": 0.001
+      },
+      "notes": "Enzalutamide blocks AR (kills sensitive), talazoparib traps PARP (kills resistant). Moderate synergy."
+    }
+  },
+  "n_pass": 0
+}

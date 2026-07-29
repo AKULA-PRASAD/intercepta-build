@@ -1,0 +1,106 @@
+
+========================================================================
+Phase 4-mCRPC: Unified Net Regeneration
+========================================================================
+Started: 2026-05-07T22:00:26
+
+========================================================================
+Step 1: Entry conditions
+========================================================================
+  Builder script: build_unified_net.py (21405 bytes)
+  Phase 3 CSV: step6_selectivity_map.csv (3140 bytes)
+  Existing unified net: 51.2 MB
+
+========================================================================
+Step 2: Backup existing unified net
+========================================================================
+  Copying mcrpc_unified_net.json -> mcrpc_unified_net.json.PHASE4_BACKUP...
+  Backup created: 51.2 MB
+
+========================================================================
+Step 3: Load OLD unified net (pre-regeneration)
+========================================================================
+  Loading mcrpc_unified_net.json...
+  OLD top-level keys: ['cell_populations', 'drugs', 'escape_routes', 'genes', 'metadata', 'ode_parameters_from_data', 'pathways', 'statistics', 'velocity_clusters']
+  OLD genes: 28454
+  OLD drugs: 0
+  OLD pathways: 2984
+  OLD cell populations: 8
+  OLD velocity clusters: 13
+  OLD escape routes: 5
+
+  OLD selectivity for spot-check genes:
+    KLK3: prostate_tpm=4285.71, ratio=16695.58, class=HIGHLY-SELECT
+    AR: prostate_tpm=21.05, ratio=3.36, class=PROSTATE-SEL
+    BRCA2: prostate_tpm=0.27, ratio=0.42, class=UBIQUITOUS
+    TP53: prostate_tpm=20.3, ratio=1.26, class=UBIQUITOUS
+    PTEN: prostate_tpm=27.25, ratio=1.05, class=UBIQUITOUS
+
+========================================================================
+Step 4: Run build_unified_net.py
+========================================================================
+  Running build_unified_net.py...
+  This will OVERWRITE mcrpc_unified_net.json (backup exists at mcrpc_unified_net.json.PHASE4_BACKUP)
+
+  Builder finished in 28s. Exit code: 0
+
+  STDOUT (last 1000 chars):
+ 6 layers | mut=0.5% | interact=15 | pathways=33 | compounds=50 | UBIQUITOUS
+    AKT1    : 5 layers | mut=0.9% | interact=24 | pathways=171 | compounds=32 | ratio=1.48
+    PIK3CA  : 6 layers | mut=3.3% | interact=7 | pathways=316 | compounds=50 | UBIQUITOUS
+    MTOR    : 6 layers | mut=1.6% | interact=2 | pathways=109 | compounds=50 | UBIQUITOUS
+    NR3C1   : 6 layers | mut=0.2% | interact=3 | pathways=20 | compounds=50 | UBIQUITOUS
+
+======================================================================
+SAVING UNIFIED NET
+======================================================================
+  Saved: /Users/kalki/INTERCEPTA/results/mcrpc_unified_net.json
+  Size: 51.2 MB
+
+======================================================================
+UNIFIED mCRPC DISEASE NET BUILT
+  28,454 gene nodes across 6 layers
+  13 velocity clusters, 184 undead cells
+  8 data-derived ODE parameters
+  5 escape route maps
+  Runtime: 28s
+======================================================================
+
+
+========================================================================
+Step 5: Load NEW unified net (post-regeneration)
+========================================================================
+  NEW unified net: 51.2 MB (OLD was 51.2 MB)
+  Loading...
+  NEW top-level keys: ['cell_populations', 'drugs', 'escape_routes', 'genes', 'metadata', 'ode_parameters_from_data', 'pathways', 'statistics', 'velocity_clusters']
+  NEW genes: 28454
+  NEW drugs: 0
+  NEW pathways: 2984
+  NEW cell populations: 8
+  NEW velocity clusters: 13
+  NEW escape routes: 5
+
+========================================================================
+Step 6: Comparison gates
+========================================================================
+
+  Gate verdicts:
+    [PASS] A: top-level keys match
+    [PASS] B: gene count matches
+    [PASS] C: drug count matches
+    [PASS] D: pathway count matches
+    [PASS] E: cell population count matches
+    [PASS] F: velocity cluster count matches
+    [PASS] G: escape route count matches
+    [PASS] H: selectivity spot-check (KLK3/AR/BRCA2/TP53/PTEN)
+
+  Total: 8 PASS, 0 FAIL
+
+========================================================================
+Step 7: Final verdict
+========================================================================
+  Phase 4-mCRPC: PASS
+
+  NEW unified net is structurally equivalent to OLD with updated selectivity values from Phase 3 CSVs.
+  Backup preserved at: mcrpc_unified_net.json.PHASE4_BACKUP
+  Safe to commit.

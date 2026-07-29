@@ -1,0 +1,210 @@
+{
+  "verdict": "PASS",
+  "message": "All three tests pass. Encoding fix works (TP53+ cohort is non-empty). Graph traversal is genotype-sensitive (different mutation profiles -> different drug rankings). Round 2.1b skeleton is validated on more than one biology.",
+  "encodings_detected": {
+    "FLT3-ITD": "binary",
+    "NPM1": "binary",
+    "RUNX1": "free_text",
+    "ASXL1": "free_text",
+    "TP53": "free_text"
+  },
+  "graph_stats": {
+    "n_nodes": 1201,
+    "n_edges": 33191
+  },
+  "query_A_FLT3_NPM1": {
+    "n_matched": 96,
+    "flt3_in_top10": 2,
+    "venetoclax_in_top10": true,
+    "top_15": [
+      {
+        "drug": "Elesclomol",
+        "median_auc": 31.992442032038504,
+        "n_patients": 34,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Panobinostat",
+        "median_auc": 56.39919570301945,
+        "n_patients": 26,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Foretinib (XL880)",
+        "median_auc": 62.7928409226773,
+        "n_patients": 69,
+        "is_flt3_targeter": true
+      },
+      {
+        "drug": "Venetoclax",
+        "median_auc": 72.54796646403679,
+        "n_patients": 44,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "SNS-032 (BMS-387032)",
+        "median_auc": 74.4562868271433,
+        "n_patients": 71,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Ponatinib (AP24534)",
+        "median_auc": 82.6655715793105,
+        "n_patients": 42,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Ralimetinib (LY2228820)",
+        "median_auc": 88.245352209041,
+        "n_patients": 9,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Gilteritinib",
+        "median_auc": 97.1023841478555,
+        "n_patients": 37,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Selinexor",
+        "median_auc": 99.1842996783169,
+        "n_patients": 42,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "JNJ-28312141",
+        "median_auc": 101.131929153702,
+        "n_patients": 45,
+        "is_flt3_targeter": true
+      },
+      {
+        "drug": "INK-128",
+        "median_auc": 102.218463827373,
+        "n_patients": 69,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Flavopiridol",
+        "median_auc": 103.431747864531,
+        "n_patients": 63,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "AKT Inhibitor IV",
+        "median_auc": 103.600733062161,
+        "n_patients": 9,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Dovitinib (CHIR-258)",
+        "median_auc": 103.8764480459275,
+        "n_patients": 62,
+        "is_flt3_targeter": true
+      },
+      {
+        "drug": "A-674563",
+        "median_auc": 105.314630917949,
+        "n_patients": 69,
+        "is_flt3_targeter": false
+      }
+    ]
+  },
+  "query_B_TP53": {
+    "n_matched": 75,
+    "flt3_in_top10": 0,
+    "venetoclax_in_top10": false,
+    "top_15": [
+      {
+        "drug": "Elesclomol",
+        "median_auc": 23.567625168083552,
+        "n_patients": 24,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Panobinostat",
+        "median_auc": 67.6712876545883,
+        "n_patients": 19,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Trametinib (GSK1120212)",
+        "median_auc": 97.4850414610431,
+        "n_patients": 22,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Selinexor",
+        "median_auc": 104.326340326031,
+        "n_patients": 21,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "SNS-032 (BMS-387032)",
+        "median_auc": 109.7872487211005,
+        "n_patients": 42,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Flavopiridol",
+        "median_auc": 112.14701255164451,
+        "n_patients": 38,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Staurosporine",
+        "median_auc": 124.1877255022082,
+        "n_patients": 6,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Indisulam",
+        "median_auc": 134.151321339009,
+        "n_patients": 6,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "AT7519",
+        "median_auc": 134.713737344054,
+        "n_patients": 42,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "PI-103",
+        "median_auc": 134.998978346553,
+        "n_patients": 34,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "JNJ-28312141",
+        "median_auc": 135.17838426573002,
+        "n_patients": 20,
+        "is_flt3_targeter": true
+      },
+      {
+        "drug": "INK-128",
+        "median_auc": 140.323500050359,
+        "n_patients": 36,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "PP242",
+        "median_auc": 140.355271632782,
+        "n_patients": 37,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Dasatinib",
+        "median_auc": 140.824732965592,
+        "n_patients": 15,
+        "is_flt3_targeter": false
+      },
+      {
+        "drug": "Rapamycin",
+        "median_auc": 141.2150515940705,
+        "n_patients": 12,
+        "is_flt3_targeter": false
+      }
+    ]
+  },
+  "jaccard_top10_overlap": 0.25
+}

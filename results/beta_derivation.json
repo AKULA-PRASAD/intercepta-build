@@ -1,0 +1,8 @@
+{
+  "beta_estimate": 0.0008267990403812119,
+  "method": "within_cluster_variance / (2 * cell_cycle_days)",
+  "within_cluster_var": 0.004960794242287271,
+  "cell_cycle_days": 3.0,
+  "current_model_value": 5e-05,
+  "n_cells": 46235
+}

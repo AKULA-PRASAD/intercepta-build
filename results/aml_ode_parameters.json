@@ -1,0 +1,19 @@
+{
+  "r_blast": 0.039,
+  "d_blast": 0.026,
+  "r_lsc": 0.003,
+  "d_lsc": 0.001,
+  "K": 1.0,
+  "diff_rate": 0.01,
+  "dediff_base": 1e-06,
+  "dediff_stress": 0.0005,
+  "B0": 0.3,
+  "L0": 3e-07,
+  "sources": {
+    "Tc": "Raza 1991, 5 AML patients, median 90h",
+    "GF": "BM biopsy labeling index 21%",
+    "OS_untreated": "median 2-4 months, multiple studies",
+    "LSC_freq": "Dick lab, 1 in 10^6, confirmed by LDA",
+    "proliferation_dynamics": "Taussig Nature Comms 2018"
+  }
+}

@@ -1,0 +1,189 @@
+[
+  {
+    "name": "Enzalutamide",
+    "smiles": "CNC(=O)c1ccc(N2C(=S)N(c3cc(C(F)(F)F)c(F)c(F)c3)C(=O)C2(C)C)cc1F",
+    "mw": 475.4,
+    "logp": 4.4,
+    "tpsa": 52.7,
+    "hbd": 1,
+    "hba": 3,
+    "rotatable": 3,
+    "aromatic_rings": 2,
+    "rings": 3,
+    "lipinski_violations": 0,
+    "lipinski": "PASS",
+    "veber": "PASS",
+    "oral_bioavailability": "LIKELY",
+    "bbb_penetration": "UNLIKELY",
+    "solubility_logS": -6.84,
+    "solubility": "VERY LOW",
+    "cyp3a4_inhibition": "HIGH RISK",
+    "cyp2d6_inhibition": "HIGH RISK",
+    "herg_liability": "FLAG",
+    "hepatotoxicity": "OK",
+    "reactive_alerts": [
+      "none"
+    ],
+    "metabolic_soft_spots": [
+      "N_dealkylation"
+    ],
+    "n_alerts": 0,
+    "n_soft_spots": 1
+  },
+  {
+    "name": "Alisertib",
+    "smiles": "COc1cc2c(cc1OC)N(C(=O)c1ccc(Cl)cc1)C(=O)/C2=C\\c1[nH]c2ccc(F)cc2c1C",
+    "mw": 490.9,
+    "logp": 6.01,
+    "tpsa": 71.6,
+    "hbd": 1,
+    "hba": 4,
+    "rotatable": 4,
+    "aromatic_rings": 4,
+    "rings": 5,
+    "lipinski_violations": 1,
+    "lipinski": "PASS",
+    "veber": "PASS",
+    "oral_bioavailability": "LIKELY",
+    "bbb_penetration": "UNLIKELY",
+    "solubility_logS": -9.37,
+    "solubility": "VERY LOW",
+    "cyp3a4_inhibition": "HIGH RISK",
+    "cyp2d6_inhibition": "HIGH RISK",
+    "herg_liability": "FLAG",
+    "hepatotoxicity": "FLAG",
+    "reactive_alerts": [
+      "michael_acceptor"
+    ],
+    "metabolic_soft_spots": [
+      "N_dealkylation"
+    ],
+    "n_alerts": 1,
+    "n_soft_spots": 1
+  },
+  {
+    "name": "Olaparib",
+    "smiles": "O=C(c1cc2ccccc2c(=O)[nH]1)N1CCN(C(=O)c2ncc3ccccc3n2)CC1",
+    "mw": 413.4,
+    "logp": 2.07,
+    "tpsa": 99.3,
+    "hbd": 1,
+    "hba": 5,
+    "rotatable": 2,
+    "aromatic_rings": 4,
+    "rings": 5,
+    "lipinski_violations": 0,
+    "lipinski": "PASS",
+    "veber": "PASS",
+    "oral_bioavailability": "LIKELY",
+    "bbb_penetration": "UNLIKELY",
+    "solubility_logS": -6.54,
+    "solubility": "VERY LOW",
+    "cyp3a4_inhibition": "LOW RISK",
+    "cyp2d6_inhibition": "HIGH RISK",
+    "herg_liability": "OK",
+    "hepatotoxicity": "OK",
+    "reactive_alerts": [
+      "none"
+    ],
+    "metabolic_soft_spots": [
+      "none"
+    ],
+    "n_alerts": 0,
+    "n_soft_spots": 0
+  },
+  {
+    "name": "Venetoclax",
+    "smiles": "CC1(C)CCC(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(NCC5CCOCC5)c([N+](=O)[O-])c4)cc3)CC2)=NN1c1ccc(Cl)cc1",
+    "mw": 738.3,
+    "logp": 5.76,
+    "tpsa": 149.7,
+    "hbd": 2,
+    "hba": 11,
+    "rotatable": 11,
+    "aromatic_rings": 3,
+    "rings": 6,
+    "lipinski_violations": 3,
+    "lipinski": "FAIL",
+    "veber": "FAIL",
+    "oral_bioavailability": "UNLIKELY",
+    "bbb_penetration": "UNLIKELY",
+    "solubility_logS": -9.54,
+    "solubility": "VERY LOW",
+    "cyp3a4_inhibition": "HIGH RISK",
+    "cyp2d6_inhibition": "HIGH RISK",
+    "herg_liability": "FLAG",
+    "hepatotoxicity": "OK",
+    "reactive_alerts": [
+      "none"
+    ],
+    "metabolic_soft_spots": [
+      "primary_alcohol",
+      "N_dealkylation"
+    ],
+    "n_alerts": 0,
+    "n_soft_spots": 2
+  },
+  {
+    "name": "INTC-002",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C(C)C)c3c2)no1",
+    "mw": 432.5,
+    "logp": 3.91,
+    "tpsa": 128.1,
+    "hbd": 3,
+    "hba": 6,
+    "rotatable": 5,
+    "aromatic_rings": 4,
+    "rings": 4,
+    "lipinski_violations": 0,
+    "lipinski": "PASS",
+    "veber": "PASS",
+    "oral_bioavailability": "LIKELY",
+    "bbb_penetration": "UNLIKELY",
+    "solubility_logS": -7.61,
+    "solubility": "VERY LOW",
+    "cyp3a4_inhibition": "HIGH RISK",
+    "cyp2d6_inhibition": "HIGH RISK",
+    "herg_liability": "FLAG",
+    "hepatotoxicity": "OK",
+    "reactive_alerts": [
+      "none"
+    ],
+    "metabolic_soft_spots": [
+      "none"
+    ],
+    "n_alerts": 0,
+    "n_soft_spots": 0
+  },
+  {
+    "name": "Cabozantinib",
+    "smiles": "COc1cc2nccc(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3)c2cc1OC",
+    "mw": 501.5,
+    "logp": 5.54,
+    "tpsa": 98.8,
+    "hbd": 2,
+    "hba": 6,
+    "rotatable": 8,
+    "aromatic_rings": 4,
+    "rings": 5,
+    "lipinski_violations": 2,
+    "lipinski": "FAIL",
+    "veber": "PASS",
+    "oral_bioavailability": "UNLIKELY",
+    "bbb_penetration": "UNLIKELY",
+    "solubility_logS": -8.87,
+    "solubility": "VERY LOW",
+    "cyp3a4_inhibition": "HIGH RISK",
+    "cyp2d6_inhibition": "HIGH RISK",
+    "herg_liability": "FLAG",
+    "hepatotoxicity": "OK",
+    "reactive_alerts": [
+      "none"
+    ],
+    "metabolic_soft_spots": [
+      "none"
+    ],
+    "n_alerts": 0,
+    "n_soft_spots": 0
+  }
+]

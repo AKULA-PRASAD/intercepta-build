@@ -1,0 +1,96 @@
+{
+  "verdict": "PASS",
+  "n_cells": 44823,
+  "n_genes": 27899,
+  "cell_type_distribution": {
+    "T": 7105,
+    "Prog-like": 7021,
+    "GMP-like": 3937,
+    "Mono": 2758,
+    "Mono-like": 2731,
+    "ProMono-like": 2603,
+    "cDC-like": 2218,
+    "HSC-like": 2175,
+    "NK": 1969,
+    "HSC": 1709,
+    "Prog": 1709,
+    "CTL": 1338,
+    "lateEry": 1329,
+    "Plasma": 1146,
+    "ProMono": 1146,
+    "earlyEry": 1119,
+    "GMP": 918,
+    "cDC": 849,
+    "B": 520,
+    "ProB": 298,
+    "pDC": 225
+  },
+  "prediction_refined_distribution": {
+    "normal": 23005,
+    "malignant": 20685,
+    "unclear": 1133
+  },
+  "lsc_signature_results": [
+    {
+      "gene": "HLF",
+      "in_list": true,
+      "mean_hsc": 0.011120864904650618,
+      "mean_blast": 0.0050490805437945095,
+      "ratio": 2.2025524861786048,
+      "p_value": 0.0026430612616940787,
+      "pass": "True"
+    },
+    {
+      "gene": "HOPX",
+      "in_list": true,
+      "mean_hsc": 0.5507032329675482,
+      "mean_blast": 0.04765797643266367,
+      "ratio": 11.555321358338432,
+      "p_value": 0.0,
+      "pass": "True"
+    },
+    {
+      "gene": "CD34",
+      "in_list": true,
+      "mean_hsc": 0.749983500436886,
+      "mean_blast": 0.14268312468579702,
+      "ratio": 5.256287329622386,
+      "p_value": 1.613000173995384e-299,
+      "pass": "True"
+    },
+    {
+      "gene": "MEIS1",
+      "in_list": true,
+      "mean_hsc": 0.27607410661552473,
+      "mean_blast": 0.10259843264466227,
+      "ratio": 2.690821872217827,
+      "p_value": 3.3325885012287027e-41,
+      "pass": "True"
+    },
+    {
+      "gene": "CDK6",
+      "in_list": true,
+      "mean_hsc": 1.3687875735665056,
+      "mean_blast": 0.9907598643561625,
+      "ratio": 1.3815533135832077,
+      "p_value": 3.199078321270925e-41,
+      "pass": "True"
+    },
+    {
+      "gene": "MLLT3",
+      "in_list": true,
+      "mean_hsc": 0.49277619427844177,
+      "mean_blast": 0.1567721118472495,
+      "ratio": 3.143264375736527,
+      "p_value": 2.6511619671773024e-75,
+      "pass": "True"
+    }
+  ],
+  "integrity_checks": {
+    "cell_type_distribution": true,
+    "prediction_refined_values": true,
+    "X_is_log_normalized": "True",
+    "lsc_signature_4_of_6": true
+  },
+  "output_file": "/Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/vangalen_aml.h5ad"
+}

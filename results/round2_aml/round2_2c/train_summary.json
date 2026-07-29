@@ -1,0 +1,57 @@
+{
+  "started": "2026-05-06 20:29:03",
+  "n_drugs_eval_full": 85,
+  "n_drugs_eval_ablation": 85,
+  "n_drugs_failed": 0,
+  "full_stack": {
+    "auroc_mean": 0.6426426427055385,
+    "auroc_median": 0.651750700280112,
+    "auroc_std": 0.10856181891953418,
+    "balanced_acc_mean": 0.5319133494138495,
+    "balanced_acc_median": 0.5,
+    "train_test_gap_mean": 0.3455926514121086,
+    "train_test_gap_max": 0.5872191011235955,
+    "n_drugs_auroc_ge_0_60": 52,
+    "n_drugs_auroc_ge_0_65": 44,
+    "n_drugs_auroc_ge_0_70": 27,
+    "n_drugs_auroc_ge_0_75": 14
+  },
+  "no_kaalcura_ablation": {
+    "auroc_mean": 0.6430498307624143,
+    "auroc_median": 0.6689436608221505,
+    "auroc_std": 0.10817805203392118
+  },
+  "kaalcura_contribution": {
+    "mean_delta": -0.00040718805687572977,
+    "median_delta": 0.00012339150361373452,
+    "n_drugs_kaalcura_helps": 43,
+    "n_drugs_kaalcura_hurts": 36,
+    "n_drugs_no_change": 6,
+    "n_drugs_compared": 85
+  },
+  "comparators": {
+    "rna_only_lightgbm_v2_mean_auroc": 0.645,
+    "kaalcura_3axis_lightgbm_mean_auroc": 0.532,
+    "kaalcura_3axis_logreg_mean_auroc_round22b": 0.526
+  },
+  "spec_compliance": {
+    "random_state": 42,
+    "n_cv_folds": 5,
+    "lightgbm_params": {
+      "n_estimators": 100,
+      "learning_rate": 0.1,
+      "num_leaves": 31,
+      "random_state": 42,
+      "n_jobs": -1,
+      "verbosity": -1
+    },
+    "feature_group_sizes": {
+      "kaalcura": 3,
+      "rna": 1000,
+      "mutation": 15,
+      "pathway": 12,
+      "drug_target": 4
+    },
+    "pathway_zscoring": "train-fold-only (no leakage)"
+  }
+}

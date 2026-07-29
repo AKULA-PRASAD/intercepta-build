@@ -1,0 +1,87 @@
+{
+  "DNMT3A": {
+    "function": "DNA methyltransferase",
+    "effect": "methylation",
+    "targets": "genome-wide CpG methylation"
+  },
+  "DNMT3B": {
+    "function": "DNA methyltransferase",
+    "effect": "methylation",
+    "targets": "genome-wide CpG methylation"
+  },
+  "DNMT1": {
+    "function": "Maintenance methyltransferase",
+    "effect": "methylation",
+    "targets": "CpG methylation maintenance during replication"
+  },
+  "TET1": {
+    "function": "DNA demethylase",
+    "effect": "demethylation",
+    "targets": "5mC \u2192 5hmC conversion"
+  },
+  "TET2": {
+    "function": "DNA demethylase",
+    "effect": "demethylation",
+    "targets": "5mC \u2192 5hmC conversion"
+  },
+  "TET3": {
+    "function": "DNA demethylase",
+    "effect": "demethylation",
+    "targets": "5mC \u2192 5hmC conversion"
+  },
+  "EZH2": {
+    "function": "Histone methyltransferase",
+    "effect": "H3K27me3 (silencing)",
+    "targets": "Polycomb target genes"
+  },
+  "KDM6A": {
+    "function": "Histone demethylase",
+    "effect": "removes H3K27me3",
+    "targets": "Activates polycomb-silenced genes"
+  },
+  "HDAC1": {
+    "function": "Histone deacetylase",
+    "effect": "gene silencing",
+    "targets": "Broad gene silencing"
+  },
+  "HDAC2": {
+    "function": "Histone deacetylase",
+    "effect": "gene silencing",
+    "targets": "Broad gene silencing"
+  },
+  "KAT2A": {
+    "function": "Histone acetyltransferase",
+    "effect": "gene activation",
+    "targets": "Broad gene activation"
+  },
+  "EP300": {
+    "function": "Histone acetyltransferase",
+    "effect": "gene activation",
+    "targets": "Enhancer activation"
+  },
+  "CREBBP": {
+    "function": "Histone acetyltransferase",
+    "effect": "gene activation",
+    "targets": "Transcription co-activation"
+  },
+  "ARID1A": {
+    "function": "SWI/SNF chromatin remodeler",
+    "effect": "chromatin accessibility",
+    "targets": "Enhancer accessibility"
+  },
+  "SMARCA4": {
+    "function": "SWI/SNF ATPase",
+    "effect": "chromatin remodeling",
+    "targets": "Nucleosome repositioning"
+  },
+  "IDH1": {
+    "function": "Isocitrate dehydrogenase",
+    "effect": "2-HG \u2192 blocks TET/KDM",
+    "targets": "Genome-wide hypermethylation when mutated"
+  },
+  "IDH2": {
+    "function": "Isocitrate dehydrogenase",
+    "effect": "2-HG \u2192 blocks TET/KDM",
+    "targets": "Genome-wide hypermethylation when mutated"
+  }
+}

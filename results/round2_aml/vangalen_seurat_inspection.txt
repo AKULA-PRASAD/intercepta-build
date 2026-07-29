@@ -1,0 +1,172 @@
+Seurat package version: 5.5.0 
+R version: R version 4.5.2 (2025-10-31) 
+
+File path:    /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/Seurat_AML.rds 
+File size:    240.5 MB
+
+========================================================================
+Loading Seurat RDS (this takes 30-60 seconds for ~241 MB)
+========================================================================
+Loaded in 11.4 seconds
+
+========================================================================
+Object structure
+========================================================================
+Class:          Seurat 
+S4 class?       TRUE 
+
+Seurat object summary:
+An object of class Seurat 
+27899 features across 44823 samples within 1 assay 
+Active assay: RNA (27899 features, 0 variable features)
+ 2 layers present: counts, data
+
+Object version: 4.9.9.9083 
+N cells:        44823 
+N features:     27899 
+Default assay:  RNA 
+All assays:     RNA 
+
+--- Assay: RNA ---
+  Class:     Assay5 
+  Layers (v5): counts, data 
+
+Dim reductions:  
+
+Metadata rows (cells): 44823 
+Metadata columns:
+  [orig.ident                    ] type=factor     unique=45    NA=0     first: BM1|BM2|BM3|BM4|BM5.34p|BM5.34p38n
+  [NumberOfReads                 ] type=integer    unique=34200 NA=0     first: 90005|641816|343429|270399|1303948|166596
+  [CyclingScore                  ] type=numeric    unique=10025 NA=0     first: -0.101|-0.6|0.802|-0.527|0.188|-0.372
+  [CyclingBinary                 ] type=character  unique=2     NA=0     first: no|yes
+  [MutTranscripts                ] type=character  unique=821   NA=19905  first: |NRAS.G13D/7472|NRAS.G13D/14837|KRAS.G13D/4105|NRAS.G13D/10158|SF3A1.G478S/70508
+  [WtTranscripts                 ] type=character  unique=2423  NA=11612  first: |DNMT3A.wt/28|DNMT3A.wt/432|DNMT3A.wt/7054 /// IDH2.wt/23|DNMT3A.wt/767|DNMT3...
+  [PredictionRefined             ] type=character  unique=3     NA=0     first: normal|malignant|unclear
+  [CellType                      ] type=factor     unique=21    NA=0     first: HSC|Prog|earlyEry|lateEry|GMP|ProMono
+  [nCount_RNA                    ] type=numeric    unique=7943  NA=0     first: 1111|6004|3675|2315|13186|1487
+  [nFeature_RNA                  ] type=numeric    unique=3131  NA=0     first: 532|1724|1373|890|2876|597
+
+========================================================================
+Cell-type / sample annotation candidates
+========================================================================
+Likely cell-type columns: orig.ident, CellType 
+Likely sample columns:    orig.ident 
+
+Column 'orig.ident' value distribution:
+  AML921A.D0                            3813
+  BM4                                   3738
+  MUTZ3.fresh1                          2934
+  AML556.D0                             2328
+  AML328.D113                           2029
+  AML328.D29                            1880
+  AML707B.D18                           1673
+  AML707B.D0                            1586
+  MUTZ3.frozen                          1582
+  MUTZ3.fresh2                          1502
+  AML556.D31                            1451
+  BM5.34p                               1431
+  AML328.D171                           1402
+  AML420B.D14                           1282
+  AML556.D15                            1203
+  AML419A.D0                            1189
+  OCI.AML3                              1178
+  AML1012.D0                            1136
+  AML328.D0                             1094
+  AML329.D20                             953
+  AML916.D0                              933
+  BM5.34p38n                             807
+  AML371.D0                              756
+  AML210A.D0                             748
+  AML420B.D35                            743
+  AML707B.D113                           708
+  BM3                                    643
+  AML329.D0                              525
+  AML420B.D0                             485
+  AML475.D0                              423
+  AML707B.D41                            387
+  AML314.D31                             346
+  AML870.D0                              345
+  AML329.D37                             224
+  AML371.D34                             204
+  BM2                                    188
+  AML997.D35                             187
+  AML314.D0                              162
+  BM1                                    108
+  AML475.D29                             102
+  AML870.D14                              96
+  AML707B.D97                             84
+  AML997.D0                               83
+  AML722B.D0                              79
+  AML722B.D49                             73
+
+Column 'CellType' value distribution:
+  T                                     7105
+  Prog-like                             7021
+  GMP-like                              3937
+  Mono                                  2758
+  Mono-like                             2731
+  ProMono-like                          2603
+  cDC-like                              2218
+  HSC-like                              2175
+  NK                                    1969
+  HSC                                   1709
+  Prog                                  1709
+  CTL                                   1338
+  lateEry                               1329
+  ProMono                               1146
+  Plasma                                1146
+  earlyEry                              1119
+  GMP                                    918
+  cDC                                    849
+  B                                      520
+  ProB                                   298
+  pDC                                    225
+
+Column 'orig.ident' value distribution (top 20 of 45):
+  AML921A.D0                            3813
+  BM4                                   3738
+  MUTZ3.fresh1                          2934
+  AML556.D0                             2328
+  AML328.D113                           2029
+  AML328.D29                            1880
+  AML707B.D18                           1673
+  AML707B.D0                            1586
+  MUTZ3.frozen                          1582
+  MUTZ3.fresh2                          1502
+  AML556.D31                            1451
+  BM5.34p                               1431
+  AML328.D171                           1402
+  AML420B.D14                           1282
+  AML556.D15                            1203
+  AML419A.D0                            1189
+  OCI.AML3                              1178
+  AML1012.D0                            1136
+  AML328.D0                             1094
+  AML329.D20                             953
+  ... 25 more samples
+
+Active identity column distribution (top 20):
+  AML921A.D0                            3813
+  BM4                                   3738
+  MUTZ3.fresh1                          2934
+  AML556.D0                             2328
+  AML328.D113                           2029
+  AML328.D29                            1880
+  AML707B.D18                           1673
+  AML707B.D0                            1586
+  MUTZ3.frozen                          1582
+  MUTZ3.fresh2                          1502
+  AML556.D31                            1451
+  BM5.34p                               1431
+  AML328.D171                           1402
+  AML420B.D14                           1282
+  AML556.D15                            1203
+  AML419A.D0                            1189
+  OCI.AML3                              1178
+  AML1012.D0                            1136
+  AML328.D0                             1094
+  AML329.D20                             953
+
+========================================================================
+Inspection complete. Review output to plan conversion approach.
+========================================================================

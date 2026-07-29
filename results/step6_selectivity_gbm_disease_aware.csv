@@ -1,0 +1,31 @@
+gene,primary_tissue,primary_tissue_tpm,other_tissues_mean_tpm,other_tissues_max_tpm,selectivity_vs_mean,selectivity_vs_max,safety_classification,max_other_tissue
+EGFR,Brain - Cortex,4.7806,23.6369,78.3374,0.2026,0.0611,LOW_IN_TARGET_TISSUE,Skin - Sun Exposed (Lower leg)
+IDH1,Brain - Cortex,12.9906,47.5905,266.465,0.2731,0.0488,LOW_IN_TARGET_TISSUE,Adrenal Gland
+IDH2,Brain - Cortex,56.7217,92.5952,442.793,0.6126,0.1281,UBIQUITOUS,Muscle - Skeletal
+TP53,Brain - Cortex,3.2662,20.3122,72.9493,0.1612,0.0449,LOW_IN_TARGET_TISSUE,Cells - EBV-transformed lymphocytes
+PTEN,Brain - Cortex,15.584,29.2327,62.4455,0.5333,0.2497,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+RB1,Brain - Cortex,9.6914,17.0,60.606,0.5703,0.16,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+VEGFA,Brain - Cortex,20.0019,101.8446,615.368,0.1965,0.0325,LOW_IN_TARGET_TISSUE,Thyroid
+KDR,Brain - Cortex,3.1676,20.7965,80.1173,0.1527,0.0397,LOW_IN_TARGET_TISSUE,Thyroid
+FLT1,Brain - Cortex,10.2276,11.8678,54.173,0.8619,0.1889,UBIQUITOUS,Thyroid
+FLT4,Brain - Cortex,2.1974,13.0104,64.0465,0.1695,0.0345,LOW_IN_TARGET_TISSUE,Thyroid
+PDGFRA,Brain - Cortex,9.3607,43.2574,217.526,0.2166,0.0431,LOW_IN_TARGET_TISSUE,Ovary
+PDGFRB,Brain - Cortex,15.284,124.9496,398.153,0.1224,0.0384,LOW_IN_TARGET_TISSUE,Cervix - Ectocervix
+KIT,Brain - Cortex,9.9589,11.6684,44.4616,0.8536,0.2242,UBIQUITOUS,Esophagus - Muscularis
+BRAF,Brain - Cortex,9.4217,11.4709,20.2773,0.8215,0.4649,UBIQUITOUS,Testis
+MAP2K1,Brain - Cortex,49.2984,33.6328,99.1303,1.4656,0.4974,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+MAP2K2,Brain - Cortex,77.3007,90.5122,196.936,0.8541,0.3925,UBIQUITOUS,Testis
+PIK3CA,Brain - Cortex,4.7606,12.3826,23.1876,0.385,0.2057,LOW_IN_TARGET_TISSUE,Artery - Tibial
+PIK3R1,Brain - Cortex,25.1278,41.8629,154.417,0.6003,0.1628,UBIQUITOUS,Nerve - Tibial
+MTOR,Brain - Cortex,11.7057,14.6571,35.5128,0.7988,0.3298,UBIQUITOUS,Testis
+ATRX,Brain - Cortex,8.771,12.6329,22.6218,0.6945,0.388,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+TERT,Brain - Cortex,0.1375,0.134,2.7234,1.0245,0.054,NOT_EXPRESSED,Testis
+CDKN2A,Brain - Cortex,0.5018,1.7062,16.9106,0.2982,0.0302,NOT_EXPRESSED,Pituitary
+CDKN2B,Brain - Cortex,1.1127,8.9388,56.7197,0.1255,0.0198,LOW_IN_TARGET_TISSUE,Esophagus - Mucosa
+FGFR1,Brain - Cortex,32.2496,65.2345,144.816,0.4944,0.2227,LOW_IN_TARGET_TISSUE,Artery - Aorta
+FGFR3,Brain - Cortex,81.7419,33.6119,364.546,2.4315,0.2243,MODERATE_TISSUE_SELECTIVE,Skin - Not Sun Exposed (Suprapubic)
+NF1,Brain - Cortex,8.2617,8.4903,17.8537,0.9731,0.463,UBIQUITOUS,Cells - Cultured fibroblasts
+PTPN11,Brain - Cortex,62.0792,42.4662,111.383,1.4617,0.5574,UBIQUITOUS,Cells - Cultured fibroblasts
+STAG2,Brain - Cortex,13.6552,23.0961,49.8657,0.5914,0.274,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+ARID1A,Brain - Cortex,13.6908,26.2283,51.5399,0.5222,0.2658,UBIQUITOUS,Cells - EBV-transformed lymphocytes
+LZTR1,Brain - Cortex,24.4806,39.2519,76.5432,0.6238,0.3199,UBIQUITOUS,Pituitary

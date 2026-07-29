@@ -1,0 +1,6 @@
+trial,target,simulated,pass,benefit
+CHAARTED,0.61,0.719,True,1.9
+LATITUDE,0.66,0.575,True,3.6
+PROfound,0.69,0.683,True,2.1
+PROpel_BRCA,0.29,0.257,True,5.9
+TALAPRO2_C2,0.622,0.626,True,4.1

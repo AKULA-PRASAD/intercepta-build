@@ -1,0 +1,8 @@
+{
+  "cytotoxic": 11,
+  "highly_relevant": 3,
+  "relevant": 15,
+  "marginal": 60,
+  "not_relevant": 197,
+  "su2c_fix": "patient column is percentage, not count"
+}

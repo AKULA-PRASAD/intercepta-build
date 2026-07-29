@@ -1,0 +1,27 @@
+drug,tier,composite,efficacy,selectivity,safety,resistance,novelty,synthesizability,efficacy_note,selectivity_note,safety_note,resistance_note,novelty_note,synth_note,ic50_uM,pareto_rank,hr
+Lestaurtinib,2,61.1,99.3,47.3,50,30.0,50,50,IC50=1.003uM (NOT comparable to Tier 1 ODE scores),NTRK1 GTEx ratio 4.7x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,1.0027,1,
+Sabutoclax,2,52.0,99.5,10.6,50,30.0,50,50,IC50=0.718uM (NOT comparable to Tier 1 ODE scores),BCL2 GTEx ratio 1.1x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,0.7178,1,
+ADT,1,27.9,32.9,10.0,50,0.0,10,100,ODE HR=0.671, GTEx ratio 1.0x,No SMILES available for ADMET,Nadir fraction=1.000,Established drug (in PK library),Approved/established drug,,1,0.6709
+docetaxel,1,20.2,7.1,10.0,50,0.3,10,100,ODE HR=0.929,Cytotoxic: kills all dividing cells,No SMILES available for ADMET,Nadir fraction=0.997,Established drug (in PK library),Approved/established drug,,1,0.9292
+Dasatinib,2,54.1,96.8,22.4,50,30.0,50,50,IC50=4.716uM (NOT comparable to Tier 1 ODE scores),SRC GTEx ratio 2.2x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,4.716,2,
+Afatinib,2,54.1,96.4,22.6,50,30.0,50,50,IC50=5.213uM (NOT comparable to Tier 1 ODE scores),ERBB2 GTEx ratio 2.3x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,5.2133,2,
+AZD7762,2,52.6,99.2,13.3,50,30.0,50,50,IC50=1.102uM (NOT comparable to Tier 1 ODE scores),CHEK2 GTEx ratio 1.3x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,1.1022,2,
+enzalutamide,1,25.8,26.1,10.0,50,0.0,10,100,ODE HR=0.739, GTEx ratio 1.0x,No SMILES available for ADMET,Nadir fraction=1.000,Established drug (in PK library),Approved/established drug,,2,0.7394
+Foretinib,2,51.9,98.2,11.6,50,30.0,50,50,IC50=2.550uM (NOT comparable to Tier 1 ODE scores),FGFR1 GTEx ratio 1.2x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,2.55,3,
+BMS-536924,2,51.9,94.6,15.9,50,30.0,50,50,IC50=7.917uM (NOT comparable to Tier 1 ODE scores),IGF1R GTEx ratio 1.6x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,7.9168,3,
+Obatoclax Mesylate,2,51.8,98.9,10.6,50,30.0,50,50,IC50=1.590uM (NOT comparable to Tier 1 ODE scores),BCL2 GTEx ratio 1.1x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,1.5896,3,
+Temsirolimus,2,51.8,97.9,11.9,50,30.0,50,50,IC50=3.123uM (NOT comparable to Tier 1 ODE scores),MTOR GTEx ratio 1.2x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,3.1233,3,
+AZD6738,2,51.1,95.1,12.1,50,30.0,50,50,IC50=7.183uM (NOT comparable to Tier 1 ODE scores),ATR GTEx ratio 1.2x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,7.1827,3,
+olaparib,1,21.2,10.6,10.0,50,0.0,10,100,ODE HR=0.894, GTEx ratio 1.0x,No SMILES available for ADMET,Nadir fraction=1.000,Established drug (in PK library),Approved/established drug,,3,0.8936
+BMS-754807,2,51.6,93.6,15.9,50,30.0,50,50,IC50=9.255uM (NOT comparable to Tier 1 ODE scores),IGF1R GTEx ratio 1.6x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,9.255,4,
+TW 37,2,51.5,97.7,10.6,50,30.0,50,50,IC50=3.360uM (NOT comparable to Tier 1 ODE scores),BCL2 GTEx ratio 1.1x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,3.36,4,
+abiraterone,1,18.0,0.0,10.0,50,0.0,10,100,ODE HR=1.000, GTEx ratio 1.0x,No SMILES available for ADMET,Nadir fraction=1.000,Established drug (in PK library),Approved/established drug,,4,1.0
+talazoparib,1,18.0,0.0,10.0,50,0.0,10,100,ODE HR=1.000, GTEx ratio 1.0x,No SMILES available for ADMET,Nadir fraction=1.000,Established drug (in PK library),Approved/established drug,,4,1.0
+Afuresertib,2,50.9,92.3,14.8,50,30.0,50,50,IC50=11.212uM (NOT comparable to Tier 1 ODE scores),AKT1 GTEx ratio 1.5x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,11.212,5,
+Navitoclax,2,50.5,94.4,10.6,50,30.0,50,50,IC50=8.188uM (NOT comparable to Tier 1 ODE scores),BCL2 GTEx ratio 1.1x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,8.1885,5,
+NVP-ADW742,2,50.3,89.5,15.9,50,30.0,50,50,IC50=15.325uM (NOT comparable to Tier 1 ODE scores),IGF1R GTEx ratio 1.6x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,15.3249,5,
+ABT737,2,50.2,93.5,10.6,50,30.0,50,50,IC50=9.458uM (NOT comparable to Tier 1 ODE scores),BCL2 GTEx ratio 1.1x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,9.4577,6,
+Crizotinib,2,50.1,91.4,12.9,50,30.0,50,50,IC50=12.440uM (NOT comparable to Tier 1 ODE scores),MET GTEx ratio 1.3x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,12.4395,6,
+Venetoclax,2,50.1,93.2,10.6,50,30.0,50,50,IC50=9.832uM (NOT comparable to Tier 1 ODE scores),BCL2 GTEx ratio 1.1x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,9.8324,7,
+AZD4547,2,49.4,90.1,11.6,50,30.0,50,50,IC50=14.439uM (NOT comparable to Tier 1 ODE scores),FGFR1 GTEx ratio 1.2x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,14.4391,7,
+UMI-77,2,48.8,90.7,8.4,50,30.0,50,50,IC50=13.572uM (NOT comparable to Tier 1 ODE scores),MCL1 GTEx ratio 0.8x,Unknown (no SMILES),Unknown (no ODE),Unknown (not checked),Unknown,13.5719,8,

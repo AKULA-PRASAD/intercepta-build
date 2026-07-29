@@ -1,0 +1,316 @@
+{
+  "disease_id": "nsclc",
+  "disease_full_name": "Non-Small Cell Lung Carcinoma (LUAD + LUSC)",
+  "primary_tissue": "Lung",
+  "comparator_tissues": [
+    "Lung"
+  ],
+  "comparator_strategy": "single_tissue",
+  "tissue_proxy_caveat": null,
+  "n_target_genes": 33,
+  "n_genes_found_in_gtex": 33,
+  "n_genes_missing_from_gtex": 0,
+  "missing_genes": null,
+  "selectivity_per_gene": {
+    "EGFR": {
+      "primary_tissue_tpm": 22.1273,
+      "other_tissues_mean_tpm": 19.0403,
+      "other_tissues_max_tpm": 78.3374,
+      "selectivity_vs_mean": 1.162,
+      "selectivity_vs_max": 0.2826,
+      "max_other_tissue": "Skin - Sun Exposed (Lower leg)",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "KRAS": {
+      "primary_tissue_tpm": 19.7597,
+      "other_tissues_mean_tpm": 13.2802,
+      "other_tissues_max_tpm": 30.7364,
+      "selectivity_vs_mean": 1.4875,
+      "selectivity_vs_max": 0.643,
+      "max_other_tissue": "Nerve - Tibial",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "ERBB2": {
+      "primary_tissue_tpm": 47.7796,
+      "other_tissues_mean_tpm": 37.6701,
+      "other_tissues_max_tpm": 130.131,
+      "selectivity_vs_mean": 1.2683,
+      "selectivity_vs_max": 0.3672,
+      "max_other_tissue": "Nerve - Tibial",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "ALK": {
+      "primary_tissue_tpm": 0.0784,
+      "other_tissues_mean_tpm": 0.4486,
+      "other_tissues_max_tpm": 3.5316,
+      "selectivity_vs_mean": 0.1927,
+      "selectivity_vs_max": 0.025,
+      "max_other_tissue": "Pituitary",
+      "safety_classification": "NOT_EXPRESSED"
+    },
+    "MET": {
+      "primary_tissue_tpm": 9.7737,
+      "other_tissues_mean_tpm": 5.805,
+      "other_tissues_max_tpm": 21.256,
+      "selectivity_vs_mean": 1.6825,
+      "selectivity_vs_max": 0.4601,
+      "max_other_tissue": "Nerve - Tibial",
+      "safety_classification": "MODERATE_TISSUE_SELECTIVE"
+    },
+    "BRAF": {
+      "primary_tissue_tpm": 15.5857,
+      "other_tissues_mean_tpm": 10.8906,
+      "other_tissues_max_tpm": 27.5801,
+      "selectivity_vs_mean": 1.4307,
+      "selectivity_vs_max": 0.5653,
+      "max_other_tissue": "Brain - Cerebellar Hemisphere",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "ROS1": {
+      "primary_tissue_tpm": 11.0866,
+      "other_tissues_mean_tpm": 0.1236,
+      "other_tissues_max_tpm": 2.9558,
+      "selectivity_vs_mean": 83.0795,
+      "selectivity_vs_max": 3.7415,
+      "max_other_tissue": "Cells - Cultured fibroblasts",
+      "safety_classification": "HIGHLY_SELECTIVE"
+    },
+    "RET": {
+      "primary_tissue_tpm": 0.4704,
+      "other_tissues_mean_tpm": 1.3353,
+      "other_tissues_max_tpm": 6.2977,
+      "selectivity_vs_mean": 0.3571,
+      "selectivity_vs_max": 0.0762,
+      "max_other_tissue": "Brain - Substantia nigra",
+      "safety_classification": "NOT_EXPRESSED"
+    },
+    "NTRK1": {
+      "primary_tissue_tpm": 1.834,
+      "other_tissues_mean_tpm": 1.2631,
+      "other_tissues_max_tpm": 5.6739,
+      "selectivity_vs_mean": 1.4484,
+      "selectivity_vs_max": 0.3244,
+      "max_other_tissue": "Prostate",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "NTRK2": {
+      "primary_tissue_tpm": 1.7701,
+      "other_tissues_mean_tpm": 17.714,
+      "other_tissues_max_tpm": 79.5144,
+      "selectivity_vs_mean": 0.1004,
+      "selectivity_vs_max": 0.0224,
+      "max_other_tissue": "Brain - Anterior cingulate cortex (BA24)",
+      "safety_classification": "LOW_IN_TARGET_TISSUE"
+    },
+    "NTRK3": {
+      "primary_tissue_tpm": 2.1421,
+      "other_tissues_mean_tpm": 4.3662,
+      "other_tissues_max_tpm": 32.5277,
+      "selectivity_vs_mean": 0.4918,
+      "selectivity_vs_max": 0.0661,
+      "max_other_tissue": "Artery - Tibial",
+      "safety_classification": "LOW_IN_TARGET_TISSUE"
+    },
+    "ERBB4": {
+      "primary_tissue_tpm": 0.8821,
+      "other_tissues_mean_tpm": 2.2949,
+      "other_tissues_max_tpm": 9.0913,
+      "selectivity_vs_mean": 0.3871,
+      "selectivity_vs_max": 0.098,
+      "max_other_tissue": "Brain - Cerebellar Hemisphere",
+      "safety_classification": "NOT_EXPRESSED"
+    },
+    "PIK3CA": {
+      "primary_tissue_tpm": 15.6377,
+      "other_tissues_mean_tpm": 10.4516,
+      "other_tissues_max_tpm": 23.1876,
+      "selectivity_vs_mean": 1.4957,
+      "selectivity_vs_max": 0.6745,
+      "max_other_tissue": "Artery - Tibial",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "AKT1": {
+      "primary_tissue_tpm": 80.299,
+      "other_tissues_mean_tpm": 48.2696,
+      "other_tissues_max_tpm": 88.7644,
+      "selectivity_vs_mean": 1.6634,
+      "selectivity_vs_max": 0.9046,
+      "max_other_tissue": "Artery - Aorta",
+      "safety_classification": "MODERATE_TISSUE_SELECTIVE"
+    },
+    "MTOR": {
+      "primary_tissue_tpm": 15.2756,
+      "other_tissues_mean_tpm": 13.9215,
+      "other_tissues_max_tpm": 35.5128,
+      "selectivity_vs_mean": 1.0972,
+      "selectivity_vs_max": 0.4303,
+      "max_other_tissue": "Testis",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "TP53": {
+      "primary_tissue_tpm": 16.9199,
+      "other_tissues_mean_tpm": 16.1951,
+      "other_tissues_max_tpm": 72.9493,
+      "selectivity_vs_mean": 1.0447,
+      "selectivity_vs_max": 0.232,
+      "max_other_tissue": "Cells - EBV-transformed lymphocytes",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "RB1": {
+      "primary_tissue_tpm": 23.7409,
+      "other_tissues_mean_tpm": 15.0802,
+      "other_tissues_max_tpm": 60.606,
+      "selectivity_vs_mean": 1.5739,
+      "selectivity_vs_max": 0.3918,
+      "max_other_tissue": "Cells - EBV-transformed lymphocytes",
+      "safety_classification": "MODERATE_TISSUE_SELECTIVE"
+    },
+    "STK11": {
+      "primary_tissue_tpm": 30.1853,
+      "other_tissues_mean_tpm": 28.6285,
+      "other_tissues_max_tpm": 119.642,
+      "selectivity_vs_mean": 1.0544,
+      "selectivity_vs_max": 0.2524,
+      "max_other_tissue": "Testis",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "KEAP1": {
+      "primary_tissue_tpm": 35.7935,
+      "other_tissues_mean_tpm": 35.5853,
+      "other_tissues_max_tpm": 88.3333,
+      "selectivity_vs_mean": 1.0059,
+      "selectivity_vs_max": 0.4053,
+      "max_other_tissue": "Muscle - Skeletal",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "NFE2L2": {
+      "primary_tissue_tpm": 84.6452,
+      "other_tissues_mean_tpm": 61.9146,
+      "other_tissues_max_tpm": 174.265,
+      "selectivity_vs_mean": 1.3671,
+      "selectivity_vs_max": 0.4858,
+      "max_other_tissue": "Esophagus - Mucosa",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "CDKN2A": {
+      "primary_tissue_tpm": 1.079,
+      "other_tissues_mean_tpm": 1.4226,
+      "other_tissues_max_tpm": 16.9106,
+      "selectivity_vs_mean": 0.7601,
+      "selectivity_vs_max": 0.0644,
+      "max_other_tissue": "Pituitary",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "MYC": {
+      "primary_tissue_tpm": 54.2758,
+      "other_tissues_mean_tpm": 57.6627,
+      "other_tissues_max_tpm": 298.818,
+      "selectivity_vs_mean": 0.9413,
+      "selectivity_vs_max": 0.1817,
+      "max_other_tissue": "Skin - Not Sun Exposed (Suprapubic)",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "VEGFA": {
+      "primary_tissue_tpm": 158.588,
+      "other_tissues_mean_tpm": 80.6993,
+      "other_tissues_max_tpm": 615.368,
+      "selectivity_vs_mean": 1.9651,
+      "selectivity_vs_max": 0.2577,
+      "max_other_tissue": "Thyroid",
+      "safety_classification": "MODERATE_TISSUE_SELECTIVE"
+    },
+    "KDR": {
+      "primary_tissue_tpm": 50.7656,
+      "other_tissues_mean_tpm": 15.907,
+      "other_tissues_max_tpm": 80.1173,
+      "selectivity_vs_mean": 3.19,
+      "selectivity_vs_max": 0.6337,
+      "max_other_tissue": "Thyroid",
+      "safety_classification": "TISSUE_SELECTIVE"
+    },
+    "FLT4": {
+      "primary_tissue_tpm": 34.8001,
+      "other_tissues_mean_tpm": 9.947,
+      "other_tissues_max_tpm": 64.0465,
+      "selectivity_vs_mean": 3.496,
+      "selectivity_vs_max": 0.5434,
+      "max_other_tissue": "Thyroid",
+      "safety_classification": "TISSUE_SELECTIVE"
+    },
+    "CD274": {
+      "primary_tissue_tpm": 24.5582,
+      "other_tissues_mean_tpm": 3.4329,
+      "other_tissues_max_tpm": 59.8011,
+      "selectivity_vs_mean": 7.1358,
+      "selectivity_vs_max": 0.4108,
+      "max_other_tissue": "Cells - EBV-transformed lymphocytes",
+      "safety_classification": "TISSUE_SELECTIVE"
+    },
+    "PDCD1": {
+      "primary_tissue_tpm": 3.2481,
+      "other_tissues_mean_tpm": 1.5022,
+      "other_tissues_max_tpm": 23.6495,
+      "selectivity_vs_mean": 2.1546,
+      "selectivity_vs_max": 0.1377,
+      "max_other_tissue": "Cells - EBV-transformed lymphocytes",
+      "safety_classification": "MODERATE_TISSUE_SELECTIVE"
+    },
+    "FGFR1": {
+      "primary_tissue_tpm": 60.3967,
+      "other_tissues_mean_tpm": 57.2352,
+      "other_tissues_max_tpm": 144.816,
+      "selectivity_vs_mean": 1.0552,
+      "selectivity_vs_max": 0.4171,
+      "max_other_tissue": "Artery - Aorta",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "FGFR2": {
+      "primary_tissue_tpm": 6.9462,
+      "other_tissues_mean_tpm": 17.2221,
+      "other_tissues_max_tpm": 130.141,
+      "selectivity_vs_mean": 0.4037,
+      "selectivity_vs_max": 0.0534,
+      "max_other_tissue": "Brain - Spinal cord (cervical c-1)",
+      "safety_classification": "LOW_IN_TARGET_TISSUE"
+    },
+    "FGFR3": {
+      "primary_tissue_tpm": 14.5128,
+      "other_tissues_mean_tpm": 45.7777,
+      "other_tissues_max_tpm": 364.546,
+      "selectivity_vs_mean": 0.3172,
+      "selectivity_vs_max": 0.0398,
+      "max_other_tissue": "Skin - Not Sun Exposed (Suprapubic)",
+      "safety_classification": "LOW_IN_TARGET_TISSUE"
+    },
+    "SOX2": {
+      "primary_tissue_tpm": 0.6362,
+      "other_tissues_mean_tpm": 16.2718,
+      "other_tissues_max_tpm": 69.7693,
+      "selectivity_vs_mean": 0.0397,
+      "selectivity_vs_max": 0.0093,
+      "max_other_tissue": "Brain - Amygdala",
+      "safety_classification": "NOT_EXPRESSED"
+    },
+    "BCL2": {
+      "primary_tissue_tpm": 4.6554,
+      "other_tissues_mean_tpm": 7.3603,
+      "other_tissues_max_tpm": 49.6889,
+      "selectivity_vs_mean": 0.633,
+      "selectivity_vs_max": 0.0939,
+      "max_other_tissue": "Cells - EBV-transformed lymphocytes",
+      "safety_classification": "UBIQUITOUS"
+    },
+    "MCL1": {
+      "primary_tissue_tpm": 474.739,
+      "other_tissues_mean_tpm": 170.6001,
+      "other_tissues_max_tpm": 384.63,
+      "selectivity_vs_mean": 2.7827,
+      "selectivity_vs_max": 1.2343,
+      "max_other_tissue": "Artery - Aorta",
+      "safety_classification": "MODERATE_TISSUE_SELECTIVE"
+    }
+  },
+  "computed": "2026-05-08T08:10:21",
+  "module_version": "step6_selectivity_v2",
+  "spec_reference": "INTERCEPTA_Selectivity_Redesign_Specification.md (tag: selectivity-redesign-spec)"
+}

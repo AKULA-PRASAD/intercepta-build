@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-21 12:55",
+  "ready": [
+    "Stage 1: Disease net builder",
+    "Stage 3: ODE runs and produces HR",
+    "Stage 4: All 6 ranking dimensions are computable",
+    "Stage 5: 9/10 items can be auto-generated"
+  ],
+  "blockers": [
+    "Stage 2: Escape route finder is hardcoded for mCRPC. Needs generalization.",
+    "Stage 3: Only 6/286 drugs have PK parameters"
+  ],
+  "effort": {
+    "Stage 1": "0.5 sessions (connect missing sources)",
+    "Stage 2": "1 session (generalize escape route finder)",
+    "Stage 3 ODE": "DONE (for 6 drugs)",
+    "Stage 3 PK expansion": "2 sessions (parse DrugBank/ChEMBL PK for 50+ drugs)",
+    "Stage 4": "1 session (wire each dimension to computation)",
+    "Stage 5": "2 sessions (templates + wiring for all 10 items)"
+  },
+  "minimum_viable_hours": 5,
+  "sessions_to_universal": 4
+}

@@ -1,0 +1,17 @@
+{
+  "drug": "Alisertib (MLN8237)",
+  "smiles": "COc1cc2c(cc1OC)N(C(=O)c1ccc(Cl)cc1)C(=O)/C2=C\\c1[nH]c2ccc(F)cc2c1C",
+  "mw": 490.9,
+  "logp": 6.01,
+  "hbd": 1,
+  "hba": 4,
+  "tpsa": 71.6,
+  "rotatable_bonds": 4,
+  "lipinski_violations": 1,
+  "predicted_gut_absorption": "GOOD",
+  "predicted_bbb": "POSSIBLE",
+  "predicted_oral_bioavail": "GOOD",
+  "clinical_bioavail": ">82%",
+  "clinical_protein_binding": "99%",
+  "clinical_half_life": "23h"
+}

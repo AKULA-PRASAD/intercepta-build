@@ -1,0 +1,8 @@
+{
+  "source": "Open Targets microbiome diseases + STRING + literature interface genes",
+  "n_diseases": 237,
+  "n_interface_genes": 15,
+  "n_interactions": 1069,
+  "n_associated_genes": 14780,
+  "honest": "No metagenomic data. Interface genes from literature. Interactions from STRING."
+}

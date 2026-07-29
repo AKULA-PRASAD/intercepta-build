@@ -1,0 +1,65 @@
+
+========================================================================
+Step 1: Load clinical annotations
+========================================================================
+Clinical rows: 942 (patient-samples)
+Unique patients: 805
+
+Per-patient mutation status:
+  FLT3-ITD annotated: 804
+    positive: 185  negative: 619
+  NPM1 annotated:     803
+    positive: 202  negative: 601
+
+========================================================================
+Step 2: Restrict to AML-diagnosis patients
+========================================================================
+Patients with AML diagnosis at inclusion: 766
+AML patients with both FLT3-ITD and NPM1 annotated: 764
+
+========================================================================
+Step 3: Compute co-mutation frequencies
+========================================================================
+Total AML patients in analysis: 764
+  FLT3-ITD+ (overall):        180 (23.6%)
+  NPM1+ (overall):            200 (26.2%)
+  FLT3-ITD+ AND NPM1+:        96 (12.6%)
+  FLT3-ITD+ only (NPM1-):     84 (11.0%)
+  NPM1+ only (FLT3-):         104 (13.6%)
+  Neither mutation:           480 (62.8%)
+
+Conditional frequencies:
+  P(FLT3-ITD+ | NPM1+) = 48.0%   (expected ~40%)
+  P(NPM1+ | FLT3-ITD+) = 53.3%   (expected ~55%)
+
+========================================================================
+Step 4: Chi-squared test for independence
+========================================================================
+Contingency table (rows: FLT3-ITD status, cols: NPM1 status):
+  [[  96,   84],    # FLT3-ITD+
+   [ 104,  480]]    # FLT3-ITD-
+Chi-squared = 88.03, p = 6.46e-21
+Fisher exact: OR = 5.27, p = 1.24e-19
+(OR > 1 means FLT3-ITD and NPM1 mutations co-occur more than expected)
+
+========================================================================
+Step 5: Verdict
+========================================================================
+
+Validation checks:
+Check                                                      observed    expected  status
+  Overall FLT3-ITD frequency                                  23.6%       28.0%  ✓ PASS
+  Overall NPM1 frequency                                      26.2%       30.0%  ✓ PASS
+  P(FLT3-ITD+ | NPM1+)                                        48.0%       40.0%  ✓ PASS
+  P(NPM1+ | FLT3-ITD+)                                        53.3%       55.0%  ✓ PASS
+  Co-occurrence chi-squared significant (p<0.001)        p=6.46e-21     < 0.001  ✓ PASS
+
+5 of 5 checks passed.
+
+VERDICT: PASS
+  All co-mutation checks match published AML literature. Clinical mutation annotations are internally consistent and trustworthy for building the Layer 1 genome net.
+
+========================================================================
+Save outputs
+========================================================================
+Summary JSON: /Users/kalki/INTERCEPTA/round2_aml/results/beataml_comutation_validation_summary.json

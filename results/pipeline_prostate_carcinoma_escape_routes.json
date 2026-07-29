@@ -1,0 +1,2488 @@
+{
+  "FGFR1": {
+    "n_escape_genes": 9,
+    "n_druggable": 3,
+    "top_escapes": [
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 12,
+        "string_score": 923,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FGFR2",
+        "shared_pathways": 10,
+        "string_score": 853,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547"
+        ]
+      },
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 10,
+        "string_score": 737,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "FGF10",
+        "shared_pathways": 9,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FGFR3",
+        "shared_pathways": 9,
+        "string_score": 854,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547"
+        ]
+      },
+      {
+        "gene": "FGFR4",
+        "shared_pathways": 8,
+        "string_score": 967,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "HGF",
+        "shared_pathways": 8,
+        "string_score": 814,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "CDH1",
+        "shared_pathways": 6,
+        "string_score": 885,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "NOTCH1",
+        "shared_pathways": 3,
+        "string_score": 737,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "PD173074",
+      "AZD4547",
+      "Foretinib"
+    ]
+  },
+  "MCL1": {
+    "n_escape_genes": 12,
+    "n_druggable": 5,
+    "top_escapes": [
+      {
+        "gene": "BCL2",
+        "shared_pathways": 4,
+        "string_score": 764,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      },
+      {
+        "gene": "BCL2L11",
+        "shared_pathways": 3,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 3,
+        "string_score": 918,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "AKT1",
+        "shared_pathways": 3,
+        "string_score": 867,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 3,
+        "string_score": 857,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 3,
+        "string_score": 837,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BAK1",
+        "shared_pathways": 2,
+        "string_score": 998,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 2,
+        "string_score": 883,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 2,
+        "string_score": 763,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 2,
+        "string_score": 750,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Obatoclax Mesylate",
+      "TW 37",
+      "AZD5991",
+      "Sabutoclax",
+      "UMI-77"
+    ]
+  },
+  "FGFR2": {
+    "n_escape_genes": 12,
+    "n_druggable": 7,
+    "top_escapes": [
+      {
+        "gene": "FGFR3",
+        "shared_pathways": 11,
+        "string_score": 987,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547"
+        ]
+      },
+      {
+        "gene": "FGFR1",
+        "shared_pathways": 10,
+        "string_score": 853,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547",
+          "Foretinib"
+        ]
+      },
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 10,
+        "string_score": 735,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FGF10",
+        "shared_pathways": 8,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "HGF",
+        "shared_pathways": 8,
+        "string_score": 906,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 8,
+        "string_score": 744,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "SRC",
+        "shared_pathways": 4,
+        "string_score": 958,
+        "druggable": true,
+        "drugs": [
+          "Bosutinib",
+          "Dasatinib"
+        ]
+      },
+      {
+        "gene": "JAK1",
+        "shared_pathways": 4,
+        "string_score": 913,
+        "druggable": true,
+        "drugs": [
+          "Ruxolitinib",
+          "JAK1_8709",
+          "JAK_8517",
+          "GSK2276186C"
+        ]
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 4,
+        "string_score": 867,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 3,
+        "string_score": 847,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "PD173074",
+      "AZD4547"
+    ]
+  },
+  "NTRK1": {
+    "n_escape_genes": 8,
+    "n_druggable": 2,
+    "top_escapes": [
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 7,
+        "string_score": 924,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "HGF",
+        "shared_pathways": 5,
+        "string_score": 997,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FGF10",
+        "shared_pathways": 5,
+        "string_score": 889,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 5,
+        "string_score": 751,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "GDNF",
+        "shared_pathways": 3,
+        "string_score": 991,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TPM3",
+        "shared_pathways": 2,
+        "string_score": 986,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 1,
+        "string_score": 884,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ESR1",
+        "shared_pathways": 1,
+        "string_score": 720,
+        "druggable": true,
+        "drugs": [
+          "Tamoxifen",
+          "GDC0810"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "GW441756",
+      "Lestaurtinib",
+      "AZD1332"
+    ]
+  },
+  "AR": {
+    "n_escape_genes": 18,
+    "n_druggable": 7,
+    "top_escapes": [
+      {
+        "gene": "NR3C1",
+        "shared_pathways": 14,
+        "string_score": 795,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 7,
+        "string_score": 892,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 7,
+        "string_score": 700,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 6,
+        "string_score": 998,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 5,
+        "string_score": 905,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 3,
+        "string_score": 955,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "AKT1",
+        "shared_pathways": 3,
+        "string_score": 895,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "IGF1R",
+        "shared_pathways": 3,
+        "string_score": 808,
+        "druggable": true,
+        "drugs": [
+          "BMS-536924",
+          "GSK1904529A",
+          "Linsitinib",
+          "NVP-ADW742",
+          "BMS-754807"
+        ]
+      },
+      {
+        "gene": "KLK3",
+        "shared_pathways": 2,
+        "string_score": 995,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ESR1",
+        "shared_pathways": 2,
+        "string_score": 981,
+        "druggable": true,
+        "drugs": [
+          "Tamoxifen",
+          "GDC0810"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Bicalutamide"
+    ]
+  },
+  "EZH2": {
+    "n_escape_genes": 11,
+    "n_druggable": 2,
+    "top_escapes": [
+      {
+        "gene": "TP53",
+        "shared_pathways": 5,
+        "string_score": 899,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "DNMT3B",
+        "shared_pathways": 2,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 2,
+        "string_score": 984,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 2,
+        "string_score": 973,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 2,
+        "string_score": 945,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "BRCA1",
+        "shared_pathways": 2,
+        "string_score": 926,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 2,
+        "string_score": 760,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "SUZ12",
+        "shared_pathways": 1,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PHC3",
+        "shared_pathways": 1,
+        "string_score": 918,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "SOX4",
+        "shared_pathways": 1,
+        "string_score": 874,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "GSK343"
+    ]
+  },
+  "CHEK2": {
+    "n_escape_genes": 11,
+    "n_druggable": 4,
+    "top_escapes": [
+      {
+        "gene": "ATM",
+        "shared_pathways": 31,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "KU-55933"
+        ]
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 20,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "BRCA1",
+        "shared_pathways": 15,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 15,
+        "string_score": 983,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "ATR",
+        "shared_pathways": 4,
+        "string_score": 998,
+        "druggable": true,
+        "drugs": [
+          "VE-822",
+          "AZD6738",
+          "VE821"
+        ]
+      },
+      {
+        "gene": "CDKN2A",
+        "shared_pathways": 4,
+        "string_score": 758,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 3,
+        "string_score": 810,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BRCA2",
+        "shared_pathways": 1,
+        "string_score": 985,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "NBN",
+        "shared_pathways": 1,
+        "string_score": 935,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MDM4",
+        "shared_pathways": 1,
+        "string_score": 920,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "AZD7762",
+      "MK-8776"
+    ]
+  },
+  "MET": {
+    "n_escape_genes": 11,
+    "n_druggable": 5,
+    "top_escapes": [
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 18,
+        "string_score": 844,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "HGF",
+        "shared_pathways": 17,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 14,
+        "string_score": 847,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 11,
+        "string_score": 804,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "SRC",
+        "shared_pathways": 10,
+        "string_score": 993,
+        "druggable": true,
+        "drugs": [
+          "Bosutinib",
+          "Dasatinib"
+        ]
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 9,
+        "string_score": 981,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 9,
+        "string_score": 755,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "CDH1",
+        "shared_pathways": 8,
+        "string_score": 959,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FGF10",
+        "shared_pathways": 8,
+        "string_score": 881,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ERBB3",
+        "shared_pathways": 6,
+        "string_score": 987,
+        "druggable": true,
+        "drugs": [
+          "Sapitinib"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Crizotinib",
+      "Savolitinib",
+      "Foretinib"
+    ]
+  },
+  "ADRA1A": {
+    "n_escape_genes": 2,
+    "n_druggable": 0,
+    "top_escapes": [
+      {
+        "gene": "ADRA1B",
+        "shared_pathways": 8,
+        "string_score": 957,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ADRA1D",
+        "shared_pathways": 8,
+        "string_score": 909,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "LMB_AB1"
+    ]
+  },
+  "SRC": {
+    "n_escape_genes": 40,
+    "n_druggable": 14,
+    "top_escapes": [
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 33,
+        "string_score": 961,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "AKT1",
+        "shared_pathways": 29,
+        "string_score": 995,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "AKT2",
+        "shared_pathways": 29,
+        "string_score": 829,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "MAP2K1",
+        "shared_pathways": 25,
+        "string_score": 794,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MAP2K2",
+        "shared_pathways": 23,
+        "string_score": 716,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 13,
+        "string_score": 884,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 13,
+        "string_score": 875,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 12,
+        "string_score": 793,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 11,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BCL2",
+        "shared_pathways": 11,
+        "string_score": 860,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Bosutinib",
+      "Dasatinib"
+    ]
+  },
+  "BCL2": {
+    "n_escape_genes": 27,
+    "n_druggable": 11,
+    "top_escapes": [
+      {
+        "gene": "AKT1",
+        "shared_pathways": 32,
+        "string_score": 993,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "AKT2",
+        "shared_pathways": 32,
+        "string_score": 950,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "MAP2K1",
+        "shared_pathways": 22,
+        "string_score": 749,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 21,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CASP8",
+        "shared_pathways": 17,
+        "string_score": 984,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 17,
+        "string_score": 765,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 16,
+        "string_score": 958,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BAK1",
+        "shared_pathways": 15,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 13,
+        "string_score": 959,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 11,
+        "string_score": 955,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Navitoclax",
+      "Obatoclax Mesylate",
+      "TW 37",
+      "Sabutoclax",
+      "Venetoclax"
+    ]
+  },
+  "FGFR3": {
+    "n_escape_genes": 12,
+    "n_druggable": 7,
+    "top_escapes": [
+      {
+        "gene": "FGFR2",
+        "shared_pathways": 11,
+        "string_score": 987,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547"
+        ]
+      },
+      {
+        "gene": "FGFR1",
+        "shared_pathways": 9,
+        "string_score": 854,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547",
+          "Foretinib"
+        ]
+      },
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 9,
+        "string_score": 817,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FGFR4",
+        "shared_pathways": 9,
+        "string_score": 790,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 8,
+        "string_score": 765,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "FGF10",
+        "shared_pathways": 7,
+        "string_score": 981,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "HGF",
+        "shared_pathways": 7,
+        "string_score": 764,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 6,
+        "string_score": 718,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "SRC",
+        "shared_pathways": 5,
+        "string_score": 923,
+        "druggable": true,
+        "drugs": [
+          "Bosutinib",
+          "Dasatinib"
+        ]
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 5,
+        "string_score": 799,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "PD173074",
+      "AZD4547"
+    ]
+  },
+  "ESR1": {
+    "n_escape_genes": 25,
+    "n_druggable": 11,
+    "top_escapes": [
+      {
+        "gene": "AKT1",
+        "shared_pathways": 8,
+        "string_score": 913,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "SRC",
+        "shared_pathways": 7,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "Bosutinib",
+          "Dasatinib"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 7,
+        "string_score": 997,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 6,
+        "string_score": 745,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "IGF1R",
+        "shared_pathways": 5,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "BMS-536924",
+          "GSK1904529A",
+          "Linsitinib",
+          "NVP-ADW742",
+          "BMS-754807"
+        ]
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 5,
+        "string_score": 992,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 5,
+        "string_score": 982,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 5,
+        "string_score": 930,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 4,
+        "string_score": 976,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 4,
+        "string_score": 946,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Tamoxifen",
+      "GDC0810"
+    ]
+  },
+  "ERBB3": {
+    "n_escape_genes": 14,
+    "n_druggable": 6,
+    "top_escapes": [
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 7,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "MET",
+        "shared_pathways": 6,
+        "string_score": 987,
+        "druggable": true,
+        "drugs": [
+          "Crizotinib",
+          "Savolitinib",
+          "Foretinib"
+        ]
+      },
+      {
+        "gene": "ERBB4",
+        "shared_pathways": 5,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 5,
+        "string_score": 960,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "HGF",
+        "shared_pathways": 5,
+        "string_score": 952,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "AKT1",
+        "shared_pathways": 5,
+        "string_score": 854,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 5,
+        "string_score": 731,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "IGF1R",
+        "shared_pathways": 4,
+        "string_score": 933,
+        "druggable": true,
+        "drugs": [
+          "BMS-536924",
+          "GSK1904529A",
+          "Linsitinib",
+          "NVP-ADW742",
+          "BMS-754807"
+        ]
+      },
+      {
+        "gene": "SRC",
+        "shared_pathways": 3,
+        "string_score": 968,
+        "druggable": true,
+        "drugs": [
+          "Bosutinib",
+          "Dasatinib"
+        ]
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 3,
+        "string_score": 905,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Sapitinib"
+    ]
+  },
+  "AKT1": {
+    "n_escape_genes": 42,
+    "n_druggable": 12,
+    "top_escapes": [
+      {
+        "gene": "AKT2",
+        "shared_pathways": 103,
+        "string_score": 991,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 92,
+        "string_score": 962,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 59,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 42,
+        "string_score": 994,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 38,
+        "string_score": 923,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BCL2",
+        "shared_pathways": 32,
+        "string_score": 993,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      },
+      {
+        "gene": "SRC",
+        "shared_pathways": 29,
+        "string_score": 995,
+        "druggable": true,
+        "drugs": [
+          "Bosutinib",
+          "Dasatinib"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 29,
+        "string_score": 928,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 28,
+        "string_score": 988,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 27,
+        "string_score": 966,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "MK-2206",
+      "Uprosertib",
+      "GSK2110183B",
+      "Afuresertib",
+      "AZD5363"
+    ]
+  },
+  "IGF1R": {
+    "n_escape_genes": 21,
+    "n_druggable": 10,
+    "top_escapes": [
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 24,
+        "string_score": 990,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 16,
+        "string_score": 872,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 13,
+        "string_score": 993,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 12,
+        "string_score": 880,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 12,
+        "string_score": 853,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "HGF",
+        "shared_pathways": 11,
+        "string_score": 955,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 10,
+        "string_score": 981,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "SRC",
+        "shared_pathways": 9,
+        "string_score": 996,
+        "druggable": true,
+        "drugs": [
+          "Bosutinib",
+          "Dasatinib"
+        ]
+      },
+      {
+        "gene": "BCL2",
+        "shared_pathways": 8,
+        "string_score": 781,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 8,
+        "string_score": 712,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "BMS-536924",
+      "GSK1904529A",
+      "Linsitinib",
+      "NVP-ADW742",
+      "BMS-754807"
+    ]
+  },
+  "ERBB2": {
+    "n_escape_genes": 35,
+    "n_druggable": 16,
+    "top_escapes": [
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 18,
+        "string_score": 975,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 15,
+        "string_score": 935,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 15,
+        "string_score": 904,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MET",
+        "shared_pathways": 14,
+        "string_score": 847,
+        "druggable": true,
+        "drugs": [
+          "Crizotinib",
+          "Savolitinib",
+          "Foretinib"
+        ]
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 14,
+        "string_score": 725,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "IGF1R",
+        "shared_pathways": 13,
+        "string_score": 993,
+        "druggable": true,
+        "drugs": [
+          "BMS-536924",
+          "GSK1904529A",
+          "Linsitinib",
+          "NVP-ADW742",
+          "BMS-754807"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 11,
+        "string_score": 886,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "HGF",
+        "shared_pathways": 10,
+        "string_score": 918,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BCL2",
+        "shared_pathways": 10,
+        "string_score": 849,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      },
+      {
+        "gene": "FGFR1",
+        "shared_pathways": 10,
+        "string_score": 737,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547",
+          "Foretinib"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Afatinib",
+      "Sapitinib",
+      "Lapatinib"
+    ]
+  },
+  "ATM": {
+    "n_escape_genes": 31,
+    "n_druggable": 8,
+    "top_escapes": [
+      {
+        "gene": "BRCA1",
+        "shared_pathways": 61,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 37,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CHEK2",
+        "shared_pathways": 31,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "AZD7762",
+          "MK-8776"
+        ]
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 24,
+        "string_score": 995,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "BRCA2",
+        "shared_pathways": 21,
+        "string_score": 995,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PALB2",
+        "shared_pathways": 21,
+        "string_score": 945,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "AKT1",
+        "shared_pathways": 10,
+        "string_score": 742,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "BCL2",
+        "shared_pathways": 7,
+        "string_score": 712,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      },
+      {
+        "gene": "ATR",
+        "shared_pathways": 6,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "VE-822",
+          "AZD6738",
+          "VE821"
+        ]
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 6,
+        "string_score": 897,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "KU-55933"
+    ]
+  },
+  "MTOR": {
+    "n_escape_genes": 25,
+    "n_druggable": 9,
+    "top_escapes": [
+      {
+        "gene": "AKT1",
+        "shared_pathways": 59,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "AKT2",
+        "shared_pathways": 44,
+        "string_score": 967,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 44,
+        "string_score": 937,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 27,
+        "string_score": 874,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 23,
+        "string_score": 802,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 17,
+        "string_score": 942,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BCL2",
+        "shared_pathways": 17,
+        "string_score": 765,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 17,
+        "string_score": 730,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "STAT3",
+        "shared_pathways": 16,
+        "string_score": 926,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "IGF1R",
+        "shared_pathways": 16,
+        "string_score": 872,
+        "druggable": true,
+        "drugs": [
+          "BMS-536924",
+          "GSK1904529A",
+          "Linsitinib",
+          "NVP-ADW742",
+          "BMS-754807"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Temsirolimus"
+    ]
+  },
+  "PIM1": {
+    "n_escape_genes": 2,
+    "n_druggable": 0,
+    "top_escapes": [
+      {
+        "gene": "STAT3",
+        "shared_pathways": 5,
+        "string_score": 733,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 4,
+        "string_score": 796,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "SL0101",
+      "AZD1208"
+    ]
+  },
+  "JAK1": {
+    "n_escape_genes": 10,
+    "n_druggable": 7,
+    "top_escapes": [
+      {
+        "gene": "STAT3",
+        "shared_pathways": 67,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 21,
+        "string_score": 947,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 14,
+        "string_score": 774,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "IRS2",
+        "shared_pathways": 8,
+        "string_score": 835,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MET",
+        "shared_pathways": 6,
+        "string_score": 917,
+        "druggable": true,
+        "drugs": [
+          "Crizotinib",
+          "Savolitinib",
+          "Foretinib"
+        ]
+      },
+      {
+        "gene": "IGF1R",
+        "shared_pathways": 4,
+        "string_score": 964,
+        "druggable": true,
+        "drugs": [
+          "BMS-536924",
+          "GSK1904529A",
+          "Linsitinib",
+          "NVP-ADW742",
+          "BMS-754807"
+        ]
+      },
+      {
+        "gene": "ERBB2",
+        "shared_pathways": 4,
+        "string_score": 959,
+        "druggable": true,
+        "drugs": [
+          "Afatinib",
+          "Sapitinib",
+          "Lapatinib"
+        ]
+      },
+      {
+        "gene": "FGFR3",
+        "shared_pathways": 4,
+        "string_score": 915,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547"
+        ]
+      },
+      {
+        "gene": "FGFR2",
+        "shared_pathways": 4,
+        "string_score": 913,
+        "druggable": true,
+        "drugs": [
+          "PD173074",
+          "AZD4547"
+        ]
+      },
+      {
+        "gene": "ERBB3",
+        "shared_pathways": 2,
+        "string_score": 947,
+        "druggable": true,
+        "drugs": [
+          "Sapitinib"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Ruxolitinib",
+      "JAK1_8709",
+      "JAK_8517",
+      "GSK2276186C"
+    ]
+  },
+  "ATR": {
+    "n_escape_genes": 14,
+    "n_druggable": 3,
+    "top_escapes": [
+      {
+        "gene": "ATM",
+        "shared_pathways": 6,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "KU-55933"
+        ]
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 5,
+        "string_score": 996,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CHEK2",
+        "shared_pathways": 4,
+        "string_score": 998,
+        "druggable": true,
+        "drugs": [
+          "AZD7762",
+          "MK-8776"
+        ]
+      },
+      {
+        "gene": "BRCA1",
+        "shared_pathways": 1,
+        "string_score": 996,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "NBN",
+        "shared_pathways": 1,
+        "string_score": 964,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BLM",
+        "shared_pathways": 1,
+        "string_score": 962,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FANCA",
+        "shared_pathways": 1,
+        "string_score": 953,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FANCD2",
+        "shared_pathways": 1,
+        "string_score": 930,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "FANCG",
+        "shared_pathways": 1,
+        "string_score": 919,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "RAD50",
+        "shared_pathways": 1,
+        "string_score": 905,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "VE-822",
+      "AZD6738",
+      "VE821"
+    ]
+  },
+  "AKT2": {
+    "n_escape_genes": 15,
+    "n_druggable": 6,
+    "top_escapes": [
+      {
+        "gene": "AKT1",
+        "shared_pathways": 103,
+        "string_score": 991,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "PIK3R3",
+        "shared_pathways": 92,
+        "string_score": 953,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 44,
+        "string_score": 967,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 37,
+        "string_score": 973,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 36,
+        "string_score": 717,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BCL2",
+        "shared_pathways": 32,
+        "string_score": 950,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      },
+      {
+        "gene": "SRC",
+        "shared_pathways": 29,
+        "string_score": 829,
+        "druggable": true,
+        "drugs": [
+          "Bosutinib",
+          "Dasatinib"
+        ]
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 23,
+        "string_score": 826,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 17,
+        "string_score": 947,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "CDKN1B",
+        "shared_pathways": 14,
+        "string_score": 956,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "MK-2206",
+      "Uprosertib",
+      "GSK2110183B",
+      "Afuresertib",
+      "AZD5363"
+    ]
+  },
+  "TERT": {
+    "n_escape_genes": 11,
+    "n_druggable": 6,
+    "top_escapes": [
+      {
+        "gene": "AKT1",
+        "shared_pathways": 5,
+        "string_score": 903,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 5,
+        "string_score": 902,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 4,
+        "string_score": 920,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TCF7L2",
+        "shared_pathways": 4,
+        "string_score": 919,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 4,
+        "string_score": 822,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 4,
+        "string_score": 738,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "CDKN2A",
+        "shared_pathways": 3,
+        "string_score": 817,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "ATM",
+        "shared_pathways": 2,
+        "string_score": 825,
+        "druggable": true,
+        "drugs": [
+          "KU-55933"
+        ]
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 2,
+        "string_score": 797,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "SMARCA4",
+        "shared_pathways": 1,
+        "string_score": 990,
+        "druggable": true,
+        "drugs": [
+          "PFI3"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "BIBR-1532"
+    ]
+  },
+  "MDM2": {
+    "n_escape_genes": 33,
+    "n_druggable": 15,
+    "top_escapes": [
+      {
+        "gene": "TP53",
+        "shared_pathways": 40,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "ATM",
+        "shared_pathways": 24,
+        "string_score": 995,
+        "druggable": true,
+        "drugs": [
+          "KU-55933"
+        ]
+      },
+      {
+        "gene": "AKT1",
+        "shared_pathways": 22,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 19,
+        "string_score": 926,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "AKT2",
+        "shared_pathways": 17,
+        "string_score": 947,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 16,
+        "string_score": 813,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "CHEK2",
+        "shared_pathways": 15,
+        "string_score": 983,
+        "druggable": true,
+        "drugs": [
+          "AZD7762",
+          "MK-8776"
+        ]
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 14,
+        "string_score": 902,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "CDKN2A",
+        "shared_pathways": 13,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "IGF1R",
+        "shared_pathways": 10,
+        "string_score": 981,
+        "druggable": true,
+        "drugs": [
+          "BMS-536924",
+          "GSK1904529A",
+          "Linsitinib",
+          "NVP-ADW742",
+          "BMS-754807"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "Nutlin-3a (-)",
+      "Serdemetan"
+    ]
+  },
+  "TP53": {
+    "n_escape_genes": 65,
+    "n_druggable": 20,
+    "top_escapes": [
+      {
+        "gene": "AKT1",
+        "shared_pathways": 42,
+        "string_score": 994,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "MDM2",
+        "shared_pathways": 40,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "Nutlin-3a (-)",
+          "Serdemetan"
+        ]
+      },
+      {
+        "gene": "ATM",
+        "shared_pathways": 37,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "KU-55933"
+        ]
+      },
+      {
+        "gene": "AKT2",
+        "shared_pathways": 37,
+        "string_score": 973,
+        "druggable": true,
+        "drugs": [
+          "MK-2206",
+          "Uprosertib",
+          "GSK2110183B",
+          "Afuresertib",
+          "AZD5363"
+        ]
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 35,
+        "string_score": 946,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 30,
+        "string_score": 997,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "MTOR",
+        "shared_pathways": 27,
+        "string_score": 874,
+        "druggable": true,
+        "drugs": [
+          "Temsirolimus"
+        ]
+      },
+      {
+        "gene": "BAK1",
+        "shared_pathways": 26,
+        "string_score": 997,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PTEN",
+        "shared_pathways": 23,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "BCL2",
+        "shared_pathways": 21,
+        "string_score": 999,
+        "druggable": true,
+        "drugs": [
+          "Navitoclax",
+          "Obatoclax Mesylate",
+          "TW 37",
+          "Sabutoclax",
+          "Venetoclax"
+        ]
+      }
+    ],
+    "drugs_targeting_primary": [
+      "MIRA-1"
+    ]
+  },
+  "SMARCA4": {
+    "n_escape_genes": 11,
+    "n_druggable": 2,
+    "top_escapes": [
+      {
+        "gene": "SMARCB1",
+        "shared_pathways": 3,
+        "string_score": 999,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "TP53",
+        "shared_pathways": 1,
+        "string_score": 993,
+        "druggable": true,
+        "drugs": [
+          "MIRA-1"
+        ]
+      },
+      {
+        "gene": "TERT",
+        "shared_pathways": 1,
+        "string_score": 990,
+        "druggable": true,
+        "drugs": [
+          "BIBR-1532"
+        ]
+      },
+      {
+        "gene": "MYC",
+        "shared_pathways": 1,
+        "string_score": 974,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "PPARG",
+        "shared_pathways": 1,
+        "string_score": 966,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "DDB2",
+        "shared_pathways": 1,
+        "string_score": 813,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "CDKN2A",
+        "shared_pathways": 1,
+        "string_score": 811,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "CCND1",
+        "shared_pathways": 1,
+        "string_score": 718,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "SMAD2",
+        "shared_pathways": 1,
+        "string_score": 717,
+        "druggable": false,
+        "drugs": []
+      },
+      {
+        "gene": "RUVBL1",
+        "shared_pathways": 1,
+        "string_score": 711,
+        "druggable": false,
+        "drugs": []
+      }
+    ],
+    "drugs_targeting_primary": [
+      "PFI3"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+
+========================================================================
+RNA-Only LightGBM Baseline v2 — Sex-filtered + Round 2.2b drug filter
+========================================================================
+Started: 2026-05-06 19:45:37
+Method:
+  Top-1000 most variable genes AFTER chrX/chrY filter
+  5-fold StratifiedKFold
+  Drug filter: ≥10 sens AND ≥10 res (matches Round 2.2b)
+
+========================================================================
+Step 1: Dependencies
+========================================================================
+  lightgbm   : 4.6.0
+  scikit-learn: 1.8.0
+  numpy      : 1.26.4
+  pandas     : 2.3.3
+
+========================================================================
+Step 2: Files
+========================================================================
+  expression: beataml_waves1to4_norm_exp_dbgap.txt (268.3 MB)
+  curve_fits: beataml_probit_curve_fits_v4_dbgap.txt (18.2 MB)
+
+========================================================================
+Step 3: Load expression with sex-chromosome filter
+========================================================================
+  Reading beataml_waves1to4_norm_exp_dbgap.txt...
+  Raw shape: (22843, 711)
+  Sample columns: 707 samples
+  Sex-linked genes filtered: 29 dropped, 22814 remain
+  Final expression matrix: 707 samples × 22814 genes
+
+========================================================================
+Step 4: Load drug response
+========================================================================
+  Reading beataml_probit_curve_fits_v4_dbgap.txt...
+  Raw shape: (63395, 26)
+  After dropna: 55681 (sample, drug, auc) rows
+  Unique drugs: 165
+  Unique samples: 542
+
+========================================================================
+Step 5: Filter drugs (≥10 sensitive AND ≥10 resistant)
+========================================================================
+  Drugs passing filter: 85
+  Sample sizes: median 467, range [42, 516]
+  Round 2.2b reported 141 trained drugs — we expect similar count here.
+
+========================================================================
+Step 6: Sample alignment
+========================================================================
+  Expression samples: 707, Drug samples: 542, Common: 520
+
+========================================================================
+Step 7: Select top 1000 most variable genes (post sex-filter)
+========================================================================
+  Feature matrix: (520, 1000)
+  First 5 selected genes: ['PXDN', 'COL4A5', 'TTTY15', 'NKX2-3', 'PRSS21']
+  (v1 had: XIST, RPS4Y1, KDM5D, TXLNG2P, DDX3Y — all sex-linked)
+
+========================================================================
+Step 8: Per-drug evaluation
+========================================================================
+  [20/85] last='Bosutinib (SKI-606)' AUROC=0.457 | elapsed=37s ETA=122s
+  [40/85] last='Regorafenib (BAY 73-4506)' AUROC=0.685 | elapsed=75s ETA=85s
+  [60/85] last='Elesclomol' AUROC=0.709 | elapsed=116s ETA=49s
+  [80/85] last='Entrectinib' AUROC=0.563 | elapsed=146s ETA=9s
+  [85/85] last='Ralimetinib (LY2228820)' AUROC=0.500 | elapsed=147s ETA=0s
+
+  Evaluated: 85 drugs, Failed: 0
+
+========================================================================
+Step 9: Save
+========================================================================
+  CSV: /Users/kalki/INTERCEPTA/round2_aml/results/rna_baseline_v2_auroc_per_drug.csv
+
+========================================================================
+Step 10: Summary — RNA-only baseline v2 (sex-filtered, 10/10)
+========================================================================
+  JSON: /Users/kalki/INTERCEPTA/round2_aml/results/rna_baseline_v2_auroc_summary.json
+
+  v2 RNA-only baseline (sex-filtered, 10/10 filter):
+    n drugs   = 85
+    mean      = 0.645
+    median    = 0.653
+    IQR       = [0.565, 0.723]
+    range     = [0.397, 0.919]
+    ≥0.55: 72 (85%)
+    ≥0.60: 54 (64%)
+    ≥0.65: 44 (52%)
+    ≥0.70: 30 (35%)
+
+  Three-way comparison:
+    KAALCURA-3-axis-LR  (R2.2b)        : 0.526 mean over 141 drugs
+    RNA-1000-LightGBM   (v1, sex+20/20): 0.670 mean over 56 drugs
+    RNA-1000-LightGBM   (v2, no-sex+10/10): 0.645 mean over 85 drugs
+
+========================================================================
+DONE
+========================================================================

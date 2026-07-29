@@ -1,0 +1,104 @@
+{
+  "model": "INTERCEPTA Multi-State Escape Route ODE",
+  "version": "1.0",
+  "date": "2026-04-08",
+  "arms": {
+    "Control": {
+      "pfs_months": 7.6,
+      "composition_2y": {
+        "S": 86.3,
+        "M": 2.8,
+        "V": 1.9,
+        "N": 9.0
+      }
+    },
+    "Enzalutamide": {
+      "pfs_months": 14.8,
+      "composition_2y": {
+        "S": -0.0,
+        "M": 65.3,
+        "V": 4.0,
+        "N": 30.7
+      }
+    },
+    "Alisertib": {
+      "pfs_months": 8.1,
+      "composition_2y": {
+        "S": 94.8,
+        "M": 3.2,
+        "V": 2.0,
+        "N": -0.0
+      }
+    },
+    "Enza+Alis": {
+      "pfs_months": 17.1,
+      "composition_2y": {
+        "S": -0.0,
+        "M": 94.4,
+        "V": 5.6,
+        "N": -0.0
+      }
+    }
+  },
+  "patient_stratification": {
+    "NE_high": {
+      "enza_pfs": 7.4,
+      "combo_pfs": 17.6,
+      "benefit_months": 10.2
+    },
+    "NE_low": {
+      "enza_pfs": 16.9,
+      "combo_pfs": 17.0,
+      "benefit_months": 0.1
+    },
+    "AR_mutant_high": {
+      "enza_pfs": 10.9,
+      "combo_pfs": 11.0,
+      "benefit_months": 0.2
+    },
+    "Average": {
+      "enza_pfs": 14.8,
+      "combo_pfs": 17.1,
+      "benefit_months": 2.2
+    }
+  },
+  "clinical_validation": {
+    "enzalutamide_pfs_model": 14.8,
+    "enzalutamide_pfs_clinical_PREVAIL": 18.0
+  },
+  "lead_combination": {
+    "drugs": "Enzalutamide + Alisertib (AURKA inhibitor)",
+    "predicted_benefit_NE_high": "+10.2 months",
+    "predicted_benefit_average": "+2.2 months",
+    "predicted_benefit_NE_low": "+0.1 months",
+    "patient_selection": "High AURKA/N-myc, TP53+RB1 co-loss",
+    "not_in_clinicaltrials_gov": true,
+    "preclinical_validation": "Liadi AACR 2023, Beltran CCR 2019"
+  },
+  "parameters": {
+    "g_S": 0.005,
+    "g_M": 0.006,
+    "g_V": 0.005,
+    "g_N": 0.008,
+    "d": 0.001,
+    "K": 1.0,
+    "mu_SM": 0.0001,
+    "mu_SV": 5e-05,
+    "mu_SN": 2e-05,
+    "S0": 0.14,
+    "M0": 0.003,
+    "V0": 0.003,
+    "N0": 0.004,
+    "enza_kill_S": 0.15,
+    "enza_boost_M": 0.003,
+    "alis_kill_N": 0.12,
+    "alis_block_SN": 0.9
+  },
+  "honest_limitations": [
+    "Transition rates (mu_SM, mu_SV, mu_SN) estimated from literature prevalence, not measured directly",
+    "g_N (NE growth rate) is the most sensitive parameter \u2014 drives PFS prediction",
+    "Alisertib PK estimated (Cmax ~150 ng/mL), not from clinical PK study in prostate",
+    "Model assumes 4 discrete states \u2014 real biology has continuous spectrum",
+    "No drug-drug interaction modeling (enza may affect alis metabolism via CYP3A4)"
+  ]
+}

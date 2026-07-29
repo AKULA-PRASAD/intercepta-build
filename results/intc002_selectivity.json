@@ -1,0 +1,10 @@
+{
+  "candidate": "INTC-002",
+  "aurka_score": -9.3,
+  "aurka_crystal": "PDB 4J8M",
+  "aurkb_score": -9.893,
+  "aurkb_crystal": "PDB 4AF3",
+  "score_difference": -0.6,
+  "verdict": "AURKB-PREFERRING \u2014 wrong target! Discard.",
+  "honest_note": "Docking selectivity is approximate. True selectivity requires biochemical IC50."
+}

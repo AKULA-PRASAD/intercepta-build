@@ -1,0 +1,224 @@
+{
+  "verdict": "FAIL",
+  "version": "v5.2",
+  "mechanism": "KAALCURA per cell-type pseudobulk, trained on BeatAML AUC",
+  "documented_limitation": "Single-tissue residualization deferred. Axes may retain native biological coupling (prolif-DDR ~0.76 in AML). Q_B redesigned as redundancy check; Q_C strengthened to verify per-axis drug-pred utility.",
+  "training_stats": {
+    "n_beataml_samples_train": 517,
+    "n_drugs_trained": 141,
+    "mean_cv_auroc": 0.5344595450184391,
+    "median_cv_auroc": 0.5555555555555556,
+    "n_drugs_auroc_ge_0_60": 31,
+    "per_axis_max_coef": {
+      "R_prolif": 0.9785668416779756,
+      "R_emt": 0.8258857689085551,
+      "R_ddr": 1.0224186241299706
+    },
+    "per_axis_best_drug": {
+      "R_prolif": "Neratinib (HKI-272)",
+      "R_emt": "BLZ945",
+      "R_ddr": "Lestaurtinib (CEP-701)"
+    }
+  },
+  "beataml_axis_correlations": {
+    "R_prolif": {
+      "R_prolif": 1.0,
+      "R_emt": -0.2502854087054037,
+      "R_ddr": 0.761301137444306
+    },
+    "R_emt": {
+      "R_prolif": -0.2502854087054037,
+      "R_emt": 1.0,
+      "R_ddr": -0.381480886975425
+    },
+    "R_ddr": {
+      "R_prolif": 0.761301137444306,
+      "R_emt": -0.381480886975425,
+      "R_ddr": 1.0
+    }
+  },
+  "vangalen_axis_per_celltype": {
+    "B": {
+      "R_prolif": -4.282571819957668,
+      "R_emt": -2.371859234500433,
+      "R_ddr": -7.357678995914798
+    },
+    "CTL": {
+      "R_prolif": -4.269045600682001,
+      "R_emt": -2.6300278162263693,
+      "R_ddr": -7.345388939188931
+    },
+    "GMP": {
+      "R_prolif": -4.087267805626221,
+      "R_emt": -2.2343641390496947,
+      "R_ddr": -7.272950753703944
+    },
+    "GMP-like": {
+      "R_prolif": -3.9963090951667573,
+      "R_emt": -2.332586288868738,
+      "R_ddr": -7.237465868643371
+    },
+    "HSC": {
+      "R_prolif": -4.255410273947379,
+      "R_emt": -2.2707161884781972,
+      "R_ddr": -7.356075871688133
+    },
+    "HSC-like": {
+      "R_prolif": -4.238316267990532,
+      "R_emt": -2.3133392408426676,
+      "R_ddr": -7.33039504519012
+    },
+    "Mono": {
+      "R_prolif": -4.221376368641881,
+      "R_emt": -2.140361337715683,
+      "R_ddr": -7.401201075890145
+    },
+    "Mono-like": {
+      "R_prolif": -4.27972169192711,
+      "R_emt": -2.1385944106914447,
+      "R_ddr": -7.392400783497669
+    },
+    "NK": {
+      "R_prolif": -4.266917135003124,
+      "R_emt": -2.3634000841633376,
+      "R_ddr": -7.320915823820546
+    },
+    "Plasma": {
+      "R_prolif": -4.265624356701801,
+      "R_emt": -2.3570218882678264,
+      "R_ddr": -7.314575546630132
+    },
+    "ProB": {
+      "R_prolif": -3.8553328008950993,
+      "R_emt": -2.3390616845320373,
+      "R_ddr": -7.140100487124269
+    },
+    "ProMono": {
+      "R_prolif": -3.9969218332807737,
+      "R_emt": -2.4152203779786197,
+      "R_ddr": -7.251944154005651
+    },
+    "ProMono-like": {
+      "R_prolif": -4.0716141042263345,
+      "R_emt": -2.243459633664114,
+      "R_ddr": -7.283178968261914
+    },
+    "Prog": {
+      "R_prolif": -4.140923414036232,
+      "R_emt": -2.2976392710412417,
+      "R_ddr": -7.288422557981409
+    },
+    "Prog-like": {
+      "R_prolif": -4.072573978444295,
+      "R_emt": -2.3544103078892027,
+      "R_ddr": -7.261184646088555
+    },
+    "T": {
+      "R_prolif": -4.277097130223927,
+      "R_emt": -2.388289322272477,
+      "R_ddr": -7.343235847880569
+    },
+    "cDC": {
+      "R_prolif": -4.097767179958645,
+      "R_emt": -2.1834429501959254,
+      "R_ddr": -7.2948058784916165
+    },
+    "cDC-like": {
+      "R_prolif": -4.190420265900513,
+      "R_emt": -2.1965306010572254,
+      "R_ddr": -7.3320854379053815
+    },
+    "earlyEry": {
+      "R_prolif": -4.001442931149242,
+      "R_emt": -2.378880523778895,
+      "R_ddr": -7.1764972110633485
+    },
+    "lateEry": {
+      "R_prolif": -3.8056516715250495,
+      "R_emt": -2.444754245584513,
+      "R_ddr": -7.165403353495623
+    },
+    "pDC": {
+      "R_prolif": -4.0873613557659585,
+      "R_emt": -2.2967042078323168,
+      "R_ddr": -7.288038150371379
+    }
+  },
+  "vangalen_axis_correlations": {
+    "R_prolif": {
+      "R_prolif": 1.0,
+      "R_emt": -0.13158287049370423,
+      "R_ddr": 0.9221894442260486
+    },
+    "R_emt": {
+      "R_prolif": -0.13158287049370423,
+      "R_emt": 1.0,
+      "R_ddr": -0.31406440423276727
+    },
+    "R_ddr": {
+      "R_prolif": 0.9221894442260486,
+      "R_emt": -0.31406440423276727,
+      "R_ddr": 1.0
+    }
+  },
+  "queries": {
+    "Q_A_LSC_quiescence": {
+      "hsc_like_rprolif": -4.238316267990532,
+      "mono_like_rprolif": -4.27972169192711,
+      "pass": false
+    },
+    "Q_B_axis_non_redundancy": {
+      "max_abs_r": 0.9221894442260486,
+      "threshold": 0.9,
+      "pass": false
+    },
+    "Q_C_axis_utility": {
+      "mean_auroc": 0.5344595450184391,
+      "threshold_mean": 0.55,
+      "threshold_per_axis_auroc": 0.6,
+      "per_axis_max_coef": {
+        "R_prolif": 0.9785668416779756,
+        "R_emt": 0.8258857689085551,
+        "R_ddr": 1.0224186241299706
+      },
+      "mean_check_pass": false,
+      "axes_contrib_pass": true,
+      "pass": false
+    },
+    "Q_D_prog_flt3_correlation": {
+      "n_drugs_aligned": 139,
+      "spearman_rho": 0.4029000402162742,
+      "spearman_p": 8.775676620660323e-07,
+      "pass": false
+    },
+    "Q_E_distinguishability": {
+      "jaccard": 1.0,
+      "threshold": 0.6,
+      "hsc_top10": [
+        "BEZ235",
+        "Elesclomol",
+        "Lapatinib",
+        "NVP-AEW541",
+        "PP2",
+        "Panobinostat",
+        "Roscovitine (CYC-202)",
+        "Selumetinib (AZD6244)",
+        "Staurosporine",
+        "Trametinib (GSK1120212)"
+      ],
+      "prog_top10": [
+        "BEZ235",
+        "Elesclomol",
+        "Lapatinib",
+        "NVP-AEW541",
+        "PP2",
+        "Panobinostat",
+        "Roscovitine (CYC-202)",
+        "Selumetinib (AZD6244)",
+        "Staurosporine",
+        "Trametinib (GSK1120212)"
+      ],
+      "pass": false
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "model": "AML 4-comp resistance (RK45 fixed)",
+  "untreated": {
+    "cr": false,
+    "cr_mo": null,
+    "rel_mo": null,
+    "os_mo": 4.4,
+    "cause": "marrow",
+    "normal_min": 0.0069,
+    "res_nadir": 0.15,
+    "res_end": 0.15,
+    "sec": 0.0
+  },
+  "induction": {
+    "cr": true,
+    "cr_mo": 0.2,
+    "rel_mo": null,
+    "os_mo": null,
+    "cause": "alive",
+    "normal_min": 0.2,
+    "res_nadir": 0.271,
+    "res_end": 0.271,
+    "sec": 0.1
+  },
+  "venaza": {
+    "cr": true,
+    "cr_mo": 4.8,
+    "rel_mo": null,
+    "os_mo": null,
+    "cause": "alive",
+    "normal_min": 0.2,
+    "res_nadir": 0.74,
+    "res_end": 0.74,
+    "sec": 51.3
+  },
+  "gilteritinib": {
+    "cr": true,
+    "cr_mo": 1.5,
+    "rel_mo": null,
+    "os_mo": null,
+    "cause": "alive",
+    "normal_min": 0.2,
+    "res_nadir": 0.201,
+    "res_end": 0.201,
+    "sec": 26.0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "source": "GTEx v8 tissue expression + tau specificity index",
+  "n_tissue_specific_genes": 23996,
+  "n_tissues": 5,
+  "delivery_constraints": {
+    "Brain": {
+      "barrier": "BBB",
+      "constraint": "TPSA<90, MW<450, LogP>1"
+    },
+    "Testis": {
+      "barrier": "Blood-testis",
+      "constraint": "Small lipophilic"
+    },
+    "Eye": {
+      "barrier": "Blood-retinal",
+      "constraint": "Topical or intravitreal"
+    },
+    "Bone Marrow": {
+      "barrier": "None (well perfused)",
+      "constraint": "Standard IV/oral"
+    },
+    "Prostate": {
+      "barrier": "Minimal",
+      "constraint": "Standard oral"
+    },
+    "Liver": {
+      "barrier": "None (first pass)",
+      "constraint": "High first-pass metabolism"
+    }
+  },
+  "honest": "No spatial transcriptomics. Tissue specificity from bulk GTEx. No HuBMAP or Allen Brain Atlas data."
+}

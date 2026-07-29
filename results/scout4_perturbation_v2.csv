@@ -1,0 +1,19 @@
+target,resistance_risk,n_escapes,total_escape_strength,top_escape,top_escape_ref
+AR,100.0,6,3.5,pw:PI3K_AKT_mTOR,"Carver et al., Cancer Cell 2011 — reciprocal AR-PI3K feedbac"
+pw:AR_signaling,100.0,4,2.6,pw:PI3K_AKT_mTOR,Reciprocal feedback
+PTEN,44.0,2,1.1,pw:MAPK_ERK,"Serra et al., Cancer Cell 2011 — PI3K block activates MAPK"
+PIK3CA,64.0,3,1.6,pw:MAPK_ERK,Serra 2011 — PI3K-MAPK escape
+AKT1,40.0,2,1.0,pw:MAPK_ERK,AKT block activates MAPK
+MTOR,72.0,3,1.8,pw:PI3K_AKT_mTOR,"O'Reilly et al., Cancer Res 2006 — mTOR block activates AKT"
+PARP1,20.0,2,0.5,pw:NE_diff,Some PARP-treated tumors undergo NE transition
+ATM,8.0,1,0.2,pw:NE_diff,Minor NE risk
+CDK4,36.0,2,0.9,pw:PI3K_AKT_mTOR,CDK4/6 block can activate PI3K
+CDK6,20.0,1,0.5,pw:PI3K_AKT_mTOR,CDK4/6 block activates PI3K
+BRAF,32.0,2,0.8,pw:PI3K_AKT_mTOR,BRAF block activates PI3K in some contexts
+MAP2K1,24.0,1,0.6,pw:PI3K_AKT_mTOR,MEK block activates PI3K
+EZH2,12.0,1,0.3,pw:WNT,Epigenetic derepression of WNT
+BCL2,52.0,2,1.3,MCL1,"Certo et al., Cancer Cell 2006 — MCL-1 compensates for BCL-2"
+AURKA,12.0,1,0.3,pw:EMT,Minor EMT activation
+MDM2,0.0,0,0.0,none,
+CHEK1,12.0,1,0.3,pw:HRR,Compensatory DNA repair upregulation
+FOLH1,0.0,0,0.0,none,

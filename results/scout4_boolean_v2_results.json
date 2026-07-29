@@ -1,0 +1,92 @@
+{
+  "IDH1": {
+    "target": "IDH1",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  },
+  "IDH2": {
+    "target": "IDH2",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  },
+  "DNMT3A": {
+    "target": "DNMT3A",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  },
+  "NPM1": {
+    "target": "NPM1",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  },
+  "TP53": {
+    "target": "TP53",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  },
+  "NRAS": {
+    "target": "NRAS",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  },
+  "KRAS": {
+    "target": "KRAS",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  },
+  "RUNX1": {
+    "target": "RUNX1",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  },
+  "TET2": {
+    "target": "TET2",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 2824,
+    "baseline_iter": 200,
+    "perturbed_iter": 200
+  }
+}

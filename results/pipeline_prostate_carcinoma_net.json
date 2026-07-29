@@ -1,0 +1,5092 @@
+{
+  "disease": "prostate carcinoma",
+  "disease_id": "EFO_0001663",
+  "n_genes": 500,
+  "n_interactions": 1312,
+  "n_pathway_edges": 3747,
+  "n_druggable": 11,
+  "genes": {
+    "AXIN1": {
+      "score": 0.37002489600532784,
+      "n_interactions": 12,
+      "n_pathways": 15,
+      "selectivity": {
+        "prostate_tpm": 28.6446,
+        "ratio_vs_mean": 1.281200582053986
+      },
+      "druggable": false
+    },
+    "MAP2K1": {
+      "score": 0.42088484512782226,
+      "n_interactions": 10,
+      "n_pathways": 112,
+      "selectivity": {
+        "prostate_tpm": 28.3759,
+        "ratio_vs_mean": 0.7552554644199813
+      },
+      "druggable": false
+    },
+    "HTR1F": {
+      "score": 0.3331591777454969,
+      "n_interactions": 0,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 0.224306,
+        "ratio_vs_mean": 0.8627441864303964
+      },
+      "druggable": false
+    },
+    "ERCC3": {
+      "score": 0.37002489600532784,
+      "n_interactions": 19,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 54.7702,
+        "ratio_vs_mean": 1.276128734280634
+      },
+      "druggable": false
+    },
+    "TTC28": {
+      "score": 0.47278155244723874,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 9.89063,
+        "ratio_vs_mean": 1.326618021276216
+      },
+      "druggable": false
+    },
+    "TECPR1": {
+      "score": 0.43861947951191954,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 21.3388,
+        "ratio_vs_mean": 1.433835653670151
+      },
+      "druggable": false
+    },
+    "CHEK2": {
+      "score": 0.6448719919226464,
+      "n_interactions": 29,
+      "n_pathways": 40,
+      "selectivity": {
+        "prostate_tpm": 5.04403,
+        "ratio_vs_mean": 1.334667082331547
+      },
+      "druggable": true
+    },
+    "LARP4B": {
+      "score": 0.46153443591614896,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 20.9658,
+        "ratio_vs_mean": 1.3338528203016775
+      },
+      "druggable": false
+    },
+    "PTEN": {
+      "score": 0.6682152678780271,
+      "n_interactions": 48,
+      "n_pathways": 72,
+      "selectivity": {
+        "prostate_tpm": 27.2498,
+        "ratio_vs_mean": 1.051189876757236
+      },
+      "druggable": false
+    },
+    "FANCA": {
+      "score": 0.3750710682596303,
+      "n_interactions": 16,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 1.22772,
+        "ratio_vs_mean": 0.5338376471019255
+      },
+      "druggable": false
+    },
+    "SCN11A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 3,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 0.19894,
+        "ratio_vs_mean": 0.5085101986213564
+      },
+      "druggable": false
+    },
+    "NF1": {
+      "score": 0.37002489600532784,
+      "n_interactions": 16,
+      "n_pathways": 8,
+      "selectivity": {
+        "prostate_tpm": 8.7158,
+        "ratio_vs_mean": 1.0338616809723715
+      },
+      "druggable": false
+    },
+    "PDLIM5": {
+      "score": 0.4971945190179738,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 43.2194,
+        "ratio_vs_mean": 1.6841437377925002
+      },
+      "druggable": false
+    },
+    "ZNF217": {
+      "score": 0.48706985325475444,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 16.847,
+        "ratio_vs_mean": 1.4256310999179067
+      },
+      "druggable": false
+    },
+    "HMGCS1": {
+      "score": 0.29235183537081705,
+      "n_interactions": 1,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 21.2957,
+        "ratio_vs_mean": 0.6338422570508254
+      },
+      "druggable": false
+    },
+    "NRIP1": {
+      "score": 0.3129817393483976,
+      "n_interactions": 6,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 8.4021,
+        "ratio_vs_mean": 1.043526324129323
+      },
+      "druggable": false
+    },
+    "ZNF236": {
+      "score": 0.38746703785192965,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 6.26733,
+        "ratio_vs_mean": 1.2586182973916231
+      },
+      "druggable": false
+    },
+    "COL6A3": {
+      "score": 0.285742308186545,
+      "n_interactions": 3,
+      "n_pathways": 31,
+      "selectivity": {
+        "prostate_tpm": 52.1961,
+        "ratio_vs_mean": 0.6556171490781493
+      },
+      "druggable": false
+    },
+    "INCENP": {
+      "score": 0.5023005377361575,
+      "n_interactions": 4,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.80325,
+        "ratio_vs_mean": 0.6617963021919457
+      },
+      "druggable": false
+    },
+    "PIM1": {
+      "score": 0.5134356609164352,
+      "n_interactions": 3,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 31.4399,
+        "ratio_vs_mean": 0.5979091925911684
+      },
+      "druggable": false
+    },
+    "TSC1": {
+      "score": 0.37075980656267177,
+      "n_interactions": 7,
+      "n_pathways": 13,
+      "selectivity": {
+        "prostate_tpm": 24.7008,
+        "ratio_vs_mean": 1.2011008357369148
+      },
+      "druggable": false
+    },
+    "WRN": {
+      "score": 0.37002489600532784,
+      "n_interactions": 29,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 6.90107,
+        "ratio_vs_mean": 1.077408905757462
+      },
+      "druggable": false
+    },
+    "ZRANB1": {
+      "score": 0.3291921560918748,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 21.0872,
+        "ratio_vs_mean": 0.8705059295526404
+      },
+      "druggable": false
+    },
+    "UBE2R2": {
+      "score": 0.30416310464848373,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 46.1426,
+        "ratio_vs_mean": 0.9455862845892984
+      },
+      "druggable": false
+    },
+    "RAD51D": {
+      "score": 0.3703949209013332,
+      "n_interactions": 25,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 3.757,
+        "ratio_vs_mean": 1.1319953168457164
+      },
+      "druggable": false
+    },
+    "WSB2": {
+      "score": 0.34501589676859357,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 35.9406,
+        "ratio_vs_mean": 0.69350130585061
+      },
+      "druggable": false
+    },
+    "STAG1": {
+      "score": 0.300786866514684,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 11.1914,
+        "ratio_vs_mean": 0.938643844028844
+      },
+      "druggable": false
+    },
+    "ATR": {
+      "score": 0.37187502048535453,
+      "n_interactions": 26,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 8.31633,
+        "ratio_vs_mean": 1.211485166965391
+      },
+      "druggable": false
+    },
+    "C9orf152": {
+      "score": 0.4341393089758126,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 18.8278,
+        "ratio_vs_mean": 7.840592470970285
+      },
+      "druggable": false
+    },
+    "CLDN23": {
+      "score": 0.32483117808699924,
+      "n_interactions": 1,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 2.70764,
+        "ratio_vs_mean": 0.6263708379214381
+      },
+      "druggable": false
+    },
+    "SIAH2": {
+      "score": 0.31196695742688574,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 36.4606,
+        "ratio_vs_mean": 1.246413832723867
+      },
+      "druggable": false
+    },
+    "ZNF827": {
+      "score": 0.459848001125044,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 24.4471,
+        "ratio_vs_mean": 3.1118740956389437
+      },
+      "druggable": false
+    },
+    "NCOA2": {
+      "score": 0.3591080559899805,
+      "n_interactions": 8,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 14.1339,
+        "ratio_vs_mean": 1.1921808697886982
+      },
+      "druggable": false
+    },
+    "HDGF": {
+      "score": 0.41447690297790507,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 102.509,
+        "ratio_vs_mean": 1.0193781023007034
+      },
+      "druggable": false
+    },
+    "TUBA3C": {
+      "score": 0.29914981644136596,
+      "n_interactions": 8,
+      "n_pathways": 14,
+      "selectivity": {
+        "prostate_tpm": 0.0569227,
+        "ratio_vs_mean": 0.0037002564683918
+      },
+      "druggable": false
+    },
+    "GRB10": {
+      "score": 0.3221441769326835,
+      "n_interactions": 5,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 23.3499,
+        "ratio_vs_mean": 1.2008180132092046
+      },
+      "druggable": false
+    },
+    "ADAMTS9": {
+      "score": 0.37012397518938983,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 12.2469,
+        "ratio_vs_mean": 1.3325034906188875
+      },
+      "druggable": false
+    },
+    "SCN1A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 8,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 0.00644457,
+        "ratio_vs_mean": 0.0104641032828243
+      },
+      "druggable": false
+    },
+    "HIBADH": {
+      "score": 0.29059456518517396,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 52.7955,
+        "ratio_vs_mean": 1.192597622467794
+      },
+      "druggable": false
+    },
+    "FGFR1": {
+      "score": 0.30239942010390963,
+      "n_interactions": 12,
+      "n_pathways": 80,
+      "selectivity": {
+        "prostate_tpm": 66.2665,
+        "ratio_vs_mean": 1.1600102285120295
+      },
+      "druggable": false
+    },
+    "SUZ12": {
+      "score": 0.2848725493987721,
+      "n_interactions": 9,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 17.2286,
+        "ratio_vs_mean": 1.0553978224085072
+      },
+      "druggable": false
+    },
+    "SUPT4H1": {
+      "score": 0.3981799499513052,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 68.2412,
+        "ratio_vs_mean": 1.1272602655073898
+      },
+      "druggable": false
+    },
+    "MMP14": {
+      "score": 0.309176958494148,
+      "n_interactions": 1,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 113.142,
+        "ratio_vs_mean": 1.0600867859864012
+      },
+      "druggable": false
+    },
+    "GNRHR": {
+      "score": 0.5887184674772263,
+      "n_interactions": 2,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 0.229094,
+        "ratio_vs_mean": 0.8061279347333671
+      },
+      "druggable": false
+    },
+    "KLF6": {
+      "score": 0.5579567938619457,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 39.4657,
+        "ratio_vs_mean": 0.4825028230991118
+      },
+      "druggable": false
+    },
+    "IKZF2": {
+      "score": 0.44644187261526286,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.68462,
+        "ratio_vs_mean": 1.0840862261185067
+      },
+      "druggable": false
+    },
+    "OSBPL5": {
+      "score": 0.3822455446316561,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 34.0447,
+        "ratio_vs_mean": 1.7587864647126628
+      },
+      "druggable": false
+    },
+    "RAD51C": {
+      "score": 0.37002489600532784,
+      "n_interactions": 25,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 6.04049,
+        "ratio_vs_mean": 1.2627221952672107
+      },
+      "druggable": false
+    },
+    "SPINT2": {
+      "score": 0.4682717898950458,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 153.806,
+        "ratio_vs_mean": 1.533750243485792
+      },
+      "druggable": false
+    },
+    "DUSP4": {
+      "score": 0.32925660885363317,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 4.77561,
+        "ratio_vs_mean": 0.868138219108578
+      },
+      "druggable": false
+    },
+    "ZNF793": {
+      "score": 0.2875646844044472,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.45681,
+        "ratio_vs_mean": 1.3292918599169612
+      },
+      "druggable": false
+    },
+    "CHD7": {
+      "score": 0.37779817845659536,
+      "n_interactions": 4,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.32949,
+        "ratio_vs_mean": 0.6942216805115302
+      },
+      "druggable": false
+    },
+    "FMN1": {
+      "score": 0.4535804058734181,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 1.15847,
+        "ratio_vs_mean": 0.9906943369313674
+      },
+      "druggable": false
+    },
+    "SUFU": {
+      "score": 0.3310551472681845,
+      "n_interactions": 1,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 12.6595,
+        "ratio_vs_mean": 1.544645563337683
+      },
+      "druggable": false
+    },
+    "BARD1": {
+      "score": 0.37002489600532784,
+      "n_interactions": 24,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 3.66757,
+        "ratio_vs_mean": 1.0652350810738824
+      },
+      "druggable": false
+    },
+    "ZFAND4": {
+      "score": 0.2896081338840746,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.83094,
+        "ratio_vs_mean": 0.978597255811274
+      },
+      "druggable": false
+    },
+    "MSH2": {
+      "score": 0.3728585672158753,
+      "n_interactions": 30,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 6.02467,
+        "ratio_vs_mean": 0.6541278171287843
+      },
+      "druggable": false
+    },
+    "RNF43": {
+      "score": 0.5194353190856258,
+      "n_interactions": 6,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 13.6481,
+        "ratio_vs_mean": 3.9065874606030655
+      },
+      "druggable": false
+    },
+    "CCDC170": {
+      "score": 0.31144171277971855,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.609245,
+        "ratio_vs_mean": 0.5010243375513482
+      },
+      "druggable": false
+    },
+    "NBN": {
+      "score": 0.37002489600532784,
+      "n_interactions": 19,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 16.8205,
+        "ratio_vs_mean": 1.0060205834770852
+      },
+      "druggable": false
+    },
+    "ANXA9": {
+      "score": 0.30203361636862813,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.40717,
+        "ratio_vs_mean": 0.6224240463101977
+      },
+      "druggable": false
+    },
+    "UQCC1": {
+      "score": 0.29130287066226546,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 21.7407,
+        "ratio_vs_mean": 1.2679540753509717
+      },
+      "druggable": false
+    },
+    "EEFSEC": {
+      "score": 0.4809272308855372,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 26.1961,
+        "ratio_vs_mean": 1.272419688111155
+      },
+      "druggable": false
+    },
+    "RAD51B": {
+      "score": 0.41398322650875014,
+      "n_interactions": 15,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 1.30936,
+        "ratio_vs_mean": 1.231070438693912
+      },
+      "druggable": false
+    },
+    "TUBA1A": {
+      "score": 0.29914981644136596,
+      "n_interactions": 13,
+      "n_pathways": 14,
+      "selectivity": {
+        "prostate_tpm": 98.8673,
+        "ratio_vs_mean": 0.3978891642765749
+      },
+      "druggable": false
+    },
+    "SIX4": {
+      "score": 0.36268603132029575,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 4.66111,
+        "ratio_vs_mean": 3.745689936001491
+      },
+      "druggable": false
+    },
+    "UBAP2": {
+      "score": 0.403854345199705,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 23.5988,
+        "ratio_vs_mean": 1.2222533565103717
+      },
+      "druggable": false
+    },
+    "LTO1": {
+      "score": 0.3355962387936825,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "SOX9": {
+      "score": 0.32657765727478894,
+      "n_interactions": 5,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 31.6446,
+        "ratio_vs_mean": 1.722432574414683
+      },
+      "druggable": false
+    },
+    "CTBP2": {
+      "score": 0.40394517171468863,
+      "n_interactions": 7,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 32.5326,
+        "ratio_vs_mean": 1.7134882698963283
+      },
+      "druggable": false
+    },
+    "USP28": {
+      "score": 0.5273030426216434,
+      "n_interactions": 3,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 14.6865,
+        "ratio_vs_mean": 1.3138891147822964
+      },
+      "druggable": false
+    },
+    "ARHGAP6": {
+      "score": 0.3478534791451882,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 26.3971,
+        "ratio_vs_mean": 3.612133593446112
+      },
+      "druggable": false
+    },
+    "ZBTB20": {
+      "score": 0.4071734605201955,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.893851,
+        "ratio_vs_mean": 1.276460042628515
+      },
+      "druggable": false
+    },
+    "BBX": {
+      "score": 0.39443837858442904,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 17.0256,
+        "ratio_vs_mean": 1.3806000154897364
+      },
+      "druggable": false
+    },
+    "PMS2": {
+      "score": 0.37002489600532784,
+      "n_interactions": 20,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 8.20633,
+        "ratio_vs_mean": 1.02155355585229
+      },
+      "druggable": false
+    },
+    "MMP7": {
+      "score": 0.501705622931105,
+      "n_interactions": 2,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 23.7008,
+        "ratio_vs_mean": 2.149955605615266
+      },
+      "druggable": false
+    },
+    "SCUBE2": {
+      "score": 0.315896738242613,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 27.0948,
+        "ratio_vs_mean": 5.222096002416417
+      },
+      "druggable": false
+    },
+    "NUF2": {
+      "score": 0.4080774922424318,
+      "n_interactions": 7,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.520343,
+        "ratio_vs_mean": 0.2068474692190804
+      },
+      "druggable": false
+    },
+    "ANTXRL": {
+      "score": 0.31930583053082956,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.235541,
+        "ratio_vs_mean": 0.2893463833357962
+      },
+      "druggable": false
+    },
+    "MAP3K1": {
+      "score": 0.5375983567721393,
+      "n_interactions": 7,
+      "n_pathways": 9,
+      "selectivity": {
+        "prostate_tpm": 9.30029,
+        "ratio_vs_mean": 1.0062898959858253
+      },
+      "druggable": false
+    },
+    "CASP8": {
+      "score": 0.44417228903090555,
+      "n_interactions": 13,
+      "n_pathways": 37,
+      "selectivity": {
+        "prostate_tpm": 5.009,
+        "ratio_vs_mean": 0.9822118472035986
+      },
+      "druggable": false
+    },
+    "MAF": {
+      "score": 0.38717986608203897,
+      "n_interactions": 1,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 27.9657,
+        "ratio_vs_mean": 1.1064334381123788
+      },
+      "druggable": false
+    },
+    "MYO6": {
+      "score": 0.43642486896438115,
+      "n_interactions": 3,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 18.3597,
+        "ratio_vs_mean": 1.10584773794402
+      },
+      "druggable": false
+    },
+    "SUGCT": {
+      "score": 0.40515103969485,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.40511,
+        "ratio_vs_mean": 0.4591925820505049
+      },
+      "druggable": false
+    },
+    "MNS1": {
+      "score": 0.3329970947516638,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.19682,
+        "ratio_vs_mean": 0.6050856373681971
+      },
+      "druggable": false
+    },
+    "JAZF1": {
+      "score": 0.4945059007591865,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 24.5635,
+        "ratio_vs_mean": 1.2075582556245956
+      },
+      "druggable": false
+    },
+    "SLC6A18": {
+      "score": 0.3516022129390712,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.0,
+        "ratio_vs_mean": 0.209057705133337
+      },
+      "druggable": false
+    },
+    "TCF4": {
+      "score": 0.4348437264120963,
+      "n_interactions": 6,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 8.60659,
+        "ratio_vs_mean": 0.6886092253590415
+      },
+      "druggable": false
+    },
+    "PALB2": {
+      "score": 0.3703949209013332,
+      "n_interactions": 28,
+      "n_pathways": 24,
+      "selectivity": {
+        "prostate_tpm": 4.89904,
+        "ratio_vs_mean": 0.9836236430442906
+      },
+      "druggable": false
+    },
+    "AKT1": {
+      "score": 0.3826962364877533,
+      "n_interactions": 46,
+      "n_pathways": 171,
+      "selectivity": {
+        "prostate_tpm": 71.5473,
+        "ratio_vs_mean": 1.4770924373564087
+      },
+      "druggable": true
+    },
+    "SHROOM3": {
+      "score": 0.3402444508294554,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 10.2154,
+        "ratio_vs_mean": 1.751727607770473
+      },
+      "druggable": false
+    },
+    "ADAMTSL1": {
+      "score": 0.45448633250513454,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.95425,
+        "ratio_vs_mean": 1.1890022206136257
+      },
+      "druggable": false
+    },
+    "MPHOSPH6": {
+      "score": 0.4749876356409526,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 15.6501,
+        "ratio_vs_mean": 0.959091681105104
+      },
+      "druggable": false
+    },
+    "CAPN10": {
+      "score": 0.3222082465901343,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 24.4543,
+        "ratio_vs_mean": 1.448705020795986
+      },
+      "druggable": false
+    },
+    "COMMD7": {
+      "score": 0.3179347572882928,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 54.7191,
+        "ratio_vs_mean": 1.4820373419322876
+      },
+      "druggable": false
+    },
+    "RSPO2": {
+      "score": 0.538104465198365,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 3.80158,
+        "ratio_vs_mean": 2.357958718824594
+      },
+      "druggable": false
+    },
+    "OGFRL1": {
+      "score": 0.3433187365313639,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 11.0125,
+        "ratio_vs_mean": 0.7008509654040066
+      },
+      "druggable": false
+    },
+    "ID2": {
+      "score": 0.31213027745169053,
+      "n_interactions": 1,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 85.3743,
+        "ratio_vs_mean": 0.9300684879432038
+      },
+      "druggable": false
+    },
+    "PPFIBP2": {
+      "score": 0.5009325870957381,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 19.7443,
+        "ratio_vs_mean": 1.8439967647124769
+      },
+      "druggable": false
+    },
+    "CBR3": {
+      "score": 0.3740924267235222,
+      "n_interactions": 0,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 15.1205,
+        "ratio_vs_mean": 1.1811046862963157
+      },
+      "druggable": false
+    },
+    "TTC9": {
+      "score": 0.29843914779879877,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.75263,
+        "ratio_vs_mean": 0.5272488720449235
+      },
+      "druggable": false
+    },
+    "FGFR4": {
+      "score": 0.30096815466974386,
+      "n_interactions": 7,
+      "n_pathways": 9,
+      "selectivity": {
+        "prostate_tpm": 5.47183,
+        "ratio_vs_mean": 0.595044927995971
+      },
+      "druggable": false
+    },
+    "TPM3": {
+      "score": 0.2909872612421999,
+      "n_interactions": 2,
+      "n_pathways": 8,
+      "selectivity": {
+        "prostate_tpm": 39.7327,
+        "ratio_vs_mean": 0.5740436639474696
+      },
+      "druggable": false
+    },
+    "SESN1": {
+      "score": 0.4252963911201397,
+      "n_interactions": 3,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 33.4528,
+        "ratio_vs_mean": 1.109959460123112
+      },
+      "druggable": false
+    },
+    "SPDL1": {
+      "score": 0.47352023369525964,
+      "n_interactions": 3,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.23998,
+        "ratio_vs_mean": 0.6797773536888142
+      },
+      "druggable": false
+    },
+    "HTR3B": {
+      "score": 0.43252446560974694,
+      "n_interactions": 0,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 0.0,
+        "ratio_vs_mean": 0.0812360547008032
+      },
+      "druggable": false
+    },
+    "SMARCB1": {
+      "score": 0.37002489600532784,
+      "n_interactions": 8,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 51.3321,
+        "ratio_vs_mean": 1.045363554215178
+      },
+      "druggable": false
+    },
+    "SIDT1": {
+      "score": 0.5185449535991661,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 7.5015,
+        "ratio_vs_mean": 1.8845247848245588
+      },
+      "druggable": false
+    },
+    "LRATD2": {
+      "score": 0.4413213681265558,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "TUBB2B": {
+      "score": 0.29914981644136596,
+      "n_interactions": 8,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 3.15611,
+        "ratio_vs_mean": 0.0591296360908168
+      },
+      "druggable": false
+    },
+    "MAP3K21": {
+      "score": 0.3696877767215524,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 1.35127,
+        "ratio_vs_mean": 0.6080122783450839
+      },
+      "druggable": false
+    },
+    "CLDN11": {
+      "score": 0.3799741288079658,
+      "n_interactions": 1,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 11.7651,
+        "ratio_vs_mean": 0.5933209448788336
+      },
+      "druggable": false
+    },
+    "CDKN2B": {
+      "score": 0.49391793984039073,
+      "n_interactions": 8,
+      "n_pathways": 10,
+      "selectivity": {
+        "prostate_tpm": 5.1725,
+        "ratio_vs_mean": 0.7299021464890896
+      },
+      "druggable": false
+    },
+    "CDCA7": {
+      "score": 0.5207470716313343,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 5.35198,
+        "ratio_vs_mean": 1.1122265667499267
+      },
+      "druggable": false
+    },
+    "TNFRSF6B": {
+      "score": 0.43553657087692776,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 35.1119,
+        "ratio_vs_mean": 1.1364603664373574
+      },
+      "druggable": false
+    },
+    "SLC22A2": {
+      "score": 0.4311854051837748,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.0601618,
+        "ratio_vs_mean": 0.1859943626789451
+      },
+      "druggable": false
+    },
+    "WASHC3": {
+      "score": 0.2957355389838902,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 32.8856,
+        "ratio_vs_mean": 1.009471512811236
+      },
+      "druggable": false
+    },
+    "RASSF3": {
+      "score": 0.4542056162956054,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 35.3855,
+        "ratio_vs_mean": 1.0987820085326154
+      },
+      "druggable": false
+    },
+    "DNAJB8": {
+      "score": 0.3621293050640722,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.00960071,
+        "ratio_vs_mean": 0.0108758399595049
+      },
+      "druggable": false
+    },
+    "NUDT11": {
+      "score": 0.47430185432651634,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 9.71488,
+        "ratio_vs_mean": 1.2430566108097734
+      },
+      "druggable": false
+    },
+    "SIM2": {
+      "score": 0.49976068608167984,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.97703,
+        "ratio_vs_mean": 1.707088474120959
+      },
+      "druggable": false
+    },
+    "FBRSL1": {
+      "score": 0.4407253170458398,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 31.8181,
+        "ratio_vs_mean": 1.4533366849861422
+      },
+      "druggable": false
+    },
+    "GATA2": {
+      "score": 0.5646284079044339,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 69.6956,
+        "ratio_vs_mean": 5.097048052824719
+      },
+      "druggable": false
+    },
+    "SRD5A3": {
+      "score": 0.5591259722735744,
+      "n_interactions": 3,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 4.74412,
+        "ratio_vs_mean": 0.87221733788411
+      },
+      "druggable": false
+    },
+    "STXBP1": {
+      "score": 0.30164913456676024,
+      "n_interactions": 3,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 13.0983,
+        "ratio_vs_mean": 0.3099119389608592
+      },
+      "druggable": false
+    },
+    "TNFSF10": {
+      "score": 0.3322539659099467,
+      "n_interactions": 1,
+      "n_pathways": 10,
+      "selectivity": {
+        "prostate_tpm": 94.1504,
+        "ratio_vs_mean": 2.4319704136798963
+      },
+      "druggable": false
+    },
+    "AFM": {
+      "score": 0.3187370720057176,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.0,
+        "ratio_vs_mean": 0.0018651577346335
+      },
+      "druggable": false
+    },
+    "TP53": {
+      "score": 0.403515407281143,
+      "n_interactions": 85,
+      "n_pathways": 138,
+      "selectivity": {
+        "prostate_tpm": 20.3002,
+        "ratio_vs_mean": 1.2582739143565325
+      },
+      "druggable": false
+    },
+    "SIX1": {
+      "score": 0.5053785888577708,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 12.3602,
+        "ratio_vs_mean": 5.371506308592059
+      },
+      "druggable": false
+    },
+    "DDB2": {
+      "score": 0.37002489600532784,
+      "n_interactions": 10,
+      "n_pathways": 20,
+      "selectivity": {
+        "prostate_tpm": 33.0966,
+        "ratio_vs_mean": 1.3918316822729944
+      },
+      "druggable": false
+    },
+    "RFX3": {
+      "score": 0.3354367640572848,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.53715,
+        "ratio_vs_mean": 1.163952414404257
+      },
+      "druggable": false
+    },
+    "EFHD1": {
+      "score": 0.4726580164926781,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 23.2773,
+        "ratio_vs_mean": 0.4012876885851715
+      },
+      "druggable": false
+    },
+    "TSR2": {
+      "score": 0.3125696158347732,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 69.1982,
+        "ratio_vs_mean": 0.8375346136227604
+      },
+      "druggable": false
+    },
+    "PPP2R2A": {
+      "score": 0.33539489150549123,
+      "n_interactions": 6,
+      "n_pathways": 13,
+      "selectivity": {
+        "prostate_tpm": 25.2459,
+        "ratio_vs_mean": 1.1340897152658214
+      },
+      "druggable": false
+    },
+    "PRTG": {
+      "score": 0.32180445994304907,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.448119,
+        "ratio_vs_mean": 0.5296185807257039
+      },
+      "druggable": false
+    },
+    "FGFR2": {
+      "score": 0.6135905268454421,
+      "n_interactions": 14,
+      "n_pathways": 13,
+      "selectivity": {
+        "prostate_tpm": 19.5152,
+        "ratio_vs_mean": 1.1488832667279745
+      },
+      "druggable": false
+    },
+    "TNFAIP3": {
+      "score": 0.37002489600532784,
+      "n_interactions": 5,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 22.5429,
+        "ratio_vs_mean": 0.9053305774377246
+      },
+      "druggable": false
+    },
+    "FANCE": {
+      "score": 0.37002489600532784,
+      "n_interactions": 14,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 7.97492,
+        "ratio_vs_mean": 1.0207269006257118
+      },
+      "druggable": false
+    },
+    "ADRA1A": {
+      "score": 0.46253112000665986,
+      "n_interactions": 2,
+      "n_pathways": 9,
+      "selectivity": {
+        "prostate_tpm": 2.22562,
+        "ratio_vs_mean": 2.298721058463014
+      },
+      "druggable": false
+    },
+    "CCND1": {
+      "score": 0.539259786116592,
+      "n_interactions": 37,
+      "n_pathways": 101,
+      "selectivity": {
+        "prostate_tpm": 71.5256,
+        "ratio_vs_mean": 2.02290764729845
+      },
+      "druggable": false
+    },
+    "ZNF572": {
+      "score": 0.4127774503780672,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 2.24359,
+        "ratio_vs_mean": 1.609316642824429
+      },
+      "druggable": false
+    },
+    "PAX9": {
+      "score": 0.47138551108176746,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.95598,
+        "ratio_vs_mean": 2.146960575956866
+      },
+      "druggable": false
+    },
+    "KCNQ1": {
+      "score": 0.2963505948661521,
+      "n_interactions": 3,
+      "n_pathways": 6,
+      "selectivity": {
+        "prostate_tpm": 8.48653,
+        "ratio_vs_mean": 0.6731363283917071
+      },
+      "druggable": false
+    },
+    "SLC35G2": {
+      "score": 0.30811299550504917,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.75062,
+        "ratio_vs_mean": 0.6714561588536168
+      },
+      "druggable": false
+    },
+    "PPAT": {
+      "score": 0.4175808529271552,
+      "n_interactions": 0,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 4.89532,
+        "ratio_vs_mean": 0.8751761060667473
+      },
+      "druggable": false
+    },
+    "LPCAT1": {
+      "score": 0.3052964328851307,
+      "n_interactions": 0,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 23.1766,
+        "ratio_vs_mean": 0.9275883248381944
+      },
+      "druggable": false
+    },
+    "PPARG": {
+      "score": 0.30089701915787204,
+      "n_interactions": 17,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 5.36489,
+        "ratio_vs_mean": 0.4661048595887049
+      },
+      "druggable": false
+    },
+    "JAK1": {
+      "score": 0.3703949209013332,
+      "n_interactions": 10,
+      "n_pathways": 158,
+      "selectivity": {
+        "prostate_tpm": 47.659,
+        "ratio_vs_mean": 0.7991400076002625
+      },
+      "druggable": false
+    },
+    "TUBB3": {
+      "score": 0.30123120648139595,
+      "n_interactions": 8,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 1.67659,
+        "ratio_vs_mean": 0.076745927289226
+      },
+      "druggable": false
+    },
+    "APC": {
+      "score": 0.37429785769316276,
+      "n_interactions": 6,
+      "n_pathways": 55,
+      "selectivity": {
+        "prostate_tpm": 5.8156,
+        "ratio_vs_mean": 0.5261052892157317
+      },
+      "druggable": false
+    },
+    "MYO5C": {
+      "score": 0.34537095106733934,
+      "n_interactions": 1,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 15.9976,
+        "ratio_vs_mean": 1.9261550717329403
+      },
+      "druggable": false
+    },
+    "SRD5A1": {
+      "score": 0.5582934162575625,
+      "n_interactions": 3,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 2.64229,
+        "ratio_vs_mean": 0.4897575933976343
+      },
+      "druggable": false
+    },
+    "GDF5": {
+      "score": 0.32412218343269183,
+      "n_interactions": 2,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 0.989716,
+        "ratio_vs_mean": 1.9811165550210952
+      },
+      "druggable": false
+    },
+    "B3GAT1": {
+      "score": 0.47982152014871776,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 2.31143,
+        "ratio_vs_mean": 0.1534160227796842
+      },
+      "druggable": false
+    },
+    "ZNRF3": {
+      "score": 0.4445038646657468,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 8.05605,
+        "ratio_vs_mean": 1.180282360311558
+      },
+      "druggable": false
+    },
+    "STK39": {
+      "score": 0.43352717418259085,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 29.4894,
+        "ratio_vs_mean": 1.4637152394450357
+      },
+      "druggable": false
+    },
+    "MAD1L1": {
+      "score": 0.4705506575177242,
+      "n_interactions": 1,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 7.30637,
+        "ratio_vs_mean": 1.1352349961465245
+      },
+      "druggable": false
+    },
+    "HAS2": {
+      "score": 0.338556328340017,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.54935,
+        "ratio_vs_mean": 0.6722757991480688
+      },
+      "druggable": false
+    },
+    "C1orf21": {
+      "score": 0.28634120237252586,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 33.4886,
+        "ratio_vs_mean": 1.8375797501670783
+      },
+      "druggable": false
+    },
+    "ZWILCH": {
+      "score": 0.3013110584482509,
+      "n_interactions": 4,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.91075,
+        "ratio_vs_mean": 0.8573631017642046
+      },
+      "druggable": false
+    },
+    "NEURL1B": {
+      "score": 0.3823995711847233,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 31.3411,
+        "ratio_vs_mean": 1.665967528945101
+      },
+      "druggable": false
+    },
+    "PARG": {
+      "score": 0.33764130284921906,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 8.61185,
+        "ratio_vs_mean": 1.0660938549678292
+      },
+      "druggable": false
+    },
+    "LRP1B": {
+      "score": 0.3703949209013332,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.322962,
+        "ratio_vs_mean": 0.3114360018891952
+      },
+      "druggable": false
+    },
+    "ATF7IP": {
+      "score": 0.4030702431121827,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 12.0779,
+        "ratio_vs_mean": 1.028120944602197
+      },
+      "druggable": false
+    },
+    "NIM1K": {
+      "score": 0.3388315812907189,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.05036,
+        "ratio_vs_mean": 0.4040881574996564
+      },
+      "druggable": false
+    },
+    "MYO9B": {
+      "score": 0.2931294109432033,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 46.0111,
+        "ratio_vs_mean": 1.2049151415324764
+      },
+      "druggable": false
+    },
+    "FGFR3": {
+      "score": 0.39374276092589455,
+      "n_interactions": 13,
+      "n_pathways": 13,
+      "selectivity": {
+        "prostate_tpm": 15.6296,
+        "ratio_vs_mean": 0.3417247408001927
+      },
+      "druggable": false
+    },
+    "RASSF4": {
+      "score": 0.2908396876119159,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 23.4163,
+        "ratio_vs_mean": 0.6210349833936101
+      },
+      "druggable": false
+    },
+    "MAST2": {
+      "score": 0.4165656495483528,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 57.9071,
+        "ratio_vs_mean": 1.7219760100893589
+      },
+      "druggable": false
+    },
+    "TUBB2A": {
+      "score": 0.29914981644136596,
+      "n_interactions": 13,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 10.7961,
+        "ratio_vs_mean": 0.1879297689053364
+      },
+      "druggable": false
+    },
+    "ZNF462": {
+      "score": 0.41380241823753583,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 7.38736,
+        "ratio_vs_mean": 1.7109000034503397
+      },
+      "druggable": false
+    },
+    "RRH": {
+      "score": 0.29312447881985715,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.287816,
+        "ratio_vs_mean": 0.8557442196860842
+      },
+      "druggable": false
+    },
+    "CCDC54": {
+      "score": 0.3176058273027353,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.398752,
+        "ratio_vs_mean": 0.0866010585920094
+      },
+      "druggable": false
+    },
+    "OSBPL7": {
+      "score": 0.39706016872456534,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 30.9154,
+        "ratio_vs_mean": 2.1588086009462715
+      },
+      "druggable": false
+    },
+    "LCTL": {
+      "score": 0.307622724913713,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.183647,
+        "ratio_vs_mean": 0.3769628508446535
+      },
+      "druggable": false
+    },
+    "TOR1A": {
+      "score": 0.417767916452013,
+      "n_interactions": 4,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 20.4089,
+        "ratio_vs_mean": 1.159504546264255
+      },
+      "druggable": false
+    },
+    "MYCN": {
+      "score": 0.4637522309536036,
+      "n_interactions": 11,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.196964,
+        "ratio_vs_mean": 0.1440897857973351
+      },
+      "druggable": false
+    },
+    "TCF7L2": {
+      "score": 0.5952183446422175,
+      "n_interactions": 14,
+      "n_pathways": 21,
+      "selectivity": {
+        "prostate_tpm": 17.0858,
+        "ratio_vs_mean": 1.183415769551206
+      },
+      "druggable": false
+    },
+    "MYO16": {
+      "score": 0.33934714931352167,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.393991,
+        "ratio_vs_mean": 0.6135429013184059
+      },
+      "druggable": false
+    },
+    "PPP1R7": {
+      "score": 0.2898370980820274,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 60.7797,
+        "ratio_vs_mean": 1.1880703558302788
+      },
+      "druggable": false
+    },
+    "VRK2": {
+      "score": 0.2890052420099215,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 6.97803,
+        "ratio_vs_mean": 1.1327077995199109
+      },
+      "druggable": false
+    },
+    "DNAJC1": {
+      "score": 0.33371667330172206,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 34.8698,
+        "ratio_vs_mean": 1.5260948408858854
+      },
+      "druggable": false
+    },
+    "RAD23B": {
+      "score": 0.3669104657007454,
+      "n_interactions": 15,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 63.2608,
+        "ratio_vs_mean": 1.0086485911249512
+      },
+      "druggable": false
+    },
+    "LMTK2": {
+      "score": 0.4146378379016948,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 9.3233,
+        "ratio_vs_mean": 0.9432925576506682
+      },
+      "druggable": false
+    },
+    "TBX1": {
+      "score": 0.5205976619804732,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 8.32993,
+        "ratio_vs_mean": 1.7218942456820614
+      },
+      "druggable": false
+    },
+    "PRKCI": {
+      "score": 0.4299761883916079,
+      "n_interactions": 3,
+      "n_pathways": 8,
+      "selectivity": {
+        "prostate_tpm": 21.879,
+        "ratio_vs_mean": 1.429575833160878
+      },
+      "druggable": false
+    },
+    "MALT1": {
+      "score": 0.2933320970735569,
+      "n_interactions": 3,
+      "n_pathways": 6,
+      "selectivity": {
+        "prostate_tpm": 21.0403,
+        "ratio_vs_mean": 2.4645842425037694
+      },
+      "druggable": false
+    },
+    "PPP1R14A": {
+      "score": 0.5622449094021195,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 72.9655,
+        "ratio_vs_mean": 0.6508166198677419
+      },
+      "druggable": false
+    },
+    "GRIN2A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 3,
+      "n_pathways": 33,
+      "selectivity": {
+        "prostate_tpm": 0.149005,
+        "ratio_vs_mean": 0.090661432977599
+      },
+      "druggable": false
+    },
+    "RPL5": {
+      "score": 0.290815242693781,
+      "n_interactions": 8,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 1531.62,
+        "ratio_vs_mean": 1.2198541153093212
+      },
+      "druggable": false
+    },
+    "C10orf53": {
+      "score": 0.4194072589483607,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.0,
+        "ratio_vs_mean": 0.0257732332502341
+      },
+      "druggable": false
+    },
+    "LPA": {
+      "score": 0.3992782717987701,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.294979,
+        "ratio_vs_mean": 0.8965880927530773
+      },
+      "druggable": false
+    },
+    "SERPINA3": {
+      "score": 0.3449339946127726,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 90.1852,
+        "ratio_vs_mean": 1.1393979706845716
+      },
+      "druggable": false
+    },
+    "INHBB": {
+      "score": 0.5105144749371515,
+      "n_interactions": 2,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 14.1298,
+        "ratio_vs_mean": 1.1587328180033702
+      },
+      "druggable": false
+    },
+    "ERG": {
+      "score": 0.3810471102070988,
+      "n_interactions": 4,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 7.53867,
+        "ratio_vs_mean": 0.8831314915089346
+      },
+      "druggable": false
+    },
+    "EZH2": {
+      "score": 0.3732440864673911,
+      "n_interactions": 23,
+      "n_pathways": 41,
+      "selectivity": {
+        "prostate_tpm": 3.3245,
+        "ratio_vs_mean": 0.5880961989791811
+      },
+      "druggable": true
+    },
+    "HABP2": {
+      "score": 0.33280062976483266,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.0889471,
+        "ratio_vs_mean": 0.0360064035060256
+      },
+      "druggable": false
+    },
+    "POGLUT3": {
+      "score": 0.514421832169623,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "EMSY": {
+      "score": 0.4316885367014213,
+      "n_interactions": 3,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 9.85573,
+        "ratio_vs_mean": 1.3214848625619189
+      },
+      "druggable": false
+    },
+    "TMPRSS5": {
+      "score": 0.33488770185910965,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.29599,
+        "ratio_vs_mean": 0.2767120600436747
+      },
+      "druggable": false
+    },
+    "MSMB": {
+      "score": 0.5642440902757383,
+      "n_interactions": 3,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4353.44,
+        "ratio_vs_mean": 2154.5959941862843
+      },
+      "druggable": false
+    },
+    "ADAMTS3": {
+      "score": 0.3134907734217387,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.973336,
+        "ratio_vs_mean": 0.8452117234218717
+      },
+      "druggable": false
+    },
+    "NOL10": {
+      "score": 0.39270777079330865,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 14.9237,
+        "ratio_vs_mean": 1.2120860408452143
+      },
+      "druggable": false
+    },
+    "FOXP4": {
+      "score": 0.47712008265946093,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 44.5255,
+        "ratio_vs_mean": 2.1708525082054853
+      },
+      "druggable": false
+    },
+    "SCN7A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 16.2967,
+        "ratio_vs_mean": 1.3932944623996122
+      },
+      "druggable": false
+    },
+    "ANLN": {
+      "score": 0.30737017277859574,
+      "n_interactions": 3,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.572404,
+        "ratio_vs_mean": 0.0488153045707936
+      },
+      "druggable": false
+    },
+    "NOTCH1": {
+      "score": 0.3755507521495772,
+      "n_interactions": 18,
+      "n_pathways": 38,
+      "selectivity": {
+        "prostate_tpm": 29.2497,
+        "ratio_vs_mean": 1.464794062123158
+      },
+      "druggable": false
+    },
+    "ERBB2": {
+      "score": 0.28709959091855364,
+      "n_interactions": 37,
+      "n_pathways": 24,
+      "selectivity": {
+        "prostate_tpm": 83.7738,
+        "ratio_vs_mean": 2.2643650774164183
+      },
+      "druggable": false
+    },
+    "PITPNB": {
+      "score": 0.37043559083194694,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 50.5543,
+        "ratio_vs_mean": 0.9988696358018512
+      },
+      "druggable": false
+    },
+    "SPDEF": {
+      "score": 0.4132563726402932,
+      "n_interactions": 3,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 211.829,
+        "ratio_vs_mean": 36.99228065420704
+      },
+      "druggable": false
+    },
+    "ADRA1D": {
+      "score": 0.46340992913467244,
+      "n_interactions": 3,
+      "n_pathways": 8,
+      "selectivity": {
+        "prostate_tpm": 4.45182,
+        "ratio_vs_mean": 2.0677729513687697
+      },
+      "druggable": false
+    },
+    "ADGRG1": {
+      "score": 0.4953820858049099,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 30.6867,
+        "ratio_vs_mean": 1.0932394547323434
+      },
+      "druggable": false
+    },
+    "EVI5": {
+      "score": 0.2931207317659183,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 6.78658,
+        "ratio_vs_mean": 1.0809000753806064
+      },
+      "druggable": false
+    },
+    "CDK12": {
+      "score": 0.37239922242136203,
+      "n_interactions": 9,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 13.7234,
+        "ratio_vs_mean": 1.2722367386393996
+      },
+      "druggable": false
+    },
+    "ATP2B1": {
+      "score": 0.46463588210445644,
+      "n_interactions": 0,
+      "n_pathways": 9,
+      "selectivity": {
+        "prostate_tpm": 11.4604,
+        "ratio_vs_mean": 0.5355970885664727
+      },
+      "druggable": false
+    },
+    "MSH6": {
+      "score": 0.3710424644693425,
+      "n_interactions": 28,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 11.2466,
+        "ratio_vs_mean": 1.015646908990976
+      },
+      "druggable": false
+    },
+    "ARHGEF5": {
+      "score": 0.3381397118287633,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 10.7027,
+        "ratio_vs_mean": 2.51651828138142
+      },
+      "druggable": false
+    },
+    "RFX7": {
+      "score": 0.49821051019893303,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 5.49374,
+        "ratio_vs_mean": 1.0384706487207307
+      },
+      "druggable": false
+    },
+    "NEK6": {
+      "score": 0.37215004525798584,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 17.4682,
+        "ratio_vs_mean": 1.1341631837893904
+      },
+      "druggable": false
+    },
+    "MYEOV": {
+      "score": 0.4932617637815812,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.281459,
+        "ratio_vs_mean": 0.2148653188442795
+      },
+      "druggable": false
+    },
+    "BARX2": {
+      "score": 0.3007515009975002,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 5.91097,
+        "ratio_vs_mean": 0.4682117264826128
+      },
+      "druggable": false
+    },
+    "SERPINA1": {
+      "score": 0.4526325992686005,
+      "n_interactions": 3,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 4.68488,
+        "ratio_vs_mean": 0.0324517251748699
+      },
+      "druggable": false
+    },
+    "SNRPC": {
+      "score": 0.31619025130412975,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 76.0672,
+        "ratio_vs_mean": 1.0744272303131668
+      },
+      "druggable": false
+    },
+    "PPL": {
+      "score": 0.3444830049394484,
+      "n_interactions": 0,
+      "n_pathways": 11,
+      "selectivity": {
+        "prostate_tpm": 33.3224,
+        "ratio_vs_mean": 0.5478845055969371
+      },
+      "druggable": false
+    },
+    "BAK1": {
+      "score": 0.3372537743220752,
+      "n_interactions": 5,
+      "n_pathways": 33,
+      "selectivity": {
+        "prostate_tpm": 17.3646,
+        "ratio_vs_mean": 1.0983107183758545
+      },
+      "druggable": false
+    },
+    "MAML3": {
+      "score": 0.42813032556116415,
+      "n_interactions": 2,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 8.44937,
+        "ratio_vs_mean": 1.4724928583860182
+      },
+      "druggable": false
+    },
+    "SOWAHB": {
+      "score": 0.3130935318091518,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.760629,
+        "ratio_vs_mean": 0.5937133188028473
+      },
+      "druggable": false
+    },
+    "FHIT": {
+      "score": 0.372072881020024,
+      "n_interactions": 2,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 3.05732,
+        "ratio_vs_mean": 1.0122530860236687
+      },
+      "druggable": false
+    },
+    "SP8": {
+      "score": 0.40795605305558913,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.88413,
+        "ratio_vs_mean": 36.46125804318637
+      },
+      "druggable": false
+    },
+    "PSCA": {
+      "score": 0.28969591625404667,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 63.0901,
+        "ratio_vs_mean": 1.9931524877121125
+      },
+      "druggable": false
+    },
+    "ERBB3": {
+      "score": 0.3710424644693425,
+      "n_interactions": 15,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 40.4395,
+        "ratio_vs_mean": 2.239555591229171
+      },
+      "druggable": false
+    },
+    "DAP3": {
+      "score": 0.3143096941175875,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 45.1584,
+        "ratio_vs_mean": 1.319501104965128
+      },
+      "druggable": false
+    },
+    "SIRAL2": {
+      "score": 0.3410254255494297,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "ACVR2A": {
+      "score": 0.34246926386627347,
+      "n_interactions": 6,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 8.41671,
+        "ratio_vs_mean": 1.175228215095698
+      },
+      "druggable": false
+    },
+    "TAB3": {
+      "score": 0.30857162517001235,
+      "n_interactions": 1,
+      "n_pathways": 8,
+      "selectivity": {
+        "prostate_tpm": 9.94329,
+        "ratio_vs_mean": 1.597043054715528
+      },
+      "druggable": false
+    },
+    "PHC3": {
+      "score": 0.4103111965728826,
+      "n_interactions": 7,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 9.00555,
+        "ratio_vs_mean": 1.2152727546668896
+      },
+      "druggable": false
+    },
+    "AXIN2": {
+      "score": 0.37002489600532784,
+      "n_interactions": 6,
+      "n_pathways": 15,
+      "selectivity": {
+        "prostate_tpm": 21.8371,
+        "ratio_vs_mean": 1.8915646566906756
+      },
+      "druggable": false
+    },
+    "FST": {
+      "score": 0.3058967356301409,
+      "n_interactions": 3,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 16.3352,
+        "ratio_vs_mean": 1.9224972578221335
+      },
+      "druggable": false
+    },
+    "TUBB1": {
+      "score": 0.29914981644136596,
+      "n_interactions": 6,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 0.211166,
+        "ratio_vs_mean": 0.2587270402750541
+      },
+      "druggable": false
+    },
+    "RGS17": {
+      "score": 0.518100777113929,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.78301,
+        "ratio_vs_mean": 1.2426923268640593
+      },
+      "druggable": false
+    },
+    "TRAM1": {
+      "score": 0.37529995633227337,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 60.2891,
+        "ratio_vs_mean": 0.9923222811798746
+      },
+      "druggable": false
+    },
+    "ITGA1": {
+      "score": 0.308370790496189,
+      "n_interactions": 6,
+      "n_pathways": 11,
+      "selectivity": {
+        "prostate_tpm": 32.5232,
+        "ratio_vs_mean": 1.4210179784652524
+      },
+      "druggable": false
+    },
+    "RNLS": {
+      "score": 0.42035185530354763,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.09799,
+        "ratio_vs_mean": 1.2815807088988505
+      },
+      "druggable": false
+    },
+    "TTC6": {
+      "score": 0.39004360475509703,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 8.04421,
+        "ratio_vs_mean": 25.083964675666884
+      },
+      "druggable": false
+    },
+    "CYP17A1": {
+      "score": 0.5228131081248989,
+      "n_interactions": 4,
+      "n_pathways": 6,
+      "selectivity": {
+        "prostate_tpm": 0.941888,
+        "ratio_vs_mean": 0.0072116130616004
+      },
+      "druggable": false
+    },
+    "PWWP2A": {
+      "score": 0.3342863922646991,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 10.008,
+        "ratio_vs_mean": 1.2948515947125294
+      },
+      "druggable": false
+    },
+    "KLK3": {
+      "score": 0.5692646156950634,
+      "n_interactions": 7,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 4285.71,
+        "ratio_vs_mean": 16695.58209525709
+      },
+      "druggable": true
+    },
+    "TNS3": {
+      "score": 0.515690990486546,
+      "n_interactions": 1,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 17.7391,
+        "ratio_vs_mean": 0.7023803437680081
+      },
+      "druggable": false
+    },
+    "COL23A1": {
+      "score": 0.45894199217397214,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 11.0867,
+        "ratio_vs_mean": 2.092116791083372
+      },
+      "druggable": false
+    },
+    "STN1": {
+      "score": 0.4929311102174665,
+      "n_interactions": 4,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 17.6168,
+        "ratio_vs_mean": 0.8698615693308296
+      },
+      "druggable": false
+    },
+    "SLC2A12": {
+      "score": 0.42082328427169374,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 13.8433,
+        "ratio_vs_mean": 3.79414273938218
+      },
+      "druggable": false
+    },
+    "HLF": {
+      "score": 0.2956172979801486,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 16.3,
+        "ratio_vs_mean": 0.9577354953302248
+      },
+      "druggable": false
+    },
+    "HAAO": {
+      "score": 0.44891873949022065,
+      "n_interactions": 0,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 22.3539,
+        "ratio_vs_mean": 1.3786229840433808
+      },
+      "druggable": false
+    },
+    "SKIL": {
+      "score": 0.5214248709988761,
+      "n_interactions": 2,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 15.7919,
+        "ratio_vs_mean": 1.473041282813682
+      },
+      "druggable": false
+    },
+    "SHROOM2": {
+      "score": 0.43744587562861464,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 6.0703,
+        "ratio_vs_mean": 2.434997356434676
+      },
+      "druggable": false
+    },
+    "PKNOX2": {
+      "score": 0.4236220682313127,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 11.033,
+        "ratio_vs_mean": 1.8197989876353384
+      },
+      "druggable": false
+    },
+    "CCDC88C": {
+      "score": 0.4535153995425454,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 14.1717,
+        "ratio_vs_mean": 2.1558476240700144
+      },
+      "druggable": false
+    },
+    "ANXA13": {
+      "score": 0.40815116213253044,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.310184,
+        "ratio_vs_mean": 0.2867894085024643
+      },
+      "druggable": false
+    },
+    "IQGAP2": {
+      "score": 0.38124740083632336,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 7.99728,
+        "ratio_vs_mean": 1.1229424091391451
+      },
+      "druggable": false
+    },
+    "GRHL1": {
+      "score": 0.4549360972713789,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 17.6936,
+        "ratio_vs_mean": 1.3486823388090394
+      },
+      "druggable": false
+    },
+    "UGP2": {
+      "score": 0.328465188988259,
+      "n_interactions": 1,
+      "n_pathways": 8,
+      "selectivity": {
+        "prostate_tpm": 58.5463,
+        "ratio_vs_mean": 0.6943275349803848
+      },
+      "druggable": false
+    },
+    "SRC": {
+      "score": 0.3733619512559555,
+      "n_interactions": 43,
+      "n_pathways": 45,
+      "selectivity": {
+        "prostate_tpm": 51.5408,
+        "ratio_vs_mean": 2.241870374632006
+      },
+      "druggable": false
+    },
+    "PTPRT": {
+      "score": 0.37224504538135983,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.242583,
+        "ratio_vs_mean": 0.1925739329157925
+      },
+      "druggable": false
+    },
+    "HNF1B": {
+      "score": 0.533830960111204,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 4.69254,
+        "ratio_vs_mean": 0.8819494097215443
+      },
+      "druggable": false
+    },
+    "MARCHF8": {
+      "score": 0.34040617467269546,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "GPC5": {
+      "score": 0.3170486084105175,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.146414,
+        "ratio_vs_mean": 0.0943886459169489
+      },
+      "druggable": false
+    },
+    "FAT1": {
+      "score": 0.29429296302106644,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 15.5237,
+        "ratio_vs_mean": 1.2850854963513807
+      },
+      "druggable": false
+    },
+    "SAMD12": {
+      "score": 0.30248846949676417,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 2.38857,
+        "ratio_vs_mean": 1.0715473162866838
+      },
+      "druggable": false
+    },
+    "TAX1BP1": {
+      "score": 0.3649089503139142,
+      "n_interactions": 2,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 31.1609,
+        "ratio_vs_mean": 1.053500256702008
+      },
+      "druggable": false
+    },
+    "ZBTB7B": {
+      "score": 0.3054081242715235,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 52.5816,
+        "ratio_vs_mean": 1.434565301317047
+      },
+      "druggable": false
+    },
+    "PDK1": {
+      "score": 0.4032433929517361,
+      "n_interactions": 3,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 2.51121,
+        "ratio_vs_mean": 0.7280551154142005
+      },
+      "druggable": false
+    },
+    "ADAM2": {
+      "score": 0.29029480101410265,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.0286337,
+        "ratio_vs_mean": 0.0370130990564925
+      },
+      "druggable": false
+    },
+    "SMAD6": {
+      "score": 0.35873755402524204,
+      "n_interactions": 4,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 7.8634,
+        "ratio_vs_mean": 1.394845020157408
+      },
+      "druggable": false
+    },
+    "TUBB4B": {
+      "score": 0.29914981644136596,
+      "n_interactions": 10,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 208.932,
+        "ratio_vs_mean": 0.8704810635617195
+      },
+      "druggable": false
+    },
+    "ZFHX3": {
+      "score": 0.5842209600640165,
+      "n_interactions": 1,
+      "n_pathways": 6,
+      "selectivity": {
+        "prostate_tpm": 10.9096,
+        "ratio_vs_mean": 1.8521377275307225
+      },
+      "druggable": false
+    },
+    "CDKN2A": {
+      "score": 0.4110679864764764,
+      "n_interactions": 35,
+      "n_pathways": 18,
+      "selectivity": {
+        "prostate_tpm": 0.942697,
+        "ratio_vs_mean": 0.6638050565563409
+      },
+      "druggable": false
+    },
+    "SP3": {
+      "score": 0.36579124550202063,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 24.5089,
+        "ratio_vs_mean": 1.1233826930358604
+      },
+      "druggable": false
+    },
+    "FOXA1": {
+      "score": 0.4191885918810045,
+      "n_interactions": 9,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 71.4145,
+        "ratio_vs_mean": 29.40468997675335
+      },
+      "druggable": false
+    },
+    "TUBA1C": {
+      "score": 0.33301872396841325,
+      "n_interactions": 11,
+      "n_pathways": 14,
+      "selectivity": {
+        "prostate_tpm": 11.1433,
+        "ratio_vs_mean": 0.5891847499694356
+      },
+      "druggable": false
+    },
+    "ETV1": {
+      "score": 0.37533423619306744,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 3.05654,
+        "ratio_vs_mean": 0.3275767838354215
+      },
+      "druggable": false
+    },
+    "DDX10": {
+      "score": 0.2861891961077872,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 5.68908,
+        "ratio_vs_mean": 1.01323243590168
+      },
+      "druggable": false
+    },
+    "ODAD2": {
+      "score": 0.33218452044032987,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "SALL3": {
+      "score": 0.3359114673816322,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 4.86858,
+        "ratio_vs_mean": 5.169899362477657
+      },
+      "druggable": false
+    },
+    "MDM2": {
+      "score": 0.3726550189701681,
+      "n_interactions": 37,
+      "n_pathways": 68,
+      "selectivity": {
+        "prostate_tpm": 13.4559,
+        "ratio_vs_mean": 1.320159412220617
+      },
+      "druggable": true
+    },
+    "HOXB13": {
+      "score": 0.4082652892521441,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 118.762,
+        "ratio_vs_mean": 410.53509242983125
+      },
+      "druggable": false
+    },
+    "SCN4A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 6,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.520265,
+        "ratio_vs_mean": 0.1484241854182259
+      },
+      "druggable": false
+    },
+    "RIF1": {
+      "score": 0.31479895018810067,
+      "n_interactions": 3,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 7.59039,
+        "ratio_vs_mean": 1.034496930285316
+      },
+      "druggable": false
+    },
+    "NOTCH2": {
+      "score": 0.37002489600532784,
+      "n_interactions": 2,
+      "n_pathways": 9,
+      "selectivity": {
+        "prostate_tpm": 21.6334,
+        "ratio_vs_mean": 1.071963812317196
+      },
+      "druggable": false
+    },
+    "SOX4": {
+      "score": 0.33253712122667667,
+      "n_interactions": 4,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 17.0111,
+        "ratio_vs_mean": 1.3915078000150205
+      },
+      "druggable": false
+    },
+    "TNFRSF14": {
+      "score": 0.37002489600532784,
+      "n_interactions": 2,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 147.731,
+        "ratio_vs_mean": 2.1923668049977625
+      },
+      "druggable": false
+    },
+    "ERCC4": {
+      "score": 0.37002489600532784,
+      "n_interactions": 27,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 3.14661,
+        "ratio_vs_mean": 0.9905099681724848
+      },
+      "druggable": false
+    },
+    "TMEM17": {
+      "score": 0.5346455606313707,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 2.68614,
+        "ratio_vs_mean": 0.7038728344806573
+      },
+      "druggable": false
+    },
+    "SCN10A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 4,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 0.0,
+        "ratio_vs_mean": 0.422307900084405
+      },
+      "druggable": false
+    },
+    "POU1F1": {
+      "score": 0.3677477961959225,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.111673,
+        "ratio_vs_mean": 0.056018580498747
+      },
+      "druggable": false
+    },
+    "GTPBP1": {
+      "score": 0.33137916456855904,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 39.36,
+        "ratio_vs_mean": 1.3243947966551202
+      },
+      "druggable": false
+    },
+    "ETV4": {
+      "score": 0.371537783906523,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 5.22953,
+        "ratio_vs_mean": 2.154589159756045
+      },
+      "druggable": false
+    },
+    "ZBTB38": {
+      "score": 0.45653155027072906,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 12.7836,
+        "ratio_vs_mean": 0.9369164064425848
+      },
+      "druggable": false
+    },
+    "MUTYH": {
+      "score": 0.37002489600532784,
+      "n_interactions": 10,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 20.0572,
+        "ratio_vs_mean": 1.4835879825871598
+      },
+      "druggable": false
+    },
+    "CHMP2B": {
+      "score": 0.42935528429351044,
+      "n_interactions": 1,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 42.8587,
+        "ratio_vs_mean": 1.2511791406658412
+      },
+      "druggable": false
+    },
+    "ACP3": {
+      "score": 0.41817817636241117,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "TYW2": {
+      "score": 0.3964302497800848,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "MYOCD": {
+      "score": 0.3278385207355668,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 10.6836,
+        "ratio_vs_mean": 1.2946757121967725
+      },
+      "druggable": false
+    },
+    "MIPOL1": {
+      "score": 0.28780304508633114,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.75548,
+        "ratio_vs_mean": 2.177228439924279
+      },
+      "druggable": false
+    },
+    "KLF4": {
+      "score": 0.4999640308757886,
+      "n_interactions": 13,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 33.5587,
+        "ratio_vs_mean": 0.4853233911152517
+      },
+      "druggable": false
+    },
+    "PLG": {
+      "score": 0.3671890059037896,
+      "n_interactions": 1,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 0.0723628,
+        "ratio_vs_mean": 0.0125464163035974
+      },
+      "druggable": false
+    },
+    "RBBP8NL": {
+      "score": 0.29594018162626756,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 7.34935,
+        "ratio_vs_mean": 5.296161090477534
+      },
+      "druggable": false
+    },
+    "CDH3": {
+      "score": 0.3320224226198869,
+      "n_interactions": 1,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 16.4474,
+        "ratio_vs_mean": 3.095003963945141
+      },
+      "druggable": false
+    },
+    "DNAH11": {
+      "score": 0.3635912205829647,
+      "n_interactions": 1,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 0.746792,
+        "ratio_vs_mean": 1.6634349029546125
+      },
+      "druggable": false
+    },
+    "CDC42EP3": {
+      "score": 0.33505224814337026,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 34.5403,
+        "ratio_vs_mean": 1.7673264116456855
+      },
+      "druggable": false
+    },
+    "SCN5A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 6,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 0.987094,
+        "ratio_vs_mean": 0.510429700375732
+      },
+      "druggable": false
+    },
+    "L3MBTL3": {
+      "score": 0.47898888011831303,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 7.87793,
+        "ratio_vs_mean": 1.3344640998299753
+      },
+      "druggable": false
+    },
+    "TEX11": {
+      "score": 0.38483304957910264,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.0247898,
+        "ratio_vs_mean": 0.0603464959821201
+      },
+      "druggable": false
+    },
+    "MLH1": {
+      "score": 0.37210628604535784,
+      "n_interactions": 25,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 24.8242,
+        "ratio_vs_mean": 1.2129720488003053
+      },
+      "druggable": false
+    },
+    "KIAA0513": {
+      "score": 0.3444309050373795,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 15.1568,
+        "ratio_vs_mean": 0.6416950575982175
+      },
+      "druggable": false
+    },
+    "CDKN2C": {
+      "score": 0.32504050506017595,
+      "n_interactions": 6,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 8.6526,
+        "ratio_vs_mean": 0.7970626731723394
+      },
+      "druggable": false
+    },
+    "TPD52": {
+      "score": 0.44339578109935596,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 32.817,
+        "ratio_vs_mean": 2.218453276362679
+      },
+      "druggable": false
+    },
+    "SCN3A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 4,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.290247,
+        "ratio_vs_mean": 0.1290777138791518
+      },
+      "druggable": false
+    },
+    "ENSG00000288529": {
+      "score": 0.43735854306560495,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "AR": {
+      "score": 0.7566339353583645,
+      "n_interactions": 31,
+      "n_pathways": 32,
+      "selectivity": {
+        "prostate_tpm": 21.0523,
+        "ratio_vs_mean": 3.35695292578576
+      },
+      "druggable": true
+    },
+    "SCN8A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 6,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 1.00661,
+        "ratio_vs_mean": 0.3326132884138422
+      },
+      "druggable": false
+    },
+    "KLF7": {
+      "score": 0.47800087198732816,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 9.13519,
+        "ratio_vs_mean": 0.7851057398519272
+      },
+      "druggable": false
+    },
+    "GMDS": {
+      "score": 0.34004768962900195,
+      "n_interactions": 0,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 13.6583,
+        "ratio_vs_mean": 1.236523729542615
+      },
+      "druggable": false
+    },
+    "EXPH5": {
+      "score": 0.40130963280805393,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 2.57109,
+        "ratio_vs_mean": 0.77617828259239
+      },
+      "druggable": false
+    },
+    "XPC": {
+      "score": 0.37002489600532784,
+      "n_interactions": 12,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 38.7994,
+        "ratio_vs_mean": 1.2495908860523868
+      },
+      "druggable": false
+    },
+    "TBPL1": {
+      "score": 0.5050060183065961,
+      "n_interactions": 0,
+      "n_pathways": 6,
+      "selectivity": {
+        "prostate_tpm": 16.4107,
+        "ratio_vs_mean": 1.3266006184116563
+      },
+      "druggable": false
+    },
+    "HNF1A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 3,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.0388348,
+        "ratio_vs_mean": 0.0710537166178231
+      },
+      "druggable": false
+    },
+    "LRRC34": {
+      "score": 0.34600177918585834,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.74453,
+        "ratio_vs_mean": 0.8255473187435999
+      },
+      "druggable": false
+    },
+    "FANCG": {
+      "score": 0.37002489600532784,
+      "n_interactions": 13,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 12.8327,
+        "ratio_vs_mean": 1.1748517758786006
+      },
+      "druggable": false
+    },
+    "VAMP8": {
+      "score": 0.31126859415496977,
+      "n_interactions": 1,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 133.859,
+        "ratio_vs_mean": 1.874904263717904
+      },
+      "druggable": false
+    },
+    "HMGA2": {
+      "score": 0.2954776977568519,
+      "n_interactions": 5,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 0.0356072,
+        "ratio_vs_mean": 0.1195669046191658
+      },
+      "druggable": false
+    },
+    "FANCD2": {
+      "score": 0.3709499582453412,
+      "n_interactions": 28,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 2.49922,
+        "ratio_vs_mean": 0.9929347934591946
+      },
+      "druggable": false
+    },
+    "FBXO11": {
+      "score": 0.37002489600532784,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 18.2904,
+        "ratio_vs_mean": 0.825056191954761
+      },
+      "druggable": false
+    },
+    "MDH1": {
+      "score": 0.44224992206207137,
+      "n_interactions": 0,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 66.8549,
+        "ratio_vs_mean": 0.550648719637202
+      },
+      "druggable": false
+    },
+    "DIS3L": {
+      "score": 0.2956281923407817,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 15.8189,
+        "ratio_vs_mean": 1.0809342552541958
+      },
+      "druggable": false
+    },
+    "EIF3E": {
+      "score": 0.31965166524073735,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 145.047,
+        "ratio_vs_mean": 1.0951943365615595
+      },
+      "druggable": false
+    },
+    "TBL1XR1": {
+      "score": 0.3230627312999893,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 34.8025,
+        "ratio_vs_mean": 1.508928921411698
+      },
+      "druggable": false
+    },
+    "ZDHHC7": {
+      "score": 0.5003898808803455,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 59.903,
+        "ratio_vs_mean": 1.4405829604041558
+      },
+      "druggable": false
+    },
+    "FERMT2": {
+      "score": 0.4977657132175178,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 50.8797,
+        "ratio_vs_mean": 0.8317376726625875
+      },
+      "druggable": false
+    },
+    "UBE2E2": {
+      "score": 0.4220235657730668,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 17.0745,
+        "ratio_vs_mean": 0.9584113174605148
+      },
+      "druggable": false
+    },
+    "ANO7": {
+      "score": 0.5621420031912984,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 93.6592,
+        "ratio_vs_mean": 57.12562283416156
+      },
+      "druggable": false
+    },
+    "KCNQ3": {
+      "score": 0.3254663575801752,
+      "n_interactions": 4,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 0.635368,
+        "ratio_vs_mean": 0.213731162673288
+      },
+      "druggable": false
+    },
+    "TUBA1B": {
+      "score": 0.299704853785374,
+      "n_interactions": 12,
+      "n_pathways": 14,
+      "selectivity": {
+        "prostate_tpm": 108.464,
+        "ratio_vs_mean": 0.4421845372356282
+      },
+      "druggable": false
+    },
+    "TOR1B": {
+      "score": 0.36090269091612137,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 19.8602,
+        "ratio_vs_mean": 1.2544399767036796
+      },
+      "druggable": false
+    },
+    "VGLL3": {
+      "score": 0.3611982180151566,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 7.38873,
+        "ratio_vs_mean": 0.9456655234427944
+      },
+      "druggable": false
+    },
+    "TUBB8": {
+      "score": 0.29914981644136596,
+      "n_interactions": 6,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 0.13407,
+        "ratio_vs_mean": 0.9704169312718554
+      },
+      "druggable": false
+    },
+    "TUBB": {
+      "score": 0.30191729430940584,
+      "n_interactions": 11,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 183.726,
+        "ratio_vs_mean": 0.7715011664528719
+      },
+      "druggable": false
+    },
+    "TUBB6": {
+      "score": 0.29914981644136596,
+      "n_interactions": 7,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 59.4776,
+        "ratio_vs_mean": 0.9154528674972612
+      },
+      "druggable": false
+    },
+    "MECOM": {
+      "score": 0.4442496545639776,
+      "n_interactions": 2,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 6.46176,
+        "ratio_vs_mean": 1.1053826490404803
+      },
+      "druggable": false
+    },
+    "NTRK1": {
+      "score": 0.3725343224707846,
+      "n_interactions": 10,
+      "n_pathways": 11,
+      "selectivity": {
+        "prostate_tpm": 5.67394,
+        "ratio_vs_mean": 4.734135912456051
+      },
+      "druggable": false
+    },
+    "POLI": {
+      "score": 0.43847113009543953,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 16.6864,
+        "ratio_vs_mean": 1.5731977814746287
+      },
+      "druggable": false
+    },
+    "BUB1B": {
+      "score": 0.3703949209013332,
+      "n_interactions": 12,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 0.535068,
+        "ratio_vs_mean": 0.1644312480666335
+      },
+      "druggable": false
+    },
+    "PEX14": {
+      "score": 0.435491674081652,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 39.7563,
+        "ratio_vs_mean": 1.7850492372975153
+      },
+      "druggable": false
+    },
+    "FDPS": {
+      "score": 0.5896950760964299,
+      "n_interactions": 2,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 49.3236,
+        "ratio_vs_mean": 0.8806711324445541
+      },
+      "druggable": false
+    },
+    "WDPCP": {
+      "score": 0.46454033545801743,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.19034,
+        "ratio_vs_mean": 0.8974326800505663
+      },
+      "druggable": false
+    },
+    "MEGF11": {
+      "score": 0.3168129706271737,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.160585,
+        "ratio_vs_mean": 0.0705812822860054
+      },
+      "druggable": false
+    },
+    "TMPRSS2": {
+      "score": 0.6160737322983304,
+      "n_interactions": 5,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 178.073,
+        "ratio_vs_mean": 18.666546446901172
+      },
+      "druggable": true
+    },
+    "ETNK1": {
+      "score": 0.3221238578716282,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 16.2192,
+        "ratio_vs_mean": 1.0362698720045618
+      },
+      "druggable": false
+    },
+    "NKX3-1": {
+      "score": 0.5323235196739166,
+      "n_interactions": 8,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 250.549,
+        "ratio_vs_mean": 72.78452747779686
+      },
+      "druggable": false
+    },
+    "MBNL1": {
+      "score": 0.4489326698869379,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 42.0113,
+        "ratio_vs_mean": 0.8137155833163995
+      },
+      "druggable": false
+    },
+    "WT1": {
+      "score": 0.37506648521340047,
+      "n_interactions": 6,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.299069,
+        "ratio_vs_mean": 0.0385319365775713
+      },
+      "druggable": false
+    },
+    "RECQL4": {
+      "score": 0.37108871758134315,
+      "n_interactions": 11,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 10.3647,
+        "ratio_vs_mean": 1.447292521238814
+      },
+      "druggable": false
+    },
+    "IGF1R": {
+      "score": 0.46230552900760075,
+      "n_interactions": 21,
+      "n_pathways": 32,
+      "selectivity": {
+        "prostate_tpm": 23.4632,
+        "ratio_vs_mean": 1.5932892573367072
+      },
+      "druggable": false
+    },
+    "RASSF6": {
+      "score": 0.5343259243041002,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 5.47354,
+        "ratio_vs_mean": 3.506192062859488
+      },
+      "druggable": false
+    },
+    "CEP68": {
+      "score": 0.30789631692514097,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 12.5631,
+        "ratio_vs_mean": 1.0017901224675525
+      },
+      "druggable": false
+    },
+    "WASHC2C": {
+      "score": 0.319264050053955,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 24.6618,
+        "ratio_vs_mean": 1.139959710314732
+      },
+      "druggable": false
+    },
+    "GDF7": {
+      "score": 0.5176669254331986,
+      "n_interactions": 1,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 5.95242,
+        "ratio_vs_mean": 2.16272070292433
+      },
+      "druggable": false
+    },
+    "ERCC5": {
+      "score": 0.37002489600532784,
+      "n_interactions": 16,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 2.25222,
+        "ratio_vs_mean": 1.2106129389322402
+      },
+      "druggable": false
+    },
+    "ITGA6": {
+      "score": 0.5285340128654318,
+      "n_interactions": 6,
+      "n_pathways": 16,
+      "selectivity": {
+        "prostate_tpm": 37.2438,
+        "ratio_vs_mean": 1.1951731575987852
+      },
+      "druggable": false
+    },
+    "TG": {
+      "score": 0.2851690223736683,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 2.24916,
+        "ratio_vs_mean": 0.0163070876661378
+      },
+      "druggable": false
+    },
+    "RASA1": {
+      "score": 0.3301157732194695,
+      "n_interactions": 7,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 18.3666,
+        "ratio_vs_mean": 0.9094686334385896
+      },
+      "druggable": false
+    },
+    "MBD2": {
+      "score": 0.3974500886256352,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 30.1665,
+        "ratio_vs_mean": 1.0883395667054974
+      },
+      "druggable": false
+    },
+    "MDFIC2": {
+      "score": 0.33093963235792406,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "SPOP": {
+      "score": 0.372533510623204,
+      "n_interactions": 8,
+      "n_pathways": 11,
+      "selectivity": {
+        "prostate_tpm": 49.7782,
+        "ratio_vs_mean": 1.4735654346692997
+      },
+      "druggable": false
+    },
+    "HAUS6": {
+      "score": 0.4263336906053721,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 5.38827,
+        "ratio_vs_mean": 0.9720960146104406
+      },
+      "druggable": false
+    },
+    "ADNP": {
+      "score": 0.4796327080645267,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 39.5359,
+        "ratio_vs_mean": 1.3225643063591928
+      },
+      "druggable": false
+    },
+    "TLE4": {
+      "score": 0.31835578691462346,
+      "n_interactions": 2,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 5.84748,
+        "ratio_vs_mean": 0.4818935708498004
+      },
+      "druggable": false
+    },
+    "TMCC1": {
+      "score": 0.2903367058920136,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 11.019,
+        "ratio_vs_mean": 1.2155626590477095
+      },
+      "druggable": false
+    },
+    "CHSY1": {
+      "score": 0.32176034953808014,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 22.1216,
+        "ratio_vs_mean": 1.3009646088986784
+      },
+      "druggable": false
+    },
+    "NCEH1": {
+      "score": 0.3817787585239631,
+      "n_interactions": 1,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 5.14385,
+        "ratio_vs_mean": 0.72552217698367
+      },
+      "druggable": false
+    },
+    "VPS53": {
+      "score": 0.5436091381656846,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 7.47581,
+        "ratio_vs_mean": 0.997509494303418
+      },
+      "druggable": false
+    },
+    "EBF2": {
+      "score": 0.4972972916127813,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.479837,
+        "ratio_vs_mean": 0.1182592451833306
+      },
+      "druggable": false
+    },
+    "BRCA1": {
+      "score": 0.4170040372815343,
+      "n_interactions": 62,
+      "n_pathways": 82,
+      "selectivity": {
+        "prostate_tpm": 1.38084,
+        "ratio_vs_mean": 0.6587996812395106
+      },
+      "druggable": false
+    },
+    "MITF": {
+      "score": 0.32964066235817235,
+      "n_interactions": 0,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 8.13244,
+        "ratio_vs_mean": 0.771066535699036
+      },
+      "druggable": false
+    },
+    "ESR1": {
+      "score": 0.2998720193551406,
+      "n_interactions": 37,
+      "n_pathways": 10,
+      "selectivity": {
+        "prostate_tpm": 5.07228,
+        "ratio_vs_mean": 0.7707085215307081
+      },
+      "druggable": false
+    },
+    "JADE2": {
+      "score": 0.3927462205884743,
+      "n_interactions": 0,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 20.842,
+        "ratio_vs_mean": 1.213187002723917
+      },
+      "druggable": false
+    },
+    "RUVBL1": {
+      "score": 0.33024375848244575,
+      "n_interactions": 6,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 15.4761,
+        "ratio_vs_mean": 0.936017652750274
+      },
+      "druggable": false
+    },
+    "TUBA3E": {
+      "score": 0.29914981644136596,
+      "n_interactions": 9,
+      "n_pathways": 14,
+      "selectivity": {
+        "prostate_tpm": 0.157289,
+        "ratio_vs_mean": 0.0237227555368778
+      },
+      "druggable": false
+    },
+    "MYC": {
+      "score": 0.44965230130752765,
+      "n_interactions": 49,
+      "n_pathways": 61,
+      "selectivity": {
+        "prostate_tpm": 39.9892,
+        "ratio_vs_mean": 0.6903284285665909
+      },
+      "druggable": false
+    },
+    "OTX1": {
+      "score": 0.5690024120208821,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.586733,
+        "ratio_vs_mean": 0.4162483420172391
+      },
+      "druggable": false
+    },
+    "RFX6": {
+      "score": 0.5290105998255226,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.143393,
+        "ratio_vs_mean": 1.3627372307226555
+      },
+      "druggable": false
+    },
+    "TSC2": {
+      "score": 0.37002489600532784,
+      "n_interactions": 14,
+      "n_pathways": 15,
+      "selectivity": {
+        "prostate_tpm": 59.4764,
+        "ratio_vs_mean": 1.3649573632008478
+      },
+      "druggable": false
+    },
+    "IRS2": {
+      "score": 0.456062053822636,
+      "n_interactions": 8,
+      "n_pathways": 81,
+      "selectivity": {
+        "prostate_tpm": 24.5358,
+        "ratio_vs_mean": 1.2358639859525968
+      },
+      "druggable": false
+    },
+    "MLPH": {
+      "score": 0.50653829799012,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 139.756,
+        "ratio_vs_mean": 9.289181085124405
+      },
+      "druggable": false
+    },
+    "ERBB4": {
+      "score": 0.38704604122157293,
+      "n_interactions": 11,
+      "n_pathways": 6,
+      "selectivity": {
+        "prostate_tpm": 0.251582,
+        "ratio_vs_mean": 0.1129079573028139
+      },
+      "druggable": false
+    },
+    "RAD50": {
+      "score": 0.37002489600532784,
+      "n_interactions": 13,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 14.8664,
+        "ratio_vs_mean": 1.1579155337467335
+      },
+      "druggable": false
+    },
+    "DNMT3B": {
+      "score": 0.4117808296905121,
+      "n_interactions": 7,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 1.55622,
+        "ratio_vs_mean": 0.8284632763660115
+      },
+      "druggable": false
+    },
+    "PRPH": {
+      "score": 0.3721713718486742,
+      "n_interactions": 0,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 2.17877,
+        "ratio_vs_mean": 0.6819282544227606
+      },
+      "druggable": false
+    },
+    "NR3C1": {
+      "score": 0.5301920903526239,
+      "n_interactions": 12,
+      "n_pathways": 20,
+      "selectivity": {
+        "prostate_tpm": 15.8265,
+        "ratio_vs_mean": 0.9470334125560654
+      },
+      "druggable": true
+    },
+    "HIF1A": {
+      "score": 0.29108767658599194,
+      "n_interactions": 24,
+      "n_pathways": 14,
+      "selectivity": {
+        "prostate_tpm": 47.8773,
+        "ratio_vs_mean": 0.777166793766386
+      },
+      "druggable": false
+    },
+    "BLTP3A": {
+      "score": 0.35187573477524536,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "MOB2": {
+      "score": 0.39403121502853267,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 53.2003,
+        "ratio_vs_mean": 1.2433241576054923
+      },
+      "druggable": false
+    },
+    "AGPAT3": {
+      "score": 0.33153303916587595,
+      "n_interactions": 0,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 21.0166,
+        "ratio_vs_mean": 0.8864602728375681
+      },
+      "druggable": false
+    },
+    "RCCD1": {
+      "score": 0.3556925697962897,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 16.877,
+        "ratio_vs_mean": 1.339696900220467
+      },
+      "druggable": false
+    },
+    "CDKN1B": {
+      "score": 0.5645594415647452,
+      "n_interactions": 17,
+      "n_pathways": 19,
+      "selectivity": {
+        "prostate_tpm": 54.3737,
+        "ratio_vs_mean": 0.8099417609626897
+      },
+      "druggable": false
+    },
+    "TOX3": {
+      "score": 0.4264518909566494,
+      "n_interactions": 5,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 1.91892,
+        "ratio_vs_mean": 1.0125644565476608
+      },
+      "druggable": false
+    },
+    "POU5F1B": {
+      "score": 0.5427817959524789,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.657137,
+        "ratio_vs_mean": 3.109026907436533
+      },
+      "druggable": false
+    },
+    "ZNF652": {
+      "score": 0.4689069250910682,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 15.6494,
+        "ratio_vs_mean": 1.5664155401139703
+      },
+      "druggable": false
+    },
+    "GDNF": {
+      "score": 0.3394929273035667,
+      "n_interactions": 3,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 1.75876,
+        "ratio_vs_mean": 1.428593577749201
+      },
+      "druggable": false
+    },
+    "EHBP1": {
+      "score": 0.42830791449847344,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 15.8272,
+        "ratio_vs_mean": 0.7169306945664832
+      },
+      "druggable": false
+    },
+    "CD274": {
+      "score": 0.2970832013864415,
+      "n_interactions": 11,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 2.23212,
+        "ratio_vs_mean": 0.5802311719493062
+      },
+      "druggable": false
+    },
+    "MCL1": {
+      "score": 0.37519162252357735,
+      "n_interactions": 14,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 149.122,
+        "ratio_vs_mean": 0.8437272365526822
+      },
+      "druggable": true
+    },
+    "SYNE2": {
+      "score": 0.35206288090521337,
+      "n_interactions": 1,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 11.7396,
+        "ratio_vs_mean": 0.7838326331528072
+      },
+      "druggable": false
+    },
+    "KCNA3": {
+      "score": 0.33990038231896386,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.299761,
+        "ratio_vs_mean": 0.3857790373647935
+      },
+      "druggable": false
+    },
+    "IRX4": {
+      "score": 0.5356915192745798,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 12.0269,
+        "ratio_vs_mean": 5.305449782399627
+      },
+      "druggable": false
+    },
+    "GSDMC": {
+      "score": 0.4026600713688259,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.436865,
+        "ratio_vs_mean": 0.1015106840953537
+      },
+      "druggable": false
+    },
+    "TUBB4A": {
+      "score": 0.29914981644136596,
+      "n_interactions": 11,
+      "n_pathways": 12,
+      "selectivity": {
+        "prostate_tpm": 0.449912,
+        "ratio_vs_mean": 0.0053938538354773
+      },
+      "druggable": false
+    },
+    "FGF10": {
+      "score": 0.44568672867274833,
+      "n_interactions": 13,
+      "n_pathways": 11,
+      "selectivity": {
+        "prostate_tpm": 4.53533,
+        "ratio_vs_mean": 1.3787204382466451
+      },
+      "druggable": false
+    },
+    "ABHD12": {
+      "score": 0.32892845575954455,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 41.4674,
+        "ratio_vs_mean": 0.9642541141771088
+      },
+      "druggable": false
+    },
+    "CLCNKB": {
+      "score": 0.36666046232132954,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.807271,
+        "ratio_vs_mean": 0.1130667988597674
+      },
+      "druggable": false
+    },
+    "BCL2": {
+      "score": 0.5297057673808374,
+      "n_interactions": 29,
+      "n_pathways": 43,
+      "selectivity": {
+        "prostate_tpm": 7.71484,
+        "ratio_vs_mean": 1.0563743742101974
+      },
+      "druggable": true
+    },
+    "ZFP36L1": {
+      "score": 0.336067294811533,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 257.599,
+        "ratio_vs_mean": 1.186041050017246
+      },
+      "druggable": false
+    },
+    "GAS7": {
+      "score": 0.4064155334868174,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 11.5616,
+        "ratio_vs_mean": 0.2972231311400084
+      },
+      "druggable": false
+    },
+    "PYGB": {
+      "score": 0.2975961973471986,
+      "n_interactions": 1,
+      "n_pathways": 6,
+      "selectivity": {
+        "prostate_tpm": 213.798,
+        "ratio_vs_mean": 2.0091307474817364
+      },
+      "druggable": false
+    },
+    "SLC22A3": {
+      "score": 0.5397321327792554,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 42.6814,
+        "ratio_vs_mean": 2.221473341112532
+      },
+      "druggable": false
+    },
+    "RAB29": {
+      "score": 0.48782434757237836,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 19.2033,
+        "ratio_vs_mean": 1.2372158119963943
+      },
+      "druggable": false
+    },
+    "SCN9A": {
+      "score": 0.3705799333493358,
+      "n_interactions": 6,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.571572,
+        "ratio_vs_mean": 0.3695793278796251
+      },
+      "druggable": false
+    },
+    "RHOD": {
+      "score": 0.32437494968220654,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 29.6835,
+        "ratio_vs_mean": 1.3472555399219577
+      },
+      "druggable": false
+    },
+    "KNL1": {
+      "score": 0.31236170069067376,
+      "n_interactions": 5,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.151557,
+        "ratio_vs_mean": 0.1358129802636569
+      },
+      "druggable": false
+    },
+    "BIK": {
+      "score": 0.5357273632938693,
+      "n_interactions": 4,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 21.607,
+        "ratio_vs_mean": 7.977542068194826
+      },
+      "druggable": false
+    },
+    "FAM111B": {
+      "score": 0.336582220693687,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 0.505117,
+        "ratio_vs_mean": 0.358136320181319
+      },
+      "druggable": false
+    },
+    "ST3GAL1": {
+      "score": 0.32629108361885295,
+      "n_interactions": 0,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 12.3948,
+        "ratio_vs_mean": 0.7302015307196266
+      },
+      "druggable": false
+    },
+    "TSEN15": {
+      "score": 0.38288810702728326,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 24.1272,
+        "ratio_vs_mean": 1.1147398156240589
+      },
+      "druggable": false
+    },
+    "STAT3": {
+      "score": 0.285651864364743,
+      "n_interactions": 31,
+      "n_pathways": 145,
+      "selectivity": {
+        "prostate_tpm": 93.6048,
+        "ratio_vs_mean": 1.2104971827355857
+      },
+      "druggable": false
+    },
+    "SMARCA4": {
+      "score": 0.37348874017071104,
+      "n_interactions": 23,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 40.2452,
+        "ratio_vs_mean": 1.1827631603704378
+      },
+      "druggable": false
+    },
+    "SMAD2": {
+      "score": 0.48604837599860035,
+      "n_interactions": 17,
+      "n_pathways": 20,
+      "selectivity": {
+        "prostate_tpm": 4.72745,
+        "ratio_vs_mean": 1.063588377391042
+      },
+      "druggable": false
+    },
+    "ERCC2": {
+      "score": 0.37002489600532784,
+      "n_interactions": 14,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 13.6188,
+        "ratio_vs_mean": 1.2228780248385671
+      },
+      "druggable": false
+    },
+    "CERS2": {
+      "score": 0.3773247421354955,
+      "n_interactions": 1,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 51.7187,
+        "ratio_vs_mean": 0.8891794671178345
+      },
+      "druggable": false
+    },
+    "FANCF": {
+      "score": 0.37002489600532784,
+      "n_interactions": 11,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 6.01145,
+        "ratio_vs_mean": 1.3162560167060993
+      },
+      "druggable": false
+    },
+    "RPS6KL1": {
+      "score": 0.3067986956630974,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 3.35643,
+        "ratio_vs_mean": 0.4982100107293944
+      },
+      "druggable": false
+    },
+    "LMO4": {
+      "score": 0.2972336570716256,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 33.1134,
+        "ratio_vs_mean": 1.1798738177538532
+      },
+      "druggable": false
+    },
+    "MET": {
+      "score": 0.3919397223165532,
+      "n_interactions": 12,
+      "n_pathways": 89,
+      "selectivity": {
+        "prostate_tpm": 7.52115,
+        "ratio_vs_mean": 1.2857351460449595
+      },
+      "druggable": false
+    },
+    "SRSF10": {
+      "score": 0.3193265138335163,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 37.2139,
+        "ratio_vs_mean": 1.3072891935911222
+      },
+      "druggable": false
+    },
+    "MDM4": {
+      "score": 0.5620148469770002,
+      "n_interactions": 8,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 20.5355,
+        "ratio_vs_mean": 1.3551760920041471
+      },
+      "druggable": false
+    },
+    "ALOX5": {
+      "score": 0.40251205941364077,
+      "n_interactions": 0,
+      "n_pathways": 7,
+      "selectivity": {
+        "prostate_tpm": 16.0642,
+        "ratio_vs_mean": 0.7729637355884346
+      },
+      "druggable": false
+    },
+    "PIK3R3": {
+      "score": 0.33529477233822247,
+      "n_interactions": 18,
+      "n_pathways": 106,
+      "selectivity": {
+        "prostate_tpm": 16.7064,
+        "ratio_vs_mean": 1.15218552698316
+      },
+      "druggable": false
+    },
+    "SACK1F": {
+      "score": 0.4708504532908301,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "ADRA1B": {
+      "score": 0.46253112000665986,
+      "n_interactions": 2,
+      "n_pathways": 8,
+      "selectivity": {
+        "prostate_tpm": 0.728991,
+        "ratio_vs_mean": 0.1851354780965128
+      },
+      "druggable": false
+    },
+    "LMNA": {
+      "score": 0.3134665954060151,
+      "n_interactions": 5,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 105.189,
+        "ratio_vs_mean": 0.9288215101407298
+      },
+      "druggable": false
+    },
+    "ADCY8": {
+      "score": 0.38990374747190615,
+      "n_interactions": 2,
+      "n_pathways": 89,
+      "selectivity": {
+        "prostate_tpm": 0.0117792,
+        "ratio_vs_mean": 0.0157564066856023
+      },
+      "druggable": false
+    },
+    "SLC25A37": {
+      "score": 0.3001902416573623,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 71.3822,
+        "ratio_vs_mean": 2.030481303906108
+      },
+      "druggable": false
+    },
+    "SCN2A": {
+      "score": 0.37002489600532784,
+      "n_interactions": 10,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 0.0986457,
+        "ratio_vs_mean": 0.0252833515012966
+      },
+      "druggable": false
+    },
+    "TFAP4": {
+      "score": 0.3896234018179604,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 11.4079,
+        "ratio_vs_mean": 1.2424463962735603
+      },
+      "druggable": false
+    },
+    "RNASEH2B": {
+      "score": 0.3182259365301442,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 9.77268,
+        "ratio_vs_mean": 1.345148914959075
+      },
+      "druggable": false
+    },
+    "PDSS2": {
+      "score": 0.3510771888439289,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 10.6127,
+        "ratio_vs_mean": 1.3839224590795067
+      },
+      "druggable": false
+    },
+    "TASOR2": {
+      "score": 0.452995399677667,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "ZFP36L2": {
+      "score": 0.4010012226370083,
+      "n_interactions": 1,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 254.389,
+        "ratio_vs_mean": 1.5186520864515292
+      },
+      "druggable": false
+    },
+    "NEDD9": {
+      "score": 0.5048810057953916,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 17.1748,
+        "ratio_vs_mean": 1.112308914460916
+      },
+      "druggable": false
+    },
+    "PELI1": {
+      "score": 0.3116624853565879,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 16.116,
+        "ratio_vs_mean": 0.7063929755274446
+      },
+      "druggable": false
+    },
+    "FOXP1": {
+      "score": 0.3734030329343056,
+      "n_interactions": 4,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 18.6014,
+        "ratio_vs_mean": 1.7722585964093651
+      },
+      "druggable": false
+    },
+    "HOXD11": {
+      "score": 0.3421182314848064,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 6.30082,
+        "ratio_vs_mean": 6.516780994363244
+      },
+      "druggable": false
+    },
+    "TERT": {
+      "score": 0.6206100280504917,
+      "n_interactions": 14,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 0.0144912,
+        "ratio_vs_mean": 0.1664674036309332
+      },
+      "druggable": false
+    },
+    "RFC5": {
+      "score": 0.31018752163523794,
+      "n_interactions": 6,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 10.091,
+        "ratio_vs_mean": 1.1840301928108323
+      },
+      "druggable": false
+    },
+    "SNTB1": {
+      "score": 0.4527644410341856,
+      "n_interactions": 1,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 4.35502,
+        "ratio_vs_mean": 0.4460557138569899
+      },
+      "druggable": false
+    },
+    "TUBA4A": {
+      "score": 0.29914981644136596,
+      "n_interactions": 12,
+      "n_pathways": 14,
+      "selectivity": {
+        "prostate_tpm": 31.307,
+        "ratio_vs_mean": 0.5140500831713518
+      },
+      "druggable": false
+    },
+    "FAM111A": {
+      "score": 0.45575246452154594,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 44.3158,
+        "ratio_vs_mean": 2.670394912363898
+      },
+      "druggable": false
+    },
+    "SPEN": {
+      "score": 0.31287324153667573,
+      "n_interactions": 1,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 23.6944,
+        "ratio_vs_mean": 1.01956568947872
+      },
+      "druggable": false
+    },
+    "CDH1": {
+      "score": 0.3879507636929453,
+      "n_interactions": 28,
+      "n_pathways": 15,
+      "selectivity": {
+        "prostate_tpm": 57.7253,
+        "ratio_vs_mean": 2.720336369939047
+      },
+      "druggable": false
+    },
+    "ETV3": {
+      "score": 0.41636405882906496,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 9.78071,
+        "ratio_vs_mean": 1.1026237107444692
+      },
+      "druggable": false
+    },
+    "ITGB8": {
+      "score": 0.4342171637624452,
+      "n_interactions": 5,
+      "n_pathways": 11,
+      "selectivity": {
+        "prostate_tpm": 9.41411,
+        "ratio_vs_mean": 1.037232215817442
+      },
+      "druggable": false
+    },
+    "BCL2L11": {
+      "score": 0.5331749759225762,
+      "n_interactions": 12,
+      "n_pathways": 10,
+      "selectivity": {
+        "prostate_tpm": 11.206,
+        "ratio_vs_mean": 1.5339451501481756
+      },
+      "druggable": false
+    },
+    "NSMCE2": {
+      "score": 0.2863321994672065,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 10.4138,
+        "ratio_vs_mean": 1.1003945882378343
+      },
+      "druggable": false
+    },
+    "SWAP70": {
+      "score": 0.29521433288935583,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 23.2975,
+        "ratio_vs_mean": 0.8786898709643481
+      },
+      "druggable": false
+    },
+    "WDR11": {
+      "score": 0.42920308816452346,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 20.1257,
+        "ratio_vs_mean": 1.1779915204072258
+      },
+      "druggable": false
+    },
+    "TBX3": {
+      "score": 0.45509922314852463,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 150.373,
+        "ratio_vs_mean": 5.7207522251815215
+      },
+      "druggable": false
+    },
+    "ZBTB42": {
+      "score": 0.3679674543863636,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 11.7531,
+        "ratio_vs_mean": 3.3687000086994248
+      },
+      "druggable": false
+    },
+    "RHOBTB2": {
+      "score": 0.3160191597793534,
+      "n_interactions": 0,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 14.1314,
+        "ratio_vs_mean": 0.7617363853787027
+      },
+      "druggable": false
+    },
+    "LAMC1": {
+      "score": 0.36579806668603343,
+      "n_interactions": 4,
+      "n_pathways": 10,
+      "selectivity": {
+        "prostate_tpm": 42.1655,
+        "ratio_vs_mean": 0.5700081489843372
+      },
+      "druggable": false
+    },
+    "BLM": {
+      "score": 0.37002489600532784,
+      "n_interactions": 26,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 0.422547,
+        "ratio_vs_mean": 0.2712975783063341
+      },
+      "druggable": false
+    },
+    "MGLL": {
+      "score": 0.38040838349878464,
+      "n_interactions": 3,
+      "n_pathways": 5,
+      "selectivity": {
+        "prostate_tpm": 20.8537,
+        "ratio_vs_mean": 0.5825792940194942
+      },
+      "druggable": false
+    },
+    "NIBAN2": {
+      "score": 0.3192030708652109,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "MAP2K2": {
+      "score": 0.37002489600532784,
+      "n_interactions": 4,
+      "n_pathways": 80,
+      "selectivity": {
+        "prostate_tpm": 114.316,
+        "ratio_vs_mean": 1.3166263812833732
+      },
+      "druggable": false
+    },
+    "SH3RF1": {
+      "score": 0.4322734412962063,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 16.8583,
+        "ratio_vs_mean": 1.7181251173665693
+      },
+      "druggable": false
+    },
+    "DYNLL2": {
+      "score": 0.2964779857157023,
+      "n_interactions": 2,
+      "n_pathways": 4,
+      "selectivity": {
+        "prostate_tpm": 48.5005,
+        "ratio_vs_mean": 0.8993240561694757
+      },
+      "druggable": false
+    },
+    "ATM": {
+      "score": 0.5871633507310647,
+      "n_interactions": 51,
+      "n_pathways": 118,
+      "selectivity": {
+        "prostate_tpm": 7.07383,
+        "ratio_vs_mean": 0.95139332119808
+      },
+      "druggable": false
+    },
+    "SMIM38": {
+      "score": 0.3073434768872035,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {},
+      "druggable": false
+    },
+    "NRG1": {
+      "score": 0.37002489600532784,
+      "n_interactions": 5,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 1.59286,
+        "ratio_vs_mean": 1.5195519377692852
+      },
+      "druggable": false
+    },
+    "PLAG1": {
+      "score": 0.2879123124422806,
+      "n_interactions": 1,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 2.25473,
+        "ratio_vs_mean": 1.0050304991468717
+      },
+      "druggable": false
+    },
+    "BRCA2": {
+      "score": 0.7357390550967855,
+      "n_interactions": 42,
+      "n_pathways": 31,
+      "selectivity": {
+        "prostate_tpm": 0.271968,
+        "ratio_vs_mean": 0.4245849529278568
+      },
+      "druggable": false
+    },
+    "MTOR": {
+      "score": 0.3749789806284852,
+      "n_interactions": 26,
+      "n_pathways": 109,
+      "selectivity": {
+        "prostate_tpm": 16.5626,
+        "ratio_vs_mean": 1.1916528062995295
+      },
+      "druggable": true
+    },
+    "KDSR": {
+      "score": 0.4162337562455563,
+      "n_interactions": 1,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 23.9987,
+        "ratio_vs_mean": 1.050024454971343
+      },
+      "druggable": false
+    },
+    "ZMIZ1": {
+      "score": 0.5430549456126217,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 35.4914,
+        "ratio_vs_mean": 1.1250403397606226
+      },
+      "druggable": false
+    },
+    "KLF5": {
+      "score": 0.44037288712947087,
+      "n_interactions": 2,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 26.0614,
+        "ratio_vs_mean": 0.8087919047688467
+      },
+      "druggable": false
+    },
+    "AKT2": {
+      "score": 0.37205489369869044,
+      "n_interactions": 16,
+      "n_pathways": 103,
+      "selectivity": {
+        "prostate_tpm": 48.7415,
+        "ratio_vs_mean": 1.343609871067342
+      },
+      "druggable": false
+    },
+    "MEIS1": {
+      "score": 0.4987550208717104,
+      "n_interactions": 2,
+      "n_pathways": 2,
+      "selectivity": {
+        "prostate_tpm": 32.094,
+        "ratio_vs_mean": 1.4702250773177985
+      },
+      "druggable": false
+    },
+    "TP63": {
+      "score": 0.28660564818692824,
+      "n_interactions": 3,
+      "n_pathways": 1,
+      "selectivity": {
+        "prostate_tpm": 17.4629,
+        "ratio_vs_mean": 2.0153760004239785
+      },
+      "druggable": false
+    },
+    "THADA": {
+      "score": 0.4892029294858916,
+      "n_interactions": 0,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 8.79979,
+        "ratio_vs_mean": 1.622926707156744
+      },
+      "druggable": false
+    },
+    "TET2": {
+      "score": 0.6206157839290085,
+      "n_interactions": 5,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 5.65195,
+        "ratio_vs_mean": 1.1846161498470598
+      },
+      "druggable": false
+    },
+    "HGF": {
+      "score": 0.4013125687028477,
+      "n_interactions": 15,
+      "n_pathways": 17,
+      "selectivity": {
+        "prostate_tpm": 5.35997,
+        "ratio_vs_mean": 1.7933101129135562
+      },
+      "druggable": false
+    },
+    "SRD5A2": {
+      "score": 0.5987276036386017,
+      "n_interactions": 4,
+      "n_pathways": 3,
+      "selectivity": {
+        "prostate_tpm": 25.7462,
+        "ratio_vs_mean": 63.38141725180505
+      },
+      "druggable": false
+    },
+    "TACC1": {
+      "score": 0.3226691376852842,
+      "n_interactions": 2,
+      "n_pathways": 0,
+      "selectivity": {
+        "prostate_tpm": 49.8736,
+        "ratio_vs_mean": 0.959187855765281
+      },
+      "druggable": false
+    }
+  },
+  "gdsc_target_to_drugs": {
+    "BCL2": [
+      "Navitoclax",
+      "Obatoclax Mesylate",
+      "TW 37",
+      "Sabutoclax",
+      "Venetoclax",
+      "ABT737"
+    ],
+    "MTOR": [
+      "Temsirolimus"
+    ],
+    "SRC": [
+      "Bosutinib",
+      "Dasatinib"
+    ],
+    "CHEK2": [
+      "AZD7762",
+      "MK-8776"
+    ],
+    "NTRK1": [
+      "GW441756",
+      "Lestaurtinib",
+      "AZD1332"
+    ],
+    "ATM": [
+      "KU-55933"
+    ],
+    "ERBB2": [
+      "Afatinib",
+      "Sapitinib",
+      "Lapatinib"
+    ],
+    "PIM1": [
+      "SL0101",
+      "AZD1208"
+    ],
+    "MDM2": [
+      "Nutlin-3a (-)",
+      "Serdemetan"
+    ],
+    "FGFR1": [
+      "PD173074",
+      "AZD4547",
+      "Foretinib"
+    ],
+    "FGFR2": [
+      "PD173074",
+      "AZD4547"
+    ],
+    "FGFR3": [
+      "PD173074",
+      "AZD4547"
+    ],
+    "AKT1": [
+      "MK-2206",
+      "Uprosertib",
+      "GSK2110183B",
+      "Afuresertib",
+      "AZD5363",
+      "Ipatasertib",
+      "AT13148"
+    ],
+    "AKT2": [
+      "MK-2206",
+      "Uprosertib",
+      "GSK2110183B",
+      "Afuresertib",
+      "AZD5363"
+    ],
+    "MCL1": [
+      "Obatoclax Mesylate",
+      "TW 37",
+      "AZD5991",
+      "Sabutoclax",
+      "UMI-77",
+      "MIM1"
+    ],
+    "MET": [
+      "Crizotinib",
+      "Savolitinib",
+      "Foretinib"
+    ],
+    "IGF1R": [
+      "BMS-536924",
+      "GSK1904529A",
+      "Linsitinib",
+      "NVP-ADW742",
+      "BMS-754807"
+    ],
+    "ESR1": [
+      "Tamoxifen",
+      "GDC0810"
+    ],
+    "AR": [
+      "Bicalutamide"
+    ],
+    "JAK1": [
+      "Ruxolitinib",
+      "JAK1_8709",
+      "JAK_8517",
+      "GSK2276186C"
+    ],
+    "ERBB3": [
+      "Sapitinib"
+    ],
+    "ATR": [
+      "VE-822",
+      "AZD6738",
+      "VE821"
+    ],
+    "SMARCA4": [
+      "PFI3"
+    ],
+    "EZH2": [
+      "GSK343"
+    ],
+    "ADRA1A": [
+      "LMB_AB1"
+    ],
+    "TP53": [
+      "MIRA-1"
+    ],
+    "TERT": [
+      "BIBR-1532"
+    ]
+  }
+}

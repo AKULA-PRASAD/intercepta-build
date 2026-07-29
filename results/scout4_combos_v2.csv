@@ -1,0 +1,31 @@
+drug1,drug2,escapes_closed,escapes_remaining,n_closed,n_remaining,strength_closed,strength_remaining,combo_risk
+ATM,EZH2,['pw:NE_diff'],[],1,0,0.2,0.0,0.0
+ATM,AURKA,['pw:NE_diff'],[],1,0,0.2,0.0,0.0
+CDK6,PIK3CA,['pw:PI3K_AKT_mTOR'],[],1,0,0.5,0.0,0.0
+CDK6,AKT1,['pw:PI3K_AKT_mTOR'],[],1,0,0.5,0.0,0.0
+CDK6,MTOR,['pw:PI3K_AKT_mTOR'],[],1,0,0.5,0.0,0.0
+MAP2K1,PIK3CA,['pw:PI3K_AKT_mTOR'],[],1,0,0.6,0.0,0.0
+MAP2K1,AKT1,['pw:PI3K_AKT_mTOR'],[],1,0,0.6,0.0,0.0
+MAP2K1,MTOR,['pw:PI3K_AKT_mTOR'],[],1,0,0.6,0.0,0.0
+CHEK1,PARP1,['pw:HRR'],[],1,0,0.3,0.0,0.0
+CHEK1,ATM,['pw:HRR'],[],1,0,0.3,0.0,0.0
+PARP1,EZH2,['pw:NE_diff'],['pw:immune_evasion'],1,1,0.3,0.2,8.0
+PARP1,AURKA,['pw:NE_diff'],['pw:immune_evasion'],1,1,0.3,0.2,8.0
+AKT1,BRAF,['pw:MAPK_ERK'],['pw:WNT'],1,1,0.7,0.3,12.0
+BRAF,PIK3CA,['pw:PI3K_AKT_mTOR'],['KRAS'],1,1,0.5,0.3,12.0
+BRAF,MTOR,['pw:PI3K_AKT_mTOR'],['KRAS'],1,1,0.5,0.3,12.0
+PTEN,BRAF,['pw:MAPK_ERK'],['pw:WNT'],1,1,0.7,0.4,16.0
+PTEN,MAP2K1,['pw:MAPK_ERK'],['pw:WNT'],1,1,0.7,0.4,16.0
+CDK4,PIK3CA,['pw:PI3K_AKT_mTOR'],['MYC'],1,1,0.5,0.4,16.0
+CDK4,AKT1,['pw:PI3K_AKT_mTOR'],['MYC'],1,1,0.5,0.4,16.0
+CDK4,MTOR,['pw:PI3K_AKT_mTOR'],['MYC'],1,1,0.5,0.4,16.0
+PIK3CA,AR,['AR'],"['pw:MAPK_ERK', 'pw:WNT']",1,2,0.5,1.1,44.0
+MTOR,PIK3CA,['pw:PI3K_AKT_mTOR'],"['pw:MAPK_ERK', 'pw:autophagy']",1,2,0.6,1.2,48.0
+MTOR,AKT1,['pw:PI3K_AKT_mTOR'],"['pw:MAPK_ERK', 'pw:autophagy']",1,2,0.6,1.2,48.0
+pw:AR_signaling,PIK3CA,['pw:PI3K_AKT_mTOR'],"['pw:GR_bypass', 'pw:EMT', 'pw:NE_diff']",1,3,0.8,1.8,72.0
+pw:AR_signaling,AKT1,['pw:PI3K_AKT_mTOR'],"['pw:GR_bypass', 'pw:EMT', 'pw:NE_diff']",1,3,0.8,1.8,72.0
+pw:AR_signaling,MTOR,['pw:PI3K_AKT_mTOR'],"['pw:GR_bypass', 'pw:EMT', 'pw:NE_diff']",1,3,0.8,1.8,72.0
+pw:AR_signaling,EZH2,['pw:NE_diff'],"['pw:GR_bypass', 'pw:EMT', 'pw:PI3K_AKT_mTOR']",1,3,0.5,2.1,84.0
+pw:AR_signaling,AURKA,['pw:NE_diff'],"['pw:GR_bypass', 'pw:EMT', 'pw:PI3K_AKT_mTOR']",1,3,0.5,2.1,84.0
+AR,AKT1,['pw:PI3K_AKT_mTOR'],"['pw:WNT', 'pw:GR_bypass', 'pw:EMT', 'pw:NE_diff', 'pw:steroidogenesis']",1,5,0.8,2.7,108.0
+AR,MTOR,['pw:PI3K_AKT_mTOR'],"['pw:WNT', 'pw:GR_bypass', 'pw:EMT', 'pw:NE_diff', 'pw:steroidogenesis']",1,5,0.8,2.7,108.0

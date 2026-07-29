@@ -1,0 +1,16 @@
+scenario,drug,ttp_months,nadir,fR_1yr
+standard_mCRPC,docetaxel,7.3,0.4598,0.141
+standard_mCRPC,abiraterone,11.5,0.58,0.115
+standard_mCRPC,enzalutamide,9.8,0.58,0.113
+standard_mCRPC,olaparib,8.6,0.58,0.082
+standard_mCRPC,talazoparib,8.4,0.58,0.089
+high_volume,docetaxel,7.1,0.5506,0.184
+high_volume,abiraterone,36.0,0.67,0.156
+high_volume,enzalutamide,15.7,0.67,0.152
+high_volume,olaparib,12.2,0.67,0.113
+high_volume,talazoparib,11.6,0.67,0.122
+BRCA_mutated,docetaxel,7.4,0.4904,0.37
+BRCA_mutated,abiraterone,6.5,0.55,0.309
+BRCA_mutated,enzalutamide,6.0,0.55,0.303
+BRCA_mutated,olaparib,6.9,0.55,0.232
+BRCA_mutated,talazoparib,6.4,0.55,0.247

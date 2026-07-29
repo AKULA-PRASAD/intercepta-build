@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-05-06T09:29:45.942759",
+  "disease": "glioblastoma multiforme",
+  "disease_id": "EFO_0000519",
+  "tests": {
+    "test_1_soc_ranking": {
+      "status": "FAIL",
+      "reason": "Temozolomide rank 257 \u2014 pipeline does not surface GBM SOC",
+      "soc_ranks": {
+        "Temozolomide": {
+          "rank": 257,
+          "present_in_gdsc": true,
+          "expected": "top_5",
+          "composite_score": 0.02374799999999999
+        },
+        "Bevacizumab": {
+          "rank": null,
+          "present_in_gdsc": false,
+          "expected": "top_30"
+        },
+        "Lomustine": {
+          "rank": null,
+          "present_in_gdsc": false,
+          "expected": "top_30"
+        },
+        "Carmustine": {
+          "rank": null,
+          "present_in_gdsc": false,
+          "expected": "top_50"
+        }
+      },
+      "total_drugs_ranked": 286
+    },
+    "test_2_white_space": {
+      "status": "PASS",
+      "reason": "6/7 white-space targets correctly flagged",
+      "coverage": {
+        "in_undruggable_list": 4,
+        "low_compounds": 6,
+        "in_net_at_all": 7
+      }
+    },
+    "test_3_bbb_penetration": {
+      "status": "GAP",
+      "reason": "BBB-relevant compound properties (logP, TPSA, MW, HBD/HBA) NOT in our ChEMBL dump. Our pipeline cannot currently filter for BBB penetration. This is a data-source gap, not a code bug. To address: extend ChEMBL fetcher to include molecule_properties endpoint, OR import RDKit descriptors from SMILES, OR query DrugBank for drug-likeness fields.",
+      "data_check": {
+        "TNF": {
+          "n_compounds": 50,
+          "top_compound_fields": [
+            "chembl_id",
+            "standard_type",
+            "standard_value",
+            "standard_units",
+            "pchembl_value",
+            "assay_chembl_id"
+          ],
+          "bbb_relevant_fields_present": []
+        },
+        "NOTCH1": {
+          "n_compounds": 50,
+          "top_compound_fields": [
+            "chembl_id",
+            "standard_type",
+            "standard_value",
+            "standard_units",
+            "pchembl_value",
+            "assay_chembl_id"
+          ],
+          "bbb_relevant_fields_present": []
+        },
+        "BCR": {
+          "n_compounds": 50,
+          "top_compound_fields": [
+            "chembl_id",
+            "standard_type",
+            "standard_value",
+            "standard_units",
+            "pchembl_value",
+            "assay_chembl_id"
+          ],
+          "bbb_relevant_fields_present": []
+        },
+        "PRNP": {
+          "n_compounds": 50,
+          "top_compound_fields": [
+            "chembl_id",
+            "standard_type",
+            "standard_value",
+            "standard_units",
+            "pchembl_value",
+            "assay_chembl_id"
+          ],
+          "bbb_relevant_fields_present": []
+        },
+        "WEE1": {
+          "n_compounds": 50,
+          "top_compound_fields": [
+            "chembl_id",
+            "standard_type",
+            "standard_value",
+            "standard_units",
+            "pchembl_value",
+            "assay_chembl_id"
+          ],
+          "bbb_relevant_fields_present": []
+        }
+      }
+    },
+    "test_4_tumor_suppressors": {
+      "status": "PASS",
+      "reason": "5/6 tumor suppressors correctly recognized",
+      "n_correctly_handled": 5,
+      "total": 6
+    },
+    "test_5_trial_compound_corr": {
+      "status": "PASS",
+      "reason": "7/10 top-trialed genes also have rich compounds",
+      "novelty_signals": [
+        [
+          "REST",
+          42,
+          0
+        ],
+        [
+          "CSF2",
+          38,
+          0
+        ],
+        [
+          "RB1",
+          13,
+          0
+        ],
+        [
+          "CTLA4",
+          10,
+          0
+        ],
+        [
+          "WT1",
+          10,
+          0
+        ]
+      ]
+    }
+  },
+  "summary": {
+    "PASS": 3,
+    "CHECK": 0,
+    "FAIL": 1,
+    "GAP": 1
+  }
+}

@@ -1,0 +1,101 @@
+
+========================================================================
+Step 1: Load validated BeatAML 2.0 data
+========================================================================
+  clinical rows: 942 (805 patients)
+  drug-gene edges: 651 (117 drugs)
+  drug sensitivity rows after QC: 33,250
+
+========================================================================
+Step 2: Collapse mutations — auto-detect encoding per column
+========================================================================
+  FLT3-ITD              encoding=binary      pos= 185  neg= 619  total= 804
+  NPM1                  encoding=binary      pos= 202  neg= 601  total= 803
+  RUNX1                 encoding=free_text   pos= 102  neg= 703  total= 805
+  ASXL1                 encoding=free_text   pos=  90  neg= 715  total= 805
+  TP53                  encoding=free_text   pos=  81  neg= 724  total= 805
+
+  Literature-expected frequencies:
+    FLT3-ITD: ~25-30%; NPM1: ~30%; TP53: ~10%; RUNX1: ~5-15%; ASXL1: ~5-10%
+
+  AML patients with mutation profiles: 766
+
+  Observed per-patient frequencies:
+    FLT3-ITD              181/765  =  23.7%
+    NPM1                  200/764  =  26.2%
+    RUNX1                 99/766  =  12.9%
+    ASXL1                 85/766  =  11.1%
+    TP53                  75/766  =  9.8%
+
+========================================================================
+Step 3: Build AML net skeleton
+========================================================================
+  Graph: 1,201 nodes, 33,191 edges
+
+========================================================================
+Step 4: QUERY A — FLT3-ITD+ / NPM1+ (regression check)
+========================================================================
+
+  [FLT3-ITD+/NPM1+] Query genotype: {'FLT3-ITD': 'positive', 'NPM1': 'positive'}
+  Patients matching genotype: 96
+  Top 15 drugs:
+  Rank Drug                             median_AUC    n  FLT3?  tag
+  1    Elesclomol                             32.0   34       
+  2    Panobinostat                           56.4   26       
+  3    Foretinib (XL880)                      62.8   69  YES    
+  4    Venetoclax                             72.5   44       ← BCL2 SOC
+  5    SNS-032 (BMS-387032)                   74.5   71       
+  6    Ponatinib (AP24534)                    82.7   42       
+  7    Ralimetinib (LY2228820)                88.2    9       
+  8    Gilteritinib                           97.1   37       
+  9    Selinexor                              99.2   42       
+  10   JNJ-28312141                          101.1   45  YES    
+  11   INK-128                               102.2   69       
+  12   Flavopiridol                          103.4   63       
+  13   AKT Inhibitor IV                      103.6    9       
+  14   Dovitinib (CHIR-258)                  103.9   62  YES    
+  15   A-674563                              105.3   69       
+
+  QUERY A verdict: FLT3 drugs in top 10 = 2, Venetoclax in top 10 = True
+
+========================================================================
+Step 5: QUERY B — TP53+ (tests encoding fix on a distinct genotype)
+========================================================================
+
+  [TP53+] Query genotype: {'TP53': 'positive'}
+  Patients matching genotype: 75
+  Top 15 drugs:
+  Rank Drug                             median_AUC    n  FLT3?  tag
+  1    Elesclomol                             23.6   24       
+  2    Panobinostat                           67.7   19       
+  3    Trametinib (GSK1120212)                97.5   22       
+  4    Selinexor                             104.3   21       
+  5    SNS-032 (BMS-387032)                  109.8   42       
+  6    Flavopiridol                          112.1   38       
+  7    Staurosporine                         124.2    6       
+  8    Indisulam                             134.2    6       
+  9    AT7519                                134.7   42       
+  10   PI-103                                135.0   34       
+  11   JNJ-28312141                          135.2   20  YES    
+  12   INK-128                               140.3   36       
+  13   PP242                                 140.4   37       
+  14   Dasatinib                             140.8   15       
+  15   Rapamycin                             141.2   12       
+
+  QUERY B verdict: FLT3 drugs in top 10 = 0, Venetoclax in top 10 = False
+
+========================================================================
+Step 6: Comparative verdict
+========================================================================
+  Test 1 (Query A PASS regression):            PASS
+  Test 2 (TP53 cohort size >= 10):            PASS (n=75)
+  Test 3 (top-10 lists differ, Jaccard<0.8):   PASS (J=0.25)
+
+  VERDICT: PASS
+  All three tests pass. Encoding fix works (TP53+ cohort is non-empty). Graph traversal is genotype-sensitive (different mutation profiles -> different drug rankings). Round 2.1b skeleton is validated on more than one biology.
+
+========================================================================
+Step 7: Save
+========================================================================
+  Graph pickled: /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_skeleton_v2.gpickle
+  Summary JSON:  /Users/kalki/INTERCEPTA/round2_aml/results/aml_net_skeleton_v2_summary.json

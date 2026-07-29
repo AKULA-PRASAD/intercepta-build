@@ -1,0 +1,161 @@
+{
+  "ec50_method": "PK_steady_state_mean_during_active_treatment",
+  "progression_def": "RECIST_like_20pct_growth_from_nadir",
+  "ec50": {
+    "docetaxel": 0.00987103,
+    "abiraterone": 3.844e-05,
+    "enzalutamide": 0.17876835,
+    "olaparib": 0.13554196,
+    "talazoparib": 0.00063537
+  },
+  "trials": {
+    "CHAARTED": {
+      "base": {
+        "g_s": 0.006,
+        "g_r": 0.003,
+        "K": 1.0,
+        "mu": 3e-05,
+        "nu": 0,
+        "S0": 0.45,
+        "R0": 0.08,
+        "d_natural": 0.001
+      },
+      "ctrl_drugs": [],
+      "trt_drugs": [
+        {
+          "name": "docetaxel",
+          "emax_s": 0.02,
+          "emax_r": 0.003
+        }
+      ],
+      "synergy": [
+        0,
+        0
+      ]
+    },
+    "LATITUDE": {
+      "base": {
+        "g_s": 0.006,
+        "g_r": 0.003,
+        "K": 1.0,
+        "mu": 3e-05,
+        "nu": 0,
+        "S0": 0.45,
+        "R0": 0.08,
+        "d_natural": 0.001
+      },
+      "ctrl_drugs": [],
+      "trt_drugs": [
+        {
+          "name": "abiraterone",
+          "emax_s": 0.001,
+          "emax_r": 0.0005
+        }
+      ],
+      "synergy": [
+        0,
+        0
+      ]
+    },
+    "PROfound": {
+      "base": {
+        "g_s": 0.006,
+        "g_r": 0.003,
+        "K": 1.0,
+        "mu": 3e-05,
+        "nu": 0,
+        "S0": 0.35,
+        "R0": 0.15,
+        "d_natural": 0.001
+      },
+      "ctrl_drugs": [
+        {
+          "name": "enzalutamide",
+          "emax_s": 0.0002,
+          "emax_r": 0.0001
+        }
+      ],
+      "trt_drugs": [
+        {
+          "name": "olaparib",
+          "emax_s": 0.0008,
+          "emax_r": 0.002
+        }
+      ],
+      "synergy": [
+        0,
+        0
+      ]
+    },
+    "PROpel_BRCA": {
+      "base": {
+        "g_s": 0.012,
+        "g_r": 0.006,
+        "K": 1.0,
+        "mu": 5e-05,
+        "nu": 0,
+        "S0": 0.25,
+        "R0": 0.3,
+        "d_natural": 0.001
+      },
+      "ctrl_drugs": [
+        {
+          "name": "abiraterone",
+          "emax_s": 0.0008,
+          "emax_r": 0.0003
+        }
+      ],
+      "trt_drugs": [
+        {
+          "name": "abiraterone",
+          "emax_s": 0.0008,
+          "emax_r": 0.0003
+        },
+        {
+          "name": "olaparib",
+          "emax_s": 0.003,
+          "emax_r": 0.02
+        }
+      ],
+      "synergy": [
+        0.1,
+        0.1
+      ]
+    },
+    "TALAPRO2_C2": {
+      "base": {
+        "g_s": 0.006,
+        "g_r": 0.003,
+        "K": 1.0,
+        "mu": 3e-05,
+        "nu": 0,
+        "S0": 0.42,
+        "R0": 0.1,
+        "d_natural": 0.001
+      },
+      "ctrl_drugs": [
+        {
+          "name": "enzalutamide",
+          "emax_s": 0.0008,
+          "emax_r": 0.0005
+        }
+      ],
+      "trt_drugs": [
+        {
+          "name": "enzalutamide",
+          "emax_s": 0.0008,
+          "emax_r": 0.0005
+        },
+        {
+          "name": "talazoparib",
+          "emax_s": 0.0005,
+          "emax_r": 0.001
+        }
+      ],
+      "synergy": [
+        0.02,
+        0.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+/Users/kalki/miniconda3/lib/python3.13/site-packages/lifelines/utils/__init__.py:1120: ConvergenceWarning: Column arm have very low variance when conditioned on death event present or not. This may harm convergence. This could be a form of 'complete separation'. For example, try the following code:
+
+>>> events = df['event'].astype(bool)
+>>> print(df.loc[events, 'arm'].var())
+>>> print(df.loc[~events, 'arm'].var())
+
+A very low variance means that the column arm completely determines whether a subject dies or not. See https://stats.stackexchange.com/questions/11109/how-to-deal-with-perfect-separation-in-logistic-regression.
+
+  warnings.warn(dedent(warning_text), ConvergenceWarning)
+/Users/kalki/miniconda3/lib/python3.13/site-packages/lifelines/fitters/coxph_fitter.py:1607: ConvergenceWarning: Newton-Raphson convergence completed successfully but norm(delta) is still high, 0.503. This may imply non-unique solutions to the maximum likelihood. Perhaps there is collinearity or complete separation in the dataset?
+
+  warnings.warn(
+/Users/kalki/INTERCEPTA/code/hr_estimator_fixed.py:101: RuntimeWarning: overflow encountered in exp
+  hr_ci_upper = float(np.exp(summary.loc['arm', 'coef upper 95%']))
+========================================================================
+INTERCEPTA UNIFIED ODE v4 — VALIDATION
+========================================================================
+Velocity data: ../results/velocity_star_latent_time.csv
+Cohort size:   50 patients per arm (heterogeneous)
+Random seed:   42 (reproducible)
+Endpoint:      Cox HR via lifelines on virtual cohort TTPs
+Parameters:    ONE base set. Per-patient variability from
+               measured biological CVs (Stein 2011, Aggarwal 2018,
+               population PK reviews). No per-trial tuning.
+
+--- TAX-327 ---
+  Treatment: ['docetaxel']
+  Control:   ['mitoxantrone']
+  BRCA profile: overall
+  Cox HR: 0.030 [95% CI 0.012-0.076]  log-rank p=6.76e-25
+  Median: ctrl=2.0mo  trt=5.5mo  benefit=+3.5mo
+  Events: ctrl=50/50  trt=50/50
+  Clinical HR: 0.76  |  Our HR: 0.030  |  FAIL
+
+--- PREVAIL ---
+  Treatment: ['ADT', 'enzalutamide']
+  Control:   ['ADT']
+  BRCA profile: overall
+  Cox HR: 0.810 [95% CI 0.541-1.211]  log-rank p=0.302
+  Median: ctrl=15.4mo  trt=16.0mo  benefit=+0.6mo
+  Events: ctrl=50/50  trt=50/50
+  Clinical median trt: 18.0mo  |  Our: 16.0mo  |  PASS
+
+--- LATITUDE ---
+  Treatment: ['ADT', 'abiraterone']
+  Control:   ['ADT']
+  BRCA profile: overall
+  Cox HR: 0.728 [95% CI 0.488-1.086]  log-rank p=0.12
+  Median: ctrl=19.4mo  trt=20.7mo  benefit=+1.3mo
+  Events: ctrl=50/50  trt=50/50
+  Clinical HR: 0.66  |  Our HR: 0.728  |  PASS
+
+--- CHAARTED ---
+  Treatment: ['ADT', 'docetaxel']
+  Control:   ['ADT']
+  BRCA profile: overall
+  Cox HR: 1.183 [95% CI 0.795-1.762]  log-rank p=0.401
+  Median: ctrl=19.4mo  trt=17.3mo  benefit=-2.1mo
+  Events: ctrl=50/50  trt=50/50
+  Clinical HR: 0.61  |  Our HR: 1.183  |  FAIL
+
+--- PROfound ---
+  Treatment: ['ADT', 'olaparib']
+  Control:   ['ADT', 'enzalutamide']
+  BRCA profile: biallelic_cohort
+  Cox HR: UNRELIABLE (point=3.4e-10, CI=[0, inf])
+    -> Complete separation or numerical divergence.
+    -> Log-rank p=3.73e-28 (primary evidence of difference)
+  Median: ctrl=11.8mo  trt=60.0mo  benefit=+48.2mo
+  Events: ctrl=50/50  trt=0/50
+  Clinical HR: 0.34  |  Our HR: 0.000  |  UNRELIABLE
+
+--- TALAPRO-2 ---
+  Treatment: ['ADT', 'enzalutamide', 'talazoparib']
+  Control:   ['ADT', 'enzalutamide']
+  BRCA profile: hrr_cohort
+  Cox HR: 0.009 [95% CI 0.002-0.041]  log-rank p=3.11e-27
+  Median: ctrl=14.3mo  trt=60.0mo  benefit=+45.6mo
+  Events: ctrl=50/50  trt=2/50
+  Clinical HR: 0.45  |  Our HR: 0.009  |  FAIL
+
+========================================================================
+OVERALL: 2/6 trials pass
+========================================================================
+Results saved: ../results/unified_v4_validation.json

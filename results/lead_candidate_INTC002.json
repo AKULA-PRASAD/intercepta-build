@@ -1,0 +1,21 @@
+{
+  "lead_candidate": "INTC-002",
+  "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C(C)C)c3c2)no1",
+  "docking_score": -9.3,
+  "chembl_novelty": 0.266,
+  "admet_profile": "CLEAN \u2014 zero soft spots, zero alerts",
+  "drug_likeness": "Lipinski PASS, Muegge PASS, Egan PASS",
+  "advantages_over_alisertib": [
+    "Lower LogP (3.91 vs 6.01) \u2192 better solubility",
+    "Zero metabolic soft spots (vs 1)",
+    "Zero structural alerts (vs 1)",
+    "Lower MW (432 vs 491) \u2192 better oral absorption"
+  ],
+  "unknown": [
+    "Actual AURKA IC50 (needs wet lab)",
+    "AURKB selectivity (needs docking or assay)",
+    "In vivo PK (needs animal studies)",
+    "Efficacy in cancer models (needs cell assays)"
+  ],
+  "honest_statement": "INTC-002 is a computationally designed AURKA-targeting molecule with superior drug-likeness to alisertib and confirmed binding to the AURKA ATP pocket by validated docking. Actual potency, selectivity, and efficacy require experimental validation."
+}

@@ -1,0 +1,298 @@
+{
+  "verdict": "FAIL",
+  "version": "round2.2a-v2",
+  "spec_commit": "c257b8d",
+  "mechanism": "pyUCell rank-based Mann-Whitney U scoring",
+  "max_rank": 17663,
+  "signatures": {
+    "prolif": [
+      "MKI67",
+      "TOP2A",
+      "PCNA",
+      "CDK1",
+      "CCNB1",
+      "AURKA",
+      "BUB1",
+      "PLK1",
+      "MCM2",
+      "MCM6",
+      "FOXM1",
+      "BIRC5",
+      "NUSAP1",
+      "TPX2",
+      "CDC20",
+      "CENPF",
+      "KIF11",
+      "PRC1",
+      "HMGA1",
+      "MYBL2"
+    ],
+    "emt": [
+      "VIM",
+      "CDH2",
+      "SNAI1",
+      "SNAI2",
+      "ZEB1",
+      "ZEB2",
+      "TWIST1",
+      "FN1",
+      "MMP2",
+      "MMP9",
+      "CDH1-",
+      "CLDN1-",
+      "TJP1-"
+    ],
+    "ddr": [
+      "BRCA1",
+      "BRCA2",
+      "RAD51",
+      "ATM",
+      "ATR",
+      "CHEK1",
+      "CHEK2",
+      "PARP1",
+      "PARP2",
+      "XRCC1",
+      "MLH1",
+      "MSH2",
+      "FANCA",
+      "FANCD2",
+      "RPA1"
+    ]
+  },
+  "training_stats": {
+    "n_beataml_samples_train": 517,
+    "n_drugs_trained": 141,
+    "mean_cv_auroc": 0.531880657772712,
+    "median_cv_auroc": 0.5482222222222222,
+    "n_drugs_auroc_ge_0_60": 32,
+    "per_axis_max_coef": {
+      "R_prolif": 1.030496813390105,
+      "R_emt": 0.8937812747221249,
+      "R_ddr": 0.8984701167087082
+    },
+    "per_axis_best_drug": {
+      "R_prolif": "Neratinib (HKI-272)",
+      "R_emt": "JNK Inhibitor II",
+      "R_ddr": "Neratinib (HKI-272)"
+    }
+  },
+  "beataml_axis_correlations": {
+    "R_prolif": {
+      "R_prolif": 1.0,
+      "R_emt": -0.3832858902743993,
+      "R_ddr": 0.7891349817303881
+    },
+    "R_emt": {
+      "R_prolif": -0.3832858902743993,
+      "R_emt": 1.0,
+      "R_ddr": -0.45481238386503214
+    },
+    "R_ddr": {
+      "R_prolif": 0.7891349817303881,
+      "R_emt": -0.45481238386503214,
+      "R_ddr": 1.0
+    }
+  },
+  "vangalen_axis_per_celltype": {
+    "B": {
+      "R_prolif": 0.5048123598098755,
+      "R_emt": 0.2545260787010193,
+      "R_ddr": 0.6510261297225952
+    },
+    "CTL": {
+      "R_prolif": 0.6205721497535706,
+      "R_emt": 0.2880723476409912,
+      "R_ddr": 0.6684262752532959
+    },
+    "GMP": {
+      "R_prolif": 0.8024274110794067,
+      "R_emt": 0.351340115070343,
+      "R_ddr": 0.7724837064743042
+    },
+    "GMP-like": {
+      "R_prolif": 0.8621328473091125,
+      "R_emt": 0.42511212825775146,
+      "R_ddr": 0.7831322550773621
+    },
+    "HSC": {
+      "R_prolif": 0.5643789768218994,
+      "R_emt": 0.38752835988998413,
+      "R_ddr": 0.7002473473548889
+    },
+    "HSC-like": {
+      "R_prolif": 0.575674831867218,
+      "R_emt": 0.38502180576324463,
+      "R_ddr": 0.6748305559158325
+    },
+    "Mono": {
+      "R_prolif": 0.7012830972671509,
+      "R_emt": 0.20348083972930908,
+      "R_ddr": 0.6521287560462952
+    },
+    "Mono-like": {
+      "R_prolif": 0.5056620836257935,
+      "R_emt": 0.3794121742248535,
+      "R_ddr": 0.6302199363708496
+    },
+    "NK": {
+      "R_prolif": 0.6065911054611206,
+      "R_emt": 0.19719725847244263,
+      "R_ddr": 0.6847012042999268
+    },
+    "Plasma": {
+      "R_prolif": 0.6147061586380005,
+      "R_emt": 0.0,
+      "R_ddr": 0.6955083608627319
+    },
+    "ProB": {
+      "R_prolif": 0.88886559009552,
+      "R_emt": 0.4390259385108948,
+      "R_ddr": 0.817030131816864
+    },
+    "ProMono": {
+      "R_prolif": 0.855167806148529,
+      "R_emt": 0.17619121074676514,
+      "R_ddr": 0.7802888751029968
+    },
+    "ProMono-like": {
+      "R_prolif": 0.8273473978042603,
+      "R_emt": 0.349934458732605,
+      "R_ddr": 0.7603209614753723
+    },
+    "Prog": {
+      "R_prolif": 0.7690610289573669,
+      "R_emt": 0.39332109689712524,
+      "R_ddr": 0.7718191146850586
+    },
+    "Prog-like": {
+      "R_prolif": 0.8225322365760803,
+      "R_emt": 0.39326030015945435,
+      "R_ddr": 0.7619182467460632
+    },
+    "T": {
+      "R_prolif": 0.5635122060775757,
+      "R_emt": 0.2496941089630127,
+      "R_ddr": 0.6508902311325073
+    },
+    "cDC": {
+      "R_prolif": 0.8035858869552612,
+      "R_emt": 0.1844218373298645,
+      "R_ddr": 0.7528254389762878
+    },
+    "cDC-like": {
+      "R_prolif": 0.7259424924850464,
+      "R_emt": 0.30784064531326294,
+      "R_ddr": 0.7088492512702942
+    },
+    "earlyEry": {
+      "R_prolif": 0.8292649984359741,
+      "R_emt": 0.05574280023574829,
+      "R_ddr": 0.7954686880111694
+    },
+    "lateEry": {
+      "R_prolif": 0.9131426215171814,
+      "R_emt": 0.0,
+      "R_ddr": 0.8217388987541199
+    },
+    "pDC": {
+      "R_prolif": 0.8238577842712402,
+      "R_emt": 0.3727537989616394,
+      "R_ddr": 0.7577645778656006
+    }
+  },
+  "vangalen_axis_correlations": {
+    "R_prolif": {
+      "R_prolif": 1.0,
+      "R_emt": -0.044055340440854435,
+      "R_ddr": 0.9315505596868622
+    },
+    "R_emt": {
+      "R_prolif": -0.044055340440854435,
+      "R_emt": 1.0,
+      "R_ddr": -0.04015031794225003
+    },
+    "R_ddr": {
+      "R_prolif": 0.9315505596868622,
+      "R_emt": -0.04015031794225003,
+      "R_ddr": 1.0
+    }
+  },
+  "queries": {
+    "Q_A_LSC_quiescence": {
+      "hsc_like_rprolif": 0.575674831867218,
+      "mono_like_rprolif": 0.5056620836257935,
+      "pass": false
+    },
+    "Q_B_axis_non_redundancy": {
+      "max_abs_r": 0.9315505596868622,
+      "threshold": 0.9,
+      "pass": false
+    },
+    "Q_C_axis_utility": {
+      "mean_auroc": 0.531880657772712,
+      "threshold_mean": 0.55,
+      "threshold_per_axis_auroc": 0.6,
+      "per_axis_max_coef": {
+        "R_prolif": 1.030496813390105,
+        "R_emt": 0.8937812747221249,
+        "R_ddr": 0.8984701167087082
+      },
+      "mean_check_pass": false,
+      "axes_contrib_pass": true,
+      "pass": false
+    },
+    "Q_D_prog_flt3_correlation": {
+      "n_drugs_aligned": 139,
+      "spearman_rho": -0.23496134769203267,
+      "spearman_p": 0.0053655504304748036,
+      "pass": true
+    },
+    "Q_E_distinguishability": {
+      "jaccard": 0.1111111111111111,
+      "threshold": 0.6,
+      "hsc_top10": [
+        "CYT387",
+        "Cytarabine",
+        "Go6976",
+        "JNK Inhibitor II",
+        "Lestaurtinib (CEP-701)",
+        "Neratinib (HKI-272)",
+        "Pazopanib (GW786034)",
+        "Regorafenib (BAY 73-4506)",
+        "Vandetanib (ZD6474)",
+        "Venetoclax"
+      ],
+      "prog_top10": [
+        "AMPK Inhibitor",
+        "Gefitinib",
+        "Go6976",
+        "Perhexiline maleate",
+        "SB-203580",
+        "TG101348",
+        "Tozasertib (VX-680)",
+        "Vandetanib (ZD6474)",
+        "Vatalanib (PTK787)",
+        "Volasertib (BI-6727)"
+      ],
+      "pass": true
+    }
+  },
+  "Q_F_diagnostic_range_ratios": {
+    "R_prolif": {
+      "vangalen_range": 0.4083302617073059,
+      "beataml_range": 0.703330934047699,
+      "ratio": 0.5805663466453552
+    },
+    "R_emt": {
+      "vangalen_range": 0.4390259385108948,
+      "beataml_range": 0.5724246501922607,
+      "ratio": 0.766958475112915
+    },
+    "R_ddr": {
+      "vangalen_range": 0.19151896238327026,
+      "beataml_range": 0.36108750104904175,
+      "ratio": 0.5303948521614075
+    }
+  }
+}

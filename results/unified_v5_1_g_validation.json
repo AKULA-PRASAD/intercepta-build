@@ -1,0 +1,234 @@
+{
+  "model": "INTERCEPTA Unified ODE v4.1 + g-rate validation v5.1",
+  "framework": "Stein/Wilkerson/Fojo biexponential",
+  "n_patients_per_regimen": 50,
+  "confirmed_pass": 0,
+  "confirmed_total": 3,
+  "regimens": {
+    "enza_first_line_noHRR": {
+      "regimen": "enza_first_line_noHRR",
+      "drugs": [
+        "ADT",
+        "enzalutamide"
+      ],
+      "target_key": "enzalutamide_non_HRR",
+      "target_confidence": "confirmed",
+      "target_g": 0.000784,
+      "target_citation": "Leuva 2020 Urol Oncol / Zhou 2024 eBioMedicine",
+      "model_median_g": 0.0027063378005368157,
+      "model_iqr_g": [
+        0.0018290102589954423,
+        0.0035371142123172606
+      ],
+      "n_with_g_fit": 45,
+      "n_patients": 50,
+      "model_types": {
+        "gd": 45,
+        "g_only": 0,
+        "d_only": 0
+      },
+      "passed": false,
+      "target_window": [
+        0.0004,
+        0.0015
+      ]
+    },
+    "enza_first_line_HRR": {
+      "regimen": "enza_first_line_HRR",
+      "drugs": [
+        "ADT",
+        "enzalutamide"
+      ],
+      "target_key": "enzalutamide_HRR_altered",
+      "target_confidence": "confirmed",
+      "target_g": 0.001889,
+      "target_citation": "Zhou 2024 eBioMedicine Table 3",
+      "model_median_g": 0.0031908723230107757,
+      "model_iqr_g": [
+        0.002371640972489503,
+        0.003797795098048177
+      ],
+      "n_with_g_fit": 50,
+      "n_patients": 50,
+      "model_types": {
+        "gd": 50,
+        "g_only": 0,
+        "d_only": 0
+      },
+      "passed": false,
+      "target_window": [
+        0.001,
+        0.003
+      ]
+    },
+    "untreated_mCRPC": {
+      "regimen": "untreated_mCRPC",
+      "drugs": [],
+      "target_key": "mCRPC_pretreatment",
+      "target_confidence": "confirmed",
+      "target_g": 0.0075,
+      "target_citation": "Stein 2011 Clin Cancer Res, log g median ~-2.15",
+      "model_median_g": 0.002695117534625807,
+      "model_iqr_g": [
+        0.002199815765242864,
+        0.0035718962805777804
+      ],
+      "n_with_g_fit": 31,
+      "n_patients": 50,
+      "model_types": {
+        "gd": 0,
+        "g_only": 31,
+        "d_only": 0
+      },
+      "passed": false,
+      "target_window": [
+        0.005,
+        0.012
+      ]
+    },
+    "docetaxel_mono_mCRPC": {
+      "regimen": "docetaxel_mono_mCRPC",
+      "drugs": [
+        "docetaxel"
+      ],
+      "target_key": "docetaxel_mCRPC",
+      "target_confidence": "needs_verification",
+      "target_g": null,
+      "target_citation": "Wilkerson 2017 Lancet Oncol, Table 2 (to retrieve)",
+      "model_median_g": 0.0028956918551331706,
+      "model_iqr_g": [
+        0.00229747659277411,
+        0.003105259649148436
+      ],
+      "n_with_g_fit": 47,
+      "n_patients": 50,
+      "model_types": {
+        "gd": 42,
+        "g_only": 5,
+        "d_only": 0
+      },
+      "passed": null
+    },
+    "mitoxantrone_mono_mCRPC": {
+      "regimen": "mitoxantrone_mono_mCRPC",
+      "drugs": [
+        "mitoxantrone"
+      ],
+      "target_key": "mitoxantrone_mCRPC",
+      "target_confidence": "needs_verification",
+      "target_g": null,
+      "target_citation": "Wilkerson 2017 Lancet Oncol, Table 2",
+      "model_median_g": 0.002401703285982627,
+      "model_iqr_g": [
+        0.001680503886515478,
+        0.00307307474276048
+      ],
+      "n_with_g_fit": 18,
+      "n_patients": 50,
+      "model_types": {
+        "gd": 0,
+        "g_only": 18,
+        "d_only": 0
+      },
+      "passed": null
+    },
+    "olaparib_HRR_post_ARSI": {
+      "regimen": "olaparib_HRR_post_ARSI",
+      "drugs": [
+        "ADT",
+        "olaparib"
+      ],
+      "target_key": "olaparib_HRR_altered",
+      "target_confidence": "needs_verification",
+      "target_g": null,
+      "target_citation": "Zhou 2024 Table 3 (to retrieve exact olaparib g)",
+      "model_median_g": 1.0000000000525172e-07,
+      "model_iqr_g": [
+        1.0000000000015288e-07,
+        1.000000000207968e-07
+      ],
+      "n_with_g_fit": 5,
+      "n_patients": 50,
+      "model_types": {
+        "gd": 5,
+        "g_only": 0,
+        "d_only": 0
+      },
+      "passed": null
+    }
+  },
+  "published_targets": {
+    "enzalutamide_non_HRR": {
+      "g_published": 0.000784,
+      "dt_days": 884.0,
+      "source": "VA Veterans cohort, ~8000 patients",
+      "citation": "Leuva 2020 Urol Oncol / Zhou 2024 eBioMedicine",
+      "population": "mCRPC, first-line enza, no HRR alterations",
+      "window": [
+        0.0004,
+        0.0015
+      ],
+      "confidence": "confirmed"
+    },
+    "enzalutamide_HRR_altered": {
+      "g_published": 0.001889,
+      "dt_days": 367.0,
+      "source": "VA Veterans cohort",
+      "citation": "Zhou 2024 eBioMedicine Table 3",
+      "population": "mCRPC, first-line enza, HRR-altered",
+      "window": [
+        0.001,
+        0.003
+      ],
+      "confidence": "confirmed"
+    },
+    "mCRPC_pretreatment": {
+      "g_published": 0.0075,
+      "dt_days": 92.0,
+      "source": "NCI 5 trials pre-study g distribution",
+      "citation": "Stein 2011 Clin Cancer Res, log g median ~-2.15",
+      "population": "mCRPC pre-treatment or off-treatment baseline",
+      "window": [
+        0.005,
+        0.012
+      ],
+      "confidence": "confirmed"
+    },
+    "docetaxel_mCRPC": {
+      "g_published": null,
+      "dt_days": null,
+      "source": "Wilkerson 2017 Lancet Oncol",
+      "citation": "Wilkerson 2017 Lancet Oncol, Table 2 (to retrieve)",
+      "population": "mCRPC on docetaxel, TAX-327-era",
+      "window": null,
+      "confidence": "needs_verification"
+    },
+    "mitoxantrone_mCRPC": {
+      "g_published": null,
+      "dt_days": null,
+      "source": "Wilkerson 2017 Lancet Oncol",
+      "citation": "Wilkerson 2017 Lancet Oncol, Table 2",
+      "population": "mCRPC on mitoxantrone, TAX-327-era",
+      "window": null,
+      "confidence": "needs_verification"
+    },
+    "abiraterone_first_line": {
+      "g_published": null,
+      "dt_days": null,
+      "source": "Leuva 2020 Urol Oncol",
+      "citation": "Leuva 2020 Table 2 (to retrieve)",
+      "population": "mCRPC first-line abiraterone",
+      "window": null,
+      "confidence": "needs_verification"
+    },
+    "olaparib_HRR_altered": {
+      "g_published": null,
+      "dt_days": null,
+      "source": "Zhou 2024 eBioMedicine",
+      "citation": "Zhou 2024 Table 3 (to retrieve exact olaparib g)",
+      "population": "mCRPC HRR-altered on olaparib monotherapy",
+      "window": null,
+      "confidence": "needs_verification"
+    }
+  }
+}

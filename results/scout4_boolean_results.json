@@ -1,0 +1,128 @@
+{
+  "FLT3": {
+    "target": "FLT3",
+    "compensators": [],
+    "casualties": [
+      "HK2",
+      "USP22"
+    ],
+    "n_compensators": 0,
+    "n_casualties": 2,
+    "n_unchanged": 3281,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "IDH1": {
+    "target": "IDH1",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "IDH2": {
+    "target": "IDH2",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "DNMT3A": {
+    "target": "DNMT3A",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "NPM1": {
+    "target": "NPM1",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "KIT": {
+    "target": "KIT",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "TP53": {
+    "target": "TP53",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "NRAS": {
+    "target": "NRAS",
+    "compensators": [],
+    "casualties": [
+      "MAP2K2"
+    ],
+    "n_compensators": 0,
+    "n_casualties": 1,
+    "n_unchanged": 3282,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "KRAS": {
+    "target": "KRAS",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "RUNX1": {
+    "target": "RUNX1",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  },
+  "TET2": {
+    "target": "TET2",
+    "compensators": [],
+    "casualties": [],
+    "n_compensators": 0,
+    "n_casualties": 0,
+    "n_unchanged": 3283,
+    "baseline_iter": 200,
+    "perturbed_iter": 200,
+    "druggable_compensators": []
+  }
+}

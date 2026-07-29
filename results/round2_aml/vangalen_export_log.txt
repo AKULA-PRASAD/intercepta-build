@@ -1,0 +1,34 @@
+Seurat version: 5.5.0 
+Matrix version: 1.7.4 
+
+Created output dir: /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported 
+Input:        /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/Seurat_AML.rds 
+Output dir:   /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported 
+
+========================================================================
+Loading RDS
+========================================================================
+Loaded in 10.9 seconds
+Class: Seurat   cells: 44823   features: 27899 
+
+========================================================================
+Exporting counts layer
+========================================================================
+LayerData failed ( vector memory limit of 16.0 Gb reached, see mem.maxVSize() ); trying GetAssayData
+Error:
+! The `slot` argument of `GetAssayData()` was deprecated in SeuratObject
+  5.0.0 and is now defunct.
+ℹ Please use the `layer` argument instead.
+Backtrace:
+     ▆
+  1. └─base::tryCatch(...)
+  2.   └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  3.     └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  4.       └─value[[3L]](cond)
+  5.         ├─SeuratObject::GetAssayData(aml, assay = "RNA", slot = "counts")
+  6.         └─SeuratObject:::GetAssayData.Seurat(aml, assay = "RNA", slot = "counts")
+  7.           └─SeuratObject::.Deprecate(...)
+  8.             └─lifecycle::deprecate_stop(...)
+  9.               └─lifecycle:::deprecate_stop0(msg)
+ 10.                 └─rlang::cnd_signal(...)
+Execution halted

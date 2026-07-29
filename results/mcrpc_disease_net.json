@@ -1,0 +1,3391 @@
+{
+  "metadata": {
+    "created": "2026-03-14T12:08:11.786293",
+    "disease": "Metastatic Castration-Resistant Prostate Cancer (mCRPC)",
+    "version": "2.0"
+  },
+  "summary": {
+    "disease": "Metastatic Castration-Resistant Prostate Cancer (mCRPC)",
+    "n_nodes": 141,
+    "n_edges": 144,
+    "layers": {
+      "genomic": 79,
+      "pathway": 19,
+      "cellular": 8,
+      "chemical": 29,
+      "clinical": 6
+    },
+    "n_disease_specific": 138,
+    "n_healthy_shared": 69,
+    "n_resistance": 33,
+    "n_escape_routes": 18,
+    "n_druggable": 64,
+    "n_drug_nodes": 29
+  },
+  "nodes": [
+    {
+      "id": "AR",
+      "name": "Androgen Receptor",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.63,
+        "role": "Master TF, amplified/mutated",
+        "degree": 15
+      }
+    },
+    {
+      "id": "FOXA1",
+      "name": "Forkhead Box A1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.1,
+        "role": "AR pioneer factor",
+        "degree": 1
+      }
+    },
+    {
+      "id": "NCOR1",
+      "name": "Nuclear Receptor Corepressor 1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "AR corepressor, loss \u2192 AR hyperactivation"
+      }
+    },
+    {
+      "id": "NCOR2",
+      "name": "Nuclear Receptor Corepressor 2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.04,
+        "role": "AR corepressor"
+      }
+    },
+    {
+      "id": "HOXB13",
+      "name": "Homeobox B13",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "AR cofactor, prostate-specific",
+        "degree": 1
+      }
+    },
+    {
+      "id": "TMPRSS2",
+      "name": "Transmembrane Serine Protease 2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.5,
+        "role": "TMPRSS2-ERG fusion partner",
+        "degree": 1
+      }
+    },
+    {
+      "id": "KLK3",
+      "name": "Kallikrein-3 (PSA)",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "AR target gene, clinical biomarker",
+        "degree": 1
+      }
+    },
+    {
+      "id": "NKX3_1",
+      "name": "NK3 Homeobox 1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.2,
+        "role": "Prostate-specific TF, often deleted",
+        "degree": 1
+      }
+    },
+    {
+      "id": "TP53",
+      "name": "Tumor Protein P53",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.5,
+        "role": "Guardian of genome, most mutated"
+      }
+    },
+    {
+      "id": "RB1",
+      "name": "Retinoblastoma 1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.15,
+        "role": "Cell cycle gatekeeper, loss enables NE diff"
+      }
+    },
+    {
+      "id": "MDM2",
+      "name": "MDM2 Proto-Oncogene",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "p53 degradation"
+      }
+    },
+    {
+      "id": "MDM4",
+      "name": "MDM4 Regulator of P53",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "p53 inhibitor"
+      }
+    },
+    {
+      "id": "CDKN2A",
+      "name": "p16/p14ARF",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.08,
+        "role": "CDK4/6 inhibitor, cell cycle brake"
+      }
+    },
+    {
+      "id": "CDKN1B",
+      "name": "p27",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.04,
+        "role": "CDK2 inhibitor"
+      }
+    },
+    {
+      "id": "CDK4",
+      "name": "Cyclin-Dependent Kinase 4",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "G1-S transition driver"
+      }
+    },
+    {
+      "id": "CDK6",
+      "name": "Cyclin-Dependent Kinase 6",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "G1-S transition driver"
+      }
+    },
+    {
+      "id": "CCND1",
+      "name": "Cyclin D1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "CDK4/6 partner, often amplified"
+      }
+    },
+    {
+      "id": "CCNE1",
+      "name": "Cyclin E1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "CDK2 partner"
+      }
+    },
+    {
+      "id": "PTEN",
+      "name": "PTEN Phosphatase",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.4,
+        "role": "PI3K brake, most deleted TSG"
+      }
+    },
+    {
+      "id": "PIK3CA",
+      "name": "PI3K Catalytic Alpha",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.06,
+        "role": "PI3K catalytic subunit"
+      }
+    },
+    {
+      "id": "PIK3CB",
+      "name": "PI3K Catalytic Beta",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.04,
+        "role": "Major PI3K isoform in prostate"
+      }
+    },
+    {
+      "id": "PIK3R1",
+      "name": "PI3K Regulatory 1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "PI3K regulatory subunit"
+      }
+    },
+    {
+      "id": "AKT1",
+      "name": "AKT Serine/Threonine Kinase 1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "Central survival kinase"
+      }
+    },
+    {
+      "id": "AKT3",
+      "name": "AKT3",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "AKT isoform"
+      }
+    },
+    {
+      "id": "MTOR",
+      "name": "mTOR Kinase",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "Growth/metabolism master"
+      }
+    },
+    {
+      "id": "TSC1",
+      "name": "Tuberous Sclerosis 1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "mTOR inhibitor"
+      }
+    },
+    {
+      "id": "TSC2",
+      "name": "Tuberous Sclerosis 2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "mTOR inhibitor"
+      }
+    },
+    {
+      "id": "BRCA2",
+      "name": "BRCA2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.12,
+        "role": "HRR, PARPi target",
+        "degree": 1
+      }
+    },
+    {
+      "id": "BRCA1",
+      "name": "BRCA1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.015,
+        "role": "HRR, PARPi target",
+        "degree": 1
+      }
+    },
+    {
+      "id": "ATM",
+      "name": "ATM Kinase",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "DNA damage sensor"
+      }
+    },
+    {
+      "id": "ATR",
+      "name": "ATR Kinase",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "Replication stress sensor"
+      }
+    },
+    {
+      "id": "CDK12",
+      "name": "CDK12",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "HRR gene transcription"
+      }
+    },
+    {
+      "id": "CHEK1",
+      "name": "Checkpoint Kinase 1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.01,
+        "role": "S/G2 checkpoint"
+      }
+    },
+    {
+      "id": "CHEK2",
+      "name": "Checkpoint Kinase 2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "DNA damage checkpoint"
+      }
+    },
+    {
+      "id": "PALB2",
+      "name": "Partner of BRCA2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.01,
+        "role": "BRCA2 loader",
+        "degree": 1
+      }
+    },
+    {
+      "id": "FANCA",
+      "name": "Fanconi Anemia A",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "Interstrand crosslink repair",
+        "degree": 1
+      }
+    },
+    {
+      "id": "RAD51",
+      "name": "RAD51 Recombinase",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.01,
+        "role": "Core HRR recombinase"
+      }
+    },
+    {
+      "id": "PARP1",
+      "name": "PARP1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "DNA repair, PARPi direct target"
+      }
+    },
+    {
+      "id": "PARP2",
+      "name": "PARP2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "PARP family member"
+      }
+    },
+    {
+      "id": "MSH2",
+      "name": "MutS Homolog 2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "Mismatch repair, MSI"
+      }
+    },
+    {
+      "id": "MSH6",
+      "name": "MutS Homolog 6",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "Mismatch repair"
+      }
+    },
+    {
+      "id": "MLH1",
+      "name": "MutL Homolog 1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.01,
+        "role": "Mismatch repair"
+      }
+    },
+    {
+      "id": "APC",
+      "name": "APC",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.08,
+        "role": "WNT pathway brake"
+      }
+    },
+    {
+      "id": "CTNNB1",
+      "name": "Beta-Catenin",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "WNT effector TF"
+      }
+    },
+    {
+      "id": "RNF43",
+      "name": "RNF43",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.04,
+        "role": "WNT receptor degradation",
+        "degree": 1
+      }
+    },
+    {
+      "id": "KMT2C",
+      "name": "MLL3",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.08,
+        "role": "H3K4 methyltransferase"
+      }
+    },
+    {
+      "id": "KMT2D",
+      "name": "MLL4",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "H3K4 methyltransferase"
+      }
+    },
+    {
+      "id": "KDM6A",
+      "name": "UTX",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.04,
+        "role": "H3K27 demethylase"
+      }
+    },
+    {
+      "id": "EZH2",
+      "name": "EZH2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "Polycomb, H3K27 methylation"
+      }
+    },
+    {
+      "id": "ARID1A",
+      "name": "ARID1A",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.04,
+        "role": "SWI/SNF chromatin remodeling"
+      }
+    },
+    {
+      "id": "CHD1",
+      "name": "CHD1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.06,
+        "role": "Chromatin remodeling, HRR-linked"
+      }
+    },
+    {
+      "id": "MYC",
+      "name": "MYC",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.15,
+        "role": "Master oncogene, amplified"
+      }
+    },
+    {
+      "id": "MYCN",
+      "name": "MYCN",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "NE differentiation driver",
+        "degree": 2
+      }
+    },
+    {
+      "id": "ERG",
+      "name": "ERG",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.45,
+        "role": "TMPRSS2-ERG fusion, ETS family",
+        "degree": 0
+      }
+    },
+    {
+      "id": "ETV1",
+      "name": "ETV1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.08,
+        "role": "ETS fusion",
+        "degree": 0
+      }
+    },
+    {
+      "id": "SPOP",
+      "name": "SPOP",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.1,
+        "role": "Ubiquitin ligase, AR stability",
+        "degree": 0
+      }
+    },
+    {
+      "id": "KRAS",
+      "name": "KRAS",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "GTPase, rare in PCa"
+      }
+    },
+    {
+      "id": "BRAF",
+      "name": "BRAF",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "RAF kinase"
+      }
+    },
+    {
+      "id": "MAP2K1",
+      "name": "MEK1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.01,
+        "role": "MEK kinase"
+      }
+    },
+    {
+      "id": "MAPK1",
+      "name": "ERK2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "ERK effector kinase"
+      }
+    },
+    {
+      "id": "AURKA",
+      "name": "Aurora Kinase A",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.05,
+        "role": "NE differentiation driver"
+      }
+    },
+    {
+      "id": "DLL3",
+      "name": "Delta-Like Ligand 3",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "NE marker, ADC target",
+        "degree": 2
+      }
+    },
+    {
+      "id": "SYP",
+      "name": "Synaptophysin",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "NE marker",
+        "degree": 1
+      }
+    },
+    {
+      "id": "CHGA",
+      "name": "Chromogranin A",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "NE marker",
+        "degree": 1
+      }
+    },
+    {
+      "id": "INSM1",
+      "name": "INSM1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "NE transcription factor",
+        "degree": 0
+      }
+    },
+    {
+      "id": "VIM",
+      "name": "Vimentin",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "Mesenchymal marker, resistance"
+      }
+    },
+    {
+      "id": "CDH1",
+      "name": "E-Cadherin",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "Epithelial marker, lost in EMT"
+      }
+    },
+    {
+      "id": "CDH2",
+      "name": "N-Cadherin",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "Mesenchymal marker",
+        "degree": 1
+      }
+    },
+    {
+      "id": "ZEB1",
+      "name": "ZEB1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "EMT transcription factor",
+        "degree": 2
+      }
+    },
+    {
+      "id": "SNAI1",
+      "name": "SNAIL",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "EMT transcription factor",
+        "degree": 2
+      }
+    },
+    {
+      "id": "TWIST1",
+      "name": "TWIST1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "EMT transcription factor",
+        "degree": 2
+      }
+    },
+    {
+      "id": "CD274",
+      "name": "PD-L1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "Immune checkpoint"
+      }
+    },
+    {
+      "id": "PDCD1",
+      "name": "PD-1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": false,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "T-cell checkpoint receptor"
+      }
+    },
+    {
+      "id": "CTLA4",
+      "name": "CTLA-4",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": false,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "T-cell checkpoint receptor"
+      }
+    },
+    {
+      "id": "B2M",
+      "name": "Beta-2-Microglobulin",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "alteration_frequency": 0.02,
+        "role": "MHC-I presentation, loss = immune evasion"
+      }
+    },
+    {
+      "id": "BCL2",
+      "name": "BCL-2",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "Anti-apoptotic"
+      }
+    },
+    {
+      "id": "BCL2L1",
+      "name": "BCL-XL",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "Anti-apoptotic"
+      }
+    },
+    {
+      "id": "MCL1",
+      "name": "MCL-1",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.03,
+        "role": "Anti-apoptotic"
+      }
+    },
+    {
+      "id": "FOLH1",
+      "name": "PSMA",
+      "type": "gene",
+      "layer": "genomic",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "alteration_frequency": 0.0,
+        "role": "Prostate-specific, Lu-177 target",
+        "degree": 2
+      }
+    },
+    {
+      "id": "pw:AR_signaling",
+      "name": "AR Signaling",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:AR_splice_variants",
+      "name": "AR-V7 Splice Variants",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "degree": 3
+      }
+    },
+    {
+      "id": "pw:GR_bypass",
+      "name": "Glucocorticoid Receptor Bypass",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {
+        "degree": 1
+      }
+    },
+    {
+      "id": "pw:PI3K_AKT_mTOR",
+      "name": "PI3K/AKT/mTOR Pathway",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:MAPK_ERK",
+      "name": "RAS/RAF/MEK/ERK Pathway",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:WNT",
+      "name": "WNT/Beta-Catenin Pathway",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:HRR",
+      "name": "Homologous Recombination Repair",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "degree": 12
+      }
+    },
+    {
+      "id": "pw:MMR",
+      "name": "Mismatch Repair",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:BER",
+      "name": "Base Excision Repair (PARP)",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:cell_cycle",
+      "name": "Cell Cycle G1/S Transition",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:apoptosis",
+      "name": "Intrinsic Apoptosis",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:EMT",
+      "name": "Epithelial-Mesenchymal Transition",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {
+        "degree": 9
+      }
+    },
+    {
+      "id": "pw:NE_diff",
+      "name": "Neuroendocrine Differentiation",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {
+        "degree": 11
+      }
+    },
+    {
+      "id": "pw:angiogenesis",
+      "name": "VEGF Angiogenesis",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:immune_evasion",
+      "name": "Immune Checkpoint Evasion",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:autophagy",
+      "name": "Autophagy",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:steroidogenesis",
+      "name": "Intratumoral Steroidogenesis",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {
+        "degree": 2
+      }
+    },
+    {
+      "id": "pw:NFkB",
+      "name": "NF-kB Inflammatory",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": true,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "pw:epigenetic",
+      "name": "Epigenetic Reprogramming",
+      "type": "pathway",
+      "layer": "pathway",
+      "disease_specific": true,
+      "healthy_shared": true,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {}
+    },
+    {
+      "id": "cell:luminal_AR",
+      "name": "AR+ Luminal Cells",
+      "type": "cell_type",
+      "layer": "cellular",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Sensitive, AR-dependent",
+        "degree": 2
+      }
+    },
+    {
+      "id": "cell:basal_progenitor",
+      "name": "Basal Progenitor Cells",
+      "type": "cell_type",
+      "layer": "cellular",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Stem-like, resistant",
+        "degree": 1
+      }
+    },
+    {
+      "id": "cell:NE_cells",
+      "name": "Neuroendocrine Cells",
+      "type": "cell_type",
+      "layer": "cellular",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Treatment-emergent, lethal",
+        "degree": 1
+      }
+    },
+    {
+      "id": "cell:EMT_mesenchymal",
+      "name": "EMT Mesenchymal Cells",
+      "type": "cell_type",
+      "layer": "cellular",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": true,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Invasive, drug-resistant",
+        "degree": 1
+      }
+    },
+    {
+      "id": "cell:immune_Tcell",
+      "name": "Tumor-Infiltrating T Cells",
+      "type": "cell_type",
+      "layer": "cellular",
+      "disease_specific": false,
+      "healthy_shared": true,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Anti-tumor immunity"
+      }
+    },
+    {
+      "id": "cell:Treg",
+      "name": "Regulatory T Cells",
+      "type": "cell_type",
+      "layer": "cellular",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Immunosuppressive",
+        "degree": 0
+      }
+    },
+    {
+      "id": "cell:MDSC",
+      "name": "Myeloid-Derived Suppressor",
+      "type": "cell_type",
+      "layer": "cellular",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Immunosuppressive",
+        "degree": 0
+      }
+    },
+    {
+      "id": "cell:CAF",
+      "name": "Cancer-Associated Fibroblasts",
+      "type": "cell_type",
+      "layer": "cellular",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Stromal support",
+        "degree": 0
+      }
+    },
+    {
+      "id": "drug:abiraterone",
+      "name": "Abiraterone",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "CYP17A1 inhibitor",
+        "targets": [
+          "AR",
+          "pw:steroidogenesis"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:enzalutamide",
+      "name": "Enzalutamide",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "AR antagonist",
+        "targets": [
+          "AR",
+          "pw:AR_signaling"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:darolutamide",
+      "name": "Darolutamide",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "AR antagonist, CNS-sparing",
+        "targets": [
+          "AR",
+          "pw:AR_signaling"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:apalutamide",
+      "name": "Apalutamide",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "AR antagonist",
+        "targets": [
+          "AR",
+          "pw:AR_signaling"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:docetaxel",
+      "name": "Docetaxel",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Microtubule stabilizer",
+        "targets": [
+          "pw:cell_cycle",
+          "cell:luminal_AR"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:cabazitaxel",
+      "name": "Cabazitaxel",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Taxane, post-docetaxel",
+        "targets": [
+          "pw:cell_cycle"
+        ],
+        "degree": 1
+      }
+    },
+    {
+      "id": "drug:cisplatin",
+      "name": "Cisplatin",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Platinum, DNA crosslinker",
+        "targets": [
+          "pw:HRR",
+          "pw:BER"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:carboplatin",
+      "name": "Carboplatin",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Platinum, DNA crosslinker",
+        "targets": [
+          "pw:HRR",
+          "pw:BER"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:etoposide",
+      "name": "Etoposide",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Topoisomerase II inhibitor",
+        "targets": [
+          "pw:cell_cycle"
+        ],
+        "degree": 1
+      }
+    },
+    {
+      "id": "drug:olaparib",
+      "name": "Olaparib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "PARP inhibitor",
+        "targets": [
+          "PARP1",
+          "PARP2",
+          "pw:BER"
+        ],
+        "degree": 3
+      }
+    },
+    {
+      "id": "drug:talazoparib",
+      "name": "Talazoparib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "PARP trapper",
+        "targets": [
+          "PARP1",
+          "PARP2",
+          "pw:BER"
+        ],
+        "degree": 3
+      }
+    },
+    {
+      "id": "drug:niraparib",
+      "name": "Niraparib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "PARP inhibitor",
+        "targets": [
+          "PARP1",
+          "PARP2",
+          "pw:BER"
+        ],
+        "degree": 3
+      }
+    },
+    {
+      "id": "drug:rucaparib",
+      "name": "Rucaparib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "PARP inhibitor",
+        "targets": [
+          "PARP1",
+          "pw:BER"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:ipatasertib",
+      "name": "Ipatasertib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "AKT inhibitor",
+        "targets": [
+          "AKT1",
+          "pw:PI3K_AKT_mTOR"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:capivasertib",
+      "name": "Capivasertib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "AKT inhibitor",
+        "targets": [
+          "AKT1",
+          "pw:PI3K_AKT_mTOR"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:everolimus",
+      "name": "Everolimus",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "mTOR inhibitor",
+        "targets": [
+          "MTOR",
+          "pw:PI3K_AKT_mTOR"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:alpelisib",
+      "name": "Alpelisib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "PI3K alpha inhibitor",
+        "targets": [
+          "PIK3CA",
+          "pw:PI3K_AKT_mTOR"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:palbociclib",
+      "name": "Palbociclib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "CDK4/6 inhibitor",
+        "targets": [
+          "CDK4",
+          "CDK6",
+          "pw:cell_cycle"
+        ],
+        "degree": 3
+      }
+    },
+    {
+      "id": "drug:abemaciclib",
+      "name": "Abemaciclib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "CDK4/6 inhibitor",
+        "targets": [
+          "CDK4",
+          "CDK6",
+          "pw:cell_cycle"
+        ],
+        "degree": 3
+      }
+    },
+    {
+      "id": "drug:pembrolizumab",
+      "name": "Pembrolizumab",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Anti-PD-1",
+        "targets": [
+          "PDCD1",
+          "pw:immune_evasion"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:nivolumab",
+      "name": "Nivolumab",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Anti-PD-1",
+        "targets": [
+          "PDCD1",
+          "pw:immune_evasion"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:ipilimumab",
+      "name": "Ipilimumab",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Anti-CTLA-4",
+        "targets": [
+          "CTLA4",
+          "pw:immune_evasion"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:cabozantinib",
+      "name": "Cabozantinib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Multi-kinase inhibitor",
+        "targets": [
+          "pw:angiogenesis",
+          "MAPK1"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:tazemetostat",
+      "name": "Tazemetostat",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "EZH2 inhibitor",
+        "targets": [
+          "EZH2",
+          "pw:epigenetic"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:vorinostat",
+      "name": "Vorinostat",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "HDAC inhibitor",
+        "targets": [
+          "pw:epigenetic"
+        ],
+        "degree": 1
+      }
+    },
+    {
+      "id": "drug:venetoclax",
+      "name": "Venetoclax",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "BCL-2 inhibitor",
+        "targets": [
+          "BCL2",
+          "pw:apoptosis"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:alisertib",
+      "name": "Alisertib",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Aurora A inhibitor",
+        "targets": [
+          "AURKA",
+          "pw:NE_diff"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:tarlatamab",
+      "name": "Tarlatamab",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "DLL3 BiTE",
+        "targets": [
+          "DLL3",
+          "pw:NE_diff"
+        ],
+        "degree": 2
+      }
+    },
+    {
+      "id": "drug:lu177_PSMA",
+      "name": "Lu-177 PSMA-617",
+      "type": "drug",
+      "layer": "chemical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": true,
+      "properties": {
+        "mechanism": "Radioligand therapy",
+        "targets": [
+          "FOLH1"
+        ],
+        "degree": 1
+      }
+    },
+    {
+      "id": "clin:PSA",
+      "name": "PSA Biomarker",
+      "type": "clinical",
+      "layer": "clinical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Serum AR activity, treatment response",
+        "degree": 1
+      }
+    },
+    {
+      "id": "clin:AR_V7",
+      "name": "AR-V7 Detection",
+      "type": "clinical",
+      "layer": "clinical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Splice variant, enza/abi resistance",
+        "degree": 1
+      }
+    },
+    {
+      "id": "clin:HRR_status",
+      "name": "HRR Mutation Status",
+      "type": "clinical",
+      "layer": "clinical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "BRCA/ATM, PARPi eligibility",
+        "degree": 1
+      }
+    },
+    {
+      "id": "clin:MSI_status",
+      "name": "MSI-H Status",
+      "type": "clinical",
+      "layer": "clinical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "MMR deficiency, immunotherapy eligibility",
+        "degree": 1
+      }
+    },
+    {
+      "id": "clin:PSMA_PET",
+      "name": "PSMA PET Imaging",
+      "type": "clinical",
+      "layer": "clinical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "Lu-177 eligibility",
+        "degree": 1
+      }
+    },
+    {
+      "id": "clin:NE_markers",
+      "name": "NE Biomarkers",
+      "type": "clinical",
+      "layer": "clinical",
+      "disease_specific": true,
+      "healthy_shared": false,
+      "resistance_node": false,
+      "escape_route": false,
+      "druggable": false,
+      "properties": {
+        "description": "SYP/CHGA, treatment-emergent NEPC",
+        "degree": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "drug:abiraterone",
+      "target": "AR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:abiraterone",
+      "target": "pw:steroidogenesis",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:enzalutamide",
+      "target": "AR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:enzalutamide",
+      "target": "pw:AR_signaling",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:darolutamide",
+      "target": "AR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:darolutamide",
+      "target": "pw:AR_signaling",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:apalutamide",
+      "target": "AR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:apalutamide",
+      "target": "pw:AR_signaling",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:docetaxel",
+      "target": "pw:cell_cycle",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:docetaxel",
+      "target": "cell:luminal_AR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:cabazitaxel",
+      "target": "pw:cell_cycle",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:cisplatin",
+      "target": "pw:HRR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:cisplatin",
+      "target": "pw:BER",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:carboplatin",
+      "target": "pw:HRR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:carboplatin",
+      "target": "pw:BER",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:etoposide",
+      "target": "pw:cell_cycle",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:olaparib",
+      "target": "PARP1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:olaparib",
+      "target": "PARP2",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:olaparib",
+      "target": "pw:BER",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:talazoparib",
+      "target": "PARP1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:talazoparib",
+      "target": "PARP2",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:talazoparib",
+      "target": "pw:BER",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:niraparib",
+      "target": "PARP1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:niraparib",
+      "target": "PARP2",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:niraparib",
+      "target": "pw:BER",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:rucaparib",
+      "target": "PARP1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:rucaparib",
+      "target": "pw:BER",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:ipatasertib",
+      "target": "AKT1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:ipatasertib",
+      "target": "pw:PI3K_AKT_mTOR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:capivasertib",
+      "target": "AKT1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:capivasertib",
+      "target": "pw:PI3K_AKT_mTOR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:everolimus",
+      "target": "MTOR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:everolimus",
+      "target": "pw:PI3K_AKT_mTOR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:alpelisib",
+      "target": "PIK3CA",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:alpelisib",
+      "target": "pw:PI3K_AKT_mTOR",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:palbociclib",
+      "target": "CDK4",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:palbociclib",
+      "target": "CDK6",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:palbociclib",
+      "target": "pw:cell_cycle",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:abemaciclib",
+      "target": "CDK4",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:abemaciclib",
+      "target": "CDK6",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:abemaciclib",
+      "target": "pw:cell_cycle",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:pembrolizumab",
+      "target": "PDCD1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:pembrolizumab",
+      "target": "pw:immune_evasion",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:nivolumab",
+      "target": "PDCD1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:nivolumab",
+      "target": "pw:immune_evasion",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:ipilimumab",
+      "target": "CTLA4",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:ipilimumab",
+      "target": "pw:immune_evasion",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:cabozantinib",
+      "target": "pw:angiogenesis",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:cabozantinib",
+      "target": "MAPK1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:tazemetostat",
+      "target": "EZH2",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:tazemetostat",
+      "target": "pw:epigenetic",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:vorinostat",
+      "target": "pw:epigenetic",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:venetoclax",
+      "target": "BCL2",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:venetoclax",
+      "target": "pw:apoptosis",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:alisertib",
+      "target": "AURKA",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:alisertib",
+      "target": "pw:NE_diff",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:tarlatamab",
+      "target": "DLL3",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:tarlatamab",
+      "target": "pw:NE_diff",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "drug:lu177_PSMA",
+      "target": "FOLH1",
+      "type": "targets",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": "DrugBank/literature"
+    },
+    {
+      "source": "AR",
+      "target": "FOXA1",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": "Reactome"
+    },
+    {
+      "source": "AR",
+      "target": "NCOR1",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": "Reactome"
+    },
+    {
+      "source": "AR",
+      "target": "HOXB13",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": "Reactome"
+    },
+    {
+      "source": "AR",
+      "target": "KLK3",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": "Reactome"
+    },
+    {
+      "source": "AR",
+      "target": "TMPRSS2",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": "Reactome"
+    },
+    {
+      "source": "AR",
+      "target": "NKX3_1",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": "Reactome"
+    },
+    {
+      "source": "AR",
+      "target": "pw:AR_signaling",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.99,
+      "source_db": ""
+    },
+    {
+      "source": "pw:AR_signaling",
+      "target": "pw:cell_cycle",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "pw:AR_signaling",
+      "target": "pw:apoptosis",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "pw:AR_signaling",
+      "target": "pw:EMT",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.7,
+      "source_db": ""
+    },
+    {
+      "source": "AR",
+      "target": "pw:AR_splice_variants",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "pw:AR_splice_variants",
+      "target": "pw:AR_signaling",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "pw:GR_bypass",
+      "target": "pw:AR_signaling",
+      "type": "bypasses",
+      "weight": 1.0,
+      "confidence": 0.75,
+      "source_db": ""
+    },
+    {
+      "source": "pw:steroidogenesis",
+      "target": "AR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "TP53",
+      "target": "pw:apoptosis",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "TP53",
+      "target": "pw:cell_cycle",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "RB1",
+      "target": "pw:cell_cycle",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "MDM2",
+      "target": "TP53",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "TP53",
+      "target": "pw:NE_diff",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.8,
+      "source_db": ""
+    },
+    {
+      "source": "RB1",
+      "target": "pw:NE_diff",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.8,
+      "source_db": ""
+    },
+    {
+      "source": "PTEN",
+      "target": "PIK3CA",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "PTEN",
+      "target": "pw:PI3K_AKT_mTOR",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "PIK3CA",
+      "target": "AKT1",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "PIK3CB",
+      "target": "AKT1",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "AKT1",
+      "target": "MTOR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "AKT1",
+      "target": "pw:apoptosis",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "TSC1",
+      "target": "MTOR",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "TSC2",
+      "target": "MTOR",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "pw:PI3K_AKT_mTOR",
+      "target": "pw:AR_signaling",
+      "type": "crosstalk",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "BRCA2",
+      "target": "pw:HRR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "BRCA1",
+      "target": "pw:HRR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "ATM",
+      "target": "pw:HRR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "ATR",
+      "target": "pw:HRR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "RAD51",
+      "target": "pw:HRR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "PALB2",
+      "target": "pw:HRR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "FANCA",
+      "target": "pw:HRR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "PARP1",
+      "target": "pw:BER",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "CDK12",
+      "target": "pw:HRR",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "CHEK1",
+      "target": "pw:cell_cycle",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "CHEK2",
+      "target": "pw:cell_cycle",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "ATM",
+      "target": "CHEK2",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "ATR",
+      "target": "CHEK1",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "pw:HRR",
+      "target": "pw:BER",
+      "type": "synthetic_lethal",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "MSH2",
+      "target": "pw:MMR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "MSH6",
+      "target": "pw:MMR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "MLH1",
+      "target": "pw:MMR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "APC",
+      "target": "CTNNB1",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "CTNNB1",
+      "target": "pw:WNT",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "RNF43",
+      "target": "pw:WNT",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "pw:WNT",
+      "target": "pw:EMT",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8,
+      "source_db": ""
+    },
+    {
+      "source": "pw:WNT",
+      "target": "pw:cell_cycle",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8,
+      "source_db": ""
+    },
+    {
+      "source": "KRAS",
+      "target": "BRAF",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "BRAF",
+      "target": "MAP2K1",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "MAP2K1",
+      "target": "MAPK1",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "MAPK1",
+      "target": "pw:MAPK_ERK",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "pw:MAPK_ERK",
+      "target": "pw:cell_cycle",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "ZEB1",
+      "target": "pw:EMT",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "ZEB1",
+      "target": "CDH1",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "SNAI1",
+      "target": "pw:EMT",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "SNAI1",
+      "target": "CDH1",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "TWIST1",
+      "target": "pw:EMT",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "TWIST1",
+      "target": "CDH1",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "pw:EMT",
+      "target": "VIM",
+      "type": "upregulates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "pw:EMT",
+      "target": "CDH2",
+      "type": "upregulates",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "pw:EMT",
+      "target": "pw:AR_signaling",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.75,
+      "source_db": ""
+    },
+    {
+      "source": "AURKA",
+      "target": "MYCN",
+      "type": "stabilizes",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "MYCN",
+      "target": "pw:NE_diff",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "pw:NE_diff",
+      "target": "SYP",
+      "type": "upregulates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "pw:NE_diff",
+      "target": "CHGA",
+      "type": "upregulates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "pw:NE_diff",
+      "target": "DLL3",
+      "type": "upregulates",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "pw:NE_diff",
+      "target": "AR",
+      "type": "downregulates",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "EZH2",
+      "target": "pw:epigenetic",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "EZH2",
+      "target": "pw:NE_diff",
+      "type": "promotes",
+      "weight": 1.0,
+      "confidence": 0.8,
+      "source_db": ""
+    },
+    {
+      "source": "cell:luminal_AR",
+      "target": "pw:AR_signaling",
+      "type": "depends_on",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "cell:NE_cells",
+      "target": "pw:NE_diff",
+      "type": "characterized_by",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "cell:EMT_mesenchymal",
+      "target": "pw:EMT",
+      "type": "characterized_by",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "cell:basal_progenitor",
+      "target": "pw:WNT",
+      "type": "depends_on",
+      "weight": 1.0,
+      "confidence": 0.8,
+      "source_db": ""
+    },
+    {
+      "source": "CD274",
+      "target": "pw:immune_evasion",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "B2M",
+      "target": "pw:immune_evasion",
+      "type": "when_lost",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "pw:MMR",
+      "target": "pw:immune_evasion",
+      "type": "when_deficient",
+      "weight": 1.0,
+      "confidence": 0.85,
+      "source_db": ""
+    },
+    {
+      "source": "AR",
+      "target": "clin:PSA",
+      "type": "produces",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "pw:AR_splice_variants",
+      "target": "clin:AR_V7",
+      "type": "detected_by",
+      "weight": 1.0,
+      "confidence": 0.9,
+      "source_db": ""
+    },
+    {
+      "source": "pw:HRR",
+      "target": "clin:HRR_status",
+      "type": "assessed_by",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "pw:MMR",
+      "target": "clin:MSI_status",
+      "type": "assessed_by",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    },
+    {
+      "source": "FOLH1",
+      "target": "clin:PSMA_PET",
+      "type": "detected_by",
+      "weight": 1.0,
+      "confidence": 0.95,
+      "source_db": ""
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+  Loaded velocity from ../results/velocity_star_latent_time.csv: 20 bins, sum=1.000
+
+THREE-MECHANISM ODE VALIDATION
+=================================================================
+All trials use the SAME parameters. No per-trial overrides.
+
+  Control: TTP=1.6mo
+
+  --- TAX-327: Docetaxel monotherapy ---
+  TTP=5.2mo  HR=0.314  nadir=85.8%
+  Clinical: OS HR=0.76. Our TTP HR=0.314. OUT OF RANGE
+
+  --- PREVAIL: Enzalutamide monotherapy ---
+  PFS=13.0mo  State@end: {'AR-dep': 0.011, 'AR-mut': 0.0013, 'AR-V7': 0.0031, 'NE': 0.9846}
+  Clinical: PFS=18.0mo. Our=13.0mo. OUT OF RANGE
+
+  --- LATITUDE: Abiraterone + ADT vs ADT alone ---
+  ADT alone: TTP=12.5mo
+  Abi+ADT: TTP=11.5mo  HR=1.080
+  Clinical: OS HR=0.66. Our=1.080.
+
+  --- CHAARTED: Docetaxel + ADT vs ADT alone ---
+  ADT alone: TTP=12.5mo
+  Doc+ADT: TTP=12.9mo  HR=0.969
+  Clinical: OS HR=0.61. Our=0.969.
+
+  --- PROfound: Olaparib vs Enza in BRCA+ patients ---
+  Enza: TTP=13.0mo
+  Olaparib: TTP=5.7mo  HR=2.276
+  Clinical: rPFS HR=0.49. Our=2.276.
+
+  --- TALAPRO-2: Tala+Enza vs Enza ---
+  Enza alone: TTP=13.0mo
+  Tala+Enza: no progression
+  Cannot compute HR
+
+=================================================================
+VALIDATION SUMMARY
+=================================================================
+Trial          Our HR/PFS   Clinical Status         
+--------------------------------------------------
+TAX-327             0.314      0.760 CHECK          
+PREVAIL            13.0mo     18.0mo PASS           
+LATITUDE            1.080      0.660 CHECK          
+CHAARTED            0.969      0.610 CHECK          
+PROfound            2.276      0.490 CHECK          
+TALAPRO-2            None      0.630 NO PROGRESSION 
+
+  Passed: 1/6
+  Model: THREE-mechanism 80-compartment ODE
+  Parameters: ONE set, NO per-trial overrides
+  Estimated params: alpha_r=0.4, alpha_ind=0.005, emax_correction=0.18

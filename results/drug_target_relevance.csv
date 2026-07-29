@@ -1,0 +1,249 @@
+drug,targets,relevance_score,category,reasons
+Camptothecin,TOP1,1,POSSIBLY_RELEVANT,TOP1 prostate-expressed (45.7x)
+Vinblastine,Microtubule destabiliser,0,NOT_RELEVANT,No prostate relevance found
+Cisplatin,DNA crosslinker,0,NOT_RELEVANT,No prostate relevance found
+Cytarabine,Antimetabolite,0,NOT_RELEVANT,No prostate relevance found
+Docetaxel,Microtubule stabiliser,0,NOT_RELEVANT,No prostate relevance found
+Methotrexate,Antimetabolite,0,NOT_RELEVANT,No prostate relevance found
+Tretinoin,Retinoic acid,0,NOT_RELEVANT,No prostate relevance found
+Gefitinib,EGFR,1,POSSIBLY_RELEVANT,EGFR prostate-expressed (27.1x)
+Navitoclax,"BCL2,BCL-XL,BCL-W",1,POSSIBLY_RELEVANT,BCL2 prostate-expressed (7.7x)
+Vorinostat,"HDAC inhibitor Class I,IIa,IIb,IV",0,NOT_RELEVANT,No prostate relevance found
+Nilotinib,ABL,0,NOT_RELEVANT,No prostate relevance found
+Refametinib,"MEK1,MEK2",0,NOT_RELEVANT,No prostate relevance found
+Temsirolimus,MTOR,2,RELEVANT,MTOR prostate-expressed (16.6x); MTOR in prostate pathway
+Olaparib,"PARP1,PARP2",1,POSSIBLY_RELEVANT,PARP1 prostate-expressed (32.0x)
+Veliparib,"PARP1,PARP2",1,POSSIBLY_RELEVANT,PARP1 prostate-expressed (32.0x)
+Bosutinib,"SRC,ABL,TEC",1,POSSIBLY_RELEVANT,SRC prostate-expressed (51.5x)
+Lenalidomide,CRBN,1,POSSIBLY_RELEVANT,CRBN prostate-expressed (24.9x)
+Axitinib,"PDGFR,KIT,VEGFR",1,POSSIBLY_RELEVANT,KIT prostate-expressed (8.2x)
+AZD7762,"CHEK1,CHEK2",2,RELEVANT,CHEK1 prostate-expressed (2.3x); CHEK1 in prostate pathway
+GW441756,NTRK1,1,POSSIBLY_RELEVANT,NTRK1 prostate-expressed (5.7x)
+Lestaurtinib,"FLT3,JAK2,NTRK1,NTRK2,NTRK3",2,RELEVANT,JAK2 prostate-expressed (8.3x); JAK2 in prostate pathway
+SB216763,"GSK3A,GSK3B",1,POSSIBLY_RELEVANT,GSK3A prostate-expressed (44.1x)
+Tanespimycin,HSP90,0,NOT_RELEVANT,No prostate relevance found
+Motesanib,"VEGFR,RET,KIT,PDGFR",1,POSSIBLY_RELEVANT,KIT prostate-expressed (8.2x)
+KU-55933,ATM,2,RELEVANT,ATM prostate-expressed (7.1x); ATM in prostate pathway
+Elesclomol,HSP90,0,NOT_RELEVANT,No prostate relevance found
+Afatinib,"EGFR,ERBB2",1,POSSIBLY_RELEVANT,EGFR prostate-expressed (27.1x)
+Vismodegib,SMO,1,POSSIBLY_RELEVANT,SMO prostate-expressed (38.6x)
+Staurosporine,Broad spectrum kinase inhibitor,0,NOT_RELEVANT,No prostate relevance found
+PLX-4720,BRAF,2,RELEVANT,BRAF prostate-expressed (13.5x); BRAF in prostate pathway
+BX795,"TBK1,PDK1 (PDPK1),IKK,AURKB,AURKC",1,POSSIBLY_RELEVANT,TBK1 prostate-expressed (24.5x)
+NU7441,DNAPK,0,NOT_RELEVANT,No prostate relevance found
+SL0101,"RSK,AURKB,PIM1,PIM3",1,POSSIBLY_RELEVANT,PIM1 prostate-expressed (31.4x)
+Doramapimod,"p38,JNK2",0,NOT_RELEVANT,No prostate relevance found
+JNK Inhibitor VIII,JNK,0,NOT_RELEVANT,No prostate relevance found
+Wee1 Inhibitor,"WEE1,CHEK1",2,RELEVANT,CHEK1 prostate-expressed (2.3x); CHEK1 in prostate pathway
+Nutlin-3a (-),MDM2,2,RELEVANT,MDM2 prostate-expressed (13.5x); MDM2 in prostate pathway
+Mirin,MRE11,1,POSSIBLY_RELEVANT,MRE11 prostate-expressed (11.3x)
+PD173074,"FGFR1,FGFR2,FGFR3",2,RELEVANT,FGFR1 prostate-expressed (66.3x); FGFR1 in prostate pathway
+ZM447439,"AURKA,AURKB",0,NOT_RELEVANT,No prostate relevance found
+Alisertib,AURKA,0,NOT_RELEVANT,No prostate relevance found
+RO-3306,CDK1,0,NOT_RELEVANT,No prostate relevance found
+MK-2206,"AKT1,AKT2",2,RELEVANT,AKT1 prostate-expressed (71.5x); AKT1 in prostate pathway
+Palbociclib,"CDK4,CDK6",2,RELEVANT,CDK4 prostate-expressed (53.3x); CDK4 in prostate pathway
+Dactolisib,"PI3K (class 1),MTORC1,MTORC2",0,NOT_RELEVANT,No prostate relevance found
+Pictilisib,PI3K (class 1),0,NOT_RELEVANT,No prostate relevance found
+AZD8055,"MTORC1,MTORC2",0,NOT_RELEVANT,No prostate relevance found
+PD0325901,"MEK1,MEK2",0,NOT_RELEVANT,No prostate relevance found
+SB590885,BRAF,2,RELEVANT,BRAF prostate-expressed (13.5x); BRAF in prostate pathway
+Selumetinib,"MEK1,MEK2",0,NOT_RELEVANT,No prostate relevance found
+CCT007093,PPM1D,1,POSSIBLY_RELEVANT,PPM1D prostate-expressed (8.3x)
+Obatoclax Mesylate,"BCL2,BCL-XL,BCL-W,MCL1",1,POSSIBLY_RELEVANT,BCL2 prostate-expressed (7.7x)
+EHT-1864,"RAC1,RAC2,RAC3",1,POSSIBLY_RELEVANT,RAC1 prostate-expressed (190.2x)
+Avagacestat,"Amyloid beta20,Amyloid beta40",0,NOT_RELEVANT,No prostate relevance found
+5-Fluorouracil,Antimetabolite (DNA & RNA),0,NOT_RELEVANT,No prostate relevance found
+Dasatinib,"ABL,SRC,Ephrins,PDGFR,KIT",1,POSSIBLY_RELEVANT,SRC prostate-expressed (51.5x)
+Paclitaxel,Microtubule stabiliser,0,NOT_RELEVANT,No prostate relevance found
+Crizotinib,"MET,ALK,ROS1",1,POSSIBLY_RELEVANT,MET prostate-expressed (7.5x)
+Rapamycin,MTORC1,0,NOT_RELEVANT,No prostate relevance found
+Sorafenib,"PDGFR,KIT,VEGFR,RAF",1,POSSIBLY_RELEVANT,KIT prostate-expressed (8.2x)
+BI-2536,"PLK1,PLK2,PLK3",1,POSSIBLY_RELEVANT,PLK1 prostate-expressed (3.7x)
+Irinotecan,TOP1,1,POSSIBLY_RELEVANT,TOP1 prostate-expressed (45.7x)
+Oxaliplatin,DNA alkylating agent,0,NOT_RELEVANT,No prostate relevance found
+BMS-536924,"IGF1R,IR",1,POSSIBLY_RELEVANT,IGF1R prostate-expressed (23.5x)
+GSK1904529A,"IGF1R,IR",1,POSSIBLY_RELEVANT,IGF1R prostate-expressed (23.5x)
+Tozasertib,"AURKA,AURKB,AURKC,others",1,POSSIBLY_RELEVANT,AURKC prostate-expressed (2.2x)
+PF-4708671,S6K1,0,NOT_RELEVANT,No prostate relevance found
+PRIMA-1MET,TP53 activation,0,NOT_RELEVANT,No prostate relevance found
+Serdemetan,MDM2,2,RELEVANT,MDM2 prostate-expressed (13.5x); MDM2 in prostate pathway
+TW 37,"BCL2,BCL-XL,MCL1",1,POSSIBLY_RELEVANT,BCL2 prostate-expressed (7.7x)
+Erlotinib,EGFR,1,POSSIBLY_RELEVANT,EGFR prostate-expressed (27.1x)
+CCT-018159,HSP90,0,NOT_RELEVANT,No prostate relevance found
+Rucaparib,"PARP1,PARP2",1,POSSIBLY_RELEVANT,PARP1 prostate-expressed (32.0x)
+Niraparib,"PARP1,PARP2",1,POSSIBLY_RELEVANT,PARP1 prostate-expressed (32.0x)
+MK-1775,"WEE1,PLK1",1,POSSIBLY_RELEVANT,WEE1 prostate-expressed (12.9x)
+Dinaciclib,"CDK1,CDK2,CDK5,CDK9",1,POSSIBLY_RELEVANT,CDK2 prostate-expressed (22.6x)
+Gemcitabine,Pyrimidine antimetabolite,0,NOT_RELEVANT,No prostate relevance found
+Bortezomib,Proteasome,0,NOT_RELEVANT,No prostate relevance found
+GSK269962A,"ROCK1,ROCK2",1,POSSIBLY_RELEVANT,ROCK1 prostate-expressed (17.2x)
+SB505124,"TGFBR1,ACVR1B,ACVR1C",1,POSSIBLY_RELEVANT,TGFBR1 prostate-expressed (17.0x)
+Tamoxifen,ESR1,1,POSSIBLY_RELEVANT,ESR1 prostate-expressed (5.1x)
+Fulvestrant,ESR,0,NOT_RELEVANT,No prostate relevance found
+EPZ004777,DOT1L,1,POSSIBLY_RELEVANT,DOT1L prostate-expressed (15.3x)
+YK-4-279,RNA helicase A,0,NOT_RELEVANT,No prostate relevance found
+Piperlongumine,Induces reactive oxygen species,0,NOT_RELEVANT,No prostate relevance found
+Daporinad,NAMPT,1,POSSIBLY_RELEVANT,NAMPT prostate-expressed (48.1x)
+BMS-345541,"IKK-1,IKK-2",0,NOT_RELEVANT,No prostate relevance found
+AZ960,"JAK2,JAK3",2,RELEVANT,JAK2 prostate-expressed (8.3x); JAK2 in prostate pathway
+Talazoparib,"PARP1,PARP2",1,POSSIBLY_RELEVANT,PARP1 prostate-expressed (32.0x)
+XAV939,"TNKS1,TNKS2",1,POSSIBLY_RELEVANT,TNKS2 prostate-expressed (28.0x)
+Trametinib,"MEK1,MEK2",0,NOT_RELEVANT,No prostate relevance found
+Dabrafenib,BRAF,2,RELEVANT,BRAF prostate-expressed (13.5x); BRAF in prostate pathway
+Temozolomide,DNA alkylating agent,0,NOT_RELEVANT,No prostate relevance found
+Bleomycin (50 uM),dsDNA break induction,0,NOT_RELEVANT,No prostate relevance found
+AZD5438,CDK2,1,POSSIBLY_RELEVANT,CDK2 prostate-expressed (22.6x)
+IAP_5620,IAP,0,NOT_RELEVANT,No prostate relevance found
+AZD2014,"mTORC1,mTORC2",0,NOT_RELEVANT,No prostate relevance found
+AZD1208,"PIM1,PIM2,PIM3",1,POSSIBLY_RELEVANT,PIM1 prostate-expressed (31.4x)
+AZD1332,"NTRK1,NTRK2,NTRK3",1,POSSIBLY_RELEVANT,NTRK1 prostate-expressed (5.7x)
+SN-38,TOP1,1,POSSIBLY_RELEVANT,TOP1 prostate-expressed (45.7x)
+Bicalutamide,AR,2,RELEVANT,AR prostate-expressed (21.1x); AR in prostate pathway
+Ruxolitinib,"JAK1,JAK2",2,RELEVANT,JAK1 prostate-expressed (47.7x); JAK1 in prostate pathway
+Linsitinib,IGF1R,1,POSSIBLY_RELEVANT,IGF1R prostate-expressed (23.5x)
+Epirubicin,Anthracycline,0,NOT_RELEVANT,No prostate relevance found
+Cyclophosphamide,Alkylating agent,0,NOT_RELEVANT,No prostate relevance found
+Pevonedistat,NAE,0,NOT_RELEVANT,No prostate relevance found
+Sapitinib,"EGFR,ERBB2,ERBB3",1,POSSIBLY_RELEVANT,EGFR prostate-expressed (27.1x)
+Uprosertib,"AKT1,AKT2,AKT3",2,RELEVANT,AKT1 prostate-expressed (71.5x); AKT1 in prostate pathway
+LCL161,"XIAP,IAP1,IAP2",1,POSSIBLY_RELEVANT,XIAP prostate-expressed (11.6x)
+Lapatinib,"EGFR,ERBB2",1,POSSIBLY_RELEVANT,EGFR prostate-expressed (27.1x)
+Luminespib,HSP90,0,NOT_RELEVANT,No prostate relevance found
+Alpelisib,PI3Kalpha,0,NOT_RELEVANT,No prostate relevance found
+Taselisib,PI3K (beta sparing),0,NOT_RELEVANT,No prostate relevance found
+EPZ5676,DOT1L,1,POSSIBLY_RELEVANT,DOT1L prostate-expressed (15.3x)
+SCH772984,"ERK1,ERK2",0,NOT_RELEVANT,No prostate relevance found
+IWP-2,PORCN,1,POSSIBLY_RELEVANT,PORCN prostate-expressed (14.1x)
+Leflunomide,Pyrimidine synthesis inhibitor,0,NOT_RELEVANT,No prostate relevance found
+Bromosporine,"CECR2,BRD2,BRD4,BRD9",1,POSSIBLY_RELEVANT,BRD2 prostate-expressed (136.1x)
+SGC-CBP30,"EP300,CBP",1,POSSIBLY_RELEVANT,EP300 prostate-expressed (29.2x)
+GSK-LSD1,KDM1,0,NOT_RELEVANT,No prostate relevance found
+BDOCA000347a,"BRPF1,BRPF2,BRPF3",1,POSSIBLY_RELEVANT,BRPF1 prostate-expressed (14.8x)
+BDF00022089a,"BRPF1,BRPF2,BRPF3",1,POSSIBLY_RELEVANT,BRPF1 prostate-expressed (14.8x)
+BDILV000379a,"BAZ2A,BAZ2B",1,POSSIBLY_RELEVANT,BAZ2A prostate-expressed (41.5x)
+Entinostat,"HDAC1,HDAC3",1,POSSIBLY_RELEVANT,HDAC1 prostate-expressed (108.5x)
+OSI-027,"MTORC1,MTORC2",0,NOT_RELEVANT,No prostate relevance found
+LGK974,PORCN,1,POSSIBLY_RELEVANT,PORCN prostate-expressed (14.1x)
+VE-822,ATR,1,POSSIBLY_RELEVANT,ATR prostate-expressed (8.3x)
+WZ4003,"NUAK1,NUAK2",1,POSSIBLY_RELEVANT,NUAK1 prostate-expressed (12.0x)
+CZC24832,PI3Kgamma,0,NOT_RELEVANT,No prostate relevance found
+AZD5582,"XIAP,cIAP",1,POSSIBLY_RELEVANT,XIAP prostate-expressed (11.6x)
+GSK2606414,PERK,0,NOT_RELEVANT,No prostate relevance found
+PFI3,"Polybromo 1,SMARCA4,SMARCA2",1,POSSIBLY_RELEVANT,SMARCA4 prostate-expressed (40.2x)
+PCI-34051,"HDAC8,HDAC6,HDAC1",1,POSSIBLY_RELEVANT,HDAC8 prostate-expressed (7.7x)
+Wnt-C59,PORCN,1,POSSIBLY_RELEVANT,PORCN prostate-expressed (14.1x)
+I-BET-762,"BRD2,BRD3,BRD4",1,POSSIBLY_RELEVANT,BRD2 prostate-expressed (136.1x)
+RVX-208,BRD4,1,POSSIBLY_RELEVANT,BRD4 prostate-expressed (29.8x)
+OTX015,"BRD2,BRD3,BRD4",1,POSSIBLY_RELEVANT,BRD2 prostate-expressed (136.1x)
+GSK343,EZH2,1,POSSIBLY_RELEVANT,EZH2 prostate-expressed (3.3x)
+ML323,"USP1,UAF1",1,POSSIBLY_RELEVANT,USP1 prostate-expressed (17.0x)
+Entospletinib,SYK,1,POSSIBLY_RELEVANT,SYK prostate-expressed (7.1x)
+PRT062607,SYK,1,POSSIBLY_RELEVANT,SYK prostate-expressed (7.1x)
+Ribociclib,"CDK4,CDK6",2,RELEVANT,CDK4 prostate-expressed (53.3x); CDK4 in prostate pathway
+AGI-6780,IDH2 R140Q mutant,0,NOT_RELEVANT,No prostate relevance found
+Picolinici-acid,Inflammatory related,0,NOT_RELEVANT,No prostate relevance found
+AZD5153,BRD4,1,POSSIBLY_RELEVANT,BRD4 prostate-expressed (29.8x)
+CDK9_5576,CDK9,1,POSSIBLY_RELEVANT,CDK9 prostate-expressed (85.7x)
+CDK9_5038,CDK9,1,POSSIBLY_RELEVANT,CDK9 prostate-expressed (85.7x)
+Eg5_9814,KSP11,0,NOT_RELEVANT,No prostate relevance found
+ERK_2440,"ERK1,ERK2",0,NOT_RELEVANT,No prostate relevance found
+ERK_6604,"ERK1,ERK2",0,NOT_RELEVANT,No prostate relevance found
+IRAK4_4710,IRAK4,1,POSSIBLY_RELEVANT,IRAK4 prostate-expressed (13.9x)
+JAK1_8709,JAK1,2,RELEVANT,JAK1 prostate-expressed (47.7x); JAK1 in prostate pathway
+AZD5991,MCL1,1,POSSIBLY_RELEVANT,MCL1 prostate-expressed (149.1x)
+PAK_5339,"PAK1,PAK2",1,POSSIBLY_RELEVANT,PAK1 prostate-expressed (30.0x)
+TAF1_5496,TAF1,1,POSSIBLY_RELEVANT,TAF1 prostate-expressed (13.8x)
+ULK1_4989,ULK1,1,POSSIBLY_RELEVANT,ULK1 prostate-expressed (65.4x)
+VSP34_8731,VSP34,0,NOT_RELEVANT,No prostate relevance found
+IGF1R_3801,IGFR1,0,NOT_RELEVANT,No prostate relevance found
+JAK_8517,"JAK1,JAK2",2,RELEVANT,JAK1 prostate-expressed (47.7x); JAK1 in prostate pathway
+GSK2256098C,FAK1,0,NOT_RELEVANT,No prostate relevance found
+GSK2276186C,"JAK1,JAK2,JAK3",2,RELEVANT,JAK1 prostate-expressed (47.7x); JAK1 in prostate pathway
+GSK2110183B,"AKT1,AKT2,AKT3",2,RELEVANT,AKT1 prostate-expressed (71.5x); AKT1 in prostate pathway
+GSK626616AC,DYRK1A,1,POSSIBLY_RELEVANT,DYRK1A prostate-expressed (21.5x)
+GSK3337463A,NIK,0,NOT_RELEVANT,No prostate relevance found
+GSK2830371A,PPM1D,1,POSSIBLY_RELEVANT,PPM1D prostate-expressed (8.3x)
+LMB_AB1,"ADRA1A,ADRB1",1,POSSIBLY_RELEVANT,ADRA1A prostate-expressed (2.2x)
+LMB_AB2,GADD34,0,NOT_RELEVANT,No prostate relevance found
+LMB_AB3,PPP1R15B,1,POSSIBLY_RELEVANT,PPP1R15B prostate-expressed (27.9x)
+AZD4547,"FGFR1,FGFR2,FGFR3",2,RELEVANT,FGFR1 prostate-expressed (66.3x); FGFR1 in prostate pathway
+Ibrutinib,BTK,1,POSSIBLY_RELEVANT,BTK prostate-expressed (2.6x)
+Topotecan,TOP1,1,POSSIBLY_RELEVANT,TOP1 prostate-expressed (45.7x)
+Mitoxantrone,TOP2,0,NOT_RELEVANT,No prostate relevance found
+Dactinomycin,RNA polymerase,0,NOT_RELEVANT,No prostate relevance found
+Bleomycin,dsDNA break induction,0,NOT_RELEVANT,No prostate relevance found
+Fludarabine,Antimetabolite,0,NOT_RELEVANT,No prostate relevance found
+Dacarbazine,CP11A,0,NOT_RELEVANT,No prostate relevance found
+Romidepsin,"HDAC1,HDAC2,HDAC3,HDAC8",1,POSSIBLY_RELEVANT,HDAC1 prostate-expressed (108.5x)
+LMP744,TOP1,1,POSSIBLY_RELEVANT,TOP1 prostate-expressed (45.7x)
+Sabutoclax,"BCL2,BCL-XL,BFL1,MCL1",1,POSSIBLY_RELEVANT,BCL2 prostate-expressed (7.7x)
+LY2109761,TGFB1,1,POSSIBLY_RELEVANT,TGFB1 prostate-expressed (61.0x)
+OF-1,"BRPF1B,BRPF2",0,NOT_RELEVANT,No prostate relevance found
+MN-64,"TNKS1,TNKS2",1,POSSIBLY_RELEVANT,TNKS2 prostate-expressed (28.0x)
+KRAS (G12C) Inhibitor-12,KRAS (G12C),0,NOT_RELEVANT,No prostate relevance found
+MG-132,"Proteasome,CAPN1",1,POSSIBLY_RELEVANT,CAPN1 prostate-expressed (118.4x)
+BDP-00009066,MRCKB_HUMAN,0,NOT_RELEVANT,No prostate relevance found
+Buparlisib,"PI3Kalpha,PI3Kdelta,PI3Kbeta,PI3Kgamma",0,NOT_RELEVANT,No prostate relevance found
+Ulixertinib,"ERK1,ERK2",0,NOT_RELEVANT,No prostate relevance found
+Venetoclax,BCL2,1,POSSIBLY_RELEVANT,BCL2 prostate-expressed (7.7x)
+ABT737,"BCL2,BCL-XL,BCL-W,BCL-B,BFL1",1,POSSIBLY_RELEVANT,BCL2 prostate-expressed (7.7x)
+Afuresertib,"AKT1,AKT2,AKT3",2,RELEVANT,AKT1 prostate-expressed (71.5x); AKT1 in prostate pathway
+AGI-5198,IDH1 (R132H),0,NOT_RELEVANT,No prostate relevance found
+AZD3759,EGFR,1,POSSIBLY_RELEVANT,EGFR prostate-expressed (27.1x)
+AZD5363,"AKT1,AKT2,AKT3,ROCK2",2,RELEVANT,AKT1 prostate-expressed (71.5x); AKT1 in prostate pathway
+AZD6738,ATR,1,POSSIBLY_RELEVANT,ATR prostate-expressed (8.3x)
+AZD8186,"PI3Kalpha,PI3Kbeta",0,NOT_RELEVANT,No prostate relevance found
+Osimertinib,EGFR,1,POSSIBLY_RELEVANT,EGFR prostate-expressed (27.1x)
+Cediranib,"VEGFR,FLT1,FLT2,FLT3,FLT4,KIT,PDGFRB",1,POSSIBLY_RELEVANT,FLT1 prostate-expressed (13.6x)
+Ipatasertib,"AKT1,AKT,AKT3",2,RELEVANT,AKT1 prostate-expressed (71.5x); AKT1 in prostate pathway
+GDC0810,"ESR1,ESR2",1,POSSIBLY_RELEVANT,ESR1 prostate-expressed (5.1x)
+GNE-317,PI3Kalpha,0,NOT_RELEVANT,No prostate relevance found
+GSK2578215A,LRRK2,1,POSSIBLY_RELEVANT,LRRK2 prostate-expressed (3.7x)
+I-BRD9,BRD9,1,POSSIBLY_RELEVANT,BRD9 prostate-expressed (24.7x)
+Telomerase Inhibitor IX,Telomerase,0,NOT_RELEVANT,No prostate relevance found
+MIRA-1,TP53,2,RELEVANT,TP53 prostate-expressed (20.3x); TP53 in prostate pathway
+NVP-ADW742,IGF1R,1,POSSIBLY_RELEVANT,IGF1R prostate-expressed (23.5x)
+P22077,"USP7,USP47",2,RELEVANT,USP7 prostate-expressed (48.9x); USP7 in prostate pathway
+Savolitinib,MET,1,POSSIBLY_RELEVANT,MET prostate-expressed (7.5x)
+UMI-77,MCL1,1,POSSIBLY_RELEVANT,MCL1 prostate-expressed (149.1x)
+WIKI4,"TNKS1,TNKS2",1,POSSIBLY_RELEVANT,TNKS2 prostate-expressed (28.0x)
+Sepantronium bromide,BIRC5,0,NOT_RELEVANT,No prostate relevance found
+MIM1,MCL1,1,POSSIBLY_RELEVANT,MCL1 prostate-expressed (149.1x)
+WEHI-539,BCL-XL,0,NOT_RELEVANT,No prostate relevance found
+ICL-SIRT078,SIR2,0,NOT_RELEVANT,No prostate relevance found
+UNC0638,"G9A,GLP",0,NOT_RELEVANT,No prostate relevance found
+AGK2,"BAZ2A,BAZ2B",1,POSSIBLY_RELEVANT,BAZ2A prostate-expressed (41.5x)
+Foretinib,"MET,KDR,TIE2,VEGFR3/FLT4,RON,PDGFR,FGFR1,EGFR",2,RELEVANT,FGFR1 prostate-expressed (66.3x); FGFR1 in prostate pathway
+BIBR-1532,TERT,0,NOT_RELEVANT,No prostate relevance found
+Pyridostatin,G-quadruplex stabiliser,0,NOT_RELEVANT,No prostate relevance found
+AMG-319,PI3K (beta sparing),0,NOT_RELEVANT,No prostate relevance found
+MK-8776,"CHEK1,CHEK2,CDK2",2,RELEVANT,CHEK1 prostate-expressed (2.3x); CHEK1 in prostate pathway
+Vinorelbine,Microtubule destabiliser,0,NOT_RELEVANT,No prostate relevance found
+VX-11e,ERK2,0,NOT_RELEVANT,No prostate relevance found
+LJI308,"RSK2,RSK1,RSK3",0,NOT_RELEVANT,No prostate relevance found
+AZ6102,"TNKS1,TNKS2",1,POSSIBLY_RELEVANT,TNKS2 prostate-expressed (28.0x)
+GSK591,PMRT5,0,NOT_RELEVANT,No prostate relevance found
+VE821,ATR,1,POSSIBLY_RELEVANT,ATR prostate-expressed (8.3x)
+CT7033-2,"KDM4A,KDM4C,KDM4E,KDM3A,KDM6B",1,POSSIBLY_RELEVANT,KDM4A prostate-expressed (18.0x)
+GSK-LSD1-2HCl ,LSD1,0,NOT_RELEVANT,No prostate relevance found
+5-azacytidine,DNA methyltransferases,0,NOT_RELEVANT,No prostate relevance found
+A-366,"EHMT1,EHMT2",1,POSSIBLY_RELEVANT,EHMT1 prostate-expressed (10.6x)
+CPI-637,EP300,1,POSSIBLY_RELEVANT,EP300 prostate-expressed (29.2x)
+UNC0379,SETD8,0,NOT_RELEVANT,No prostate relevance found
+AZD6482,PI3Kbeta,0,NOT_RELEVANT,No prostate relevance found
+AT13148,AKT1,2,RELEVANT,AKT1 prostate-expressed (71.5x); AKT1 in prostate pathway
+BMS-754807,"IGF1R,IR",1,POSSIBLY_RELEVANT,IGF1R prostate-expressed (23.5x)
+JQ1,"BRD2,BRD3,BRD4,BRDT",1,POSSIBLY_RELEVANT,BRD2 prostate-expressed (136.1x)
+PFI-1,BRD4,1,POSSIBLY_RELEVANT,BRD4 prostate-expressed (29.8x)
+IOX2,EGLN1,1,POSSIBLY_RELEVANT,EGLN1 prostate-expressed (16.7x)
+CHIR-99021,"GSK3A,GSK3B",1,POSSIBLY_RELEVANT,GSK3A prostate-expressed (44.1x)
+SGC0946,DOT1L,1,POSSIBLY_RELEVANT,DOT1L prostate-expressed (15.3x)
+GSK2830371,WIP1,0,NOT_RELEVANT,No prostate relevance found
+THR-101,Mutant RAS,0,NOT_RELEVANT,No prostate relevance found
+THR-102,Mutant RAS,0,NOT_RELEVANT,No prostate relevance found
+THR-103,Mutant RAS,0,NOT_RELEVANT,No prostate relevance found
+ascorbate (vitamin C),anti-oxidant proteins,0,NOT_RELEVANT,No prostate relevance found
+glutathione,anti-oxidant proteins,0,NOT_RELEVANT,No prostate relevance found
+alpha-lipoic acid,Metabolism,0,NOT_RELEVANT,No prostate relevance found
+N-acetyl cysteine,Metabolism,0,NOT_RELEVANT,No prostate relevance found

@@ -1,0 +1,106 @@
+{
+  "method": "Pareto multi-objective ranking",
+  "dimensions": [
+    "efficacy",
+    "selectivity",
+    "safety",
+    "resistance",
+    "novelty",
+    "synthesizability"
+  ],
+  "weights": {
+    "efficacy": 0.3,
+    "selectivity": 0.25,
+    "safety": 0.2,
+    "resistance": 0.15,
+    "novelty": 0.05,
+    "synthesizability": 0.05
+  },
+  "candidates": [
+    {
+      "name": "Enzalutamide + Alisertib",
+      "type": "combination_existing",
+      "target": "AR (enza) + AURKA (alis)",
+      "efficacy": 75,
+      "selectivity": 80,
+      "safety": 60,
+      "resistance": 90,
+      "novelty": 70,
+      "synthesizability": 100,
+      "evidence": "Escape route ODE, Beltran CCR 2019, AACR 2023",
+      "pareto_rank": 1,
+      "composite_score": 76.5
+    },
+    {
+      "name": "Olaparib + CHK1 inhibitor",
+      "type": "combination_novel",
+      "target": "PARP + CHEK1 (DDR escape)",
+      "efficacy": 65,
+      "selectivity": 70,
+      "safety": 50,
+      "resistance": 80,
+      "novelty": 80,
+      "synthesizability": 90,
+      "evidence": "Escape route analysis, PROfound biology",
+      "pareto_rank": 1,
+      "composite_score": 67.5
+    },
+    {
+      "name": "INTC-002 (novel AURKA)",
+      "type": "novel_molecule",
+      "target": "AURKA (designed)",
+      "efficacy": 40,
+      "selectivity": 20,
+      "safety": 85,
+      "resistance": 50,
+      "novelty": 95,
+      "synthesizability": 70,
+      "evidence": "Scout 2, docking -9.3, ADMET clean",
+      "pareto_rank": 1,
+      "composite_score": 49.75
+    },
+    {
+      "name": "Enzalutamide + MEK inhibitor",
+      "type": "combination_novel",
+      "target": "AR + MAPK (AR\u2192MAPK escape)",
+      "efficacy": 55,
+      "selectivity": 65,
+      "safety": 55,
+      "resistance": 60,
+      "novelty": 60,
+      "synthesizability": 100,
+      "evidence": "Escape route analysis, AR\u2192MAPK pathway",
+      "pareto_rank": 2,
+      "composite_score": 60.75
+    },
+    {
+      "name": "Docetaxel (standard)",
+      "type": "standard_of_care",
+      "target": "Tubulin (all cells)",
+      "efficacy": 50,
+      "selectivity": 20,
+      "safety": 40,
+      "resistance": 30,
+      "novelty": 0,
+      "synthesizability": 100,
+      "evidence": "TAX-327 trial, validated by ODE",
+      "pareto_rank": 3,
+      "composite_score": 37.5
+    },
+    {
+      "name": "Docetaxel + Cisplatin",
+      "type": "combination_failed",
+      "target": "Tubulin + DNA crosslink",
+      "efficacy": 10,
+      "selectivity": 10,
+      "safety": 20,
+      "resistance": 20,
+      "novelty": 0,
+      "synthesizability": 100,
+      "evidence": "Multiple failed trials, predicted by ODE",
+      "pareto_rank": 4,
+      "composite_score": 17.5
+    }
+  ],
+  "honest_note": "Score values 0-100 are assigned based on available evidence. Ranking order is more reliable than absolute values."
+}

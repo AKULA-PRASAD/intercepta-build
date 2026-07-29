@@ -1,0 +1,146 @@
+[
+  {
+    "position": "isoxazole",
+    "substitution": "C",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C(C)C)c3c2)no1",
+    "mw": 432.5,
+    "logp": 3.91,
+    "similarity_to_parent": 1.0
+  },
+  {
+    "position": "isoxazole",
+    "substitution": "CC",
+    "smiles": "CCc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C(C)C)c3c2)no1",
+    "mw": 446.5,
+    "logp": 4.16,
+    "similarity_to_parent": 0.815
+  },
+  {
+    "position": "isoxazole",
+    "substitution": "C(C)C",
+    "smiles": "CCCc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C(C)C)c3c2)no1",
+    "mw": 460.5,
+    "logp": 4.55,
+    "similarity_to_parent": 0.791
+  },
+  {
+    "position": "isoxazole",
+    "substitution": "Cl",
+    "smiles": "CC(C)c1nn(-c2ccc(CN)cc2)c(=O)c2ccc(NC(=O)Nc3cc(Cl)on3)cc12",
+    "mw": 452.9,
+    "logp": 4.25,
+    "similarity_to_parent": 0.828
+  },
+  {
+    "position": "isoxazole",
+    "substitution": "F",
+    "smiles": "CC(C)c1nn(-c2ccc(CN)cc2)c(=O)c2ccc(NC(=O)Nc3cc(F)on3)cc12",
+    "mw": 436.4,
+    "logp": 3.74,
+    "similarity_to_parent": 0.828
+  },
+  {
+    "position": "isoxazole",
+    "substitution": "OC",
+    "smiles": "CC(C)c1nn(-c2ccc(CN)cc2)c(=O)c2ccc(NC(=O)Nc3cc(CO)on3)cc12",
+    "mw": 448.5,
+    "logp": 3.09,
+    "similarity_to_parent": 0.815
+  },
+  {
+    "position": "phenyl",
+    "substitution": "C",
+    "smiles": "Cc1ccc(-n2nc(C(C)C)c3cc(NC(=O)Nc4cc(C)on4)ccc3c2=O)cc1",
+    "mw": 417.5,
+    "logp": 4.76,
+    "similarity_to_parent": 0.82
+  },
+  {
+    "position": "phenyl",
+    "substitution": "F",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(F)cc4)nc(C(C)C)c3c2)no1",
+    "mw": 421.4,
+    "logp": 4.59,
+    "similarity_to_parent": 0.794
+  },
+  {
+    "position": "phenyl",
+    "substitution": "Cl",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(Cl)cc4)nc(C(C)C)c3c2)no1",
+    "mw": 437.9,
+    "logp": 5.1,
+    "similarity_to_parent": 0.794
+  },
+  {
+    "position": "phenyl",
+    "substitution": "OC",
+    "smiles": "COc1ccc(-n2nc(C(C)C)c3cc(NC(=O)Nc4cc(C)on4)ccc3c2=O)cc1",
+    "mw": 433.5,
+    "logp": 4.46,
+    "similarity_to_parent": 0.769
+  },
+  {
+    "position": "phenyl",
+    "substitution": "C(=O)N",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(C(N)=O)cc4)nc(C(C)C)c3c2)no1",
+    "mw": 446.5,
+    "logp": 3.55,
+    "similarity_to_parent": 0.797
+  },
+  {
+    "position": "phenyl",
+    "substitution": "CC",
+    "smiles": "CCc1ccc(-n2nc(C(C)C)c3cc(NC(=O)Nc4cc(C)on4)ccc3c2=O)cc1",
+    "mw": 431.5,
+    "logp": 5.01,
+    "similarity_to_parent": 0.855
+  },
+  {
+    "position": "alkyl",
+    "substitution": "C",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C)c3c2)no1",
+    "mw": 404.4,
+    "logp": 3.09,
+    "similarity_to_parent": 0.806
+  },
+  {
+    "position": "alkyl",
+    "substitution": "CC",
+    "smiles": "CCc1nn(-c2ccc(CN)cc2)c(=O)c2ccc(NC(=O)Nc3cc(C)on3)cc12",
+    "mw": 418.5,
+    "logp": 3.35,
+    "similarity_to_parent": 0.769
+  },
+  {
+    "position": "alkyl",
+    "substitution": "C(C)(C)C",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C(C)(C)C)c3c2)no1",
+    "mw": 446.5,
+    "logp": 4.08,
+    "similarity_to_parent": 0.758
+  },
+  {
+    "position": "alkyl",
+    "substitution": "C1CC1",
+    "smiles": "CC1=CC2=NOCCC1c1nn(-c3ccc(CN)cc3)c(=O)c3ccc(cc13)NC(=O)N2",
+    "mw": 430.5,
+    "logp": 2.74,
+    "similarity_to_parent": 0.333
+  },
+  {
+    "position": "alkyl",
+    "substitution": "C1CCC1",
+    "smiles": "CC1=CC2=NOCCCC1c1nn(-c3ccc(CN)cc3)c(=O)c3ccc(cc13)NC(=O)N2",
+    "mw": 444.5,
+    "logp": 3.13,
+    "similarity_to_parent": 0.326
+  },
+  {
+    "position": "alkyl",
+    "substitution": "C(F)(F)F",
+    "smiles": "Cc1cc(NC(=O)Nc2ccc3c(=O)n(-c4ccc(CN)cc4)nc(C(F)(F)F)c3c2)no1",
+    "mw": 458.4,
+    "logp": 3.8,
+    "similarity_to_parent": 0.746
+  }
+]

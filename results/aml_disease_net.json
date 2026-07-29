@@ -1,0 +1,879 @@
+{
+  "disease": "AML",
+  "nodes": [
+    {
+      "id": "FLT3",
+      "name": "FLT3",
+      "layer": "genomic",
+      "type": "kinase",
+      "frequency": 0.3,
+      "druggable": true,
+      "role": "Proliferation driver, FLT3-ITD constitutive activation",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "NPM1",
+      "name": "NPM1",
+      "layer": "genomic",
+      "type": "chaperone",
+      "frequency": 0.3,
+      "druggable": false,
+      "role": "Nucleolar protein, aberrant cytoplasmic localization",
+      "vulnerability": false,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "DNMT3A",
+      "name": "DNMT3A",
+      "layer": "genomic",
+      "type": "epigenetic",
+      "frequency": 0.25,
+      "druggable": true,
+      "role": "DNA methyltransferase, loss-of-function in LSCs",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "IDH1",
+      "name": "IDH1",
+      "layer": "genomic",
+      "type": "metabolic",
+      "frequency": 0.1,
+      "druggable": true,
+      "role": "Isocitrate dehydrogenase, produces oncometabolite 2-HG",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "IDH2",
+      "name": "IDH2",
+      "layer": "genomic",
+      "type": "metabolic",
+      "frequency": 0.12,
+      "druggable": true,
+      "role": "Isocitrate dehydrogenase, produces oncometabolite 2-HG",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "TET2",
+      "name": "TET2",
+      "layer": "genomic",
+      "type": "epigenetic",
+      "frequency": 0.1,
+      "druggable": false,
+      "role": "DNA demethylase, loss-of-function impairs differentiation",
+      "vulnerability": false,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "TP53",
+      "name": "TP53",
+      "layer": "genomic",
+      "type": "tumor_suppressor",
+      "frequency": 0.1,
+      "druggable": true,
+      "role": "Guardian of genome, loss = therapy resistance + poor prognosis",
+      "vulnerability": true,
+      "resistance_node": true,
+      "escape_route": false
+    },
+    {
+      "id": "RUNX1",
+      "name": "RUNX1",
+      "layer": "genomic",
+      "type": "transcription_factor",
+      "frequency": 0.1,
+      "druggable": false,
+      "role": "Master regulator of hematopoiesis, loss blocks differentiation",
+      "vulnerability": false,
+      "resistance_node": true,
+      "escape_route": false
+    },
+    {
+      "id": "CEBPA",
+      "name": "CEBPA",
+      "layer": "genomic",
+      "type": "transcription_factor",
+      "frequency": 0.1,
+      "druggable": false,
+      "role": "Myeloid differentiation factor",
+      "vulnerability": false,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "KIT",
+      "name": "KIT",
+      "layer": "genomic",
+      "type": "kinase",
+      "frequency": 0.05,
+      "druggable": true,
+      "role": "Stem cell factor receptor, drives proliferation",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "NRAS",
+      "name": "NRAS",
+      "layer": "genomic",
+      "type": "GTPase",
+      "frequency": 0.12,
+      "druggable": true,
+      "role": "RAS pathway activator",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": true
+    },
+    {
+      "id": "KRAS",
+      "name": "KRAS",
+      "layer": "genomic",
+      "type": "GTPase",
+      "frequency": 0.05,
+      "druggable": true,
+      "role": "RAS pathway activator",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": true
+    },
+    {
+      "id": "PTPN11",
+      "name": "PTPN11",
+      "layer": "genomic",
+      "type": "phosphatase",
+      "frequency": 0.05,
+      "druggable": true,
+      "role": "SHP2, activates RAS/MAPK pathway",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": true
+    },
+    {
+      "id": "WT1",
+      "name": "WT1",
+      "layer": "genomic",
+      "type": "transcription_factor",
+      "frequency": 0.08,
+      "druggable": false,
+      "role": "Wilms tumor gene, potential immunotherapy target",
+      "vulnerability": false,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "ASXL1",
+      "name": "ASXL1",
+      "layer": "genomic",
+      "type": "epigenetic",
+      "frequency": 0.08,
+      "druggable": false,
+      "role": "Polycomb-associated, chromatin remodeling",
+      "vulnerability": false,
+      "resistance_node": true,
+      "escape_route": false
+    },
+    {
+      "id": "EZH2",
+      "name": "EZH2",
+      "layer": "genomic",
+      "type": "epigenetic",
+      "frequency": 0.03,
+      "druggable": true,
+      "role": "Histone methyltransferase, PRC2 component",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "SRSF2",
+      "name": "SRSF2",
+      "layer": "genomic",
+      "type": "spliceosome",
+      "frequency": 0.05,
+      "druggable": true,
+      "role": "Splicing factor, hotspot mutations in AML",
+      "vulnerability": true,
+      "resistance_node": true,
+      "escape_route": false
+    },
+    {
+      "id": "SF3B1",
+      "name": "SF3B1",
+      "layer": "genomic",
+      "type": "spliceosome",
+      "frequency": 0.03,
+      "druggable": true,
+      "role": "Spliceosome component, druggable with H3B-8800",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "BCL2",
+      "name": "BCL2",
+      "layer": "chemical",
+      "type": "apoptosis",
+      "druggable": true,
+      "role": "Anti-apoptotic, venetoclax target, essential for LSC survival",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "MCL1",
+      "name": "MCL1",
+      "layer": "chemical",
+      "type": "apoptosis",
+      "druggable": true,
+      "role": "Anti-apoptotic, venetoclax resistance mechanism",
+      "vulnerability": true,
+      "resistance_node": true,
+      "escape_route": true
+    },
+    {
+      "id": "CDK6",
+      "name": "CDK6",
+      "layer": "chemical",
+      "type": "kinase",
+      "druggable": true,
+      "role": "Cell cycle, palbociclib target",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "CDK4",
+      "name": "CDK4",
+      "layer": "chemical",
+      "type": "kinase",
+      "druggable": true,
+      "role": "Cell cycle regulator",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "HDAC",
+      "name": "HDAC",
+      "layer": "chemical",
+      "type": "epigenetic",
+      "druggable": true,
+      "role": "Histone deacetylase, panobinostat target",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "BET",
+      "name": "BET",
+      "layer": "chemical",
+      "type": "epigenetic",
+      "druggable": true,
+      "role": "Bromodomain, MYC transcription regulator",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "DOT1L",
+      "name": "DOT1L",
+      "layer": "chemical",
+      "type": "epigenetic",
+      "druggable": true,
+      "role": "Histone methyltransferase, MLL-rearranged AML",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "MTOR",
+      "name": "MTOR",
+      "layer": "chemical",
+      "type": "kinase",
+      "druggable": true,
+      "role": "Metabolic/growth signaling",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": true
+    },
+    {
+      "id": "PI3K",
+      "name": "PI3K",
+      "layer": "chemical",
+      "type": "kinase",
+      "druggable": true,
+      "role": "PI3K/AKT survival signaling",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": true
+    },
+    {
+      "id": "AKT",
+      "name": "AKT",
+      "layer": "chemical",
+      "type": "kinase",
+      "druggable": true,
+      "role": "AKT survival signaling",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "MEK",
+      "name": "MEK",
+      "layer": "chemical",
+      "type": "kinase",
+      "druggable": true,
+      "role": "MEK1/2, MAPK pathway",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "SMO",
+      "name": "SMO",
+      "layer": "chemical",
+      "type": "GPCR",
+      "druggable": true,
+      "role": "Hedgehog pathway, glasdegib target for LSCs",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "MDM2",
+      "name": "MDM2",
+      "layer": "chemical",
+      "type": "E3_ligase",
+      "druggable": true,
+      "role": "p53 degradation, MDM2 inhibitors reactivate p53",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "MENIN",
+      "name": "MENIN",
+      "layer": "chemical",
+      "type": "scaffold",
+      "druggable": true,
+      "role": "Menin-MLL interaction, revumenib target",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "LSD1",
+      "name": "LSD1",
+      "layer": "chemical",
+      "type": "epigenetic",
+      "druggable": true,
+      "role": "Lysine demethylase, differentiation blocker",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "CD33",
+      "name": "CD33",
+      "layer": "chemical",
+      "type": "surface_marker",
+      "druggable": true,
+      "role": "Myeloid marker, gemtuzumab ozogamicin target",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "CD123",
+      "name": "CD123",
+      "layer": "chemical",
+      "type": "surface_marker",
+      "druggable": true,
+      "role": "IL-3 receptor alpha, LSC marker",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "CLEC12A",
+      "name": "CLEC12A",
+      "layer": "chemical",
+      "type": "surface_marker",
+      "druggable": true,
+      "role": "CLL-1, LSC-specific surface target",
+      "vulnerability": true,
+      "resistance_node": false,
+      "escape_route": false
+    },
+    {
+      "id": "pw:FLT3_signaling",
+      "name": "FLT3/RAS/MAPK Signaling",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": false
+    },
+    {
+      "id": "pw:epigenetic",
+      "name": "Epigenetic Regulation",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": false
+    },
+    {
+      "id": "pw:apoptosis",
+      "name": "BCL-2 Family / Apoptosis",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": false
+    },
+    {
+      "id": "pw:differentiation",
+      "name": "Myeloid Differentiation",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": false
+    },
+    {
+      "id": "pw:hedgehog",
+      "name": "Hedgehog/WNT (LSC maintenance)",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": true
+    },
+    {
+      "id": "pw:PI3K_AKT_mTOR",
+      "name": "PI3K/AKT/mTOR Survival",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": true
+    },
+    {
+      "id": "pw:cell_cycle",
+      "name": "Cell Cycle",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": false
+    },
+    {
+      "id": "pw:spliceosome",
+      "name": "RNA Splicing",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": false
+    },
+    {
+      "id": "pw:metabolism",
+      "name": "Metabolic Reprogramming (IDH)",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": false
+    },
+    {
+      "id": "pw:immune_evasion",
+      "name": "Immune Evasion",
+      "layer": "pathway",
+      "type": "pathway",
+      "druggable": false,
+      "escape_route": true
+    },
+    {
+      "id": "cell:blast",
+      "name": "Leukemic Blasts",
+      "layer": "cellular",
+      "type": "cell_type",
+      "population": "sensitive"
+    },
+    {
+      "id": "cell:LSC",
+      "name": "Leukemic Stem Cells",
+      "layer": "cellular",
+      "type": "cell_type",
+      "population": "resistant"
+    },
+    {
+      "id": "cell:HSC",
+      "name": "Normal HSCs",
+      "layer": "cellular",
+      "type": "cell_type",
+      "population": "healthy"
+    },
+    {
+      "id": "cell:T_cell",
+      "name": "T Cells",
+      "layer": "cellular",
+      "type": "cell_type",
+      "population": "immune"
+    },
+    {
+      "id": "clin:CR",
+      "name": "Complete Remission",
+      "layer": "clinical",
+      "type": "clinical_endpoint"
+    },
+    {
+      "id": "clin:relapse",
+      "name": "Relapse",
+      "layer": "clinical",
+      "type": "clinical_endpoint"
+    },
+    {
+      "id": "clin:MRD",
+      "name": "Minimal Residual Disease",
+      "layer": "clinical",
+      "type": "clinical_endpoint"
+    },
+    {
+      "id": "clin:OS",
+      "name": "Overall Survival",
+      "layer": "clinical",
+      "type": "clinical_endpoint"
+    }
+  ],
+  "edges": [
+    {
+      "source": "FLT3",
+      "target": "pw:FLT3_signaling",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "NRAS",
+      "target": "pw:FLT3_signaling",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "KRAS",
+      "target": "pw:FLT3_signaling",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "PTPN11",
+      "target": "pw:FLT3_signaling",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "KIT",
+      "target": "pw:FLT3_signaling",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "DNMT3A",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "TET2",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "IDH1",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "IDH2",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "EZH2",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "ASXL1",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "HDAC",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "BET",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "DOT1L",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "LSD1",
+      "target": "pw:epigenetic",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "BCL2",
+      "target": "pw:apoptosis",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "MCL1",
+      "target": "pw:apoptosis",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "TP53",
+      "target": "pw:apoptosis",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "MDM2",
+      "target": "pw:apoptosis",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "RUNX1",
+      "target": "pw:differentiation",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "CEBPA",
+      "target": "pw:differentiation",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "SMO",
+      "target": "pw:hedgehog",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "PI3K",
+      "target": "pw:PI3K_AKT_mTOR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "AKT",
+      "target": "pw:PI3K_AKT_mTOR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "MTOR",
+      "target": "pw:PI3K_AKT_mTOR",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "CDK4",
+      "target": "pw:cell_cycle",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "CDK6",
+      "target": "pw:cell_cycle",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "SRSF2",
+      "target": "pw:spliceosome",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "SF3B1",
+      "target": "pw:spliceosome",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "IDH1",
+      "target": "pw:metabolism",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "IDH2",
+      "target": "pw:metabolism",
+      "type": "regulates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "MEK",
+      "target": "pw:FLT3_signaling",
+      "type": "activates",
+      "weight": 1.0,
+      "confidence": 0.8
+    },
+    {
+      "source": "pw:FLT3_signaling",
+      "target": "cell:blast",
+      "type": "promotes_proliferation",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "pw:apoptosis",
+      "target": "cell:blast",
+      "type": "kills",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "pw:differentiation",
+      "target": "cell:blast",
+      "type": "differentiates",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "pw:hedgehog",
+      "target": "cell:LSC",
+      "type": "maintains_stemness",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "pw:PI3K_AKT_mTOR",
+      "target": "cell:LSC",
+      "type": "promotes_survival",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "pw:epigenetic",
+      "target": "cell:LSC",
+      "type": "blocks_differentiation",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "pw:cell_cycle",
+      "target": "cell:blast",
+      "type": "promotes_proliferation",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "cell:blast",
+      "target": "clin:CR",
+      "type": "reduction_leads_to",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "cell:LSC",
+      "target": "clin:relapse",
+      "type": "causes",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "cell:LSC",
+      "target": "clin:MRD",
+      "type": "maintains",
+      "weight": 1.0,
+      "confidence": 0.7
+    },
+    {
+      "source": "MCL1",
+      "target": "BCL2",
+      "type": "compensates_for",
+      "weight": 1.0,
+      "confidence": 0.7,
+      "description": "BCL2 inhibition upregulates MCL1"
+    },
+    {
+      "source": "pw:FLT3_signaling",
+      "target": "pw:apoptosis",
+      "type": "bypasses",
+      "weight": 1.0,
+      "confidence": 0.7,
+      "description": "FLT3 activation overcomes apoptosis"
+    },
+    {
+      "source": "pw:hedgehog",
+      "target": "pw:differentiation",
+      "type": "blocks",
+      "weight": 1.0,
+      "confidence": 0.7,
+      "description": "Hedgehog maintains LSC undifferentiated state"
+    },
+    {
+      "source": "pw:PI3K_AKT_mTOR",
+      "target": "pw:apoptosis",
+      "type": "inhibits",
+      "weight": 1.0,
+      "confidence": 0.7,
+      "description": "PI3K/AKT promotes survival despite pro-apoptotic signals"
+    }
+  ]
+}

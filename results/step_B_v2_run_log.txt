@@ -1,0 +1,30 @@
+BertForMaskedLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+========================================================================
+INTERCEPTA Step B v2 — cell_processing module on Travaglini SS2
+========================================================================
+
+Loading Travaglini_Krasnow_2020_Lung_SS2.h5ad...
+  shape: (9409, 57133)
+  obs.label distribution:
+    Ecpam, CD45: 5422
+    Epcam (+): 2252
+    Epcam (-): 983
+    na: 752
+
+Device: mps
+
+Loading Geneformer-V2-104M_CLcancer...
+  Geneformer-V2-104M_CLcancer
+  family=geneformer, n_params=104,386,867, hidden_dim=768
+  device=mps
+
+Running pipeline...
+[pipeline] Phase A: prepare AnnData ((9409, 57133))
+  -> (9409, 36460) after Ensembl mapping (63.8% mapping rate)
+[pipeline] Phase B: tokenize
+Tokenizing /Users/kalki/INTERCEPTA/results/step_B_v2_travaglini_geneformer/tokenized/step_B_travaglini_tokenized_input.h5ad
+/Users/kalki/INTERCEPTA/results/step_B_v2_travaglini_geneformer/tokenized/step_B_travaglini_tokenized_input.h5ad has no column attribute 'filter_pass'; tokenizing all cells.
+Creating dataset.

@@ -1,0 +1,225 @@
+{
+  "validation_query": "drugs SELECTIVELY more potent in FLT3-ITD+ vs FLT3-ITD- (delta AUC)",
+  "verdict": "PASS",
+  "message": "6 FLT3 inhibitors in top 10 by ITD-selectivity. BeatAML data correctly encodes FLT3-specific biology. Round 2.1a data foundation validated.",
+  "n_itd_pos_patients": 185,
+  "n_itd_neg_patients": 619,
+  "n_drugs_ranked": 132,
+  "flt3_in_top_10": 6,
+  "flt3_in_top_20": 9,
+  "flt3_statistically_significant": 14,
+  "top_10_by_selectivity": [
+    {
+      "rank": 1,
+      "drug": "Foretinib (XL880)",
+      "median_auc_itd_pos": 70.9130019423807,
+      "median_auc_itd_neg": 128.532843502187,
+      "delta_auc": -57.619841559806304,
+      "p_value": 9.495753187662427e-21,
+      "is_flt3_targeter": true
+    },
+    {
+      "rank": 2,
+      "drug": "Venetoclax",
+      "median_auc_itd_pos": 71.901856445487,
+      "median_auc_itd_neg": 124.431306594652,
+      "delta_auc": -52.529450149165,
+      "p_value": 0.00013323081088141185,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 3,
+      "drug": "Sorafenib",
+      "median_auc_itd_pos": 145.387673089961,
+      "median_auc_itd_neg": 193.502793299635,
+      "delta_auc": -48.11512020967399,
+      "p_value": 3.8393198509638336e-24,
+      "is_flt3_targeter": true
+    },
+    {
+      "rank": 4,
+      "drug": "Cabozantinib",
+      "median_auc_itd_pos": 119.918246516085,
+      "median_auc_itd_neg": 167.244543297034,
+      "delta_auc": -47.326296780948994,
+      "p_value": 4.582642174539168e-15,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 5,
+      "drug": "Crenolanib",
+      "median_auc_itd_pos": 139.026642699872,
+      "median_auc_itd_neg": 181.408678706802,
+      "delta_auc": -42.38203600692998,
+      "p_value": 2.861815954637222e-09,
+      "is_flt3_targeter": true
+    },
+    {
+      "rank": 6,
+      "drug": "Ponatinib (AP24534)",
+      "median_auc_itd_pos": 99.8285439441948,
+      "median_auc_itd_neg": 141.29072625945,
+      "delta_auc": -41.46218231525519,
+      "p_value": 3.53317656667872e-10,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 7,
+      "drug": "Dovitinib (CHIR-258)",
+      "median_auc_itd_pos": 116.0112552088595,
+      "median_auc_itd_neg": 157.241506255962,
+      "delta_auc": -41.23025104710251,
+      "p_value": 6.465165759654238e-15,
+      "is_flt3_targeter": true
+    },
+    {
+      "rank": 8,
+      "drug": "Vargetef",
+      "median_auc_itd_pos": 135.92297801987,
+      "median_auc_itd_neg": 175.505905980304,
+      "delta_auc": -39.582927960434006,
+      "p_value": 7.983385515590103e-12,
+      "is_flt3_targeter": true
+    },
+    {
+      "rank": 9,
+      "drug": "Ralimetinib (LY2228820)",
+      "median_auc_itd_pos": 97.3821684128613,
+      "median_auc_itd_neg": 136.91338704472,
+      "delta_auc": -39.53121863185869,
+      "p_value": 0.34159654811641793,
+      "is_flt3_targeter": false
+    },
+    {
+      "rank": 10,
+      "drug": "Midostaurin",
+      "median_auc_itd_pos": 144.613856049201,
+      "median_auc_itd_neg": 183.784347278005,
+      "delta_auc": -39.170491228803996,
+      "p_value": 1.4101075234846636e-07,
+      "is_flt3_targeter": true
+    }
+  ],
+  "flt3_drugs_all_ranks": [
+    {
+      "rank": 1,
+      "drug": "Foretinib (XL880)",
+      "delta_auc": -57.619841559806304,
+      "p_value": 9.495753187662427e-21,
+      "n_itd_pos": 134,
+      "n_itd_neg": 377
+    },
+    {
+      "rank": 3,
+      "drug": "Sorafenib",
+      "delta_auc": -48.11512020967399,
+      "p_value": 3.8393198509638336e-24,
+      "n_itd_pos": 122,
+      "n_itd_neg": 311
+    },
+    {
+      "rank": 5,
+      "drug": "Crenolanib",
+      "delta_auc": -42.38203600692998,
+      "p_value": 2.861815954637222e-09,
+      "n_itd_pos": 55,
+      "n_itd_neg": 112
+    },
+    {
+      "rank": 7,
+      "drug": "Dovitinib (CHIR-258)",
+      "delta_auc": -41.23025104710251,
+      "p_value": 6.465165759654238e-15,
+      "n_itd_pos": 118,
+      "n_itd_neg": 324
+    },
+    {
+      "rank": 8,
+      "drug": "Vargetef",
+      "delta_auc": -39.582927960434006,
+      "p_value": 7.983385515590103e-12,
+      "n_itd_pos": 117,
+      "n_itd_neg": 279
+    },
+    {
+      "rank": 10,
+      "drug": "Midostaurin",
+      "delta_auc": -39.170491228803996,
+      "p_value": 1.4101075234846636e-07,
+      "n_itd_pos": 79,
+      "n_itd_neg": 183
+    },
+    {
+      "rank": 11,
+      "drug": "KW-2449",
+      "delta_auc": -37.19835965508699,
+      "p_value": 2.8563677791460235e-09,
+      "n_itd_pos": 111,
+      "n_itd_neg": 155
+    },
+    {
+      "rank": 16,
+      "drug": "Linifanib (ABT-869)",
+      "delta_auc": -32.919751451237005,
+      "p_value": 4.320919618230539e-08,
+      "n_itd_pos": 109,
+      "n_itd_neg": 233
+    },
+    {
+      "rank": 17,
+      "drug": "Quizartinib (AC220)",
+      "delta_auc": -32.79140762099503,
+      "p_value": 1.9455801446441145e-12,
+      "n_itd_pos": 123,
+      "n_itd_neg": 336
+    },
+    {
+      "rank": 21,
+      "drug": "Sunitinib",
+      "delta_auc": -28.72714405682251,
+      "p_value": 1.1379749914946948e-11,
+      "n_itd_pos": 113,
+      "n_itd_neg": 168
+    },
+    {
+      "rank": 25,
+      "drug": "JNJ-28312141",
+      "delta_auc": -25.3356118623433,
+      "p_value": 0.0010752840190753614,
+      "n_itd_pos": 77,
+      "n_itd_neg": 139
+    },
+    {
+      "rank": 28,
+      "drug": "Tozasertib (VX-680)",
+      "delta_auc": -24.82184198712099,
+      "p_value": 4.2967340683551227e-07,
+      "n_itd_pos": 99,
+      "n_itd_neg": 200
+    },
+    {
+      "rank": 30,
+      "drug": "TG101348",
+      "delta_auc": -22.164921554986506,
+      "p_value": 0.033539606431849465,
+      "n_itd_pos": 24,
+      "n_itd_neg": 77
+    },
+    {
+      "rank": 74,
+      "drug": "AZD1152-HQPA (AZD2811)",
+      "delta_auc": -7.208516846764468,
+      "p_value": 0.03296695093148006,
+      "n_itd_pos": 68,
+      "n_itd_neg": 62
+    },
+    {
+      "rank": 103,
+      "drug": "Tandutinib (MLN518)",
+      "delta_auc": 1.602429986185001,
+      "p_value": 0.5393531345465465,
+      "n_itd_pos": 13,
+      "n_itd_neg": 23
+    }
+  ]
+}

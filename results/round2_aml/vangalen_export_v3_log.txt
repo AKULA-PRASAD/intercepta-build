@@ -1,0 +1,21 @@
+Seurat version:       5.5.0 
+SeuratObject version: 5.4.0 
+Matrix version:       1.7.4 
+R_MAX_VSIZE:          64Gb 
+
+Input:   /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/Seurat_AML.rds 
+Output:  /Users/kalki/INTERCEPTA/round2_aml/data/vangalen2019/exported 
+
+========================================================================
+Loading RDS
+========================================================================
+Loaded in 11.2 sec
+Cells: 44823   Features: 27899 
+Object size in memory: 14 Gb 
+Available layers: counts, data 
+
+========================================================================
+Exporting layer: counts
+========================================================================
+Error: vector memory limit of 16.0 Gb reached, see mem.maxVSize()
+Execution halted

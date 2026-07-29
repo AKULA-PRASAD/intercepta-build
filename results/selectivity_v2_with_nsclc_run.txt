@@ -1,0 +1,153 @@
+
+========================================================================
+INTERCEPTA Selectivity Layer v2 — Disease-Parameterized
+========================================================================
+Started: 2026-05-08T08:10:20
+Spec: INTERCEPTA_Selectivity_Redesign_Specification.md
+Tag:  selectivity-redesign-spec
+
+Processing 4 diseases: ['aml', 'gbm', 'mcrpc', 'nsclc']
+
+========================================================================
+Computing selectivity: aml
+========================================================================
+  Disease: Acute Myeloid Leukemia
+  Primary tissue: 'Whole Blood'
+  Comparator strategy: single_tissue
+  Proxy caveat: GTEx has no bone marrow tissue. Whole Blood is closest hematopoietic proxy. Future work could supplement with HPA bone marrow data or BLUEPRINT epigenome.
+  Target genes: 32
+  Reading gtex_median_tpm.gct.gz (6.6 MB)...
+  Raw shape: (56200, 56)
+  Deduplicated by gene symbol: 56200 → 54592
+  Final matrix: 54592 genes × 54 tissues
+
+  Computing selectivity for 32 target genes...
+  Found in GTEx: 32/32
+  Saved: /Users/kalki/INTERCEPTA/results/step6_selectivity_aml.json
+
+  Top 10 most selective genes (by selectivity_vs_mean):
+  Gene        Primary TPM  Other Mean  Sel vs Mean Safety                   
+  ---------- ------------ ----------- ------------ -------------------------
+  JAK3             139.15        8.78        15.84 HIGHLY_SELECTIVE         
+  STAT5B           138.51       57.38         2.41 MODERATE_TISSUE_SELECTIVE
+  FLT3               3.43        1.42         2.41 MODERATE_TISSUE_SELECTIVE
+  MCL1             376.55      172.45         2.18 MODERATE_TISSUE_SELECTIVE
+  TET2               7.95        4.73         1.68 MODERATE_TISSUE_SELECTIVE
+  STAT5A            37.17       23.68         1.57 MODERATE_TISSUE_SELECTIVE
+  CEBPA             21.32       16.02         1.33 UBIQUITOUS               
+  STAT3             96.72       77.27         1.25 UBIQUITOUS               
+  RUNX1              6.09        5.24         1.16 UBIQUITOUS               
+  MAP2K2            96.40       87.16         1.11 UBIQUITOUS               
+
+========================================================================
+Computing selectivity: gbm
+========================================================================
+  Disease: Glioblastoma Multiforme
+  Primary tissue: 'Brain - Cortex'
+  Comparator strategy: multi_tissue
+  Comparator tissues (13): ['Brain - Cortex', 'Brain - Cerebellum', 'Brain - Cerebellar Hemisphere']...
+  Target genes: 30
+  Reading gtex_median_tpm.gct.gz (6.6 MB)...
+  Raw shape: (56200, 56)
+  Deduplicated by gene symbol: 56200 → 54592
+  Final matrix: 54592 genes × 54 tissues
+
+  Computing selectivity for 30 target genes...
+  Found in GTEx: 30/30
+  Saved: /Users/kalki/INTERCEPTA/results/step6_selectivity_gbm.json
+
+  Top 10 most selective genes (by selectivity_vs_mean):
+  Gene        Primary TPM  Other Mean  Sel vs Mean Safety                   
+  ---------- ------------ ----------- ------------ -------------------------
+  FGFR3             81.74       33.61         2.43 MODERATE_TISSUE_SELECTIVE
+  MAP2K1            49.30       33.63         1.47 UBIQUITOUS               
+  PTPN11            62.08       42.47         1.46 UBIQUITOUS               
+  TERT               0.14        0.13         1.02 NOT_EXPRESSED            
+  NF1                8.26        8.49         0.97 UBIQUITOUS               
+  FLT1              10.23       11.87         0.86 UBIQUITOUS               
+  MAP2K2            77.30       90.51         0.85 UBIQUITOUS               
+  KIT                9.96       11.67         0.85 UBIQUITOUS               
+  BRAF               9.42       11.47         0.82 UBIQUITOUS               
+  MTOR              11.71       14.66         0.80 UBIQUITOUS               
+
+========================================================================
+Computing selectivity: mcrpc
+========================================================================
+  Disease: Metastatic Castration-Resistant Prostate Cancer
+  Primary tissue: 'Prostate'
+  Comparator strategy: single_tissue
+  Target genes: 38
+  Reading gtex_median_tpm.gct.gz (6.6 MB)...
+  Raw shape: (56200, 56)
+  Deduplicated by gene symbol: 56200 → 54592
+  Final matrix: 54592 genes × 54 tissues
+
+  Computing selectivity for 38 target genes...
+  Found in GTEx: 38/38
+  Saved: /Users/kalki/INTERCEPTA/results/step6_selectivity_mcrpc.json
+
+  Top 10 most selective genes (by selectivity_vs_mean):
+  Gene        Primary TPM  Other Mean  Sel vs Mean Safety                   
+  ---------- ------------ ----------- ------------ -------------------------
+  KLK3            4285.71        0.25     16695.58 HIGHLY_SELECTIVE         
+  KLK2            1878.28        0.49      3744.69 HIGHLY_SELECTIVE         
+  ACPP            1281.35        2.43       524.12 HIGHLY_SELECTIVE         
+  NKX3-1           250.55        3.43        72.78 HIGHLY_SELECTIVE         
+  SLC45A3          242.22        6.26        38.64 HIGHLY_SELECTIVE         
+  FOXA1             71.41        2.42        29.40 HIGHLY_SELECTIVE         
+  TMPRSS2          178.07        9.53        18.67 HIGHLY_SELECTIVE         
+  FOLH1             50.96        4.21        12.08 HIGHLY_SELECTIVE         
+  STEAP2            76.36        9.41         8.11 TISSUE_SELECTIVE         
+  AR                21.05        6.26         3.36 TISSUE_SELECTIVE         
+
+========================================================================
+Computing selectivity: nsclc
+========================================================================
+  Disease: Non-Small Cell Lung Carcinoma (LUAD + LUSC)
+  Primary tissue: 'Lung'
+  Comparator strategy: single_tissue
+  Target genes: 33
+  Reading gtex_median_tpm.gct.gz (6.6 MB)...
+  Raw shape: (56200, 56)
+  Deduplicated by gene symbol: 56200 → 54592
+  Final matrix: 54592 genes × 54 tissues
+
+  Computing selectivity for 33 target genes...
+  Found in GTEx: 33/33
+  Saved: /Users/kalki/INTERCEPTA/results/step6_selectivity_nsclc.json
+
+  Top 10 most selective genes (by selectivity_vs_mean):
+  Gene        Primary TPM  Other Mean  Sel vs Mean Safety                   
+  ---------- ------------ ----------- ------------ -------------------------
+  ROS1              11.09        0.12        83.08 HIGHLY_SELECTIVE         
+  CD274             24.56        3.43         7.14 TISSUE_SELECTIVE         
+  FLT4              34.80        9.95         3.50 TISSUE_SELECTIVE         
+  KDR               50.77       15.91         3.19 TISSUE_SELECTIVE         
+  MCL1             474.74      170.60         2.78 MODERATE_TISSUE_SELECTIVE
+  PDCD1              3.25        1.50         2.15 MODERATE_TISSUE_SELECTIVE
+  VEGFA            158.59       80.70         1.97 MODERATE_TISSUE_SELECTIVE
+  MET                9.77        5.80         1.68 MODERATE_TISSUE_SELECTIVE
+  AKT1              80.30       48.27         1.66 MODERATE_TISSUE_SELECTIVE
+  RB1               23.74       15.08         1.57 MODERATE_TISSUE_SELECTIVE
+
+========================================================================
+Falsifiable success criteria (spec Section 10)
+========================================================================
+  Criterion 3 (AML non-zero target gene): PASS
+    Non-zero genes: ['FLT3', 'NPM1', 'IDH1', 'IDH2']
+  Criterion 4 (GBM non-zero target gene): PASS
+    Non-zero genes: ['EGFR', 'IDH1', 'PTEN', 'TP53']
+  Criterion 1 (no prostate_tpm field for non-mCRPC): PASS
+
+========================================================================
+Final summary
+========================================================================
+  aml: 32/32 genes found, primary_tissue='Whole Blood'
+  gbm: 30/30 genes found, primary_tissue='Brain - Cortex'
+  mcrpc: 38/38 genes found, primary_tissue='Prostate'
+  nsclc: 33/33 genes found, primary_tissue='Lung'
+
+  Overall: PASS
+  Outputs in: /Users/kalki/INTERCEPTA/results/step6_selectivity_<disease>.json
+
+Finished: 2026-05-08T08:10:21

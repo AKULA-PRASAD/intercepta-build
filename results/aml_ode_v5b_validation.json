@@ -1,0 +1,43 @@
+{
+  "model": "AML 3-comp+support (LSODA optimized)",
+  "untreated": {
+    "cr": false,
+    "cr_mo": null,
+    "rel_mo": null,
+    "os_mo": 4.4,
+    "cause": "marrow_failure",
+    "normal_min": 0.0069,
+    "lsc_nadir": 0.0,
+    "time_sec": 0.0
+  },
+  "induction": {
+    "cr": true,
+    "cr_mo": 0.2,
+    "rel_mo": null,
+    "os_mo": null,
+    "cause": "alive",
+    "normal_min": 0.2,
+    "lsc_nadir": 0.025,
+    "time_sec": 5.1
+  },
+  "venaza": {
+    "cr": true,
+    "cr_mo": 0.7,
+    "rel_mo": null,
+    "os_mo": null,
+    "cause": "alive",
+    "normal_min": 0.2,
+    "lsc_nadir": 0.163,
+    "time_sec": 1780.0
+  },
+  "gilteritinib": {
+    "cr": true,
+    "cr_mo": 1.0,
+    "rel_mo": null,
+    "os_mo": null,
+    "cause": "alive",
+    "normal_min": 0.2,
+    "lsc_nadir": 0.231,
+    "time_sec": 1748.0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "trial": "PROfound (de Bono NEJM 2020)",
+  "target_HR": 0.34,
+  "model_result": "Olaparib never progresses (TTP=99 months)",
+  "diagnosis": {
+    "root_cause": "Model assumes uniform BRCA status across all bins",
+    "reality": "Tumors have subclonal BRCA \u2014 mixed sensitive and resistant",
+    "evidence": [
+      "BRCA2 mutation frequency 8% even in selected population",
+      "Subclonal heterogeneity means not all cells equally BRCA-deficient",
+      "Multiple resistance mechanisms (reversion, ABCB1, 53BP1 loss)",
+      "Combined resistance rate >> BRCA reversion alone"
+    ]
+  },
+  "what_is_needed": {
+    "description": "Two-layer model: continuous resistance phenotype (x) PLUS binary BRCA status",
+    "approach": "Each bin splits into BRCA-deficient (low EC50) and BRCA-proficient (high EC50)",
+    "initial_fraction_BRCA_deficient": "60-80% in PROfound cohort (selected population)",
+    "this_is": "A 2x20 = 40-compartment model, not fundamentally different from current architecture"
+  },
+  "honest_status": "Cannot validate PROfound with current model. Architecture extension needed.",
+  "what_model_CAN_validate": [
+    "Docetaxel in mCRPC: HR=0.663 (TAX-327 target ~0.76)",
+    "Doc+Cis combo: HR=1.003 (correctly predicts failure)",
+    "Finite-duration cytotoxic treatments"
+  ],
+  "what_model_CANNOT_validate_yet": [
+    "Continuous therapy with acquired resistance (olaparib, enzalutamide)",
+    "Biomarker-selected populations (BRCA+ only)",
+    "Immune checkpoint inhibitors"
+  ]
+}

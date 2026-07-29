@@ -1,0 +1,37 @@
+{
+  "model": "PhenotypeStructuredODE_v1.1_KAALCURA_constrained",
+  "date": "2026-04-07",
+  "velocity_source": "STAR-aligned 46235 cells",
+  "constraint": "EC50 within GDSC P5-P95, no extrapolation",
+  "results": {
+    "docetaxel_vs_nothing": {
+      "HR": 0.663,
+      "benefit_months": 3.4,
+      "nadir_pct": 14.3
+    },
+    "cisplatin_vs_nothing": {
+      "HR": 0.937,
+      "benefit_months": 0.5,
+      "nadir_pct": 0.1
+    },
+    "doc_cis_vs_nothing": {
+      "HR": 0.666,
+      "benefit_months": 3.4,
+      "nadir_pct": 17.0
+    },
+    "doc_cis_vs_doc": {
+      "HR": 1.003,
+      "benefit_months": 0.0
+    }
+  },
+  "clinical_validation": {
+    "doc_combos_in_mcrpc": "ALL Phase III trials failed \u2014 model correctly predicts HR~1.0 for combo vs doc",
+    "docetaxel_monotherapy": "TAX-327 OS HR=0.76, our TTP HR=0.663 \u2014 reasonable range"
+  },
+  "honest_limitations": [
+    "Only 6 prostate cell lines anchor docetaxel EC50",
+    "Olaparib GDSC IC50 does not capture synthetic lethality",
+    "Emax=0.08/day not data-derived",
+    "CRPC velocity data \u2014 cannot validate mHSPC trials"
+  ]
+}

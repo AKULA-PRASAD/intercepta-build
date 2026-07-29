@@ -1,0 +1,123 @@
+{
+  "spec": "INTERCEPTA_Round2_2c_Specification.md",
+  "spec_commit": "tag round2-2c-spec-locked",
+  "evaluated": "2026-05-06 20:44:13",
+  "overall_verdict": "FAIL",
+  "verdict_breakdown": {
+    "n_pass": 1,
+    "n_fail": 4,
+    "n_indeterminate": 1
+  },
+  "gates": {
+    "Q_C": {
+      "gate": "Q_C",
+      "description": "Within-dataset utility",
+      "thresholds": {
+        "mean_auroc_min": 0.7,
+        "perc_drugs_auroc_ge_0_65_min": 0.6
+      },
+      "measured": {
+        "mean_auroc": 0.6426426427055385,
+        "median_auroc": 0.651750700280112,
+        "n_drugs_auroc_ge_0_65": 44,
+        "n_drugs_total": 85,
+        "perc_drugs_auroc_ge_0_65": 0.5176470588235295
+      },
+      "verdict_primary": "FAIL",
+      "verdict_secondary": "FAIL",
+      "verdict": "FAIL"
+    },
+    "Q_C2": {
+      "gate": "Q_C2",
+      "description": "Class imbalance robustness",
+      "thresholds": {
+        "mean_balanced_acc_min": 0.65
+      },
+      "measured": {
+        "mean_balanced_acc": 0.5319133494138495,
+        "median_balanced_acc": 0.5,
+        "min_balanced_acc": 0.4703296703296703
+      },
+      "verdict": "FAIL"
+    },
+    "Q_D": {
+      "gate": "Q_D",
+      "description": "Cross-dataset preservation",
+      "verdict": "INDETERMINATE",
+      "reason": "Only 1 FLT3-class drugs in eval set; need \u22653 for correlation"
+    },
+    "Q_E": {
+      "gate": "Q_E",
+      "description": "KAALCURA contribution",
+      "thresholds": {
+        "path_a_top20_frac_min": 0.5,
+        "path_b_ablation_delta_min": 0.005
+      },
+      "measured": {
+        "frac_drugs_kaalcura_in_top20": 0.08235294117647059,
+        "n_drugs_kaalcura_in_top20": 7,
+        "n_drugs_total": 85,
+        "ablation_mean_delta_full_minus_no_kaalcura": -0.0004071880568756736,
+        "n_drugs_compared_for_ablation": 85
+      },
+      "verdict_path_a": "FAIL",
+      "verdict_path_b": "FAIL",
+      "verdict": "FAIL"
+    },
+    "Q_F": {
+      "gate": "Q_F",
+      "description": "Cell-type distinguishability (HSC-like vs Prog-like)",
+      "thresholds": {
+        "jaccard_max": 0.4
+      },
+      "measured": {
+        "jaccard": 0.25,
+        "source": "Round 2.2b Q_E result (preserved per P16)"
+      },
+      "note": "Per Round 2.2c spec Section 3 Q_F: implementation must address cell-type RNA context for fully native Round 2.2c measurement. For the current measurement, the Round 2.2b Q_E result (Jaccard=0.25 at threshold 0.6) is used directly, since the underlying KAALCURA axes are unchanged. A native Round 2.2c cell-type Jaccard (using multi-modal predictor with cell-type pseudobulks) is deferred as engineering work.",
+      "verdict": "PASS",
+      "verdict_status": "INHERITED_FROM_2.2B"
+    },
+    "Q_G": {
+      "gate": "Q_G",
+      "description": "No overfitting",
+      "thresholds": {
+        "mean_train_test_gap_max": 0.1
+      },
+      "measured": {
+        "mean_train_test_gap": 0.3455926514121085,
+        "median_train_test_gap": 0.3380187025131502,
+        "max_train_test_gap": 0.5872191011235955,
+        "min_train_test_gap": 0.0
+      },
+      "verdict": "FAIL"
+    }
+  },
+  "aggregate_metrics": {
+    "auroc_mean": 0.6426426427055385,
+    "auroc_median": 0.651750700280112,
+    "auroc_std": 0.10856181891953418,
+    "balanced_acc_mean": 0.5319133494138495,
+    "balanced_acc_median": 0.5,
+    "train_test_gap_mean": 0.3455926514121086,
+    "train_test_gap_max": 0.5872191011235955,
+    "n_drugs_auroc_ge_0_60": 52,
+    "n_drugs_auroc_ge_0_65": 44,
+    "n_drugs_auroc_ge_0_70": 27,
+    "n_drugs_auroc_ge_0_75": 14
+  },
+  "kaalcura_contribution_summary": {
+    "mean_delta": -0.00040718805687572977,
+    "median_delta": 0.00012339150361373452,
+    "n_drugs_kaalcura_helps": 43,
+    "n_drugs_kaalcura_hurts": 36,
+    "n_drugs_no_change": 6,
+    "n_drugs_compared": 85
+  },
+  "comparators_used": {
+    "rna_only_lightgbm_v2": 0.645,
+    "kaalcura_3axis_lightgbm": 0.532,
+    "kaalcura_3axis_logreg_round22b": 0.526,
+    "spec_threshold_qc": 0.7
+  }
+}

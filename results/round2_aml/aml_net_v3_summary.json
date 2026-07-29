@@ -1,0 +1,71 @@
+{
+  "verdict": "FAIL",
+  "query_A": {
+    "celltype": "HSC-like",
+    "venetoclax_in_top10": false,
+    "flt3_in_top10": 10,
+    "top_10": [
+      {
+        "drug": "Vargetef",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "Sunitinib",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "AST-487",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "KW-2449",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "Foretinib (XL880)",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "Quizartinib (AC220)",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "Sorafenib",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "TG101348",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "Midostaurin",
+        "score": 2.0549798011779785
+      },
+      {
+        "drug": "Crenolanib",
+        "score": 2.0549798011779785
+      }
+    ],
+    "pass": false
+  },
+  "query_B": {
+    "celltype": "Prog-like",
+    "flt3_in_top10": 0,
+    "top_10": [
+      {
+        "drug": "Palbociclib",
+        "score": 1.391821026802063
+      },
+      {
+        "drug": "17-AAG (Tanespimycin)",
+        "score": 1.342934250831604
+      }
+    ],
+    "pass": false
+  },
+  "query_C": {
+    "jaccard": 0.0,
+    "overlap_drugs": [],
+    "pass": true
+  }
+}

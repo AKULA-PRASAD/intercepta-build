@@ -1,0 +1,100 @@
+========================================================================
+INTERCEPTA v4 ODE DIAGNOSTIC
+  Instantaneous local growth rates (exponential basis)
+  Comparable to Stein/Wilkerson g (clinical observation window)
+========================================================================
+Velocity: ../results/velocity_star_latent_time.csv
+Mode:     RAW deriv() evaluation at t=0. No simulation.
+
+REFERENCE g-VALUES (Stein/Leuva/Zhou):
+  untreated_mCRPC        0.0075/day      [Stein 2011 NCI 5 trials]
+  enza_non_HRR           0.000784/day    [Leuva/Zhou VA]
+  enza_HRR_altered       0.001889/day    [Zhou 2024 eBioMedicine]
+
+--- untreated_N0_0.15 ---
+  N0/K = 0.150  g_total = 0.00374/day  (DT = 185 days)
+  Per-state g_local (at t=0):
+    S: n=0.1380  g=+0.00374/day  DT=186d
+    M: n=0.0075  g=+0.00384/day  DT=180d
+    V: n=0.0030  g=+0.00338/day  DT=205d
+    N: n=0.0015  g=+0.00430/day  DT=161d
+
+--- untreated_N0_0.30 ---
+  N0/K = 0.300  g_total = 0.00290/day  (DT = 239 days)
+  Per-state g_local (at t=0):
+    S: n=0.2760  g=+0.00290/day  DT=239d
+    M: n=0.0150  g=+0.00299/day  DT=232d
+    V: n=0.0060  g=+0.00261/day  DT=266d
+    N: n=0.0030  g=+0.00337/day  DT=206d
+
+--- untreated_N0_0.50 ---
+  N0/K = 0.500  g_total = 0.00179/day  (DT = 388 days)
+  Per-state g_local (at t=0):
+    S: n=0.4600  g=+0.00179/day  DT=388d
+    M: n=0.0250  g=+0.00185/day  DT=375d
+    V: n=0.0100  g=+0.00158/day  DT=440d
+    N: n=0.0050  g=+0.00212/day  DT=327d
+
+--- untreated_N0_0.70 ---
+  N0/K = 0.700  g_total = 0.00067/day  (DT = 1030 days)
+  Per-state g_local (at t=0):
+    S: n=0.6440  g=+0.00067/day  DT=1033d
+    M: n=0.0350  g=+0.00071/day  DT=978d
+    V: n=0.0140  g=+0.00055/day  DT=1270d
+    N: n=0.0070  g=+0.00087/day  DT=796d
+
+--- ADT_only_N0_0.15 ---
+  N0/K = 0.150  g_total = -0.00031/day
+  Per-state g_local (at t=0):
+    S: n=0.1380  g=-0.00085/day  DT=inf
+    M: n=0.0075  g=+0.00307/day  DT=226d
+    V: n=0.0030  g=+0.00568/day  DT=122d
+    N: n=0.0015  g=+0.01994/day  DT=35d
+
+--- ADT+enza_N0_0.15 ---
+  N0/K = 0.150  g_total = -0.00070/day
+  Per-state g_local (at t=0):
+    S: n=0.1350  g=-0.00126/day  DT=inf
+    M: n=0.0075  g=+0.00198/day  DT=350d
+    V: n=0.0045  g=+0.00323/day  DT=215d
+    N: n=0.0030  g=+0.01195/day  DT=58d
+
+--- ADT+abiraterone_N0_0.15 ---
+  N0/K = 0.150  g_total = -0.00086/day
+  Per-state g_local (at t=0):
+    S: n=0.1380  g=-0.00130/day  DT=inf
+    M: n=0.0075  g=+0.00137/day  DT=504d
+    V: n=0.0030  g=+0.00318/day  DT=218d
+    N: n=0.0015  g=+0.01994/day  DT=35d
+
+--- docetaxel_only_N0_0.15 ---
+  N0/K = 0.150  g_total = -0.09955/day
+  Per-state g_local (at t=0):
+    S: n=0.1380  g=-0.10092/day  DT=inf
+    M: n=0.0075  g=-0.08370/day  DT=inf
+    V: n=0.0030  g=-0.08416/day  DT=inf
+    N: n=0.0015  g=-0.08324/day  DT=inf
+  At t=0.5 day (after cycle-phase engagement):
+    g_total = -0.06554/day
+
+--- ADT+olaparib_BRCA+_N0_0.15 ---
+  N0/K = 0.150  g_total = -0.12174/day
+  Per-state g_local (at t=0):
+    S: n=0.1050  g=-0.12399/day  DT=inf
+    M: n=0.0180  g=-0.11819/day  DT=inf
+    V: n=0.0150  g=-0.11627/day  DT=inf
+    N: n=0.0120  g=-0.11421/day  DT=inf
+
+========================================================================
+COMPARISON TO STEIN/WILKERSON/LEUVA/ZHOU
+========================================================================
+Scenario                         Model g_total /day   Reference /day        Ratio
+--------------------------------------------------------------------------------
+untreated_N0_0.15                +0.00374             0.00750               0.50x
+ADT_only_N0_0.15                 -0.00031             —                     obs-only
+ADT+enza_N0_0.15                 -0.00070             0.00078               -0.89x
+ADT+abiraterone_N0_0.15          -0.00086             0.00078               -1.10x
+docetaxel_only_N0_0.15           -0.09955             —                     obs-only
+ADT+olaparib_BRCA+_N0_0.15       -0.12174             —                     obs-only
+
+Saved: ../results/ode_v4_diagnostic.json

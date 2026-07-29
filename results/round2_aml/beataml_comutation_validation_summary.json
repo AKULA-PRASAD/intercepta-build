@@ -1,0 +1,32 @@
+{
+  "validation_query": "FLT3-ITD / NPM1 co-mutation patterns vs AML literature",
+  "verdict": "PASS",
+  "message": "All co-mutation checks match published AML literature. Clinical mutation annotations are internally consistent and trustworthy for building the Layer 1 genome net.",
+  "n_patients_analyzed": 764,
+  "observed": {
+    "flt3_itd_freq": 0.2356020942408377,
+    "npm1_freq": 0.2617801047120419,
+    "both_freq": 0.1256544502617801,
+    "flt3_in_npm1": 0.48,
+    "npm1_in_flt3": 0.5333333333333333,
+    "chi2": 88.02576987461813,
+    "p_chi2": 6.460724348823837e-21,
+    "odds_ratio": 5.274725274725275,
+    "p_fisher": 1.2392483141453e-19
+  },
+  "expected_from_literature": {
+    "flt3_itd_freq": 0.28,
+    "npm1_freq": 0.3,
+    "flt3_in_npm1": 0.4,
+    "npm1_in_flt3": 0.55,
+    "tolerance": 0.08
+  },
+  "contingency_table": {
+    "flt3_pos_npm1_pos": 96,
+    "flt3_pos_npm1_neg": 84,
+    "flt3_neg_npm1_pos": 104,
+    "flt3_neg_npm1_neg": 480
+  },
+  "checks_passed": 5,
+  "checks_total": 5
+}

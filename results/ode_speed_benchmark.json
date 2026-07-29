@@ -1,0 +1,38 @@
+{
+  "baseline_sec": 0.75,
+  "screen_sec": 7.33,
+  "speedup": 0.1,
+  "projected_286_drugs_min": 34.9,
+  "drug_results": {
+    "docetaxel": {
+      "time_sec": 0.39,
+      "prog_mo": 10.0,
+      "nadir_frac": 0.691
+    },
+    "abiraterone": {
+      "time_sec": 1.15,
+      "prog_mo": 6.9,
+      "nadir_frac": 1.0
+    },
+    "olaparib": {
+      "time_sec": 30.26,
+      "prog_mo": 7.7,
+      "nadir_frac": 1.0
+    },
+    "enzalutamide": {
+      "time_sec": 10.61,
+      "prog_mo": 9.3,
+      "nadir_frac": 1.0
+    },
+    "talazoparib": {
+      "time_sec": 1.18,
+      "prog_mo": 6.9,
+      "nadir_frac": 1.0
+    },
+    "ADT": {
+      "time_sec": 0.36,
+      "prog_mo": 10.3,
+      "nadir_frac": 1.0
+    }
+  }
+}
