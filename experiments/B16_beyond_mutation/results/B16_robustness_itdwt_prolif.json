@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-07-29T14:25:05Z",
+  "pairs": [
+    {
+      "drug": "sorafenib",
+      "n_wt": 371,
+      "rho_raw": 0.2846,
+      "rho_prolif_adj": 0.2949
+    },
+    {
+      "drug": "quizartinib",
+      "n_wt": 348,
+      "rho_raw": 0.1741,
+      "rho_prolif_adj": 0.1561
+    },
+    {
+      "drug": "gilteritinib",
+      "n_wt": 204,
+      "rho_raw": 0.1156,
+      "rho_prolif_adj": 0.1043
+    },
+    {
+      "drug": "crenolanib",
+      "n_wt": 337,
+      "rho_raw": 0.2551,
+      "rho_prolif_adj": 0.2307
+    }
+  ],
+  "combined_stouffer_Z": 7.266,
+  "combined_p": 1.8546736921712653e-13,
+  "conclusion": "V19 H2 (ITD-WT FLT3-dependency->FLT3i sensitivity) SURVIVES proliferation adjustment; not a proliferation artifact."
+}
