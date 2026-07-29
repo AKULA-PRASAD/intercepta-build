@@ -10,6 +10,7 @@ import numpy as np, pandas as pd
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _REPO = os.path.abspath(os.path.join(_HERE, "..", ".."))
 DATA = os.environ.get("INTERCEPTA_DATA", "/Users/kalki/kaalcura/data")
+BEATAML = os.environ.get("INTERCEPTA_BEATAML", "/Users/kalki/INTERCEPTA/data/beataml")
 MANIFEST = os.path.join(_REPO, "data", "MANIFEST.md")
 
 
@@ -114,3 +115,29 @@ def load_damaging_mutations():
     for dep, sym in zip(maf["DepMap_ID"].values, maf["Hugo_Symbol"].values):
         out.setdefault(dep, set()).add(sym)
     return out
+
+
+def _bp(fname):
+    return os.path.join(BEATAML, fname)
+
+
+def load_beataml_expression():
+    """BeatAML patient tumor RNA -> genes(rows, gene symbol) x samples(cols, dbgap_rnaseq_sample)."""
+    f = "beataml_waves1to4_norm_exp_dbgap.txt"
+    verify(f, _bp(f))
+    df = pd.read_csv(_bp(f), sep="\t")
+    df = df.dropna(subset=["display_label"]).set_index("display_label")
+    df = df.drop(columns=[c for c in ("stable_id", "description", "biotype") if c in df.columns])
+    df = df[~df.index.duplicated()]
+    return df.select_dtypes("number")
+
+
+def load_beataml_auc():
+    """BeatAML ex-vivo drug response -> long df [rnaseq_sample, drug(lowercased, code stripped), auc]."""
+    f = "beataml_probit_curve_fits_v4_dbgap.txt"
+    verify(f, _bp(f))
+    p = pd.read_csv(_bp(f), sep="\t", usecols=["dbgap_rnaseq_sample", "inhibitor", "auc"]).dropna()
+    p["drug"] = p["inhibitor"].str.split(" (", regex=False).str[0].str.strip().str.lower()
+    p = p.rename(columns={"dbgap_rnaseq_sample": "sample"})
+    p["sample"] = p["sample"].astype(str)
+    return p[["sample", "drug", "auc"]]

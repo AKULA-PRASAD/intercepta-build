@@ -10,4 +10,8 @@ echo "== B1: baseline ceiling =="
 "$PY" experiments/B1_baseline_ceiling/run.py
 echo "== B2: beat the ceiling? =="
 "$PY" experiments/B2_beat_ceiling/run.py
+echo "== B3: cell-line -> patient transfer (L1) =="
+: "${INTERCEPTA_BEATAML:=/Users/kalki/INTERCEPTA/data/beataml}"
+export INTERCEPTA_BEATAML
+"$PY" experiments/B3_patient_transfer/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="
