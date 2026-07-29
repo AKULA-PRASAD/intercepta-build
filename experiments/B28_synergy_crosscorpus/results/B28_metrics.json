@@ -1,0 +1,38 @@
+{
+  "git_sha": "ef84a2a0098458df1f1903dbc945cb27b10141d9",
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T19:38:30Z",
+  "seed": 42,
+  "oneil_to_drugcomb": {
+    "train": "oneil",
+    "n_eval": 60000,
+    "spearman": 0.0857,
+    "ci95": [
+      0.0773,
+      0.0936
+    ],
+    "precision_at_10pct": 0.3405,
+    "base_rate": 0.25,
+    "enrichment": 1.362,
+    "n_novel_combos": 58060,
+    "spearman_novel_combos": 0.0726
+  },
+  "drugcomb_to_oneil": {
+    "train": "drugcomb",
+    "n_eval": 18929,
+    "spearman": 0.3775,
+    "ci95": [
+      0.3649,
+      0.3898
+    ],
+    "precision_at_10pct": 0.6237,
+    "base_rate": 0.25,
+    "enrichment": 2.494,
+    "n_novel_combos": 1210,
+    "spearman_novel_combos": 0.4364
+  },
+  "H1_both_positive_ci_excludes_0": true,
+  "externally_validated_nonneg": false,
+  "H3_novel_combos_positive": true,
+  "verdict": "TRANSFERS WEAKLY across corpora (O'Neil->DrugComb rho=0.0857, DrugComb->O'Neil rho=0.3775; both CI>0 but small) -> real but modest external transfer; honestly bounded."
+}
