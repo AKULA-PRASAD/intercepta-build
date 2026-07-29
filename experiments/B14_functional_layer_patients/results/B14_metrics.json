@@ -1,0 +1,88 @@
+{
+  "git_sha": "2bc2fbcf0d5cfc9ab6008b52094c6af37b16211f",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T14:07:53Z",
+  "seed": 42,
+  "K": 2000,
+  "n_pairs": 10,
+  "pairs": [
+    {
+      "drug": "trametinib",
+      "target": "MAP2K1",
+      "n": 484,
+      "rho_inferred_dep": -0.1035,
+      "rho_direct_transfer": 0.368
+    },
+    {
+      "drug": "selumetinib",
+      "target": "MAP2K1",
+      "n": 456,
+      "rho_inferred_dep": -0.0238,
+      "rho_direct_transfer": 0.211
+    },
+    {
+      "drug": "sorafenib",
+      "target": "FLT3",
+      "n": 494,
+      "rho_inferred_dep": 0.2437,
+      "rho_direct_transfer": 0.0409
+    },
+    {
+      "drug": "quizartinib",
+      "target": "FLT3",
+      "n": 461,
+      "rho_inferred_dep": 0.1349,
+      "rho_direct_transfer": -0.1107
+    },
+    {
+      "drug": "gilteritinib",
+      "target": "FLT3",
+      "n": 278,
+      "rho_inferred_dep": 0.1294,
+      "rho_direct_transfer": -0.0182
+    },
+    {
+      "drug": "crenolanib",
+      "target": "FLT3",
+      "n": 446,
+      "rho_inferred_dep": 0.1606,
+      "rho_direct_transfer": -0.1429
+    },
+    {
+      "drug": "venetoclax",
+      "target": "BCL2",
+      "n": 367,
+      "rho_inferred_dep": 0.2176,
+      "rho_direct_transfer": 0.0924
+    },
+    {
+      "drug": "erlotinib",
+      "target": "EGFR",
+      "n": 485,
+      "rho_inferred_dep": -0.0873,
+      "rho_direct_transfer": 0.0657
+    },
+    {
+      "drug": "gefitinib",
+      "target": "EGFR",
+      "n": 466,
+      "rho_inferred_dep": -0.0828,
+      "rho_direct_transfer": -0.0068
+    },
+    {
+      "drug": "afatinib",
+      "target": "EGFR",
+      "n": 459,
+      "rho_inferred_dep": -0.04,
+      "rho_direct_transfer": 0.0936
+    }
+  ],
+  "H1_pooled_rho": 0.0549,
+  "H1_perm_p": 0.0004997501249375312,
+  "H1_pass": true,
+  "H2_diff_medabs": 0.0234,
+  "H2_perm_p": 0.2723638180909545,
+  "H2_pass": false,
+  "verdict": "inferred-dependency predicts BeatAML ex-vivo response but NOT better than direct transfer (real, not an improvement)"
+}
