@@ -1,0 +1,162 @@
+{
+  "git_sha": "cdbcf077b7e0636c16635695473c47ba6c6b06c1",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T14:02:32Z",
+  "seed": 42,
+  "K": 2000,
+  "n_pairs": 15,
+  "expr_to_dep_cv_rho": {
+    "BRAF": 0.3284,
+    "CDK6": 0.594,
+    "EGFR": 0.5654,
+    "FLT3": 0.1624,
+    "MAP2K1": 0.2688,
+    "MDM2": 0.5835,
+    "PIK3CA": 0.4557
+  },
+  "pairs": [
+    {
+      "drug": "idasanutlin",
+      "gene": "MDM2",
+      "n": 389,
+      "cv_expr_to_dep": 0.584,
+      "rho_inferred": 0.4413,
+      "rho_expr": -0.4063,
+      "rho_true": 0.4841
+    },
+    {
+      "drug": "nutlin-3",
+      "gene": "MDM2",
+      "n": 359,
+      "cv_expr_to_dep": 0.584,
+      "rho_inferred": 0.4432,
+      "rho_expr": -0.3431,
+      "rho_true": 0.4404
+    },
+    {
+      "drug": "afatinib",
+      "gene": "EGFR",
+      "n": 382,
+      "cv_expr_to_dep": 0.565,
+      "rho_inferred": 0.4545,
+      "rho_expr": -0.2563,
+      "rho_true": 0.381
+    },
+    {
+      "drug": "gefitinib",
+      "gene": "EGFR",
+      "n": 380,
+      "cv_expr_to_dep": 0.565,
+      "rho_inferred": 0.3354,
+      "rho_expr": -0.258,
+      "rho_true": 0.3558
+    },
+    {
+      "drug": "erlotinib",
+      "gene": "EGFR",
+      "n": 388,
+      "cv_expr_to_dep": 0.565,
+      "rho_inferred": 0.2794,
+      "rho_expr": -0.2936,
+      "rho_true": 0.3375
+    },
+    {
+      "drug": "alpelisib",
+      "gene": "PIK3CA",
+      "n": 376,
+      "cv_expr_to_dep": 0.456,
+      "rho_inferred": 0.2332,
+      "rho_expr": 0.037,
+      "rho_true": 0.3539
+    },
+    {
+      "drug": "buparlisib",
+      "gene": "PIK3CA",
+      "n": 364,
+      "cv_expr_to_dep": 0.456,
+      "rho_inferred": 0.12,
+      "rho_expr": 0.0599,
+      "rho_true": 0.1781
+    },
+    {
+      "drug": "trametinib",
+      "gene": "MAP2K1",
+      "n": 388,
+      "cv_expr_to_dep": 0.269,
+      "rho_inferred": 0.3622,
+      "rho_expr": 0.0296,
+      "rho_true": 0.201
+    },
+    {
+      "drug": "selumetinib",
+      "gene": "MAP2K1",
+      "n": 386,
+      "cv_expr_to_dep": 0.269,
+      "rho_inferred": 0.3016,
+      "rho_expr": 0.0142,
+      "rho_true": 0.1602
+    },
+    {
+      "drug": "pd0325901",
+      "gene": "MAP2K1",
+      "n": 497,
+      "cv_expr_to_dep": 0.269,
+      "rho_inferred": 0.3144,
+      "rho_expr": 0.0009,
+      "rho_true": 0.1183
+    },
+    {
+      "drug": "palbociclib",
+      "gene": "CDK6",
+      "n": 384,
+      "cv_expr_to_dep": 0.594,
+      "rho_inferred": 0.2767,
+      "rho_expr": -0.1561,
+      "rho_true": 0.3413
+    },
+    {
+      "drug": "ribociclib",
+      "gene": "CDK6",
+      "n": 388,
+      "cv_expr_to_dep": 0.594,
+      "rho_inferred": 0.0473,
+      "rho_expr": -0.0053,
+      "rho_true": 0.0642
+    },
+    {
+      "drug": "vemurafenib",
+      "gene": "BRAF",
+      "n": 376,
+      "cv_expr_to_dep": 0.328,
+      "rho_inferred": 0.1869,
+      "rho_expr": -0.0753,
+      "rho_true": 0.1342
+    },
+    {
+      "drug": "dabrafenib",
+      "gene": "BRAF",
+      "n": 384,
+      "cv_expr_to_dep": 0.328,
+      "rho_inferred": 0.1807,
+      "rho_expr": 0.0211,
+      "rho_true": 0.0956
+    },
+    {
+      "drug": "gilteritinib",
+      "gene": "FLT3",
+      "n": 360,
+      "cv_expr_to_dep": 0.162,
+      "rho_inferred": -0.0266,
+      "rho_expr": 0.0724,
+      "rho_true": 0.1122
+    }
+  ],
+  "H1_median_inferred": 0.2794,
+  "H1_median_expr": 0.0724,
+  "H1_diff": 0.207,
+  "H1_perm_p": 0.010494752623688156,
+  "H1_pass": true,
+  "recovery_fraction": 1.23,
+  "verdict": "INFERRED-DEPENDENCY LAYER works: expression->inferred-dependency beats baseline expression (patient-translatable functional layer)"
+}
