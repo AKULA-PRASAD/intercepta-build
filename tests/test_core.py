@@ -4,6 +4,7 @@ so they are fast and CI-able. Integration tests that need INTERCEPTA_DATA are se
 import numpy as np
 import pandas as pd
 import pytest
+from scipy import stats
 
 from intercepta.metrics import bh_fdr, per_drug_spearman, paired_wilcoxon, permutation_p
 from intercepta.splits import disjoint_train_cosmics
@@ -106,3 +107,24 @@ def test_data_verify_rejects_mismatch(monkeypatch, tmp_path):
     # matching hash passes
     monkeypatch.setattr(D, "_manifest", lambda: {"x.txt": D.sha256(str(f))})
     D.verify("x.txt", str(f))
+
+
+# ---- functional-inference layer (V15-V18): expression -> inferred dependency ----
+def test_engine_functional_inference_recovers_relationship():
+    genes = [f"G{i}" for i in range(10)]
+    eng = E.InterceptaEngine(); eng.genes_ = genes
+    rng = np.random.default_rng(3)
+    cells = [f"c{i}" for i in range(150)]
+    expr = pd.DataFrame(rng.normal(size=(10, 150)), index=genes, columns=cells)     # genes x cells
+    tgt = -2.0 * expr.loc["G0"].values + 0.1 * rng.normal(size=150)                  # dependency = -2*G0
+    crispr = pd.DataFrame({"TGT": tgt}, index=cells)                                 # cells x gene
+    eng.fit_dependency(["TGT"], crispr_df=crispr, expr_df=expr)
+    assert "TGT" in eng.dep_models_
+    q = pd.DataFrame(rng.normal(size=(10, 40)), index=genes, columns=[f"q{i}" for i in range(40)])
+    inf = eng.infer_dependency(q)
+    assert inf.shape == (40, 1) and "TGT" in inf.columns
+    # inferred TGT effect tracks -G0 -> negatively correlated with query G0
+    assert stats.spearmanr(inf["TGT"].values, q.loc["G0"].values)[0] < -0.3
+
+def test_rescued_targets_declared():
+    assert {"FLT3", "BCL2", "CDK9", "AURKA"} == E.InterceptaEngine.RESCUED_TARGETS

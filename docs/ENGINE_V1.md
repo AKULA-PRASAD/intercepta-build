@@ -43,6 +43,15 @@ validated (B6/LEDGER V13): samples closer to the cell-line training distribution
 absolute accuracy is weak. Per-drug CV reliability did NOT calibrate (B6 H1 null, confirms B3e) and is descriptive
 only. No prediction is ever HIGH confidence on current single-cohort evidence.
 
+## Functional-inference layer (V15–V18) — the program's most promising lead
+`fit_dependency(targets)` trains expression→CRISPR gene-dependency models; `infer_dependency(expr)` predicts a
+tumor's functional dependency on target genes **from RNA alone**. Validated (BeatAML ex-vivo, B15): for the
+dependency-driven actionable targets **FLT3, BCL2, CDK9, AURKA** (`RESCUED_TARGETS`), inferred dependency predicts
+ex-vivo drug sensitivity (ρ +0.13…+0.24) where the direct transcriptomic transfer is ~0 or wrong-signed. **Honest
+scope:** NOT a broad win (does not beat direct transfer overall; MEK/EGFR not rescued); BeatAML ex-vivo only, not
+clinical outcome; dependency models trained on pan-cancer DepMap. It is the sharpest, most clinically-relevant,
+patient-translatable lead — the primary Track-1 hypothesis, not a validated clinical tool.
+
 ## Next
 `engine v1` is the validated floor. It becomes clinically meaningful only after external replication on a
 **second independent patient drug-response cohort** (see repo README "what's next"). Until then it is an honest,

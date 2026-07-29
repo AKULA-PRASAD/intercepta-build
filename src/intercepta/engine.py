@@ -101,6 +101,40 @@ class InterceptaEngine:
             self._nn = NearestNeighbors(n_neighbors=10).fit(self._pca.transform(Xall))
         return self
 
+    # ---- functional-inference layer (V15-V18): expression -> inferred gene-dependency ----
+    # Rescues ex-vivo drug prediction for dependency-driven actionable targets where direct transfer fails.
+    # VALIDATED (BeatAML ex-vivo, B15): FLT3, BCL2, CDK9, AURKA. NOT for RAS/MEK (direct wins) or EGFR (n/a in AML).
+    RESCUED_TARGETS = {"FLT3", "BCL2", "CDK9", "AURKA"}
+
+    def fit_dependency(self, target_genes, crispr_df=None, expr_df=None):
+        """Train per-target expression->CRISPR-dependency Ridge models (functional-inference layer).
+        crispr_df: cells x genes gene-effect (default: DepMap load_depmap_crispr()). expr_df: cells x genes
+        expression aligned to self.genes_ (default: the DepMap expression used in fit()). Requires prior fit()."""
+        if self.genes_ is None:
+            raise RuntimeError("call fit() before fit_dependency() (need feature genes)")
+        ce = crispr_df if crispr_df is not None else D.load_depmap_crispr()
+        if expr_df is not None:
+            Xz = D.z_rows(expr_df.reindex(self.genes_).fillna(0.0)).fillna(0.0).T   # cells x genes
+        else:
+            Xz = self._dxz.T                                                        # cells x genes (z)
+        self.dep_models_, self.dep_cv_rho_dep_ = {}, {}
+        for g in target_genes:
+            if g not in ce.columns:
+                continue
+            cells = [c for c in Xz.index if c in ce.index and np.isfinite(ce.loc[c, g])]
+            if len(cells) < 100:
+                continue
+            X = Xz.loc[cells].values; y = ce.loc[cells, g].astype(float).values
+            self.dep_models_[g] = RidgeCV(alphas=self.alphas).fit(X, y)
+        return self
+
+    def infer_dependency(self, expr):
+        """expr: genes x samples. Returns samples x target inferred gene-effect (more negative = more dependent)."""
+        if not getattr(self, "dep_models_", None):
+            raise RuntimeError("call fit_dependency() first")
+        xz = D.z_rows(expr.reindex(self.genes_).fillna(0.0)).fillna(0.0).T           # samples x genes
+        return pd.DataFrame({g: m.predict(xz.values) for g, m in self.dep_models_.items()}, index=expr.columns)
+
     def ood_score(self, expr):
         """Out-of-distribution score per query sample = mean distance to 10 nearest TRAINING cells in PC space.
         Higher = further from the cell-line training distribution = less trustworthy (patients are inherently OOD)."""
