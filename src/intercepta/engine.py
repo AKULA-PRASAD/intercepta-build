@@ -14,6 +14,10 @@ HONEST SCOPE (do not overstate):
 """
 import numpy as np, pandas as pd
 from sklearn.linear_model import RidgeCV
+from sklearn.decomposition import PCA
+from sklearn.neighbors import NearestNeighbors
+from sklearn.model_selection import KFold
+from scipy import stats
 from . import data as D
 from .axes import compute_r_prolif
 
@@ -44,9 +48,14 @@ class InterceptaEngine:
         self.models_ = {}          # drug -> fitted RidgeCV
         self.genes_ = None         # shared feature genes
         self.fitted_drugs_ = []
+        self.drug_cv_rho_ = {}     # drug -> 5-fold CV Spearman on training cells (per-drug reliability estimate)
+        self._pca = None           # OOD: PCA on training expression
+        self._nn = None            # OOD: kNN on training PCs
+        self.seed = 42
 
-    def fit(self, drugs=None):
-        """Train per-drug Ridge on DepMap RNA-seq expression -> GDSC LN_IC50 (labels via COSMIC<->DepMap)."""
+    def fit(self, drugs=None, compute_calibration=True):
+        """Train per-drug Ridge on DepMap RNA-seq expression -> GDSC LN_IC50 (labels via COSMIC<->DepMap).
+        If compute_calibration: also estimate per-drug CV reliability + fit an OOD detector (PCA+kNN)."""
         cos2dep, _ = D.load_cosmic_depmap_map()
         gdsc = D.load_gdsc_response()
         gdsc = gdsc[gdsc["COSMIC_ID"].isin(cos2dep)].copy()
@@ -65,10 +74,29 @@ class InterceptaEngine:
             tr = tr[tr["DepMap_ID"].isin(self._dxz.columns)]
             if len(tr) < 30:
                 continue
-            self.models_[dk] = RidgeCV(alphas=self.alphas).fit(
-                self._dxz[tr["DepMap_ID"].values].T.values, tr["LN_IC50"].values)
+            Xtr = self._dxz[tr["DepMap_ID"].values].T.values
+            ytr = tr["LN_IC50"].values
+            self.models_[dk] = RidgeCV(alphas=self.alphas).fit(Xtr, ytr)
+            if compute_calibration and len(ytr) >= 25:      # per-drug reliability = 5-fold CV Spearman
+                kf = KFold(5, shuffle=True, random_state=self.seed); pr = np.empty(len(ytr))
+                for tri, tei in kf.split(Xtr):
+                    pr[tei] = RidgeCV(alphas=self.alphas).fit(Xtr[tri], ytr[tri]).predict(Xtr[tei])
+                self.drug_cv_rho_[dk] = float(stats.spearmanr(pr, ytr)[0])
         self.fitted_drugs_ = sorted(self.models_)
+        if compute_calibration:                              # OOD detector: PCA + kNN on training expression
+            Xall = self._dxz.T.values
+            self._pca = PCA(n_components=min(20, Xall.shape[1]), random_state=self.seed).fit(Xall)
+            self._nn = NearestNeighbors(n_neighbors=10).fit(self._pca.transform(Xall))
         return self
+
+    def ood_score(self, expr):
+        """Out-of-distribution score per query sample = mean distance to 10 nearest TRAINING cells in PC space.
+        Higher = further from the cell-line training distribution = less trustworthy (patients are inherently OOD)."""
+        if self._pca is None:
+            return pd.Series(np.nan, index=expr.columns)
+        xz = D.z_rows(expr.reindex(self.genes_).fillna(0.0)).fillna(0.0)
+        d, _ = self._nn.kneighbors(self._pca.transform(xz.T.values))
+        return pd.Series(d.mean(1), index=expr.columns)
 
     def predict_transfer(self, expr):
         """expr: genes(symbol) x samples DataFrame. Returns samples x drugs predicted LN_IC50 (z per drug)."""
@@ -84,6 +112,7 @@ class InterceptaEngine:
         combined_score: higher = predicted MORE SENSITIVE. = -(transfer_z) + marker_bonus.
         """
         pred = self.predict_transfer(expr)                       # samples x drugs (z LN_IC50; higher=resistant)
+        ood = self.ood_score(expr)                               # per-sample OOD distance
         rows = []
         for s in pred.index:
             for dk in pred.columns:
@@ -99,7 +128,9 @@ class InterceptaEngine:
                 rows.append({"sample": s, "drug": dk, "transfer_z": round(tz, 4),
                              "marker": mk_name, "marker_present": marker_val,
                              "combined_score": round(combined, 4),
-                             "confidence": "LOW"})                # honest: weak effects, one cohort
+                             "drug_cv_reliability": (round(self.drug_cv_rho_[dk], 4) if dk in self.drug_cv_rho_ else np.nan),
+                             "ood_distance": (round(float(ood[s]), 4) if np.isfinite(ood.get(s, np.nan)) else np.nan),
+                             "confidence": "LOW"})                # honest default; see B6 — not yet validated to raise
         return pd.DataFrame(rows)
 
 
