@@ -53,35 +53,47 @@ class InterceptaEngine:
         self._nn = None            # OOD: kNN on training PCs
         self.seed = 42
 
-    def fit(self, drugs=None, compute_calibration=True):
-        """Train per-drug Ridge on DepMap RNA-seq expression -> GDSC LN_IC50 (labels via COSMIC<->DepMap).
-        If compute_calibration: also estimate per-drug CV reliability + fit an OOD detector (PCA+kNN)."""
-        cos2dep, _ = D.load_cosmic_depmap_map()
-        gdsc = D.load_gdsc_response()
-        gdsc = gdsc[gdsc["COSMIC_ID"].isin(cos2dep)].copy()
-        gdsc["DepMap_ID"] = gdsc["COSMIC_ID"].map(cos2dep)
+    def fit(self, drugs=None, compute_calibration=True, label_source="gdsc"):
+        """Train per-drug Ridge on DepMap RNA-seq expression -> drug response.
+        label_source='gdsc': GDSC LN_IC50 (labels via COSMIC<->DepMap). 'prism': PRISM AUC (on DepMap cells,
+        ~1400 drugs — broader coverage). If compute_calibration: also per-drug CV reliability + OOD detector."""
+        self.label_source = label_source
         dx = D.load_depmap_expression()
-        gdsc = gdsc[gdsc["DepMap_ID"].isin(dx.index)]
         self._dx_cols = set(dx.columns)
         self.genes_ = list(dx.columns[dx.var(0).values.argsort()[::-1]][: self.topn])  # top-variance genes
         self._dxz = D.z_rows(dx[self.genes_].T).fillna(0.0)      # genes x cells
-        gl = {d.lower(): d for d in gdsc["DRUG_NAME"].unique()}
+        if label_source == "prism":
+            pr = D.load_prism()                                  # depmap_id, name, auc (on DepMap cells)
+            pr = pr[pr["depmap_id"].isin(self._dxz.columns)]
+            gl = {d.lower(): d for d in pr["name"].unique()}
+            def train_xy(dk):
+                t = pr[pr["name"] == gl[dk]].groupby("depmap_id")["auc"].mean()
+                t = t[t.index.isin(self._dxz.columns)]
+                return (self._dxz[t.index.values].T.values, t.values) if len(t) >= 30 else (None, None)
+        else:
+            cos2dep, _ = D.load_cosmic_depmap_map()
+            gdsc = D.load_gdsc_response()
+            gdsc = gdsc[gdsc["COSMIC_ID"].isin(cos2dep)].copy()
+            gdsc["DepMap_ID"] = gdsc["COSMIC_ID"].map(cos2dep)
+            gdsc = gdsc[gdsc["DepMap_ID"].isin(dx.index)]
+            gl = {d.lower(): d for d in gdsc["DRUG_NAME"].unique()}
+            def train_xy(dk):
+                t = gdsc[gdsc["DRUG_NAME"] == gl[dk]].dropna(subset=["LN_IC50"]).drop_duplicates("DepMap_ID")
+                t = t[t["DepMap_ID"].isin(self._dxz.columns)]
+                return (self._dxz[t["DepMap_ID"].values].T.values, t["LN_IC50"].values) if len(t) >= 30 else (None, None)
         want = [d.lower() for d in drugs] if drugs else list(gl)
         for dk in want:
             if dk not in gl:
                 continue
-            tr = gdsc[gdsc["DRUG_NAME"] == gl[dk]].dropna(subset=["LN_IC50"]).drop_duplicates("DepMap_ID")
-            tr = tr[tr["DepMap_ID"].isin(self._dxz.columns)]
-            if len(tr) < 30:
+            Xtr, ytr = train_xy(dk)
+            if Xtr is None:
                 continue
-            Xtr = self._dxz[tr["DepMap_ID"].values].T.values
-            ytr = tr["LN_IC50"].values
             self.models_[dk] = RidgeCV(alphas=self.alphas).fit(Xtr, ytr)
             if compute_calibration and len(ytr) >= 25:      # per-drug reliability = 5-fold CV Spearman
-                kf = KFold(5, shuffle=True, random_state=self.seed); pr = np.empty(len(ytr))
+                kf = KFold(5, shuffle=True, random_state=self.seed); cvp = np.empty(len(ytr))
                 for tri, tei in kf.split(Xtr):
-                    pr[tei] = RidgeCV(alphas=self.alphas).fit(Xtr[tri], ytr[tri]).predict(Xtr[tei])
-                self.drug_cv_rho_[dk] = float(stats.spearmanr(pr, ytr)[0])
+                    cvp[tei] = RidgeCV(alphas=self.alphas).fit(Xtr[tri], ytr[tri]).predict(Xtr[tei])
+                self.drug_cv_rho_[dk] = float(stats.spearmanr(cvp, ytr)[0])
         self.fitted_drugs_ = sorted(self.models_)
         if compute_calibration:                              # OOD detector: PCA + kNN on training expression
             Xall = self._dxz.T.values
