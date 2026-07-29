@@ -146,3 +146,22 @@ class SynergyRanker:
         cells = [c for c in syn["Cell"].unique() if c in rna.index]
         cell_expr = rna.loc[cells]
         return cls(**kw).fit(syn[syn["Cell"].isin(cells)], cell_expr, smiles)
+
+    @classmethod
+    def from_drugcomb(cls, data_dir=None, max_rows=120000, seed=42, **kw):
+        """Larger library: DrugComb (124 drugs, 41 DepMap-mapped cells; open, via TDC). Cells already mapped to
+        DepMap_ID (Cell_ACH). Honest tradeoff vs from_oneil: ~3x the drugs to rank among, but lower per-prediction
+        reliability (leave-combination-out CV Spearman ~0.38 vs O'Neil's 0.62) because DrugComb aggregates many
+        studies (noisier Loewe). Seeded row-subsample bounds runtime (preserves all drugs/cells)."""
+        import os
+        from . import data as D
+        dd = data_dir or os.environ.get("INTERCEPTA_DATA", "/Users/kalki/kaalcura/data")
+        syn = pd.read_parquet(os.path.join(dd, "drugcomb_synergy.parquet")).rename(
+            columns={"Cell_ACH": "Cell", "Synergy_Loewe": "Y"})
+        smiles = pd.read_parquet(os.path.join(dd, "drugcomb_smiles.parquet")).set_index("id")["smiles"].to_dict()
+        rna = D.load_depmap_expression()
+        cells = [c for c in syn["Cell"].unique() if c in rna.index]
+        syn = syn[syn["Cell"].isin(cells)].reset_index(drop=True)
+        if len(syn) > max_rows:                              # seeded subsample; preserves all drugs+cells
+            syn = syn.iloc[np.random.default_rng(seed).permutation(len(syn))[:max_rows]].reset_index(drop=True)
+        return cls(seed=seed, **kw).fit(syn, rna.loc[cells], smiles)

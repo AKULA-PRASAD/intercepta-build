@@ -46,7 +46,7 @@ def _cmd_synergy(args):
     import pandas as pd
     from intercepta.synergy import SynergyRanker
     expr = pd.read_csv(args.expr, index_col=0)               # genes x samples
-    ranker = SynergyRanker.from_oneil()
+    ranker = SynergyRanker.from_drugcomb() if args.library == "drugcomb" else SynergyRanker.from_oneil()
     out = ranker.rank_pairs(expr, top=args.top)
     out.to_csv(args.out, index=False)
     print(f"ranked synergistic pairs for {out['sample'].nunique()} samples "
@@ -70,6 +70,8 @@ def main(argv=None):
     r.set_defaults(func=_cmd_rank)
     s = sub.add_parser("synergy", help="rank synergistic drug PAIRS (known library) for query expression (genes x samples CSV)")
     s.add_argument("--expr", required=True, help="query expression CSV (genes as rows, samples as columns; DepMap gene symbols)")
+    s.add_argument("--library", default="oneil", choices=["oneil", "drugcomb"],
+                   help="drug library: oneil (38 drugs, CV rho 0.62) or drugcomb (124 drugs, CV rho ~0.38)")
     s.add_argument("--top", type=int, default=20, help="top-N pairs per sample")
     s.add_argument("--out", default="intercepta_synergy.csv")
     s.set_defaults(func=_cmd_synergy)

@@ -62,8 +62,10 @@ Turns the validated result V23 (drug-combination synergy generalizes to unseen c
 library; leave-combination-out Spearman ~0.6, replicated across O'Neil + DrugComb, B24/B25) into a usable tool:
 `rank_pairs(expr)` takes a tumor/cell expression profile (genes×samples) and ranks the most synergistic drug pairs
 from the fitted library, with OOD-gated confidence. Ships the reproducible DepMap-expression + Morgan-fingerprint
-pipeline; `SynergyRanker.from_oneil()` self-validates (leave-drug-combination-out CV Spearman = **0.62**, reproduced
-×2). `intercepta synergy --expr cohort.csv` runs it from the CLI.
+pipeline with two libraries: `SynergyRanker.from_oneil()` (38 drugs, 703 pairs, self-validated leave-combination-out
+CV Spearman = **0.62**) and `SynergyRanker.from_drugcomb()` (124 drugs, **7,626 rankable pairs**, CV Spearman
+**0.39** — ~3× more drugs, lower reliability, matching B25's reproduced value; honest tradeoff). `intercepta synergy
+--expr cohort.csv --library {oneil,drugcomb}` runs it from the CLI.
 **Honest scope:** cell-line Loewe synergy (NOT clinical); scores ONLY pairs of drugs in the fitted library — it does
 **not** generalize to novel drugs (B25/B26 falsified that); OOD gate flags inputs beyond the training-cell diversity
 envelope; confidence is capped at MODERATE. A research hypothesis-ranker, not a clinical tool.

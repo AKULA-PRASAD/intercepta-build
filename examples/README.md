@@ -38,6 +38,18 @@ intercepta info                                                 # version + hone
 intercepta rank --expr my_cohort_expression.csv --drugs trametinib,selumetinib --out ranking.csv
 ```
 
+### Synergy: rank drug PAIRS (combinations arm, V23)
+```python
+from intercepta.synergy import SynergyRanker
+r = SynergyRanker.from_oneil()          # 38-drug library, leave-combination-out CV Spearman 0.62
+# r = SynergyRanker.from_drugcomb()     # 124-drug library, larger but noisier (CV Spearman ~0.38, from B25)
+r.rank_pairs(expr, top=20)              # top synergistic pairs per sample, OOD-gated confidence
+```
+CLI: `intercepta synergy --expr cohort.csv --library oneil` (or `--library drugcomb`).
+**Scope:** cell-line Loewe synergy; ranks only pairs of drugs *in the fitted library* (does NOT generalize to novel
+drugs — B25/B26); OOD-gated; confidence capped at moderate. A research hypothesis-ranker, not a clinical tool.
+The `drugcomb` library trades ~3× more rankable drugs for lower per-prediction reliability — stated honestly.
+
 ## 3. Reproduce any headline result
 Every result maps to a committed metrics JSON, reproduced ×2:
 ```bash
