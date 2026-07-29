@@ -18,5 +18,36 @@ mismatch. sha256 prefixes match the values recorded in the verified ~/kaalcura V
 | `beataml_wv1to4_clinical.xlsx` | `bc692f647f93945e1cf883271af5501bf75c8af3e681676241093c198ed167ad` | BeatAML clinical/WES (B4; INTERCEPTA_BEATAML) |
 | `beataml_wes_wv1to4_mutations_dbgap.txt` | `5a5a5eb8f492b1385aebe85c490b9333f65590f09391a7c1951b04dd1dba1680` | BeatAML clinical/WES (B4; INTERCEPTA_BEATAML) |
 
-All inputs are public repositories (GDSC, DepMap/CCLE, PRISM). No controlled-access data is present or
-required for B1. Any controlled-access acquisition is a logged human gate (see DECISIONS.md).
+The rows above are the reproduced Phase-B inputs with pinned sha256 (verified at load). The table below is the
+**full external-data provenance for all of INTERCEPTA** — no data is committed; each row says where to get it
+and its ACCESS CLASS. **CONTROLLED rows must NEVER be committed to any repo** (dbGaP/DUA); code references them
+via the `INTERCEPTA_BEATAML` env var or a local path only.
+
+## Full external data sources (provenance + access class)
+| Dataset | Source / accession | Access | Used by |
+|---|---|---|---|
+| GDSC2 / GDSC1 | Sanger cancerrxgene.org | PUBLIC | src/, engine/scouts, engine/kaalcura |
+| DepMap / CCLE 22Q2 | depmap.org (Broad) | PUBLIC | src/, engine/aml |
+| PRISM secondary screen | depmap.org (Broad) | PUBLIC | src/ (B1) |
+| STRING v12.0 | string-db.org | PUBLIC | engine/net (step4) |
+| SIGNOR | signor.uniroma2.it | PUBLIC | engine/net |
+| KEGG pathways | kegg.jp | PUBLIC | engine/net (step5) |
+| Open Targets | platform.opentargets.org | PUBLIC | engine/net (step8) |
+| ChEMBL | ebi.ac.uk/chembl | PUBLIC | engine/net (step7), engine/scouts |
+| GTEx median TPM | gtexportal.org (median only) | PUBLIC | engine/net (step6 selectivity) |
+| AlphaFold DB | alphafold.ebi.ac.uk | PUBLIC | engine/net (step10), engine/scouts (docking) |
+| Human-GEM | github Human-GEM | PUBLIC | engine/net (step9) |
+| DICE immune | dice-database.org | PUBLIC | engine/net (step13) |
+| scRNA — prostate | GEO GSE137829, GSE141445 | PUBLIC | engine/velocity, engine/net |
+| scRNA — melanoma ICI | GEO GSE78220, GSE91061 | PUBLIC | engine/kaalcura (r_validation) |
+| scRNA — AML (Van Galen 2019) | GEO GSE116256 | PUBLIC | engine/aml, engine/velocity |
+| scRNA — lung (Travaglini) | cellxgene / Travaglini 2020 | PUBLIC | engine/cell_fm |
+| TCGA (processed expr/clinical) | GDC / Firebrowse | PUBLIC (processed) | engine/kaalcura (workstream_b) |
+| Geneformer foundation model | HuggingFace ctheodoris/Geneformer | PUBLIC (third-party, ~5.5 GB) | engine/cell_fm — **downloaded externally, never vendored** |
+| **BeatAML** (WES mutations, clinical, expression, drug response) | **dbGaP phs001657** | **🔒 CONTROLLED** | engine/aml, verification/, src/ (B3–B4) — env `INTERCEPTA_BEATAML` only |
+| **SU2C-PCF** (mutations, clinical, CNA) | cBioPortal / SU2C-PCF | **🔒 patient-level — treat as controlled** | engine/net (step2) — never committed |
+| **TCGA raw** (BAM/germline) | GDC controlled | **🔒 CONTROLLED** | not used in committed results |
+
+**Rule:** anything marked 🔒 is individual-level patient data and is excluded from git by `.gitignore` and by
+policy. Reproducing 🔒-dependent results requires the user's own dbGaP/cBioPortal access (a human gate,
+DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis of every committed result.

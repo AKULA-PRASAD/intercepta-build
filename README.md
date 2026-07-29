@@ -1,49 +1,76 @@
-# INTERCEPTA — Phase B build
+# INTERCEPTA
 
-The clean, reproducible build repository for INTERCEPTA Phase B: **transcriptomic drug-response prediction**,
-built under [`CONSTITUTION.md`](CONSTITUTION.md). Separate from the exploration tree (`~/INTERCEPTA`,
-`~/kaalcura`) on purpose — this repo contains only verified, reproduced, provenance-tracked work.
+The clean, reproducible, Constitution-governed build of the INTERCEPTA program — a **mechanism-anchored cancer
+drug-response engine**. This repository is the consolidated home for all of INTERCEPTA: **code + rigorously-
+cleaned docs only. No data, ever** (all inputs referenced by [`data/MANIFEST.md`](data/MANIFEST.md); controlled
+dbGaP/patient data is excluded by policy). Seeded fresh — the old exploration tree's git history is never
+imported, because it contained controlled data.
 
-## What INTERCEPTA is (the honest one-sentence state)
-A prognostic + mechanistic-ranking cancer engine built on **known biology**, with one verified transferable
-signal (a learned cross-dataset drug-response map) and several verified mechanistic associations
-(mutation→drug in AML). It is **not yet** a novel-molecule discovery or therapy-*selection* platform — those
-claims were falsified or are untestable on current public data. See [`LEDGER.md`](LEDGER.md).
+Everything here is governed by [`CONSTITUTION.md`](CONSTITUTION.md): truth over vision, falsify-first, every
+positive guilty until it survives permutation + leakage + multiple-testing + confound + external replication,
+reproduce ×2, never fabricate. Where legacy code docstrings overclaim, the module `README.md` and
+[`LEDGER.md`](LEDGER.md) are authoritative.
 
-## Phase B goal
-A validated, leakage-corrected model that predicts cancer drug response from transcriptomics, with honest
-uncertainty and a known ceiling — beating the parameter-free bar and the transcriptome-only baseline, with
-external replication. Nothing here claims clinical utility until a patient-transfer experiment earns it.
+## What INTERCEPTA is (the honest one sentence)
+> A prognostic + mechanistic drug-response engine on **known cancer biology**, with a verified transferable
+> cell-line→patient signal and verified mutation→drug mechanisms — **not** (yet) a novel-molecule or
+> therapy-*selection* platform. The original "universal / any-disease / de novo / therapy-selection" vision was
+> tested against our own evidence and reconstructed into an evidence-earned milestone ladder ([`VISION.md`](VISION.md)).
 
-## The bar to beat (verified, reproduced ×2 — carried in from `~/kaalcura`)
-Leakage-free cross-dataset generalization (GDSC → CCLE/PRISM, disjoint cell lines, per-drug Ridge):
-
-| quantity | value |
+## Where we are on the ladder
+| Rung | Status |
 |---|---|
-| STRICT mean per-drug Spearman ρ | **+0.212** |
-| median ρ / frac ρ>0 | +0.196 / 0.94 (94/100 drugs) |
-| parameter-free R_prolif bar | +0.058 |
-| paired Wilcoxon (strict vs bar) | W=214, p=1.9e-15 |
+| **L0** engine + verified core | ✅ DONE — cross-dataset ceiling ρ=+0.212; AML mutation→drug mechanism verified |
+| **L1** cell-line → patient transfer | ✅ real (perm p=5e-4), non-specific on mismatched platform |
+| **L1b** drug-specific, proliferation-independent transfer | ✅ PASS · replicated across 2 label screens · robust; weak (ρ≈0.07–0.08), mechanism unexplained |
+| **L3** engine > parts (preview) | ✅ first evidence — mutation marker + expression transfer complementary (combined CV beats both in 4/4 pairs) |
+| **L2** controlled clinical trials | ⛔ needs dbGaP/EGA (human gate) |
+| **L4** beyond first cancer | conditional |
 
-`experiments/B1_baseline_ceiling/` re-establishes this number **inside this clean repo** as the honest
-starting line. Every future model is measured against it.
+## Verified results (reproduced ×2; see [`LEDGER.md`](LEDGER.md))
+- **V1** leakage-free cross-dataset drug-response transfer, mean per-drug ρ=+0.212 (94/100 drugs), beats the
+  parameter-free bar (Wilcoxon p=1.9e-15).
+- **V4–V6** mutation→drug in AML: **NPM1→Cabozantinib** (p=4.4e-11, deconfounded, split-replicated),
+  NRAS→MEK, DNMT3A→Dasatinib.
+- **V9** weak but drug-specific cell-line→patient signal (BeatAML), replicated across GDSC2/GDSC1 labels, robust.
+- **V10** the two verified signals are **complementary** — combining them beats either alone (4/4 pairs, CV).
 
-## Layout
+## What is NOT claimed (honest boundaries)
+- ❌ therapy SELECTION (falsified at n=988) ❌ a novel coordinate beyond Ki67+TILs (R_prolif ≈ GGI)
+- ❌ de novo molecule design (Scout-2 = scaffold-hopping; INTC002 = hypothesis, novelty 0.266)
+- ❌ quantitative trial prediction (ODE = directional ranking; 2/6 trials, "5/5" retracted)
+- ❌ RNA-velocity pre-resistance "time machine" (untestable on current data)
+- ❌ validated patient drug predictor (V9/V10 are weak, single cohort, need a 2nd patient cohort)
+
+## Repository layout
 ```
-CONSTITUTION.md   governing rules
-LEDGER.md         verified/falsified/untestable findings carried forward (tiered, never blurred)
-DECISIONS.md      running decision log
-prereg/           pre-registration written BEFORE each experiment runs
-src/intercepta/   library: data (sha256-verified loaders), splits, metrics, axes (frozen)
-experiments/      one dir per pre-registered experiment; each writes results/*_metrics.json
-data/MANIFEST.md  sha256 of every input; data is referenced by env var, never committed
-reproduce.sh      re-run everything from clean
+CONSTITUTION.md VISION.md LEDGER.md DECISIONS.md CONSOLIDATION_PLAN.md
+docs/
+  vision/               reconstructed north-star + research charter
+  architecture/         (module specs, honestly annotated)
+  audits/               VISION_AUDIT, EXHAUSTIVE_AUDIT, ODE limitations (self-corrections)
+  aspirational_original/ QUARANTINED maximalist originals (banner-tagged; not results)
+src/intercepta/         library: sha256-gated data loaders, splits, metrics, frozen axes
+engine/                 ode/ net/ scouts/ kaalcura/ velocity/ cell_fm/ aml/ synergy_pk/ pipeline/ audit/
+                        (142 code files; each module README states its honest status)
+experiments/            B1–B4: pre-registered, permutation-tested, reproduced ×2
+prereg/                 pre-registrations (written before each run)
+verification/           independent AML verification ledger + prereg + reproduction scripts
+papers/                 honest AML response paper ("where ML works, where it doesn't, and why")
+data/MANIFEST.md        provenance + access class for every external input (nothing committed)
+reproduce.sh requirements.txt
 ```
 
 ## Reproduce
 ```bash
 pip install -r requirements.txt
-export INTERCEPTA_DATA=/Users/kalki/kaalcura/data   # sha256-verified against data/MANIFEST.md
-bash reproduce.sh
+export INTERCEPTA_DATA=/path/to/public/data        # matching data/MANIFEST.md sha256
+export INTERCEPTA_BEATAML=/path/to/your/dbgap/beataml   # controlled — your own access only
+bash reproduce.sh                                   # runs B1–B4, writes metrics JSON, reproduce ×2
 ```
-Data (GDSC/DepMap/PRISM, public) is not committed; point `INTERCEPTA_DATA` at a checkout matching the manifest.
+Public-data results (B1/B2) reproduce for anyone; controlled-data results (B3–B4) require your own dbGaP access.
+
+## Integrity
+Every experiment emits a provenance-stamped metrics JSON (git sha, versions, input sha256, seed) and must
+reproduce ×2. Failed/false claims are recorded as first-class negatives and, where they were once asserted,
+explicitly withdrawn (see `LEDGER.md` N1, `DECISIONS.md` D8). This project's audit trail is its core asset.
