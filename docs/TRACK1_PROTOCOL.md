@@ -98,3 +98,9 @@ cohort requires only a data loader; analyses run unchanged and reproducibly.
 Our prior drug-specific effect is weak (ρ≈0.07); this study is powered to determine whether it is real-and-usable
 or intrinsically bounded — not to guarantee a positive. We make no clinical-utility claim in advance. The value
 is a decisive, pre-registered, confound-controlled answer with a validated analysis layer.
+
+## Update (post B12–B14): functional-inference layer is the primary translational hypothesis
+Aim 1 now also tests the **expression→inferred-dependency** layer (V15–V17): the cohort will evaluate whether
+inferred FLT3/BCL2 dependency (from patient RNA alone) predicts ex-vivo **and clinical** response to FLT3
+inhibitors / venetoclax better than the direct transcriptomic transfer (which fails for these targets, V17).
+This is the sharpest, most actionable, pre-registered hypothesis the program has produced.
