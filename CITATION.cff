@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "INTERCEPTA: a reproducible cell-line/ex-vivo transcriptomic drug-response + mechanism engine"
+message: "If you use this software or its findings, please cite it."
+type: software
+authors:
+  - family-names: Akula
+    given-names: Prasad
+version: 0.1.0
+date-released: 2026-07-29
+url: "https://github.com/AKULA-PRASAD/intercepta-build"
+license: MIT
+abstract: >
+  A reproducible, pre-registered, integrity-first engine for transcriptomic cancer drug-response prediction.
+  Establishes a leakage-free cross-dataset cell-line transfer ceiling (rho=+0.212), genome-wide AML mutation-drug
+  markers, a weak drug-specific ex-vivo signal, OOD-calibrated confidence, and — as a first-class negative result —
+  a well-powered NULL for human clinical drug-response prediction driven by cancer-type confounding. Honestly
+  scoped: a research/hypothesis-ranking engine, NOT a validated clinical predictor.
+keywords:
+  - drug response prediction
+  - pharmacogenomics
+  - reproducibility
+  - cancer
