@@ -111,6 +111,17 @@ i.e. it identifies FLT3-inhibitor-sensitive AML that standard mutation testing m
 of §2.8 is BeatAML **ex-vivo** (not clinical outcome), AML, dependency-model trained on pan-cancer cells — a
 strong, mechanistically-coherent translational lead, not a validated clinical test.
 
+Crucially, the layer is **target-specific**, not a generic sensitivity readout. In a proliferation-adjusted
+double-dissociation (inferred FLT3- vs BCL2-dependency × FLT3 inhibitors vs venetoclax), matched target→drug
+correlations exceed mismatched ones (diagonal ρ=+0.19 vs off-diagonal +0.07; target↔drug-shuffle permutation
+p<10⁻⁴). The FLT3 side dissociates cleanly — FLT3-dependency predicts FLT3 inhibitors (ρ=+0.20, p=2×10⁻¹⁶) but
+not venetoclax (ρ=−0.03) — and venetoclax is predicted only by BCL2-dependency (ρ=+0.21, p=8×10⁻⁵), not FLT3.
+The one asymmetry is biologically expected rather than artifactual: BCL2-dependency also carries some signal for
+FLT3 inhibitors (ρ=+0.10), consistent with FLT3-ITD AML being BCL2-dependent/venetoclax-sensitive (the rationale
+for venetoclax+FLT3-inhibitor combinations) — BCL2-dependence is simply a broader apoptotic-priming feature than
+FLT3-dependence. Thus the functional signal reads *which* vulnerability a tumor carries, and the FLT3 result (V19)
+generalizes to a second, mechanistically-independent AML pillar (B18).
+
 We tested that boundary directly. In a pre-registered Cox model on overall survival (n=644 patients, 395 deaths,
 106 FLT3-inhibitor–treated), the inferred-dependency×FLT3i-treatment interaction was **null** (HR=0.89, p=0.56),
 as was dependency→survival within treated (HR=0.92, p=0.50) and untreated (HR=0.97, p=0.65). This is expected and

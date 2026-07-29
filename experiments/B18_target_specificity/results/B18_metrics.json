@@ -1,0 +1,124 @@
+{
+  "git_sha": "79b5ff3fe23a36f75b6a155af1e9f8bd22d6f287",
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T14:39:35Z",
+  "seed": 42,
+  "n_perm": 10000,
+  "learnable_cv_rho": {},
+  "cells": [
+    {
+      "drug": "sorafenib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 494,
+      "rho_prolif_adj": 0.2482,
+      "p": 2.264505477411473e-08
+    },
+    {
+      "drug": "sorafenib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 494,
+      "rho_prolif_adj": 0.1743,
+      "p": 9.824102856068864e-05
+    },
+    {
+      "drug": "quizartinib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 461,
+      "rho_prolif_adj": 0.1538,
+      "p": 0.0009258289416114931
+    },
+    {
+      "drug": "quizartinib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 461,
+      "rho_prolif_adj": 0.0685,
+      "p": 0.14197212321235061
+    },
+    {
+      "drug": "gilteritinib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 278,
+      "rho_prolif_adj": 0.1388,
+      "p": 0.02063171849856053
+    },
+    {
+      "drug": "gilteritinib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 278,
+      "rho_prolif_adj": 0.0378,
+      "p": 0.530054914018783
+    },
+    {
+      "drug": "crenolanib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 446,
+      "rho_prolif_adj": 0.2178,
+      "p": 3.434496186584629e-06
+    },
+    {
+      "drug": "crenolanib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 446,
+      "rho_prolif_adj": 0.0909,
+      "p": 0.05511696529605089
+    },
+    {
+      "drug": "venetoclax",
+      "target": "FLT3",
+      "matched": false,
+      "n": 367,
+      "rho_prolif_adj": -0.0318,
+      "p": 0.5439813107198493
+    },
+    {
+      "drug": "venetoclax",
+      "target": "BCL2",
+      "matched": true,
+      "n": 367,
+      "rho_prolif_adj": 0.205,
+      "p": 7.613448352582459e-05
+    }
+  ],
+  "mean_diagonal_rho": 0.1927,
+  "mean_offdiagonal_rho": 0.0679,
+  "gap": 0.1248,
+  "H1_perm_p": 9.999000099990002e-05,
+  "H1_pass": true,
+  "H2_venetoclax_diag": {
+    "drug": "venetoclax",
+    "target": "BCL2",
+    "matched": true,
+    "n": 367,
+    "rho_prolif_adj": 0.205,
+    "p": 7.613448352582459e-05
+  },
+  "H2_bcl2_on_flt3i_pooled": {
+    "pooled_rho": 0.1005,
+    "stouffer_Z": 4.131,
+    "one_sided_p": 1.8055174080276143e-05
+  },
+  "H2_pass": false,
+  "H3_flt3i_pooled": {
+    "pooled_rho": 0.1961,
+    "stouffer_Z": 8.13,
+    "one_sided_p": 2.1446316648181842e-16
+  },
+  "H3_flt3_on_venetoclax": {
+    "drug": "venetoclax",
+    "target": "FLT3",
+    "matched": false,
+    "n": 367,
+    "rho_prolif_adj": -0.0318,
+    "p": 0.5439813107198493
+  },
+  "H3_pass": true,
+  "verdict": "Layer is target-specific overall (diag>off), but one pillar's double-dissociation is incomplete \u2014 partial, honest."
+}
