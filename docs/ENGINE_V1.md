@@ -57,6 +57,17 @@ V19/V20 are **BeatAML-specific and NOT a generalizable clinical lead.** The corr
 functional response must be **measured in patients, not inferred** — this layer is the comparator (measured vs
 inferred, SAP Aim 3), not the validated predictor.
 
+## Synergy ranker (`intercepta.synergy.SynergyRanker`) — the combinations arm (V23)
+Turns the validated result V23 (drug-combination synergy generalizes to unseen combinations of a KNOWN drug
+library; leave-combination-out Spearman ~0.6, replicated across O'Neil + DrugComb, B24/B25) into a usable tool:
+`rank_pairs(expr)` takes a tumor/cell expression profile (genes×samples) and ranks the most synergistic drug pairs
+from the fitted library, with OOD-gated confidence. Ships the reproducible DepMap-expression + Morgan-fingerprint
+pipeline; `SynergyRanker.from_oneil()` self-validates (leave-drug-combination-out CV Spearman = **0.62**, reproduced
+×2). `intercepta synergy --expr cohort.csv` runs it from the CLI.
+**Honest scope:** cell-line Loewe synergy (NOT clinical); scores ONLY pairs of drugs in the fitted library — it does
+**not** generalize to novel drugs (B25/B26 falsified that); OOD gate flags inputs beyond the training-cell diversity
+envelope; confidence is capped at MODERATE. A research hypothesis-ranker, not a clinical tool.
+
 ## Next
 `engine v1` is the validated floor. It becomes clinically meaningful only after external replication on a
 **second independent patient drug-response cohort** (see repo README "what's next"). Until then it is an honest,

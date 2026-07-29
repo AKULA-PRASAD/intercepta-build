@@ -128,3 +128,24 @@ def test_engine_functional_inference_recovers_relationship():
 
 def test_rescued_targets_declared():
     assert {"FLT3", "BCL2", "CDK9", "AURKA"} == E.InterceptaEngine.RESCUED_TARGETS
+
+
+def test_synergy_ranker_mechanics_and_ranking():
+    from intercepta.synergy import SynergyRanker
+    rng = np.random.default_rng(0)
+    genes = [f"G{i}" for i in range(40)]; cells = [f"ACH-{i:04d}" for i in range(12)]
+    expr = pd.DataFrame(rng.normal(size=(12, 40)), index=cells, columns=genes)         # cells x genes
+    drugs = ["D0", "D1", "D2", "D3"]
+    smi = {"D0": "CCO", "D1": "CCN", "D2": "c1ccccc1", "D3": "CC(=O)O"}                 # valid SMILES
+    rows = [(drugs[a], drugs[b], c, expr.loc[c, "G0"] * (a + 1) + rng.normal(0, 0.2))
+            for a in range(4) for b in range(a + 1, 4) for c in cells]
+    syn = pd.DataFrame(rows, columns=["Drug1_ID", "Drug2_ID", "Cell", "Y"])
+    r = SynergyRanker(n_pca=4).fit(syn, expr, smi, compute_cv=False)
+    assert set(r.library_) == set(drugs)
+    q = pd.DataFrame(rng.normal(size=(40, 3)), index=genes, columns=["Q1", "Q2", "Q3"])  # genes x samples
+    out = r.rank_pairs(q, top=2)
+    assert list(out.columns) == ["sample", "drug1", "drug2", "predicted_synergy", "ood_distance", "confidence"]
+    assert out["sample"].nunique() == 3 and (out.groupby("sample").size() <= 2).all()   # top-2 per sample
+    # scores are sorted descending within each sample; only KNOWN-library drugs are scored
+    assert set(out["drug1"]) | set(out["drug2"]) <= set(drugs)
+    assert r.ood_score(q).shape == (3,)

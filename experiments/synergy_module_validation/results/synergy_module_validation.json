@@ -1,0 +1,82 @@
+{
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T18:37:07Z",
+  "n_library_drugs": 38,
+  "n_genes": 19177,
+  "leave_combination_out_cv_spearman": 0.6207,
+  "note": "Module ships the reproducible DepMap-expression + Morgan-fingerprint pipeline validated in B24/B26. Scope: cell-line Loewe synergy, KNOWN-drug library only, OOD-gated, not clinical.",
+  "demo_top_pairs": [
+    {
+      "sample": "ACH-001113",
+      "drug1": "BEZ-235",
+      "drug2": "MK-8669",
+      "predicted_synergy": 71.162,
+      "ood_distance": 113.402,
+      "confidence": "moderate"
+    },
+    {
+      "sample": "ACH-001113",
+      "drug1": "MK-4827",
+      "drug2": "TEMOZOLOMIDE",
+      "predicted_synergy": 47.038,
+      "ood_distance": 113.402,
+      "confidence": "moderate"
+    },
+    {
+      "sample": "ACH-001113",
+      "drug1": "DASATINIB",
+      "drug2": "MK-2206",
+      "predicted_synergy": 44.114,
+      "ood_distance": 113.402,
+      "confidence": "moderate"
+    },
+    {
+      "sample": "ACH-001289",
+      "drug1": "BEZ-235",
+      "drug2": "MK-8669",
+      "predicted_synergy": 77.293,
+      "ood_distance": 117.884,
+      "confidence": "moderate"
+    },
+    {
+      "sample": "ACH-001289",
+      "drug1": "MK-4827",
+      "drug2": "TEMOZOLOMIDE",
+      "predicted_synergy": 51.797,
+      "ood_distance": 117.884,
+      "confidence": "moderate"
+    },
+    {
+      "sample": "ACH-001289",
+      "drug1": "DASATINIB",
+      "drug2": "MK-2206",
+      "predicted_synergy": 47.496,
+      "ood_distance": 117.884,
+      "confidence": "moderate"
+    },
+    {
+      "sample": "ACH-001339",
+      "drug1": "BEZ-235",
+      "drug2": "MK-8669",
+      "predicted_synergy": 76.014,
+      "ood_distance": 105.834,
+      "confidence": "moderate"
+    },
+    {
+      "sample": "ACH-001339",
+      "drug1": "MK-4827",
+      "drug2": "TEMOZOLOMIDE",
+      "predicted_synergy": 46.395,
+      "ood_distance": 105.834,
+      "confidence": "moderate"
+    },
+    {
+      "sample": "ACH-001339",
+      "drug1": "DASATINIB",
+      "drug2": "MK-2206",
+      "predicted_synergy": 42.187,
+      "ood_distance": 105.834,
+      "confidence": "moderate"
+    }
+  ]
+}

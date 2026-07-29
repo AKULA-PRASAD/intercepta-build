@@ -42,6 +42,20 @@ def _cmd_rank(args):
     return 0
 
 
+def _cmd_synergy(args):
+    import pandas as pd
+    from intercepta.synergy import SynergyRanker
+    expr = pd.read_csv(args.expr, index_col=0)               # genes x samples
+    ranker = SynergyRanker.from_oneil()
+    out = ranker.rank_pairs(expr, top=args.top)
+    out.to_csv(args.out, index=False)
+    print(f"ranked synergistic pairs for {out['sample'].nunique()} samples "
+          f"(library of {len(ranker.library_)} known drugs; CV leave-combination-out rho="
+          f"{ranker.cv_leave_combination_rho_:.2f}) -> {args.out}")
+    print("NOTE: cell-line-validated Loewe synergy, KNOWN-drug library only, OOD-gated; hypotheses, not clinical decisions.")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -54,6 +68,11 @@ def main(argv=None):
     r.add_argument("--no-calibration", action="store_true", help="skip OOD/reliability (faster)")
     r.add_argument("--out", default="intercepta_ranking.csv")
     r.set_defaults(func=_cmd_rank)
+    s = sub.add_parser("synergy", help="rank synergistic drug PAIRS (known library) for query expression (genes x samples CSV)")
+    s.add_argument("--expr", required=True, help="query expression CSV (genes as rows, samples as columns; DepMap gene symbols)")
+    s.add_argument("--top", type=int, default=20, help="top-N pairs per sample")
+    s.add_argument("--out", default="intercepta_synergy.csv")
+    s.set_defaults(func=_cmd_synergy)
     args = p.parse_args(argv)
     return args.func(args)
 
