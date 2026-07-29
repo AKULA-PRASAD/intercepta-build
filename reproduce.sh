@@ -24,4 +24,6 @@ echo "== B3e: mechanistic coherence (L1b) =="
 "$PY" experiments/B3e_mechanistic_coherence/run.py
 echo "== B4: mechanism-anchored integration =="
 "$PY" experiments/B4_mechanism_integration/run.py
+echo "== engine v1 validation =="
+"$PY" experiments/engine_v1_validation/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="
