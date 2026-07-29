@@ -14,4 +14,6 @@ echo "== B3: cell-line -> patient transfer (L1) =="
 : "${INTERCEPTA_BEATAML:=/Users/kalki/INTERCEPTA/data/beataml}"
 export INTERCEPTA_BEATAML
 "$PY" experiments/B3_patient_transfer/run.py
+echo "== B3b: matched-platform patient specificity (L1b) =="
+"$PY" experiments/B3b_patient_specificity/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="
