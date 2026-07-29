@@ -140,12 +140,13 @@ def test_synergy_ranker_mechanics_and_ranking():
     rows = [(drugs[a], drugs[b], c, expr.loc[c, "G0"] * (a + 1) + rng.normal(0, 0.2))
             for a in range(4) for b in range(a + 1, 4) for c in cells]
     syn = pd.DataFrame(rows, columns=["Drug1_ID", "Drug2_ID", "Cell", "Y"])
-    r = SynergyRanker(n_pca=4).fit(syn, expr, smi, compute_cv=False)
+    r = SynergyRanker(n_pca=4).fit(syn, expr, smi, compute_cv=True)   # compute_cv -> also sets conformal interval
     assert set(r.library_) == set(drugs)
+    assert r.conformal_q_ is not None and r.conformal_q_ > 0          # calibrated prediction-interval half-width
     q = pd.DataFrame(rng.normal(size=(40, 3)), index=genes, columns=["Q1", "Q2", "Q3"])  # genes x samples
     out = r.rank_pairs(q, top=2)
-    assert list(out.columns) == ["sample", "drug1", "drug2", "predicted_synergy", "ood_distance", "confidence"]
+    assert {"sample", "drug1", "drug2", "predicted_synergy", "ood_distance", "confidence", "pi_low", "pi_high"} <= set(out.columns)
+    assert (out["pi_low"] <= out["predicted_synergy"]).all() and (out["predicted_synergy"] <= out["pi_high"]).all()
     assert out["sample"].nunique() == 3 and (out.groupby("sample").size() <= 2).all()   # top-2 per sample
-    # scores are sorted descending within each sample; only KNOWN-library drugs are scored
     assert set(out["drug1"]) | set(out["drug2"]) <= set(drugs)
     assert r.ood_score(q).shape == (3,)

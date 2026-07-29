@@ -44,10 +44,11 @@ class SynergyRanker:
     smiles = {drug_id: SMILES}. Reproducible, deterministic.
     """
 
-    def __init__(self, seed=42, n_pca=20, nbits=NBITS):
+    def __init__(self, seed=42, n_pca=20, nbits=NBITS, conformal_alpha=0.1):
         self.seed, self.n_pca, self.nbits = seed, n_pca, nbits
+        self.conformal_alpha_ = conformal_alpha          # 0.1 -> 90% prediction interval
         self.genes_ = self.library_ = self._fp = self._scaler = self._pca = self._nn = self._model = None
-        self.cv_leave_combination_rho_ = self.ood_threshold_ = None
+        self.cv_leave_combination_rho_ = self.ood_threshold_ = self.conformal_q_ = None
 
     # ---- internal featurization ----
     def _cell_pca(self, expr_cells_by_genes):
@@ -81,20 +82,25 @@ class SynergyRanker:
         y = syn["Y"].values.astype(float)
         self._model = HistGradientBoostingRegressor(random_state=self.seed, max_iter=300, learning_rate=0.06, max_depth=6).fit(X, y)
         if compute_cv:
-            self.cv_leave_combination_rho_ = self._cv_leave_combination(syn, cellpc)
+            # leave-drug-combination-out OOF: gives BOTH the self-validation Spearman AND conformal calibration
+            oof, ycv = self._cv_leave_combination(syn, cellpc)
+            from scipy import stats
+            self.cv_leave_combination_rho_ = float(stats.spearmanr(oof, ycv)[0])
+            # split-conformal interval half-width from LEAVE-COMBINATION-OUT residuals (coverage for NEW combinations)
+            resid = np.abs(oof - ycv)
+            self.conformal_q_ = float(np.quantile(resid, 1 - self.conformal_alpha_))
         return self
 
     def _cv_leave_combination(self, syn, cellpc):
-        """Honest self-validation: leave-drug-combination-out CV Spearman (the property the tool relies on)."""
+        """Leave-drug-combination-out out-of-fold predictions (the property the tool relies on). Returns (oof, y)."""
         from sklearn.model_selection import GroupKFold
-        from scipy import stats
         pair = (syn["Drug1_ID"] + "|" + syn["Drug2_ID"]).apply(lambda s: "|".join(sorted(s.split("|")))).values
         X = np.vstack([self._pair_feat(cellpc.loc[r.Cell].values, r.Drug1_ID, r.Drug2_ID) for r in syn.itertuples()])
         y = syn["Y"].values.astype(float); oof = np.full(len(y), np.nan)
         for tr, te in GroupKFold(min(5, len(set(pair)))).split(X, y, pair):
             mdl = HistGradientBoostingRegressor(random_state=self.seed, max_iter=300, learning_rate=0.06, max_depth=6).fit(X[tr], y[tr])
             oof[te] = mdl.predict(X[te])
-        return float(stats.spearmanr(oof, y)[0])
+        return oof, y
 
     # ---- inference ----
     def ood_score(self, expr):
@@ -118,9 +124,13 @@ class SynergyRanker:
             pred = self._model.predict(X)
             od = float(ood.get(s, np.nan))
             conf = "low (out-of-distribution)" if od > self.ood_threshold_ else "moderate"
+            q = self.conformal_q_
             for (a, b), p in zip(pairs, pred):
-                rows.append({"sample": s, "drug1": a, "drug2": b, "predicted_synergy": round(float(p), 3),
-                             "ood_distance": round(od, 3), "confidence": conf})
+                row = {"sample": s, "drug1": a, "drug2": b, "predicted_synergy": round(float(p), 3),
+                       "ood_distance": round(od, 3), "confidence": conf}
+                if q is not None:
+                    row["pi_low"] = round(float(p) - q, 3); row["pi_high"] = round(float(p) + q, 3)
+                rows.append(row)
         out = pd.DataFrame(rows).sort_values(["sample", "predicted_synergy"], ascending=[True, False])
         return out.groupby("sample", group_keys=False).head(top).reset_index(drop=True) if top else out
 
@@ -144,6 +154,9 @@ class SynergyRanker:
                 x = np.concatenate([pcdf.loc[r.sample].values, (f1 + f2).astype(np.int8), (f1 & f2).astype(np.int8)])
                 preds[i] = float(self._model.predict(x[None, :])[0])
         out = pairs.copy(); out["predicted_synergy"] = preds
+        if self.conformal_q_ is not None:                # calibrated prediction interval (leave-combination-out conformal)
+            out["pi_low"] = preds - self.conformal_q_; out["pi_high"] = preds + self.conformal_q_
+            out["pi_halfwidth"] = round(self.conformal_q_, 3)
         return out
 
     # ---- convenience constructor from the cached open O'Neil data + DepMap expression ----
