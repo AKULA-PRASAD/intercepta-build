@@ -1,0 +1,1938 @@
+{
+  "git_sha": "c39b927004468eff086dc4ff876eaa8fbb6bdbc5",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T16:14:13Z",
+  "seed": 42,
+  "data": {
+    "ccle_proteomics_sha256": "b72a9ff39b123c80",
+    "n_matched_lines": 291,
+    "n_proteins_top": 2000,
+    "n_genes_top": 2000
+  },
+  "n_drugs": 271,
+  "mean_rho": {
+    "RNA": 0.4187,
+    "protein": 0.3281,
+    "both": 0.4082
+  },
+  "median_rho": {
+    "RNA": 0.4249,
+    "protein": 0.3335,
+    "both": 0.4102
+  },
+  "protein_vs_RNA": {
+    "mean_delta": -0.0906,
+    "median_delta": -0.0878,
+    "wilcoxon_p": 1.0141500967655012e-43,
+    "frac_a_gt_b": 0.059
+  },
+  "both_vs_RNA": {
+    "mean_delta": -0.0105,
+    "median_delta": -0.0127,
+    "wilcoxon_p": 1.6848025443476673e-09,
+    "frac_a_gt_b": 0.314
+  },
+  "H1_comparable": false,
+  "H2_proteomics_beats_RNA": false,
+  "per_drug": [
+    {
+      "drug": "123138",
+      "n": 238,
+      "rho_RNA": 0.3198,
+      "rho_protein": 0.327,
+      "rho_both": 0.3573
+    },
+    {
+      "drug": "123829",
+      "n": 238,
+      "rho_RNA": 0.2966,
+      "rho_protein": 0.1705,
+      "rho_both": 0.2803
+    },
+    {
+      "drug": "150412",
+      "n": 238,
+      "rho_RNA": 0.3596,
+      "rho_protein": 0.2345,
+      "rho_both": 0.3238
+    },
+    {
+      "drug": "5-Fluorouracil",
+      "n": 291,
+      "rho_RNA": 0.4249,
+      "rho_protein": 0.2944,
+      "rho_both": 0.3744
+    },
+    {
+      "drug": "5-azacytidine",
+      "n": 244,
+      "rho_RNA": 0.4934,
+      "rho_protein": 0.3479,
+      "rho_both": 0.4944
+    },
+    {
+      "drug": "50869",
+      "n": 238,
+      "rho_RNA": 0.5574,
+      "rho_protein": 0.4575,
+      "rho_both": 0.5681
+    },
+    {
+      "drug": "615590",
+      "n": 238,
+      "rho_RNA": 0.3645,
+      "rho_protein": 0.3313,
+      "rho_both": 0.4015
+    },
+    {
+      "drug": "630600",
+      "n": 238,
+      "rho_RNA": 0.4006,
+      "rho_protein": 0.2205,
+      "rho_both": 0.3553
+    },
+    {
+      "drug": "667880",
+      "n": 238,
+      "rho_RNA": 0.3582,
+      "rho_protein": 0.3119,
+      "rho_both": 0.3212
+    },
+    {
+      "drug": "720427",
+      "n": 238,
+      "rho_RNA": 0.3965,
+      "rho_protein": 0.3537,
+      "rho_both": 0.3867
+    },
+    {
+      "drug": "729189",
+      "n": 238,
+      "rho_RNA": 0.4455,
+      "rho_protein": 0.384,
+      "rho_both": 0.423
+    },
+    {
+      "drug": "741909",
+      "n": 238,
+      "rho_RNA": 0.4115,
+      "rho_protein": 0.3924,
+      "rho_both": 0.4471
+    },
+    {
+      "drug": "743380",
+      "n": 238,
+      "rho_RNA": 0.408,
+      "rho_protein": 0.4147,
+      "rho_both": 0.4449
+    },
+    {
+      "drug": "765771",
+      "n": 238,
+      "rho_RNA": 0.4556,
+      "rho_protein": 0.3838,
+      "rho_both": 0.4332
+    },
+    {
+      "drug": "776928",
+      "n": 238,
+      "rho_RNA": 0.3961,
+      "rho_protein": 0.3444,
+      "rho_both": 0.3965
+    },
+    {
+      "drug": "A-366",
+      "n": 245,
+      "rho_RNA": 0.4208,
+      "rho_protein": 0.1362,
+      "rho_both": 0.3346
+    },
+    {
+      "drug": "ABT737",
+      "n": 288,
+      "rho_RNA": 0.376,
+      "rho_protein": 0.1983,
+      "rho_both": 0.3364
+    },
+    {
+      "drug": "AGI-5198",
+      "n": 289,
+      "rho_RNA": 0.3111,
+      "rho_protein": 0.3655,
+      "rho_both": 0.3474
+    },
+    {
+      "drug": "AGI-6780",
+      "n": 274,
+      "rho_RNA": 0.4492,
+      "rho_protein": 0.4321,
+      "rho_both": 0.4466
+    },
+    {
+      "drug": "AGK2",
+      "n": 288,
+      "rho_RNA": 0.2897,
+      "rho_protein": 0.1902,
+      "rho_both": 0.2491
+    },
+    {
+      "drug": "AMG-319",
+      "n": 286,
+      "rho_RNA": 0.4159,
+      "rho_protein": 0.2994,
+      "rho_both": 0.3875
+    },
+    {
+      "drug": "AT13148",
+      "n": 288,
+      "rho_RNA": 0.3836,
+      "rho_protein": 0.2466,
+      "rho_both": 0.3525
+    },
+    {
+      "drug": "AZ6102",
+      "n": 289,
+      "rho_RNA": 0.201,
+      "rho_protein": 0.1638,
+      "rho_both": 0.1718
+    },
+    {
+      "drug": "AZ960",
+      "n": 275,
+      "rho_RNA": 0.4794,
+      "rho_protein": 0.3485,
+      "rho_both": 0.4439
+    },
+    {
+      "drug": "AZD1208",
+      "n": 237,
+      "rho_RNA": 0.485,
+      "rho_protein": 0.3911,
+      "rho_both": 0.4601
+    },
+    {
+      "drug": "AZD1332",
+      "n": 237,
+      "rho_RNA": 0.337,
+      "rho_protein": 0.1851,
+      "rho_both": 0.2954
+    },
+    {
+      "drug": "AZD2014",
+      "n": 237,
+      "rho_RNA": 0.2176,
+      "rho_protein": 0.0618,
+      "rho_both": 0.1516
+    },
+    {
+      "drug": "AZD3759",
+      "n": 291,
+      "rho_RNA": 0.4464,
+      "rho_protein": 0.4134,
+      "rho_both": 0.4468
+    },
+    {
+      "drug": "AZD4547",
+      "n": 290,
+      "rho_RNA": 0.4178,
+      "rho_protein": 0.2831,
+      "rho_both": 0.3998
+    },
+    {
+      "drug": "AZD5153",
+      "n": 237,
+      "rho_RNA": 0.3616,
+      "rho_protein": 0.3191,
+      "rho_both": 0.3773
+    },
+    {
+      "drug": "AZD5363",
+      "n": 289,
+      "rho_RNA": 0.4523,
+      "rho_protein": 0.4437,
+      "rho_both": 0.4708
+    },
+    {
+      "drug": "AZD5438",
+      "n": 237,
+      "rho_RNA": 0.3931,
+      "rho_protein": 0.3216,
+      "rho_both": 0.4168
+    },
+    {
+      "drug": "AZD5582",
+      "n": 272,
+      "rho_RNA": 0.4243,
+      "rho_protein": 0.3786,
+      "rho_both": 0.3994
+    },
+    {
+      "drug": "AZD5991",
+      "n": 237,
+      "rho_RNA": 0.6,
+      "rho_protein": 0.4749,
+      "rho_both": 0.5963
+    },
+    {
+      "drug": "AZD6738",
+      "n": 289,
+      "rho_RNA": 0.4149,
+      "rho_protein": 0.2893,
+      "rho_both": 0.3931
+    },
+    {
+      "drug": "AZD7762",
+      "n": 290,
+      "rho_RNA": 0.4435,
+      "rho_protein": 0.4063,
+      "rho_both": 0.4565
+    },
+    {
+      "drug": "AZD8055",
+      "n": 245,
+      "rho_RNA": 0.2843,
+      "rho_protein": 0.1903,
+      "rho_both": 0.2705
+    },
+    {
+      "drug": "AZD8186",
+      "n": 289,
+      "rho_RNA": 0.3812,
+      "rho_protein": 0.3495,
+      "rho_both": 0.3863
+    },
+    {
+      "drug": "Acetalax",
+      "n": 238,
+      "rho_RNA": 0.5501,
+      "rho_protein": 0.5437,
+      "rho_both": 0.5692
+    },
+    {
+      "drug": "Afatinib",
+      "n": 291,
+      "rho_RNA": 0.3813,
+      "rho_protein": 0.3498,
+      "rho_both": 0.3703
+    },
+    {
+      "drug": "Afuresertib",
+      "n": 289,
+      "rho_RNA": 0.4175,
+      "rho_protein": 0.4248,
+      "rho_both": 0.4372
+    },
+    {
+      "drug": "Alisertib",
+      "n": 287,
+      "rho_RNA": 0.4292,
+      "rho_protein": 0.3503,
+      "rho_both": 0.4119
+    },
+    {
+      "drug": "Alpelisib",
+      "n": 291,
+      "rho_RNA": 0.4392,
+      "rho_protein": 0.311,
+      "rho_both": 0.3953
+    },
+    {
+      "drug": "Avagacestat",
+      "n": 290,
+      "rho_RNA": 0.3666,
+      "rho_protein": 0.2836,
+      "rho_both": 0.334
+    },
+    {
+      "drug": "Axitinib",
+      "n": 290,
+      "rho_RNA": 0.5062,
+      "rho_protein": 0.4721,
+      "rho_both": 0.5178
+    },
+    {
+      "drug": "BDF00022089a",
+      "n": 238,
+      "rho_RNA": 0.2014,
+      "rho_protein": 0.2405,
+      "rho_both": 0.2688
+    },
+    {
+      "drug": "BDILV000379a",
+      "n": 238,
+      "rho_RNA": 0.3016,
+      "rho_protein": 0.2195,
+      "rho_both": 0.3257
+    },
+    {
+      "drug": "BDOCA000347a",
+      "n": 238,
+      "rho_RNA": 0.3648,
+      "rho_protein": 0.361,
+      "rho_both": 0.3822
+    },
+    {
+      "drug": "BDP-00009066",
+      "n": 245,
+      "rho_RNA": 0.1859,
+      "rho_protein": 0.1747,
+      "rho_both": 0.2293
+    },
+    {
+      "drug": "BEN",
+      "n": 238,
+      "rho_RNA": 0.4431,
+      "rho_protein": 0.4018,
+      "rho_both": 0.4691
+    },
+    {
+      "drug": "BI-2536",
+      "n": 283,
+      "rho_RNA": 0.5435,
+      "rho_protein": 0.3822,
+      "rho_both": 0.5268
+    },
+    {
+      "drug": "BIBR-1532",
+      "n": 287,
+      "rho_RNA": 0.2877,
+      "rho_protein": 0.2794,
+      "rho_both": 0.3374
+    },
+    {
+      "drug": "BMS-345541",
+      "n": 275,
+      "rho_RNA": 0.4826,
+      "rho_protein": 0.3335,
+      "rho_both": 0.456
+    },
+    {
+      "drug": "BMS-536924",
+      "n": 289,
+      "rho_RNA": 0.4017,
+      "rho_protein": 0.3038,
+      "rho_both": 0.3604
+    },
+    {
+      "drug": "BMS-754807",
+      "n": 289,
+      "rho_RNA": 0.44,
+      "rho_protein": 0.3292,
+      "rho_both": 0.3993
+    },
+    {
+      "drug": "BPD-00008900",
+      "n": 245,
+      "rho_RNA": 0.3121,
+      "rho_protein": 0.2462,
+      "rho_both": 0.3011
+    },
+    {
+      "drug": "Bleomycin",
+      "n": 238,
+      "rho_RNA": 0.3866,
+      "rho_protein": 0.2553,
+      "rho_both": 0.3559
+    },
+    {
+      "drug": "Bleomycin (50 uM)",
+      "n": 244,
+      "rho_RNA": 0.3409,
+      "rho_protein": 0.2808,
+      "rho_both": 0.3537
+    },
+    {
+      "drug": "Bortezomib",
+      "n": 289,
+      "rho_RNA": 0.3606,
+      "rho_protein": 0.1948,
+      "rho_both": 0.3351
+    },
+    {
+      "drug": "Bosutinib",
+      "n": 289,
+      "rho_RNA": 0.4098,
+      "rho_protein": 0.3858,
+      "rho_both": 0.4056
+    },
+    {
+      "drug": "Bromosporine",
+      "n": 238,
+      "rho_RNA": 0.3217,
+      "rho_protein": 0.1511,
+      "rho_both": 0.2972
+    },
+    {
+      "drug": "Buparlisib",
+      "n": 289,
+      "rho_RNA": 0.4469,
+      "rho_protein": 0.2795,
+      "rho_both": 0.4185
+    },
+    {
+      "drug": "CCT007093",
+      "n": 285,
+      "rho_RNA": 0.5232,
+      "rho_protein": 0.438,
+      "rho_both": 0.5274
+    },
+    {
+      "drug": "CDK9_5038",
+      "n": 237,
+      "rho_RNA": 0.4001,
+      "rho_protein": 0.3868,
+      "rho_both": 0.3709
+    },
+    {
+      "drug": "CDK9_5576",
+      "n": 237,
+      "rho_RNA": 0.3235,
+      "rho_protein": 0.2372,
+      "rho_both": 0.2968
+    },
+    {
+      "drug": "CPI-637",
+      "n": 245,
+      "rho_RNA": 0.4741,
+      "rho_protein": 0.2253,
+      "rho_both": 0.4225
+    },
+    {
+      "drug": "CT7033-2",
+      "n": 245,
+      "rho_RNA": 0.5142,
+      "rho_protein": 0.4233,
+      "rho_both": 0.5149
+    },
+    {
+      "drug": "CZC24832",
+      "n": 275,
+      "rho_RNA": 0.3813,
+      "rho_protein": 0.2799,
+      "rho_both": 0.3234
+    },
+    {
+      "drug": "Camptothecin",
+      "n": 291,
+      "rho_RNA": 0.4858,
+      "rho_protein": 0.2526,
+      "rho_both": 0.4719
+    },
+    {
+      "drug": "Cediranib",
+      "n": 289,
+      "rho_RNA": 0.245,
+      "rho_protein": 0.2896,
+      "rho_both": 0.3006
+    },
+    {
+      "drug": "Cisplatin",
+      "n": 248,
+      "rho_RNA": 0.4862,
+      "rho_protein": 0.2337,
+      "rho_both": 0.4882
+    },
+    {
+      "drug": "Crizotinib",
+      "n": 290,
+      "rho_RNA": 0.5336,
+      "rho_protein": 0.439,
+      "rho_both": 0.5147
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "n": 289,
+      "rho_RNA": 0.4368,
+      "rho_protein": 0.3027,
+      "rho_both": 0.3646
+    },
+    {
+      "drug": "Cytarabine",
+      "n": 245,
+      "rho_RNA": 0.466,
+      "rho_protein": 0.3072,
+      "rho_both": 0.4322
+    },
+    {
+      "drug": "Dabrafenib",
+      "n": 289,
+      "rho_RNA": 0.4525,
+      "rho_protein": 0.4087,
+      "rho_both": 0.4943
+    },
+    {
+      "drug": "Dacarbazine",
+      "n": 238,
+      "rho_RNA": 0.4419,
+      "rho_protein": 0.3078,
+      "rho_both": 0.4205
+    },
+    {
+      "drug": "Dactinomycin",
+      "n": 291,
+      "rho_RNA": 0.4237,
+      "rho_protein": 0.2373,
+      "rho_both": 0.3822
+    },
+    {
+      "drug": "Dactolisib",
+      "n": 289,
+      "rho_RNA": 0.3003,
+      "rho_protein": 0.1261,
+      "rho_both": 0.2644
+    },
+    {
+      "drug": "Daporinad",
+      "n": 156,
+      "rho_RNA": 0.5216,
+      "rho_protein": 0.3966,
+      "rho_both": 0.4966
+    },
+    {
+      "drug": "Dasatinib",
+      "n": 290,
+      "rho_RNA": 0.5814,
+      "rho_protein": 0.4378,
+      "rho_both": 0.5638
+    },
+    {
+      "drug": "Dihydrorotenone",
+      "n": 238,
+      "rho_RNA": 0.4336,
+      "rho_protein": 0.4151,
+      "rho_both": 0.433
+    },
+    {
+      "drug": "Dinaciclib",
+      "n": 275,
+      "rho_RNA": 0.5019,
+      "rho_protein": 0.4338,
+      "rho_both": 0.4866
+    },
+    {
+      "drug": "Docetaxel",
+      "n": 291,
+      "rho_RNA": 0.48,
+      "rho_protein": 0.3677,
+      "rho_both": 0.4739
+    },
+    {
+      "drug": "Doramapimod",
+      "n": 291,
+      "rho_RNA": 0.3362,
+      "rho_protein": 0.2775,
+      "rho_both": 0.33
+    },
+    {
+      "drug": "EHT-1864",
+      "n": 285,
+      "rho_RNA": 0.4504,
+      "rho_protein": 0.4077,
+      "rho_both": 0.4437
+    },
+    {
+      "drug": "EPZ004777",
+      "n": 291,
+      "rho_RNA": 0.5341,
+      "rho_protein": 0.3749,
+      "rho_both": 0.509
+    },
+    {
+      "drug": "EPZ5676",
+      "n": 290,
+      "rho_RNA": 0.4917,
+      "rho_protein": 0.356,
+      "rho_both": 0.4765
+    },
+    {
+      "drug": "ERK_2440",
+      "n": 237,
+      "rho_RNA": 0.4956,
+      "rho_protein": 0.433,
+      "rho_both": 0.4869
+    },
+    {
+      "drug": "ERK_6604",
+      "n": 237,
+      "rho_RNA": 0.5172,
+      "rho_protein": 0.4898,
+      "rho_both": 0.5137
+    },
+    {
+      "drug": "Eg5_9814",
+      "n": 236,
+      "rho_RNA": 0.5278,
+      "rho_protein": 0.4247,
+      "rho_both": 0.5366
+    },
+    {
+      "drug": "Elephantin",
+      "n": 238,
+      "rho_RNA": 0.4622,
+      "rho_protein": 0.2163,
+      "rho_both": 0.4064
+    },
+    {
+      "drug": "Entinostat",
+      "n": 276,
+      "rho_RNA": 0.4818,
+      "rho_protein": 0.3878,
+      "rho_both": 0.4723
+    },
+    {
+      "drug": "Entospletinib",
+      "n": 275,
+      "rho_RNA": 0.4319,
+      "rho_protein": 0.3598,
+      "rho_both": 0.4248
+    },
+    {
+      "drug": "Epirubicin",
+      "n": 289,
+      "rho_RNA": 0.5435,
+      "rho_protein": 0.3534,
+      "rho_both": 0.5277
+    },
+    {
+      "drug": "Erlotinib",
+      "n": 288,
+      "rho_RNA": 0.3962,
+      "rho_protein": 0.3204,
+      "rho_both": 0.3641
+    },
+    {
+      "drug": "Fludarabine",
+      "n": 238,
+      "rho_RNA": 0.2947,
+      "rho_protein": 0.1639,
+      "rho_both": 0.2279
+    },
+    {
+      "drug": "Foretinib",
+      "n": 287,
+      "rho_RNA": 0.4319,
+      "rho_protein": 0.3591,
+      "rho_both": 0.4269
+    },
+    {
+      "drug": "Fulvestrant",
+      "n": 291,
+      "rho_RNA": 0.5246,
+      "rho_protein": 0.4452,
+      "rho_both": 0.5167
+    },
+    {
+      "drug": "GDC0810",
+      "n": 289,
+      "rho_RNA": 0.4561,
+      "rho_protein": 0.4177,
+      "rho_both": 0.463
+    },
+    {
+      "drug": "GNE-317",
+      "n": 282,
+      "rho_RNA": 0.2387,
+      "rho_protein": 0.0813,
+      "rho_both": 0.1834
+    },
+    {
+      "drug": "GSK-LSD1",
+      "n": 238,
+      "rho_RNA": 0.3289,
+      "rho_protein": 0.2506,
+      "rho_both": 0.3595
+    },
+    {
+      "drug": "GSK-LSD1-2HCl ",
+      "n": 244,
+      "rho_RNA": 0.5195,
+      "rho_protein": 0.3794,
+      "rho_both": 0.5043
+    },
+    {
+      "drug": "GSK1904529A",
+      "n": 291,
+      "rho_RNA": 0.4164,
+      "rho_protein": 0.2902,
+      "rho_both": 0.4073
+    },
+    {
+      "drug": "GSK2110183B",
+      "n": 238,
+      "rho_RNA": 0.4628,
+      "rho_protein": 0.3875,
+      "rho_both": 0.4373
+    },
+    {
+      "drug": "GSK2256098C",
+      "n": 238,
+      "rho_RNA": 0.4468,
+      "rho_protein": 0.3535,
+      "rho_both": 0.4415
+    },
+    {
+      "drug": "GSK2276186C",
+      "n": 238,
+      "rho_RNA": 0.3452,
+      "rho_protein": 0.3237,
+      "rho_both": 0.328
+    },
+    {
+      "drug": "GSK2578215A",
+      "n": 289,
+      "rho_RNA": 0.3607,
+      "rho_protein": 0.3691,
+      "rho_both": 0.3973
+    },
+    {
+      "drug": "GSK2606414",
+      "n": 273,
+      "rho_RNA": 0.4386,
+      "rho_protein": 0.3115,
+      "rho_both": 0.3919
+    },
+    {
+      "drug": "GSK2801",
+      "n": 238,
+      "rho_RNA": 0.2891,
+      "rho_protein": 0.3203,
+      "rho_both": 0.3872
+    },
+    {
+      "drug": "GSK2830371",
+      "n": 244,
+      "rho_RNA": 0.5053,
+      "rho_protein": 0.3179,
+      "rho_both": 0.4412
+    },
+    {
+      "drug": "GSK2830371A",
+      "n": 238,
+      "rho_RNA": 0.34,
+      "rho_protein": 0.2791,
+      "rho_both": 0.3468
+    },
+    {
+      "drug": "GSK3337463A",
+      "n": 238,
+      "rho_RNA": 0.424,
+      "rho_protein": 0.413,
+      "rho_both": 0.459
+    },
+    {
+      "drug": "GSK343",
+      "n": 291,
+      "rho_RNA": 0.3902,
+      "rho_protein": 0.3234,
+      "rho_both": 0.3928
+    },
+    {
+      "drug": "GSK591",
+      "n": 289,
+      "rho_RNA": 0.3755,
+      "rho_protein": 0.2679,
+      "rho_both": 0.3468
+    },
+    {
+      "drug": "GSK626616AC",
+      "n": 238,
+      "rho_RNA": 0.5299,
+      "rho_protein": 0.428,
+      "rho_both": 0.5218
+    },
+    {
+      "drug": "GW441756",
+      "n": 291,
+      "rho_RNA": 0.2567,
+      "rho_protein": 0.1572,
+      "rho_both": 0.1921
+    },
+    {
+      "drug": "Gallibiscoquinazole",
+      "n": 238,
+      "rho_RNA": 0.4409,
+      "rho_protein": 0.4145,
+      "rho_both": 0.4609
+    },
+    {
+      "drug": "Gefitinib",
+      "n": 289,
+      "rho_RNA": 0.4626,
+      "rho_protein": 0.3527,
+      "rho_both": 0.3953
+    },
+    {
+      "drug": "Gemcitabine",
+      "n": 291,
+      "rho_RNA": 0.4565,
+      "rho_protein": 0.263,
+      "rho_both": 0.4061
+    },
+    {
+      "drug": "HKMTI-1-005",
+      "n": 242,
+      "rho_RNA": 0.3488,
+      "rho_protein": 0.2301,
+      "rho_both": 0.3599
+    },
+    {
+      "drug": "I-BET-762",
+      "n": 275,
+      "rho_RNA": 0.3939,
+      "rho_protein": 0.1934,
+      "rho_both": 0.3477
+    },
+    {
+      "drug": "I-BRD9",
+      "n": 289,
+      "rho_RNA": 0.4379,
+      "rho_protein": 0.4112,
+      "rho_both": 0.4312
+    },
+    {
+      "drug": "IAP_5620",
+      "n": 236,
+      "rho_RNA": 0.3658,
+      "rho_protein": 0.3346,
+      "rho_both": 0.3634
+    },
+    {
+      "drug": "ICL-SIRT078",
+      "n": 241,
+      "rho_RNA": 0.4302,
+      "rho_protein": 0.1937,
+      "rho_both": 0.3444
+    },
+    {
+      "drug": "IGF1R_3801",
+      "n": 237,
+      "rho_RNA": 0.49,
+      "rho_protein": 0.3913,
+      "rho_both": 0.4706
+    },
+    {
+      "drug": "IRAK4_4710",
+      "n": 237,
+      "rho_RNA": 0.3096,
+      "rho_protein": 0.1864,
+      "rho_both": 0.2831
+    },
+    {
+      "drug": "IWP-2",
+      "n": 275,
+      "rho_RNA": 0.4285,
+      "rho_protein": 0.3885,
+      "rho_both": 0.4164
+    },
+    {
+      "drug": "Ibrutinib",
+      "n": 273,
+      "rho_RNA": 0.4704,
+      "rho_protein": 0.4444,
+      "rho_both": 0.4924
+    },
+    {
+      "drug": "Ipatasertib",
+      "n": 289,
+      "rho_RNA": 0.418,
+      "rho_protein": 0.4147,
+      "rho_both": 0.4273
+    },
+    {
+      "drug": "Irinotecan",
+      "n": 291,
+      "rho_RNA": 0.4637,
+      "rho_protein": 0.2722,
+      "rho_both": 0.4346
+    },
+    {
+      "drug": "JAK1_8709",
+      "n": 237,
+      "rho_RNA": 0.472,
+      "rho_protein": 0.3897,
+      "rho_both": 0.4504
+    },
+    {
+      "drug": "JAK_8517",
+      "n": 237,
+      "rho_RNA": 0.4806,
+      "rho_protein": 0.3764,
+      "rho_both": 0.4586
+    },
+    {
+      "drug": "JNK Inhibitor VIII",
+      "n": 291,
+      "rho_RNA": 0.3146,
+      "rho_protein": 0.2127,
+      "rho_both": 0.2799
+    },
+    {
+      "drug": "JQ1",
+      "n": 289,
+      "rho_RNA": 0.3949,
+      "rho_protein": 0.3354,
+      "rho_both": 0.3896
+    },
+    {
+      "drug": "KRAS (G12C) Inhibitor-12",
+      "n": 275,
+      "rho_RNA": 0.4348,
+      "rho_protein": 0.3311,
+      "rho_both": 0.3958
+    },
+    {
+      "drug": "KU-55933",
+      "n": 291,
+      "rho_RNA": 0.3707,
+      "rho_protein": 0.3712,
+      "rho_both": 0.3796
+    },
+    {
+      "drug": "L-Oxonoreleagnine",
+      "n": 238,
+      "rho_RNA": 0.4372,
+      "rho_protein": 0.3835,
+      "rho_both": 0.4243
+    },
+    {
+      "drug": "LCL161",
+      "n": 275,
+      "rho_RNA": 0.2934,
+      "rho_protein": 0.1541,
+      "rho_both": 0.2471
+    },
+    {
+      "drug": "LGK974",
+      "n": 291,
+      "rho_RNA": 0.5638,
+      "rho_protein": 0.5061,
+      "rho_both": 0.5604
+    },
+    {
+      "drug": "LJI308",
+      "n": 288,
+      "rho_RNA": 0.3839,
+      "rho_protein": 0.2584,
+      "rho_both": 0.3463
+    },
+    {
+      "drug": "LMB_AB1",
+      "n": 238,
+      "rho_RNA": 0.487,
+      "rho_protein": 0.4353,
+      "rho_both": 0.4929
+    },
+    {
+      "drug": "LMB_AB2",
+      "n": 238,
+      "rho_RNA": 0.4263,
+      "rho_protein": 0.4185,
+      "rho_both": 0.4503
+    },
+    {
+      "drug": "LMB_AB3",
+      "n": 238,
+      "rho_RNA": 0.294,
+      "rho_protein": 0.2638,
+      "rho_both": 0.2863
+    },
+    {
+      "drug": "LMP744",
+      "n": 238,
+      "rho_RNA": 0.352,
+      "rho_protein": 0.2417,
+      "rho_both": 0.3683
+    },
+    {
+      "drug": "LY2109761",
+      "n": 275,
+      "rho_RNA": 0.3995,
+      "rho_protein": 0.3534,
+      "rho_both": 0.4061
+    },
+    {
+      "drug": "Lapatinib",
+      "n": 291,
+      "rho_RNA": 0.4683,
+      "rho_protein": 0.4271,
+      "rho_both": 0.4503
+    },
+    {
+      "drug": "Leflunomide",
+      "n": 275,
+      "rho_RNA": 0.3369,
+      "rho_protein": 0.2132,
+      "rho_both": 0.323
+    },
+    {
+      "drug": "Lenalidomide",
+      "n": 289,
+      "rho_RNA": 0.4845,
+      "rho_protein": 0.4086,
+      "rho_both": 0.4704
+    },
+    {
+      "drug": "Lestaurtinib",
+      "n": 289,
+      "rho_RNA": 0.4031,
+      "rho_protein": 0.3897,
+      "rho_both": 0.435
+    },
+    {
+      "drug": "Linsitinib",
+      "n": 291,
+      "rho_RNA": 0.5391,
+      "rho_protein": 0.4596,
+      "rho_both": 0.5336
+    },
+    {
+      "drug": "Luminespib",
+      "n": 291,
+      "rho_RNA": 0.4087,
+      "rho_protein": 0.2463,
+      "rho_both": 0.3851
+    },
+    {
+      "drug": "MG-132",
+      "n": 291,
+      "rho_RNA": 0.2246,
+      "rho_protein": 0.1697,
+      "rho_both": 0.2579
+    },
+    {
+      "drug": "MIM1",
+      "n": 245,
+      "rho_RNA": 0.3729,
+      "rho_protein": 0.3543,
+      "rho_both": 0.4102
+    },
+    {
+      "drug": "MIRA-1",
+      "n": 291,
+      "rho_RNA": 0.4816,
+      "rho_protein": 0.3087,
+      "rho_both": 0.441
+    },
+    {
+      "drug": "MK-1775",
+      "n": 291,
+      "rho_RNA": 0.5114,
+      "rho_protein": 0.4161,
+      "rho_both": 0.5122
+    },
+    {
+      "drug": "MK-2206",
+      "n": 291,
+      "rho_RNA": 0.434,
+      "rho_protein": 0.3901,
+      "rho_both": 0.4346
+    },
+    {
+      "drug": "MK-8776",
+      "n": 287,
+      "rho_RNA": 0.31,
+      "rho_protein": 0.2468,
+      "rho_both": 0.2909
+    },
+    {
+      "drug": "ML323",
+      "n": 275,
+      "rho_RNA": 0.511,
+      "rho_protein": 0.4814,
+      "rho_both": 0.5366
+    },
+    {
+      "drug": "MN-64",
+      "n": 275,
+      "rho_RNA": 0.3466,
+      "rho_protein": 0.2264,
+      "rho_both": 0.3148
+    },
+    {
+      "drug": "Methotrexate",
+      "n": 275,
+      "rho_RNA": 0.2127,
+      "rho_protein": 0.1635,
+      "rho_both": 0.1976
+    },
+    {
+      "drug": "Mirin",
+      "n": 275,
+      "rho_RNA": 0.4353,
+      "rho_protein": 0.3256,
+      "rho_both": 0.4322
+    },
+    {
+      "drug": "Mitoxantrone",
+      "n": 238,
+      "rho_RNA": 0.4115,
+      "rho_protein": 0.2859,
+      "rho_both": 0.4023
+    },
+    {
+      "drug": "Motesanib",
+      "n": 289,
+      "rho_RNA": 0.4985,
+      "rho_protein": 0.3948,
+      "rho_both": 0.4691
+    },
+    {
+      "drug": "Mycophenolic acid",
+      "n": 244,
+      "rho_RNA": 0.4264,
+      "rho_protein": 0.2031,
+      "rho_both": 0.383
+    },
+    {
+      "drug": "N-acetyl cysteine",
+      "n": 245,
+      "rho_RNA": 0.1989,
+      "rho_protein": 0.118,
+      "rho_both": 0.2099
+    },
+    {
+      "drug": "N25720-51-A1",
+      "n": 245,
+      "rho_RNA": 0.3776,
+      "rho_protein": 0.3006,
+      "rho_both": 0.381
+    },
+    {
+      "drug": "N27922-53-1",
+      "n": 245,
+      "rho_RNA": 0.4134,
+      "rho_protein": 0.2878,
+      "rho_both": 0.3742
+    },
+    {
+      "drug": "N29087-69-1",
+      "n": 245,
+      "rho_RNA": 0.4263,
+      "rho_protein": 0.361,
+      "rho_both": 0.395
+    },
+    {
+      "drug": "N30652-18-1",
+      "n": 245,
+      "rho_RNA": 0.4559,
+      "rho_protein": 0.3681,
+      "rho_both": 0.4331
+    },
+    {
+      "drug": "NU7441",
+      "n": 286,
+      "rho_RNA": 0.4261,
+      "rho_protein": 0.3282,
+      "rho_both": 0.4035
+    },
+    {
+      "drug": "NVP-ADW742",
+      "n": 289,
+      "rho_RNA": 0.4056,
+      "rho_protein": 0.2546,
+      "rho_both": 0.3684
+    },
+    {
+      "drug": "Navitoclax",
+      "n": 290,
+      "rho_RNA": 0.3705,
+      "rho_protein": 0.2781,
+      "rho_both": 0.3572
+    },
+    {
+      "drug": "Nelarabine",
+      "n": 238,
+      "rho_RNA": 0.4998,
+      "rho_protein": 0.3264,
+      "rho_both": 0.4756
+    },
+    {
+      "drug": "Nilotinib",
+      "n": 289,
+      "rho_RNA": 0.3379,
+      "rho_protein": 0.2192,
+      "rho_both": 0.2708
+    },
+    {
+      "drug": "Niraparib",
+      "n": 275,
+      "rho_RNA": 0.46,
+      "rho_protein": 0.2907,
+      "rho_both": 0.4595
+    },
+    {
+      "drug": "Nutlin-3a (-)",
+      "n": 291,
+      "rho_RNA": 0.5274,
+      "rho_protein": 0.4549,
+      "rho_both": 0.5526
+    },
+    {
+      "drug": "OF-1",
+      "n": 275,
+      "rho_RNA": 0.4331,
+      "rho_protein": 0.4407,
+      "rho_both": 0.4581
+    },
+    {
+      "drug": "OSI-027",
+      "n": 288,
+      "rho_RNA": 0.1846,
+      "rho_protein": 0.1593,
+      "rho_both": 0.1758
+    },
+    {
+      "drug": "OTX015",
+      "n": 275,
+      "rho_RNA": 0.4099,
+      "rho_protein": 0.2379,
+      "rho_both": 0.3619
+    },
+    {
+      "drug": "Obatoclax Mesylate",
+      "n": 253,
+      "rho_RNA": 0.4286,
+      "rho_protein": 0.2082,
+      "rho_both": 0.4151
+    },
+    {
+      "drug": "Olaparib",
+      "n": 291,
+      "rho_RNA": 0.4852,
+      "rho_protein": 0.2825,
+      "rho_both": 0.4468
+    },
+    {
+      "drug": "Osimertinib",
+      "n": 289,
+      "rho_RNA": 0.4401,
+      "rho_protein": 0.3793,
+      "rho_both": 0.4457
+    },
+    {
+      "drug": "Oxaliplatin",
+      "n": 291,
+      "rho_RNA": 0.5197,
+      "rho_protein": 0.2723,
+      "rho_both": 0.4848
+    },
+    {
+      "drug": "P22077",
+      "n": 289,
+      "rho_RNA": 0.3418,
+      "rho_protein": 0.2701,
+      "rho_both": 0.3158
+    },
+    {
+      "drug": "PAK_5339",
+      "n": 236,
+      "rho_RNA": 0.4219,
+      "rho_protein": 0.2274,
+      "rho_both": 0.355
+    },
+    {
+      "drug": "PBD-288",
+      "n": 245,
+      "rho_RNA": 0.4999,
+      "rho_protein": 0.3469,
+      "rho_both": 0.5158
+    },
+    {
+      "drug": "PCI-34051",
+      "n": 275,
+      "rho_RNA": 0.4121,
+      "rho_protein": 0.3595,
+      "rho_both": 0.4171
+    },
+    {
+      "drug": "PD0325901",
+      "n": 291,
+      "rho_RNA": 0.6736,
+      "rho_protein": 0.6388,
+      "rho_both": 0.671
+    },
+    {
+      "drug": "PD173074",
+      "n": 291,
+      "rho_RNA": 0.3538,
+      "rho_protein": 0.3553,
+      "rho_both": 0.3846
+    },
+    {
+      "drug": "PFI-1",
+      "n": 288,
+      "rho_RNA": 0.3437,
+      "rho_protein": 0.2928,
+      "rho_both": 0.3412
+    },
+    {
+      "drug": "PFI3",
+      "n": 275,
+      "rho_RNA": 0.4759,
+      "rho_protein": 0.3772,
+      "rho_both": 0.4697
+    },
+    {
+      "drug": "PLX-4720",
+      "n": 291,
+      "rho_RNA": 0.288,
+      "rho_protein": 0.2874,
+      "rho_both": 0.3153
+    },
+    {
+      "drug": "POMHEX",
+      "n": 245,
+      "rho_RNA": 0.5132,
+      "rho_protein": 0.4863,
+      "rho_both": 0.5377
+    },
+    {
+      "drug": "PRIMA-1MET",
+      "n": 275,
+      "rho_RNA": 0.4113,
+      "rho_protein": 0.2164,
+      "rho_both": 0.3928
+    },
+    {
+      "drug": "PRT062607",
+      "n": 275,
+      "rho_RNA": 0.3885,
+      "rho_protein": 0.3381,
+      "rho_both": 0.3748
+    },
+    {
+      "drug": "Paclitaxel",
+      "n": 289,
+      "rho_RNA": 0.4774,
+      "rho_protein": 0.3932,
+      "rho_both": 0.4492
+    },
+    {
+      "drug": "Palbociclib",
+      "n": 291,
+      "rho_RNA": 0.5602,
+      "rho_protein": 0.4548,
+      "rho_both": 0.5668
+    },
+    {
+      "drug": "Pevonedistat",
+      "n": 289,
+      "rho_RNA": 0.4878,
+      "rho_protein": 0.3957,
+      "rho_both": 0.4756
+    },
+    {
+      "drug": "Picolinici-acid",
+      "n": 274,
+      "rho_RNA": 0.4253,
+      "rho_protein": 0.3613,
+      "rho_both": 0.4379
+    },
+    {
+      "drug": "Pictilisib",
+      "n": 291,
+      "rho_RNA": 0.3415,
+      "rho_protein": 0.2671,
+      "rho_both": 0.3259
+    },
+    {
+      "drug": "Podophyllotoxin bromide",
+      "n": 238,
+      "rho_RNA": 0.5084,
+      "rho_protein": 0.3389,
+      "rho_both": 0.4853
+    },
+    {
+      "drug": "Pyridostatin",
+      "n": 286,
+      "rho_RNA": 0.4401,
+      "rho_protein": 0.3634,
+      "rho_both": 0.4208
+    },
+    {
+      "drug": "RO-3306",
+      "n": 291,
+      "rho_RNA": 0.4991,
+      "rho_protein": 0.3243,
+      "rho_both": 0.4554
+    },
+    {
+      "drug": "RVX-208",
+      "n": 275,
+      "rho_RNA": 0.3771,
+      "rho_protein": 0.226,
+      "rho_both": 0.3633
+    },
+    {
+      "drug": "Rapamycin",
+      "n": 288,
+      "rho_RNA": 0.3364,
+      "rho_protein": 0.2231,
+      "rho_both": 0.2914
+    },
+    {
+      "drug": "Refametinib",
+      "n": 289,
+      "rho_RNA": 0.6305,
+      "rho_protein": 0.6387,
+      "rho_both": 0.6458
+    },
+    {
+      "drug": "Remodelin",
+      "n": 140,
+      "rho_RNA": 0.268,
+      "rho_protein": 0.3122,
+      "rho_both": 0.2662
+    },
+    {
+      "drug": "Ribociclib",
+      "n": 290,
+      "rho_RNA": 0.5027,
+      "rho_protein": 0.3833,
+      "rho_both": 0.472
+    },
+    {
+      "drug": "Romidepsin",
+      "n": 238,
+      "rho_RNA": 0.4466,
+      "rho_protein": 0.3344,
+      "rho_both": 0.4357
+    },
+    {
+      "drug": "Rucaparib",
+      "n": 288,
+      "rho_RNA": 0.4078,
+      "rho_protein": 0.2808,
+      "rho_both": 0.388
+    },
+    {
+      "drug": "Ruxolitinib",
+      "n": 277,
+      "rho_RNA": 0.5019,
+      "rho_protein": 0.3772,
+      "rho_both": 0.4732
+    },
+    {
+      "drug": "SB216763",
+      "n": 291,
+      "rho_RNA": 0.2298,
+      "rho_protein": 0.1223,
+      "rho_both": 0.1842
+    },
+    {
+      "drug": "SB590885",
+      "n": 286,
+      "rho_RNA": 0.5262,
+      "rho_protein": 0.404,
+      "rho_both": 0.5135
+    },
+    {
+      "drug": "SCH772984",
+      "n": 291,
+      "rho_RNA": 0.6089,
+      "rho_protein": 0.5706,
+      "rho_both": 0.586
+    },
+    {
+      "drug": "SGC-CBP30",
+      "n": 238,
+      "rho_RNA": 0.3202,
+      "rho_protein": 0.3068,
+      "rho_both": 0.4121
+    },
+    {
+      "drug": "SGC0946",
+      "n": 288,
+      "rho_RNA": 0.2925,
+      "rho_protein": 0.259,
+      "rho_both": 0.2923
+    },
+    {
+      "drug": "SN-38",
+      "n": 290,
+      "rho_RNA": 0.437,
+      "rho_protein": 0.2267,
+      "rho_both": 0.4241
+    },
+    {
+      "drug": "Sabutoclax",
+      "n": 275,
+      "rho_RNA": 0.4191,
+      "rho_protein": 0.4165,
+      "rho_both": 0.4218
+    },
+    {
+      "drug": "Sapitinib",
+      "n": 290,
+      "rho_RNA": 0.5533,
+      "rho_protein": 0.4895,
+      "rho_both": 0.556
+    },
+    {
+      "drug": "Savolitinib",
+      "n": 289,
+      "rho_RNA": 0.253,
+      "rho_protein": 0.1492,
+      "rho_both": 0.1818
+    },
+    {
+      "drug": "Schweinfurthin A",
+      "n": 238,
+      "rho_RNA": 0.5528,
+      "rho_protein": 0.3811,
+      "rho_both": 0.5331
+    },
+    {
+      "drug": "Selumetinib",
+      "n": 291,
+      "rho_RNA": 0.5965,
+      "rho_protein": 0.5894,
+      "rho_both": 0.5962
+    },
+    {
+      "drug": "Sepantronium bromide",
+      "n": 289,
+      "rho_RNA": 0.4273,
+      "rho_protein": 0.3801,
+      "rho_both": 0.4157
+    },
+    {
+      "drug": "Serdemetan",
+      "n": 289,
+      "rho_RNA": 0.4583,
+      "rho_protein": 0.39,
+      "rho_both": 0.4498
+    },
+    {
+      "drug": "Sinularin",
+      "n": 238,
+      "rho_RNA": 0.3427,
+      "rho_protein": 0.1588,
+      "rho_both": 0.3095
+    },
+    {
+      "drug": "Sorafenib",
+      "n": 289,
+      "rho_RNA": 0.4683,
+      "rho_protein": 0.2746,
+      "rho_both": 0.3891
+    },
+    {
+      "drug": "Staurosporine",
+      "n": 290,
+      "rho_RNA": 0.3528,
+      "rho_protein": 0.3179,
+      "rho_both": 0.387
+    },
+    {
+      "drug": "TAF1_5496",
+      "n": 237,
+      "rho_RNA": 0.4823,
+      "rho_protein": 0.4226,
+      "rho_both": 0.4545
+    },
+    {
+      "drug": "THR-101",
+      "n": 244,
+      "rho_RNA": 0.3542,
+      "rho_protein": 0.2689,
+      "rho_both": 0.3256
+    },
+    {
+      "drug": "THR-102",
+      "n": 244,
+      "rho_RNA": 0.3902,
+      "rho_protein": 0.3485,
+      "rho_both": 0.4098
+    },
+    {
+      "drug": "THR-103",
+      "n": 244,
+      "rho_RNA": 0.4374,
+      "rho_protein": 0.2499,
+      "rho_both": 0.4206
+    },
+    {
+      "drug": "Talazoparib",
+      "n": 288,
+      "rho_RNA": 0.4674,
+      "rho_protein": 0.229,
+      "rho_both": 0.4322
+    },
+    {
+      "drug": "Tamoxifen",
+      "n": 289,
+      "rho_RNA": 0.3686,
+      "rho_protein": 0.2794,
+      "rho_both": 0.3374
+    },
+    {
+      "drug": "Tanespimycin",
+      "n": 289,
+      "rho_RNA": 0.4206,
+      "rho_protein": 0.346,
+      "rho_both": 0.4029
+    },
+    {
+      "drug": "Taselisib",
+      "n": 291,
+      "rho_RNA": 0.4381,
+      "rho_protein": 0.2754,
+      "rho_both": 0.3717
+    },
+    {
+      "drug": "Telomerase Inhibitor IX",
+      "n": 289,
+      "rho_RNA": 0.5809,
+      "rho_protein": 0.3881,
+      "rho_both": 0.5621
+    },
+    {
+      "drug": "Temozolomide",
+      "n": 291,
+      "rho_RNA": 0.4547,
+      "rho_protein": 0.3628,
+      "rho_both": 0.4989
+    },
+    {
+      "drug": "Temsirolimus",
+      "n": 283,
+      "rho_RNA": 0.4038,
+      "rho_protein": 0.271,
+      "rho_both": 0.3821
+    },
+    {
+      "drug": "Teniposide",
+      "n": 238,
+      "rho_RNA": 0.3925,
+      "rho_protein": 0.255,
+      "rho_both": 0.3865
+    },
+    {
+      "drug": "Topotecan",
+      "n": 238,
+      "rho_RNA": 0.3276,
+      "rho_protein": 0.2142,
+      "rho_both": 0.3251
+    },
+    {
+      "drug": "Trametinib",
+      "n": 291,
+      "rho_RNA": 0.6806,
+      "rho_protein": 0.6566,
+      "rho_both": 0.6702
+    },
+    {
+      "drug": "ULK1_4989",
+      "n": 237,
+      "rho_RNA": 0.4798,
+      "rho_protein": 0.3655,
+      "rho_both": 0.4493
+    },
+    {
+      "drug": "UMI-77",
+      "n": 245,
+      "rho_RNA": 0.422,
+      "rho_protein": 0.2642,
+      "rho_both": 0.3543
+    },
+    {
+      "drug": "UNC0379",
+      "n": 245,
+      "rho_RNA": 0.3701,
+      "rho_protein": 0.3683,
+      "rho_both": 0.3858
+    },
+    {
+      "drug": "UNC0638",
+      "n": 242,
+      "rho_RNA": 0.3678,
+      "rho_protein": 0.2734,
+      "rho_both": 0.3511
+    },
+    {
+      "drug": "Ulixertinib",
+      "n": 290,
+      "rho_RNA": 0.5096,
+      "rho_protein": 0.4666,
+      "rho_both": 0.5023
+    },
+    {
+      "drug": "Uprosertib",
+      "n": 291,
+      "rho_RNA": 0.4064,
+      "rho_protein": 0.3887,
+      "rho_both": 0.413
+    },
+    {
+      "drug": "VE-822",
+      "n": 275,
+      "rho_RNA": 0.3898,
+      "rho_protein": 0.3308,
+      "rho_both": 0.3823
+    },
+    {
+      "drug": "VE821",
+      "n": 287,
+      "rho_RNA": 0.3989,
+      "rho_protein": 0.3216,
+      "rho_both": 0.4016
+    },
+    {
+      "drug": "VSP34_8731",
+      "n": 237,
+      "rho_RNA": 0.2396,
+      "rho_protein": 0.1694,
+      "rho_both": 0.2644
+    },
+    {
+      "drug": "VTP-A",
+      "n": 244,
+      "rho_RNA": 0.3814,
+      "rho_protein": 0.335,
+      "rho_both": 0.3759
+    },
+    {
+      "drug": "VTP-B",
+      "n": 244,
+      "rho_RNA": 0.4024,
+      "rho_protein": 0.4183,
+      "rho_both": 0.4561
+    },
+    {
+      "drug": "VX-11e",
+      "n": 289,
+      "rho_RNA": 0.5413,
+      "rho_protein": 0.5239,
+      "rho_both": 0.5402
+    },
+    {
+      "drug": "Veliparib",
+      "n": 289,
+      "rho_RNA": 0.5096,
+      "rho_protein": 0.4175,
+      "rho_both": 0.4785
+    },
+    {
+      "drug": "Venetoclax",
+      "n": 289,
+      "rho_RNA": 0.4994,
+      "rho_protein": 0.3713,
+      "rho_both": 0.4631
+    },
+    {
+      "drug": "Vinblastine",
+      "n": 244,
+      "rho_RNA": 0.5159,
+      "rho_protein": 0.4451,
+      "rho_both": 0.5726
+    },
+    {
+      "drug": "Vinorelbine",
+      "n": 290,
+      "rho_RNA": 0.5538,
+      "rho_protein": 0.4431,
+      "rho_both": 0.5565
+    },
+    {
+      "drug": "Vismodegib",
+      "n": 289,
+      "rho_RNA": 0.4399,
+      "rho_protein": 0.3809,
+      "rho_both": 0.445
+    },
+    {
+      "drug": "Vorinostat",
+      "n": 289,
+      "rho_RNA": 0.5321,
+      "rho_protein": 0.4433,
+      "rho_both": 0.5532
+    },
+    {
+      "drug": "WEHI-539",
+      "n": 290,
+      "rho_RNA": 0.3185,
+      "rho_protein": 0.2315,
+      "rho_both": 0.3414
+    },
+    {
+      "drug": "WIKI4",
+      "n": 289,
+      "rho_RNA": 0.274,
+      "rho_protein": 0.1792,
+      "rho_both": 0.2439
+    },
+    {
+      "drug": "WZ4003",
+      "n": 275,
+      "rho_RNA": 0.2272,
+      "rho_protein": 0.1406,
+      "rho_both": 0.2044
+    },
+    {
+      "drug": "Wee1 Inhibitor",
+      "n": 289,
+      "rho_RNA": 0.4694,
+      "rho_protein": 0.3616,
+      "rho_both": 0.4602
+    },
+    {
+      "drug": "Wnt-C59",
+      "n": 275,
+      "rho_RNA": 0.534,
+      "rho_protein": 0.5763,
+      "rho_both": 0.5972
+    },
+    {
+      "drug": "XAV939",
+      "n": 275,
+      "rho_RNA": 0.4057,
+      "rho_protein": 0.314,
+      "rho_both": 0.428
+    },
+    {
+      "drug": "YK-4-279",
+      "n": 289,
+      "rho_RNA": 0.5133,
+      "rho_protein": 0.3671,
+      "rho_both": 0.5121
+    },
+    {
+      "drug": "ZM447439",
+      "n": 286,
+      "rho_RNA": 0.3983,
+      "rho_protein": 0.3789,
+      "rho_both": 0.4241
+    },
+    {
+      "drug": "Zoledronate",
+      "n": 238,
+      "rho_RNA": 0.4717,
+      "rho_protein": 0.3447,
+      "rho_both": 0.4667
+    },
+    {
+      "drug": "alpha-lipoic acid",
+      "n": 245,
+      "rho_RNA": 0.379,
+      "rho_protein": 0.3125,
+      "rho_both": 0.3602
+    },
+    {
+      "drug": "ascorbate (vitamin C)",
+      "n": 244,
+      "rho_RNA": 0.3512,
+      "rho_protein": 0.1858,
+      "rho_both": 0.3341
+    },
+    {
+      "drug": "glutathione",
+      "n": 244,
+      "rho_RNA": 0.2986,
+      "rho_protein": 0.3159,
+      "rho_both": 0.3496
+    }
+  ],
+  "verdict": "CEILING IS MODALITY-GENERAL: baseline proteomics does NOT beat baseline RNA for drug-specific response (protein +0.328 vs RNA +0.419; both +0.408). No baseline molecular profile resolves within-lineage drug specificity here -> functional/perturbation data (Track-1), not another baseline omic, is required. First-class negative."
+}

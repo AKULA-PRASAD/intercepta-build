@@ -50,6 +50,7 @@ via the `INTERCEPTA_BEATAML` env var or a local path only.
 | Geneformer foundation model | HuggingFace ctheodoris/Geneformer | PUBLIC (third-party, ~5.5 GB) | engine/cell_fm — **downloaded externally, never vendored** |
 | **BeatAML** (WES mutations, clinical, expression, drug response) | **dbGaP phs001657** | **🔒 CONTROLLED** | engine/aml, verification/, src/ (B3–B4) — env `INTERCEPTA_BEATAML` only |
 | FIMM/Malani AML (RNA Log2CPM, DSRT DSS, mutations, clinical) | Zenodo 7370747 (Malani et al. Cancer Discovery 2022) | **PUBLIC (CC-BY 4.0)** — MD5 3db5280e…a9e241 | experiments/B20 external replication of V19/V20 |
+| CCLE quantitative proteomics (normalized) | gygi.hms.harvard.edu/data/ccle (Nusinow et al. Cell 2020) | **PUBLIC** — sha256 b72a9ff3…c80 | experiments/B22 modality-ceiling test |
 | **SU2C-PCF** (mutations, clinical, CNA) | cBioPortal / SU2C-PCF | **🔒 patient-level — treat as controlled** | engine/net (step2) — never committed |
 | **TCGA raw** (BAM/germline) | GDC controlled | **🔒 CONTROLLED** | not used in committed results |
 

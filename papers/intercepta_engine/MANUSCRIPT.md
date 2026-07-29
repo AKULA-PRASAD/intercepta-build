@@ -83,7 +83,11 @@ positive), significantly above a frozen parameter-free proliferation axis (R_pro
 W=214, p=1.93×10⁻¹⁵). The leaky design (test lines present in training) inflated this to +0.278, quantifying the
 leakage that naive pipelines incur. Adding R_prolif or 50 recurrently-mutated driver-gene features as covariates
 did **not** improve on transcriptome-only (Δρ=+0.0000, p=0.98; Δρ=+0.0004, BH-q=0.74): **+0.212 is the public
-cell-line ceiling** for this design (B1, B2; **Fig 1**).
+cell-line ceiling** for this design (B1, B2; **Fig 1**). This ceiling is **modality-general, not RNA-specific**: on
+291 cell lines with matched mass-spec proteomics (CCLE [Nusinow 2020]), DepMap RNA, and GDSC2 response under an
+identical 5-fold protocol (271 drugs), proteomics did **not** beat transcriptomics (mean per-drug ρ 0.328 vs 0.419,
+paired p=10⁻⁴³) and added nothing when combined (0.408 ≤ 0.419) — a second baseline molecular modality hits the
+same wall (B22).
 
 ### 2.2 Verified mutation→drug mechanism in AML, and what does not survive correction
 In BeatAML ex-vivo drug screening, a systematic screen of 3,051 gene×drug pairs (BH-FDR<0.05, FLT3-ITD– and
@@ -213,9 +217,12 @@ lineage-leakage) — **did not survive independent replication**. It is a clean 
 replication, not internal robustness, is the decisive test: every within-cohort control passed, yet the effect
 was BeatAML-specific. The recurring wall across this entire program is the same — signals that recover *known*
 biology (proliferation, cancer type, established markers) generalize; putatively *novel*, drug-specific,
-single-cohort refinements do not. The implication is consistent and constructive: a functional layer with real,
-transferable value must be built on perturbation data measured *in the target patients* (prospective
-functional-precision cohorts, Track-1), not inferred from a pan-cancer cell-line map.
+single-cohort refinements do not. Nor is the wall specific to transcriptomics: a matched mass-spec proteomic
+profile does not beat or add to RNA for cell-line drug response (B22), so the ceiling is a property of baseline
+molecular profiling itself, not of one assay. The implication is consistent and constructive: a layer with real,
+transferable value must be built on **functional/perturbation** data measured *in the target patients*
+(prospective functional-precision cohorts, Track-1), not inferred from, or re-measured as another baseline omic
+of, a pan-cancer cell-line map.
 
 **Limitations.** Cross-platform normalization is crude (per-gene z). PDX/ex-vivo are proxies. TCGA response is
 coarse and regimen-attributed. Effect sizes throughout are small. We make no novel-molecule, therapy-selection,
@@ -274,8 +281,9 @@ Code, all pre-registrations (`prereg/`), all metrics (`experiments/*/results/`),
 (`LEDGER.md`), the integrity record (`INTEGRITY_SWEEP.md`), and figure-generation code are public at
 `github.com/AKULA-PRASAD/intercepta-build`. Inputs are public — GDSC [Yang 2013], DepMap/CCLE [Ghandi 2019] and
 CRISPR gene effect [Dempster 2021], PRISM [Corsello 2020], PDXE [Gao 2015], TCGA via UCSC Xena [Goldman 2020] with
-curated clinical drug response and TCGA-CDR [Liu 2018], and the FIMM/Malani AML functional-precision cohort
-[Malani 2022; Zenodo 7370747, CC-BY 4.0] — except BeatAML [Tyner 2018; dbGaP phs001657, controlled-access]. No
+curated clinical drug response and TCGA-CDR [Liu 2018], the FIMM/Malani AML functional-precision cohort
+[Malani 2022; Zenodo 7370747, CC-BY 4.0], and CCLE quantitative proteomics [Nusinow 2020; gygi.hms.harvard.edu] —
+except BeatAML [Tyner 2018; dbGaP phs001657, controlled-access]. No
 patient-level data is redistributed; `data/MANIFEST.md` gives sha256/MD5 and access class for every input.
 
 ## 7. Author contributions, competing interests, funding
@@ -318,6 +326,8 @@ reproduction of BeatAML-dependent results requires the reader's own dbGaP access
 10. Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple
     testing. *Journal of the Royal Statistical Society: Series B.* 1995;57(1):289–300.
 11. DerSimonian R, Laird N. Meta-analysis in clinical trials. *Controlled Clinical Trials.* 1986;7(3):177–188.
+12. Nusinow DP, Szpyt J, Ghandi M, et al. Quantitative proteomics of the Cancer Cell Line Encyclopedia. *Cell.*
+    2020;180(2):387–402.
 
 *Reference bibliographic details were drawn from the primary sources; DOIs/PMIDs and any remaining page-number
 verification to be added in the submission-formatted bibliography.*
