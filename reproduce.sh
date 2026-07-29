@@ -22,4 +22,6 @@ echo "== B3d: L1b robustness battery =="
 "$PY" experiments/B3d_robustness/run.py
 echo "== B3e: mechanistic coherence (L1b) =="
 "$PY" experiments/B3e_mechanistic_coherence/run.py
+echo "== B4: mechanism-anchored integration =="
+"$PY" experiments/B4_mechanism_integration/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="

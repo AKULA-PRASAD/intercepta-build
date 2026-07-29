@@ -141,6 +141,30 @@ def load_beataml_expression():
     return df.select_dtypes("number")
 
 
+def load_beataml_clinical():
+    """BeatAML clinical -> df with dbgap_rnaseq_sample, dbgap_dnaseq_sample, FLT3-ITD, NPM1 (raw strings)."""
+    f = "beataml_wv1to4_clinical.xlsx"
+    verify(f, _bp(f))
+    c = pd.read_excel(_bp(f))
+    keep = ["dbgap_subject_id", "dbgap_rnaseq_sample", "dbgap_dnaseq_sample", "FLT3-ITD", "NPM1"]
+    return c[[k for k in keep if k in c.columns]].copy()
+
+
+# VEP-style non-silent classes used in the BeatAML WES table
+NONSILENT_VEP = {"missense_variant", "frameshift_variant", "stop_gained", "inframe_deletion",
+                 "inframe_insertion", "splice_acceptor_variant", "splice_donor_variant",
+                 "protein_altering_variant", "start_lost", "stop_lost"}
+
+
+def load_beataml_wes_gene_status(genes):
+    """Return dict[gene] = set(dbgap_sample_id (DNA)) carrying a non-silent variant in that gene."""
+    f = "beataml_wes_wv1to4_mutations_dbgap.txt"
+    verify(f, _bp(f))
+    w = pd.read_csv(_bp(f), sep="\t", usecols=["dbgap_sample_id", "symbol", "variant_classification"])
+    w = w[w["variant_classification"].isin(NONSILENT_VEP)]
+    return {g: set(w[w["symbol"] == g]["dbgap_sample_id"].unique()) for g in genes}
+
+
 def load_beataml_auc():
     """BeatAML ex-vivo drug response -> long df [rnaseq_sample, drug(lowercased, code stripped), auc]."""
     f = "beataml_probit_curve_fits_v4_dbgap.txt"

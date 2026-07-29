@@ -15,6 +15,8 @@ mismatch. sha256 prefixes match the values recorded in the verified ~/kaalcura V
 | `beataml_waves1to4_norm_exp_dbgap.txt` | `d5745b9dbf46dba866a3c7370bb0ba73b363ecdd21e01cc1d916b4e3021e6f87` | BeatAML patient tumor RNA (B3; INTERCEPTA_BEATAML) |
 | `beataml_probit_curve_fits_v4_dbgap.txt` | `d4bc5f0d91f66314107411e0f2511adc987e29df5b83d9b03df56d3d12928314` | BeatAML ex-vivo drug AUC (B3; INTERCEPTA_BEATAML) |
 | `independent/gdsc1/GDSC1_fitted_dose_response.xlsx` | `837b0686500fde75179e490de08f034abd9f882d8b0253d637bafe83e156dafd` | GDSC1 independent screen (B3c external replication) |
+| `beataml_wv1to4_clinical.xlsx` | `bc692f647f93945e1cf883271af5501bf75c8af3e681676241093c198ed167ad` | BeatAML clinical/WES (B4; INTERCEPTA_BEATAML) |
+| `beataml_wes_wv1to4_mutations_dbgap.txt` | `5a5a5eb8f492b1385aebe85c490b9333f65590f09391a7c1951b04dd1dba1680` | BeatAML clinical/WES (B4; INTERCEPTA_BEATAML) |
 
 All inputs are public repositories (GDSC, DepMap/CCLE, PRISM). No controlled-access data is present or
 required for B1. Any controlled-access acquisition is a logged human gate (see DECISIONS.md).
