@@ -1,0 +1,70 @@
+{
+  "git_sha": "486b3f92555ef7f3395c804f7d307fa8f4a71e6d",
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T14:33:54Z",
+  "n_patients": 644,
+  "n_flt3i_treated": 106,
+  "n_deaths": 395,
+  "age_covariate": true,
+  "cox_terms": {
+    "dep": {
+      "logHR": -0.0404,
+      "HR": 0.96,
+      "se": 0.0566,
+      "p": 0.47492851973992656
+    },
+    "flt3i": {
+      "logHR": 0.0187,
+      "HR": 1.019,
+      "se": 0.1493,
+      "p": 0.9005769947191518
+    },
+    "dep_x_flt3i": {
+      "logHR": -0.1136,
+      "HR": 0.893,
+      "se": 0.1968,
+      "p": 0.5636833516609788
+    },
+    "itd": {
+      "logHR": 0.1269,
+      "HR": 1.135,
+      "se": 0.1295,
+      "p": 0.32717856392301237
+    },
+    "prolif": {
+      "logHR": 0.0658,
+      "HR": 1.068,
+      "se": 0.0517,
+      "p": 0.20279101535020672
+    },
+    "age": {
+      "logHR": 0.5537,
+      "HR": 1.74,
+      "se": 0.0611,
+      "p": 1.2458176381329618e-19
+    }
+  },
+  "primary_interaction": {
+    "term": "dep_score x FLT3i",
+    "logHR": -0.1136,
+    "HR": 0.893,
+    "se": 0.1968,
+    "p": 0.5636833516609788,
+    "H1_pass": false
+  },
+  "within_flt3i_treated": {
+    "n": 106,
+    "events": 67,
+    "dep_logHR": -0.0874,
+    "dep_HR": 0.916,
+    "dep_p": 0.49835783271465484
+  },
+  "within_untreated": {
+    "n": 538,
+    "events": 328,
+    "dep_logHR": -0.0267,
+    "dep_HR": 0.974,
+    "dep_p": 0.6528278907619203
+  },
+  "verdict": "HONEST NEGATIVE: no interpretable interaction (inferred-FLT3-dependency does not mark FLT3i SURVIVAL benefit here). Robust given biases favor a positive; the clinical endpoint requires prospective Track-1 data."
+}

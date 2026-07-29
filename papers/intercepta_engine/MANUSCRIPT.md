@@ -111,6 +111,14 @@ i.e. it identifies FLT3-inhibitor-sensitive AML that standard mutation testing m
 of §2.8 is BeatAML **ex-vivo** (not clinical outcome), AML, dependency-model trained on pan-cancer cells — a
 strong, mechanistically-coherent translational lead, not a validated clinical test.
 
+We tested that boundary directly. In a pre-registered Cox model on overall survival (n=644 patients, 395 deaths,
+106 FLT3-inhibitor–treated), the inferred-dependency×FLT3i-treatment interaction was **null** (HR=0.89, p=0.56),
+as was dependency→survival within treated (HR=0.92, p=0.50) and untreated (HR=0.97, p=0.65). This is expected and
+honest: BeatAML records no treatment dates and no first-line FLT3i, so immortal-time and confounding-by-indication
+bias *toward* a spurious positive — making the null the interpretable result. The strong *ex-vivo* signal thus
+does not, and on this retrospective design cannot, establish a *survival* benefit. It bounds the lead precisely:
+the clinical endpoint requires a prospective design, not more observational data (B17).
+
 ## 3. Discussion
 
 The honest arc is: transcriptomic transfer is **real but weak** where the readout is a direct in-vitro/ex-vivo

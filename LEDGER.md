@@ -61,6 +61,16 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
   predict human clinical drug response at the drug level once cancer type is controlled.** It is a cell-line /
   ex-vivo tool (V1 transfer, V9 BeatAML drug-specificity), NOT a validated human clinical predictor. This bounds
   the fullest vision honestly: clinical-grade patient prediction is NOT achieved on available human data. | B10_metrics.json |
+- **Functional-layer clinical-outcome — NULL (B17, decisive, first-class):** the strong *ex-vivo* signal (V19,
+  inferred-FLT3-dependency→FLT3i ex-vivo response, p=1e-15) does **NOT** translate to a survival benefit in
+  retrospective BeatAML. Cox interaction `dep_score × FLT3i-treated` on overall survival (n=644 patients, 395
+  deaths, 106 FLT3i-treated): **HR=0.893, p=0.56 — no interaction.** Within FLT3i-treated dep→OS HR=0.916
+  (p=0.50); within untreated HR=0.974 (p=0.65). Even FLT3-ITD is not significantly prognostic here (logHR +0.13,
+  p=0.33), reflecting treatment heterogeneity and no treatment timing. **Interpretation (pre-fixed):** BeatAML has
+  no treatment dates / no first-line FLT3i, so immortal-time + confounding-by-indication bias *toward* a spurious
+  positive; the null is therefore the cleanly interpretable, robust outcome. **This bounds V19 exactly: it is an
+  ex-vivo functional lead, and the clinical (survival) endpoint is NOT establishable on retrospective data —
+  it requires prospective Track-1.** Reproduced ×2 (identical). | B17_metrics.json |
 
 ## UNDERPOWERED / INCONCLUSIVE (honest, first-class)
 - **B11 novel-marker cross-system replication:** 14 pre-declared NOVEL (non-textbook) BeatAML mutation->drug
