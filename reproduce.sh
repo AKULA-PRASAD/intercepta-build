@@ -30,4 +30,6 @@ echo "== B5 marker discovery =="
 "$PY" experiments/B5_marker_discovery/run.py
 echo "== B6 calibration =="
 "$PY" experiments/B6_calibration/run.py
+echo "== B10 TCGA human outcome =="
+"$PY" experiments/B10_tcga_outcome/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="
