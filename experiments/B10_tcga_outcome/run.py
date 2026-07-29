@@ -66,7 +66,7 @@ for dk in drugs:
     off_auc.append(np.mean([roc_auc_score(nr, pred.loc[P, dj].values) for dj in drugs if dj != dk]))
     rp_auc.append(roc_auc_score(nr, Rp[P].values))          # proliferation-only comparator
     canc = sub["cancers"].values
-    for c in set(canc):
+    for c in sorted(set(canc)):
         ix = [i for i in range(len(P)) if canc[i] == c]
         if len(ix) >= 12 and nr[ix].sum() >= 4 and (len(ix) - nr[ix].sum()) >= 4:
             strata.append((dk, c, [P[i] for i in ix], nr[ix]))

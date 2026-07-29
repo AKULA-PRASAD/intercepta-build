@@ -1,8 +1,8 @@
 {
-  "git_sha": "9401ceba9ff4cf98fa51e6b6960c6fdeebb32a67",
+  "git_sha": "88d3a501cc696240917d03ed699ffe5a113ae7f6",
   "python": "3.11.14",
   "sklearn": "1.8.0",
-  "timestamp_utc": "2026-07-29T08:43:59Z",
+  "timestamp_utc": "2026-07-29T08:45:59Z",
   "seed": 42,
   "K": 2000,
   "cohort": "TCGA (public: lifeome response + Xena pancan expr, symbol-keyed); engine PRISM-trained",
@@ -75,10 +75,10 @@
   "H1_pass_confounded": true,
   "proliferation_only_auroc": 0.4441,
   "H2_within_cancer_auroc": 0.5043,
-  "H2_perm_p": 0.4292853573213393,
+  "H2_perm_p": 0.42478760619690153,
   "H2_pass_cancer_controlled": false,
   "H3_diag_minus_off": 0.037,
-  "H3_perm_p": 0.011494252873563218,
+  "H3_perm_p": 0.010494752623688156,
   "H3_pass": true,
-  "verdict": "CONFOUNDED: raw AUROC=0.539 (p=0.036) but within-cancer control AUROC=0.504 (p=0.429) does NOT hold -> the raw signal is CANCER-TYPE confounding, not drug-level human prediction."
+  "verdict": "CONFOUNDED: raw AUROC=0.539 (p=0.036) but within-cancer control AUROC=0.504 (p=0.425) does NOT hold -> the raw signal is CANCER-TYPE confounding, not drug-level human prediction."
 }
