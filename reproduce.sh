@@ -18,4 +18,6 @@ echo "== B3b: matched-platform patient specificity (L1b) =="
 "$PY" experiments/B3b_patient_specificity/run.py
 echo "== B3c: external replication, independent GDSC1 labels (L1b) =="
 "$PY" experiments/B3c_external_replication/run.py
+echo "== B3d: L1b robustness battery =="
+"$PY" experiments/B3d_robustness/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="
