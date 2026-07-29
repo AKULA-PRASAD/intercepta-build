@@ -26,12 +26,19 @@ permutation + leakage + multiple-testing + confound + external replication; repr
   design + power, reviewer/onboarding docs, and a runnable zero-download demo. Internally consistent; the ledger
   and docs do not contradict each other.
 
-## The boundary we have reached (stated plainly)
-- **No baseline or measured molecular profile — RNA, mutation, proteomic, or genome-wide dependency — resolves
-  within-lineage drug specificity beyond known biology.** This is not a modeling failure; it is a property of the
-  data modality, proven from six independent directions.
-- Therefore the **clinical breakthrough is not extractable by more computation on existing public data.** Pursuing
-  it there is p-hacking, which the Constitution forbids.
+## The boundary — and a genuine opening beyond it (updated 2026-07-29)
+- **SINGLE-AGENT response:** no baseline or measured molecular profile — RNA, mutation, proteomic, or genome-wide
+  dependency — resolves within-lineage *single-agent* drug specificity beyond known biology (six-front proof).
+  That specific avenue is exhausted; pursuing the single-agent clinical predictor further on existing data is
+  p-hacking.
+- **BUT a different task is genuinely positive — drug COMBINATIONS (V23/B24).** Synergy is a *different signal*,
+  not bound by the +0.212 single-agent ceiling: on open cell-line data it **generalizes to unseen drug
+  combinations** (leave-combination-out Spearman +0.61, Δ=+0.13 over an informed baseline, p≈0) and *meaningfully
+  to novel drugs* (leave-drug-out ρ=0.25). This is the program's **first clearly-positive, generalizing
+  predictor** — a real forward step for the drug-discovery arm of the vision. Honest scope: cell-line Loewe
+  synergy (not clinical), standard benchmark + model (consistent with the field, not SOTA).
+- **Net:** the wall is specific to *single-agent response from molecular profiles*; it is not the whole vision.
+  Combinations (and adjacent discovery tasks) are live, positive directions we can build on — just us, open data.
 
 ## The mistake to stop repeating
 - Asking code, on existing data, to yield a *clinical* breakthrough after we have proven six times it cannot —
@@ -42,15 +49,17 @@ permutation + leakage + multiple-testing + confound + external replication; repr
   with the proven requirement for **functional response measured in patients.** Both cannot hold at once.
 
 ## The honest paths forward
-1. **Claim the achievable success (recommended, reachable now, just us, in code).** The six-front rigorous result
-   + the validated engine IS the strongest scientifically-supported version of the vision reachable without new
-   data. Consolidate it as the flagship contribution.
-2. **Build genuinely-different computational work** (not another ceiling test): e.g., a mechanism-anchored predictor
-   that fires only where biology supports it (targeted drugs, target-dependency) and abstains elsewhere; or a
-   reproducible confound/leakage benchmark that operationalizes these findings for the field.
-3. **The clinical breakthrough (future stage) requires new data** — functional response measured in patients
-   (Track-1, `prereg/TRACK1_SAP.md`). This eventually needs new data generation or collaboration; it cannot be done
-   in code alone. Stated as fact, not preference.
+1. **Build out the COMBINATIONS arm — the live positive (recommended next).** V23/B24 shows synergy generalizes.
+   The genuinely-novel next step with breakthrough potential: fuse this with the program's hard-won functional
+   insight (V22 — a drug's target-dependency is the real signal) into a **mechanism-anchored synergy model**
+   (synergy predicted from complementary target-dependencies / pathway state), tested against the standard
+   fingerprint model. Scale to the larger open DrugComb corpus (124 cell lines) when reachable. This is new,
+   honest, buildable by us on open data, and could exceed a generic ML baseline.
+2. **Consolidate the six-front single-agent result** as the rigorous flagship negative (already submission-ready).
+3. **Genuinely-different modules**: a mechanism-anchored single-agent predictor that abstains where biology is
+   silent; a reproducible confound/leakage benchmark for the field.
+4. **The single-agent CLINICAL breakthrough still requires new patient functional data** (Track-1,
+   `prereg/TRACK1_SAP.md`) — stated as fact. Combinations does NOT remove that; it opens a parallel, reachable arm.
 
 ## The definition of success we hold to
 Per the Constitution: *success is discovering the strongest scientifically-supported version of the vision — not
