@@ -13,6 +13,9 @@ reproduce ×2, never fabricate. Where legacy code docstrings overclaim, the modu
 
 > **Reviewing this repo (AI or human)? Start with [`REVIEWERS.md`](REVIEWERS.md)** — a one-page honest map of what
 > is verified, what is falsified (two decisive negatives), how to reproduce, and the forward path.
+>
+> **Want to see it run?** `python examples/demo.py` — a 30-second, zero-download demo of the real engine
+> (transfer ranking + verified-marker bonus + OOD confidence gating). Quickstart: [`examples/README.md`](examples/README.md).
 
 ## What INTERCEPTA is (the honest one sentence)
 > A prognostic + mechanistic drug-response engine on **known cancer biology**, with a verified transferable
