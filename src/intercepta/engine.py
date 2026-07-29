@@ -69,7 +69,7 @@ class InterceptaEngine:
 
     def predict_transfer(self, expr):
         """expr: genes(symbol) x samples DataFrame. Returns samples x drugs predicted LN_IC50 (z per drug)."""
-        xz = D.z_rows(expr.reindex(self.genes_).fillna(0.0))     # align to feature genes
+        xz = D.z_rows(expr.reindex(self.genes_).fillna(0.0)).fillna(0.0)   # align to feature genes; z, NaN-safe
         X = xz.T.values
         out = {dk: _z(m.predict(X)) for dk, m in self.models_.items()}
         return pd.DataFrame(out, index=expr.columns)
