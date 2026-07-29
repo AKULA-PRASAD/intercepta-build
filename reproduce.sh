@@ -16,4 +16,6 @@ export INTERCEPTA_BEATAML
 "$PY" experiments/B3_patient_transfer/run.py
 echo "== B3b: matched-platform patient specificity (L1b) =="
 "$PY" experiments/B3b_patient_specificity/run.py
+echo "== B3c: external replication, independent GDSC1 labels (L1b) =="
+"$PY" experiments/B3c_external_replication/run.py
 echo "== done. metrics in experiments/*/results/*_metrics.json =="

@@ -17,3 +17,4 @@ mismatch. sha256 prefixes match the values recorded in the verified ~/kaalcura V
 
 All inputs are public repositories (GDSC, DepMap/CCLE, PRISM). No controlled-access data is present or
 required for B1. Any controlled-access acquisition is a logged human gate (see DECISIONS.md).
+| `independent/gdsc1/GDSC1_fitted_dose_response.xlsx` | `837b0686500fde75179e490de08f034abd9f882d8b0253d637bafe83e156dafd` | GDSC1 independent screen (B3c external replication) |

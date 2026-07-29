@@ -70,6 +70,15 @@ def load_gdsc_response():
     return g
 
 
+def load_gdsc1_response():
+    """GDSC1 (independent screen) drug response -> [DRUG_NAME, COSMIC_ID(str), LN_IC50]. For external replication."""
+    f = "independent/gdsc1/GDSC1_fitted_dose_response.xlsx"
+    verify("GDSC1_fitted_dose_response.xlsx", _p(f))
+    g = pd.read_excel(_p(f), usecols=["DRUG_NAME", "COSMIC_ID", "LN_IC50"]).dropna()
+    g["COSMIC_ID"] = g["COSMIC_ID"].astype(int).astype(str)
+    return g
+
+
 def load_prism():
     verify("prism_secondary_screen.csv", _p("independent/prism_secondary_screen.csv"))
     return pd.read_csv(_p("independent/prism_secondary_screen.csv"),
