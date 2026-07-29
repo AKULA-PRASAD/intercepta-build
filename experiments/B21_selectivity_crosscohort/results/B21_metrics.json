@@ -1,0 +1,80 @@
+{
+  "git_sha": "df1758d4faf82881d9813b928a24676f691e4389",
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T15:14:38Z",
+  "seed": 42,
+  "n_perm": 20000,
+  "post_hoc": true,
+  "beataml_effects": {
+    "sorafenib": {
+      "n": 494,
+      "effect": 0.2482,
+      "class": "promiscuous"
+    },
+    "quizartinib": {
+      "n": 461,
+      "effect": 0.1538,
+      "class": "selective"
+    },
+    "gilteritinib": {
+      "n": 278,
+      "effect": 0.1388,
+      "class": "selective"
+    },
+    "crenolanib": {
+      "n": 446,
+      "effect": 0.2178,
+      "class": "selective"
+    }
+  },
+  "fimm_effects": {
+    "sorafenib": {
+      "n": 131,
+      "effect": -0.1337,
+      "class": "promiscuous"
+    },
+    "quizartinib": {
+      "n": 130,
+      "effect": 0.1126,
+      "class": "selective"
+    },
+    "crenolanib": {
+      "n": 111,
+      "effect": 0.0679,
+      "class": "selective"
+    },
+    "midostaurin": {
+      "n": 124,
+      "effect": 0.0969,
+      "class": "promiscuous"
+    },
+    "sunitinib": {
+      "n": 131,
+      "effect": 0.0743,
+      "class": "promiscuous"
+    },
+    "tandutinib": {
+      "n": 131,
+      "effect": 0.0744,
+      "class": "promiscuous"
+    },
+    "dovitinib": {
+      "n": 131,
+      "effect": 0.0439,
+      "class": "promiscuous"
+    }
+  },
+  "shared_drugs": [
+    "crenolanib",
+    "quizartinib",
+    "sorafenib"
+  ],
+  "same_sign_count": 2,
+  "H1_consistency_pass": true,
+  "beataml_sel_gap": -0.0780911938984151,
+  "beataml_sel_p": 0.8336083195840208,
+  "fimm_sel_gap": 0.05911312123065655,
+  "fimm_sel_p": 0.1743912804359782,
+  "H2_selectivity_pass": false,
+  "verdict": "DOOR CLOSED: no stable cross-cohort slice \u2014 per-drug effects are inconsistent across cohorts (notably sorafenib flips sign) and selectivity does not separate them consistently. B20 non-replication confirmed at the per-drug level; the functional-inference computational avenue is exhausted. Path forward = prospective functional data (Track-1)."
+}

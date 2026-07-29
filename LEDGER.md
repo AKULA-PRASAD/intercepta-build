@@ -92,6 +92,16 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
     inferred-layer refinement does not. V19/V20 remain internally valid (reproduced ×2 in BeatAML, cross-lineage
     robust B19) but are **downgraded from "translational lead" to "single-cohort finding, externally falsified."**
     Reproduced ×2 (identical). Data sha256 in metrics. | B20_metrics.json |
+- **B21 (post-hoc closure): no narrow cross-cohort slice survives either.** Tested whether the signal holds for
+  FLT3-SELECTIVE inhibitors (a-priori pharmacology: quizartinib, crenolanib, gilteritinib) consistently across
+  BeatAML + FIMM. Per-drug prolif-adjusted effects are INCONSISTENT across cohorts: sorafenib (the STRONGEST in
+  BeatAML, +0.25) FLIPS to −0.13 in FIMM. The selectivity hypothesis FAILS (H2): BeatAML selective +0.17 < promiscuous
+  +0.25 (gap −0.08, perm p=0.83); FIMM gap +0.06 but p=0.17 — not consistent. Honest footnote (does NOT meet the
+  pre-registered bar): the two selective drugs quizartinib (+0.15/+0.11) and crenolanib (+0.22/+0.07) are weakly
+  positive in both cohorts — hypothesis-generating at most, post-hoc, underpowered (≤3 shared drugs). **Verdict:
+  DOOR CLOSED — B20's non-replication is confirmed at the per-drug level; the functional-inference computational
+  avenue is exhausted; a generalizable functional layer needs perturbation data measured IN patients (Track-1).**
+  Reproduced ×2. | B21_metrics.json |
 
 ## UNDERPOWERED / INCONCLUSIVE (honest, first-class)
 - **B11 novel-marker cross-system replication:** 14 pre-declared NOVEL (non-textbook) BeatAML mutation->drug
