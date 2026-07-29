@@ -58,6 +58,9 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
   the fullest vision honestly: clinical-grade patient prediction is NOT achieved on available human data. | B10_metrics.json |
 
 ## UNDERPOWERED / INCONCLUSIVE (honest, first-class)
+- **B11 novel-marker cross-system replication:** 14 pre-declared NOVEL (non-textbook) BeatAML mutation->drug
+  associations tested in pan-cancer DepMap cell lines (mutations + PRISM/GDSC response). **0/13 replicate**
+  (BH<0.05 + same direction) -> AML-specific or single-cohort artifacts, NOT generalizable discoveries. | B11_metrics.json |
 - **B8 PDXE mechanism-marker test:** established solid-tumor markers on PDXE. PIK3CA→alpelisib shows the correct
   SENSITIZING direction (β=−23.4, nominal p=0.043) and engine>parts (CV 0.165>0.095>0.013), consistent with known
   biology (alpelisib is FDA-approved for PIK3CA-mut) — but only 15 functional-mutant PDX, so it does NOT survive
