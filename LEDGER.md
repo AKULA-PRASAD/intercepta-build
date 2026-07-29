@@ -49,6 +49,14 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
 - **Therapy-selective axis in non-ER / metastatic settings** — needs controlled-access RCTs with
   treatment×biomarker design (dbGaP/EGA) — a human gate.
 
+## HUMAN CLINICAL VALIDATION — NULL (decisive, first-class; B10)
+- **TCGA human drug-response (12 drugs, 1079 patients, public):** the cell-line transfer's raw association with
+  clinical response (pooled AUROC 0.539, p=0.036) is **entirely CANCER-TYPE CONFOUNDING** — within-cancer
+  stratified AUROC = **0.504 (p=0.43), NULL**. Proliferation-only AUROC 0.444. **Conclusion: the engine does NOT
+  predict human clinical drug response at the drug level once cancer type is controlled.** It is a cell-line /
+  ex-vivo tool (V1 transfer, V9 BeatAML drug-specificity), NOT a validated human clinical predictor. This bounds
+  the fullest vision honestly: clinical-grade patient prediction is NOT achieved on available human data. | B10_metrics.json |
+
 ## UNDERPOWERED / INCONCLUSIVE (honest, first-class)
 - **B8 PDXE mechanism-marker test:** established solid-tumor markers on PDXE. PIK3CA→alpelisib shows the correct
   SENSITIZING direction (β=−23.4, nominal p=0.043) and engine>parts (CV 0.165>0.095>0.013), consistent with known
