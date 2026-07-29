@@ -1,0 +1,17 @@
+# Data is public but large — referenced by sha256 manifest, never committed
+data/*.csv
+data/*.zip
+data/*.gz
+data/.sha256
+INTERCEPTA_DATA/
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+# os / editor
+.DS_Store
+.ipynb_checkpoints/
+# run logs (metrics JSON IS committed; raw logs are not)
+*.log
