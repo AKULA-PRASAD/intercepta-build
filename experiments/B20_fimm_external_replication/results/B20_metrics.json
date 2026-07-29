@@ -1,0 +1,159 @@
+{
+  "git_sha": "cf4f5c7260c7cf4f5f912a8d59e96d09eebbf99d",
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T15:06:37Z",
+  "seed": 42,
+  "n_perm": 10000,
+  "cohort": "FIMM/Malani AML (Zenodo 7370747, CC-BY 4.0)",
+  "data_sha256": {
+    "RNA_CPM": "895172235cffc971",
+    "DSS": "cde2b098de429fa0"
+  },
+  "n_samples_expr": 163,
+  "flt3_inhibitors": [
+    "sorafenib",
+    "quizartinib",
+    "crenolanib",
+    "midostaurin",
+    "sunitinib",
+    "tandutinib",
+    "dovitinib"
+  ],
+  "R1_core": {
+    "pooled_rho": 0.0471,
+    "one_sided_p": 0.08228360403354373,
+    "n_drugs": 7
+  },
+  "R1_pass": false,
+  "matrix_cells": [
+    {
+      "drug": "sorafenib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 131,
+      "rho": -0.1337
+    },
+    {
+      "drug": "sorafenib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 131,
+      "rho": -0.0593
+    },
+    {
+      "drug": "quizartinib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 130,
+      "rho": 0.1126
+    },
+    {
+      "drug": "quizartinib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 130,
+      "rho": 0.1153
+    },
+    {
+      "drug": "crenolanib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 111,
+      "rho": 0.0679
+    },
+    {
+      "drug": "crenolanib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 111,
+      "rho": 0.0256
+    },
+    {
+      "drug": "midostaurin",
+      "target": "FLT3",
+      "matched": true,
+      "n": 124,
+      "rho": 0.0969
+    },
+    {
+      "drug": "midostaurin",
+      "target": "BCL2",
+      "matched": false,
+      "n": 124,
+      "rho": -0.001
+    },
+    {
+      "drug": "sunitinib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 131,
+      "rho": 0.0743
+    },
+    {
+      "drug": "sunitinib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 131,
+      "rho": 0.0612
+    },
+    {
+      "drug": "tandutinib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 131,
+      "rho": 0.0744
+    },
+    {
+      "drug": "tandutinib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 131,
+      "rho": 0.1392
+    },
+    {
+      "drug": "dovitinib",
+      "target": "FLT3",
+      "matched": true,
+      "n": 131,
+      "rho": 0.0439
+    },
+    {
+      "drug": "dovitinib",
+      "target": "BCL2",
+      "matched": false,
+      "n": 131,
+      "rho": -0.0588
+    },
+    {
+      "drug": "venetoclax",
+      "target": "FLT3",
+      "matched": false,
+      "n": 111,
+      "rho": -0.0208
+    },
+    {
+      "drug": "venetoclax",
+      "target": "BCL2",
+      "matched": true,
+      "n": 111,
+      "rho": 0.0851
+    }
+  ],
+  "R2_gap": 0.0275,
+  "R2_perm_p": 0.12658734126587343,
+  "R2_venetoclax_bcl2_rho": 0.08514391014391014,
+  "R2_venetoclax_flt3_rho": -0.02084064584064584,
+  "R2_pass": false,
+  "R3_beyond_mutation": {
+    "beyond_mut_meta_beta": -0.0167,
+    "beyond_mut_p": 0.9164129758723005,
+    "beyond_mut_pass": false,
+    "mutneg_pooled": {
+      "pooled_rho": -0.0027,
+      "one_sided_p": 0.5311485037727913,
+      "n_drugs": 7
+    },
+    "pass": false
+  },
+  "verdict": "EXTERNAL REPLICATION: V19 core FAILS to replicate, specificity not replicated, beyond-mutation not fully replicated in the independent FIMM/Malani cohort (different institution + assay)."
+}

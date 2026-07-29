@@ -24,7 +24,7 @@ distance is a validated confidence signal; per-drug cell-line reliability is not
 patients (TCGA, 12 drugs, 1,079 patients), the engine's apparent association with clinical response is entirely
 cancer-type confounding: within-cancer AUROC = 0.504 (p=0.43, null).** We conclude that transcriptomic transfer
 is a real but weak tool at the cell-line/ex-vivo level and is **not** a validated human clinical predictor on
-available observational data. We release the engine, all pre-registrations, and all negative results. Finally, reframing from baseline to **functional** readouts, we show an expression-inferred gene-dependency layer that identifies FLT3-inhibitor-sensitive AML **beyond FLT3-ITD mutation status** (including in ITD-wildtype patients; ex-vivo, p=1.5e-15) — a mechanistically-coherent, patient-translatable lead.
+available observational data. We release the engine, all pre-registrations, and all negative results. Finally, reframing from baseline to **functional** readouts, an expression-inferred gene-dependency layer appeared, in BeatAML, to identify FLT3-inhibitor-sensitive AML **beyond FLT3-ITD mutation status** (including in ITD-wildtype patients; ex-vivo, p=1.5×10⁻¹⁵) and to do so target-specifically; **however, this result did NOT survive external replication** in an independent AML cohort (FIMM/Malani, DSS assay): the known FLT3-mutation→FLT3-inhibitor relationship replicated there, but the inferred layer's added value beyond mutation did not (pooled ρ=+0.05, p=0.08). We report this failed replication as a first-class negative — the functional-inference refinement is, on current evidence, BeatAML-specific and not a generalizable clinical lead.
 
 ---
 
@@ -96,7 +96,7 @@ proliferation-only predictor was likewise uninformative (AUROC 0.444). The engin
 respond to *which drugs*, not *which patient within a cancer* will respond (B10). We could not establish drug-
 level human clinical prediction on available observational data.
 
-### 2.8 A functional-inference layer rescues actionable-target prediction — and adds beyond the standard biomarker
+### 2.8 A functional-inference layer looked promising in BeatAML but failed external replication
 Because baseline expression encodes proliferation/lineage rather than drug-specific vulnerability, we tested a
 **functional** readout: CRISPR gene-dependency (DepMap). Target-gene dependency predicts drug response far better
 than baseline expression (pooled ρ=+0.19, p=5×10⁻⁴; e.g. MDM2→idasanutlin ρ=+0.48; median |ρ| dependency 0.13 vs
@@ -129,6 +129,23 @@ DepMap AML lines removed** (a model that never sees AML) leaves the V19 result e
 is therefore genuine cross-lineage functional transfer, not lineage memorization. Removing *all* blood/lymphoid
 lines does abolish the beyond-ITD effect, but that reflects the hematopoietic biology of FLT3-dependence (only two
 FLT3-dependent solid-tumor anchors remain in DepMap), not a failure of the result (B19).
+
+The decisive test of any biomarker is independent replication, and here the functional-inference result did not
+pass it. We repeated the analysis in the FIMM/Malani AML cohort (Zenodo 7370747; Helsinki; DSRT drug-sensitivity-
+score assay — a different institution and readout from BeatAML), 163 patients with matched RNA, seven FLT3
+inhibitors, venetoclax, and FLT3/NPM1 status, all pre-registered (B20). The known biology replicated cleanly:
+FLT3-mutation strongly predicted FLT3-inhibitor sensitivity for all five testable inhibitors (p=10⁻⁵–10⁻³), and
+the inferred dependency itself remained coherent (it tracked FLT3 expression, ρ=+0.38, with 96.5% feature-gene
+overlap) — so this is a fair test, not a normalization artifact. But the claim of interest failed: inferred-FLT3-
+dependency did not robustly predict FLT3-inhibitor response (proliferation-adjusted pooled ρ=+0.05, p=0.08; per
+drug inconsistent, e.g. sorafenib −0.13, quizartinib +0.11), it added nothing beyond the mutation (meta β=−0.02,
+p=0.92), and the target-specificity double dissociation did not reach significance (permutation p=0.13; only the
+venetoclax→BCL2 direction was weakly consistent). We therefore report V19/V20 honestly as **BeatAML-specific and
+externally non-replicated**: the standard FLT3-mutation→FLT3-inhibitor relationship generalizes across cohorts,
+but our expression-inferred refinement does not. This is a first-class negative. It suggests that a functional
+layer with genuine, transferable value likely requires perturbation data measured *in the patients themselves*
+(the prospective functional-precision design, Track-1) rather than dependency inferred from a pan-cancer cell-line
+map — and it is exactly the kind of result that a single-cohort analysis would have overstated.
 
 We tested that boundary directly. In a pre-registered Cox model on overall survival (n=644 patients, 395 deaths,
 106 FLT3-inhibitor–treated), the inferred-dependency×FLT3i-treatment interaction was **null** (HR=0.89, p=0.56),
