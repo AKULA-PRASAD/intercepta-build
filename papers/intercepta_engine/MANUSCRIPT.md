@@ -24,7 +24,7 @@ distance is a validated confidence signal; per-drug cell-line reliability is not
 patients (TCGA, 12 drugs, 1,079 patients), the engine's apparent association with clinical response is entirely
 cancer-type confounding: within-cancer AUROC = 0.504 (p=0.43, null).** We conclude that transcriptomic transfer
 is a real but weak tool at the cell-line/ex-vivo level and is **not** a validated human clinical predictor on
-available observational data. We release the engine, all pre-registrations, and all negative results.
+available observational data. We release the engine, all pre-registrations, and all negative results. Finally, reframing from baseline to **functional** readouts, we show an expression-inferred gene-dependency layer that identifies FLT3-inhibitor-sensitive AML **beyond FLT3-ITD mutation status** (including in ITD-wildtype patients; ex-vivo, p=1.5e-15) — a mechanistically-coherent, patient-translatable lead.
 
 ---
 
@@ -95,6 +95,21 @@ removes cancer-type structure — gives AUROC = **0.504 (permutation p=0.43), a 
 proliferation-only predictor was likewise uninformative (AUROC 0.444). The engine predicts *which cancers*
 respond to *which drugs*, not *which patient within a cancer* will respond (B10). We could not establish drug-
 level human clinical prediction on available observational data.
+
+### 2.8 A functional-inference layer rescues actionable-target prediction — and adds beyond the standard biomarker
+Because baseline expression encodes proliferation/lineage rather than drug-specific vulnerability, we tested a
+**functional** readout: CRISPR gene-dependency (DepMap). Target-gene dependency predicts drug response far better
+than baseline expression (pooled ρ=+0.19, p=5×10⁻⁴; e.g. MDM2→idasanutlin ρ=+0.48; median |ρ| dependency 0.13 vs
+expression 0.07, p=0.015). Dependency is **learnable from expression** (CV ρ up to 0.59), giving a
+**patient-translatable functional layer** (expression→inferred-dependency). Applied to BeatAML patient ex-vivo
+response, this layer is **not** a broad improvement over direct transfer, but it **specifically rescues the
+dependency-driven actionable targets** where the direct transcriptomic approach fails: FLT3, BCL2, CDK9, AURKA
+(9/26 drugs, BH<0.05; FLT3 inhibitors ρ=+0.13…+0.24 and venetoclax +0.22 vs a direct transfer that is ~0 or
+wrong-signed). Decisively, **inferred-FLT3-dependency predicts FLT3-inhibitor response beyond FLT3-ITD mutation
+status** (meta β=+7.6, p=8×10⁻¹¹) — including **within FLT3-ITD-wildtype patients** (pooled ρ=+0.22, p=1.5×10⁻¹⁵),
+i.e. it identifies FLT3-inhibitor-sensitive AML that standard mutation testing misses, from RNA alone. Scope: all
+of §2.8 is BeatAML **ex-vivo** (not clinical outcome), AML, dependency-model trained on pan-cancer cells — a
+strong, mechanistically-coherent translational lead, not a validated clinical test.
 
 ## 3. Discussion
 
