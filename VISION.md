@@ -47,12 +47,15 @@ confound, external/independent replication). We do not narrate a rung as done un
 and reproduced ×2.
 
 - **L0 — Engine + verified core.** [DONE] ρ=+0.212 (B1); ceiling confirmed (B2); AML mechanism verified.
-- **L1 — Cell-line → PATIENT transfer.** [B3 DONE — PARTIAL] The GDSC map DOES reach real patients: diagonal
-  per-drug ρ=+0.054, permutation p=0.0005 (BeatAML, 44 drugs, matched RNA). **But** it is NOT drug-specific
-  (diag≈off-diagonal, p=0.12) and does not beat a proliferation-only transfer (p=0.55) → a generic
-  chemosensitivity/proliferation signal reaches patients, drug-level patient prediction does NOT. Real but
-  bounded. To earn the strong version (future rung L1b): matched-platform patient data, larger per-drug n,
-  and a specificity-preserving (drug-conditioned / prolif-residualized) method.
+- **L1 — Cell-line → PATIENT transfer.** [B3 DONE — PARTIAL] GDSC *array* map reaches real patients (diag
+  ρ=+0.054, perm p=0.0005) but non-specific on the mismatched platform (diag≈off, p=0.12).
+- **L1b — matched-platform, proliferation-independent drug-specificity.** [B3b + B3c DONE — PASS, replicated]
+  Fixing the platform (train on DepMap **RNA-seq**) and residualizing proliferation reveals a **weak but
+  genuinely drug-specific** cell-line→patient signal: prolif-residualized diag−off = +0.040, perm p=0.010
+  (GDSC2 labels); **replicates with independent GDSC1 labels** +0.051, perm p=0.0015 (59 drugs). This is the
+  first evidence in the program that the engine carries *drug-level* (not just proliferation) information into
+  real patients. **Caveats (honest):** effect small (ρ≈0.07–0.08); one patient cohort (BeatAML/AML) — needs a
+  SECOND patient cohort and other cancer types for full external validity (that is the next real gate).
 - **L2 — Controlled clinical cohorts.** [B4, human-gated: dbGaP/EGA] Treatment×biomarker RCT designs to
   revisit the *selection* question with adequate power in non-ER / metastatic settings.
 - **L3 — Calibrated decision support + repurposing ranking.** [conditional on L1 (and ideally L2)] A ranked,

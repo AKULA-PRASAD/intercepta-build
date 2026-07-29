@@ -14,7 +14,7 @@ mismatch. sha256 prefixes match the values recorded in the verified ~/kaalcura V
 | `depmap_mut_try1.csv` | `e99e43789c1c4821ccb737a45cd6f4fbbeac709c5a8cca326846d6d9a16cf5c8` | DepMap somatic mutation MAF (B2) |
 | `beataml_waves1to4_norm_exp_dbgap.txt` | `d5745b9dbf46dba866a3c7370bb0ba73b363ecdd21e01cc1d916b4e3021e6f87` | BeatAML patient tumor RNA (B3; INTERCEPTA_BEATAML) |
 | `beataml_probit_curve_fits_v4_dbgap.txt` | `d4bc5f0d91f66314107411e0f2511adc987e29df5b83d9b03df56d3d12928314` | BeatAML ex-vivo drug AUC (B3; INTERCEPTA_BEATAML) |
+| `independent/gdsc1/GDSC1_fitted_dose_response.xlsx` | `837b0686500fde75179e490de08f034abd9f882d8b0253d637bafe83e156dafd` | GDSC1 independent screen (B3c external replication) |
 
 All inputs are public repositories (GDSC, DepMap/CCLE, PRISM). No controlled-access data is present or
 required for B1. Any controlled-access acquisition is a logged human gate (see DECISIONS.md).
-| `independent/gdsc1/GDSC1_fitted_dose_response.xlsx` | `837b0686500fde75179e490de08f034abd9f882d8b0253d637bafe83e156dafd` | GDSC1 independent screen (B3c external replication) |

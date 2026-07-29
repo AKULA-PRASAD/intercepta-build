@@ -1,0 +1,21 @@
+{
+  "git_sha": "4cf9ba6a2c55bbf25bb77cce82ae984b922a9983",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T05:56:04Z",
+  "label_source": "GDSC1",
+  "topN_genes": 2000,
+  "seed": 42,
+  "K_perm": 2000,
+  "n_drugs": 59,
+  "diag_mean_rho": 0.0736,
+  "offdiag_mean_rho": 0.0263,
+  "perm_p_transfer": 0.0004997501249375312,
+  "resid_diag_mean_rho": 0.0849,
+  "resid_offdiag_mean_rho": 0.0341,
+  "resid_diag_minus_off": 0.0508,
+  "perm_p_specificity_resid": 0.0014992503748125937,
+  "rprolif_transfer_mean_rho": 0.0346,
+  "replicates_drug_specific_beyond_prolif": true,
+  "verdict": "L1b REPLICATES with independent GDSC1 labels: drug-specific patient signal holds across two screens (weak, needs 2nd patient cohort)"
+}

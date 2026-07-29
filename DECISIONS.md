@@ -39,3 +39,15 @@ Rationale: Constitution rules 3, 8, 9 — the specificity/proliferation controls
 not earned. What would earn it (pre-registered for a future rung): matched-platform patient data (RNA-seq
 train, e.g. GDSC RNA-seq or PDX), larger per-drug patient n, and a specificity-preserving method
 (drug-conditioned / residual-on-proliferation modeling). L2 (controlled trials, human-gated) unchanged.
+
+## 2026-07-29 — D7: L1b PASSES and replicates — a real (weak) drug-level patient signal; hold the claim to what replicated
+Decision: B3b (matched RNA-seq platform + proliferation-residualized) found a drug-specific cell-line→patient
+signal (diag−off +0.040, perm p=0.010); B3c replicated it with INDEPENDENT GDSC1 labels (+0.051, p=0.0015, 59
+drugs). Both reproduced ×2. We record L1b as PASSED and the vision advances toward L3. **But the claim is
+bounded to exactly what replicated:** weak (ρ≈0.07–0.08), one patient cohort (BeatAML, AML only), two label
+screens. We will NOT say "validated patient drug predictor." Rationale: Constitution rules 3/9 — the positive
+survived permutation + specificity + proliferation-residualization + independent-label replication, so it is
+believed; it has NOT survived a second patient cohort or cross-cancer test, so those stay open. Next real gate
+(D8): a SECOND independent patient drug-response cohort (other AML functional cohorts, or a solid-tumor
+PDX/ex-vivo cohort) — likely controlled-access = human gate. Also outward/gated and NOT auto-done: publishing
+the repo to GitHub (needs Prasad's remote+auth) and L2 dbGaP/EGA trials — surfaced to Prasad, not faked.
