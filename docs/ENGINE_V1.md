@@ -65,7 +65,10 @@ from the fitted library, with OOD-gated confidence. Ships the reproducible DepMa
 pipeline with two libraries: `SynergyRanker.from_oneil()` (38 drugs, 703 pairs, self-validated leave-combination-out
 CV Spearman = **0.62**) and `SynergyRanker.from_drugcomb()` (124 drugs, **7,626 rankable pairs**, CV Spearman
 **0.39** — ~3× more drugs, lower reliability, matching B25's reproduced value; honest tradeoff). `intercepta synergy
---expr cohort.csv --library {oneil,drugcomb}` runs it from the CLI.
+--expr cohort.csv --library {oneil,drugcomb}` runs it from the CLI. Every prediction carries a **calibrated
+conformal prediction interval** (`pi_low`/`pi_high`) plus the OOD confidence flag; coverage is validated (B29:
+90% intervals cover ~90% on unseen combinations, both corpora) — and the intervals are deliberately WIDE, the
+honest signal that individual synergy point-predictions are uncertain.
 **Honest scope:** cell-line Loewe synergy (NOT clinical); scores ONLY pairs of drugs in the fitted library — it does
 **not** generalize to novel drugs (B25/B26 falsified that); OOD gate flags inputs beyond the training-cell diversity
 envelope; confidence is capped at MODERATE. A research hypothesis-ranker, not a clinical tool.

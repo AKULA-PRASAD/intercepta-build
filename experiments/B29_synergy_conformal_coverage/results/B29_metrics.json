@@ -1,0 +1,40 @@
+{
+  "git_sha": "48987629885b003add0601c0d1cb72139cab99ff",
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T23:29:00Z",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "corpora": {
+    "oneil": {
+      "90pct": {
+        "nominal": 0.9,
+        "empirical_coverage": 0.8981,
+        "mean_interval_width": 48.3
+      },
+      "80pct": {
+        "nominal": 0.8,
+        "empirical_coverage": 0.7955,
+        "mean_interval_width": 33.47
+      }
+    },
+    "drugcomb": {
+      "90pct": {
+        "nominal": 0.9,
+        "empirical_coverage": 0.9049,
+        "mean_interval_width": 39.46
+      },
+      "80pct": {
+        "nominal": 0.8,
+        "empirical_coverage": 0.8063,
+        "mean_interval_width": 26.73
+      }
+    }
+  },
+  "H1_oneil_calibrated_within_0.05": true,
+  "verdict": "CALIBRATED: conformal intervals achieve ~nominal coverage on unseen combinations (O'Neil within +-0.05); uncertainty is validated. NOTE intervals are WIDE \u2014 the honest message that point synergy predictions carry substantial uncertainty."
+}
