@@ -29,3 +29,13 @@ next lever is DATA, not modeling. Next experiments target the two things the led
 expression), the first cell-line→patient generalization test; and (B4, human-gated) controlled-access
 RCTs with treatment×biomarker design to revisit the falsified selective-axis question with adequate power.
 No more "beat the ceiling on cell lines" experiments unless a new public dataset materially changes the setup.
+
+## 2026-07-29 — D6: L1 is PARTIAL — patient transfer is real but non-specific; do not claim drug-level prediction
+Decision: B3 shows the GDSC map transfers to real BeatAML patients (diagonal ρ=+0.054, perm p=0.0005) but the
+signal is NOT drug-specific (diag≈off-diagonal, p=0.12) and does not beat a proliferation-only transfer. So we
+record L1 as a genuine-but-bounded milestone: "cell-line models carry a real, generic chemosensitivity signal
+into patients; drug-level patient prediction is NOT established." We will NOT advertise patient drug selection.
+Rationale: Constitution rules 3, 8, 9 — the specificity/proliferation controls failed, so the strong claim is
+not earned. What would earn it (pre-registered for a future rung): matched-platform patient data (RNA-seq
+train, e.g. GDSC RNA-seq or PDX), larger per-drug patient n, and a specificity-preserving method
+(drug-conditioned / residual-on-proliferation modeling). L2 (controlled trials, human-gated) unchanged.

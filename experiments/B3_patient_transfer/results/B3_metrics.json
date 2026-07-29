@@ -1,0 +1,23 @@
+{
+  "git_sha": "abcbee02887fe84510deec8f06ef9e758d83c0ea",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T05:43:23Z",
+  "topN_genes": 2000,
+  "seed": 42,
+  "K_perm": 2000,
+  "n_drugs": 44,
+  "diag_mean_rho": 0.0541,
+  "diag_median_rho": 0.0435,
+  "diag_frac_pos": 0.6136,
+  "offdiag_mean_rho": 0.0319,
+  "diag_minus_offdiag": 0.0221,
+  "rprolif_transfer_mean_rho": 0.0221,
+  "perm_p_transfer": 0.0004997501249375312,
+  "perm_p_specificity": 0.11694152923538231,
+  "wilcoxon_p_diag_vs_rprolif": 0.5514293721180366,
+  "transfer_pass": true,
+  "specificity_pass": false,
+  "beats_prolif": false,
+  "verdict": "PARTIAL: transfers to patients but NOT drug-specific -> a generic chemosensitivity/proliferation axis, not drug-level patient prediction"
+}

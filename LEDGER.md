@@ -14,6 +14,7 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
 | V5 | NRAS → MEK-inhibitor sensitivity (AML) | 3 drugs consistent, p~1e-9 to 3e-11 (known biology) | beataml_other_claims_metrics.json |
 | V6 | DNMT3A → Dasatinib sensitivity (AML), independent of NPM1/FLT3-ITD | MW p=1.6e-5; OLS β=−23.7 p=1.2e-4 | beataml_other_claims_metrics.json |
 | V7 | +0.212 is the public cell-line cross-dataset ceiling (well-powered null, B2) | Adding R_prolif Δρ=+0.0000 p=0.98; adding 50 driver mutations Δρ=+0.0004 p=0.37 BHq=0.74 — neither verified signal beats transcriptome-only | B2_metrics.json |
+| V8 | Cell-line→PATIENT transfer is REAL but weak and NON-specific (B3, L1) | GDSC map → BeatAML patient ex-vivo AUC, 44 drugs: diagonal ρ=+0.054 permutation p=0.0005 (transfer real); but diag−offdiag=+0.022 p=0.12 (NOT drug-specific) and does not beat R_prolif-transfer (+0.022, p=0.55) → generic chemosensitivity/proliferation axis, not drug-level patient prediction | B3_metrics.json |
 
 ## FALSIFIED (removed from the working hypothesis, with the killing test)
 - **Therapy-SELECTION coordinate system** — 0/16 subtype-adjusted axis×arm interactions survive BH in I-SPY2
