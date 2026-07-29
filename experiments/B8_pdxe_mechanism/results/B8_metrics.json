@@ -1,0 +1,43 @@
+{
+  "git_sha": "3b5fcabfcf51e6e884f1d839b079df881c72dd0c",
+  "python": "3.11.14",
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-07-29T08:05:03Z",
+  "seed": 42,
+  "cohort": "PDXE (public)",
+  "pairs": [
+    {
+      "drug": "alpelisib",
+      "marker": "PIK3CA",
+      "n": 141,
+      "n_mut": 15,
+      "marker_beta": -23.435,
+      "marker_p": 0.04335842130295004,
+      "marker_sensitizing": true,
+      "transfer_p": 0.0215,
+      "cv_combined": 0.1647,
+      "cv_transfer": 0.0953,
+      "cv_marker": 0.0129,
+      "engine_beats_parts": true
+    },
+    {
+      "drug": "buparlisib",
+      "marker": "PIK3CA",
+      "n": 170,
+      "n_mut": 14,
+      "marker_beta": -6.01,
+      "marker_p": 0.6164012943344417,
+      "marker_sensitizing": true,
+      "transfer_p": 0.9427,
+      "cv_combined": -0.1043,
+      "cv_transfer": -0.1545,
+      "cv_marker": -0.0611,
+      "engine_beats_parts": false
+    }
+  ],
+  "n_pairs": 2,
+  "n_marker_validates": 0,
+  "n_engine_beats_parts": 1,
+  "pik3ca_alpelisib_validates": false,
+  "verdict": "UNDERPOWERED (correct direction): PIK3CA->alpelisib is sensitizing at nominal p<0.05 (n_mut=15) and engine>parts, consistent with established biology, but does NOT survive multiple-testing correction (BHq=0.087). PDXE has too few functional-mutant models per drug for a powered marker test. Not a pipeline failure. engine>parts 1/2."
+}

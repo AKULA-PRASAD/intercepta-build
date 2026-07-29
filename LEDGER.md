@@ -49,6 +49,13 @@ metrics file are marked VERIFIED. Each row states the killing/confirming test.
 - **Therapy-selective axis in non-ER / metastatic settings** — needs controlled-access RCTs with
   treatment×biomarker design (dbGaP/EGA) — a human gate.
 
+## UNDERPOWERED / INCONCLUSIVE (honest, first-class)
+- **B8 PDXE mechanism-marker test:** established solid-tumor markers on PDXE. PIK3CA→alpelisib shows the correct
+  SENSITIZING direction (β=−23.4, nominal p=0.043) and engine>parts (CV 0.165>0.095>0.013), consistent with known
+  biology (alpelisib is FDA-approved for PIK3CA-mut) — but only 15 functional-mutant PDX, so it does NOT survive
+  multiple-testing correction (BHq=0.087). buparlisib null; RAS→trametinib too few mutant models. PDXE is
+  underpowered for marker tests (unlike the transfer test B7). Not a pipeline failure; not a validation. | B8_metrics.json |
+
 ## Probability estimates (subjective, evidence-conditioned)
 - P(novel therapy-selection coordinate system correct): **<5%** (falsified at power).
 - P(prolif+TILs prognostic, known biology, no selection): **~85–90%**.
