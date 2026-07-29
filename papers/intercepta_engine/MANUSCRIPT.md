@@ -1,30 +1,65 @@
 # A reproducible cell-line–derived transcriptomic drug-response engine: where transfer works, where it doesn't, and two decisive replication nulls (clinical and functional)
 
-**INTERCEPTA build.** Draft manuscript v1 (2026-07-29). Every quantitative claim traces to a committed,
-reproduced-×2 metrics file in `experiments/`, `verification/`, and `LEDGER.md` of
-`github.com/AKULA-PRASAD/intercepta-build`. Analyses are pre-registered (`prereg/`).
+Prasad Akula¹* *(author list to be finalized before submission)*
+
+¹ Northeastern University, Boston, MA, USA
+\* Correspondence: akula.pra@northeastern.edu
+
+**Preprint / working draft — v2 (2026-07-29).** Every quantitative claim traces to a committed, reproduced-×2
+metrics file in `experiments/`, `verification/`, and `LEDGER.md` of `github.com/AKULA-PRASAD/intercepta-build`.
+All analyses were pre-registered (`prereg/`) before results. All figures are regenerated from committed metrics by
+`papers/intercepta_engine/figures/make_figures.py`.
+
+**Keywords:** drug-response prediction; transcriptomics; reproducibility; data leakage; confounding; external
+replication; acute myeloid leukemia; functional precision medicine; negative results.
 
 ---
 
+## Highlights
+- A leakage-corrected cell-line→cell-line drug-response map transfers at mean ρ=**+0.212** and this is a hard
+  **ceiling** (proliferation and 50 driver mutations add nothing); the naive leaky estimate (+0.278) overstates it.
+- The engine does **not** predict human clinical response once cancer type is controlled (within-cancer AUROC
+  0.504, p=0.43) — the apparent signal is cancer-type confounding.
+- A functional-inference layer that beat the standard FLT3-ITD biomarker in BeatAML (proliferation-, mutation-, and
+  lineage-independent) **failed independent replication** in a second AML cohort — a first-class negative.
+- Across the program, signals recovering **known** biology generalize; **novel single-cohort refinements do not** —
+  external replication, not internal robustness, is the decisive test.
+
 ## Abstract
 
-Transcriptomic prediction of cancer drug response is widely pursued but its true reach is often obscured by
-leakage, weak baselines, and unadjusted confounding. We built a reproducible engine and subjected every claim to
-pre-registration, permutation nulls, leakage-corrected splits, multiple-testing correction, and external
-replication. We report a graded, honest result. (1) A learned per-drug expression→response map transfers across
-independent cell-line datasets (GDSC→CCLE/PRISM) with a leakage-free mean per-drug Spearman ρ = **+0.212**
-(94/100 drugs positive; vs a parameter-free proliferation baseline +0.058; Wilcoxon p=1.9×10⁻¹⁵), and this
-+0.212 is a genuine **ceiling** — adding a proliferation axis or 50 driver-mutation features does not beat it.
-(2) Verified somatic mutation→drug associations exist in acute myeloid leukemia (AML; BeatAML), dominated
-genome-wide by **FLT3-ITD→FLT3 inhibitors** and **RAS→MEK inhibitors**; two hand-picked pairs (NPM1→cabozantinib,
-DNMT3A→dasatinib) do **not** survive genome-wide correction. (3) A weak but drug-specific, proliferation-
-independent cell-line→patient signal is detectable in BeatAML ex-vivo response and replicates across two
-independent training screens; combining it with mutation markers beats either alone. (4) Out-of-distribution
-distance is a validated confidence signal; per-drug cell-line reliability is not. (5) **Crucially, in real human
-patients (TCGA, 12 drugs, 1,079 patients), the engine's apparent association with clinical response is entirely
-cancer-type confounding: within-cancer AUROC = 0.504 (p=0.43, null).** We conclude that transcriptomic transfer
-is a real but weak tool at the cell-line/ex-vivo level and is **not** a validated human clinical predictor on
-available observational data. We release the engine, all pre-registrations, and all negative results. Finally, reframing from baseline to **functional** readouts, an expression-inferred gene-dependency layer appeared, in BeatAML, to identify FLT3-inhibitor-sensitive AML **beyond FLT3-ITD mutation status** (including in ITD-wildtype patients; ex-vivo, p=1.5×10⁻¹⁵) and to do so target-specifically; **however, this result did NOT survive external replication** in an independent AML cohort (FIMM/Malani, DSS assay): the known FLT3-mutation→FLT3-inhibitor relationship replicated there, but the inferred layer's added value beyond mutation did not (pooled ρ=+0.05, p=0.08). We report this failed replication as a first-class negative — the functional-inference refinement is, on current evidence, BeatAML-specific and not a generalizable clinical lead.
+Transcriptomic prediction of cancer drug response is widely pursued, but its true reach is often obscured by
+leakage, weak baselines, and unadjusted confounding. We built a reproducible engine and held every claim to
+pre-registration, permutation nulls, leakage-corrected splits, multiple-testing correction, and — decisively —
+external replication. The result is a graded, honest map. A learned per-drug expression→response map transfers
+across independent cell-line datasets (GDSC2→CCLE/PRISM) at a leakage-free mean per-drug Spearman ρ=**+0.212**
+(94/100 drugs positive; parameter-free proliferation baseline +0.058; p=1.9×10⁻¹⁵), and this is a genuine
+**ceiling** — neither a proliferation axis nor 50 driver-mutation features beat it (the naive leaky design inflates
+it to +0.278). Genome-wide, the robust somatic mutation→drug associations in acute myeloid leukemia (BeatAML) are
+the textbook ones (FLT3-ITD→FLT3 inhibitors, RAS→MEK inhibitors); two hand-picked pairs do not survive correction.
+A weak but drug-specific, proliferation-independent cell-line→patient signal exists in ex-vivo response. **But in
+1,079 patients (TCGA, 12 drugs), the engine's apparent clinical-response association is entirely cancer-type
+confounding (within-cancer AUROC 0.504, p=0.43).** Finally, reframing to a **functional** readout, an
+expression-inferred gene-dependency layer appeared in BeatAML to identify FLT3-inhibitor-sensitive AML beyond
+FLT3-ITD status (including in ITD-wildtype patients; p=1.5×10⁻¹⁵), target-specifically and robustly — yet this
+**did not survive external replication** in an independent AML cohort (FIMM/Malani): the known
+FLT3-mutation→inhibitor relationship replicated, but our inferred refinement did not (pooled ρ=+0.05, p=0.08). We
+report both nulls as first-class results. The recurring lesson — signals recovering known biology generalize,
+novel single-cohort refinements do not — bounds the modality honestly and motivates prospective functional data
+over further observational modeling. Engine, pre-registrations, and all negative results are released.
+
+## Author summary
+Machine-learning models that predict a tumor's drug response from its gene-expression profile are usually reported
+as successes. We asked, under a strict falsify-first protocol, how far such a model actually reaches — and where it
+breaks. Trained and tested on cancer cell lines without data leakage, the model works but weakly, and its accuracy
+has a firm ceiling that simple baselines already approach. In real patients, its apparent link to clinical response
+disappears once we account for cancer type: it distinguishes *which cancers* respond, not *which patient within a
+cancer*. We then tried a more mechanistic idea — inferring each tumor's genetic dependencies from its expression —
+which looked genuinely promising in one leukemia cohort, beating the standard mutation test. But when we tested it
+in a second, independent leukemia cohort, it did not replicate, even though the known biology did. We report this
+failure openly. The through-line is simple and useful: results that re-capture established biology generalize
+across cohorts, whereas novel, single-cohort refinements often do not survive independent replication. Honestly
+mapping these boundaries is, we argue, more valuable than another unreplicated positive — and it points to what a
+real advance will require: functional measurements made in the patients themselves.
 
 ---
 
@@ -48,7 +83,7 @@ positive), significantly above a frozen parameter-free proliferation axis (R_pro
 W=214, p=1.93×10⁻¹⁵). The leaky design (test lines present in training) inflated this to +0.278, quantifying the
 leakage that naive pipelines incur. Adding R_prolif or 50 recurrently-mutated driver-gene features as covariates
 did **not** improve on transcriptome-only (Δρ=+0.0000, p=0.98; Δρ=+0.0004, BH-q=0.74): **+0.212 is the public
-cell-line ceiling** for this design (B1, B2).
+cell-line ceiling** for this design (B1, B2; **Fig 1**).
 
 ### 2.2 Verified mutation→drug mechanism in AML, and what does not survive correction
 In BeatAML ex-vivo drug screening, a systematic screen of 3,051 gene×drug pairs (BH-FDR<0.05, FLT3-ITD– and
@@ -93,8 +128,8 @@ expression), the engine's raw association with response appeared significant (po
 p=0.036). **However, this is entirely cancer-type confounding.** Within-cancer stratified analysis — which
 removes cancer-type structure — gives AUROC = **0.504 (permutation p=0.43), a well-powered null**; a
 proliferation-only predictor was likewise uninformative (AUROC 0.444). The engine predicts *which cancers*
-respond to *which drugs*, not *which patient within a cancer* will respond (B10). We could not establish drug-
-level human clinical prediction on available observational data.
+respond to *which drugs*, not *which patient within a cancer* will respond (B10; **Fig 3**). We could not establish
+drug-level human clinical prediction on available observational data.
 
 ### 2.8 A functional-inference layer looked promising in BeatAML but failed external replication
 Because baseline expression encodes proliferation/lineage rather than drug-specific vulnerability, we tested a
@@ -153,9 +188,9 @@ double dissociation did not reach significance (permutation p=0.13; only the ven
 consistent). A focused post-hoc test of whether the signal at least survives for the FLT3-*selective* inhibitors
 (quizartinib, crenolanib) consistently across both cohorts was also negative — per-drug effects are unstable
 across cohorts (sorafenib, the strongest in BeatAML, flips sign in FIMM) and selectivity does not separate them
-(B21). We therefore report V19/V20 honestly as **BeatAML-specific and externally non-replicated**: the standard
-FLT3-mutation→FLT3-inhibitor relationship generalizes across cohorts, but our expression-inferred refinement does
-not. This is a first-class negative. It suggests that a functional layer with genuine, transferable value likely
+(B21; **Fig 2**). We therefore report V19/V20 honestly as **BeatAML-specific and externally non-replicated**: the
+standard FLT3-mutation→FLT3-inhibitor relationship generalizes across cohorts, but our expression-inferred
+refinement does not. This is a first-class negative. It suggests that a functional layer with genuine, transferable value likely
 requires perturbation data measured *in the patients themselves* (the prospective functional-precision design,
 Track-1) rather than dependency inferred from a pan-cancer cell-line map — and it is exactly the kind of result
 that a single-cohort analysis would have overstated.
@@ -193,26 +228,96 @@ clinical decision tool.
 
 ## 4. Methods (summary)
 
-Per-drug RidgeCV (α∈{10,100,1000}) on top-2000-variance shared genes, per-gene z-scored within each dataset;
-strict splits exclude every test cell line from training. Mutation markers from BeatAML WES (non-silent) and
-clinical (FLT3-ITD, NPM1). Genome-wide screen: OLS `AUC ~ mutation + FLT3-ITD + R_prolif`, BH-FDR across all
-pairs, md5 split-half direction replication. Transfer to patients/PDX/TCGA: engine trained on DepMap RNA-seq +
-GDSC or PRISM labels, applied to query z-expression; proliferation residualization via OLS on R_prolif; drug-
-specificity via diagonal vs off-diagonal permutation. Human validation: within-cancer stratified AUROC
-(cancer-confound control), permutation k=2000, seed=42. All experiments reproduce ×2 (identical metrics JSON).
-Full methods, code, pre-registrations, and per-experiment metrics are in the repository.
+**Transfer engine.** Per-drug RidgeCV (α∈{10,100,1000}) on top-2000-variance shared genes, per-gene z-scored
+within each dataset; strict splits exclude every test cell line from training. Mutation markers from BeatAML WES
+(non-silent) and clinical (FLT3-ITD, NPM1). Genome-wide screen: OLS `AUC ~ mutation + FLT3-ITD + R_prolif`, BH-FDR
+[Benjamini–Hochberg 1995] across all 3,051 pairs, MD5-seeded split-half direction replication. Transfer to
+patients/PDX/TCGA: engine trained on DepMap RNA-seq + GDSC or PRISM labels, applied to query z-expression;
+proliferation residualization via OLS on a frozen proliferation axis (R_prolif); drug-specificity via diagonal
+vs off-diagonal permutation. Human validation: within-cancer stratified AUROC (cancer-confound control),
+permutation k=2000, seed=42. Meta-analyses use DerSimonian–Laird random effects [1986].
 
-## 5. Data and code availability
+**Functional-inference layer.** Per-target Ridge models predict DepMap CRISPR gene-effect (Chronos [Dempster et
+al. 2021]) from cell-line expression; the fitted model is applied to patient RNA to obtain an *inferred* gene-
+dependency. "Beyond-mutation" tests (B16) use OLS `response ~ inferred-dependency + mutation + R_prolif` with
+DerSimonian–Laird meta-analysis across drugs and a within-mutation-negative Spearman test. Target-specificity
+(B18) uses a proliferation-adjusted dependency×drug matrix with a target↔drug label-shuffle permutation.
+Lineage-leakage control (B19) retrains the dependency model with AML (or all blood/lymphoid) lines removed.
+
+**External replication (B20/B21).** The FIMM/Malani AML cohort (Zenodo 7370747; Log2CPM RNA, Ensembl→HGNC via a
+GENCODE-derived map; DSRT drug-sensitivity scores, higher = more sensitive; binary mutations) was analyzed with
+the identical inferred-dependency pipeline. Effects are oriented so positive = sensitizing in both cohorts
+(BeatAML sensitivity = −AUC; FIMM = DSS). Pooling uses sample-size-weighted Fisher-z; permutations use fixed
+seed 42. All experiments reproduce ×2 (byte-identical metrics JSON). Full methods, code, pre-registrations, and
+per-experiment metrics are in the repository.
+
+## 5. Figures
+
+All figures are generated deterministically from committed metrics by
+`papers/intercepta_engine/figures/make_figures.py`; no values are hand-entered.
+
+- **Fig 1. Cross-dataset transfer and its ceiling (B1).** Mean per-drug Spearman ρ for the leaky design (test
+  lines present in training, +0.278), the leakage-corrected design (disjoint lines, +0.212), and a parameter-free
+  proliferation baseline (+0.058); 100 drugs, 94% positive, p=1.9×10⁻¹⁵ vs baseline.
+- **Fig 2. A functional-inference layer promising in BeatAML fails independent replication.** (A) Proliferation-
+  adjusted inferred-FLT3-dependency→FLT3-inhibitor sensitivity per shared drug, BeatAML (AUC) vs FIMM (DSS);
+  sorafenib, the strongest BeatAML effect, reverses sign in FIMM. (B) Target-specificity gap (matched minus
+  mismatched dependency→drug correlation) with target↔drug-shuffle permutation p: strong in BeatAML (B18,
+  p<10⁻⁴), null in FIMM (B20, p=0.13).
+- **Fig 3. Human clinical prediction is cancer-type confounding (B10).** Clinical-response AUROC in TCGA
+  (12 drugs, 28 within-cancer strata): raw pooled (0.539, p=0.04, confounded), within-cancer controlled (0.504,
+  p=0.42, null), and proliferation-only (0.444); dashed line = chance.
+
+## 6. Data and code availability
 
 Code, all pre-registrations (`prereg/`), all metrics (`experiments/*/results/`), the evidence ledger
-(`LEDGER.md`), and the integrity record (`INTEGRITY_SWEEP.md`) are public at
-`github.com/AKULA-PRASAD/intercepta-build`. Inputs are public (GDSC, DepMap/CCLE, PRISM, PDXE [Gao et al. 2015],
-TCGA via UCSC Xena + curated clinical drug response, and the FIMM/Malani AML functional-precision cohort [Zenodo
-7370747, CC-BY 4.0, used for the external-replication test B20/B21]) except BeatAML (dbGaP phs001657, controlled).
-No patient-level data is redistributed; `data/MANIFEST.md` gives sha256/MD5 + access class for every input.
+(`LEDGER.md`), the integrity record (`INTEGRITY_SWEEP.md`), and figure-generation code are public at
+`github.com/AKULA-PRASAD/intercepta-build`. Inputs are public — GDSC [Yang 2013], DepMap/CCLE [Ghandi 2019] and
+CRISPR gene effect [Dempster 2021], PRISM [Corsello 2020], PDXE [Gao 2015], TCGA via UCSC Xena [Goldman 2020] with
+curated clinical drug response and TCGA-CDR [Liu 2018], and the FIMM/Malani AML functional-precision cohort
+[Malani 2022; Zenodo 7370747, CC-BY 4.0] — except BeatAML [Tyner 2018; dbGaP phs001657, controlled-access]. No
+patient-level data is redistributed; `data/MANIFEST.md` gives sha256/MD5 and access class for every input.
 
-## 6. Key references
-GDSC (Yang 2013); DepMap/CCLE (Ghandi 2019); PRISM (Corsello 2020); BeatAML (Tyner 2018); PDXE (Gao 2015);
-TCGA-CDR (Liu 2018); UCSC Xena (Goldman 2020); curated TCGA drug response (lifeome); FIMM/Malani functional
-precision medicine AML cohort (Malani et al., Cancer Discovery 2022; Zenodo 7370747). Full citations to be
-completed for submission.
+## 7. Author contributions, competing interests, funding
+
+**Contributions.** P.A. conceived and directed the project. Study design, implementation, analysis, and manuscript
+were carried out with the assistance of an AI coding/analysis system operating under a fixed falsify-first
+protocol; all pre-registrations, code, and metrics are committed for independent verification. *(Author list and
+contribution statement to be finalized before submission.)*
+**Competing interests.** None declared.
+**Funding.** No dedicated funding. Analyses used only publicly available and controlled-access (BeatAML) datasets
+under their respective terms.
+
+## 8. Reproducibility statement
+
+Every quantitative claim maps to a committed metrics JSON reproduced twice with byte-identical output; every
+inferential analysis was pre-registered before results (`prereg/`); figures regenerate from committed metrics via
+a single script. Random seeds are fixed (42) and reported. Controlled data (BeatAML) are not redistributed;
+reproduction of BeatAML-dependent results requires the reader's own dbGaP access. All other inputs are public.
+
+## 9. References
+
+1. Yang W, Soares J, Greninger P, et al. Genomics of Drug Sensitivity in Cancer (GDSC): a resource for therapeutic
+   biomarker discovery in cancer cells. *Nucleic Acids Res.* 2013;41(D1):D955–D961.
+2. Ghandi M, Huang FW, Jané-Valbuena J, et al. Next-generation characterization of the Cancer Cell Line
+   Encyclopedia. *Nature.* 2019;569:503–508.
+3. Corsello SM, Nagari RT, Spangler RD, et al. Discovering the anticancer potential of non-oncology drugs by
+   systematic viability profiling. *Nature Cancer.* 2020;1:235–248.
+4. Tyner JW, Tognon CE, Bottomly D, et al. Functional genomic landscape of acute myeloid leukaemia. *Nature.*
+   2018;562:526–531.
+5. Gao H, Korn JM, Ferretti S, et al. High-throughput screening using patient-derived tumor xenografts to predict
+   clinical trial drug response. *Nature Medicine.* 2015;21:1318–1325.
+6. Liu J, Lichtenberg T, Hoadley KA, et al. An integrated TCGA pan-cancer clinical data resource to drive
+   high-quality survival outcome analytics. *Cell.* 2018;173(2):400–416.
+7. Goldman MJ, Craft B, Hastie M, et al. Visualizing and interpreting cancer genomics data via the Xena platform.
+   *Nature Biotechnology.* 2020;38:675–678.
+8. Malani D, Kumar A, Brück O, et al. Implementing a functional precision medicine tumor board for acute myeloid
+   leukemia. *Cancer Discovery.* 2022;12(2):388–401. (Data: Zenodo 7370747.)
+9. Dempster JM, Boyle I, Vazquez F, et al. Chronos: a cell population dynamics model of CRISPR experiments that
+   improves inference of gene fitness effects. *Genome Biology.* 2021;22:343.
+10. Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple
+    testing. *Journal of the Royal Statistical Society: Series B.* 1995;57(1):289–300.
+11. DerSimonian R, Laird N. Meta-analysis in clinical trials. *Controlled Clinical Trials.* 1986;7(3):177–188.
+
+*Reference bibliographic details were drawn from the primary sources; DOIs/PMIDs and any remaining page-number
+verification to be added in the submission-formatted bibliography.*
