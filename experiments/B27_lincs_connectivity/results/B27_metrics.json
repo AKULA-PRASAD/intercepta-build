@@ -1,0 +1,29 @@
+{
+  "git_sha": "f30dc1fb753589c845af80187874bcdd764d893e",
+  "python": "3.11.14",
+  "timestamp_utc": "2026-07-29T19:07:14Z",
+  "seed": 42,
+  "data": {
+    "n_shared_genes": 7103,
+    "n_drugs": 239,
+    "n_cells": 476
+  },
+  "within_cell": {
+    "mean_rho": 0.021,
+    "pooled_z": 6.128,
+    "n_units": 476,
+    "median_n": 212
+  },
+  "within_cell_perm_p": 0.0004997501249375312,
+  "within_drug": {
+    "mean_rho": 0.0259,
+    "pooled_z": 8.478,
+    "n_units": 238,
+    "median_n": 426
+  },
+  "prolif_excluded_within_cell_rho": 0.0205,
+  "H1_statistically_significant": true,
+  "practically_useful_effect": false,
+  "effect_size_note": "mean rho 0.021 explains ~0.044% of variance",
+  "verdict": "STATISTICALLY SIGNIFICANT BUT PRACTICALLY NEGLIGIBLE: within-cell reversal->sensitivity mean rho 0.021 (perm p=5.0e-04) is significant only because of huge N (476 cells x ~212 drugs); |rho|<0.05 explains ~0.04% of variance -> NOT a practically useful repurposing signal. Proliferation-robust (0.0205). Honest: connectivity has a real but vanishingly small effect here, consistent with the program theme that generic transcriptomic signals are weak."
+}

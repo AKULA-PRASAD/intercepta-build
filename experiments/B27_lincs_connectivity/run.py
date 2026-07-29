@@ -88,6 +88,7 @@ for j in range(NPERM):
     perm[j] = np.mean(pr_rhos)
 p_perm = float((1 + np.sum(perm >= obs)) / (1 + NPERM))
 H1 = bool(obs > 0 and p_perm < 0.05)
+NEGLIGIBLE = 0.05                                           # |rho| below this = practically negligible, however significant
 
 # H3 robustness (only meaningful if H1): exclude proliferation genes, recompute within-cell mean rho
 prolif = set(CELL_CYCLE) | set(REPLICATION)
@@ -107,24 +108,33 @@ print(f"\nwithin-CELL (repurposing): mean Spearman(reversal,sensitivity)={cell_r
 print(f"within-DRUG: mean rho={drug_res['mean_rho']} over {drug_res['n_units']} drugs")
 print(f"proliferation-gene-excluded within-cell mean rho={prolif_excl_rho} (H3 robustness)")
 print(f"H1 (connectivity predicts efficacy within-cell): {H1}")
-if H1 and abs(prolif_excl_rho - cell_res["mean_rho"]) < 0.02:
-    verdict = (f"CONNECTIVITY PREDICTS EFFICACY (modest, prolif-robust): within-cell reversal->sensitivity mean rho "
-               f"{cell_res['mean_rho']} (perm p={p_perm:.1e}), survives proliferation-gene exclusion ({prolif_excl_rho}). "
-               f"Real but small repurposing signal.")
+if H1 and abs(cell_res["mean_rho"]) < NEGLIGIBLE:
+    verdict = (f"STATISTICALLY SIGNIFICANT BUT PRACTICALLY NEGLIGIBLE: within-cell reversal->sensitivity mean rho "
+               f"{cell_res['mean_rho']} (perm p={p_perm:.1e}) is significant only because of huge N "
+               f"({cell_res['n_units']} cells x ~{cell_res['median_n']} drugs); |rho|<{NEGLIGIBLE} explains ~"
+               f"{100*cell_res['mean_rho']**2:.2f}% of variance -> NOT a practically useful repurposing signal. "
+               f"Proliferation-robust ({prolif_excl_rho}). Honest: connectivity has a real but vanishingly small "
+               f"effect here, consistent with the program theme that generic transcriptomic signals are weak.")
+elif H1 and abs(prolif_excl_rho - cell_res["mean_rho"]) < 0.02:
+    verdict = (f"CONNECTIVITY PREDICTS EFFICACY (usable, prolif-robust): within-cell reversal->sensitivity mean rho "
+               f"{cell_res['mean_rho']} (perm p={p_perm:.1e}), survives proliferation-gene exclusion ({prolif_excl_rho}).")
 elif H1:
     verdict = (f"within-cell signal present (rho {cell_res['mean_rho']}, p={p_perm:.1e}) but changes on proliferation-"
                f"gene exclusion ({prolif_excl_rho}) -> partly a proliferation confound. Honest, bounded.")
 else:
     verdict = (f"HONEST NEGATIVE: LINCS signature-reversal does NOT predict drug efficacy within cells "
-               f"(mean rho {cell_res['mean_rho']}, perm p={p_perm:.2g}) -> connectivity-based repurposing does not "
-               f"work on this data. Consistent with the program theme: generic transcriptomic signals are weak.")
+               f"(mean rho {cell_res['mean_rho']}, perm p={p_perm:.2g}). Consistent with the program theme.")
+out_practical = bool(H1 and abs(cell_res["mean_rho"]) >= NEGLIGIBLE)
 print("\nVERDICT:", verdict)
 
 out = {"git_sha": os.popen("git rev-parse HEAD").read().strip(), "python": sys.version.split()[0],
        "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "seed": SEED,
        "data": {"n_shared_genes": len(shared_genes), "n_drugs": len(shared_drugs), "n_cells": len(cells)},
        "within_cell": cell_res, "within_cell_perm_p": p_perm, "within_drug": drug_res,
-       "prolif_excluded_within_cell_rho": prolif_excl_rho, "H1_connectivity_predicts_efficacy": H1, "verdict": verdict}
+       "prolif_excluded_within_cell_rho": prolif_excl_rho, "H1_statistically_significant": H1,
+       "practically_useful_effect": bool(H1 and abs(cell_res["mean_rho"]) >= NEGLIGIBLE),
+       "effect_size_note": f"mean rho {cell_res['mean_rho']} explains ~{100*cell_res['mean_rho']**2:.3f}% of variance",
+       "verdict": verdict}
 os.makedirs(os.path.join(HERE, "results"), exist_ok=True)
 json.dump(out, open(os.path.join(HERE, "results", "B27_metrics.json"), "w"), indent=2)
 print("wrote results/B27_metrics.json")
