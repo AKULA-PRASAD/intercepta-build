@@ -170,9 +170,18 @@ class _TaskModel:
         tani = np.where(np.isfinite(tani), tani, 0.0)
         return tani.max(1)
 
+    AD_CAL_CAP = 12000     # cap self-distance sample: the 95th-pct NN distance is well-estimated from a subsample,
+                           # and this keeps the O(n^2) Tanimoto matrix tractable. Chosen > every committed fold
+                           # (B30/B30b folds <= ~11k), so those results are unchanged; only larger fits (e.g. the
+                           # synthesizability model on 50k) are subsampled here.
+
     def _train_nn_distance(self):
-        """Leave-one-out nearest-neighbor Tanimoto DISTANCE (1 - sim) within the training set."""
+        """Leave-one-out nearest-neighbor Tanimoto DISTANCE (1 - sim) within the training set (seeded subsample if
+        the set exceeds AD_CAL_CAP, to bound the O(n^2) memory/compute)."""
         tb = np.unpackbits(self._train_bits, axis=1).astype(np.float32)
+        if tb.shape[0] > self.AD_CAL_CAP:
+            sel = np.random.default_rng(self.seed).permutation(tb.shape[0])[:self.AD_CAL_CAP]
+            tb = tb[sel]
         inter = tb @ tb.T
         s = tb.sum(1)
         with np.errstate(divide="ignore", invalid="ignore"):

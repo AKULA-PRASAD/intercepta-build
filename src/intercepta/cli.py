@@ -6,6 +6,7 @@ Subcommands:
   synergy  — rank synergistic drug PAIRS from a known library (combinations arm, V23/B24-B29)
   admet    — predict ADMET/safety properties from SMILES (structure-only screening filter, B30)
   synth    — score retrosynthetic solvability (synthesizability proxy) from SMILES (B31)
+  prioritize — rank molecules by composite developability risk (ADMET+synth, whole>parts; B32)
 
 HONEST SCOPE: every subcommand is a RESEARCH hypothesis-ranking/screening tool, validated at the
 cell-line/ex-vivo (rank, synergy) or scaffold-split benchmark (admet) level only. NONE is a validated human
@@ -109,6 +110,24 @@ def _cmd_synth(args):
     return 0
 
 
+def _cmd_prioritize(args):
+    from intercepta.integrate import DevelopabilityPrioritizer
+    if not args.smiles and not args.molecules:
+        print("ERROR: provide --molecules 'SMILES,SMILES' or --smiles path.txt", file=sys.stderr)
+        return 2
+    smiles = [s.strip() for s in open(args.smiles)] if args.smiles else [s.strip() for s in args.molecules.split(",")]
+    smiles = [s for s in smiles if s]
+    p = DevelopabilityPrioritizer.from_default(synth_subsample=args.subsample)
+    out = p.predict(smiles)
+    out.to_csv(args.out, index=False)
+    print(f"prioritized {len(out)} molecule(s) by composite developability risk -> {args.out}")
+    print("NOTE: composite of ADMET (B30) + synthesizability (B31) module outputs. B32 (first-class NEGATIVE): the "
+          "composite does NOT beat the single best ADMET endpoint on ClinTox — use the per-module PROFILE columns "
+          "for interpretability, NOT the composite as an improvement. developability_risk = P(clinical-tox failure), "
+          "a research signal only, NOT a clinical/regulatory determination. Survivorship-confounded.")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -143,6 +162,12 @@ def main(argv=None):
     y.add_argument("--no-conformal", action="store_true", help="skip conformal prediction-set output")
     y.add_argument("--out", default="intercepta_synth.csv")
     y.set_defaults(func=_cmd_synth)
+    z = sub.add_parser("prioritize", help="rank molecules by composite developability risk (ADMET+synth; B32)")
+    z.add_argument("--molecules", help="comma-separated SMILES strings")
+    z.add_argument("--smiles", help="path to a file with one SMILES per line (alternative to --molecules)")
+    z.add_argument("--subsample", type=int, default=50000, help="synthesizability training subsample (default 50000)")
+    z.add_argument("--out", default="intercepta_prioritize.csv")
+    z.set_defaults(func=_cmd_prioritize)
     args = p.parse_args(argv)
     return args.func(args)
 

@@ -255,3 +255,33 @@ def test_synth_scorer_requires_fit():
     from intercepta.synth import SynthesizabilityScorer
     with pytest.raises(RuntimeError):
         SynthesizabilityScorer().predict(["CCO"])
+
+
+# ---- integration MVP (B32): composition logic, data-free (mocked modules) ----
+def test_developability_prioritizer_composition():
+    from intercepta.integrate import DevelopabilityPrioritizer, PANEL
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.preprocessing import StandardScaler
+    nfeat = len(PANEL) + 2
+    rng = np.random.default_rng(0)
+
+    class _MockADMET:
+        def predict(self, smiles, tasks=None, tidy=True):
+            n = len(smiles)
+            if tasks == ["herg"]:                                  # AD proxy call
+                return pd.DataFrame({"smiles": smiles, "in_domain": [True] * n})
+            return pd.DataFrame(rng.random((n, len(PANEL))), columns=PANEL, index=smiles)   # tidy=False wide
+    class _MockSynth:
+        def predict(self, smiles):
+            return pd.DataFrame({"solvable_prob": rng.random(len(smiles))})
+
+    # real scaler+logistic fit on tiny synthetic training features
+    Xtr = rng.random((40, nfeat)); ytr = (Xtr[:, 0] > 0.5).astype(int)
+    scaler = StandardScaler().fit(Xtr); lr = LogisticRegression(max_iter=500).fit(scaler.transform(Xtr), ytr)
+    p = DevelopabilityPrioritizer(_MockADMET(), _MockSynth(), scaler, lr,
+                                  PANEL + ["synth_solvable_prob", "sa_score"], np.zeros(nfeat))
+    out = p.predict(["CCO", "c1ccccc1", "CC(=O)O"])
+    assert {"developability_risk", "synth_solvable_prob", "sa_score", "applicability_domain"}.issubset(out.columns)
+    assert set(PANEL).issubset(out.columns)
+    assert out["developability_risk"].between(0, 1).all()
+    assert (out["developability_risk"].values == np.sort(out["developability_risk"].values)[::-1]).all()  # ranked desc

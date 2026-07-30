@@ -1,0 +1,68 @@
+{
+  "provenance": {
+    "experiment": "B32_integration_mvp",
+    "git_sha": "723e67254a02101f2ecbc629bdb900843a6d3c9d",
+    "libs": {
+      "PyTDC": "1.1.15",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "outcome": "TDC ClinTox (clinical-trial toxicity failure); modules trained only on their own data",
+    "panel": [
+      "herg",
+      "ames",
+      "dili",
+      "ld50_zhu",
+      "cyp3a4_veith",
+      "bioavailability_ma",
+      "bbb_martins",
+      "ppbr_az",
+      "clearance_microsome_az",
+      "half_life_obach"
+    ],
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "timestamp_utc": "2026-07-30T04:13:59Z"
+  },
+  "results": {
+    "H1_composite_beats_best_single_by_1sd": false,
+    "H2_composite_auroc_gt_0.6": true,
+    "best_single_feature": "ppbr_az",
+    "best_single_module_auroc_mean": 0.831,
+    "composite_auprc_mean": 0.3893,
+    "composite_auroc_mean": 0.8192,
+    "composite_auroc_sd": 0.0112,
+    "direct_trained_morgan_gbt_auroc_mean": 0.8572,
+    "n_clintox": 1459,
+    "n_excluded_leakage": 420,
+    "n_leakfree": 1039,
+    "n_positive": 103,
+    "prevalence": 0.0706,
+    "seeds_used": 5,
+    "single_module_auroc_mean": {
+      "ames": 0.549,
+      "bbb_martins": 0.6464,
+      "bioavailability_ma": 0.5478,
+      "clearance_microsome_az": 0.6195,
+      "cyp3a4_veith": 0.7434,
+      "dili": 0.7816,
+      "half_life_obach": 0.6163,
+      "herg": 0.6728,
+      "ld50_zhu": 0.7222,
+      "ppbr_az": 0.8097,
+      "sa_score": 0.6625,
+      "synth_solvable_prob": 0.4391
+    },
+    "trivial_auprc": 0.0512,
+    "verdict": "NEGATIVE (first-class): the composite (AUROC 0.819) does NOT beat the best single module ('ppbr_az' 0.810) beyond 1sd \u2014 on this outcome the single best module (a toxicity endpoint) is as good as composing them. Modules stand alone; no whole>parts claim here."
+  }
+}
