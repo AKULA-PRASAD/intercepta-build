@@ -1,11 +1,11 @@
-# A reproducible cell-line–derived transcriptomic drug-response engine: where transfer works, where it doesn't, and two decisive replication nulls (clinical and functional)
+# Where transcriptomic cancer drug-response prediction works and where it doesn't: an intrinsic single-agent ceiling, two decisive replication nulls, and an externally-validated drug-combination-synergy signal
 
 Prasad Akula¹* *(author list to be finalized before submission)*
 
 ¹ Northeastern University, Boston, MA, USA
 \* Correspondence: akula.pra@northeastern.edu
 
-**Preprint / working draft — v2 (2026-07-29).** Every quantitative claim traces to a committed, reproduced-×2
+**Preprint / working draft — v3 (2026-07-29).** Every quantitative claim traces to a committed, reproduced-×2
 metrics file in `experiments/`, `verification/`, and `LEDGER.md` of `github.com/AKULA-PRASAD/intercepta-build`.
 All analyses were pre-registered (`prereg/`) before results. All figures are regenerated from committed metrics by
 `papers/intercepta_engine/figures/make_figures.py`.
@@ -24,6 +24,9 @@ replication; acute myeloid leukemia; functional precision medicine; negative res
   lineage-independent) **failed independent replication** in a second AML cohort — a first-class negative.
 - Across the program, signals recovering **known** biology generalize; **novel single-cohort refinements do not** —
   external replication, not internal robustness, is the decisive test.
+- **The positive counterpoint:** drug-combination **synergy** prediction *does* generalize — it **externally
+  replicates across two independent corpora** (DrugComb→O'Neil ρ=0.38, 2.5× retrieval enrichment) and is shipped as
+  a tool with **calibrated** uncertainty. Synergy (a different signal) is not bound by the single-agent ceiling.
 
 ## Abstract
 
@@ -43,9 +46,16 @@ expression-inferred gene-dependency layer appeared in BeatAML to identify FLT3-i
 FLT3-ITD status (including in ITD-wildtype patients; p=1.5×10⁻¹⁵), target-specifically and robustly — yet this
 **did not survive external replication** in an independent AML cohort (FIMM/Malani): the known
 FLT3-mutation→inhibitor relationship replicated, but our inferred refinement did not (pooled ρ=+0.05, p=0.08). We
-report both nulls as first-class results. The recurring lesson — signals recovering known biology generalize,
-novel single-cohort refinements do not — bounds the modality honestly and motivates prospective functional data
-over further observational modeling. Engine, pre-registrations, and all negative results are released.
+report both nulls as first-class results, and show the single-agent ceiling is **modality-general** — matched
+proteomics and even measured genome-wide CRISPR dependency do not beat baseline RNA (the only functional signal is
+a drug's own target). **The constructive counterpoint is drug combinations:** synergy — a different signal, not
+bound by the single-agent ceiling — generalizes to unseen combinations and, critically, **externally replicates
+across two independent corpora** (train on DrugComb, predict O'Neil: Spearman 0.38, 2.5× retrieval enrichment,
+holding on novel combinations); we release it as a usable ranker with **calibrated conformal uncertainty** (90%
+intervals cover ~90% on unseen combinations). The recurring lesson — signals recovering known biology or robust
+combination structure generalize, whereas novel single-cohort single-agent refinements do not — bounds the modality
+honestly and motivates prospective functional data over further observational single-agent modeling. Engine,
+combination ranker, pre-registrations, and all negative results are released.
 
 ## Author summary
 Machine-learning models that predict a tumor's drug response from its gene-expression profile are usually reported
@@ -59,7 +69,11 @@ in a second, independent leukemia cohort, it did not replicate, even though the 
 failure openly. The through-line is simple and useful: results that re-capture established biology generalize
 across cohorts, whereas novel, single-cohort refinements often do not survive independent replication. Honestly
 mapping these boundaries is, we argue, more valuable than another unreplicated positive — and it points to what a
-real advance will require: functional measurements made in the patients themselves.
+real advance will require: functional measurements made in the patients themselves. There is also a bright spot:
+predicting *drug combinations* — whether two drugs work better together — did generalize, and unlike the
+single-drug results it held up in a second, independent dataset. We release that as a practical, uncertainty-aware
+tool. The takeaway: single-drug prediction from a tumor's baseline profile is fundamentally limited, but drug
+*combinations* are a more promising, and honestly-validated, direction.
 
 ---
 
@@ -204,6 +218,30 @@ requires perturbation data measured *in the patients themselves* (the prospectiv
 Track-1) rather than dependency inferred from a pan-cancer cell-line map — and it is exactly the kind of result
 that a single-cohort analysis would have overstated.
 
+### 2.9 Drug-combination synergy generalizes — an externally-validated positive (Fig 4)
+Single-agent response from baseline profiles is capped and its refinements fail; we therefore asked whether a
+*different* signal — drug-combination **synergy** — behaves differently. It does. On the open O'Neil/
+OncoPolyPharmacology screen (23,052 measurements, 583 pairs × 39 cell lines, Loewe synergy; features = cell-line
+expression + order-invariant Morgan fingerprints, gradient-boosted), synergy is predictable for **unseen
+combinations of known drugs**: leave-drug-combination-out Spearman ρ=**+0.61** vs an informed drug-marginal
+baseline +0.47 (Δ+0.13, bootstrap CI [0.12,0.14]), synergistic-class AUROC 0.80 (B24). Scaling to the larger
+DrugComb corpus (124 drugs, 41 cell lines) reproduces the combination-generalization (ρ=+0.38 vs baseline +0.29),
+but shows the honest bounds: generalization to genuinely **novel drugs** collapses (leave-drug-out ρ 0.25→0.025 on
+the more diverse corpus, B25), and a mechanism-anchored encoding (each drug by its target's CRISPR dependency) does
+**not** beat chemical fingerprints for novel drugs (B26); a connectivity/LINCS-signature-reversal repurposing
+signal is statistically significant but practically negligible (ρ=0.02, B27). Decisively, the synergy signal
+**externally replicates across independent corpora**: a model trained on DrugComb predicts *measured* synergy in
+the independent O'Neil dataset (different institution and Loewe computation) at Spearman **+0.38** (CI [0.36,0.39]),
+with **2.5× retrieval enrichment** for truly synergistic pairs, and it **holds on novel combinations** (ρ=+0.44);
+the reverse (small→diverse) is weak, an expected train-on-diverse asymmetry (B28). We release this as a usable
+ranker (`SynergyRanker`) that, given a tumor/cell expression profile, ranks synergistic pairs from a known drug
+library with an out-of-distribution confidence gate and **calibrated conformal prediction intervals** — empirical
+coverage matches nominal on unseen combinations (90%→89.8%/90.5%, 80%→79.5%/80.6% on O'Neil/DrugComb; B29), with
+the intervals deliberately wide to convey that individual point predictions are uncertain. Scope: cell-line Loewe
+synergy (not clinical), known-drug library only. This is the program's one externally-validated positive — evidence
+that *combination structure*, unlike single-agent baseline signal, carries transferable, practically-useful
+information.
+
 ## 3. Discussion
 
 The honest arc is: transcriptomic transfer is **real but weak** where the readout is a direct in-vitro/ex-vivo
@@ -227,7 +265,13 @@ profile does not beat or add to RNA for cell-line drug response (B22), so the ce
 molecular profiling itself, not of one assay. The implication is consistent and constructive: a layer with real,
 transferable value must be built on **functional/perturbation** data measured *in the target patients*
 (prospective functional-precision cohorts, Track-1), not inferred from, or re-measured as another baseline omic
-of, a pan-cancer cell-line map.
+of, a pan-cancer cell-line map. Fifth, the same falsify-first lens found a genuine **positive**: drug-combination
+synergy is a *different* signal that is **not** bound by the single-agent ceiling — it generalizes to unseen
+combinations and, unlike every single-agent refinement here, **survives external replication across independent
+corpora** (with practically-useful, calibrated predictions). The contrast is the paper's central, constructive
+message: baseline single-agent molecular profiling is intrinsically capped, but *combination structure* carries
+transferable information — so the productive frontier is combinations (computationally, now) and patient-measured
+function (prospectively, next), not more single-agent modeling of existing data.
 
 **Limitations.** Cross-platform normalization is crude (per-gene z). PDX/ex-vivo are proxies. TCGA response is
 coarse and regimen-attributed. Effect sizes throughout are small. We make no novel-molecule, therapy-selection,
@@ -236,7 +280,8 @@ history, not results.
 
 **What this engine is.** A reproducible, mechanism-anchored, calibration-aware **cell-line/ex-vivo drug-response
 engine** with an honestly bounded scope — useful for hypothesis ranking and as a rigorous baseline, not as a
-clinical decision tool.
+clinical decision tool — plus an **externally-validated drug-combination-synergy ranker** with calibrated
+uncertainty (`intercepta.synergy.SynergyRanker`), the program's one transferable positive.
 
 ## 4. Methods (summary)
 
@@ -260,8 +305,17 @@ Lineage-leakage control (B19) retrains the dependency model with AML (or all blo
 GENCODE-derived map; DSRT drug-sensitivity scores, higher = more sensitive; binary mutations) was analyzed with
 the identical inferred-dependency pipeline. Effects are oriented so positive = sensitizing in both cohorts
 (BeatAML sensitivity = −AUC; FIMM = DSS). Pooling uses sample-size-weighted Fisher-z; permutations use fixed
-seed 42. All experiments reproduce ×2 (byte-identical metrics JSON). Full methods, code, pre-registrations, and
-per-experiment metrics are in the repository.
+seed 42. All experiments reproduce ×2 (byte-identical metrics JSON).
+
+**Drug-combination synergy (B24–B29).** Open synergy data via Therapeutics Data Commons [Huang 2021]:
+O'Neil/OncoPolyPharmacology [O'Neil 2016] and DrugComb [Zheng 2021], Loewe synergy. Features: DepMap-expression
+PCA (cell) + order-invariant Morgan fingerprints (RDKit; sum + bitwise-AND of the two drugs) (drug);
+HistGradientBoostingRegressor. Generalization by leave-drug-combination-out and leave-drug-out GroupKFold; external
+validation by training on one corpus and predicting measured synergy in the other; retrieval by precision@10%
+enrichment over base rate. Prediction intervals are split-conformal, calibrated on leave-combination-out residuals;
+empirical coverage validated on disjoint-by-combination test sets (B29). LINCS connectivity (B27) uses dhimmel/lincs
+consensus signatures [Subramanian 2017]. Full methods, code, pre-registrations, and per-experiment metrics are in
+the repository.
 
 ## 5. Figures
 
@@ -279,6 +333,10 @@ All figures are generated deterministically from committed metrics by
 - **Fig 3. Human clinical prediction is cancer-type confounding (B10).** Clinical-response AUROC in TCGA
   (12 drugs, 28 within-cancer strata): raw pooled (0.539, p=0.04, confounded), within-cancer controlled (0.504,
   p=0.42, null), and proliferation-only (0.444); dashed line = chance.
+- **Fig 4. Drug-combination synergy is the externally-validated positive (B24/B28/B29).** (A) Synergy Spearman ρ:
+  within-corpus new combinations (O'Neil, +0.61), external cross-corpus DrugComb→O'Neil (+0.38, 2.5× retrieval
+  enrichment), and the weak reverse O'Neil→DrugComb (+0.09). (B) Conformal prediction-interval calibration —
+  empirical vs nominal coverage on unseen combinations for both corpora sits on the identity line (calibrated).
 
 ## 6. Data and code availability
 
@@ -287,9 +345,11 @@ Code, all pre-registrations (`prereg/`), all metrics (`experiments/*/results/`),
 `github.com/AKULA-PRASAD/intercepta-build`. Inputs are public — GDSC [Yang 2013], DepMap/CCLE [Ghandi 2019] and
 CRISPR gene effect [Dempster 2021], PRISM [Corsello 2020], PDXE [Gao 2015], TCGA via UCSC Xena [Goldman 2020] with
 curated clinical drug response and TCGA-CDR [Liu 2018], the FIMM/Malani AML functional-precision cohort
-[Malani 2022; Zenodo 7370747, CC-BY 4.0], and CCLE quantitative proteomics [Nusinow 2020; gygi.hms.harvard.edu] —
-except BeatAML [Tyner 2018; dbGaP phs001657, controlled-access]. No
-patient-level data is redistributed; `data/MANIFEST.md` gives sha256/MD5 and access class for every input.
+[Malani 2022; Zenodo 7370747, CC-BY 4.0], CCLE quantitative proteomics [Nusinow 2020; gygi.hms.harvard.edu],
+drug-combination synergy (O'Neil/OncoPolyPharmacology and DrugComb via Therapeutics Data Commons [Huang 2021]), and
+LINCS L1000 consensus signatures [dhimmel/lincs, Zenodo 47223] — except BeatAML [Tyner 2018; dbGaP phs001657,
+controlled-access]. No patient-level data is redistributed; `data/MANIFEST.md` gives sha256/MD5 and access class
+for every input. The combination ranker ships in `intercepta.synergy.SynergyRanker` (CLI `intercepta synergy`).
 
 ## 7. Author contributions, competing interests, funding
 
@@ -333,6 +393,16 @@ reproduction of BeatAML-dependent results requires the reader's own dbGaP access
 11. DerSimonian R, Laird N. Meta-analysis in clinical trials. *Controlled Clinical Trials.* 1986;7(3):177–188.
 12. Nusinow DP, Szpyt J, Ghandi M, et al. Quantitative proteomics of the Cancer Cell Line Encyclopedia. *Cell.*
     2020;180(2):387–402.
+13. O'Neil J, Benita Y, Feldman I, et al. An unbiased oncology compound screen to identify novel combination
+    strategies. *Molecular Cancer Therapeutics.* 2016;15(6):1155–1162.
+14. Zheng S, Aldahdooh J, Shadbahr T, et al. DrugComb update: a more comprehensive drug sensitivity data repository
+    and analysis portal. *Nucleic Acids Research.* 2021;49(W1):W174–W184.
+15. Huang K, Fu T, Gao W, et al. Therapeutics Data Commons: machine learning datasets and tasks for drug discovery
+    and development. *NeurIPS Datasets and Benchmarks.* 2021.
+16. Subramanian A, Narayan R, Corsello SM, et al. A next generation connectivity map: L1000 platform and the first
+    1,000,000 profiles. *Cell.* 2017;171(6):1437–1452.
+17. Angelopoulos AN, Bates S. Conformal prediction: a gentle introduction. *Foundations and Trends in Machine
+    Learning.* 2023;16(4):494–591.
 
 *Reference bibliographic details were drawn from the primary sources; DOIs/PMIDs and any remaining page-number
 verification to be added in the submission-formatted bibliography.*

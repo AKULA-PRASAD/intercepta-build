@@ -88,4 +88,34 @@ ax.set_title(f"Human clinical prediction is cancer-type confounding\n{b10['n_dru
              f"{b10['n_within_cancer_strata']} within-cancer strata", fontsize=8.5)
 save(fig, "Fig3_clinical_null")
 
+# ---------------- Fig 4: the combinations arm — an externally-validated positive (B24/B28/B29) ----------------
+b24 = load("B24_synergy_generalization/results/B24_metrics.json")
+b28 = load("B28_synergy_crosscorpus/results/B28_metrics.json")
+b29 = load("B29_synergy_conformal_coverage/results/B29_metrics.json")
+fig, (axA, axB) = plt.subplots(1, 2, figsize=(6.8, 3.1))
+# (A) generalization within-corpus vs external cross-corpus (Spearman)
+labsA = ["Within-corpus\n(new combos)", "DrugComb→O'Neil\n(external)", "O'Neil→DrugComb\n(external)"]
+valsA = [b24["results"]["leave_combination_out"]["model"]["spearman"],
+         b28["drugcomb_to_oneil"]["spearman"], b28["oneil_to_drugcomb"]["spearman"]]
+colsA = [BLUE, GREEN, GREY]
+axA.bar(range(3), valsA, color=colsA, width=0.62, edgecolor="black", lw=0.5)
+for i, v in enumerate(valsA): axA.text(i, v + 0.01, f"{v:.2f}", ha="center", va="bottom", fontsize=8.5)
+axA.axhline(0, color="black", lw=0.6)
+axA.set_xticks(range(3)); axA.set_xticklabels(labsA, fontsize=7)
+axA.set_ylabel("Synergy Spearman ρ (pred vs measured)")
+axA.set_ylim(0, 0.72)
+axA.set_title(f"(A) Synergy generalizes & externally replicates\n(DrugComb→O'Neil: {b28['drugcomb_to_oneil']['enrichment']}× retrieval enrichment)", fontsize=8)
+# (B) conformal calibration: nominal vs empirical coverage (both corpora)
+axB.plot([0.75, 0.95], [0.75, 0.95], color="black", ls="--", lw=0.8, label="perfect calibration")
+for corpus, mk, col in [("oneil", "o", BLUE), ("drugcomb", "s", GREEN)]:
+    d = b29["corpora"][corpus]
+    nom = [d[k]["nominal"] for k in d]; emp = [d[k]["empirical_coverage"] for k in d]
+    axB.scatter(nom, emp, marker=mk, s=55, color=col, edgecolor="black", lw=0.5, label=corpus, zorder=3)
+axB.set_xlabel("Nominal coverage"); axB.set_ylabel("Empirical coverage (unseen combos)")
+axB.set_xlim(0.74, 0.96); axB.set_ylim(0.74, 0.96)
+axB.legend(frameon=False, fontsize=7.5, loc="upper left")
+axB.set_title("(B) Prediction intervals are calibrated", fontsize=8.5)
+fig.suptitle("Drug-combination synergy: the externally-validated positive", fontsize=9.5, y=1.02)
+save(fig, "Fig4_synergy_positive")
+
 print("all figures written to", OUT)

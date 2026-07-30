@@ -1,13 +1,18 @@
 # Submission checklist — INTERCEPTA engine manuscript
 
-## Done (in-repo, reproducible)
-- [x] Full manuscript draft (`MANUSCRIPT.md`): title, author/affiliation block, highlights, abstract (~250 w),
-      author summary, results (§2.1–2.8), discussion, methods, figures, data/code availability, contributions,
-      reproducibility statement, numbered references.
-- [x] Three figures generated from committed metrics only (`figures/make_figures.py` → Fig1/2/3, PDF+PNG @300 dpi).
-- [x] Every quantitative claim traces to a reproduced-×2 metrics JSON; all analyses pre-registered (`prereg/`).
-- [x] Cover letter (`COVER_LETTER.md`) framing the rigorous-negative contribution + candidate journals.
+## Done (in-repo, reproducible) — PREPRINT-FINALIZED v3
+- [x] Full manuscript (`MANUSCRIPT.md`, v3, ~4.6k words): title (now covers ceiling + nulls + the synergy
+      positive), author/affiliation block, highlights, abstract, author summary, results **§2.1–2.9 (incl. the
+      combinations arm)**, discussion (5 points), methods (incl. combinations + conformal), figures, data/code
+      availability, contributions, reproducibility statement, 17 numbered references.
+- [x] **Four** figures generated from committed metrics only (`figures/make_figures.py` → Fig1/2/3/4, PDF+PNG
+      @300 dpi); Fig 4 = the externally-validated synergy positive + conformal calibration.
+- [x] Every quantitative claim traces to a reproduced-×2 metrics JSON; all analyses pre-registered (`prereg/`,
+      B1–B29 + Track-1 SAP).
+- [x] Cover letter (`COVER_LETTER.md`) framing the contribution + candidate journals.
 - [x] Data manifest with sha256/MD5 + access class (`data/MANIFEST.md`); controlled data (BeatAML) not redistributed.
+- [x] Content is preprint-ready as Markdown + figures. **PDF/bioRxiv assembly is a submission-time step** (needs
+      pandoc/LaTeX + a bioRxiv account — a human action; see below).
 
 ## Human-gated before submission (require author decisions / external lookups — not fabricated here)
 - [ ] **Finalize author list, order, affiliations, ORCIDs, and contribution statement.** (Draft lists P.A. only,
