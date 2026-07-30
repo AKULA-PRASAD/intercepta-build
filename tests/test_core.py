@@ -285,3 +285,39 @@ def test_developability_prioritizer_composition():
     assert set(PANEL).issubset(out.columns)
     assert out["developability_risk"].between(0, 1).all()
     assert (out["developability_risk"].values == np.sort(out["developability_risk"].values)[::-1]).all()  # ranked desc
+
+
+# ---- goal-directed generation (B33), data-free (RDKit BRICS only) ----
+def test_generate_objectives_bounded_and_directional():
+    from intercepta.generate import qed_score, synth_score, developability, OBJECTIVES
+    from rdkit import Chem
+    m = Chem.MolFromSmiles("CC(=O)Oc1ccccc1C(=O)O")
+    assert 0.0 <= qed_score(m) <= 1.0 and 0.0 <= synth_score(m) <= 1.0 and 0.0 <= developability(m) <= 1.0
+    # a trivial molecule is more synthesizable than a stereocenter-dense natural product (morphine)
+    assert synth_score(Chem.MolFromSmiles("CCO")) > synth_score(
+        Chem.MolFromSmiles("CN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](O)C=C[C@H]3[C@H]1C5"))
+    assert set(OBJECTIVES) == {"multi", "qed"}
+
+def test_generate_optimizer_improves_and_valid():
+    from intercepta.generate import MoleculeOptimizer, developability
+    from rdkit import Chem
+    seeds = ["CCOC(=O)c1ccccc1", "O=C(O)c1ccccc1N", "COc1ccc(CCN)cc1", "CC(=O)Nc1ccc(O)cc1",
+             "c1ccc(-c2ccccc2)cc1", "CCN(CC)CCOC(=O)c1ccccc1", "O=S(=O)(N)c1ccccc1", "Cc1ccc(S(N)(=O)=O)cc1"]
+    opt = MoleculeOptimizer(objective="multi", pop_size=20, generations=3, seed=42)
+    res = opt.optimize(seeds)
+    assert res["final_population"] and all(Chem.MolFromSmiles(s) is not None for s in res["final_population"])  # valid
+    seed_best = max(developability(Chem.MolFromSmiles(s)) for s in seeds)
+    assert res["final_best"] >= seed_best - 1e-9          # elitism: never worse than the best seed
+    assert len(res["history"]) >= 1 and 0.0 <= res["best_score"] <= 1.0
+
+def test_generate_optimizer_deterministic():
+    from intercepta.generate import MoleculeOptimizer
+    seeds = ["CCOC(=O)c1ccccc1", "O=C(O)c1ccccc1N", "COc1ccc(CCN)cc1", "CC(=O)Nc1ccc(O)cc1", "c1ccc(-c2ccccc2)cc1"]
+    a = MoleculeOptimizer(pop_size=15, generations=2, seed=7).optimize(seeds)
+    b = MoleculeOptimizer(pop_size=15, generations=2, seed=7).optimize(seeds)
+    assert a["best_smiles"] == b["best_smiles"] and a["final_best"] == b["final_best"]   # seeded determinism
+
+def test_generate_bad_objective_raises():
+    from intercepta.generate import MoleculeOptimizer
+    with pytest.raises(ValueError):
+        MoleculeOptimizer(objective="not_an_objective")

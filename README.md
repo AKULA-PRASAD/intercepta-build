@@ -74,13 +74,14 @@ reproduce.sh requirements.txt
 ## Install & use as a tool
 ```bash
 pip install -e .            # installs the `intercepta` package + CLI
-pytest                      # 24 unit tests (leakage, markers, calibration, axes, synergy, admet+conformal, synth, integrate) — no data needed
+pytest                      # 28 unit tests (leakage, markers, calibration, axes, synergy, admet, synth, integrate, generate) — no data needed
 intercepta info             # version + HONEST SCOPE
 intercepta rank    --expr tumor_expr.csv --drugs trametinib,gemcitabine --out ranking.csv   # needs INTERCEPTA_DATA
 intercepta synergy --expr tumor_expr.csv --library drugcomb --out synergy.csv               # combinations arm (V23)
 intercepta admet   --molecules "CC(=O)Oc1ccccc1C(=O)O" --tasks bbb_martins,herg --out admet.csv  # ADMET module (B30); needs intercepta[admet]
 intercepta synth   --molecules "CC(=O)Oc1ccccc1C(=O)O" --out synth.csv                           # synthesizability / retrosynthetic solvability (B31)
 intercepta prioritize --molecules "CC(=O)Oc1ccccc1C(=O)O" --out prioritize.csv                   # composite developability risk (ADMET+synth, B32)
+intercepta generate   --objective multi --out generate.csv                                       # goal-directed molecular design (BRICS-GA optimizer, B33)
 ```
 `intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
 `intercepta admet` predicts ADMET/safety properties from SMILES (structure-only screening filter, B30 — beats

@@ -6,7 +6,8 @@ Subcommands:
   synergy  — rank synergistic drug PAIRS from a known library (combinations arm, V23/B24-B29)
   admet    — predict ADMET/safety properties from SMILES (structure-only screening filter, B30)
   synth    — score retrosynthetic solvability (synthesizability proxy) from SMILES (B31)
-  prioritize — rank molecules by composite developability risk (ADMET+synth, whole>parts; B32)
+  prioritize — rank molecules by composite developability risk (ADMET+synth; B32)
+  generate — goal-directed molecular design / optimization (BRICS-GA; B33)
 
 HONEST SCOPE: every subcommand is a RESEARCH hypothesis-ranking/screening tool, validated at the
 cell-line/ex-vivo (rank, synergy) or scaffold-split benchmark (admet) level only. NONE is a validated human
@@ -128,6 +129,32 @@ def _cmd_prioritize(args):
     return 0
 
 
+def _cmd_generate(args):
+    import os, pandas as pd
+    from rdkit import Chem
+    from intercepta.generate import MoleculeOptimizer, qed_score, synth_score, developability
+    dd = os.environ.get("INTERCEPTA_DATA", "/Users/kalki/kaalcura/data")
+    if args.seeds:
+        seeds = [s.strip() for s in open(args.seeds) if s.strip()]
+    else:
+        df = pd.read_csv(os.path.join(dd, "tdc_gen", "chembl.tab"), sep="\t")
+        col = "smiles" if "smiles" in df.columns else df.columns[-1]
+        seeds = df[col].dropna().sample(args.n_seeds, random_state=42).tolist()
+    seeds = [Chem.MolToSmiles(m) for m in (Chem.MolFromSmiles(s) for s in seeds) if m is not None]
+    res = MoleculeOptimizer(objective=args.objective, pop_size=args.pop, generations=args.generations).optimize(seeds)
+    rows = []
+    for s in res["final_population"][:args.top]:
+        m = Chem.MolFromSmiles(s)
+        rows.append({"smiles": s, "objective_score": round(developability(m) if args.objective == "multi" else qed_score(m), 4),
+                     "qed": round(qed_score(m), 4), "synth_score": round(synth_score(m), 4)})
+    pd.DataFrame(rows).to_csv(args.out, index=False)
+    print(f"optimized ({args.objective}) over {args.generations} generations -> top {len(rows)} molecules to {args.out}; "
+          f"best score {res['best_score']}")
+    print("NOTE: goal-directed OPTIMIZATION of QED/SAscore proxies over KNOWN chemistry via BRICS recombination "
+          "(B33-validated), NOT de novo discovery of real/synthesizable drugs. Outputs are computational hypotheses.")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -168,6 +195,15 @@ def main(argv=None):
     z.add_argument("--subsample", type=int, default=50000, help="synthesizability training subsample (default 50000)")
     z.add_argument("--out", default="intercepta_prioritize.csv")
     z.set_defaults(func=_cmd_prioritize)
+    gg = sub.add_parser("generate", help="goal-directed molecular design (BRICS-GA optimizer; B33)")
+    gg.add_argument("--objective", default="multi", choices=["multi", "qed"], help="multi = QED×synthesizability")
+    gg.add_argument("--seeds", help="file of seed SMILES (one per line); default: sample from ChEMBL")
+    gg.add_argument("--n-seeds", type=int, default=200, dest="n_seeds")
+    gg.add_argument("--pop", type=int, default=100)
+    gg.add_argument("--generations", type=int, default=10)
+    gg.add_argument("--top", type=int, default=20, help="top-N optimized molecules to write")
+    gg.add_argument("--out", default="intercepta_generate.csv")
+    gg.set_defaults(func=_cmd_generate)
     args = p.parse_args(argv)
     return args.func(args)
 
