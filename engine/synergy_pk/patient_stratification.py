@@ -8,7 +8,7 @@ benefit from adding alisertib to enzalutamide.
 Key finding: +10.2 months for NE-high patients, +0.1 for NE-low.
 This explains Beltran 2019 exceptional responders.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import json
 from intercepta_escape_route_ode import simulate, PARAMS

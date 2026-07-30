@@ -35,7 +35,7 @@
 #     cd ~/INTERCEPTA/round2_aml/code
 #     Rscript export_vangalen_components.R
 #
-# Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+# Authors: Prasad Akula
 # Date:    April 21, 2026
 # Principle 3: chose Path B (component export) over SeuratDisk after
 #              verifying SeuratDisk is fragile with V5 objects.

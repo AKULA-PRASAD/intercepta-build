@@ -54,7 +54,7 @@ Reproducibility
   but ALSO would risk overfitting and be a moving target. Defaults are
   honest: the bar Round 2.2c must clear with multi-modal features.
 
-Author: Prasad Akula & Claude (CSO), 2026-05-06
+Author: Prasad Akula, 2026-05-06
 """
 
 import json

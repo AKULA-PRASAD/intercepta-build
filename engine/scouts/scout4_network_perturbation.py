@@ -17,7 +17,7 @@ Method: Network propagation with compensation scoring.
 This is NOT a toy model. It uses real interaction strengths
 from STRING and validates against real patient data.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import numpy as np
 import pandas as pd

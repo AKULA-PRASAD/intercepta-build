@@ -8,7 +8,7 @@ Uses the disease net's escape routes to design rational combinations:
   
 This is the NET approach — not random screening.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import json
 import pandas as pd

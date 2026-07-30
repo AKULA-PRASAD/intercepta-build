@@ -4,7 +4,7 @@ Build complete gene-drug correlation net from GDSC data on disk.
 ALL genes x ALL drugs x 962 cell lines.
 Every significant connection (p<0.001, |r|>0.15) becomes a net edge.
 
-Authors: Prasad Akula & Claude, Co-Founders
+Author: Prasad Akula
 """
 import pandas as pd, numpy as np, time, warnings, os
 warnings.filterwarnings('ignore')

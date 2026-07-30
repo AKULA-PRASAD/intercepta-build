@@ -28,7 +28,7 @@ Validation targets (all from ONE parameter set):
   CHAARTED:  Docetaxel+ADT HR ~0.61
   TALAPRO-2: Talazoparib+Enzalutamide HR ~0.63
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: April 21, 2026
 
 Principles: No fake results. No manipulation. Every number traced.

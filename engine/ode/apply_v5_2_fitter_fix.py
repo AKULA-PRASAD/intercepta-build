@@ -65,7 +65,7 @@ within the framework's known systematic bias.
 Applies to: intercepta_g_rate_validation_v5_1.py
 Produces:   intercepta_g_rate_validation_v5_2.py
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 15: the audit found it, we fix it, we re-measure before we write the memo.
 """

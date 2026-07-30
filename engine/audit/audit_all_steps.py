@@ -5,7 +5,7 @@ INTERCEPTA Full Audit
 Verifies all 11 completed Universal Net steps.
 Checks data integrity, biology correctness, and known gaps.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import json

@@ -14,7 +14,7 @@ Uses Pareto dominance: candidate A dominates B if A is
 better in at least one dimension and not worse in any.
 Non-dominated candidates form the Pareto front.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import numpy as np
 import json

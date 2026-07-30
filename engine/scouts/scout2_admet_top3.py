@@ -6,7 +6,7 @@ Computes comprehensive drug-likeness and ADMET indicators
 using RDKit descriptors. Honest about what RDKit can and
 cannot predict (no false claims about toxicity).
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 from rdkit import Chem
 from rdkit.Chem import Descriptors, rdMolDescriptors, Fragments, Crippen

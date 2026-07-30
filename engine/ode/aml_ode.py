@@ -18,7 +18,7 @@ Validation targets:
 
 ALL parameters from published AML data. Zero tuning.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import numpy as np
 from scipy.integrate import solve_ivp

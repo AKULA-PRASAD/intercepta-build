@@ -4,7 +4,7 @@ Download SU2C/PCF mCRPC genomic data from cBioPortal API.
 Study: prad_su2c_2019 (Abida et al., PNAS 2019, 429 patients)
 Mutations, CNVs, clinical data.
 
-Authors: Prasad Akula & Claude, Co-Founders
+Author: Prasad Akula
 """
 import json, os, time, sys
 import urllib.request

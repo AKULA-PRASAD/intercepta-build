@@ -3,7 +3,7 @@ INTERCEPTA Net Architecture v2.0 — Step 7
 Query ChEMBL for all compounds with measured activity against mCRPC drug targets.
 Expands Layer 7 beyond the 286 GDSC drugs.
 
-Authors: Prasad Akula & Claude, Co-Founders
+Author: Prasad Akula
 """
 import json, urllib.request, urllib.parse, pandas as pd, numpy as np, time, os
 

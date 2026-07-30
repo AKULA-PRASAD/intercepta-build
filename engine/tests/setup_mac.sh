@@ -8,7 +8,7 @@
 #   chmod +x setup_mac.sh
 #   ./setup_mac.sh
 #
-# Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+# Authors: Prasad Akula
 # ═══════════════════════════════════════════════════════════════
 
 set -e

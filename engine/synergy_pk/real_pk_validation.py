@@ -9,7 +9,7 @@ Only temsirolimus survived, but it failed clinically (Phase II PFS=2mo).
 This proves IC50-proxy PK inflates results for most drugs.
 Real PK from FDA labels essential for trustworthy predictions.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import numpy as np
 from scipy.integrate import solve_ivp

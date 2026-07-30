@@ -5,7 +5,7 @@ INTERCEPTA Step 13: DICE Immune Expression Map
 CTLA4 highest in memory Tregs (1798 TPM), PD-L1 in activated T cells.
 AR barely in immune (1.2 TPM) — confirms prostate specificity.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 

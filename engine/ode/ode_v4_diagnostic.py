@@ -24,7 +24,7 @@ Also bundles the one-line fix for summarize_cohort_g in v5
 
 Does not modify v4.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 3: deep research before code — verify what the model is doing.
 """

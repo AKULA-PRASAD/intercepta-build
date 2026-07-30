@@ -3,7 +3,7 @@
 INTERCEPTA Workstream B Phase 1 Inspection
 Pre-Phase 1 diagnostic: do KAALCURA-3 and NSCLC selectivity genes exist
 in the LuCA atlas's 6,000 HVG subset?
-Author: Prasad Akula & Claude (CSO), 2026-05-08
+Author: Prasad Akula, 2026-05-08
 """
 
 import json

@@ -23,7 +23,7 @@ Validation targets:
   Doc+Cis HR ~1.0 (combination failure)
   Enza+Alis: NE-high +10mo, NE-low +0.1mo
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import numpy as np
 from scipy.integrate import solve_ivp

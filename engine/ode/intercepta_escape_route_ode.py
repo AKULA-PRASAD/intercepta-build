@@ -11,7 +11,7 @@ Models acquired resistance through 4 tumor states:
 Escape transitions (S→M, S→V, S→N) are biologically grounded.
 Drug effects target specific states AND transition rates.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: April 2026
 
 Key results:

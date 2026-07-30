@@ -16,7 +16,7 @@ Output: ~/INTERCEPTA/round2_aml/data/aml_gene_coords.json
 Usage:
   python3 build_aml_gene_coords.py
 
-Author: Prasad Akula & Claude (CSO), 2026-05-06
+Author: Prasad Akula, 2026-05-06
 """
 
 import json

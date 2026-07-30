@@ -10,7 +10,7 @@ Bumps schema_version 1.1 -> 1.2 with amendment note.
 Backs up existing config before write.
 Idempotent: won't double-add if NSCLC already in diseases section.
 
-Author: Prasad Akula & Claude (CSO), 2026-05-08
+Author: Prasad Akula, 2026-05-08
 """
 
 import json

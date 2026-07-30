@@ -9,7 +9,7 @@ Only then docks alisertib.
 Proper preparation using OpenBabel in docking conda env.
 No shortcuts. No fake results.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import subprocess
 import os

@@ -45,7 +45,7 @@ Run
     python3 query_flt3_itd_drugs.py 2>&1 | tee \\
         ../results/beataml_flt3_itd_validation.txt
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 15: report what the data shows, not what we want it to show.
 """

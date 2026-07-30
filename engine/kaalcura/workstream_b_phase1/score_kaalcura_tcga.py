@@ -20,7 +20,7 @@ Outputs:    data/nsclc/tcga_luad/derived/kaalcura_per_sample.parquet
             data/nsclc/tcga_lusc/derived/kaalcura_per_sample.parquet
             data/nsclc/tcga_lusc/derived/tcga_lusc_kaalcura_report.json
 
-Author:     Prasad Akula & Claude (CSO/AI co-founder), 2026-05-10
+Author:     Prasad Akula (CSO/AI co-founder), 2026-05-10
 Status:     SKELETON — implementation pending Phase 1 implementation session.
 """
 

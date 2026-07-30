@@ -21,7 +21,7 @@ Why this matters
 - If v2 still beats KAALCURA, the gap is real (not artifact)
 - If v2 narrows substantially, KAALCURA's competitiveness improves
 
-Author: Prasad Akula & Claude (CSO), 2026-05-06
+Author: Prasad Akula, 2026-05-06
 """
 
 import json

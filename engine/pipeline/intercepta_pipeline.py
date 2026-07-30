@@ -10,7 +10,7 @@ Usage:
   python3 intercepta_pipeline.py --disease "acute myeloid leukemia"
   python3 intercepta_pipeline.py --disease "breast cancer"
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: April 21, 2026
 
 Principles:

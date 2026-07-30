@@ -3,7 +3,7 @@ INTERCEPTA Net Architecture v2.0 — Step 5
 Download pathway memberships from KEGG + Reactome for all mCRPC genes.
 Maps escape routes and pathway crosstalk.
 
-Authors: Prasad Akula & Claude, Co-Founders
+Author: Prasad Akula
 """
 import json, urllib.request, urllib.parse, pandas as pd, numpy as np, time, os
 

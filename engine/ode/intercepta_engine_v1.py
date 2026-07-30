@@ -9,7 +9,7 @@ sensitive and resistant tumor cell populations under treatment.
 
 Mathematical Reference: INTERCEPTA_Phase1_MathSpec_v1.0.docx, Sections 3-4
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: March 2026
 License: Proprietary - INTERCEPTA
 """

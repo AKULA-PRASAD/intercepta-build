@@ -61,7 +61,7 @@ Run
     python3 build_aml_net_skeleton.py 2>&1 | tee \\
         ../results/aml_net_skeleton_build.txt
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 3: standard-of-care verified against 2024-2025 literature
              before writing the pass criterion.

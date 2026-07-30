@@ -24,7 +24,7 @@ Run
 Paste the output back to CSO. Then the real ingestion script is written
 against the verified schema.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 """
 import os

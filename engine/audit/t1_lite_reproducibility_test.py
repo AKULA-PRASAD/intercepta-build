@@ -12,7 +12,7 @@ Procedure:
 4. Compare. PASS if all match. FAIL if any drift.
 5. Write T1_REPRODUCIBILITY_LOG.md with results.
 
-Author: Prasad Akula & Claude (CSO), 2026-05-08
+Author: Prasad Akula, 2026-05-08
 """
 
 import json
@@ -209,7 +209,7 @@ def write_reproducibility_log(log_path, baseline, rerun_results, comparisons,
 
 **Test:** T1 Reproducibility (lite scope per test plan section 6)
 **Subject:** Reproducibility of step6_selectivity_v2.py outputs across 4 diseases
-**Authors:** Prasad Akula and Claude (CSO), Co-Founders of INTERCEPTA
+**Authors:** Prasad Akula
 **Date:** {timestamp}
 **Tag reference:** test-plan-locked
 **Overall verdict:** {overall_str} ({n_pass}/{n_total} diseases reproduced)

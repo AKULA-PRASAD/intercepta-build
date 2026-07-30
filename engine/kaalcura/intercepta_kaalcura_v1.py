@@ -9,7 +9,7 @@ from gene expression data and predicts drug sensitivity per cell population.
 
 Mathematical Reference: INTERCEPTA_Phase1_MathSpec_v1.0.docx, Section 2
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: March 2026
 License: Proprietary - INTERCEPTA
 """

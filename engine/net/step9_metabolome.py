@@ -7,7 +7,7 @@ Processes Human-GEM v1.18 gene-reaction-metabolite links.
 Cleaning: removed cofactors (H2O, ATP, NADPH etc) and parsing artifacts.
 Verified: CYP17A1 → pregnenolone, progesterone, DHEA (abiraterone target pathway).
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import os

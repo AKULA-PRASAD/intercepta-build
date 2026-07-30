@@ -7,7 +7,7 @@ Not file checks — LIVE biological tests with real data.
 
 Run from: cd ~/INTERCEPTA/code && python3 intercepta_capability_test.py
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import numpy as np

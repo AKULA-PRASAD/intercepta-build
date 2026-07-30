@@ -7,7 +7,7 @@ HONEST NOTE: Uses IC50-proxy for Cmax (median IC50 as Cmax estimate).
 Relative ranking useful, absolute HR values NOT trustworthy.
 Real PK needed per drug for absolute predictions.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import numpy as np

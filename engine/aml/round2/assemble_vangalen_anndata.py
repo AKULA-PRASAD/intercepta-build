@@ -62,7 +62,7 @@ Run
     python3 assemble_vangalen_anndata.py 2>&1 | tee \\
         ../results/vangalen_anndata_assembly.txt
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 22, 2026
 """
 import os

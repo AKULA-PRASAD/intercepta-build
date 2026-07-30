@@ -7,7 +7,7 @@ Validates FLT3 inhibitor sensitivity in FLT3-mutant patients.
 Cross-disease repurposing with mCRPC GDSC data.
 
 Data: Bottomly et al. Cancer Cell 2022
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import numpy as np

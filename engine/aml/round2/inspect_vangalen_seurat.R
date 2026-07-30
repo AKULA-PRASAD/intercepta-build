@@ -31,7 +31,7 @@
 # ---
 #     Rscript inspect_vangalen_seurat.R
 #
-# Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+# Authors: Prasad Akula
 # Date:    April 21, 2026
 
 # ---------------------------------------------------------------------

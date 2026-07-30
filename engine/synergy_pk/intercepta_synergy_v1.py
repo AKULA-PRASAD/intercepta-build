@@ -8,7 +8,7 @@ INTERCEPTA's consensus scoring and population-level synergy.
 
 Mathematical Reference: INTERCEPTA_Phase1_MathSpec_v1.0.docx, Section 5
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: March 2026
 """
 

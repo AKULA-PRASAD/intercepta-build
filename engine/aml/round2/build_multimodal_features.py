@@ -23,7 +23,7 @@ Outputs:
 
 Per spec Section 6: fail-closed on missing inputs. No silent feature dropping.
 
-Author: Prasad Akula & Claude (CSO), 2026-05-06
+Author: Prasad Akula, 2026-05-06
 """
 
 import json

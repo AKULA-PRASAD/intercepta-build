@@ -25,7 +25,7 @@ plumbing: correct target + crash-safe output.
 Run from ~/INTERCEPTA/code/:
     python3 apply_v5_1_patches.py
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 """
 import os

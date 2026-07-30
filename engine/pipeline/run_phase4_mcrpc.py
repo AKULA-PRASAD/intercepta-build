@@ -25,7 +25,7 @@ Per spec Section 6 #6 — fail-closed.
 
 Run only after Phase 1, 2, 3 are committed and tagged.
 
-Author: Prasad Akula & Claude (CSO), 2026-05-07
+Author: Prasad Akula, 2026-05-07
 """
 
 import json

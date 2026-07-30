@@ -96,7 +96,8 @@ late_cells = adata.obs[adata.obs['latent_time'] > 0.8]
 early_cells = adata.obs[adata.obs['latent_time'] < 0.2]
 print(f"  Early state cells (latent_time < 0.2): {len(early_cells)}")
 print(f"  Late state cells (latent_time > 0.8): {len(late_cells)}")
-print(f"  These late-state cells are the ones TRANSITIONING toward resistance")
-print(f"  This is what our vision calls the TIME MACHINE")
+print(f"  Late-state = high scVelo latent_time (pseudotime/magnitude only).")
+print(f"  NOTE (LEDGER/README): latent_time is NOT a drug-response/resistance readout — there is no per-cell")
+print(f"  resistance ground truth here, so any 'pre-resistance / time-machine' interpretation is NOT TESTABLE.")
 
 print(f"\nSaved to {RESULTS}/step3_velocity_adata.h5ad")

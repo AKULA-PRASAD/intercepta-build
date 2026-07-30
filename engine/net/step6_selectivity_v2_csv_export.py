@@ -27,7 +27,7 @@ Phase 3 design (locked):
   - mCRPC consumers (build_unified_net, intercepta_pipeline) continue
     reading legacy CSVs unchanged. Round 1 mCRPC behavior preserved.
 
-Author: Prasad Akula & Claude (CSO), 2026-05-07
+Author: Prasad Akula, 2026-05-07
 """
 
 import gzip

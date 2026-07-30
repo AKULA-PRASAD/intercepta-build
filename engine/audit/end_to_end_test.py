@@ -5,7 +5,7 @@ INTERCEPTA End-to-End Pipeline Test
 Tests all 5 stages: Disease → Net → Vulnerability → Drug Sensitivity → ODE → HR
 All stages must PASS for the pipeline to be functional.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import numpy as np

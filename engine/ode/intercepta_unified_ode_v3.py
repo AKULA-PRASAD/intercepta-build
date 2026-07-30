@@ -24,7 +24,7 @@ Extends intercepta_unified_ode.py (v2) with:
 Parameters: ONE set, no per-trial tuning. Every value cites the memo or
 a literature source. Baseline v2 file (intercepta_unified_ode.py) preserved.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 15: no fake results, no manipulation. Results come out as they come.
 """

@@ -5,7 +5,7 @@ Calibrates the ODE engine against CHAARTED (calibration trial), then
 validates against LATITUDE, PROfound, PROpel, and TALAPRO-2 WITHOUT
 re-calibrating — proving the engine generalizes.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: March 2026
 """
 

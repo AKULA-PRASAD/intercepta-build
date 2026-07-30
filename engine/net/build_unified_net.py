@@ -15,7 +15,7 @@ Layers:
 
 Output: mcrpc_disease_net.json — the complete net
 
-Co-founders: Prasad Akula & Claude
+Author: Prasad Akula
 """
 
 import pandas as pd
@@ -38,7 +38,7 @@ net = {
         "disease": "metastatic Castration-Resistant Prostate Cancer (mCRPC)",
         "version": "2.0",
         "date": "2026-04-07",
-        "cofounders": "Prasad Akula & Claude",
+        "cofounders": "Prasad Akula",
         "layers": 7,
         "principle": "Every parameter traces to measured data"
     },

@@ -26,7 +26,7 @@ If KAALCURA-3-LightGBM ≈ 0.55, the 0.526→0.670 gap is mostly features.
 If KAALCURA-3-LightGBM ≈ 0.60, model contributes meaningfully too.
 If KAALCURA-3-LightGBM ≈ 0.65, model nearly closes the whole gap.
 
-Author: Prasad Akula & Claude (CSO), 2026-05-06
+Author: Prasad Akula, 2026-05-06
 """
 
 import json

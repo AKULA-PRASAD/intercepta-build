@@ -7,7 +7,7 @@ Spec:       INTERCEPTA_Workstream_B_Phase1_Specification.md §1.2 (phase1_summar
 Inputs:     LuCA, Wu, TCGA-LUAD, TCGA-LUSC per-cohort kaalcura_report.json files
 Outputs:    data/nsclc/derived/phase1_summary.json
 
-Author:     Prasad Akula & Claude (CSO/AI co-founder), 2026-05-10
+Author:     Prasad Akula (CSO/AI co-founder), 2026-05-10
 Status:     SKELETON
 """
 

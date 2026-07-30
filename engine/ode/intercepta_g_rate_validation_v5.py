@@ -31,7 +31,7 @@ Primary references:
 This file imports UnifiedODEv4 (unchanged) and validates against g-rates.
 Original v4 rPFS-based validation is preserved in its own file.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 15: validate against biologically-grounded endpoints, not trial artifacts.
 """

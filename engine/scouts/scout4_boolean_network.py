@@ -10,7 +10,7 @@ Compensation: genes that flip ON in perturbed steady state.
 This replaces the failed heat diffusion model (v1).
 No compromises on the science.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import numpy as np
 import pandas as pd

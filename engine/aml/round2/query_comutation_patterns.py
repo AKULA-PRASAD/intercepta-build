@@ -37,7 +37,7 @@ Run
     python3 query_comutation_patterns.py 2>&1 | tee \\
         ../results/beataml_comutation_validation.txt
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 15: one more ground-truth check before we build on this.
 """

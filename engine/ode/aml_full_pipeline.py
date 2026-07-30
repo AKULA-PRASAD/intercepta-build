@@ -11,7 +11,7 @@ Stage 3: Drug Screening (BeatAML 166 drugs)
 Stage 4: Combination Predictions
 Stage 5: Novel Molecule Generation
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import numpy as np

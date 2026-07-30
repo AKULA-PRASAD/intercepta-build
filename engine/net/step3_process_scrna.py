@@ -3,7 +3,7 @@ INTERCEPTA Net Architecture v2.0 — Step 3
 Process scRNA-seq: cluster cells, identify populations, compute KAALCURA per cluster.
 36,424 cells from 13 prostate tumors (Chen et al. 2021, GSE141445).
 
-Authors: Prasad Akula & Claude, Co-Founders
+Author: Prasad Akula
 """
 import pandas as pd, numpy as np, time, warnings, os, sys, gc
 from scipy import sparse

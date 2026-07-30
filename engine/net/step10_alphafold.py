@@ -4,7 +4,7 @@ INTERCEPTA Step 10: AlphaFold Protein Structures
 Downloads AlphaFold v6 structures for drug target proteins.
 19/20 targets successful (ATM too large, no prediction).
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import json

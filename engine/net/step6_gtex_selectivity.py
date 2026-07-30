@@ -3,7 +3,7 @@ INTERCEPTA Net Architecture v2.0 — Step 6
 Download GTEx normal prostate expression for selectivity mapping.
 Compute tumor/normal ratio for every gene — the safety constraint layer.
 
-Authors: Prasad Akula & Claude, Co-Founders
+Author: Prasad Akula
 """
 import json, urllib.request, pandas as pd, numpy as np, time, os
 

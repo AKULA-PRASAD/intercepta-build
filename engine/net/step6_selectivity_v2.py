@@ -45,7 +45,7 @@ Output schema (per spec Section 5):
   "module_version": "step6_selectivity_v2"
 }
 
-Author: Prasad Akula & Claude (CSO), 2026-05-07
+Author: Prasad Akula, 2026-05-07
 """
 
 import gzip

@@ -4,7 +4,7 @@ INTERCEPTA Step 8: Open Targets Disease Map
 Downloads and processes Open Targets v26.03 disease-gene associations.
 4,508,002 associations, 30,548 genes, 26,288 diseases.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import pandas as pd
 import os

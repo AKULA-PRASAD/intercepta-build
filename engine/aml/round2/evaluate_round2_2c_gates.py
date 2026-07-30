@@ -21,7 +21,7 @@ Output:
   multimodal_predictor_summary.json  — verdict + all numbers + spec compliance
   round2_2c_closure_data.json        — same content, formatted for human use
 
-Author: Prasad Akula & Claude (CSO), 2026-05-06
+Author: Prasad Akula, 2026-05-06
 """
 
 import json

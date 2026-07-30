@@ -8,7 +8,7 @@ by querying the Universal Net.
 This is the core of our vision: "When a new disease emerges,
 we do not build a new net. We query the existing net."
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: April 2026
 """
 import pandas as pd

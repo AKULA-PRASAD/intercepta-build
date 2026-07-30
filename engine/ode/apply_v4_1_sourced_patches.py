@@ -60,7 +60,7 @@ No other changes
 - Validation infrastructure: unchanged
 - Inter-patient variability CVs: unchanged
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 4: fix structure, don't tune parameters.
 Principle 15: sourced changes only, never fit-to-match.

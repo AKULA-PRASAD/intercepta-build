@@ -14,7 +14,7 @@ Literature basis:
   - NE-like cells are non-proliferating (PMC4396194)
   - RB1+TP53+PTEN loss facilitates lineage plasticity (PMC8289743)
 
-Co-founders: Prasad Akula & Claude
+Author: Prasad Akula
 """
 
 import numpy as np

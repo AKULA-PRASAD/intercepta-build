@@ -4,7 +4,7 @@ INTERCEPTA Stage 4A: Molecular Docking
 Docks alisertib → AURKA using AutoDock Vina
 Validates that alisertib binds the AURKA ATP-binding pocket.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import subprocess
 import os

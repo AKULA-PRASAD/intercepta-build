@@ -12,7 +12,7 @@ Inputs:     /scratch/akula.pra/INTERCEPTA/data/nsclc/luca_salcher2022/data/
 Outputs:    data/nsclc/luca_salcher2022/derived/kaalcura_per_cell.parquet
             data/nsclc/luca_salcher2022/derived/luca_kaalcura_report.json
 
-Author:     Prasad Akula & Claude (CSO/AI co-founder), 2026-05-10
+Author:     Prasad Akula (CSO/AI co-founder), 2026-05-10
 Status:     SKELETON — full implementation pending Phase 1 implementation session.
             This file gives the structure; the bodies are TODO-marked.
 """

@@ -9,7 +9,7 @@ If a human typed the number → MANIPULATED.
 
 Run: cd ~/INTERCEPTA/code && python3 truth_audit.py
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Our Principle: No false claims. No manipulation. Only real science.
 """
 import pandas as pd

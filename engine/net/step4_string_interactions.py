@@ -3,7 +3,7 @@ INTERCEPTA Net Architecture v2.0 — Step 4
 Download protein-protein interactions from STRING v12.5
 For all recurrently mutated mCRPC genes from Step 2.
 
-Authors: Prasad Akula & Claude, Co-Founders
+Author: Prasad Akula
 """
 import json, urllib.request, urllib.parse, pandas as pd, numpy as np, time, os
 

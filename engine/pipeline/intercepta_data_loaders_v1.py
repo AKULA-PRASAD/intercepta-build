@@ -6,7 +6,7 @@ Scripts to load GDSC, TCGA-PRAD, and scRNA-seq data into INTERCEPTA's pipeline.
 Run these once your data is downloaded. Each function tells you exactly
 what file to download and from where.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date: March 2026
 """
 

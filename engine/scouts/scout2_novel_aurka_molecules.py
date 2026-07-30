@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 """
-INTERCEPTA Scout 2: Novel AURKA Inhibitor Generation
-=====================================================
-Generates genuinely novel molecules targeting AURKA by systematic
-scaffold modification of known AURKA inhibitor pharmacophores.
+INTERCEPTA Scout 2: AURKA Inhibitor SCAFFOLD-HOPPING (not de novo)
+=================================================================
+Enumerates analogues of known AURKA-inhibitor pharmacophores by R-group / scaffold
+modification, then docks candidates against PDB 4J8M using the Vina protocol.
 
-Then docks ALL candidates against PDB 4J8M crystal structure
-using the validated Vina protocol.
-
-This is INTERCEPTA's first de novo molecular design.
-The vision: "discovers NEW drug molecules that do not yet exist"
-
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+⚠️ CORRECTION (authoritative: LEDGER.md + engine/scouts/README.md): this is R-group
+SCAFFOLD-HOPPING, NOT de novo generative molecular design. Earlier docstring claims
+("generates genuinely novel molecules", "first de novo molecular design", "drug molecules
+that do not yet exist") were OVERCLAIMS and are retracted. Any output (e.g. INTC002,
+ChEMBL novelty ≈ 0.27) is a COMPUTATIONAL HYPOTHESIS only — no validated novel molecule exists.
 """
 from rdkit import Chem
 from rdkit.Chem import AllChem, Descriptors, rdMolDescriptors, DataStructs

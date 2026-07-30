@@ -76,7 +76,7 @@ Run
     python3 build_aml_net_v3_integrated.py 2>&1 | tee \\
         ../results/aml_net_v3_build.txt
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 22, 2026
 """
 import os

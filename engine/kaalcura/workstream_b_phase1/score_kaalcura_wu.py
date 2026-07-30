@@ -16,7 +16,7 @@ Note:       Per Phase 0 verification, Wu 2021 ships per-sample CSV expression
             matrices (.txt.gz), NOT 10X mtx triplets. Per spec §3.4, use
             scanpy.read_csv() per sample, concatenate into single AnnData.
 
-Author:     Prasad Akula & Claude (CSO/AI co-founder), 2026-05-10
+Author:     Prasad Akula (CSO/AI co-founder), 2026-05-10
 Status:     SKELETON — implementation pending Phase 1 implementation session.
 """
 

@@ -29,7 +29,7 @@ Outputs:
   - shap_summary.csv          — per-feature-class mean |SHAP| value
   - train_summary.json        — global stats, comparator deltas
 
-Author: Prasad Akula & Claude (CSO), 2026-05-06
+Author: Prasad Akula, 2026-05-06
 """
 
 import json

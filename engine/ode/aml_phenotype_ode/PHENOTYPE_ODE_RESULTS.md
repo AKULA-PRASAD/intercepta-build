@@ -1,7 +1,7 @@
 # INTERCEPTA Phenotype-Structured ODE v1.0 — Results & Next Steps
 # ================================================================
 # Date: April 7, 2026
-# Authors: Prasad Akula & Claude, Co-Founders
+# Authors: Prasad Akula
 
 ## WHAT WAS BUILT
 

@@ -15,7 +15,7 @@ Threshold: consensus > 5 = synergistic, < -5 = antagonistic
 Key insight from research: each metric identifies DIFFERENT
 synergy types. Bliss/Loewe consensus eliminates false positives.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import numpy as np
 from scipy.optimize import brentq

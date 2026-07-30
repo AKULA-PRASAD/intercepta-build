@@ -49,7 +49,7 @@ Run
     python3 build_aml_net_skeleton_v2.py 2>&1 | tee \\
         ../results/aml_net_skeleton_v2_build.txt
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 Date:    April 21, 2026
 Principle 15: found a real bug, fixing it, re-testing on DIFFERENT genotype
              to prove the join is working on more than one case.

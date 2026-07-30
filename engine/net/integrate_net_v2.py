@@ -5,7 +5,7 @@ Adds disease associations, metabolites, AlphaFold structures,
 and immune expression to the unified net.
 Final: 49.1 MB, 27,431 genes, 11 layers.
 
-Authors: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+Author: Prasad Akula
 """
 import json
 import pandas as pd

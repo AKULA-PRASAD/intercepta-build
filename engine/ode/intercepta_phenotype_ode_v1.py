@@ -41,7 +41,7 @@ NOVEL CONTRIBUTION:
     data to set n_i(0) — the initial phenotype distribution.
     Every parameter traces to measured data. No tuning.
 
-AUTHORS: Prasad Akula & Claude, Co-Founders of INTERCEPTA
+AUTHORS: Prasad Akula, Co-Founders of INTERCEPTA
 DATE: April 2026
 """
 
