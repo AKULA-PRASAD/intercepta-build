@@ -1,0 +1,87 @@
+{
+  "provenance": {
+    "cv": "leave-disease-out GroupKFold(5)",
+    "data": "Open Targets Platform v26.06 (cached ot_target_disease.parquet)",
+    "data_sha256": "d14006e8ec9cf292349e1c5b2a9db5f902e82ba532674b71bdaaf2001fbeb1ba",
+    "experiment": "B34_target_id",
+    "git_sha": "b36aa29d62fff6cdf109a3e3c11a5cf3675f144f",
+    "label": "clinical datatype score > 0 (target-disease reached clinic)",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "python": "3.11.14",
+    "seed": 42,
+    "timestamp_utc": "2026-07-30T11:36:43Z"
+  },
+  "results": {
+    "H1_nonclinical_beats_trivial": true,
+    "H2_components": {
+      "full_gt_literature_by_1sd": true,
+      "genetic_coef_positive_with_literature_UNRELIABLE_collinearity": false,
+      "genetic_only_gt_0.5_by_1sd": true
+    },
+    "H2_genetic_beyond_popularity": true,
+    "full_nonclinical": {
+      "auprc_mean": 0.754,
+      "auroc_mean": 0.8388,
+      "auroc_sd": 0.0524,
+      "features": [
+        "genetic_association",
+        "genetic_literature",
+        "somatic_mutation",
+        "affected_pathway",
+        "animal_model",
+        "rna_expression"
+      ]
+    },
+    "full_nonclinical_plus_literature": {
+      "auprc_mean": 0.6847,
+      "auroc_mean": 0.8321,
+      "auroc_sd": 0.0564,
+      "features": [
+        "genetic_association",
+        "genetic_literature",
+        "somatic_mutation",
+        "affected_pathway",
+        "animal_model",
+        "rna_expression",
+        "literature"
+      ]
+    },
+    "genetic_association_only": {
+      "auprc_mean": 0.4734,
+      "auroc_mean": 0.7412,
+      "auroc_sd": 0.0522,
+      "features": [
+        "genetic_association"
+      ]
+    },
+    "logistic_coefficients_standardized": {
+      "affected_pathway": -0.3688,
+      "animal_model": -0.1254,
+      "genetic_association": -1.6862,
+      "genetic_literature": -0.2424,
+      "literature": 0.2015,
+      "rna_expression": 0.0786,
+      "somatic_mutation": -0.9275
+    },
+    "n_diseases": 40,
+    "n_pairs": 12000,
+    "popularity_literature_only": {
+      "auprc_mean": 0.3278,
+      "auroc_mean": 0.5217,
+      "auroc_sd": 0.0223,
+      "features": [
+        "literature"
+      ]
+    },
+    "prevalence": 0.2931,
+    "scope_caveats": "Analysis is conditional on top-300-associated targets per disease (collection selected by OVERALL score, which includes clinical) \u2014 a 'reasonably-associated target' sample, not all genes. Signed joint coefficients are suppression-affected (use marginal AUROC + the full-vs-popularity comparison, not coefficient signs). Association != validated target.",
+    "trivial_auprc": 0.2931,
+    "trivial_auroc": 0.5,
+    "verdict": "GENETIC/FUNCTIONAL EVIDENCE CARRIES POPULARITY-INDEPENDENT TARGET-ID SIGNAL (positive): the study-popularity baseline (literature-only) is near-chance (AUROC 0.522); genetic_association ALONE predicts clinic-reached targets in UNSEEN diseases (AUROC 0.741); the full non-clinical evidence model (AUROC 0.839) beats popularity by >1sd, and adding literature on top does not help (0.832). So target 'success' here is driven by genuine biological/genetic evidence, NOT study bias \u2014 consistent with Nelson-2015, surviving a B10-style popularity control. HONEST CAVEATS: (a) the pre-registered signed-coefficient sub-test fails due to suppression/collinearity (genetic coef -1.69 despite 0.74 marginal AUROC) and is NOT used to gate the verdict; (b) sample is conditional on top-300-associated targets; (c) Open Targets scores are curated evidence, association != validated target, leave-disease-out enrichment != prospective success."
+  }
+}

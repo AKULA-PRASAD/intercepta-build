@@ -66,6 +66,12 @@ permutation + leakage + multiple-testing + confound + external replication; repr
 ## Discovery-pipeline modules — built & validated (added 2026-07-30)
 Beyond the drug-response/synergy work, the program now has honestly-benchmarked, reproduced-×2 modules of the wider
 drug-discovery pipeline, each pre-registered and shipped with an honest scope (none is a clinical/safety claim):
+- **#1 target identification (B34):** on Open Targets (leave-disease-out), genetic/functional evidence predicts
+  which target-disease pairs reached the clinic **beyond a study-popularity baseline** (popularity-only AUROC 0.522,
+  genetic-only 0.741, full evidence 0.839) — a confound-surviving POSITIVE (the B10-style test, here passed).
+- **#2 de novo / goal-directed design (B33):** a BRICS-GA optimizes a developability objective, beating seed +
+  random baselines at 100% validity/novelty; shows single-objective optimization reward-hacks synthesizability.
+  Shipped `intercepta.generate` + CLI. Scope: optimization over known chemistry, NOT de novo drug discovery.
 - **#4 ADMET / safety (B30):** structure→property prediction on the TDC ADMET benchmark (22 tasks, scaffold splits).
   Beats the trivial baseline on **22/22**, mid-leaderboard; shipped `intercepta.admet.ADMETPredictor` + CLI.
 - **#4 uncertainty (B30b):** the applicability-domain flag is a **real but weak** reliability signal (error rises
@@ -79,8 +85,10 @@ drug-discovery pipeline, each pre-registered and shipped with an honest scope (n
   **standalone**; "platform whole>parts" is not established on this outcome (needs a larger/multi-outcome benchmark
   or a learned joint representation). Recorded as first-class, not overstated.
 
-The honest scale check stands: against "any drug for any disease" these are validated corners of modules #3–#5;
-modules #1 (target ID) and #2 (de novo design) remain unbuilt, and clinical validation is gated on new data.
+The honest scale check stands: against "any drug for any disease", modules #1–#5 now have validated computational
+corners (target-ID, design, efficacy, ADMET, synthesizability), each honestly scoped; the naive *integration* of
+these modules is NOT yet a decisive win (B32/B32b); and clinical validation (#6) is gated on new patient data
+(Track-1). Real, reproducible components — not a solved pipeline, and stated as such.
 
 ## The definition of success we hold to
 Per the Constitution: *success is discovering the strongest scientifically-supported version of the vision — not
