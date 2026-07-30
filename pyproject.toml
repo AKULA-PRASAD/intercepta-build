@@ -25,6 +25,7 @@ dev = ["pytest>=7"]
 # kept OPTIONAL so the core drug-response engine installs light; `pip install intercepta[chem]`.
 chem = ["rdkit>=2023.3"]
 admet = ["rdkit>=2023.3", "PyTDC>=1.1", "setuptools==70.3.0"]
+fm = ["torch>=2", "transformers>=4.3"]     # B38 deep-FM experiment only (ChemBERTa embeddings); not core
 
 [project.scripts]
 intercepta = "intercepta.cli:main"
