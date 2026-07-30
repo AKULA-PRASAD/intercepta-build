@@ -1,0 +1,94 @@
+{
+  "per_target": {
+    "ESR1_ant": {
+      "docking": {
+        "auroc": 0.7089,
+        "bedroc_a80.5": 0.7232,
+        "ef_5pct": 1.667
+      },
+      "ligand_similarity": {
+        "auroc": 0.5374,
+        "bedroc_a80.5": 0.3318,
+        "ef_5pct": 1.333
+      },
+      "n_actives_docked": 60,
+      "n_docked": 180,
+      "n_prep_fail": 0,
+      "n_references": 14,
+      "spearman_dock_vs_ligsim": 0.4664
+    },
+    "FEN1": {
+      "docking": {
+        "auroc": 0.6424,
+        "bedroc_a80.5": 0.6496,
+        "ef_5pct": 1.333
+      },
+      "ligand_similarity": {
+        "auroc": 0.4438,
+        "bedroc_a80.5": 0.0077,
+        "ef_5pct": 0.0
+      },
+      "n_actives_docked": 60,
+      "n_docked": 180,
+      "n_prep_fail": 0,
+      "n_references": 1,
+      "spearman_dock_vs_ligsim": 0.1683
+    },
+    "MAPK1": {
+      "docking": {
+        "auroc": 0.6232,
+        "bedroc_a80.5": 0.2516,
+        "ef_5pct": 1.667
+      },
+      "ligand_similarity": {
+        "auroc": 0.5507,
+        "bedroc_a80.5": 0.6858,
+        "ef_5pct": 2.0
+      },
+      "n_actives_docked": 60,
+      "n_docked": 180,
+      "n_prep_fail": 0,
+      "n_references": 11,
+      "spearman_dock_vs_ligsim": 0.1739
+    }
+  },
+  "provenance": {
+    "box": [
+      22.0,
+      22.0,
+      22.0
+    ],
+    "embed_seed": 2887,
+    "exhaustiveness": 8,
+    "experiment": "B47_docking_structure_channel",
+    "git_sha": "b77eb5f82e345cead4da52dcc66cc74a2db9f181",
+    "libs": {
+      "numpy": "2.5.1",
+      "openbabel": "3.1.0",
+      "rdkit": "2025.09.5",
+      "scipy": "1.18.0",
+      "vina": "1.2.7"
+    },
+    "max_act": 60,
+    "max_dec": 120,
+    "python": "3.12.13",
+    "targets": [
+      "FEN1",
+      "MAPK1",
+      "ESR1_ant"
+    ],
+    "timestamp_utc": "2026-07-30T23:28:11Z",
+    "vina_cpu": 8,
+    "vina_seed": 42
+  },
+  "summary": {
+    "H1_docking_enriches_above_chance": true,
+    "H2_orthogonal_to_ligand_based": true,
+    "n_targets": 3,
+    "n_targets_docking_beats_ligsim": 3,
+    "panel_mean_docking_auroc": 0.6582,
+    "panel_mean_ligand_similarity_auroc": 0.5106,
+    "panel_mean_spearman_dock_vs_ligsim": 0.2695,
+    "verdict": "STRUCTURE CHANNEL ADDED & ORTHOGONAL (motivates B48 fusion): docking enriches above chance (panel-mean AUROC 0.6582) and is weakly correlated with the ligand-similarity channel (mean Spearman 0.2695) \u2014 complementary information, the prerequisite for a fusion gain. Ligand-similarity mean AUROC 0.5106; docking wins on 3/3 targets. Docking is weak on unbiased data as expected; heuristic score, rigid receptor, subsampled, 3 targets; not wet-lab."
+  }
+}

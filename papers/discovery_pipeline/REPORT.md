@@ -203,6 +203,19 @@ metric. Honest weak spots: TP53 (0.68) and MTORC1 (novel-band 0.52, similarity-d
 placement of our channel on the unbiased benchmark. Retrospective, in-silico; enrichment ≠ proven activity; not
 wet-lab. (payload 33d754cd)
 
+## 3h. The structure-based channel — docking, and its orthogonality (B47)
+
+Everything prior is ligand-only. B47 adds the **structure-based** channel: AutoDock Vina docking into the target
+pocket — the first genuinely *new information source* (the receptor) in the program. On 3 LIT-PCBA targets with
+co-crystal receptors (FEN1/MAPK1/ESR1_ant; 60 actives + 120 decoys each; Vina seed=42/cpu=8, byte-deterministic),
+docking enriches **above chance (panel-mean AUROC 0.658)** and — crucially — is **orthogonal to the ligand channel**
+(mean Spearman 0.27 vs co-crystal similarity). That orthogonality is the prerequisite for a fusion gain, which B48
+tests. **Honest framing:** docking beat the *unsupervised* co-crystal-similarity baseline (0.51) here, but that
+baseline is much weaker than our *supervised* QSAR (B46 median 0.78) — so docking is not the strongest channel, and
+its early enrichment is weak (EF@5% 1.3–1.7×, consistent with docking's known weakness on unbiased data). Its value is
+the complementary signal, not raw superiority. Heuristic score (not binding ΔG), rigid receptor, obabel prep, 3
+targets, subsampled; not wet-lab; no SOTA claim. (payload 24d5b0f6)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -242,4 +255,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6.
