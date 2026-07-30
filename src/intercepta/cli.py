@@ -76,13 +76,16 @@ def _cmd_admet(args):
         if bad:
             print(f"ERROR: unknown task(s): {bad}. Known: {sorted(TASK_METRIC)}", file=sys.stderr)
             return 2
-    pred = ADMETPredictor.from_tdc(tasks=tasks)
+    pred = ADMETPredictor.from_tdc(tasks=tasks, conformal=args.conformal)
     out = pred.predict(smiles, tasks=tasks, tidy=True)
     out.to_csv(args.out, index=False)
     n_ood = int((~out["in_domain"]).sum())
     print(f"predicted {out['task'].nunique()} ADMET propertie(s) for {out['smiles'].nunique()} molecule(s) "
           f"({n_ood}/{len(out)} rows out-of-applicability-domain) -> {args.out}")
-    print("NOTE: in-silico SCREENING FILTER (scaffold-split validated, B30), NOT a safety guarantee; "
+    if args.conformal:
+        print("conformal uncertainty ON (B30b-validated): regression rows carry pi_low/pi_high, classification rows "
+              "carry conformal_set/set_size (AD-adaptive; ~nominal coverage on scaffold split).")
+    print("NOTE: in-silico SCREENING FILTER (scaffold-split validated, B30/B30b), NOT a safety guarantee; "
           "out-of-domain rows are low-confidence. Not a clinical/regulatory determination.")
     return 0
 
@@ -110,6 +113,8 @@ def main(argv=None):
     a.add_argument("--molecules", help="comma-separated SMILES strings")
     a.add_argument("--smiles", help="path to a file with one SMILES per line (alternative to --molecules)")
     a.add_argument("--tasks", help="comma-separated ADMET task names (default: all 22 TDC tasks)")
+    a.add_argument("--conformal", action="store_true",
+                   help="emit calibrated conformal uncertainty (B30b): regression pi_low/pi_high, classification sets")
     a.add_argument("--out", default="intercepta_admet.csv")
     a.set_defaults(func=_cmd_admet)
     args = p.parse_args(argv)

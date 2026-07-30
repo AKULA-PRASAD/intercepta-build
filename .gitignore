@@ -21,3 +21,5 @@ venv/
 build/
 dist/
 .pytest_cache/
+# TDC Oracle downloads (e.g. SA scorer) — data, never committed
+oracle/

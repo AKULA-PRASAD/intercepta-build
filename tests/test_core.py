@@ -194,3 +194,37 @@ def test_admet_unknown_task_raises():
     from intercepta.admet import ADMETPredictor
     with pytest.raises(ValueError):
         ADMETPredictor().fit_task("not_a_task", ["CCO"], [1.0])
+
+
+# ---- ADMET conformal uncertainty (B30b), data-free ----
+def _synth_alcohols(n):
+    import numpy as np
+    base = ["CCO", "CCCO", "CCCCO", "CCCCCO", "OCCCCCC", "CC(C)O", "CCC(C)O", "OCC(C)C", "CCCCCCCO", "OCCCCCCCC"]
+    return [base[i % len(base)] for i in range(n)]
+
+def test_admet_conformal_regression_intervals():
+    from intercepta.admet import ADMETPredictor
+    smi = _synth_alcohols(120); y = [float(len(s)) for s in smi]          # >=60 -> conformal split activates
+    p = ADMETPredictor(conformal=True).fit_task("lipophilicity_astrazeneca", smi, y)
+    out = p.predict(["CCO", "CCCCO"]).set_index("smiles")
+    assert {"pi_low", "pi_high"}.issubset(out.columns)                    # regression -> intervals
+    assert (out["pi_low"] <= out["prediction"]).all() and (out["prediction"] <= out["pi_high"]).all()
+    assert "conformal_set" not in out.columns                             # not a classification output
+
+def test_admet_conformal_classification_set():
+    from intercepta.admet import ADMETPredictor
+    pos = ["c1ccccc1", "c1ccc(C)cc1", "c1ccc(O)cc1", "c1ccncc1", "c1ccc2ccccc2c1", "c1ccc(N)cc1"]
+    neg = ["CCO", "CCCO", "CCCCO", "CC(C)O", "OCCCCCC", "CCC(C)O"]
+    smi = (pos + neg) * 10; y = ([1] * len(pos) + [0] * len(neg)) * 10     # 120 samples
+    p = ADMETPredictor(conformal=True).fit_task("bbb_martins", smi, y)
+    out = p.predict(["c1ccccc1", "CCO"]).set_index("smiles")
+    assert {"conformal_set", "set_size"}.issubset(out.columns)            # classification -> prediction sets
+    assert out["set_size"].between(0, 2).all()
+    assert out.loc["c1ccccc1", "conformal_set"].startswith("{") and out.loc["c1ccccc1", "conformal_set"].endswith("}")
+    assert "pi_low" not in out.columns
+
+def test_admet_conformal_default_off_backcompat():
+    from intercepta.admet import ADMETPredictor
+    smi = _synth_alcohols(120); y = [float(len(s)) for s in smi]
+    out = ADMETPredictor().fit_task("lipophilicity_astrazeneca", smi, y).predict(["CCO"])   # conformal default off
+    assert not {"pi_low", "pi_high", "conformal_set", "set_size"} & set(out.columns)        # unchanged schema

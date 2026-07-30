@@ -74,7 +74,7 @@ reproduce.sh requirements.txt
 ## Install & use as a tool
 ```bash
 pip install -e .            # installs the `intercepta` package + CLI
-pytest                      # 17 unit tests (leakage, markers, calibration gate, axes, synergy, admet) — no data needed
+pytest                      # 20 unit tests (leakage, markers, calibration gate, axes, synergy, admet+conformal) — no data needed
 intercepta info             # version + HONEST SCOPE
 intercepta rank    --expr tumor_expr.csv --drugs trametinib,gemcitabine --out ranking.csv   # needs INTERCEPTA_DATA
 intercepta synergy --expr tumor_expr.csv --library drugcomb --out synergy.csv               # combinations arm (V23)
@@ -83,7 +83,9 @@ intercepta admet   --molecules "CC(=O)Oc1ccccc1C(=O)O" --tasks bbb_martins,herg 
 `intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
 `intercepta admet` predicts ADMET/safety properties from SMILES (structure-only screening filter, B30 — beats
 trivial on all 22 TDC tasks, mid-leaderboard; scaffold-split only, NOT a safety guarantee). Each row carries an
-applicability-domain flag. `intercepta synergy` ranks synergistic pairs from a known drug library (cell-line Loewe).
+applicability-domain flag; add `--conformal` for B30b-validated calibrated uncertainty (regression prediction
+intervals, classification prediction-sets; ~nominal coverage on scaffold splits). `intercepta synergy` ranks
+synergistic pairs from a known drug library (cell-line Loewe).
 **Every prediction is LOW/MODERATE confidence by design** — a research hypothesis, never a clinical decision
 (human clinical response was a well-powered null, see `LEDGER.md` / `papers/intercepta_engine/MANUSCRIPT.md`).
 
