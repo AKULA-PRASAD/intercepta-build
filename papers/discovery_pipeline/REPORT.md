@@ -109,6 +109,21 @@ information/data, not representation.** INTERCEPTA's value is its standalone val
 
 ---
 
+## 3b. The assembled pipeline works as a tool (B39)
+
+The integration *predictor* claim fails (§3), but the modules used for their **intended purpose** — as a generator +
+filters — compose into a working discovery tool. `intercepta.discover.DiscoveryPipeline` runs a goal-directed BRICS
+genetic algorithm (design, B33) optimizing **F = drug-likeness × synthesizability (B31) × predicted-safety (B30
+hERG/AMES/DILI)** over ChEMBL seeds. Result (reproduced ×2, payload 23a7ae0c): the pipeline yields candidates at mean
+developability **F 0.504** (best 0.627) vs the ChEMBL seed population **0.185**, at **100% validity, uniqueness, and
+novelty**; and the multi-objective demonstrably shifts the output vs a QED-only run — **more synthesizable** (SAscore
+2.16 vs 2.40) and **safer** (predicted-safety 0.80 vs 0.67). Honest caveat, reported: only **56%** of top candidates
+fall inside the ADMET applicability domain — the rest are novel chemistry where the safety calls are unreliable, and
+optimizing against in-silico predictors invites gaming. This is a computational *prioritization* demonstration —
+every candidate is a hypothesis, not a validated, novel, safe, or practically-synthesizable drug. It shows the
+platform *running end-to-end*, honestly bounded; it does not contradict §3 (which concerns using module outputs as a
+combined *predictor*).
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -146,7 +161,6 @@ are human/collaboration decisions, not computations.
 ## 7. Reproducibility
 
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
-twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 28 data-free unit tests cover the
-shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet,
-synth, prioritize, generate}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4.
+twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
+shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c.

@@ -1,0 +1,160 @@
+{
+  "provenance": {
+    "config": {
+      "generations": 10,
+      "modules": "generate(B33) + admet(B30: herg/ames/dili) + synth(B31)",
+      "n_seeds": 200,
+      "objective": "QED \u00d7 synthesizability((10-SA)/9) \u00d7 safety(1-mean P_tox over herg/ames/dili)",
+      "pop": 100
+    },
+    "experiment": "B39_end_to_end_discovery",
+    "git_sha": "5e2a6a933c316c9e081d56e059b6bd4e4a1d73e1",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "python": "3.11.14",
+    "seed": 42,
+    "timestamp_utc": "2026-07-30T13:54:38Z"
+  },
+  "results": {
+    "H1_pipeline_beats_seed_population": true,
+    "H2_multiobjective_improves_synth_and_safety": true,
+    "discovery_pipeline_multiobjective": {
+      "best_F": 0.6265,
+      "mean_F": 0.504,
+      "mean_qed": 0.7207,
+      "mean_sa": 2.1569,
+      "mean_safety": 0.8042,
+      "n": 89
+    },
+    "fraction_top_in_applicability_domain": 0.5618,
+    "history": [
+      {
+        "best": 0.5208,
+        "generation": 0,
+        "mean": 0.1848,
+        "n": 200
+      },
+      {
+        "best": 0.5933,
+        "generation": 1,
+        "mean": 0.434,
+        "n": 100
+      },
+      {
+        "best": 0.6166,
+        "generation": 2,
+        "mean": 0.5053,
+        "n": 98
+      },
+      {
+        "best": 0.6202,
+        "generation": 3,
+        "mean": 0.5025,
+        "n": 89
+      },
+      {
+        "best": 0.6265,
+        "generation": 4,
+        "mean": 0.5039,
+        "n": 93
+      },
+      {
+        "best": 0.6265,
+        "generation": 5,
+        "mean": 0.5026,
+        "n": 98
+      },
+      {
+        "best": 0.6265,
+        "generation": 6,
+        "mean": 0.505,
+        "n": 88
+      },
+      {
+        "best": 0.6265,
+        "generation": 7,
+        "mean": 0.5091,
+        "n": 89
+      },
+      {
+        "best": 0.6265,
+        "generation": 8,
+        "mean": 0.4969,
+        "n": 89
+      },
+      {
+        "best": 0.6265,
+        "generation": 9,
+        "mean": 0.5166,
+        "n": 90
+      }
+    ],
+    "novelty_vs_seeds": 1.0,
+    "qed_only_baseline": {
+      "best_F": 0.6714,
+      "mean_F": 0.4786,
+      "mean_qed": 0.8608,
+      "mean_sa": 2.4004,
+      "mean_safety": 0.6657,
+      "n": 99
+    },
+    "seed_population": {
+      "best_F": 0.5208,
+      "mean_F": 0.1848,
+      "mean_qed": 0.5461,
+      "mean_sa": 3.0941,
+      "mean_safety": 0.4238,
+      "n": 200
+    },
+    "top5_candidates": [
+      {
+        "applicability_domain": "in-domain",
+        "developability_F": 0.6265,
+        "predicted_safety": 0.8664,
+        "qed": 0.7923,
+        "sa_score": 1.7855,
+        "smiles": "c1ccc(NCC2CCOCC2)cc1"
+      },
+      {
+        "applicability_domain": "in-domain",
+        "developability_F": 0.6225,
+        "predicted_safety": 0.9042,
+        "qed": 0.7655,
+        "sa_score": 1.906,
+        "smiles": "c1cncc(NCC2CCCC2)c1"
+      },
+      {
+        "applicability_domain": "in-domain",
+        "developability_F": 0.6202,
+        "predicted_safety": 0.823,
+        "qed": 0.8593,
+        "sa_score": 2.1073,
+        "smiles": "Oc1ccc(OCC2CCOCC2)cc1F"
+      },
+      {
+        "applicability_domain": "in-domain",
+        "developability_F": 0.6199,
+        "predicted_safety": 0.9462,
+        "qed": 0.7221,
+        "sa_score": 1.8347,
+        "smiles": "c1cncc(NC2CCCC2)c1"
+      },
+      {
+        "applicability_domain": "in-domain",
+        "developability_F": 0.6167,
+        "predicted_safety": 0.9246,
+        "qed": 0.7026,
+        "sa_score": 1.4567,
+        "smiles": "c1ccc(NC2CCCC2)cc1"
+      }
+    ],
+    "uniqueness": 1.0,
+    "validity": 1.0,
+    "verdict": "END-TO-END PIPELINE WORKS: the assembled discovery pipeline (generate->developability\u00d7safety\u00d7synth optimize->rank) yields candidates with mean developability F 0.504 (best 0.6265) vs the ChEMBL seed population 0.1848 (best 0.5208) \u2014 at 100% validity, uniqueness 1.0, novelty 1.0 vs seeds. The multi-objective changes the output vs a QED-only GA (more synthesizable: mean SA 2.1569 vs 2.4004; safer: predicted-safety 0.8042 vs 0.6657). 56% of top candidates are in the ADMET applicability domain. HONEST SCOPE: computational prioritization over KNOWN chemistry; candidates are hypotheses, NOT validated/novel/safe drugs; optimizing against predictors invites gaming (out-of-domain flags mark unreliable calls)."
+  }
+}

@@ -55,10 +55,12 @@ class MoleculeOptimizer:
     """
 
     def __init__(self, objective="multi", pop_size=100, generations=10, elite_frac=0.2, seed=42, max_frag=600):
-        if objective not in OBJECTIVES:
-            raise ValueError(f"objective must be one of {list(OBJECTIVES)}")
-        self.objective = objective
-        self.fitness = OBJECTIVES[objective]
+        if callable(objective):                       # custom fitness fn (mol -> float), e.g. DiscoveryPipeline
+            self.objective, self.fitness = "custom", objective
+        elif objective in OBJECTIVES:
+            self.objective, self.fitness = objective, OBJECTIVES[objective]
+        else:
+            raise ValueError(f"objective must be one of {list(OBJECTIVES)} or a callable")
         self.pop_size, self.generations = pop_size, generations
         self.elite_k = max(1, int(elite_frac * pop_size))
         self.seed, self.max_frag = seed, max_frag

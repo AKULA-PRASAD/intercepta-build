@@ -321,3 +321,34 @@ def test_generate_bad_objective_raises():
     from intercepta.generate import MoleculeOptimizer
     with pytest.raises(ValueError):
         MoleculeOptimizer(objective="not_an_objective")
+
+def test_generate_accepts_callable_objective():
+    from intercepta.generate import MoleculeOptimizer, qed_score
+    from rdkit import Chem
+    opt = MoleculeOptimizer(objective=lambda m: qed_score(m), pop_size=12, generations=2, seed=1)
+    res = opt.optimize(["CCOC(=O)c1ccccc1", "O=C(O)c1ccccc1N", "COc1ccc(CCN)cc1", "CC(=O)Nc1ccc(O)cc1", "c1ccc(-c2ccccc2)cc1"])
+    assert res["objective"] == "custom" and 0.0 <= res["best_score"] <= 1.0
+    assert all(Chem.MolFromSmiles(s) is not None for s in res["final_population"])
+
+
+# ---- end-to-end discovery pipeline (B39), data-free (small synthetic fits) ----
+def test_discovery_pipeline_end_to_end():
+    from intercepta.admet import ADMETPredictor
+    from intercepta.synth import SynthesizabilityScorer
+    from intercepta.discover import DiscoveryPipeline
+    from rdkit import Chem
+    pos = ["c1ccccc1", "c1ccc(C)cc1", "c1ccc(O)cc1", "c1ccncc1", "c1ccc2ccccc2c1", "c1ccc(N)cc1"]
+    neg = ["CCO", "CCCO", "CCCCO", "CC(C)O", "OCCCCCC", "CCC(C)O"]
+    smi = (pos + neg) * 10; ylab = ([1] * len(pos) + [0] * len(neg)) * 10
+    admet = ADMETPredictor()
+    for t in DiscoveryPipeline.TOX:                     # fit herg/ames/dili on synthetic (all roc-auc classification)
+        admet.fit_task(t, smi, ylab)
+    synth = SynthesizabilityScorer(conformal=False).fit(smi, ylab)
+    pipe = DiscoveryPipeline(admet, synth, seed=1)
+    out, hist = pipe.discover(seed_smiles=pos + neg, pop_size=12, generations=2, top=5)
+    cols = {"smiles", "developability_F", "qed", "sa_score", "p_herg", "p_ames", "p_dili", "predicted_safety", "applicability_domain"}
+    assert cols.issubset(out.columns) and len(out) <= 5
+    assert out["developability_F"].between(0, 1).all()
+    assert (out["developability_F"].values == np.sort(out["developability_F"].values)[::-1]).all()   # ranked desc
+    assert all(Chem.MolFromSmiles(s) is not None for s in out["smiles"])                             # valid candidates
+    assert len(hist) >= 1

@@ -8,6 +8,7 @@ Subcommands:
   synth    — score retrosynthetic solvability (synthesizability proxy) from SMILES (B31)
   prioritize — rank molecules by composite developability risk (ADMET+synth; B32)
   generate — goal-directed molecular design / optimization (BRICS-GA; B33)
+  discover — end-to-end candidate discovery: generate + ADMET/synth screen + rank (B39)
 
 HONEST SCOPE: every subcommand is a RESEARCH hypothesis-ranking/screening tool, validated at the
 cell-line/ex-vivo (rank, synergy) or scaffold-split benchmark (admet) level only. NONE is a validated human
@@ -155,6 +156,21 @@ def _cmd_generate(args):
     return 0
 
 
+def _cmd_discover(args):
+    from intercepta.discover import DiscoveryPipeline
+    pipe = DiscoveryPipeline.from_default(synth_subsample=args.subsample)
+    seeds = [s.strip() for s in open(args.seeds) if s.strip()] if args.seeds else None
+    out, _ = pipe.discover(seed_smiles=seeds, pop_size=args.pop, generations=args.generations, top=args.top)
+    out.to_csv(args.out, index=False)
+    n_dom = int((out["applicability_domain"] == "in-domain").sum())
+    print(f"discovered {len(out)} candidate molecule(s) -> {args.out} (top F {out['developability_F'].max()}; "
+          f"{n_dom}/{len(out)} in ADMET applicability domain)")
+    print("NOTE: end-to-end pipeline = design(B33) + synthesizability(B31) + ADMET-safety(B30), assembled (B39). "
+          "Candidates are COMPUTATIONAL HYPOTHESES over known chemistry, NOT validated/novel/safe drugs. Optimizing "
+          "against predictors invites gaming; out-of-domain rows have unreliable safety calls.")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -204,6 +220,12 @@ def main(argv=None):
     gg.add_argument("--top", type=int, default=20, help="top-N optimized molecules to write")
     gg.add_argument("--out", default="intercepta_generate.csv")
     gg.set_defaults(func=_cmd_generate)
+    dd = sub.add_parser("discover", help="end-to-end candidate discovery: generate + ADMET/synth screen + rank (B39)")
+    dd.add_argument("--seeds", help="file of seed SMILES (one per line); default: sample from ChEMBL")
+    dd.add_argument("--pop", type=int, default=100); dd.add_argument("--generations", type=int, default=10)
+    dd.add_argument("--top", type=int, default=20); dd.add_argument("--subsample", type=int, default=50000)
+    dd.add_argument("--out", default="intercepta_discover.csv")
+    dd.set_defaults(func=_cmd_discover)
     args = p.parse_args(argv)
     return args.func(args)
 

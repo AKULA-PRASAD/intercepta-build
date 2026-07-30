@@ -65,7 +65,7 @@ experiments/            B1–B10 + engine validation: pre-registered, permutatio
 prereg/                 pre-registrations (written before each run)
 verification/           independent AML verification ledger + prereg + reproduction scripts
 papers/                 intercepta_engine/MANUSCRIPT.md (the honest paper) + AML response paper
-pyproject.toml tests/   installable `intercepta` package + CLI + 17 unit tests
+pyproject.toml tests/   installable `intercepta` package + CLI + 30 unit tests
 data/MANIFEST.md        provenance + access class for every external input (nothing committed)
 INTEGRITY_SWEEP.md      transparent record of removed/flagged content
 reproduce.sh requirements.txt
@@ -74,7 +74,7 @@ reproduce.sh requirements.txt
 ## Install & use as a tool
 ```bash
 pip install -e .            # installs the `intercepta` package + CLI
-pytest                      # 28 unit tests (leakage, markers, calibration, axes, synergy, admet, synth, integrate, generate) — no data needed
+pytest                      # 30 unit tests (leakage, markers, calibration, axes, synergy, admet, synth, integrate, generate, discover) — no data needed
 intercepta info             # version + HONEST SCOPE
 intercepta rank    --expr tumor_expr.csv --drugs trametinib,gemcitabine --out ranking.csv   # needs INTERCEPTA_DATA
 intercepta synergy --expr tumor_expr.csv --library drugcomb --out synergy.csv               # combinations arm (V23)
@@ -82,6 +82,7 @@ intercepta admet   --molecules "CC(=O)Oc1ccccc1C(=O)O" --tasks bbb_martins,herg 
 intercepta synth   --molecules "CC(=O)Oc1ccccc1C(=O)O" --out synth.csv                           # synthesizability / retrosynthetic solvability (B31)
 intercepta prioritize --molecules "CC(=O)Oc1ccccc1C(=O)O" --out prioritize.csv                   # composite developability risk (ADMET+synth, B32)
 intercepta generate   --objective multi --out generate.csv                                       # goal-directed molecular design (BRICS-GA optimizer, B33)
+intercepta discover   --out discover.csv                                                         # end-to-end candidate discovery: generate + ADMET/synth screen + rank (B39)
 ```
 `intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
 `intercepta admet` predicts ADMET/safety properties from SMILES (structure-only screening filter, B30 — beats
