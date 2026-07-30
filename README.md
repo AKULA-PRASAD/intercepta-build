@@ -65,7 +65,7 @@ experiments/            B1–B10 + engine validation: pre-registered, permutatio
 prereg/                 pre-registrations (written before each run)
 verification/           independent AML verification ledger + prereg + reproduction scripts
 papers/                 intercepta_engine/MANUSCRIPT.md (the honest paper) + AML response paper
-pyproject.toml tests/   installable `intercepta` package + CLI + 10 unit tests
+pyproject.toml tests/   installable `intercepta` package + CLI + 17 unit tests
 data/MANIFEST.md        provenance + access class for every external input (nothing committed)
 INTEGRITY_SWEEP.md      transparent record of removed/flagged content
 reproduce.sh requirements.txt
@@ -74,11 +74,16 @@ reproduce.sh requirements.txt
 ## Install & use as a tool
 ```bash
 pip install -e .            # installs the `intercepta` package + CLI
-pytest                      # 10 unit tests (leakage, markers, calibration gate, axes) — no data needed
+pytest                      # 17 unit tests (leakage, markers, calibration gate, axes, synergy, admet) — no data needed
 intercepta info             # version + HONEST SCOPE
-intercepta rank --expr tumor_expr.csv --drugs trametinib,gemcitabine --out ranking.csv   # needs INTERCEPTA_DATA
+intercepta rank    --expr tumor_expr.csv --drugs trametinib,gemcitabine --out ranking.csv   # needs INTERCEPTA_DATA
+intercepta synergy --expr tumor_expr.csv --library drugcomb --out synergy.csv               # combinations arm (V23)
+intercepta admet   --molecules "CC(=O)Oc1ccccc1C(=O)O" --tasks bbb_martins,herg --out admet.csv  # ADMET module (B30); needs intercepta[admet]
 ```
 `intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
+`intercepta admet` predicts ADMET/safety properties from SMILES (structure-only screening filter, B30 — beats
+trivial on all 22 TDC tasks, mid-leaderboard; scaffold-split only, NOT a safety guarantee). Each row carries an
+applicability-domain flag. `intercepta synergy` ranks synergistic pairs from a known drug library (cell-line Loewe).
 **Every prediction is LOW/MODERATE confidence by design** — a research hypothesis, never a clinical decision
 (human clinical response was a well-powered null, see `LEDGER.md` / `papers/intercepta_engine/MANUSCRIPT.md`).
 

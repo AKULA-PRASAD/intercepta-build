@@ -1,9 +1,15 @@
 """INTERCEPTA command-line interface.
 
-HONEST SCOPE: this ranks drugs for query tumor expression using a cell-line-trained transfer + verified
-mutation markers. It is a RESEARCH hypothesis-ranking tool, validated at the cell-line/ex-vivo level only.
-It is NOT a validated human clinical predictor (human clinical response was a well-powered null once cancer
-type was controlled — see LEDGER.md / papers/intercepta_engine/MANUSCRIPT.md). Do not use for clinical decisions.
+Subcommands:
+  info     — version + honest scope (data-free)
+  rank     — rank drugs for query tumor expression (cell-line transfer + verified mutation markers)
+  synergy  — rank synergistic drug PAIRS from a known library (combinations arm, V23/B24-B29)
+  admet    — predict ADMET/safety properties from SMILES (structure-only screening filter, B30)
+
+HONEST SCOPE: every subcommand is a RESEARCH hypothesis-ranking/screening tool, validated at the
+cell-line/ex-vivo (rank, synergy) or scaffold-split benchmark (admet) level only. NONE is a validated human
+clinical predictor (human clinical drug response was a well-powered null once cancer type was controlled — see
+LEDGER.md / papers/intercepta_engine/MANUSCRIPT.md). Do not use for clinical decisions or safety guarantees.
 """
 import argparse
 import sys
@@ -56,6 +62,31 @@ def _cmd_synergy(args):
     return 0
 
 
+def _cmd_admet(args):
+    import pandas as pd
+    from intercepta.admet import ADMETPredictor, TASK_METRIC
+    if not args.smiles and not args.molecules:
+        print("ERROR: provide --molecules 'SMILES,SMILES' or --smiles path.txt", file=sys.stderr)
+        return 2
+    smiles = [s.strip() for s in open(args.smiles)] if args.smiles else [s.strip() for s in args.molecules.split(",")]
+    smiles = [s for s in smiles if s]
+    tasks = [t.strip() for t in args.tasks.split(",")] if args.tasks else None
+    if tasks:
+        bad = [t for t in tasks if t not in TASK_METRIC]
+        if bad:
+            print(f"ERROR: unknown task(s): {bad}. Known: {sorted(TASK_METRIC)}", file=sys.stderr)
+            return 2
+    pred = ADMETPredictor.from_tdc(tasks=tasks)
+    out = pred.predict(smiles, tasks=tasks, tidy=True)
+    out.to_csv(args.out, index=False)
+    n_ood = int((~out["in_domain"]).sum())
+    print(f"predicted {out['task'].nunique()} ADMET propertie(s) for {out['smiles'].nunique()} molecule(s) "
+          f"({n_ood}/{len(out)} rows out-of-applicability-domain) -> {args.out}")
+    print("NOTE: in-silico SCREENING FILTER (scaffold-split validated, B30), NOT a safety guarantee; "
+          "out-of-domain rows are low-confidence. Not a clinical/regulatory determination.")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -75,6 +106,12 @@ def main(argv=None):
     s.add_argument("--top", type=int, default=20, help="top-N pairs per sample")
     s.add_argument("--out", default="intercepta_synergy.csv")
     s.set_defaults(func=_cmd_synergy)
+    a = sub.add_parser("admet", help="predict ADMET/safety properties from SMILES (structure-only; B30-validated)")
+    a.add_argument("--molecules", help="comma-separated SMILES strings")
+    a.add_argument("--smiles", help="path to a file with one SMILES per line (alternative to --molecules)")
+    a.add_argument("--tasks", help="comma-separated ADMET task names (default: all 22 TDC tasks)")
+    a.add_argument("--out", default="intercepta_admet.csv")
+    a.set_defaults(func=_cmd_admet)
     args = p.parse_args(argv)
     return args.func(args)
 

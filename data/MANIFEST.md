@@ -51,6 +51,8 @@ via the `INTERCEPTA_BEATAML` env var or a local path only.
 | **BeatAML** (WES mutations, clinical, expression, drug response) | **dbGaP phs001657** | **🔒 CONTROLLED** | engine/aml, verification/, src/ (B3–B4) — env `INTERCEPTA_BEATAML` only |
 | FIMM/Malani AML (RNA Log2CPM, DSRT DSS, mutations, clinical) | Zenodo 7370747 (Malani et al. Cancer Discovery 2022) | **PUBLIC (CC-BY 4.0)** — MD5 3db5280e…a9e241 | experiments/B20 external replication of V19/V20 |
 | O'Neil 2016 drug-combination synergy (OncoPolyPharmacology) | Therapeutics Data Commons (TDC) → Harvard Dataverse | **PUBLIC (open)** | experiments/B24 synergy generalization |
+| DrugComb drug-combination synergy | Therapeutics Data Commons (TDC) | **PUBLIC (open)** | experiments/B25/B28 synergy scale-up + cross-corpus |
+| **TDC ADMET Benchmark Group** (22 ADME/Tox tasks: SMILES + label; scaffold splits + public leaderboard) | Therapeutics Data Commons — `tdc.benchmark_group.admet_group` (auto-downloaded to `$INTERCEPTA_DATA/tdc_admet`, ~1.5 MB) | **PUBLIC (open)** | experiments/B30 ADMET module; `src/intercepta/admet.py` |
 | LINCS L1000 consensus drug signatures (dhimmel/lincs v2.0) | Zenodo 47223 + dhimmel/drugbank slim (GitHub) | **PUBLIC (open)** | experiments/B27 connectivity repurposing |
 | CCLE quantitative proteomics (normalized) | gygi.hms.harvard.edu/data/ccle (Nusinow et al. Cell 2020) | **PUBLIC** — sha256 b72a9ff3…c80 | experiments/B22 modality-ceiling test |
 | **SU2C-PCF** (mutations, clinical, CNA) | cBioPortal / SU2C-PCF | **🔒 patient-level — treat as controlled** | engine/net (step2) — never committed |

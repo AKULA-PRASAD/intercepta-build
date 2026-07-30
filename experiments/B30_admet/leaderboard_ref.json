@@ -1,0 +1,28 @@
+{
+  "_provenance": "Published TDC ADMET Benchmark Group leaderboard rank-1 (best) results, retrieved 2026-07-29 from https://tdcommons.ai/benchmark/admet_group/ (per-task leaderboard pages). Manually recorded; each value verified to match the task's official metric in tdc.metadata.admet_metrics. These are external references for honest comparison only, NOT produced by this repo.",
+  "_metric_direction": {"mae": "lower_is_better", "roc-auc": "higher_is_better", "pr-auc": "higher_is_better", "spearman": "higher_is_better"},
+  "tasks": {
+    "caco2_wang":                       {"metric": "mae",     "best": 0.256, "sd": 0.006, "model": "CaliciBoost"},
+    "hia_hou":                          {"metric": "roc-auc", "best": 0.993, "sd": 0.005, "model": "MiniMol"},
+    "pgp_broccatelli":                  {"metric": "roc-auc", "best": 0.938, "sd": 0.002, "model": "MapLight+GNN"},
+    "bioavailability_ma":               {"metric": "roc-auc", "best": 0.942, "sd": 0.002, "model": "MiniMol"},
+    "lipophilicity_astrazeneca":        {"metric": "mae",     "best": 0.456, "sd": 0.008, "model": "MiniMol"},
+    "solubility_aqsoldb":               {"metric": "mae",     "best": 0.741, "sd": 0.013, "model": "MiniMol"},
+    "bbb_martins":                      {"metric": "roc-auc", "best": 0.924, "sd": 0.003, "model": "MiniMol"},
+    "ppbr_az":                          {"metric": "mae",     "best": 7.440, "sd": 0.024, "model": "Gradient Boost"},
+    "vdss_lombardo":                    {"metric": "spearman","best": 0.713, "sd": 0.007, "model": "MapLight+GNN"},
+    "cyp2c9_veith":                     {"metric": "pr-auc",  "best": 0.859, "sd": 0.001, "model": "MapLight+GNN"},
+    "cyp2d6_veith":                     {"metric": "pr-auc",  "best": 0.790, "sd": 0.001, "model": "MapLight+GNN"},
+    "cyp3a4_veith":                     {"metric": "pr-auc",  "best": 0.916, "sd": 0.000, "model": "MapLight+GNN"},
+    "cyp2c9_substrate_carbonmangels":   {"metric": "pr-auc",  "best": 0.474, "sd": 0.025, "model": "MiniMol"},
+    "cyp2d6_substrate_carbonmangels":   {"metric": "pr-auc",  "best": 0.736, "sd": 0.024, "model": "ContextPred"},
+    "cyp3a4_substrate_carbonmangels":   {"metric": "roc-auc", "best": 0.667, "sd": 0.019, "model": "CFA"},
+    "half_life_obach":                  {"metric": "spearman","best": 0.576, "sd": 0.025, "model": "CFA"},
+    "clearance_hepatocyte_az":          {"metric": "spearman","best": 0.536, "sd": 0.020, "model": "CFA"},
+    "clearance_microsome_az":           {"metric": "spearman","best": 0.630, "sd": 0.010, "model": "MapLight+GNN"},
+    "ld50_zhu":                         {"metric": "mae",     "best": 0.552, "sd": 0.009, "model": "BaseBoosting"},
+    "herg":                             {"metric": "roc-auc", "best": 0.880, "sd": 0.002, "model": "MapLight+GNN"},
+    "ames":                             {"metric": "roc-auc", "best": 0.871, "sd": 0.002, "model": "ZairaChem"},
+    "dili":                             {"metric": "roc-auc", "best": 0.956, "sd": 0.006, "model": "MiniMol"}
+  }
+}

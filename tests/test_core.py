@@ -150,3 +150,47 @@ def test_synergy_ranker_mechanics_and_ranking():
     assert out["sample"].nunique() == 3 and (out.groupby("sample").size() <= 2).all()   # top-2 per sample
     assert set(out["drug1"]) | set(out["drug2"]) <= set(drugs)
     assert r.ood_score(q).shape == (3,)
+
+
+# ---- ADMET module (B30): data-free (synthetic SMILES) ----
+def test_admet_featurize_shape_and_invalid():
+    from intercepta.admet import featurize, NBITS, _DESCRIPTORS
+    X, valid = featurize(["CCO", "c1ccccc1", "not_a_smiles"])
+    assert X.shape == (3, NBITS + len(_DESCRIPTORS))
+    assert valid.tolist() == [True, True, False]
+    assert (X[2, :NBITS] == 0).all()                  # unparseable -> zero fingerprint
+    assert np.isnan(X[2, NBITS:]).all()               # and NaN descriptors (imputed at fit time)
+
+def test_admet_classification_learns_and_flags_domain():
+    from intercepta.admet import ADMETPredictor
+    # a learnable synthetic rule: aromatic (benzene-like) -> class 1, aliphatic alcohols -> class 0
+    pos = ["c1ccccc1", "c1ccc(C)cc1", "c1ccc(O)cc1", "c1ccc(N)cc1", "c1ccncc1", "c1ccc2ccccc2c1"] * 4
+    neg = ["CCO", "CCCO", "CCCCO", "CC(C)O", "CCCCCO", "OCCCCCC"] * 4
+    smi = pos + neg; y = [1] * len(pos) + [0] * len(neg)
+    p = ADMETPredictor().fit_task("bbb_martins", smi, y)      # bbb_martins is a roc-auc classification task
+    out = p.predict(["c1ccccc1", "CCO", "not_a_smiles"])
+    assert set(["smiles", "task", "metric", "prediction", "in_domain", "confidence"]).issubset(out.columns)
+    byc = out.set_index("smiles")
+    assert byc.loc["c1ccccc1", "prediction"] > byc.loc["CCO", "prediction"]   # aromatic scored higher (class 1)
+    assert 0.0 <= byc.loc["c1ccccc1", "prediction"] <= 1.0                    # probability
+    assert bool(byc.loc["not_a_smiles", "in_domain"]) is False               # unparseable -> out of domain
+    assert np.isnan(byc.loc["not_a_smiles", "prediction"])
+
+def test_admet_regression_and_ood_flag():
+    from intercepta.admet import ADMETPredictor
+    rng = np.random.default_rng(0)
+    # regression task (mae); train only on small aliphatic alcohols
+    train = ["CCO", "CCCO", "CCCCO", "CCCCCO", "OCCCCCC", "CC(C)O", "CCC(C)O", "OCC(C)C"] * 3
+    y = [len(s) * 1.0 for s in train]                                        # target ~ length (deterministic-ish)
+    p = ADMETPredictor().fit_task("lipophilicity_astrazeneca", train, y)     # mae regression task
+    out = p.predict(["CCO", "c1ccc2ccccc2c1CCCCN"])                          # 2nd is far-off chemistry
+    byc = out.set_index("smiles")
+    assert out["prediction_type"].iloc[0] == "value"                        # regression -> raw value
+    # the chemically dissimilar naphthalene-amine should be flagged out-of-applicability-domain
+    assert bool(byc.loc["c1ccc2ccccc2c1CCCCN", "in_domain"]) is False
+    assert bool(byc.loc["CCO", "in_domain"]) is True
+
+def test_admet_unknown_task_raises():
+    from intercepta.admet import ADMETPredictor
+    with pytest.raises(ValueError):
+        ADMETPredictor().fit_task("not_a_task", ["CCO"], [1.0])

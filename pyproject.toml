@@ -21,6 +21,10 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
+# cheminformatics extras: required by the synergy (SMILES fingerprints) and admet modules.
+# kept OPTIONAL so the core drug-response engine installs light; `pip install intercepta[chem]`.
+chem = ["rdkit>=2023.3"]
+admet = ["rdkit>=2023.3", "PyTDC>=1.1", "setuptools==70.3.0"]
 
 [project.scripts]
 intercepta = "intercepta.cli:main"
