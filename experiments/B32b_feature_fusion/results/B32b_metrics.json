@@ -1,0 +1,57 @@
+{
+  "provenance": {
+    "experiment": "B32b_feature_fusion",
+    "features": "S=Morgan2048+17physchem (2065); M=12 module outputs; S+M=concat (2077); HGB on all three",
+    "git_sha": "3b45fb607ecc33ab69a31ecef9e4c4e199777968",
+    "libs": {
+      "PyTDC": "1.1.15",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "panel": [
+      "herg",
+      "ames",
+      "dili",
+      "ld50_zhu",
+      "cyp3a4_veith",
+      "bioavailability_ma",
+      "bbb_martins",
+      "ppbr_az",
+      "clearance_microsome_az",
+      "half_life_obach"
+    ],
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "timestamp_utc": "2026-07-30T11:02:05Z"
+  },
+  "results": {
+    "H1_fusion_beats_structure_by_1sd": false,
+    "H2_fusion_is_best": true,
+    "best_single_module_auroc_mean": 0.831,
+    "delta_fusion_minus_structure": 0.0134,
+    "fusion_SM_auprc_mean": 0.4371,
+    "fusion_SM_auroc_mean": 0.9196,
+    "fusion_SM_auroc_sd": 0.0142,
+    "modules_M_auprc_mean": 0.317,
+    "modules_M_auroc_mean": 0.8354,
+    "modules_M_auroc_sd": 0.0312,
+    "n_clintox": 1459,
+    "n_excluded_leakage": 420,
+    "n_leakfree": 1039,
+    "n_positive": 103,
+    "seeds_used": 5,
+    "structure_S_auprc_mean": 0.3825,
+    "structure_S_auroc_mean": 0.9062,
+    "structure_S_auroc_sd": 0.0229,
+    "verdict": "WEAK / NON-DECISIVE POSITIVE: feature-level fusion S+M (AUROC 0.920\u00b10.014) is the BEST model (> structure S 0.906, > modules M 0.835, > best-single 0.831) and beats structure by delta +0.013 with lower variance \u2014 but the margin does NOT clear the pre-registered >1sd bar, so per the fixed decision rule this is H1-FAIL: hypothesis-generating, NOT a validated improvement. Modules add a small, consistent-but-not-decisive transfer signal on top of structure; do not ship fusion as a validated win. (Still more positive than B32's scalar late-fusion, which lost to best-single.)"
+  }
+}
