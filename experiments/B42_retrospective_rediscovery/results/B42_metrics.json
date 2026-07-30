@@ -1,0 +1,57 @@
+{
+  "provenance": {
+    "arm1": "GuacaMol rediscovery (Tanimoto ECFP4) of celecoxib/troglitazone/thiothixene; BRICS-GA",
+    "arm2": "HIV VS enrichment (AUROC/BEDROC80.5/EF), Bemis-Murcko scaffold split x5, real actives vs decoys",
+    "experiment": "B42_retrospective_rediscovery",
+    "git_sha": "fb80008d4322e699b894b0a9a0339eb9c7397f5d",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "python": "3.11.14",
+    "seed": 42,
+    "timestamp_utc": "2026-07-30T17:59:53Z"
+  },
+  "results": {
+    "H1_generator_rediscovers": true,
+    "H2_scoring_enriches_real_actives": true,
+    "arm1_n_analog_or_better": 3,
+    "arm1_rediscovery": {
+      "celecoxib": {
+        "best_smiles": "Cc1ccc(-c2cc(C(F)(F)F)c(C)n2-c2ccc(S(N)(=O)=O)cc2)cc1",
+        "class": "analog",
+        "ga_max_tanimoto": 0.6,
+        "ga_top10_mean_tanimoto": 0.5457,
+        "improvement_over_seed": 0.2462,
+        "seed_pool_max_tanimoto": 0.3538
+      },
+      "thiothixene": {
+        "best_smiles": "CN1CCN(C2Cc3ccccc3Sc3cc(-c4ccc(S(=O)(=O)N(C)C)cc4-c4ccc5c(c4)Sc4ccccc4CC5N4CCN(C)CC4)ccc32)CC1",
+        "class": "analog",
+        "ga_max_tanimoto": 0.4783,
+        "ga_top10_mean_tanimoto": 0.4566,
+        "improvement_over_seed": 0.1769,
+        "seed_pool_max_tanimoto": 0.3014
+      },
+      "troglitazone": {
+        "best_smiles": "Cc1ccc(OCC[C@@]2(C)CCc3c(C)c(O)c(C)c(C)c3O2)cc1",
+        "class": "analog",
+        "ga_max_tanimoto": 0.5714,
+        "ga_top10_mean_tanimoto": 0.5128,
+        "improvement_over_seed": 0.1964,
+        "seed_pool_max_tanimoto": 0.375
+      }
+    },
+    "arm2_enrichment_hiv": {
+      "auroc": 0.8055,
+      "bedroc_a80.5": 0.9378,
+      "ef_1pct": 7.402,
+      "ef_5pct": 6.742,
+      "prevalence": 0.1261
+    },
+    "verdict": "EXTERNAL-TRUTH VALIDATION: scoring ENRICHES real actives (HIV held-out AUROC 0.8055, BEDROC 0.9378, EF@1% 7.402\u00d7) AND the generator reaches known-drug chemistry (3/3 targets to Tanimoto>=0.4, all improving over the seed pool). The pipeline recovers external truth (retrospective, in-silico; NOT wet-lab; rediscovery similarity != proven activity)."
+  }
+}

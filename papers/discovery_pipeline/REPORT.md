@@ -132,6 +132,19 @@ toward the target. It also surfaces an honest **activity-vs-safety trade-off** (
 HIV-active-like chemistry the QSAR favors is predicted more toxic. Reported transparently (payload e62417bf);
 shipped `intercepta discover --target-hts`. Activity is QSAR-*predicted*, not measured; candidates remain hypotheses.
 
+## 3c. Retrospective validation against external truth (B42)
+
+Every result in §2–3b validates against our *own* predictors (circular). B42 is the first test against **external
+ground truth — real known drugs/actives.** (i) **Scoring:** on HIV (scaffold split), the activity model enriches
+*real* actives with strong early recognition — AUROC **0.806**, BEDROC(α=80.5) **0.94**, EF@1% **7.4×**. (ii)
+**Generator:** in the GuacaMol rediscovery setting, the BRICS-GA reaches analog-level similarity to all 3 held-out
+target drugs (celecoxib 0.60, troglitazone 0.57, thiothixene 0.48), each improving +0.18–0.25 over the best seed
+molecule. So the pipeline demonstrably recovers external truth — it enriches real actives and reaches the chemical
+neighborhood of real drugs. **Honest bounds:** rediscovery is analog-level (~0.5–0.6 Tanimoto), not exact
+reconstruction (fragment-recombination reach limit); enrichment is one target; retrospective and in-silico;
+similarity ≠ proven activity; not wet-lab. This is the program's strongest computational-validation evidence and
+the main mitigation of the circular-validation risk. (payload 9d99060e)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -171,4 +184,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e.
