@@ -1,0 +1,177 @@
+{
+  "meta_analysis": {
+    "H1_integration_robust_multioutcome": false,
+    "bootstrap_mean_delta_CI95": [
+      -0.0314,
+      0.0104
+    ],
+    "fraction_outcomes_positive": 0.714,
+    "mean_delta": -0.0087,
+    "n_outcomes": 7,
+    "n_outcomes_oof_significant": 0,
+    "verdict": "STRUCTURE SUFFICIENT (well-powered decisive negative): across 7 held-out outcomes, feature-level fusion does NOT reliably beat raw structure (mean \u0394 -0.0087, 71% positive, 0/7 significant, Wilcoxon p=0.4688, CI [-0.0314,0.0104]). Even with the multi-outcome power B35 lacked, the ADMET/synth modules do not reliably augment raw structure \u2014 the platform's value is the STANDALONE modules, not their fusion. Integration thread closed (honest).",
+    "wilcoxon_across_outcomes_p": 0.46875
+  },
+  "per_outcome": [
+    {
+      "auroc_S": 0.8988,
+      "auroc_SM": 0.9223,
+      "delta_mean": 0.0236,
+      "deltas": [
+        -0.0119,
+        0.0407,
+        0.0419
+      ],
+      "n_leakfree": 1039,
+      "n_positive": 55,
+      "oof_ci95": [
+        -0.0142,
+        0.0447
+      ],
+      "oof_delta": 0.0139,
+      "oof_significant": false,
+      "outcome": "clintox"
+    },
+    {
+      "auroc_S": 0.6998,
+      "auroc_SM": 0.7027,
+      "delta_mean": 0.0029,
+      "deltas": [
+        0.0214,
+        0.0393,
+        -0.0519
+      ],
+      "n_leakfree": 246,
+      "n_positive": 157,
+      "oof_ci95": [
+        -0.1201,
+        -0.0249
+      ],
+      "oof_delta": -0.0707,
+      "oof_significant": false,
+      "outcome": "skin_reaction"
+    },
+    {
+      "auroc_S": 0.9236,
+      "auroc_SM": 0.8842,
+      "delta_mean": -0.0394,
+      "deltas": [
+        -0.0044,
+        -0.1,
+        -0.0138
+      ],
+      "n_leakfree": 206,
+      "n_positive": 52,
+      "oof_ci95": [
+        -0.0845,
+        0.0129
+      ],
+      "oof_delta": -0.0348,
+      "oof_significant": false,
+      "outcome": "carcinogens_lagunin"
+    },
+    {
+      "auroc_S": 0.6846,
+      "auroc_SM": 0.6199,
+      "delta_mean": -0.0647,
+      "deltas": [
+        -0.1347,
+        -0.0222,
+        -0.0372
+      ],
+      "n_leakfree": 2136,
+      "n_positive": 91,
+      "oof_ci95": [
+        -0.0547,
+        0.0044
+      ],
+      "oof_delta": -0.025,
+      "oof_significant": false,
+      "outcome": "tox21:NR-AR"
+    },
+    {
+      "auroc_S": 0.6702,
+      "auroc_SM": 0.6753,
+      "delta_mean": 0.0051,
+      "deltas": [
+        -0.009,
+        0.0207,
+        0.0036
+      ],
+      "n_leakfree": 2146,
+      "n_positive": 281,
+      "oof_ci95": [
+        -0.0238,
+        0.0119
+      ],
+      "oof_delta": -0.0053,
+      "oof_significant": false,
+      "outcome": "tox21:NR-ER"
+    },
+    {
+      "auroc_S": 0.8072,
+      "auroc_SM": 0.8129,
+      "delta_mean": 0.0056,
+      "deltas": [
+        0.0026,
+        -0.0054,
+        0.0198
+      ],
+      "n_leakfree": 2128,
+      "n_positive": 337,
+      "oof_ci95": [
+        -0.0055,
+        0.0165
+      ],
+      "oof_delta": 0.0059,
+      "oof_significant": false,
+      "outcome": "tox21:SR-MMP"
+    },
+    {
+      "auroc_S": 0.7589,
+      "auroc_SM": 0.7652,
+      "delta_mean": 0.0063,
+      "deltas": [
+        -0.0076,
+        -0.0386,
+        0.065
+      ],
+      "n_leakfree": 2139,
+      "n_positive": 142,
+      "oof_ci95": [
+        -0.0009,
+        0.0472
+      ],
+      "oof_delta": 0.0231,
+      "oof_significant": false,
+      "outcome": "tox21:SR-p53"
+    }
+  ],
+  "provenance": {
+    "experiment": "B36_integration_multioutcome",
+    "git_sha": "146250dbd8e5c43d3e1bc3a4899a0206a70c9018",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "outcomes": [
+      "clintox",
+      "skin_reaction",
+      "carcinogens_lagunin",
+      "tox21:NR-AR",
+      "tox21:NR-ER",
+      "tox21:SR-MMP",
+      "tox21:SR-p53"
+    ],
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "timestamp_utc": "2026-07-30T12:22:21Z"
+  }
+}
