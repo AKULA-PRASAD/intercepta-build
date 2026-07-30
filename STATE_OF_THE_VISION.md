@@ -63,6 +63,25 @@ permutation + leakage + multiple-testing + confound + external replication; repr
 4. **The single-agent CLINICAL breakthrough still requires new patient functional data** (Track-1,
    `prereg/TRACK1_SAP.md`) — stated as fact. Combinations does NOT remove that; it opens a parallel, reachable arm.
 
+## Discovery-pipeline modules — built & validated (added 2026-07-30)
+Beyond the drug-response/synergy work, the program now has honestly-benchmarked, reproduced-×2 modules of the wider
+drug-discovery pipeline, each pre-registered and shipped with an honest scope (none is a clinical/safety claim):
+- **#4 ADMET / safety (B30):** structure→property prediction on the TDC ADMET benchmark (22 tasks, scaffold splits).
+  Beats the trivial baseline on **22/22**, mid-leaderboard; shipped `intercepta.admet.ADMETPredictor` + CLI.
+- **#4 uncertainty (B30b):** the applicability-domain flag is a **real but weak** reliability signal (error rises
+  with AD distance, 20/22 tasks, but the binary flag is not a decisive gate); **conformal** intervals/sets are
+  **calibrated** on the scaffold test. Shipped as optional per-prediction uncertainty.
+- **#5 synthesizability (B31):** predicts AiZynthFinder retrosynthetic solvability (RAscore/ChEMBL); AUROC 0.91
+  random / 0.908 scaffold, beats SAscore + trivial; shipped `intercepta.synth.SynthesizabilityScorer` + CLI.
+- **Integration (B32 / B32b):** an **honest bound** — composing the modules (scalar late-fusion B32; feature-level
+  fusion B32b) does **NOT decisively beat** raw structure / the single best module on the held-out ClinTox outcome
+  (feature-fusion 0.920 vs structure 0.906, Δ+0.013, below the pre-registered 1sd bar). The modules are validated
+  **standalone**; "platform whole>parts" is not established on this outcome (needs a larger/multi-outcome benchmark
+  or a learned joint representation). Recorded as first-class, not overstated.
+
+The honest scale check stands: against "any drug for any disease" these are validated corners of modules #3–#5;
+modules #1 (target ID) and #2 (de novo design) remain unbuilt, and clinical validation is gated on new data.
+
 ## The definition of success we hold to
 Per the Constitution: *success is discovering the strongest scientifically-supported version of the vision — not
 proving the original vision correct.* By that standard we have succeeded at the computational stage: a genuine,
