@@ -155,6 +155,24 @@ target classes, not HIV-specific** — the strongest evidence that the screening
 in-silico, real-actives-vs-decoys on scaffold splits; low-active screens (78–172 actives) are harder but still
 enrich; enrichment ≠ proven activity; not wet-lab. (payload daca99a2)
 
+## 3e. Ligand-based 3D scaffold hopping — the boundary of feasible computation (B44)
+
+The full retrieval stack so far is 2D (Morgan fingerprints). B44 asks whether **ligand-based 3D** (RDKit O3A shape +
+pharmacophore overlay onto known actives) adds the one capability 2D structurally lacks: retrieving actives on a
+**novel scaffold** (2D-dissimilar to the references — *scaffold hopping*). This is also the **last computationally-
+feasible rung**: no receptor docking engine is installed (Vina/smina/gnina absent; only Open Babel), and a fragile
+docking/MD install is declined on reproducibility grounds. On HIV, 8 scaffold-cluster reference actives, single
+ETKDGv3+MMFF conformer per molecule, O3A max-over-references vs Morgan-Tanimoto max-over-references. On the 1,181
+novel-scaffold actives vs decoys, 3D gives a small **global**-ranking edge (AUROC **0.634** vs 2D 0.589, Δ+0.045) but
+**no early-recognition gain** — the part that matters for screening (EF@1% 3D 2.54× vs 2D 2.71×; BEDROC 0.738 vs
+0.803, 3D slightly worse). The pre-registered H1 (conjunction of a global *and* an early-enrichment gain) is therefore
+**FALSE**; H2 (3D above chance, AUROC>0.6 & EF@1%>2) is TRUE. **Honest verdict:** single-conformer ligand-based 3D does
+not beat the 2D spine where it should most help; the 2D fingerprint remains the operative retrieval tool. This is
+consistent with the program-wide finding that the bottleneck is **information/physical truth, not representation**, and
+it marks the edge of what is buildable without new data or a structure-based infrastructure decision. Retrospective,
+single-conformer (an ensemble approximation), heuristic overlay (not a binding energy), one target, decoys not
+property-matched; enrichment ≠ proven activity; not wet-lab. (payload 1120c3d3)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -194,4 +212,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3.

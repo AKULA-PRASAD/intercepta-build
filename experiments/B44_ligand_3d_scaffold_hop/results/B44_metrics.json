@@ -1,0 +1,67 @@
+{
+  "provenance": {
+    "embed_seed": 2884,
+    "experiment": "B44_ligand_3d_scaffold_hop",
+    "git_sha": "acd41cbdb06f95cd13eab8f779b0d9f5a1e0fe19",
+    "k_ref": 8,
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "n_decoy_cap": 2500,
+    "protocol": "ETKDGv3(1 conf, fixed seed)+MMFF94; O3A max-over-refs vs Morgan-Tanimoto max-over-refs; novel-Murcko-scaffold actives vs decoys; rdkit.ML.Scoring AUROC/BEDROC80.5/EF",
+    "python": "3.11.14",
+    "target": "hiv",
+    "timestamp_utc": "2026-07-30T20:50:11Z"
+  },
+  "summary": {
+    "H1_3D_beats_2D_on_scaffold_hops": false,
+    "H2_3D_meaningful": true,
+    "all_actives_vs_decoys_context": {
+      "metric_2D_morgan": {
+        "auroc": 0.6246,
+        "bedroc_a80.5": 0.9592,
+        "ef_1pct": 2.747,
+        "ef_5pct": 2.531,
+        "n": 3802,
+        "n_active": 1384
+      },
+      "metric_3D_o3a": {
+        "auroc": 0.6513,
+        "bedroc_a80.5": 0.8783,
+        "ef_1pct": 2.606,
+        "ef_5pct": 2.201,
+        "n": 3802,
+        "n_active": 1384
+      }
+    },
+    "n_embed_fail": 133,
+    "n_embedded": 3802,
+    "n_novel_scaffold_actives": 1181,
+    "n_refs": 8,
+    "novel_scaffold_actives_vs_decoys": {
+      "delta_auroc_3D_minus_2D": 0.0445,
+      "metric_2D_morgan": {
+        "auroc": 0.5891,
+        "bedroc_a80.5": 0.8034,
+        "ef_1pct": 2.709,
+        "ef_5pct": 2.116,
+        "n": 3599,
+        "n_active": 1181
+      },
+      "metric_3D_o3a": {
+        "auroc": 0.6336,
+        "bedroc_a80.5": 0.7379,
+        "ef_1pct": 2.54,
+        "ef_5pct": 1.947,
+        "n": 3599,
+        "n_active": 1181
+      }
+    },
+    "target": "hiv",
+    "verdict": "NEGATIVE (honest, first-class) \u2014 ligand-based 3D does NOT beat the 2D spine even on scaffold hops: novel-scaffold 3D AUROC 0.6336 vs 2D 0.5891 (delta +0.0445), EF@1% 3D 2.54x vs 2D 2.709x. Single-conformer O3A adds no retrieval capability over Morgan on hiv; the 2D fingerprint spine is the operative retrieval tool. Bounds the rung."
+  }
+}
