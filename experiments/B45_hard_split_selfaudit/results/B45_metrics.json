@@ -1,0 +1,274 @@
+{
+  "per_target": {
+    "hiv": {
+      "by_band": {
+        "0.3-0.4": {
+          "auroc": 0.5944,
+          "ef_5pct": 2.379,
+          "n": 844,
+          "n_active": 165
+        },
+        "0.4-0.5": {
+          "auroc": 0.7671,
+          "ef_5pct": 3.456,
+          "n": 476,
+          "n_active": 132
+        },
+        "ge0.5": {
+          "auroc": 0.9054,
+          "ef_5pct": 1.507,
+          "n": 797,
+          "n_active": 529
+        },
+        "lt0.3": {
+          "auroc": 0.6361,
+          "ef_5pct": 2.379,
+          "n": 555,
+          "n_active": 100
+        }
+      },
+      "class": "antiviral",
+      "full_test_auroc": 0.8135,
+      "mean_xset_nn_tanimoto": 0.4396,
+      "n_actives": 1443,
+      "n_total": 4443,
+      "novel_lt0.4": {
+        "auroc": 0.6091,
+        "ef_5pct": 2.129,
+        "n": 1380,
+        "n_active": 263
+      },
+      "pooled_test_n": 2672
+    },
+    "m1_muscarinic_receptor_antagonists_butkiewicz": {
+      "by_band": {
+        "0.3-0.4": {
+          "auroc": 0.8143,
+          "ef_5pct": 4.623,
+          "n": 542,
+          "n_active": 67
+        },
+        "0.4-0.5": {
+          "auroc": 0.7901,
+          "ef_5pct": 4.444,
+          "n": 755,
+          "n_active": 76
+        },
+        "ge0.5": {
+          "auroc": 0.8851,
+          "ef_5pct": 4.974,
+          "n": 545,
+          "n_active": 90
+        },
+        "lt0.3": {
+          "auroc": 0.6429,
+          "ef_5pct": 8.388,
+          "n": 137,
+          "n_active": 7
+        }
+      },
+      "class": "GPCR",
+      "full_test_auroc": 0.8309,
+      "mean_xset_nn_tanimoto": 0.4521,
+      "n_actives": 362,
+      "n_total": 3362,
+      "novel_lt0.4": {
+        "auroc": 0.8025,
+        "ef_5pct": 5.27,
+        "n": 663,
+        "n_active": 74
+      },
+      "pooled_test_n": 1979
+    },
+    "orexin1_receptor_butkiewicz": {
+      "by_band": {
+        "0.3-0.4": {
+          "auroc": 0.785,
+          "ef_5pct": 4.671,
+          "n": 751,
+          "n_active": 55
+        },
+        "0.4-0.5": {
+          "auroc": 0.7666,
+          "ef_5pct": 3.843,
+          "n": 695,
+          "n_active": 31
+        },
+        "ge0.5": {
+          "auroc": 0.8411,
+          "ef_5pct": 5.143,
+          "n": 320,
+          "n_active": 35
+        },
+        "lt0.3": {
+          "auroc": 0.7289,
+          "ef_5pct": 2.306,
+          "n": 196,
+          "n_active": 17
+        }
+      },
+      "class": "GPCR",
+      "full_test_auroc": 0.7927,
+      "mean_xset_nn_tanimoto": 0.4167,
+      "n_actives": 233,
+      "n_total": 3233,
+      "novel_lt0.4": {
+        "auroc": 0.7642,
+        "ef_5pct": 4.036,
+        "n": 915,
+        "n_active": 69
+      },
+      "pooled_test_n": 1962
+    },
+    "potassium_ion_channel_kir2.1_butkiewicz": {
+      "by_band": {
+        "0.3-0.4": {
+          "auroc": 0.9049,
+          "ef_5pct": 8.429,
+          "n": 714,
+          "n_active": 40
+        },
+        "0.4-0.5": {
+          "auroc": 0.9551,
+          "ef_5pct": 14.486,
+          "n": 737,
+          "n_active": 33
+        },
+        "ge0.5": {
+          "auroc": 0.934,
+          "ef_5pct": 12.094,
+          "n": 301,
+          "n_active": 14
+        },
+        "lt0.3": {
+          "auroc": 0.7673,
+          "ef_5pct": 7.24,
+          "n": 181,
+          "n_active": 10
+        }
+      },
+      "class": "ion-channel",
+      "full_test_auroc": 0.9174,
+      "mean_xset_nn_tanimoto": 0.4158,
+      "n_actives": 172,
+      "n_total": 3172,
+      "novel_lt0.4": {
+        "auroc": 0.8743,
+        "ef_5pct": 7.882,
+        "n": 867,
+        "n_active": 50
+      },
+      "pooled_test_n": 1933
+    },
+    "sarscov2_3clpro_diamond": {
+      "by_band": {
+        "0.3-0.4": {
+          "auroc": 0.7858,
+          "ef_5pct": 2.6,
+          "n": 273,
+          "n_active": 15
+        },
+        "0.4-0.5": {
+          "auroc": 0.6273,
+          "ef_5pct": 2.0,
+          "n": 228,
+          "n_active": 19
+        },
+        "ge0.5": {
+          "auroc": 0.8724,
+          "ef_5pct": 5.509,
+          "n": 119,
+          "n_active": 18
+        },
+        "lt0.3": {
+          "n": 114,
+          "n_active": 0,
+          "note": "too few (n>=20 & act>=5 required)"
+        }
+      },
+      "class": "protease",
+      "full_test_auroc": 0.7584,
+      "mean_xset_nn_tanimoto": 0.407,
+      "n_actives": 78,
+      "n_total": 880,
+      "novel_lt0.4": {
+        "auroc": 0.771,
+        "ef_5pct": 2.812,
+        "n": 374,
+        "n_active": 14
+      },
+      "pooled_test_n": 734
+    },
+    "serine_threonine_kinase_33_butkiewicz": {
+      "by_band": {
+        "0.3-0.4": {
+          "auroc": 0.8915,
+          "ef_5pct": 11.009,
+          "n": 753,
+          "n_active": 45
+        },
+        "0.4-0.5": {
+          "auroc": 0.9035,
+          "ef_5pct": 10.749,
+          "n": 696,
+          "n_active": 37
+        },
+        "ge0.5": {
+          "auroc": 0.9515,
+          "ef_5pct": 10.34,
+          "n": 282,
+          "n_active": 20
+        },
+        "lt0.3": {
+          "auroc": 0.9493,
+          "ef_5pct": 11.111,
+          "n": 180,
+          "n_active": 9
+        }
+      },
+      "class": "kinase",
+      "full_test_auroc": 0.9075,
+      "mean_xset_nn_tanimoto": 0.4139,
+      "n_actives": 172,
+      "n_total": 3172,
+      "novel_lt0.4": {
+        "auroc": 0.8972,
+        "ef_5pct": 10.943,
+        "n": 900,
+        "n_active": 53
+      },
+      "pooled_test_n": 1911
+    }
+  },
+  "provenance": {
+    "design": "AMENDED: NN-similarity-stratified enrichment on scaffold-split test sets (Butina cluster split failed validity check H2). Bands [<0.3,0.3-0.4,0.4-0.5,>=0.5] by cross-set NN Tanimoto.",
+    "experiment": "B45_hard_split_selfaudit",
+    "git_sha": "bf876950bfd9ff48766f33e54bfc6ff9332f4bbf",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "n_inactive_cap": 3000,
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "timestamp_utc": "2026-07-30T21:34:10Z"
+  },
+  "summary": {
+    "H1_capability_real_on_novel_chemistry": true,
+    "H2_similarity_gradient_exists": true,
+    "n_targets_novel_auroc_gt0.65": 5,
+    "n_targets_scored": 6,
+    "n_targets_with_novel_band": 6,
+    "panel_mean_full_test_auroc": 0.8367,
+    "panel_mean_novel_lt0.4_auroc": 0.7864,
+    "similarity_gradient_auroc_ge0.5_minus_lt0.3": 0.1585,
+    "verdict": "ENRICHMENT IS REAL ON NOVEL CHEMISTRY (not memorization): on test compounds GENUINELY dissimilar to training (NN-Tanimoto<0.4), panel-mean AUROC 0.7864 with 5/6 targets>0.65. A real similarity gradient exists (AUROC[>=0.5]-AUROC[<0.3]=0.1585) so there IS split optimism, but the capability clearly survives into novel chemistry. Honest: use the novel-band numbers, not the full-test numbers, as the generalization estimate. Retrospective, in-silico, real-actives-vs-decoys; enrichment != proven activity; not wet-lab."
+  }
+}

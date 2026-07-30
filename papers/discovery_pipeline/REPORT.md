@@ -173,6 +173,22 @@ it marks the edge of what is buildable without new data or a structure-based inf
 single-conformer (an ensemble approximation), heuristic overlay (not a binding energy), one target, decoys not
 property-matched; enrichment ≠ proven activity; not wet-lab. (payload 1120c3d3)
 
+## 3f. Turning the rigor on ourselves — does the enrichment survive on novel chemistry? (B45)
+
+Our enrichment (B42/B43) used Bemis–Murcko scaffold splits, which the literature shows **overestimate** VS performance
+because train/test still share substantial 2D similarity (arXiv:2406.00873). B45 audits this. **A transparent
+self-correction happened first:** the pre-registered Butina *cluster* split failed its own validity check — it was not
+actually harder than the scaffold split (cross-set NN-Tanimoto 0.428 vs 0.425), so that run was discarded (not
+committed as a result) and the design amended (dated, in the prereg) to a **tuning-free** method: stratify the
+scaffold-split test set by each compound's nearest-neighbor Tanimoto to training, and measure enrichment on genuinely
+**novel** chemistry (NN<0.4). Result: the capability **survives** — panel-mean AUROC falls from full-test **0.837** to
+novel-chemistry **0.786**, with **5/6 targets still >0.65** (STK33 0.90, Kir2.1 0.87, m1 0.80, orexin-1 0.76, 3CLpro
+0.77). A real optimism gradient exists (AUROC drops 0.16 from the ≥0.5 to the <0.3 similarity band), so the scaffold
+numbers were somewhat inflated; and **HIV is an honest weak spot** (novel-band AUROC 0.61 — largely
+similarity-driven). **We therefore adopt the novel-band (NN<0.4) numbers as the honest generalization estimate going
+forward**, not the scaffold-split numbers. Retrospective, in-silico; enrichment ≠ proven activity; not wet-lab.
+(payload e437713b)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -212,4 +228,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b.
