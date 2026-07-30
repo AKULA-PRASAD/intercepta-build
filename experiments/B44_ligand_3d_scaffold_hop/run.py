@@ -16,7 +16,7 @@ from rdkit.Chem.Scaffolds import MurckoScaffold
 from rdkit.ML.Scoring.Scoring import CalcAUC, CalcBEDROC, CalcEnrichment
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DATA = os.environ.get("INTERCEPTA_DATA", "/Users/kalki/kaalcura/data")
+DATA = os.environ.get("INTERCEPTA_DATA", "/Users/kalki/intercepta_data")
 TARGET, K_REF, N_DECOY, EMBED_SEED = "hiv", 8, 2500, 0xB44
 
 

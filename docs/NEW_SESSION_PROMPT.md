@@ -7,8 +7,8 @@ INTERCEPTA's goal is **"make any drug for any disease"** — a *universal comput
 This is far bigger than drug-*response* prediction. The full pipeline it implies: (1) target identification →
 (2) de novo molecule design → (3) efficacy prediction → (4) **ADMET/safety** → (5) synthesizability →
 (6) experimental/clinical validation.
-- **Do NOT confuse this with "KAALCURA"** — that framing is retired. (Raw data merely lives on disk at
-  `/Users/kalki/kaalcura/data`; that folder is a storage location, not the vision.)
+- **Do NOT confuse this with "KAALCURA"** — that framing is retired. (Open data merely lives on disk at the
+  INTERCEPTA-owned cache `/Users/kalki/intercepta_data`; that folder is a storage location, not the vision.)
 - Honest scope check: "any drug for any disease" is an aspirational grand challenge no one has solved. Pursue it as
   concrete, rigorously-validated **modules**, never claim the whole until a piece is proven.
 
@@ -40,9 +40,15 @@ The rigorous work to date (experiments B1–B29) validated a *drug-response* mod
   #1,#2,#4,#5,#6 are essentially unbuilt.
 
 ## Environment / how experiments work
-- Python: `$HOME/miniconda3/envs/kaalcura/bin/python` (has numpy, pandas, scikit-learn, scipy, statsmodels, rdkit,
-  PyTDC). Note: PyTDC needs `setuptools==70.3.0` for `pkg_resources` (already pinned).
-- `INTERCEPTA_DATA=/Users/kalki/kaalcura/data` (data storage only).
+- **Canonical env (use this): `$HOME/miniconda3/envs/intercepta-build/bin/python`** — pinned stack: python 3.11.14,
+  numpy 1.26.4, pandas 2.3.3, scipy 1.16.3, scikit-learn 1.8.0, rdkit 2023.09.6, PyTDC 1.1.15 (torch 2.13.0 /
+  transformers 4.50.3 for the `fm` extra). This is an exact clone of the historical build env; **B43 was re-verified
+  byte-identical (payload daca99a2) under it**, so results reproduce. (The retired `kaalcura` conda env was the
+  original build interpreter — same package versions; kept only for historical parity, not for new work.)
+- **`INTERCEPTA_DATA=/Users/kalki/intercepta_data`** — INTERCEPTA-owned data cache (~341 MB: tdc_bio/gen/admet/tox,
+  rascore, opentargets, hf_cache, synergy parquets). Data storage only, gitignored, never committed. (Historical
+  experiment `run.py` files hardcode a `/Users/kalki/kaalcura/data` *fallback default* — that is provenance, left
+  unchanged; always `export INTERCEPTA_DATA=/Users/kalki/intercepta_data` to override it.)
 - Pattern per experiment: `prereg/B##_name.md` (pre-result) → `experiments/B##_name/run.py` (deterministic,
   seed=42, writes `results/*.json`, reproduce ×2) → `LEDGER.md` entry → commit + push. `data/MANIFEST.md` logs every
   input's provenance + access class.
