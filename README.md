@@ -83,6 +83,7 @@ intercepta synth   --molecules "CC(=O)Oc1ccccc1C(=O)O" --out synth.csv          
 intercepta prioritize --molecules "CC(=O)Oc1ccccc1C(=O)O" --out prioritize.csv                   # composite developability risk (ADMET+synth, B32)
 intercepta generate   --objective multi --out generate.csv                                       # goal-directed molecular design (BRICS-GA optimizer, B33)
 intercepta discover   --out discover.csv                                                         # end-to-end candidate discovery: generate + ADMET/synth screen + rank (B39)
+intercepta discover   --target-hts hiv --out discover_hiv.csv                                   # target-conditioned discovery: steer candidates toward a target (B40)
 ```
 `intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
 `intercepta admet` predicts ADMET/safety properties from SMILES (structure-only screening filter, B30 — beats

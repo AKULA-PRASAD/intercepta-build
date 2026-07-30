@@ -158,13 +158,18 @@ def _cmd_generate(args):
 
 def _cmd_discover(args):
     from intercepta.discover import DiscoveryPipeline
-    pipe = DiscoveryPipeline.from_default(synth_subsample=args.subsample)
+    pipe = DiscoveryPipeline.from_default(synth_subsample=args.subsample, target_hts=args.target_hts)
     seeds = [s.strip() for s in open(args.seeds) if s.strip()] if args.seeds else None
     out, _ = pipe.discover(seed_smiles=seeds, pop_size=args.pop, generations=args.generations, top=args.top)
     out.to_csv(args.out, index=False)
     n_dom = int((out["applicability_domain"] == "in-domain").sum())
-    print(f"discovered {len(out)} candidate molecule(s) -> {args.out} (top F {out['developability_F'].max()}; "
+    tgt = f", target-conditioned on '{args.target_hts}'" if args.target_hts else ""
+    print(f"discovered {len(out)} candidate molecule(s){tgt} -> {args.out} (top F {out['developability_F'].max()}; "
           f"{n_dom}/{len(out)} in ADMET applicability domain)")
+    if args.target_hts:
+        print("target-conditioned (B40): objective × P(target-active | QSAR). NOTE activity is QSAR-PREDICTED not "
+              "measured, and target activity can TRADE OFF against predicted safety — inspect p_target_active vs "
+              "predicted_safety per candidate.")
     print("NOTE: end-to-end pipeline = design(B33) + synthesizability(B31) + ADMET-safety(B30), assembled (B39). "
           "Candidates are COMPUTATIONAL HYPOTHESES over known chemistry, NOT validated/novel/safe drugs. Optimizing "
           "against predictors invites gaming; out-of-domain rows have unreliable safety calls.")
@@ -224,6 +229,7 @@ def main(argv=None):
     dd.add_argument("--seeds", help="file of seed SMILES (one per line); default: sample from ChEMBL")
     dd.add_argument("--pop", type=int, default=100); dd.add_argument("--generations", type=int, default=10)
     dd.add_argument("--top", type=int, default=20); dd.add_argument("--subsample", type=int, default=50000)
+    dd.add_argument("--target-hts", dest="target_hts", help="condition on a TDC HTS target (e.g. 'hiv'); B40")
     dd.add_argument("--out", default="intercepta_discover.csv")
     dd.set_defaults(func=_cmd_discover)
     args = p.parse_args(argv)

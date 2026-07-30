@@ -124,6 +124,14 @@ every candidate is a hypothesis, not a validated, novel, safe, or practically-sy
 platform *running end-to-end*, honestly bounded; it does not contradict §3 (which concerns using module outputs as a
 combined *predictor*).
 
+**Target-conditioned generation (B40).** The pipeline can be aimed at a chosen disease/target by attaching a
+validated activity QSAR to the objective (`× P(target-active)`). On HIV (QSAR scaffold AUROC 0.806), conditioning
+raises the mean predicted P(HIV-active) of generated candidates to **3.96×** the unconditioned pipeline (1.81× the
+ChEMBL seeds), at validity/novelty 1.0 and preserved drug-likeness/synthesizability — genuinely steering design
+toward the target. It also surfaces an honest **activity-vs-safety trade-off** (predicted safety 0.43 vs 0.80): the
+HIV-active-like chemistry the QSAR favors is predicted more toxic. Reported transparently (payload e62417bf);
+shipped `intercepta discover --target-hts`. Activity is QSAR-*predicted*, not measured; candidates remain hypotheses.
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -163,4 +171,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf.

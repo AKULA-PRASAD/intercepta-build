@@ -1,0 +1,50 @@
+{
+  "provenance": {
+    "experiment": "B40_target_conditioned_generation",
+    "git_sha": "384a7169d6c23515cf7517a739ac107f7a676527",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "objective_conditioned": "QED \u00d7 synth \u00d7 safety \u00d7 P(HIV-active|QSAR)",
+    "python": "3.11.14",
+    "qsar_train": "1443 active + 10000 inactive",
+    "seed": 42,
+    "target": "HIV replication inhibition (TDC HTS 'hiv')",
+    "timestamp_utc": "2026-07-30T15:20:47Z"
+  },
+  "results": {
+    "H1_conditioning_steers_to_target": true,
+    "H2_developability_preserved": false,
+    "activity_multiplier_vs_seed": 1.81,
+    "activity_multiplier_vs_unconditioned": 3.96,
+    "conditioned": {
+      "frac_in_admet_domain": 0.6327,
+      "mean_developability_F": 0.0564,
+      "mean_p_active": 0.1636,
+      "mean_qed": 0.7714,
+      "mean_sa": 2.2654,
+      "mean_safety": 0.4336,
+      "n": 98
+    },
+    "novelty_conditioned": 1.0,
+    "qsar_gate_pass": true,
+    "qsar_scaffold_auprc": 0.6144,
+    "qsar_scaffold_auroc": 0.8055,
+    "seed_mean_p_active": 0.0906,
+    "unconditioned_B39_style": {
+      "frac_in_admet_domain": 0.5618,
+      "mean_developability_F": 0.021,
+      "mean_p_active": 0.0413,
+      "mean_qed": 0.7207,
+      "mean_sa": 2.1569,
+      "mean_safety": 0.8042,
+      "n": 89
+    },
+    "validity": 1.0,
+    "verdict": "TARGET-CONDITIONING STEERS, WITH A SAFETY TRADE-OFF (positive but honest): the validated HIV QSAR (scaffold AUROC 0.806) DOES steer generation toward the target \u2014 mean predicted P(HIV-active) 0.1636 = 3.96\u00d7 the unconditioned GA (0.0413) and 1.81\u00d7 the seeds (0.0906) \u2014 and preserves drug-likeness (QED 0.7714) and synthesizability (SA 2.2654) at validity 1.0, novelty 1.0. BUT predicted SAFETY drops (0.4336 conditioned vs 0.8042 unconditioned): HIV-active-like chemistry is predicted more toxic \u2014 a genuine activity-vs-safety trade-off, honestly surfaced (the objective could be re-weighted toward safety). HONEST SCOPE: activity is QSAR-PREDICTED not measured; optimizing vs a QSAR invites gaming (63% of candidates in ADMET domain); candidates are hypotheses, NOT validated actives/drugs."
+  }
+}
