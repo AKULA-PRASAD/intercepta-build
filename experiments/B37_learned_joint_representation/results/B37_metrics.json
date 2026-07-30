@@ -1,0 +1,74 @@
+{
+  "meta_analysis": {
+    "H1_learned_representation_robustly_beats_structure": false,
+    "fraction_outcomes_C_gt_A": 0.667,
+    "mean_delta_B_minus_A": -0.1119,
+    "mean_delta_C_minus_A": 0.0177,
+    "n_outcomes": 3,
+    "per_outcome_delta_C_minus_A": {
+      "carcinogens_lagunin": 0.0016,
+      "clintox": -0.0113,
+      "skin_reaction": 0.0627
+    },
+    "verdict": "MIXED / WITHIN-DOMAIN ONLY (not a robust integration win): the tox21-pretrained embedding helps only where the outcome is closest to its toxicity training domain (per-outcome \u0394C\u2212A: clintox -0.0113, skin_reaction +0.0627, carcinogens_lagunin +0.0016); mean \u0394C\u2212A +0.0177 across 3 outcomes, and the embedding ALONE is generally WORSE than structure (mean \u0394B\u2212A -0.1119). So the learned representation shows genuine WITHIN-DOMAIN transfer (e.g. skin_reaction) but does NOT robustly beat raw structure across held-out outcomes \u2014 consistent with the information-bottleneck: a shallow learned representation over Morgan+physchem adds nothing general beyond raw structure. A robust integration win would need a much larger deep molecular foundation model (beyond torch-free shallow MLP) \u2014 the honest boundary."
+  },
+  "per_outcome": [
+    {
+      "auroc_embedding_B": 0.6354,
+      "auroc_struct_plus_embed_C": 0.8701,
+      "auroc_structure_A": 0.8814,
+      "delta_B_minus_A": -0.246,
+      "delta_C_minus_A": -0.0113,
+      "n_leakfree": 974,
+      "n_positive": 51,
+      "outcome": "clintox"
+    },
+    {
+      "auroc_embedding_B": 0.716,
+      "auroc_struct_plus_embed_C": 0.7424,
+      "auroc_structure_A": 0.6798,
+      "delta_B_minus_A": 0.0363,
+      "delta_C_minus_A": 0.0627,
+      "n_leakfree": 208,
+      "n_positive": 129,
+      "outcome": "skin_reaction"
+    },
+    {
+      "auroc_embedding_B": 0.6231,
+      "auroc_struct_plus_embed_C": 0.7507,
+      "auroc_structure_A": 0.7491,
+      "delta_B_minus_A": -0.126,
+      "delta_C_minus_A": 0.0016,
+      "n_leakfree": 222,
+      "n_positive": 52,
+      "outcome": "carcinogens_lagunin"
+    }
+  ],
+  "provenance": {
+    "experiment": "B37_learned_joint_representation",
+    "git_sha": "6a8a31ac613e28544a160349658a52919a434858",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "note": "missing tox21 labels filled 0",
+    "python": "3.11.14",
+    "representation": "sklearn MLPClassifier hidden=(256, 64) multi-task on tox21 (12 assays); embedding=last hidden",
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "timestamp_utc": "2026-07-30T12:57:47Z",
+    "transfer_outcomes": [
+      "clintox",
+      "skin_reaction",
+      "carcinogens_lagunin"
+    ]
+  }
+}
