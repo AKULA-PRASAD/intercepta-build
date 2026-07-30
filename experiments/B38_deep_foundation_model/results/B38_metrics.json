@@ -1,0 +1,145 @@
+{
+  "meta_analysis": {
+    "H1_deep_FM_beats_structure": false,
+    "bootstrap_delta_CI95": [
+      -0.0716,
+      0.0355
+    ],
+    "fraction_outcomes_C_gt_A": 0.714,
+    "mean_delta_B_minus_A": -0.0336,
+    "mean_delta_C_minus_A": -0.007,
+    "n_outcomes": 7,
+    "n_outcomes_oof_significant": 1,
+    "verdict": "DEEP FM DOES NOT BEAT RAW STRUCTURE (decisive; closes the integration ladder B32\u2192B38): ChemBERTa (77M-molecule pretrained) embeddings do NOT robustly augment Morgan+physchem across 7 held-out outcomes (mean \u0394C\u2212A -0.0070, FM-alone \u0394B\u2212A -0.0336, 71% positive, 1/7 significant, Wilcoxon p=0.2344, CI [-0.0716,0.0355]). Even a deep foundation model adds nothing general beyond classical fingerprints here \u2014 consistent with the literature (ChemBERTa \u2248/< fingerprints on ADMET/tox). The bottleneck is INFORMATION/DATA, not representation. INTERCEPTA's value is its STANDALONE validated modules; integration is bounded at every level tried. Honest boundary.",
+    "wilcoxon_p": 0.23438
+  },
+  "per_outcome": [
+    {
+      "auroc_FM_B": 0.6955,
+      "auroc_both_C": 0.8329,
+      "auroc_structure_A": 0.829,
+      "delta_B_minus_A": -0.1335,
+      "delta_C_minus_A": 0.0039,
+      "n": 1459,
+      "n_positive": 103,
+      "oof_C_minus_A_ci95": [
+        -0.0479,
+        0.0123
+      ],
+      "oof_significant": false,
+      "outcome": "clintox"
+    },
+    {
+      "auroc_FM_B": 0.771,
+      "auroc_both_C": 0.7965,
+      "auroc_structure_A": 0.7383,
+      "delta_B_minus_A": 0.0326,
+      "delta_C_minus_A": 0.0581,
+      "n": 404,
+      "n_positive": 274,
+      "oof_C_minus_A_ci95": [
+        -0.0861,
+        0.0454
+      ],
+      "oof_significant": false,
+      "outcome": "skin_reaction"
+    },
+    {
+      "auroc_FM_B": 0.6491,
+      "auroc_both_C": 0.6179,
+      "auroc_structure_A": 0.8089,
+      "delta_B_minus_A": -0.1598,
+      "delta_C_minus_A": -0.191,
+      "n": 278,
+      "n_positive": 60,
+      "oof_C_minus_A_ci95": [
+        -0.1558,
+        -0.0157
+      ],
+      "oof_significant": false,
+      "outcome": "carcinogens_lagunin"
+    },
+    {
+      "auroc_FM_B": 0.7334,
+      "auroc_both_C": 0.7366,
+      "auroc_structure_A": 0.7071,
+      "delta_B_minus_A": 0.0263,
+      "delta_C_minus_A": 0.0296,
+      "n": 4000,
+      "n_positive": 161,
+      "oof_C_minus_A_ci95": [
+        0.0091,
+        0.0847
+      ],
+      "oof_significant": true,
+      "outcome": "tox21:NR-AR"
+    },
+    {
+      "auroc_FM_B": 0.7261,
+      "auroc_both_C": 0.7301,
+      "auroc_structure_A": 0.7075,
+      "delta_B_minus_A": 0.0187,
+      "delta_C_minus_A": 0.0226,
+      "n": 4000,
+      "n_positive": 514,
+      "oof_C_minus_A_ci95": [
+        -0.0276,
+        0.0152
+      ],
+      "oof_significant": false,
+      "outcome": "tox21:NR-ER"
+    },
+    {
+      "auroc_FM_B": 0.8311,
+      "auroc_both_C": 0.8619,
+      "auroc_structure_A": 0.8686,
+      "delta_B_minus_A": -0.0375,
+      "delta_C_minus_A": -0.0067,
+      "n": 4000,
+      "n_positive": 624,
+      "oof_C_minus_A_ci95": [
+        -0.0099,
+        0.011
+      ],
+      "oof_significant": false,
+      "outcome": "tox21:SR-MMP"
+    },
+    {
+      "auroc_FM_B": 0.7964,
+      "auroc_both_C": 0.8128,
+      "auroc_structure_A": 0.7783,
+      "delta_B_minus_A": 0.0181,
+      "delta_C_minus_A": 0.0346,
+      "n": 4000,
+      "n_positive": 251,
+      "oof_C_minus_A_ci95": [
+        -0.0474,
+        0.0028
+      ],
+      "oof_significant": false,
+      "outcome": "tox21:SR-p53"
+    }
+  ],
+  "provenance": {
+    "embedding": "mean-pooled last_hidden_state (384-d), eval mode, rounded 5dp",
+    "experiment": "B38_deep_foundation_model",
+    "foundation_model": "DeepChem/ChemBERTa-77M-MLM",
+    "git_sha": "dc1a27844f090946ac0fe2b6d61ce4ecb18cc116",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3",
+      "torch": "2.13.0",
+      "transformers": "4.50.3"
+    },
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "timestamp_utc": "2026-07-30T13:23:32Z"
+  }
+}
