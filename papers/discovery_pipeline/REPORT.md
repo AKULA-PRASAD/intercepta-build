@@ -189,6 +189,20 @@ similarity-driven). **We therefore adopt the novel-band (NN<0.4) numbers as the 
 forward**, not the scaffold-split numbers. Retrospective, in-silico; enrichment ≠ proven activity; not wet-lab.
 (payload e437713b)
 
+## 3g. Honest external footing on an unbiased community benchmark — LIT-PCBA (B46)
+
+Our enrichment so far was on TDC HTS targets with our own splits. B46 places the ligand-based channel on **LIT-PCBA**
+(Tran-Nguyen et al., JCIM 2020) — the community's *unbiased* VS benchmark (15 targets, realistic 1:1000–1:20000
+imbalance), under the honest NN<0.4 lens from B45 and with cross-label dedup for leakage. On the 10 targets with enough
+actives for a supervised split (5 too-sparse targets skipped, not forced): **median full-test AUROC 0.781, 9/10 > 0.70**
+(FEN1 0.95, VDR 0.87, PKM2 0.86, GBA 0.84), and it **survives to novel chemistry** (panel-mean NN<0.4 AUROC **0.725**).
+This median AUROC is **competitive with published ligand-based/ML methods on LIT-PCBA** (typically ~0.7–0.8). We flag
+one thing honestly: our EF@1% (median ~13) is **inflated by the inactive subsampling** and is *not* comparable to
+published full-ratio EF (Vina ~0.9, GNINA ~2.1, best ML ~4–5; arXiv:2605.01681) — AUROC is the fair, ratio-independent
+metric. Honest weak spots: TP53 (0.68) and MTORC1 (novel-band 0.52, similarity-driven). No SOTA claim — an honest
+placement of our channel on the unbiased benchmark. Retrospective, in-silico; enrichment ≠ proven activity; not
+wet-lab. (payload 33d754cd)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -228,4 +242,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd.

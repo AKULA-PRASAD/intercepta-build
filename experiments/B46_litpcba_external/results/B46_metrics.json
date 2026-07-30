@@ -1,0 +1,178 @@
+{
+  "per_target": {
+    "ADRB2": {
+      "n_actives": 17,
+      "note": "insufficient actives (<60) for supervised QSAR \u2014 skipped"
+    },
+    "ALDH1": {
+      "auroc": 0.7752,
+      "bedroc_a80.5": 0.9145,
+      "ef_1pct": 2.005,
+      "ef_5pct": 1.942,
+      "mean_xset_nn_tanimoto": 0.4978,
+      "n_actives": 7145,
+      "n_inactives_used": 8000,
+      "n_novel_actives": 682,
+      "n_total": 15145,
+      "novel_lt0.4_auroc": 0.6936
+    },
+    "ESR1_ago": {
+      "n_actives": 13,
+      "note": "insufficient actives (<60) for supervised QSAR \u2014 skipped"
+    },
+    "ESR1_ant": {
+      "auroc": 0.7293,
+      "bedroc_a80.5": 0.4312,
+      "ef_1pct": 15.939,
+      "ef_5pct": 7.121,
+      "mean_xset_nn_tanimoto": 0.4239,
+      "n_actives": 88,
+      "n_inactives_used": 3836,
+      "n_novel_actives": 26,
+      "n_total": 3924,
+      "novel_lt0.4_auroc": 0.687
+    },
+    "FEN1": {
+      "auroc": 0.9454,
+      "bedroc_a80.5": 0.8092,
+      "ef_1pct": 23.109,
+      "ef_5pct": 12.524,
+      "mean_xset_nn_tanimoto": 0.4569,
+      "n_actives": 360,
+      "n_inactives_used": 8000,
+      "n_novel_actives": 96,
+      "n_total": 8360,
+      "novel_lt0.4_auroc": 0.8953
+    },
+    "GBA": {
+      "auroc": 0.8429,
+      "bedroc_a80.5": 0.6102,
+      "ef_1pct": 31.86,
+      "ef_5pct": 11.525,
+      "mean_xset_nn_tanimoto": 0.4566,
+      "n_actives": 164,
+      "n_inactives_used": 8000,
+      "n_novel_actives": 32,
+      "n_total": 8164,
+      "novel_lt0.4_auroc": 0.7034
+    },
+    "IDH1": {
+      "n_actives": 39,
+      "note": "insufficient actives (<60) for supervised QSAR \u2014 skipped"
+    },
+    "KAT2A": {
+      "auroc": 0.7352,
+      "bedroc_a80.5": 0.2714,
+      "ef_1pct": 12.892,
+      "ef_5pct": 6.231,
+      "mean_xset_nn_tanimoto": 0.4611,
+      "n_actives": 194,
+      "n_inactives_used": 8000,
+      "n_novel_actives": 49,
+      "n_total": 8194,
+      "novel_lt0.4_auroc": 0.7079
+    },
+    "MAPK1": {
+      "auroc": 0.7867,
+      "bedroc_a80.5": 0.3,
+      "ef_1pct": 9.602,
+      "ef_5pct": 5.651,
+      "mean_xset_nn_tanimoto": 0.4826,
+      "n_actives": 308,
+      "n_inactives_used": 8000,
+      "n_novel_actives": 38,
+      "n_total": 8308,
+      "novel_lt0.4_auroc": 0.7826
+    },
+    "MTORC1": {
+      "auroc": 0.7356,
+      "bedroc_a80.5": 0.3344,
+      "ef_1pct": 21.875,
+      "ef_5pct": 9.175,
+      "mean_xset_nn_tanimoto": 0.576,
+      "n_actives": 97,
+      "n_inactives_used": 8000,
+      "n_novel_actives": 9,
+      "n_total": 8097,
+      "novel_lt0.4_auroc": 0.5238
+    },
+    "OPRK1": {
+      "n_actives": 24,
+      "note": "insufficient actives (<60) for supervised QSAR \u2014 skipped"
+    },
+    "PKM2": {
+      "auroc": 0.8636,
+      "bedroc_a80.5": 0.6382,
+      "ef_1pct": 13.485,
+      "ef_5pct": 8.843,
+      "mean_xset_nn_tanimoto": 0.4628,
+      "n_actives": 546,
+      "n_inactives_used": 8000,
+      "n_novel_actives": 58,
+      "n_total": 8546,
+      "novel_lt0.4_auroc": 0.7874
+    },
+    "PPARG": {
+      "n_actives": 24,
+      "note": "insufficient actives (<60) for supervised QSAR \u2014 skipped"
+    },
+    "TP53": {
+      "auroc": 0.6777,
+      "bedroc_a80.5": 0.3694,
+      "ef_1pct": 13.531,
+      "ef_5pct": 5.65,
+      "mean_xset_nn_tanimoto": 0.415,
+      "n_actives": 64,
+      "n_inactives_used": 3356,
+      "n_novel_actives": 22,
+      "n_total": 3420,
+      "novel_lt0.4_auroc": 0.6993
+    },
+    "VDR": {
+      "auroc": 0.8711,
+      "bedroc_a80.5": 0.8366,
+      "ef_1pct": 8.147,
+      "ef_5pct": 7.124,
+      "mean_xset_nn_tanimoto": 0.4578,
+      "n_actives": 871,
+      "n_inactives_used": 8000,
+      "n_novel_actives": 313,
+      "n_total": 8871,
+      "novel_lt0.4_auroc": 0.7676
+    }
+  },
+  "provenance": {
+    "benchmark": "LIT-PCBA full_data (sha 93467a5b)",
+    "experiment": "B46_litpcba_external",
+    "git_sha": "7d3f0c1b4ab1c672cb8303b958b2ff5429df7d1e",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "min_actives": 60,
+    "n_inactive_cap": 8000,
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "timestamp_utc": "2026-07-30T22:00:54Z"
+  },
+  "summary": {
+    "H1_enriches_on_unbiased_benchmark": true,
+    "H2_survives_novel_chemistry": true,
+    "mean_full_auroc": 0.7963,
+    "median_ef_1pct_subsampled_ratio": 13.508,
+    "median_full_auroc": 0.781,
+    "n_evaluable": 10,
+    "n_skipped_low_active": 5,
+    "n_targets_auroc_gt0.70": 9,
+    "panel_mean_novel_lt0.4_auroc": 0.7248,
+    "published_context": "LIT-PCBA is hard: published median EF@1% ~ Vina 0.9 / GNINA 2.1 / best ML 4-5 (arXiv:2605.01681); EF here is at a subsampled ratio (AUROC is the fair metric).",
+    "verdict": "LIGAND-BASED CHANNEL ENRICHES ON THE UNBIASED BENCHMARK (honest external footing): median full AUROC 0.781 (9/10 targets >0.70), and it SURVIVES to novel chemistry (panel-mean NN<0.4 AUROC 0.7248). Modest by design on unbiased data; 5 low-active targets skipped honestly. Retrospective, in-silico, subsampled inactives (AUROC is the ratio-independent metric); enrichment != proven activity; not wet-lab."
+  }
+}

@@ -67,3 +67,10 @@ via the `INTERCEPTA_BEATAML` env var or a local path only.
 **Rule:** anything marked 🔒 is individual-level patient data and is excluded from git by `.gitignore` and by
 policy. Reproducing 🔒-dependent results requires the user's own dbGaP/cBioPortal access (a human gate,
 DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis of every committed result.
+
+## LIT-PCBA (unbiased virtual-screening benchmark) — B46
+- Source: https://drugdesign.unistra.fr/LIT-PCBA/ (Tran-Nguyen, Jacquemard & Rognan, J. Chem. Inf. Model. 2020)
+- File: full_data.tgz (53,808,890 bytes), sha256 93467a5b… ; extracted to `$INTERCEPTA_DATA/lit_pcba/`
+- Content: 15 targets, per target `actives.smi` + `inactives.smi` (SMILES + PubChem CID) + co-crystal `*_protein.mol2`/`*_ligand.mol2`
+- Access class: PUBLIC / OPEN. Never committed to git (data cache only).
+- Caveats (documented): extreme active:inactive imbalance (1:1000–1:20000); known analog leakage/redundancy across splits (arXiv:2507.21404) — handled via our NN<0.4 novel-band lens + cross-label dedup.
