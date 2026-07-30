@@ -1,0 +1,115 @@
+{
+  "provenance": {
+    "config": {
+      "generations": 8,
+      "hypervolume": "Monte-Carlo in [0,1]^4, 20000 pts, seed 0",
+      "n_seeds": 200,
+      "objectives": [
+        "activity",
+        "safety",
+        "qed",
+        "synth"
+      ],
+      "pop": 100,
+      "target": "HIV QSAR (B40)"
+    },
+    "experiment": "B41_pareto_reliable_discovery",
+    "git_sha": "0d2e233ae6aeecf90dc56d1df16b1c8ea9e48c34",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "python": "3.11.14",
+    "seed": 42,
+    "timestamp_utc": "2026-07-30T17:43:03Z"
+  },
+  "results": {
+    "H1_ad_constraint_improves_reliability": true,
+    "H2_pareto_finds_balanced_candidate": true,
+    "H4_pareto_hypervolume_ge_scalar": false,
+    "arm_A_scalar_unconstrained": {
+      "activity_safety_corr_indomain": 0.0617,
+      "best_balanced": {
+        "activity": 0.4763,
+        "qed": 0.8709,
+        "safety": 0.7965,
+        "smiles": "NS(=O)(=O)c1ccccc1-c1ccc(O)c(F)c1",
+        "synth": 0.898
+      },
+      "front_size": 19,
+      "hypervolume_front": 0.3288,
+      "in_domain_frac": 0.5408,
+      "mean": {
+        "activity": 0.1687,
+        "qed": 0.7548,
+        "safety": 0.5533,
+        "synth": 0.8586
+      },
+      "n": 98
+    },
+    "arm_B_pareto": {
+      "activity_safety_corr_indomain": -0.3839,
+      "best_balanced": {
+        "activity": 0.2895,
+        "qed": 0.8497,
+        "safety": 0.7677,
+        "smiles": "NS(=O)(=O)c1ccccc1-c1ccc(O)cc1",
+        "synth": 0.9203
+      },
+      "front_size": 89,
+      "hypervolume_front": 0.2024,
+      "in_domain_frac": 0.5779,
+      "mean": {
+        "activity": 0.0821,
+        "qed": 0.6712,
+        "safety": 0.7367,
+        "synth": 0.8424
+      },
+      "n": 199
+    },
+    "arm_C_pareto_ad_constrained": {
+      "activity_safety_corr_indomain": -0.1317,
+      "best_balanced": {
+        "activity": 0.3411,
+        "qed": 0.9093,
+        "safety": 0.5608,
+        "smiles": "NS(=O)(=O)c1ccccc1-c1cccc(Cl)c1",
+        "synth": 0.9231
+      },
+      "front_size": 119,
+      "hypervolume_front": 0.2137,
+      "in_domain_frac": 0.9246,
+      "mean": {
+        "activity": 0.0639,
+        "qed": 0.708,
+        "safety": 0.6264,
+        "synth": 0.8488
+      },
+      "n": 199
+    },
+    "seed": {
+      "activity_safety_corr_indomain": -0.1253,
+      "best_balanced": {
+        "activity": 0.2702,
+        "qed": 0.1179,
+        "safety": 0.6516,
+        "smiles": "C=CCOC(NC(=O)[C@H](Cc1ccccc1)NS(=O)(=O)N1CCOCC1)C(=O)N[C@@H](CC1CCCCC1)[C@@H](O)[C@@H](O)CC(C)C",
+        "synth": 0.6276
+      },
+      "front_size": 28,
+      "hypervolume_front": 0.1123,
+      "in_domain_frac": 0.54,
+      "mean": {
+        "activity": 0.0906,
+        "qed": 0.5461,
+        "safety": 0.4238,
+        "synth": 0.7673
+      },
+      "n": 200
+    },
+    "verdict": "PARTIAL: H1(reliability)=True H2(balanced)=True H4(HV\u2265scalar)=False. in-domain A 0.54 C 0.92; HV A 0.3288 B 0.2024 C 0.2137. See per-arm numbers \u2014 the AD-constrained Pareto approach did not clear all criteria; reported honestly."
+  }
+}

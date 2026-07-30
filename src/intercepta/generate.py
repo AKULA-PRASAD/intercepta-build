@@ -131,3 +131,104 @@ class MoleculeOptimizer:
                 "best_smiles": pop[best_i], "best_score": round(float(scores[best_i]), 4),
                 "final_best": round(float(scores.max()), 4), "final_mean": round(float(scores.mean()), 4),
                 "final_population": [pop[i] for i in order]}
+
+
+# ================================ multi-objective (NSGA-II) ================================
+
+def _dominates(a, b):
+    """a dominates b (both maximize): a >= b on all objectives and a > b on at least one."""
+    return bool(np.all(a >= b) and np.any(a > b))
+
+
+def _fast_non_dominated_sort(F):
+    """F: (n, m) maximize. Returns a list of fronts (each a list of row indices), best first."""
+    n = len(F); S = [[] for _ in range(n)]; ndom = np.zeros(n, int); fronts = [[]]
+    for p in range(n):
+        for q in range(n):
+            if p == q:
+                continue
+            if _dominates(F[p], F[q]):
+                S[p].append(q)
+            elif _dominates(F[q], F[p]):
+                ndom[p] += 1
+        if ndom[p] == 0:
+            fronts[0].append(p)
+    i = 0
+    while fronts[i]:
+        nxt = []
+        for p in fronts[i]:
+            for q in S[p]:
+                ndom[q] -= 1
+                if ndom[q] == 0:
+                    nxt.append(q)
+        i += 1; fronts.append(nxt)
+    return [f for f in fronts if f]
+
+
+def _crowding_distance(Ff):
+    """Ff: (k, m). NSGA-II crowding distance per point (boundary points -> inf)."""
+    k, m = Ff.shape; dist = np.zeros(k)
+    if k <= 2:
+        return np.full(k, np.inf)
+    for j in range(m):
+        order = np.argsort(Ff[:, j]); dist[order[0]] = dist[order[-1]] = np.inf
+        rng = Ff[order[-1], j] - Ff[order[0], j]
+        if rng == 0:
+            continue
+        for i in range(1, k - 1):
+            dist[order[i]] += (Ff[order[i + 1], j] - Ff[order[i - 1], j]) / rng
+    return dist
+
+
+class ParetoOptimizer(MoleculeOptimizer):
+    """Multi-objective BRICS-GA with NSGA-II selection (non-dominated sort + crowding distance) and an optional
+    applicability-domain feasibility constraint (feasible individuals are always preferred to infeasible). Validated
+    in B41. `objective_vec`: callable mol -> np.array of m objective values (all higher=better). `feasible`:
+    optional callable mol -> bool (in the reliable/applicability domain)."""
+
+    def __init__(self, objective_vec, feasible=None, pop_size=100, generations=10, seed=42, max_frag=600):
+        super().__init__(objective="qed", pop_size=pop_size, generations=generations, seed=seed, max_frag=max_frag)
+        self.objective = "pareto"; self.objective_vec = objective_vec; self.feasible = feasible
+
+    def _F(self, mols):
+        return np.vstack([np.asarray(self.objective_vec(m), float) for m in mols])
+
+    def _feas(self, mols):
+        return np.array([bool(self.feasible(m)) for m in mols]) if self.feasible else np.ones(len(mols), bool)
+
+    def _select(self, F, feas, k):
+        """Constrained NSGA-II selection of k indices: feasible first (NDS+crowding), then infeasible by objective sum."""
+        idx_feas = np.where(feas)[0]; chosen = []
+        if len(idx_feas):
+            fronts = _fast_non_dominated_sort(F[idx_feas])
+            for fr in fronts:
+                gi = idx_feas[fr]
+                if len(chosen) + len(gi) <= k:
+                    chosen.extend(gi.tolist())
+                else:
+                    cd = _crowding_distance(F[gi]); chosen.extend(gi[np.argsort(-cd)][: k - len(chosen)].tolist()); break
+        if len(chosen) < k:                                   # fill from infeasible by summed objective (fallback)
+            inf = np.where(~feas)[0]; inf = inf[np.argsort(-F[inf].sum(1))]
+            chosen.extend(inf[: k - len(chosen)].tolist())
+        return chosen
+
+    def optimize(self, seed_smiles):
+        pop = list(dict.fromkeys(Chem.MolToSmiles(m) for m in self._mols(seed_smiles)))
+        history = []
+        for g in range(self.generations):
+            mols = self._mols(pop); F = self._F(mols); feas = self._feas(mols)
+            parents_idx = self._select(F, feas, self.pop_size)
+            parents = [pop[i] for i in parents_idx]
+            f0 = _fast_non_dominated_sort(F[np.where(feas)[0]]) if feas.any() else [[]]
+            history.append({"generation": g, "n": len(pop), "n_feasible": int(feas.sum()),
+                            "front0_size": int(len(f0[0])) if f0 and len(f0[0]) else 0})
+            frag = self._fragments(self._mols(parents))
+            offspring = self._generate(frag, self.pop_size, rng_seed=self.seed + g + 1)
+            pop = list(dict.fromkeys(parents + offspring))
+            if len(pop) < 2:
+                break
+        mols = self._mols(pop); F = self._F(mols); feas = self._feas(mols)
+        fi = np.where(feas)[0]
+        front0 = fi[_fast_non_dominated_sort(F[fi])[0]].tolist() if len(fi) else []
+        return {"objective": "pareto", "history": history, "population": pop, "F": F, "feasible": feas,
+                "front0_idx": front0, "smiles": pop}
