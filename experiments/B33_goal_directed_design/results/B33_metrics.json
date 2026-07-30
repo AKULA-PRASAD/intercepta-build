@@ -9,7 +9,7 @@
     },
     "data": "ChEMBL seeds ($INTERCEPTA_DATA/tdc_gen/chembl.tab)",
     "experiment": "B33_goal_directed_design",
-    "git_sha": "5e2a6a933c316c9e081d56e059b6bd4e4a1d73e1",
+    "git_sha": "c71a6ea2454731bd6b9ba727bd0eaf6c4f677b7e",
     "libs": {
       "numpy": "1.26.4",
       "pandas": "2.3.3",
@@ -19,7 +19,7 @@
     },
     "python": "3.11.14",
     "seed": 42,
-    "timestamp_utc": "2026-07-30T13:37:16Z"
+    "timestamp_utc": "2026-07-30T11:22:32Z"
   },
   "results": {
     "H1_ga_beats_both_baselines": true,
