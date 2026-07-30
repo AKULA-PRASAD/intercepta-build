@@ -145,6 +145,16 @@ reconstruction (fragment-recombination reach limit); enrichment is one target; r
 similarity ≠ proven activity; not wet-lab. This is the program's strongest computational-validation evidence and
 the main mitigation of the circular-validation risk. (payload 9d99060e)
 
+## 3d. Generality of the enrichment across target classes (B43)
+
+B42's external-truth enrichment was one target (HIV). B43 applies the same protocol to a diverse 6-target panel
+(antiviral, 2×GPCR, ion channel, kinase, viral protease). **All 6 enrich** real actives (AUROC>0.7 & EF@1%>3):
+panel-mean AUROC **0.835** (range 0.76–0.89), mean EF@1% **13.2×** (HIV 5.0×, m1-muscarinic 8.8×, orexin-1 11.1×,
+Kir2.1 19.2×, SARS-CoV-2-3CLpro 9.5×, STK33 25.8×). So the scoring's recovery of real actives is **general across
+target classes, not HIV-specific** — the strongest evidence that the screening capability transfers. Retrospective,
+in-silico, real-actives-vs-decoys on scaffold splits; low-active screens (78–172 actives) are harder but still
+enrich; enrichment ≠ proven activity; not wet-lab. (payload daca99a2)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -184,4 +194,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2.
