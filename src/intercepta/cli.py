@@ -5,6 +5,7 @@ Subcommands:
   rank     — rank drugs for query tumor expression (cell-line transfer + verified mutation markers)
   synergy  — rank synergistic drug PAIRS from a known library (combinations arm, V23/B24-B29)
   admet    — predict ADMET/safety properties from SMILES (structure-only screening filter, B30)
+  synth    — score retrosynthetic solvability (synthesizability proxy) from SMILES (B31)
 
 HONEST SCOPE: every subcommand is a RESEARCH hypothesis-ranking/screening tool, validated at the
 cell-line/ex-vivo (rank, synergy) or scaffold-split benchmark (admet) level only. NONE is a validated human
@@ -90,6 +91,24 @@ def _cmd_admet(args):
     return 0
 
 
+def _cmd_synth(args):
+    from intercepta.synth import SynthesizabilityScorer
+    if not args.smiles and not args.molecules:
+        print("ERROR: provide --molecules 'SMILES,SMILES' or --smiles path.txt", file=sys.stderr)
+        return 2
+    smiles = [s.strip() for s in open(args.smiles)] if args.smiles else [s.strip() for s in args.molecules.split(",")]
+    smiles = [s for s in smiles if s]
+    scorer = SynthesizabilityScorer.from_rascore(subsample=args.subsample, conformal=not args.no_conformal)
+    out = scorer.predict(smiles)
+    out.to_csv(args.out, index=False)
+    n_ood = int((~out["in_domain"]).sum())
+    print(f"scored {len(out)} molecule(s) for retrosynthetic solvability ({n_ood} out-of-applicability-domain) -> {args.out}")
+    print("NOTE: predicts ALGORITHMIC retrosynthetic solvability (AiZynthFinder/USPTO templates), a computational "
+          "PROXY for synthesizability (B31-validated) — NOT a guarantee a molecule can be made. sa_score = RDKit "
+          "SAscore (1 easy..10 hard). Research screening signal, not a chemistry verdict.")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -117,6 +136,13 @@ def main(argv=None):
                    help="emit calibrated conformal uncertainty (B30b): regression pi_low/pi_high, classification sets")
     a.add_argument("--out", default="intercepta_admet.csv")
     a.set_defaults(func=_cmd_admet)
+    y = sub.add_parser("synth", help="score retrosynthetic solvability (synthesizability proxy) from SMILES (B31)")
+    y.add_argument("--molecules", help="comma-separated SMILES strings")
+    y.add_argument("--smiles", help="path to a file with one SMILES per line (alternative to --molecules)")
+    y.add_argument("--subsample", type=int, default=50000, help="training subsample size (default 50000)")
+    y.add_argument("--no-conformal", action="store_true", help="skip conformal prediction-set output")
+    y.add_argument("--out", default="intercepta_synth.csv")
+    y.set_defaults(func=_cmd_synth)
     args = p.parse_args(argv)
     return args.func(args)
 

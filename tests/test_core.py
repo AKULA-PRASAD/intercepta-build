@@ -228,3 +228,30 @@ def test_admet_conformal_default_off_backcompat():
     smi = _synth_alcohols(120); y = [float(len(s)) for s in smi]
     out = ADMETPredictor().fit_task("lipophilicity_astrazeneca", smi, y).predict(["CCO"])   # conformal default off
     assert not {"pi_low", "pi_high", "conformal_set", "set_size"} & set(out.columns)        # unchanged schema
+
+
+# ---- synthesizability module (B31), data-free ----
+def test_sa_score_orders_simple_vs_complex():
+    from intercepta.synth import sa_score
+    assert sa_score("c1ccccc1") < sa_score("C1CC2CCC3C(CCC4CC(O)CCC34C)C2C1")   # benzene easier than a steroid-like
+    assert np.isnan(sa_score("not_a_smiles"))
+    v = sa_score(["CCO", "c1ccccc1"]); assert len(v) == 2 and np.isfinite(v).all()
+
+def test_synth_scorer_learns_and_flags_domain():
+    from intercepta.synth import SynthesizabilityScorer
+    # learnable synthetic rule: aromatics -> solvable(1), aliphatic alcohols -> unsolvable(0)
+    pos = ["c1ccccc1", "c1ccc(C)cc1", "c1ccc(O)cc1", "c1ccncc1", "c1ccc2ccccc2c1", "c1ccc(N)cc1"]
+    neg = ["CCO", "CCCO", "CCCCO", "CC(C)O", "OCCCCCC", "CCC(C)O"]
+    smi = (pos + neg) * 10; solvable = ([1] * len(pos) + [0] * len(neg)) * 10     # 120 samples -> conformal on
+    p = SynthesizabilityScorer(conformal=True).fit(smi, solvable)
+    out = p.predict(["c1ccccc1", "CCO", "not_a_smiles"]).set_index("smiles")
+    assert {"solvable_prob", "sa_score", "ad_distance", "in_domain", "conformal_set", "set_size"}.issubset(out.columns)
+    assert out.loc["c1ccccc1", "solvable_prob"] > out.loc["CCO", "solvable_prob"]   # aromatic scored more solvable
+    assert 0.0 <= out.loc["c1ccccc1", "solvable_prob"] <= 1.0
+    assert bool(out.loc["not_a_smiles", "in_domain"]) is False
+    assert np.isnan(out.loc["not_a_smiles", "solvable_prob"])
+
+def test_synth_scorer_requires_fit():
+    from intercepta.synth import SynthesizabilityScorer
+    with pytest.raises(RuntimeError):
+        SynthesizabilityScorer().predict(["CCO"])

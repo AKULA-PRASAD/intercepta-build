@@ -1,0 +1,53 @@
+{
+  "provenance": {
+    "data": "RAscore uspto_chembl_classification (179413 train / 19935 test; subsample_train=50000)",
+    "experiment": "B31_synthesizability",
+    "features": "Morgan/ECFP4 2048-bit + 17 RDKit physchem (unified with admet)",
+    "git_sha": "3072fa1049006e975cc7fae1a14227c7dca2b726",
+    "libs": {
+      "PyTDC": "1.1.15",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "model": "HistGradientBoostingClassifier seed=42 max_iter=300 lr=0.06 max_depth=6",
+    "python": "3.11.14",
+    "timestamp_utc": "2026-07-30T03:33:46Z"
+  },
+  "random_split": {
+    "model_auprc": 0.9664,
+    "model_auroc": 0.9113,
+    "sa_auprc": 0.943,
+    "sa_auroc": 0.8472,
+    "trivial_auprc": 0.7521,
+    "trivial_auroc": 0.5
+  },
+  "scaffold_split": {
+    "model_auprc_mean": 0.9645,
+    "model_auprc_sd": 0.0018,
+    "model_auroc_mean": 0.9082,
+    "model_auroc_sd": 0.0015,
+    "n_unique_scaffolds": 48778,
+    "sa_auroc_mean": 0.8436,
+    "seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "sota_reference": {
+    "RAscore_DNN_auroc": 0.93,
+    "RAscore_XGB_auroc": 0.95,
+    "SAscore_oriented_auroc_ref": 0.85,
+    "note": "published RAscore ChEMBL test (Thakkar et al. Chem Sci 2021), random split; retrieved 2026-07-29"
+  },
+  "summary": {
+    "H1_random_beats_trivial_and_SA": true,
+    "H1_scaffold_beats_trivial_and_SA_by_1sd": true,
+    "H2_generalization_gap_auroc": 0.0031,
+    "H3_random_vs_published_RAscore_gap": 0.0387,
+    "verdict": "VALIDATED synthesizability screening filter: structure-only GBT predicts AiZynthFinder solvability at AUROC 0.911 (random split; published RAscore 0.93-0.95, same model family) and 0.908 on a scaffold split (novel chemistry) \u2014 beating trivial (0.5) and the oriented-SAscore heuristic on both. Honest generalization gap random->scaffold = 0.003. Scope: algorithmic retrosynthetic solvability (USPTO templates), a computational proxy, NOT a lab guarantee."
+  }
+}
