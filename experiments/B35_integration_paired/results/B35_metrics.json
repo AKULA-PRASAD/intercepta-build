@@ -1,0 +1,64 @@
+{
+  "provenance": {
+    "experiment": "B35_integration_paired",
+    "git_sha": "83c1eb046c6bbee9a774ea2044959f39707eaab2",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "note": "paired re-adjudication of B32b feature-level fusion on ClinTox; same features/data",
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "timestamp_utc": "2026-07-30T11:54:25Z"
+  },
+  "results": {
+    "H1_feature_fusion_beats_structure_paired": false,
+    "auroc_SM_mean": 0.9227,
+    "auroc_S_mean": 0.9042,
+    "bootstrap_delta_CI95": [
+      0.0054,
+      0.032
+    ],
+    "fraction_seeds_delta_positive": 0.8,
+    "n_leakfree": 1039,
+    "n_positive": 55,
+    "paired_delta_all": [
+      -0.0147,
+      0.0382,
+      0.0345,
+      -0.0081,
+      0.0171,
+      0.0595,
+      0.0034,
+      0.0313,
+      0.0179,
+      0.0055
+    ],
+    "paired_delta_mean": 0.0185,
+    "pooled_oof_auroc_S": 0.8879,
+    "pooled_oof_auroc_SM": 0.8956,
+    "pooled_oof_bootstrap_delta_CI95": [
+      -0.02,
+      0.0388
+    ],
+    "pooled_oof_delta": 0.0078,
+    "pooled_oof_onesided_p": 0.303,
+    "seeds": 10,
+    "verdict": "STRUCTURE SUFFICIENT (integration not established): paired \u0394AUROC +0.0185 (80% seeds positive, Wilcoxon p=0.0186, CI [0.0054,0.0320]; pooled-OOF \u0394 +0.0078, CI [-0.0200,0.0388], p=0.3030). Feature-level integration does not reliably beat raw structure on ClinTox even under the paired test \u2014 the B32/B32b 'not established' bound stands.",
+    "wilcoxon_onesided_p": 0.01855
+  }
+}
