@@ -216,6 +216,20 @@ its early enrichment is weak (EF@5% 1.3–1.7×, consistent with docking's known
 the complementary signal, not raw superiority. Heuristic score (not binding ΔG), rigid receptor, obabel prep, 3
 targets, subsampled; not wet-lab; no SOTA claim. (payload 24d5b0f6)
 
+## 3i. The payoff — does new orthogonal information break the ceiling? (B48)
+
+B47 added a structure-based channel orthogonal to the ligand channel (Spearman 0.27). B48 is the decisive test the
+whole arc built toward: does fusing the strong ligand-QSAR with the orthogonal docking channel beat the best single
+channel? On 3 LIT-PCBA targets (eval ligands held out of QSAR training; leakage-controlled logistic fusion via
+scaffold-CV out-of-fold), the answer is a clean **no**: panel-mean AUROC QSAR **0.835** (best single) vs
+logistic-fusion **0.821** (Δ −0.014), and the same on novel chemistry (0.71 vs 0.74). Naive equal-weight rank fusion is
+worse still (0.695) — averaging in weaker channels *hurts*; the leakage-controlled weighted fusion is smart enough to
+recover ≈QSAR but cannot exceed it. **This extends the integration negative-envelope (§3, B32→B38) to a genuinely new
+information source** — the 3D receptor. Despite being orthogonal, docking is not *additive*: the ligand QSAR already
+captures the accessible discriminative signal. It is the strongest confirmation yet of the program's thesis — the
+bottleneck is **information, not combination**. Retrospective, 3 targets, subsampled, heuristic docking; not wet-lab;
+no SOTA claim. First-class negative. (payload 68c5b043)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -255,4 +269,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043.

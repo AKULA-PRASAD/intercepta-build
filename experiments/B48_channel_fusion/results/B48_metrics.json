@@ -1,0 +1,197 @@
+{
+  "per_target": {
+    "ESR1_ant": {
+      "best_single_auroc": 0.7944,
+      "delta_fusion_log_minus_best_single": -0.0045,
+      "full": {
+        "docking": {
+          "auroc": 0.6924,
+          "ef_5pct": 2.667
+        },
+        "fusion_logistic": {
+          "auroc": 0.7899,
+          "ef_5pct": 2.333
+        },
+        "fusion_rank": {
+          "auroc": 0.7219,
+          "ef_5pct": 2.333
+        },
+        "ligsim": {
+          "auroc": 0.4967,
+          "ef_5pct": 1.667
+        },
+        "qsar": {
+          "auroc": 0.7944,
+          "ef_5pct": 3.0
+        }
+      },
+      "mean_nn_to_qsar_train": 0.5385,
+      "n_actives": 60,
+      "n_docked": 180,
+      "n_references": 14,
+      "novel_lt0.4": {
+        "docking": {
+          "auroc": 0.7175
+        },
+        "fusion_logistic": {
+          "auroc": 0.7375
+        },
+        "fusion_rank": {
+          "auroc": 0.7275
+        },
+        "ligsim": {
+          "auroc": 0.6
+        },
+        "n_novel": 40,
+        "n_novel_actives": 20,
+        "qsar": {
+          "auroc": 0.725
+        }
+      }
+    },
+    "FEN1": {
+      "best_single_auroc": 0.9317,
+      "delta_fusion_log_minus_best_single": -0.0016,
+      "full": {
+        "docking": {
+          "auroc": 0.4936,
+          "ef_5pct": 1.0
+        },
+        "fusion_logistic": {
+          "auroc": 0.9301,
+          "ef_5pct": 3.0
+        },
+        "fusion_rank": {
+          "auroc": 0.6636,
+          "ef_5pct": 1.667
+        },
+        "ligsim": {
+          "auroc": 0.3533,
+          "ef_5pct": 0.333
+        },
+        "qsar": {
+          "auroc": 0.9317,
+          "ef_5pct": 3.0
+        }
+      },
+      "mean_nn_to_qsar_train": 0.4917,
+      "n_actives": 60,
+      "n_docked": 180,
+      "n_references": 1,
+      "novel_lt0.4": {
+        "docking": {
+          "auroc": 0.5858
+        },
+        "fusion_logistic": {
+          "auroc": 0.8535
+        },
+        "fusion_rank": {
+          "auroc": 0.6384
+        },
+        "ligsim": {
+          "auroc": 0.4371
+        },
+        "n_novel": 42,
+        "n_novel_actives": 19,
+        "qsar": {
+          "auroc": 0.8604
+        }
+      }
+    },
+    "MAPK1": {
+      "best_single_auroc": 0.779,
+      "delta_fusion_log_minus_best_single": -0.0371,
+      "full": {
+        "docking": {
+          "auroc": 0.6246,
+          "ef_5pct": 2.333
+        },
+        "fusion_logistic": {
+          "auroc": 0.7419,
+          "ef_5pct": 2.333
+        },
+        "fusion_rank": {
+          "auroc": 0.6989,
+          "ef_5pct": 2.333
+        },
+        "ligsim": {
+          "auroc": 0.5301,
+          "ef_5pct": 1.0
+        },
+        "qsar": {
+          "auroc": 0.779,
+          "ef_5pct": 2.0
+        }
+      },
+      "mean_nn_to_qsar_train": 0.5603,
+      "n_actives": 60,
+      "n_docked": 180,
+      "n_references": 11,
+      "novel_lt0.4": {
+        "docking": {
+          "auroc": 0.4921
+        },
+        "fusion_logistic": {
+          "auroc": 0.5476
+        },
+        "fusion_rank": {
+          "auroc": 0.5873
+        },
+        "ligsim": {
+          "auroc": 0.5
+        },
+        "n_novel": 23,
+        "n_novel_actives": 9,
+        "qsar": {
+          "auroc": 0.6349
+        }
+      }
+    }
+  },
+  "provenance": {
+    "cv_seeds": [
+      1,
+      2,
+      3
+    ],
+    "embed_seed": 2887,
+    "experiment": "B48_channel_fusion",
+    "git_sha": "a1c511286e053225f7da9f1c150ff6fac0c81492",
+    "libs": {
+      "numpy": "2.5.1",
+      "openbabel": "3.1.0",
+      "rdkit": "2025.09.5",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "vina": "1.2.7"
+    },
+    "max_act": 60,
+    "max_dec": 120,
+    "python": "3.12.13",
+    "targets": [
+      "FEN1",
+      "MAPK1",
+      "ESR1_ant"
+    ],
+    "timestamp_utc": "2026-07-31T01:02:03Z",
+    "vina_cpu": 8,
+    "vina_seed": 42
+  },
+  "summary": {
+    "H1_fusion_beats_best_single": false,
+    "H2_holds_on_novel_chemistry": false,
+    "delta_fusion_minus_best_single": -0.0144,
+    "n_targets": 3,
+    "novel_best_single_auroc": 0.7401,
+    "novel_fusion_auroc": 0.7129,
+    "panel_mean_auroc": {
+      "docking": 0.6035,
+      "fusion_logistic": 0.8206,
+      "fusion_rank": 0.6948,
+      "ligsim": 0.46,
+      "qsar": 0.835
+    },
+    "panel_mean_best_single_auroc": 0.835,
+    "verdict": "INTEGRATION CEILING HOLDS EVEN WITH ORTHOGONAL 3D INFORMATION (first-class negative, extends B32->B38): logistic fusion panel-mean AUROC 0.8206 vs best single 0.835 (delta -0.0144, < +0.02). Despite docking being orthogonal (B47 Spearman 0.27), fusing it with the strong ligand QSAR does NOT beat the best single channel here \u2014 the QSAR already captures the accessible signal. Consistent with 'bottleneck is information, not combination'. Honest negative; 3 targets, subsampled, in-silico; not wet-lab."
+  }
+}
