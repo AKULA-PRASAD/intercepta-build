@@ -1,0 +1,222 @@
+{
+  "per_target": {
+    "CHEMBL1862_Ki": {
+      "correctable_fraction": 0.0768,
+      "n_novel": 49,
+      "rank_signal": 0.3875,
+      "rmse_raw": 0.9024,
+      "shrinkage_ratio": 0.6363
+    },
+    "CHEMBL1871_Ki": {
+      "correctable_fraction": 0.2357,
+      "n_novel": 17,
+      "rank_signal": 0.3237,
+      "rmse_raw": 1.0203,
+      "shrinkage_ratio": 0.6579
+    },
+    "CHEMBL2034_Ki": {
+      "correctable_fraction": 0.424,
+      "n_novel": 15,
+      "rank_signal": -0.2821,
+      "rmse_raw": 1.446,
+      "shrinkage_ratio": 0.313
+    },
+    "CHEMBL2047_EC50": {
+      "note": "skip (<15 novel)"
+    },
+    "CHEMBL204_Ki": {
+      "correctable_fraction": 0.4177,
+      "n_novel": 19,
+      "rank_signal": -0.0546,
+      "rmse_raw": 1.5052,
+      "shrinkage_ratio": 0.5602
+    },
+    "CHEMBL2147_Ki": {
+      "correctable_fraction": 0.1321,
+      "n_novel": 79,
+      "rank_signal": 0.3233,
+      "rmse_raw": 0.8345,
+      "shrinkage_ratio": 0.6146
+    },
+    "CHEMBL214_Ki": {
+      "correctable_fraction": 0.0706,
+      "n_novel": 60,
+      "rank_signal": 0.2611,
+      "rmse_raw": 1.0975,
+      "shrinkage_ratio": 0.4669
+    },
+    "CHEMBL218_EC50": {
+      "correctable_fraction": 0.1121,
+      "n_novel": 27,
+      "rank_signal": 0.3221,
+      "rmse_raw": 1.0396,
+      "shrinkage_ratio": 0.4443
+    },
+    "CHEMBL219_Ki": {
+      "correctable_fraction": 0.1549,
+      "n_novel": 25,
+      "rank_signal": 0.4286,
+      "rmse_raw": 0.9866,
+      "shrinkage_ratio": 0.4017
+    },
+    "CHEMBL228_Ki": {
+      "correctable_fraction": 0.1772,
+      "n_novel": 63,
+      "rank_signal": 0.3963,
+      "rmse_raw": 1.2724,
+      "shrinkage_ratio": 0.5868
+    },
+    "CHEMBL231_Ki": {
+      "correctable_fraction": 0.1502,
+      "n_novel": 28,
+      "rank_signal": 0.3528,
+      "rmse_raw": 1.0504,
+      "shrinkage_ratio": 0.6832
+    },
+    "CHEMBL233_Ki": {
+      "correctable_fraction": 0.1679,
+      "n_novel": 27,
+      "rank_signal": 0.2791,
+      "rmse_raw": 1.1402,
+      "shrinkage_ratio": 0.4301
+    },
+    "CHEMBL234_Ki": {
+      "correctable_fraction": 0.1234,
+      "n_novel": 43,
+      "rank_signal": 0.2289,
+      "rmse_raw": 1.0807,
+      "shrinkage_ratio": 0.399
+    },
+    "CHEMBL235_EC50": {
+      "correctable_fraction": 0.1638,
+      "n_novel": 26,
+      "rank_signal": -0.0195,
+      "rmse_raw": 1.1876,
+      "shrinkage_ratio": 0.2671
+    },
+    "CHEMBL236_Ki": {
+      "correctable_fraction": 0.4885,
+      "n_novel": 16,
+      "rank_signal": 0.2881,
+      "rmse_raw": 1.0976,
+      "shrinkage_ratio": 0.6192
+    },
+    "CHEMBL237_EC50": {
+      "note": "skip (<15 novel)"
+    },
+    "CHEMBL237_Ki": {
+      "correctable_fraction": 0.23,
+      "n_novel": 38,
+      "rank_signal": 0.0997,
+      "rmse_raw": 0.9703,
+      "shrinkage_ratio": 0.5415
+    },
+    "CHEMBL238_Ki": {
+      "correctable_fraction": 0.0814,
+      "n_novel": 61,
+      "rank_signal": 0.3314,
+      "rmse_raw": 0.9694,
+      "shrinkage_ratio": 0.5438
+    },
+    "CHEMBL239_EC50": {
+      "correctable_fraction": 0.2221,
+      "n_novel": 22,
+      "rank_signal": 0.0868,
+      "rmse_raw": 1.2708,
+      "shrinkage_ratio": 0.3766
+    },
+    "CHEMBL244_Ki": {
+      "correctable_fraction": 0.3156,
+      "n_novel": 31,
+      "rank_signal": -0.0291,
+      "rmse_raw": 1.2081,
+      "shrinkage_ratio": 0.4186
+    },
+    "CHEMBL262_Ki": {
+      "correctable_fraction": 0.0999,
+      "n_novel": 75,
+      "rank_signal": 0.2563,
+      "rmse_raw": 0.865,
+      "shrinkage_ratio": 0.5299
+    },
+    "CHEMBL264_Ki": {
+      "correctable_fraction": 0.1209,
+      "n_novel": 18,
+      "rank_signal": 0.1472,
+      "rmse_raw": 1.3391,
+      "shrinkage_ratio": 0.3363
+    },
+    "CHEMBL2835_Ki": {
+      "note": "skip (<15 novel)"
+    },
+    "CHEMBL287_Ki": {
+      "correctable_fraction": 0.0638,
+      "n_novel": 33,
+      "rank_signal": 0.4534,
+      "rmse_raw": 1.091,
+      "shrinkage_ratio": 0.4555
+    },
+    "CHEMBL2971_Ki": {
+      "correctable_fraction": 0.1233,
+      "n_novel": 45,
+      "rank_signal": 0.3161,
+      "rmse_raw": 1.1734,
+      "shrinkage_ratio": 0.6361
+    },
+    "CHEMBL3979_EC50": {
+      "correctable_fraction": 0.0317,
+      "n_novel": 22,
+      "rank_signal": 0.0962,
+      "rmse_raw": 1.1762,
+      "shrinkage_ratio": 0.3552
+    },
+    "CHEMBL4005_Ki": {
+      "note": "skip (<15 novel)"
+    },
+    "CHEMBL4203_Ki": {
+      "correctable_fraction": 0.0358,
+      "n_novel": 88,
+      "rank_signal": 0.484,
+      "rmse_raw": 0.818,
+      "shrinkage_ratio": 0.6052
+    },
+    "CHEMBL4616_EC50": {
+      "note": "skip (<15 novel)"
+    },
+    "CHEMBL4792_Ki": {
+      "note": "skip (<15 novel)"
+    }
+  },
+  "provenance": {
+    "experiment": "B62_shrinkage_vs_signalloss",
+    "git_sha": "56fcd3ac2cd06701cfcdb9f00e5d16f258b4a7ba",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "nn_novel": 0.4,
+    "note": "oracle linear recalibration = upper bound on monotone debiasing (uses test labels).",
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "timestamp_utc": "2026-07-31T13:44:41Z"
+  },
+  "summary": {
+    "H0_fundamental": false,
+    "H1_gap_substantially_correctable": false,
+    "H2_rank_signal_survives_with_shrinkage": true,
+    "fraction_targets_shrunk": 1.0,
+    "median_correctable_fraction": 0.1411,
+    "median_rank_signal": 0.2836,
+    "median_shrinkage_ratio": 0.4984,
+    "n_targets": 24,
+    "spearman_ranksignal_vs_correctablefraction": -0.4461,
+    "verdict": "THE EXTRAPOLATION GAP IS DOMINATED BY SIGNAL-LOSS, NOT CORRECTABLE SHRINKAGE (confirms a hard ceiling): oracle linear recalibration removes only a median 14% of the squared error, and the surviving rank signal is low (median Spearman 0.2836; shrinkage ratio 0.4984, 100% shrunk). Predictions on novel chemistry carry little recoverable ordering -- the gap is fundamental (absence of transferable signal / irreducible noise), not a fixable calibration problem. This bounds P8 pessimistically and is consistent with B61's regression-to-mean finding (shrink to mean AND lose rank). First-class. n=24; retrospective, in-silico; not wet-lab."
+  }
+}

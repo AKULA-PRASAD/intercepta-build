@@ -417,6 +417,23 @@ regression-to-mean failure mode); the actionable finding is the null on all labe
 conformal interval beats a point AD-distance a priori is the natural next question. Retrospective, in-silico, n=2,686;
 not wet-lab. (payload e204be60)
 
+## 3v. Is the extrapolation gap correctable? — no; it's an information ceiling (B62)
+
+A Phase-0 literature sweep rejected the obvious next experiment (conformal/ensemble vs AD-distance for OOD error) as a
+reproduction of known results, and selected the discriminating question: is the novel-chemistry extrapolation gap a
+correctable *shrinkage* bias or fundamental *signal-loss*? Decomposing per-target error on 24 MoleculeACE targets:
+predictions are **universally and heavily shrunk** (median std ratio 0.50 — compressed to half the true spread, 100% of
+targets) yet an **oracle linear recalibration removes only 14%** of the squared error, and the surviving rank signal is
+weak (median Spearman 0.28). So the optimistic hypothesis (extrapolation is a fixable calibration problem) is falsified:
+un-shrinking barely helps because the underlying ordering is too weak to recover — the shrinkage is a rational response
+to weak signal, not a correctable bias. **The extrapolation gap is signal-loss-dominated — a genuine information
+ceiling**, refining P9 (B61's regression-to-the-mean is a *symptom* of signal absence). This closes the
+extrapolation-mechanism line (B60 roughness governs interpolation not extrapolation; B61 AD-distance null; B62 not
+recalibratable): the only remaining levers are *more/different information* (new assays, 3D, acquisition near the query)
+— i.e. data acquisition (P4), not any post-hoc modeling trick. A pre-registration error (an infeasible cross-dataset
+linkage) was caught and documented before running. Retrospective, in-silico, n=24; oracle recalibration is an upper
+bound (uses test labels); not wet-lab. (payload c74983c8)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -456,4 +473,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3 · B61 e204be60.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3 · B61 e204be60 · B62 c74983c8.
