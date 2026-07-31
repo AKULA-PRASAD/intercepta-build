@@ -269,6 +269,25 @@ largest exactly where **exact structural reconstruction** is required (C11H24 is
 stronger backbone (graph-GA / SMILES-LSTM / RL) to reach SOTA. Outputs are computational hypotheses, not validated
 molecules; no SOTA claim; not wet-lab. (payload d67f949d)
 
+## 3m. A boundary condition on ligand-structure sufficiency — the data-regime crossover (B53)
+
+The program's central working principle is *ligand-structure sufficiency*: when actives are plentiful, 2D ligand
+structure carries the accessible signal and neither combination nor representation adds to it (B32–B38, B44, B48). B53
+tests its **boundary**: since docking needs no ligand data, does structure-based information overtake ligand-based as
+known actives N become scarce? On 3 LIT-PCBA targets (scaffold-held-out test; sweep N∈{5..160} training actives;
+ligand-QSAR + ligand-similarity vs N-independent Vina docking), the pre-registered "crossover on ≥2/3 targets" is
+**false (1/3)** — but the honest reading *refines* the principle rather than rejecting it. The crossover is real yet
+**conditional on docking informativeness**: on MAPK1 (kinase, well-defined pocket) docking AUROC 0.633 beats the ligand
+QSAR in the scarce regime and is overtaken only near N≈80; on FEN1 (0.485) and VDR (0.409) docking is *below random*, so
+nothing crosses and ligand wins by docking's failure, not its own strength. This yields a new low-confidence working
+principle — **structure-based information helps when data is scarce only where the docking model exceeds random for that
+target (target/receptor-class-dependent, often unmet)**. Two by-products: ligand *similarity* was the weakest channel at
+every N (so "consensus fingerprints stay competitive at low N" is weakened — the trained model, not similarity, carries
+low-N ligand performance); and rank-fusion *hurt* wherever a below-random channel was averaged in (strengthening B48).
+Honest caveat: B53's power is itself bounded by docking fidelity — below-random docking on 2/3 targets most plausibly
+reflects an accessible-protocol limitation, and the competing decoy-artifact hypothesis (property-matched decoys) is not
+yet excluded. Retrospective, in-silico, 3 targets; not wet-lab. (payload 1ba9729c)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -308,4 +327,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c.

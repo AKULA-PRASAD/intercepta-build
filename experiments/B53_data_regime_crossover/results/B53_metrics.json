@@ -1,0 +1,242 @@
+{
+  "per_target": {
+    "FEN1": {
+      "crossover_Nstar": 5,
+      "curve": {
+        "10": {
+          "best_ligand": 0.7067,
+          "fusion": 0.6258,
+          "qsar": 0.7067,
+          "qsar_sd": 0.0577,
+          "sim_sd": 0.0684,
+          "similarity": 0.5482
+        },
+        "160": {
+          "best_ligand": 0.8896,
+          "fusion": 0.823,
+          "qsar": 0.8896,
+          "qsar_sd": 0.0141,
+          "sim_sd": 0.0436,
+          "similarity": 0.7598
+        },
+        "20": {
+          "best_ligand": 0.7948,
+          "fusion": 0.6847,
+          "qsar": 0.7948,
+          "qsar_sd": 0.0305,
+          "sim_sd": 0.0518,
+          "similarity": 0.5803
+        },
+        "40": {
+          "best_ligand": 0.8418,
+          "fusion": 0.731,
+          "qsar": 0.8418,
+          "qsar_sd": 0.0285,
+          "sim_sd": 0.0351,
+          "similarity": 0.6462
+        },
+        "5": {
+          "best_ligand": 0.659,
+          "fusion": 0.5876,
+          "qsar": 0.659,
+          "qsar_sd": 0.0781,
+          "sim_sd": 0.052,
+          "similarity": 0.5192
+        },
+        "80": {
+          "best_ligand": 0.8756,
+          "fusion": 0.7776,
+          "qsar": 0.8756,
+          "qsar_sd": 0.0233,
+          "sim_sd": 0.0519,
+          "similarity": 0.6924
+        }
+      },
+      "docking_auroc": 0.4846,
+      "n_pool_actives": 280,
+      "n_test": 150,
+      "n_test_actives": 50
+    },
+    "MAPK1": {
+      "crossover_Nstar": 80,
+      "curve": {
+        "10": {
+          "best_ligand": 0.5518,
+          "fusion": 0.5777,
+          "qsar": 0.5518,
+          "qsar_sd": 0.0621,
+          "sim_sd": 0.0284,
+          "similarity": 0.4889
+        },
+        "160": {
+          "best_ligand": 0.6963,
+          "fusion": 0.7125,
+          "qsar": 0.6963,
+          "qsar_sd": 0.0247,
+          "sim_sd": 0.0149,
+          "similarity": 0.6458
+        },
+        "20": {
+          "best_ligand": 0.575,
+          "fusion": 0.6086,
+          "qsar": 0.575,
+          "qsar_sd": 0.0388,
+          "sim_sd": 0.0359,
+          "similarity": 0.5147
+        },
+        "40": {
+          "best_ligand": 0.6103,
+          "fusion": 0.6368,
+          "qsar": 0.6092,
+          "qsar_sd": 0.0703,
+          "sim_sd": 0.025,
+          "similarity": 0.5412
+        },
+        "5": {
+          "best_ligand": 0.5288,
+          "fusion": 0.563,
+          "qsar": 0.5288,
+          "qsar_sd": 0.0385,
+          "sim_sd": 0.053,
+          "similarity": 0.4748
+        },
+        "80": {
+          "best_ligand": 0.6653,
+          "fusion": 0.6912,
+          "qsar": 0.6653,
+          "qsar_sd": 0.0338,
+          "sim_sd": 0.0202,
+          "similarity": 0.6074
+        }
+      },
+      "docking_auroc": 0.6326,
+      "n_pool_actives": 248,
+      "n_test": 150,
+      "n_test_actives": 50
+    },
+    "VDR": {
+      "crossover_Nstar": 5,
+      "curve": {
+        "10": {
+          "best_ligand": 0.6499,
+          "fusion": 0.5185,
+          "qsar": 0.6499,
+          "qsar_sd": 0.0255,
+          "sim_sd": 0.0473,
+          "similarity": 0.4956
+        },
+        "160": {
+          "best_ligand": 0.7768,
+          "fusion": 0.6726,
+          "qsar": 0.7768,
+          "qsar_sd": 0.0128,
+          "sim_sd": 0.0249,
+          "similarity": 0.6312
+        },
+        "20": {
+          "best_ligand": 0.6621,
+          "fusion": 0.5334,
+          "qsar": 0.6621,
+          "qsar_sd": 0.0267,
+          "sim_sd": 0.0171,
+          "similarity": 0.5042
+        },
+        "40": {
+          "best_ligand": 0.7095,
+          "fusion": 0.5696,
+          "qsar": 0.7095,
+          "qsar_sd": 0.0168,
+          "sim_sd": 0.0462,
+          "similarity": 0.523
+        },
+        "5": {
+          "best_ligand": 0.6051,
+          "fusion": 0.5017,
+          "qsar": 0.6051,
+          "qsar_sd": 0.0468,
+          "sim_sd": 0.0502,
+          "similarity": 0.4864
+        },
+        "80": {
+          "best_ligand": 0.7642,
+          "fusion": 0.6356,
+          "qsar": 0.7642,
+          "qsar_sd": 0.0296,
+          "sim_sd": 0.0281,
+          "similarity": 0.5904
+        }
+      },
+      "docking_auroc": 0.4091,
+      "n_pool_actives": 716,
+      "n_test": 149,
+      "n_test_actives": 50
+    }
+  },
+  "provenance": {
+    "experiment": "B53_data_regime_crossover",
+    "git_sha": "529205d87659be90edd19c0dc4820599a1150199",
+    "libs": {
+      "numpy": "2.5.1",
+      "openbabel": "3.1.0",
+      "rdkit": "2025.09.5",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "vina": "1.2.7"
+    },
+    "n_grid": [
+      5,
+      10,
+      20,
+      40,
+      80,
+      160
+    ],
+    "n_test_act": 50,
+    "n_test_dec": 100,
+    "n_train_inact": 2000,
+    "python": "3.12.13",
+    "sub_seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "targets": [
+      "FEN1",
+      "MAPK1",
+      "VDR"
+    ],
+    "timestamp_utc": "2026-07-31T02:57:46Z",
+    "vina_cpu": 8,
+    "vina_seed": 42
+  },
+  "summary": {
+    "H0_ligand_dominates_when_scarce": false,
+    "H1_crossover_exists": false,
+    "H2_fusion_helps_scarce_at_N5": false,
+    "best_ligand_at_N160": {
+      "FEN1": 0.8896,
+      "MAPK1": 0.6963,
+      "VDR": 0.7768
+    },
+    "best_ligand_at_N5": {
+      "FEN1": 0.659,
+      "MAPK1": 0.5288,
+      "VDR": 0.6051
+    },
+    "crossover_Nstar_per_target": {
+      "FEN1": 5,
+      "MAPK1": 80,
+      "VDR": 5
+    },
+    "docking_auroc_per_target": {
+      "FEN1": 0.4846,
+      "MAPK1": 0.6326,
+      "VDR": 0.4091
+    },
+    "n_targets": 3,
+    "n_targets_with_crossover": 1,
+    "verdict": "NO CROSSOVER \u2014 LIGAND-BASED DOMINATES EVEN WHEN SCARCE (honest, competing-hypothesis wins): best ligand-based method (QSAR or similarity) >= docking at N as low as 5 on 2/3 targets; docking AUROC [0.4846, 0.6326, 0.4091]. Consistent with the literature claim that ligand similarity stays competitive at very low N; structure-based docking (as configured) does not overtake it here. First-class negative; heuristic docking, 3 targets, in-silico; not wet-lab."
+  }
+}
