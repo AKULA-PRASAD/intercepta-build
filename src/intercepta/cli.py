@@ -9,6 +9,7 @@ Subcommands:
   prioritize — rank molecules by composite developability risk (ADMET+synth; B32)
   generate — goal-directed molecular design / optimization (BRICS-GA; B33)
   discover — end-to-end candidate discovery: generate + ADMET/synth screen + rank (B39)
+  screen   — virtual-screening engine: rank candidates by calibrated P(active) (QSAR+AD+conformal; loop=B51)
 
 HONEST SCOPE: every subcommand is a RESEARCH hypothesis-ranking/screening tool, validated at the
 cell-line/ex-vivo (rank, synergy) or scaffold-split benchmark (admet) level only. NONE is a validated human
@@ -176,6 +177,33 @@ def _cmd_discover(args):
     return 0
 
 
+def _cmd_screen(args):
+    from intercepta.screen import VirtualScreener
+    if not args.candidates:
+        print("ERROR: provide --candidates path.txt (one SMILES per line)", file=sys.stderr)
+        return 2
+    cands = [s.strip() for s in open(args.candidates) if s.strip()]
+    if args.target_hts:
+        vs = VirtualScreener.from_hts(args.target_hts, n_inactive=args.n_inactive, conformal=not args.no_conformal)
+    else:
+        if not (args.actives and args.inactives):
+            print("ERROR: provide (--actives FILE --inactives FILE) or --target-hts NAME", file=sys.stderr)
+            return 2
+        actives = [s.strip() for s in open(args.actives) if s.strip()]
+        inactives = [s.strip() for s in open(args.inactives) if s.strip()]
+        vs = VirtualScreener(name=args.name, conformal=not args.no_conformal).fit(actives, inactives)
+    out = vs.score(cands, top=args.top)
+    out.to_csv(args.out, index=False)
+    n_dom = int(out["in_domain"].sum())
+    print(f"screened {len(out)} candidate(s) against '{vs.name}' QSAR "
+          f"({vs.n_actives_} actives / {vs.n_inactives_} inactives; {n_dom}/{len(out)} in applicability domain) "
+          f"-> {args.out}")
+    print("NOTE: retrospective in-silico prioritization (enrichment validated on scaffold/novel-chemistry splits + "
+          "unbiased LIT-PCBA ~0.78 AUROC, B46; NOT prospectively confirmed). p_active is a ranking score, NOT proven "
+          "activity; out-of-domain rows are low-confidence. Hypotheses, not validated actives/drugs; not wet-lab.")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -232,6 +260,18 @@ def main(argv=None):
     dd.add_argument("--target-hts", dest="target_hts", help="condition on a TDC HTS target (e.g. 'hiv'); B40")
     dd.add_argument("--out", default="intercepta_discover.csv")
     dd.set_defaults(func=_cmd_discover)
+    sc = sub.add_parser("screen", help="virtual-screening engine: rank candidates by calibrated P(active) "
+                                       "(QSAR + applicability-domain + conformal; the B51 loop is the Python API)")
+    sc.add_argument("--candidates", required=True, help="file of candidate SMILES (one per line)")
+    sc.add_argument("--actives", help="file of known active SMILES (one per line)")
+    sc.add_argument("--inactives", help="file of known inactive SMILES (one per line)")
+    sc.add_argument("--target-hts", dest="target_hts", help="fit from a TDC HTS target instead (e.g. 'hiv')")
+    sc.add_argument("--name", default="target", help="label for the target/QSAR")
+    sc.add_argument("--n-inactive", dest="n_inactive", type=int, default=10000, help="inactive sample if --target-hts")
+    sc.add_argument("--no-conformal", action="store_true", help="skip conformal prediction-set output")
+    sc.add_argument("--top", type=int, default=None, help="write only the top-N ranked candidates")
+    sc.add_argument("--out", default="intercepta_screen.csv")
+    sc.set_defaults(func=_cmd_screen)
     args = p.parse_args(argv)
     return args.func(args)
 

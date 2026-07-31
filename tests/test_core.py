@@ -352,3 +352,43 @@ def test_discovery_pipeline_end_to_end():
     assert (out["developability_F"].values == np.sort(out["developability_F"].values)[::-1]).all()   # ranked desc
     assert all(Chem.MolFromSmiles(s) is not None for s in out["smiles"])                             # valid candidates
     assert len(hist) >= 1
+
+
+def test_screen_fit_and_score():
+    from intercepta.screen import VirtualScreener
+    import numpy as np
+    pos = ["c1ccccc1", "c1ccc(C)cc1", "c1ccc(O)cc1", "c1ccncc1", "c1ccc2ccccc2c1", "c1ccc(N)cc1"]
+    neg = ["CCO", "CCCO", "CCCCO", "CC(C)O", "OCCCCCC", "CCC(C)O"]
+    vs = VirtualScreener(name="toy", conformal=False).fit(pos * 6, neg * 6)
+    assert vs.n_actives_ == 36 and vs.n_inactives_ == 36
+    out = vs.score(["c1ccc(F)cc1", "CCCCCCO", "not_a_smiles"])
+    assert {"rank", "smiles", "p_active", "ad_distance", "in_domain", "confidence"}.issubset(out.columns)
+    assert list(out["rank"]) == [1, 2, 3]
+    assert out["p_active"].dropna().between(0, 1).all()
+    # aromatic candidate should out-rank the aliphatic one (model learned pos=aromatic)
+    r = {s: rk for s, rk in zip(out["smiles"], out["rank"])}
+    assert r["c1ccc(F)cc1"] < r["CCCCCCO"]
+    assert out.loc[out["smiles"] == "not_a_smiles", "p_active"].isna().all()          # unparseable -> NaN
+
+
+def test_screen_active_learning_beats_random():
+    from intercepta.screen import VirtualScreener
+    pos = ["c1ccccc1", "c1ccc(C)cc1", "c1ccc(O)cc1", "c1ccncc1", "c1ccc2ccccc2c1", "c1ccc(N)cc1", "c1ccc(Cl)cc1", "c1ccc(F)cc1"]
+    neg = ["CCO", "CCCO", "CCCCO", "CC(C)O", "OCCCCCC", "CCC(C)O", "CCCCCCCO", "CCCCCCCCO"]
+    pool = pos * 8 + neg * 8                                    # 128, 50% "active" (aromatic)
+    labels = {s: (1 if "c1" in s else 0) for s in set(pool)}
+    oracle = lambda s: labels[s]
+    vs = VirtualScreener(name="toy")
+    greedy = vs.active_learning_select(pool, oracle, rounds=4, batch=10, strategy="greedy", seed=1)
+    rand = vs.active_learning_select(pool, oracle, rounds=4, batch=10, strategy="random", seed=1)
+    assert greedy["total_tested"] == rand["total_tested"]
+    assert greedy["total_actives_found"] >= rand["total_actives_found"]               # model-guided >= random
+    assert len(greedy["actives_found_curve"]) == 5 and greedy["actives_found_curve"] == sorted(greedy["actives_found_curve"])
+
+
+def test_screen_deterministic():
+    from intercepta.screen import VirtualScreener
+    pos = ["c1ccccc1", "c1ccc(C)cc1", "c1ccc(O)cc1", "c1ccncc1"]; neg = ["CCO", "CCCO", "CCCCO", "CC(C)O"]
+    a = VirtualScreener(name="t", conformal=False).fit(pos * 8, neg * 8).score(["c1ccc(F)cc1", "CCCCCCO"])
+    b = VirtualScreener(name="t", conformal=False).fit(pos * 8, neg * 8).score(["c1ccc(F)cc1", "CCCCCCO"])
+    assert list(a["p_active"].round(8)) == list(b["p_active"].round(8))
