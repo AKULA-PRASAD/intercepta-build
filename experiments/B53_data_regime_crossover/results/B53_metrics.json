@@ -174,7 +174,7 @@
   },
   "provenance": {
     "experiment": "B53_data_regime_crossover",
-    "git_sha": "529205d87659be90edd19c0dc4820599a1150199",
+    "git_sha": "2410974ed1e9dcbe41d8d6ad4c6251efb09a1219",
     "libs": {
       "numpy": "2.5.1",
       "openbabel": "3.1.0",
@@ -207,7 +207,7 @@
       "MAPK1",
       "VDR"
     ],
-    "timestamp_utc": "2026-07-31T02:57:46Z",
+    "timestamp_utc": "2026-07-31T03:34:27Z",
     "vina_cpu": 8,
     "vina_seed": 42
   },

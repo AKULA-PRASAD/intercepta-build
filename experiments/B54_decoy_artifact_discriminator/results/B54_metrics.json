@@ -1,0 +1,157 @@
+{
+  "per_target": {
+    "ALDH1": {
+      "analog_effect": 0.0444,
+      "cells": {
+        "A0B0": 0.6515,
+        "A0B1": 0.6039,
+        "A1B0": 0.6221,
+        "A1B1": 0.5809
+      },
+      "decoy_effect": 0.0262,
+      "interaction": 0.0064,
+      "irreducible_A1B1": 0.5809,
+      "n_actives": 300
+    },
+    "ESR1_ant": {
+      "analog_effect": 0.0194,
+      "cells": {
+        "A0B0": 0.6623,
+        "A0B1": 0.6394,
+        "A1B0": 0.5924,
+        "A1B1": 0.5765
+      },
+      "decoy_effect": 0.0664,
+      "interaction": 0.007,
+      "irreducible_A1B1": 0.5765,
+      "n_actives": 88
+    },
+    "FEN1": {
+      "analog_effect": 0.0527,
+      "cells": {
+        "A0B0": 0.9366,
+        "A0B1": 0.906,
+        "A1B0": 0.8738,
+        "A1B1": 0.7989
+      },
+      "decoy_effect": 0.0849,
+      "interaction": -0.0443,
+      "irreducible_A1B1": 0.7989,
+      "n_actives": 300
+    },
+    "GBA": {
+      "analog_effect": 0.243,
+      "cells": {
+        "A0B0": 0.8815,
+        "A0B1": 0.6716,
+        "A1B0": 0.8305,
+        "A1B1": 0.5544
+      },
+      "decoy_effect": 0.0841,
+      "interaction": -0.0662,
+      "irreducible_A1B1": 0.5544,
+      "n_actives": 164
+    },
+    "KAT2A": {
+      "analog_effect": 0.062,
+      "cells": {
+        "A0B0": 0.7134,
+        "A0B1": 0.6456,
+        "A1B0": 0.637,
+        "A1B1": 0.5808
+      },
+      "decoy_effect": 0.0706,
+      "interaction": 0.0116,
+      "irreducible_A1B1": 0.5808,
+      "n_actives": 194
+    },
+    "MAPK1": {
+      "analog_effect": 0.0653,
+      "cells": {
+        "A0B0": 0.7569,
+        "A0B1": 0.692,
+        "A1B0": 0.6621,
+        "A1B1": 0.5965
+      },
+      "decoy_effect": 0.0951,
+      "interaction": -0.0007,
+      "irreducible_A1B1": 0.5965,
+      "n_actives": 300
+    },
+    "PKM2": {
+      "analog_effect": 0.1383,
+      "cells": {
+        "A0B0": 0.8581,
+        "A0B1": 0.7258,
+        "A1B0": 0.8153,
+        "A1B1": 0.6709
+      },
+      "decoy_effect": 0.0488,
+      "interaction": -0.0121,
+      "irreducible_A1B1": 0.6709,
+      "n_actives": 300
+    },
+    "VDR": {
+      "analog_effect": 0.0707,
+      "cells": {
+        "A0B0": 0.8556,
+        "A0B1": 0.8112,
+        "A1B0": 0.7594,
+        "A1B1": 0.6624
+      },
+      "decoy_effect": 0.1225,
+      "interaction": -0.0526,
+      "irreducible_A1B1": 0.6624,
+      "n_actives": 300
+    }
+  },
+  "provenance": {
+    "experiment": "B54_decoy_artifact_discriminator",
+    "git_sha": "2410974ed1e9dcbe41d8d6ad4c6251efb09a1219",
+    "libs": {
+      "numpy": "1.26.4",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0"
+    },
+    "max_act": 300,
+    "nn_novel": 0.4,
+    "python": "3.11.14",
+    "ratio": 3,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "targets": [
+      "ALDH1",
+      "VDR",
+      "PKM2",
+      "FEN1",
+      "MAPK1",
+      "GBA",
+      "KAT2A",
+      "ESR1_ant"
+    ],
+    "timestamp_utc": "2026-07-31T03:52:48Z"
+  },
+  "summary": {
+    "H1_biases_independent": true,
+    "H2_biases_overlap_subadditive": false,
+    "H3_irreducible_signal_exists": true,
+    "analog_bias_effect": 0.087,
+    "decoy_bias_effect": 0.0748,
+    "interaction": -0.0189,
+    "irreducible_signal_A1B1": 0.6277,
+    "n_targets": 8,
+    "n_targets_irreducible_gt0.60": 3,
+    "panel_cells": {
+      "A0B0": 0.7895,
+      "A0B1": 0.7119,
+      "A1B0": 0.7241,
+      "A1B1": 0.6277
+    },
+    "verdict": "DECOMPOSITION: ligand-based VS enrichment falls from standard 0.7895 (analog+decoy bias present) to doubly-controlled 0.6277 (both removed). Decoy-bias effect +0.0748, analog-bias effect +0.087, INTERACTION -0.0189 -> the two biases are INDEPENDENT/ADDITIVE (interaction~0): they are separate inflation sources; BOTH controls are needed. AN IRREDUCIBLE BINDING SIGNAL SURVIVES BOTH (A1B1 0.6277>0.60, 3/8 targets) -> ligand-based VS captures real generalizable signal beyond both biases; its honest ceiling is ~0.6277, far below the biased 0.7895. Retrospective, in-silico, 6-descriptor matching (lower bound), NN<0.4 analog control, 8 targets; not wet-lab."
+  }
+}

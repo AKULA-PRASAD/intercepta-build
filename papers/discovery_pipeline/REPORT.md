@@ -288,6 +288,23 @@ Honest caveat: B53's power is itself bounded by docking fidelity — below-rando
 reflects an accessible-protocol limitation, and the competing decoy-artifact hypothesis (property-matched decoys) is not
 yet excluded. Retrospective, in-silico, 3 targets; not wet-lab. (payload 1ba9729c)
 
+## 3n. Decomposing enrichment — decoy-bias and analog-bias are independent, and the honest residual is small (B54)
+
+The field studies two enrichment biases separately — physicochemical/decoy bias (property-matched decoys; DUD-E,
+DeepCoy) and analog/similarity bias (AVE; Wallach & Heifets; MUV). B54 asks the unresolved question: are they
+*independent* sources or the same phenomenon, and what binding signal survives *both* controls? A 2×2 factorial on 8
+LIT-PCBA targets ({random vs property-matched decoys} × {random-split vs novel-chemistry NN<0.4 actives}) gives a clean
+decomposition. Standard AUROC **0.790** falls to **0.628** with both controls; the decoy-bias effect (+0.075) and
+analog-bias effect (+0.087) are comparable, and their **interaction is ≈0 (−0.019) — the two biases are independent and
+additive**. Quantitatively, ~56% of the enrichment headroom above chance is bias (analog ⊕ decoy) and ~44% is an
+irreducible binding-relevant signal — but that residual is strong for only a minority of targets (FEN1 0.80, PKM2 0.67,
+VDR 0.66; five of eight near-chance). This **recalibrates the program's positive thread**: our B42/B43/B46 enrichment
+(~0.78) was single-controlled at most and overstated the true binding signal, whose honest ceiling on doubly-controlled
+data is ~0.63. It yields a new working principle — **VS enrichment biases are approximately independent/additive, so
+honest evaluation must control both** — and partially vindicates the decoy-artifact wild-card while falsifying its
+catastrophic form (residual > chance). Caveat: 6-descriptor matching is a *lower bound* on decoy artifact (finer
+matching could shrink the residual further); 8 targets; not wet-lab. (payload 494d30c7)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -327,4 +344,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7.
