@@ -1,0 +1,97 @@
+{
+  "per_target_novel_counts": {
+    "CHEMBL1862_Ki": 148,
+    "CHEMBL1871_Ki": 34,
+    "CHEMBL2034_Ki": 15,
+    "CHEMBL2047_EC50": 0,
+    "CHEMBL204_Ki": 59,
+    "CHEMBL2147_Ki": 239,
+    "CHEMBL214_Ki": 182,
+    "CHEMBL218_EC50": 83,
+    "CHEMBL219_Ki": 76,
+    "CHEMBL228_Ki": 190,
+    "CHEMBL231_Ki": 84,
+    "CHEMBL233_Ki": 83,
+    "CHEMBL234_Ki": 129,
+    "CHEMBL235_EC50": 80,
+    "CHEMBL236_Ki": 32,
+    "CHEMBL237_EC50": 0,
+    "CHEMBL237_Ki": 114,
+    "CHEMBL238_Ki": 183,
+    "CHEMBL239_EC50": 66,
+    "CHEMBL244_Ki": 62,
+    "CHEMBL262_Ki": 226,
+    "CHEMBL264_Ki": 54,
+    "CHEMBL2835_Ki": 0,
+    "CHEMBL287_Ki": 101,
+    "CHEMBL2971_Ki": 136,
+    "CHEMBL3979_EC50": 44,
+    "CHEMBL4005_Ki": 0,
+    "CHEMBL4203_Ki": 266,
+    "CHEMBL4616_EC50": 0,
+    "CHEMBL4792_Ki": 0
+  },
+  "provenance": {
+    "data": "MoleculeACE",
+    "experiment": "B61_extrapolation_error_decomposition",
+    "git_sha": "844e2a2d4505a105d51a569609ef2b5ec57c05c6",
+    "k_cliff": 5,
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "nn_novel": 0.4,
+    "python": "3.11.14",
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "timestamp_utc": "2026-07-31T13:28:51Z"
+  },
+  "summary": {
+    "H0_irreducible": false,
+    "H1_ad_distance_dominates": false,
+    "H2_error_meaningfully_predictable": true,
+    "multivariate_error_predictability_oof_spearman": 0.3394,
+    "n_compounds": 2686,
+    "n_targets": 24,
+    "ranked_by_abs_pooled_spearman": [
+      "potency_shift",
+      "local_cliff",
+      "scaffold_novelty",
+      "ad_distance"
+    ],
+    "strongest_predictor": "potency_shift",
+    "univariate": {
+      "ad_distance": {
+        "n_targets": 24,
+        "p_pooled": 0.671766,
+        "spearman_pooled": -0.0082,
+        "spearman_within_target_mean": 0.0489
+      },
+      "local_cliff": {
+        "n_targets": 24,
+        "p_pooled": 0.001712,
+        "spearman_pooled": 0.0605,
+        "spearman_within_target_mean": 0.0312
+      },
+      "potency_shift": {
+        "n_targets": 24,
+        "p_pooled": 0.0,
+        "spearman_pooled": 0.3727,
+        "spearman_within_target_mean": 0.4361
+      },
+      "scaffold_novelty": {
+        "n_targets": 24,
+        "p_pooled": 0.300607,
+        "spearman_pooled": 0.02,
+        "spearman_within_target_mean": 0.0011
+      }
+    },
+    "verdict": "EXTRAPOLATION ERROR IS PARTLY PREDICTABLE: strongest per-compound driver 'potency_shift' (pooled Spearman 0.3727, within-target 0.4361); AD-distance -0.0082; multivariate OOF Spearman 0.3394. 'potency_shift' (not AD-distance) dominates -> governing mechanism = label/potency shift. 2686 compounds, 24 targets; retrospective, in-silico; not wet-lab."
+  }
+}
