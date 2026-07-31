@@ -305,6 +305,21 @@ honest evaluation must control both** — and partially vindicates the decoy-art
 catastrophic form (residual > chance). Caveat: 6-descriptor matching is a *lower bound* on decoy artifact (finer
 matching could shrink the residual further); 8 targets; not wet-lab. (payload 494d30c7)
 
+## 3o. Trying to graduate P6 — and discovering DUD-E cannot support the test (B55)
+
+A working principle must survive an external benchmark family. B55 attempted to replicate P6 (bias
+independence/additivity, B54) on DUD-E — a different construction (ChEMBL actives, property-matched topology-dissimilar
+ZINC decoys). It could not: the pre-registered novel-chemistry (NN<0.4) analog-control arm is **empty on all 8 targets**
+because DUD-E actives are extraordinarily analog-clustered (panel-mean leave-one-out NN-Tanimoto **0.71**; only ~4.6%
+of actives are NN<0.4). A sharper by-product: every DUD-E active has a *distinct Murcko scaffold* (unique-scaffold ratio
+≈1.0) yet mean NN is 0.71 — so **scaffold-splitting does not control analog similarity on DUD-E**, and "scaffold-split
+novelty" is illusory there (a concrete methodological warning: use explicit NN-distance, not scaffold split, for analog
+control on clustered benchmarks). Integrity note: the initial factorial run emitted a NaN "P6 fails" verdict; that
+unsupported conclusion was discarded (not committed) and the runner refocused to this honest diagnostic (prereg amended,
+dated). **P6's status is therefore unchanged — externally untested, neither replicated nor falsified** — and its
+external replication is deferred to a chemically-diverse benchmark (MUV). Retrospective, in-silico, 8 targets; not
+wet-lab. (payload 09a0eb27)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -344,4 +359,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27.

@@ -82,3 +82,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## GuacaMol benchmark + ChEMBL seeds — B52
 - guacamol 0.5.2 (pip, open); goal-directed scoring functions used with a scipy.histogram compat shim. Published baselines = Brown et al., JCIM 2019 (hard-coded reference).
 - ChEMBL seeds: `$INTERCEPTA_DATA/tdc_gen/chembl.tab` (already logged). PUBLIC/OPEN; never committed.
+
+## DUD-E (Directory of Useful Decoys, Enhanced) — B55
+- Source: https://dude.docking.org (Mysinger et al., J. Med. Chem. 2012). 8 targets (egfr,vgfr2,akt1,aa2ar,fa10,hivpr,ppara,gcr): actives_final.ism + decoys_final.ism.
+- ChEMBL actives + property-matched (topology-dissimilar) ZINC decoys, 50/active. Cached `$INTERCEPTA_DATA/dude/` (~19 MB). PUBLIC/OPEN; never committed.

@@ -107,7 +107,7 @@
   },
   "provenance": {
     "experiment": "B54_decoy_artifact_discriminator",
-    "git_sha": "2410974ed1e9dcbe41d8d6ad4c6251efb09a1219",
+    "git_sha": "0826b8551acaeae995ed7be533f464ef62db711a",
     "libs": {
       "numpy": "1.26.4",
       "rdkit": "2023.09.6",
@@ -134,7 +134,7 @@
       "KAT2A",
       "ESR1_ant"
     ],
-    "timestamp_utc": "2026-07-31T03:52:48Z"
+    "timestamp_utc": "2026-07-31T04:08:41Z"
   },
   "summary": {
     "H1_biases_independent": true,
