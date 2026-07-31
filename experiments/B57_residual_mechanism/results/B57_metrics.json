@@ -1,0 +1,156 @@
+{
+  "per_target": {
+    "ALDH1": {
+      "active_mean_pairwise_tanimoto": 0.1295,
+      "activity_cliff_density": 0.3767,
+      "assay_type_phenotypic": 0,
+      "n_actives": 7145,
+      "residual_A1B1": 0.5809,
+      "source": "LIT-PCBA"
+    },
+    "ESR1_ant": {
+      "active_mean_pairwise_tanimoto": 0.1028,
+      "activity_cliff_density": 0.5341,
+      "assay_type_phenotypic": 0,
+      "n_actives": 88,
+      "residual_A1B1": 0.5765,
+      "source": "LIT-PCBA"
+    },
+    "FEN1": {
+      "active_mean_pairwise_tanimoto": 0.1215,
+      "activity_cliff_density": 0.2133,
+      "assay_type_phenotypic": 0,
+      "n_actives": 360,
+      "residual_A1B1": 0.7989,
+      "source": "LIT-PCBA"
+    },
+    "GBA": {
+      "active_mean_pairwise_tanimoto": 0.1385,
+      "activity_cliff_density": 0.4207,
+      "assay_type_phenotypic": 0,
+      "n_actives": 164,
+      "residual_A1B1": 0.5544,
+      "source": "LIT-PCBA"
+    },
+    "KAT2A": {
+      "active_mean_pairwise_tanimoto": 0.1219,
+      "activity_cliff_density": 0.2526,
+      "assay_type_phenotypic": 0,
+      "n_actives": 194,
+      "residual_A1B1": 0.5808,
+      "source": "LIT-PCBA"
+    },
+    "MAPK1": {
+      "active_mean_pairwise_tanimoto": 0.132,
+      "activity_cliff_density": 0.5867,
+      "assay_type_phenotypic": 0,
+      "n_actives": 308,
+      "residual_A1B1": 0.5965,
+      "source": "LIT-PCBA"
+    },
+    "PKM2": {
+      "active_mean_pairwise_tanimoto": 0.1443,
+      "activity_cliff_density": 0.53,
+      "assay_type_phenotypic": 0,
+      "n_actives": 546,
+      "residual_A1B1": 0.6709,
+      "source": "LIT-PCBA"
+    },
+    "VDR": {
+      "active_mean_pairwise_tanimoto": 0.1175,
+      "activity_cliff_density": 0.1633,
+      "assay_type_phenotypic": 0,
+      "n_actives": 871,
+      "residual_A1B1": 0.6624,
+      "source": "LIT-PCBA"
+    },
+    "hiv": {
+      "active_mean_pairwise_tanimoto": 0.1123,
+      "activity_cliff_density": 0.3833,
+      "assay_type_phenotypic": 1,
+      "n_actives": 1426,
+      "residual_A1B1": 0.5685,
+      "source": "TDC-HTS"
+    },
+    "m1_muscarinic_receptor_antagonists_butkiewicz": {
+      "active_mean_pairwise_tanimoto": 0.1465,
+      "activity_cliff_density": 0.57,
+      "assay_type_phenotypic": 0,
+      "n_actives": 362,
+      "residual_A1B1": 0.6491,
+      "source": "TDC-HTS"
+    },
+    "orexin1_receptor_butkiewicz": {
+      "active_mean_pairwise_tanimoto": 0.1434,
+      "activity_cliff_density": 0.4335,
+      "assay_type_phenotypic": 0,
+      "n_actives": 233,
+      "residual_A1B1": 0.6431,
+      "source": "TDC-HTS"
+    },
+    "potassium_ion_channel_kir2.1_butkiewicz": {
+      "active_mean_pairwise_tanimoto": 0.1404,
+      "activity_cliff_density": 0.3605,
+      "assay_type_phenotypic": 0,
+      "n_actives": 172,
+      "residual_A1B1": 0.7502,
+      "source": "TDC-HTS"
+    },
+    "serine_threonine_kinase_33_butkiewicz": {
+      "active_mean_pairwise_tanimoto": 0.1316,
+      "activity_cliff_density": 0.3023,
+      "assay_type_phenotypic": 0,
+      "n_actives": 172,
+      "residual_A1B1": 0.773,
+      "source": "TDC-HTS"
+    }
+  },
+  "provenance": {
+    "cliff_sim": 0.4,
+    "experiment": "B57_residual_mechanism",
+    "git_sha": "3e430e3874cf41f5661ca3e006c9d5a7070c6d39",
+    "libs": {
+      "numpy": "1.26.4",
+      "rdkit": "2023.09.6",
+      "scipy": "1.16.3"
+    },
+    "python": "3.11.14",
+    "residual_source": "B54_metrics.json (LIT-PCBA) + B56_metrics.json (TDC-HTS), cells.A1B1",
+    "timestamp_utc": "2026-07-31T11:58:43Z"
+  },
+  "summary": {
+    "H1_activity_cliff_mechanism": false,
+    "activity_cliff_density_spearman": -0.3571,
+    "correlations_with_residual": {
+      "active_mean_pairwise_tanimoto": {
+        "abs": 0.2802,
+        "p_value": 0.3538,
+        "spearman": 0.2802
+      },
+      "activity_cliff_density": {
+        "abs": 0.3571,
+        "p_value": 0.2309,
+        "spearman": -0.3571
+      },
+      "assay_type_phenotypic": {
+        "abs": 0.3858,
+        "p_value": 0.193,
+        "spearman": -0.3858
+      },
+      "n_actives": {
+        "abs": 0.0908,
+        "p_value": 0.768,
+        "spearman": 0.0908
+      }
+    },
+    "n_targets": 13,
+    "ranked_by_abs_spearman": [
+      "assay_type_phenotypic",
+      "activity_cliff_density",
+      "active_mean_pairwise_tanimoto",
+      "n_actives"
+    ],
+    "strongest_predictor": "assay_type_phenotypic",
+    "verdict": "ACTIVITY-CLIFF MECHANISM NOT CONFIRMED (honest): strongest correlate of the residual is 'assay_type_phenotypic' (Spearman -0.3858), and activity-cliff density is -0.3571 (pre-registered threshold <=-0.5 not met). The target-dependent residual is NOT well explained by any of the four measured target properties (|Spearman|<0.5 for all) -> a first-class null; the residual's target-dependence has a different or unmeasured cause. Meta-analysis, n=13 targets (small); not wet-lab."
+  }
+}

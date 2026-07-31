@@ -337,6 +337,21 @@ test — P6 is not tested against a fundamentally different decoy paradigm (prop
 benchmark offers diverse actives *and* that construction (an inherent data limit). P6 is thus a **replicated principle
 with a mechanism, not yet a universal one.** Retrospective, in-silico, 5 targets; not wet-lab. (payload 32469564)
 
+## 3q. Why is the residual target-dependent? — an honest null (B57)
+
+B54/B56 left the doubly-debiased binding signal (A1B1) strongly target-dependent (≈chance for HIV/ALDH1/KAT2A; ~0.77–
+0.80 for STK33/FEN1). B57 asks whether a simple target property predicts it — the natural hypothesis being SAR
+ruggedness / activity-cliff density (rugged landscapes defeat descriptor QSAR). Across the 13 targets with a reproduced
+residual, **no measured property explains it** (all |Spearman| < 0.5, n=13): activity-cliff density −0.36 (correct sign
+but weak, below the pre-registered −0.5 bar), assay-type −0.39 (an artifact — one phenotypic target), active-diversity
++0.28, n_actives +0.09. So the residual's target-dependence is **not** captured by cliff density, diversity, assay
+type, or data richness. Honest bounds: n=13 is underpowered (the −0.36 cliff signal is directionally right and may be a
+real weak effect), the cliff metric is a crude threshold operationalization (a continuous roughness index could do
+better), and residual seed-noise attenuates the correlation — so this is "not confirmed at this power," not "no effect."
+The practical consequence: we can quantify that ~half of ligand-based VS enrichment is bias (P6) and that the residual
+varies by target, but we **cannot yet predict *which* targets retain real signal** — that remains open. Retrospective,
+in-silico meta-analysis, n=13; not wet-lab. (payload dc4c6654)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -376,4 +391,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654.

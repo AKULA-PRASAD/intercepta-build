@@ -72,7 +72,7 @@
   },
   "provenance": {
     "experiment": "B56_p6_external_htspanel",
-    "git_sha": "3439d717665121854b12dee405676b3e1b829bee",
+    "git_sha": "3e430e3874cf41f5661ca3e006c9d5a7070c6d39",
     "libs": {
       "numpy": "1.26.4",
       "rdkit": "2023.09.6",
@@ -98,7 +98,7 @@
       "serine_threonine_kinase_33_butkiewicz",
       "sarscov2_3clpro_diamond"
     ],
-    "timestamp_utc": "2026-07-31T11:44:00Z"
+    "timestamp_utc": "2026-07-31T11:48:34Z"
   },
   "summary": {
     "B54_reference": {
