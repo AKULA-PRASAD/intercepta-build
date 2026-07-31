@@ -2,7 +2,7 @@
   "provenance": {
     "esm_model": "facebook/esm2_t30_150M_UR50D",
     "experiment": "B49_proteochemometric_pantarget",
-    "git_sha": "fec8d947e2b1fcaa1db25a2930c81dce1cacd91c",
+    "git_sha": "0aa6631efd4f8bb55311cdac5ff7fdb9fffc5f53",
     "libs": {
       "numpy": "1.26.4",
       "rdkit": "2023.09.6",
@@ -14,7 +14,7 @@
     "max_dec": 600,
     "python": "3.11.14",
     "seed": 42,
-    "timestamp_utc": "2026-07-31T01:12:21Z"
+    "timestamp_utc": "2026-07-31T01:20:11Z"
   },
   "summary": {
     "H1_pcm_generalizes_unseen_targets": true,

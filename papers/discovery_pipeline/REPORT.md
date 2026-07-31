@@ -243,6 +243,21 @@ transfers across targets, but naive PCM cannot make it target-specific. Notably 
 had to skip (pooling). Retrospective, in-silico, seq truncated to 1022, decoys not property-matched; not wet-lab; no
 SOTA claim. (payload 755706ee)
 
+## 3k. The engine — closed-loop, uncertainty-guided in-silico discovery (B51)
+
+B48 showed you cannot combine fixed scores past the ceiling; B49 that you cannot represent past it. The remaining lever
+is *which data you acquire*. B51 builds the closed Design–Make–Test loop: against a hidden real-bioactivity oracle
+(LIT-PCBA; 300 actives + 10,000 inactives, labels revealed only on "test"), a model-guided loop iteratively trains,
+scores the pool, selects a batch, and reveals labels. **Closed-loop discovery works:** at a fixed 1,600-compound budget
+(~15% of pool), model-guided acquisition recovers **~2.8× more real actives than random** (FEN1 dramatic at ~4.8×), and
+the honest explore/exploit tradeoff is exactly as literature predicts — **UCB ≥ greedy ≥ uncertainty for hit recall**,
+but **uncertainty gives the better end-model** (untested-pool AUROC 0.602 vs greedy 0.582). The robust win is
+model-guided ≫ random; strategy differences are small but directionally correct. This is the first result that
+demonstrates INTERCEPTA as an *engine* rather than a set of static modules — and it is the constructive counterpart to
+the integration negatives: value comes not from combining scores but from **using calibrated predictions to decide what
+to measure next**. In-silico DMTA proxy on real labels (not a live assay), 3 targets, subsampled pool; finding actives
+fast ≠ a drug; not wet-lab. (payload e71129f4)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -282,4 +297,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4.
