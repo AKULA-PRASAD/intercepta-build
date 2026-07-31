@@ -492,7 +492,7 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3 · B61 e204be60 · B62 c74983c8 · B63 07372f1a · B64 739f5230.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3 · B61 e204be60 · B62 c74983c8 · B63 07372f1a · B64 739f5230 · B65 f66986ab.
 
 ---
 
@@ -517,3 +517,20 @@ confidently promoted those 0.90+ out-of-domain molecules as leads would be misle
 usable **computational hypothesis engine**, not a drug: `p_target_active` is a QSAR probability, not measured activity,
 and a real lead still requires wet-lab validation (resource-gated). Deterministic; reproduced ×2 byte-identical.
 Write-up + shortlist: `experiments/B64_endtoend_fen1_demonstration/`. (payload 739f5230)
+
+## 9. Does active learning's advantage survive on novel chemistry? — flat null (B65)
+
+The canonical "AL beats random" is solved, so the only novel question our information ceiling (B60–B62) motivates is
+whether AL's label-efficiency advantage *survives in the novel-chemistry (NN < 0.4) regime*. Simulated pool-based active
+learning on 24 MoleculeACE targets (query-by-bagging uncertainty **and** greedy vs random; learning curves measured
+separately on an in-domain and a scaffold-disjoint novel-chemistry test) returns a **flat null**: neither strategy
+reliably beats random on either test (median in-domain advantage −0.013, novel +0.017, both within noise, sign ~50/50),
+even though the acquisition functions demonstrably selected the intended compounds (uncertainty explores, greedy
+densifies). The pre-registered hypothesis (advantage *collapses specifically* on novel chemistry) was wrong in shape —
+there was no in-domain advantage to collapse from. **Honest caveat, foregrounded:** the H1 sanity check (AL beats random
+in-domain) also failed, most likely because the small-label / small-ensemble / continuous-potency setup is underpowered
+versus the large-library classification hit-finding regime where AL is genuinely established — so this does **not**
+contradict canonical AL; it is scoped to the weak-signal small-label potency regime, where the honest conclusion is that
+*acquisition strategy is not the lever*. Reads as: **P4 = the amount/quality of information dominates, not smart
+acquisition strategy** — reinforcing B62 (when signal is weak, which points you label barely matters). A ladder rung
+(information-removal / "fewer labels"), not a benchmark chase. (payload f66986ab)

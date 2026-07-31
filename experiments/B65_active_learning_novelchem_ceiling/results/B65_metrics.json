@@ -1,0 +1,576 @@
+{
+  "per_target": {
+    "CHEMBL1862_Ki": {
+      "acq_sim": {
+        "greedy": 0.6651,
+        "random": 0.5584,
+        "uncertainty": 0.4857
+      },
+      "adv_indomain_greedy": -0.0065,
+      "adv_indomain_uncertainty": 0.0127,
+      "adv_novel_greedy": -0.0343,
+      "adv_novel_uncertainty": 0.0345,
+      "auc_indomain": {
+        "greedy": 0.6346,
+        "random": 0.6411,
+        "uncertainty": 0.6538
+      },
+      "auc_novel": {
+        "greedy": 0.1111,
+        "random": 0.1454,
+        "uncertainty": 0.1799
+      },
+      "n_mols": 794,
+      "n_seeds": 3
+    },
+    "CHEMBL1871_Ki": {
+      "acq_sim": {
+        "greedy": 0.5616,
+        "random": 0.5692,
+        "uncertainty": 0.5056
+      },
+      "adv_indomain_greedy": -0.0467,
+      "adv_indomain_uncertainty": -0.0396,
+      "adv_novel_greedy": 0.0875,
+      "adv_novel_uncertainty": 0.0152,
+      "auc_indomain": {
+        "greedy": 0.4852,
+        "random": 0.5319,
+        "uncertainty": 0.4923
+      },
+      "auc_novel": {
+        "greedy": 0.1337,
+        "random": 0.0462,
+        "uncertainty": 0.0614
+      },
+      "n_mols": 659,
+      "n_seeds": 2
+    },
+    "CHEMBL2034_Ki": {
+      "acq_sim": {
+        "greedy": 0.5885,
+        "random": 0.5799,
+        "uncertainty": 0.5583
+      },
+      "adv_indomain_greedy": -0.1061,
+      "adv_indomain_uncertainty": -0.0878,
+      "adv_novel_greedy": 0.0266,
+      "adv_novel_uncertainty": -0.0558,
+      "auc_indomain": {
+        "greedy": 0.276,
+        "random": 0.3821,
+        "uncertainty": 0.2943
+      },
+      "auc_novel": {
+        "greedy": -0.3555,
+        "random": -0.3821,
+        "uncertainty": -0.4379
+      },
+      "n_mols": 750,
+      "n_seeds": 1
+    },
+    "CHEMBL204_Ki": {
+      "acq_sim": {
+        "greedy": 0.5436,
+        "random": 0.4631,
+        "uncertainty": 0.4702
+      },
+      "adv_indomain_greedy": -0.0271,
+      "adv_indomain_uncertainty": 0.0336,
+      "adv_novel_greedy": -0.0376,
+      "adv_novel_uncertainty": -0.0096,
+      "auc_indomain": {
+        "greedy": 0.3551,
+        "random": 0.3822,
+        "uncertainty": 0.4158
+      },
+      "auc_novel": {
+        "greedy": -0.0036,
+        "random": 0.034,
+        "uncertainty": 0.0244
+      },
+      "n_mols": 2754,
+      "n_seeds": 2
+    },
+    "CHEMBL2147_Ki": {
+      "acq_sim": {
+        "greedy": 0.6413,
+        "random": 0.4934,
+        "uncertainty": 0.4276
+      },
+      "adv_indomain_greedy": -0.0306,
+      "adv_indomain_uncertainty": -0.0155,
+      "adv_novel_greedy": -0.0361,
+      "adv_novel_uncertainty": -0.04,
+      "auc_indomain": {
+        "greedy": 0.6082,
+        "random": 0.6388,
+        "uncertainty": 0.6233
+      },
+      "auc_novel": {
+        "greedy": 0.1326,
+        "random": 0.1687,
+        "uncertainty": 0.1287
+      },
+      "n_mols": 1456,
+      "n_seeds": 3
+    },
+    "CHEMBL214_Ki": {
+      "acq_sim": {
+        "greedy": 0.5576,
+        "random": 0.4442,
+        "uncertainty": 0.4056
+      },
+      "adv_indomain_greedy": -0.0513,
+      "adv_indomain_uncertainty": -0.0222,
+      "adv_novel_greedy": -0.1331,
+      "adv_novel_uncertainty": -0.1161,
+      "auc_indomain": {
+        "greedy": 0.2228,
+        "random": 0.2741,
+        "uncertainty": 0.2519
+      },
+      "auc_novel": {
+        "greedy": -0.0302,
+        "random": 0.1029,
+        "uncertainty": -0.0132
+      },
+      "n_mols": 3317,
+      "n_seeds": 3
+    },
+    "CHEMBL218_EC50": {
+      "acq_sim": {
+        "greedy": 0.539,
+        "random": 0.5074,
+        "uncertainty": 0.4701
+      },
+      "adv_indomain_greedy": 0.0288,
+      "adv_indomain_uncertainty": 0.0633,
+      "adv_novel_greedy": 0.3457,
+      "adv_novel_uncertainty": 0.3895,
+      "auc_indomain": {
+        "greedy": 0.2621,
+        "random": 0.2333,
+        "uncertainty": 0.2966
+      },
+      "auc_novel": {
+        "greedy": 0.3516,
+        "random": 0.0059,
+        "uncertainty": 0.3954
+      },
+      "n_mols": 1031,
+      "n_seeds": 1
+    },
+    "CHEMBL219_Ki": {
+      "acq_sim": {
+        "greedy": 0.5293,
+        "random": 0.4862,
+        "uncertainty": 0.4546
+      },
+      "adv_indomain_greedy": 0.0002,
+      "adv_indomain_uncertainty": 0.0136,
+      "adv_novel_greedy": 0.1168,
+      "adv_novel_uncertainty": 0.1433,
+      "auc_indomain": {
+        "greedy": 0.1957,
+        "random": 0.1955,
+        "uncertainty": 0.2091
+      },
+      "auc_novel": {
+        "greedy": 0.1095,
+        "random": -0.0073,
+        "uncertainty": 0.136
+      },
+      "n_mols": 1865,
+      "n_seeds": 3
+    },
+    "CHEMBL228_Ki": {
+      "acq_sim": {
+        "greedy": 0.5067,
+        "random": 0.4747,
+        "uncertainty": 0.4501
+      },
+      "adv_indomain_greedy": -0.0901,
+      "adv_indomain_uncertainty": -0.0845,
+      "adv_novel_greedy": 0.0604,
+      "adv_novel_uncertainty": 0.0738,
+      "auc_indomain": {
+        "greedy": 0.2211,
+        "random": 0.3112,
+        "uncertainty": 0.2267
+      },
+      "auc_novel": {
+        "greedy": 0.2233,
+        "random": 0.1629,
+        "uncertainty": 0.2367
+      },
+      "n_mols": 1704,
+      "n_seeds": 3
+    },
+    "CHEMBL231_Ki": {
+      "acq_sim": {
+        "greedy": 0.5694,
+        "random": 0.5208,
+        "uncertainty": 0.4658
+      },
+      "adv_indomain_greedy": -0.0031,
+      "adv_indomain_uncertainty": 0.027,
+      "adv_novel_greedy": 0.0423,
+      "adv_novel_uncertainty": 0.0493,
+      "auc_indomain": {
+        "greedy": 0.4388,
+        "random": 0.4419,
+        "uncertainty": 0.4689
+      },
+      "auc_novel": {
+        "greedy": 0.0536,
+        "random": 0.0113,
+        "uncertainty": 0.0606
+      },
+      "n_mols": 973,
+      "n_seeds": 3
+    },
+    "CHEMBL233_Ki": {
+      "acq_sim": {
+        "greedy": 0.5671,
+        "random": 0.4873,
+        "uncertainty": 0.452
+      },
+      "adv_indomain_greedy": -0.0358,
+      "adv_indomain_uncertainty": -0.0056,
+      "adv_novel_greedy": 0.0036,
+      "adv_novel_uncertainty": -0.0244,
+      "auc_indomain": {
+        "greedy": 0.3969,
+        "random": 0.4327,
+        "uncertainty": 0.4271
+      },
+      "auc_novel": {
+        "greedy": 0.0886,
+        "random": 0.085,
+        "uncertainty": 0.0606
+      },
+      "n_mols": 3142,
+      "n_seeds": 3
+    },
+    "CHEMBL234_Ki": {
+      "acq_sim": {
+        "greedy": 0.5937,
+        "random": 0.4921,
+        "uncertainty": 0.424
+      },
+      "adv_indomain_greedy": -0.0757,
+      "adv_indomain_uncertainty": -0.0534,
+      "adv_novel_greedy": -0.0478,
+      "adv_novel_uncertainty": -0.0658,
+      "auc_indomain": {
+        "greedy": 0.3036,
+        "random": 0.3793,
+        "uncertainty": 0.3259
+      },
+      "auc_novel": {
+        "greedy": -0.0719,
+        "random": -0.0241,
+        "uncertainty": -0.0899
+      },
+      "n_mols": 3657,
+      "n_seeds": 3
+    },
+    "CHEMBL235_EC50": {
+      "acq_sim": {
+        "greedy": 0.6153,
+        "random": 0.5175,
+        "uncertainty": 0.4707
+      },
+      "adv_indomain_greedy": -0.06,
+      "adv_indomain_uncertainty": -0.0102,
+      "adv_novel_greedy": -0.1121,
+      "adv_novel_uncertainty": -0.042,
+      "auc_indomain": {
+        "greedy": 0.2086,
+        "random": 0.2686,
+        "uncertainty": 0.2584
+      },
+      "auc_novel": {
+        "greedy": 0.0403,
+        "random": 0.1524,
+        "uncertainty": 0.1104
+      },
+      "n_mols": 2349,
+      "n_seeds": 2
+    },
+    "CHEMBL236_Ki": {
+      "acq_sim": {
+        "greedy": 0.6083,
+        "random": 0.5194,
+        "uncertainty": 0.4539
+      },
+      "adv_indomain_greedy": -0.0022,
+      "adv_indomain_uncertainty": 0.0283,
+      "adv_novel_greedy": 0.0342,
+      "adv_novel_uncertainty": 0.0354,
+      "auc_indomain": {
+        "greedy": 0.4143,
+        "random": 0.4165,
+        "uncertainty": 0.4448
+      },
+      "auc_novel": {
+        "greedy": 0.2033,
+        "random": 0.1691,
+        "uncertainty": 0.2045
+      },
+      "n_mols": 2598,
+      "n_seeds": 2
+    },
+    "CHEMBL237_Ki": {
+      "acq_sim": {
+        "greedy": 0.6483,
+        "random": 0.5295,
+        "uncertainty": 0.4946
+      },
+      "adv_indomain_greedy": -0.013,
+      "adv_indomain_uncertainty": -0.026,
+      "adv_novel_greedy": 0.0359,
+      "adv_novel_uncertainty": 0.0447,
+      "auc_indomain": {
+        "greedy": 0.4881,
+        "random": 0.5011,
+        "uncertainty": 0.4751
+      },
+      "auc_novel": {
+        "greedy": -0.0051,
+        "random": -0.041,
+        "uncertainty": 0.0037
+      },
+      "n_mols": 2603,
+      "n_seeds": 3
+    },
+    "CHEMBL238_Ki": {
+      "acq_sim": {
+        "greedy": 0.509,
+        "random": 0.4727,
+        "uncertainty": 0.4311
+      },
+      "adv_indomain_greedy": -0.0196,
+      "adv_indomain_uncertainty": -0.0268,
+      "adv_novel_greedy": -0.0862,
+      "adv_novel_uncertainty": -0.1096,
+      "auc_indomain": {
+        "greedy": 0.3209,
+        "random": 0.3405,
+        "uncertainty": 0.3137
+      },
+      "auc_novel": {
+        "greedy": -0.1181,
+        "random": -0.0319,
+        "uncertainty": -0.1415
+      },
+      "n_mols": 1052,
+      "n_seeds": 3
+    },
+    "CHEMBL239_EC50": {
+      "acq_sim": {
+        "greedy": 0.6106,
+        "random": 0.5399,
+        "uncertainty": 0.5122
+      },
+      "adv_indomain_greedy": -0.0307,
+      "adv_indomain_uncertainty": -0.0349,
+      "adv_novel_greedy": 0.0478,
+      "adv_novel_uncertainty": 0.0178,
+      "auc_indomain": {
+        "greedy": 0.2832,
+        "random": 0.3139,
+        "uncertainty": 0.279
+      },
+      "auc_novel": {
+        "greedy": 0.2542,
+        "random": 0.2064,
+        "uncertainty": 0.2242
+      },
+      "n_mols": 1721,
+      "n_seeds": 2
+    },
+    "CHEMBL244_Ki": {
+      "acq_sim": {
+        "greedy": 0.5627,
+        "random": 0.5259,
+        "uncertainty": 0.4994
+      },
+      "adv_indomain_greedy": -0.0654,
+      "adv_indomain_uncertainty": 0.0307,
+      "adv_novel_greedy": 0.0218,
+      "adv_novel_uncertainty": -0.2026,
+      "auc_indomain": {
+        "greedy": 0.3216,
+        "random": 0.387,
+        "uncertainty": 0.4177
+      },
+      "auc_novel": {
+        "greedy": 0.2223,
+        "random": 0.2005,
+        "uncertainty": -0.0021
+      },
+      "n_mols": 3097,
+      "n_seeds": 1
+    },
+    "CHEMBL262_Ki": {
+      "acq_sim": {
+        "greedy": 0.5559,
+        "random": 0.4278,
+        "uncertainty": 0.4255
+      },
+      "adv_indomain_greedy": -0.0286,
+      "adv_indomain_uncertainty": -0.0058,
+      "adv_novel_greedy": 0.0758,
+      "adv_novel_uncertainty": 0.0681,
+      "auc_indomain": {
+        "greedy": 0.2568,
+        "random": 0.2854,
+        "uncertainty": 0.2796
+      },
+      "auc_novel": {
+        "greedy": 0.1923,
+        "random": 0.1165,
+        "uncertainty": 0.1846
+      },
+      "n_mols": 856,
+      "n_seeds": 3
+    },
+    "CHEMBL264_Ki": {
+      "acq_sim": {
+        "greedy": 0.5499,
+        "random": 0.475,
+        "uncertainty": 0.4372
+      },
+      "adv_indomain_greedy": -0.0898,
+      "adv_indomain_uncertainty": -0.0701,
+      "adv_novel_greedy": -0.0616,
+      "adv_novel_uncertainty": 0.0181,
+      "auc_indomain": {
+        "greedy": 0.2045,
+        "random": 0.2943,
+        "uncertainty": 0.2242
+      },
+      "auc_novel": {
+        "greedy": -0.0763,
+        "random": -0.0147,
+        "uncertainty": 0.0034
+      },
+      "n_mols": 2862,
+      "n_seeds": 3
+    },
+    "CHEMBL287_Ki": {
+      "acq_sim": {
+        "greedy": 0.5388,
+        "random": 0.483,
+        "uncertainty": 0.4307
+      },
+      "adv_indomain_greedy": -0.0686,
+      "adv_indomain_uncertainty": -0.0173,
+      "adv_novel_greedy": 0.0499,
+      "adv_novel_uncertainty": 0.0503,
+      "auc_indomain": {
+        "greedy": 0.2095,
+        "random": 0.2781,
+        "uncertainty": 0.2608
+      },
+      "auc_novel": {
+        "greedy": 0.0606,
+        "random": 0.0107,
+        "uncertainty": 0.061
+      },
+      "n_mols": 1328,
+      "n_seeds": 3
+    },
+    "CHEMBL2971_Ki": {
+      "acq_sim": {
+        "greedy": 0.727,
+        "random": 0.5957,
+        "uncertainty": 0.4659
+      },
+      "adv_indomain_greedy": -0.0088,
+      "adv_indomain_uncertainty": -0.0279,
+      "adv_novel_greedy": -0.0137,
+      "adv_novel_uncertainty": 0.0704,
+      "auc_indomain": {
+        "greedy": 0.6211,
+        "random": 0.6299,
+        "uncertainty": 0.602
+      },
+      "auc_novel": {
+        "greedy": 0.1151,
+        "random": 0.1288,
+        "uncertainty": 0.1992
+      },
+      "n_mols": 976,
+      "n_seeds": 3
+    },
+    "CHEMBL3979_EC50": {
+      "acq_sim": {
+        "greedy": 0.6698,
+        "random": 0.5731,
+        "uncertainty": 0.5286
+      },
+      "adv_indomain_greedy": -0.008,
+      "adv_indomain_uncertainty": 0.0036,
+      "adv_novel_greedy": -0.137,
+      "adv_novel_uncertainty": -0.1266,
+      "auc_indomain": {
+        "greedy": 0.4848,
+        "random": 0.4928,
+        "uncertainty": 0.4964
+      },
+      "auc_novel": {
+        "greedy": 0.0532,
+        "random": 0.1902,
+        "uncertainty": 0.0636
+      },
+      "n_mols": 1125,
+      "n_seeds": 3
+    },
+    "CHEMBL4203_Ki": {
+      "acq_sim": {
+        "greedy": 0.4178,
+        "random": 0.3634,
+        "uncertainty": 0.3425
+      },
+      "adv_indomain_greedy": -0.001,
+      "adv_indomain_uncertainty": -0.0076,
+      "adv_novel_greedy": 0.002,
+      "adv_novel_uncertainty": -0.0089,
+      "auc_indomain": {
+        "greedy": 0.2704,
+        "random": 0.2714,
+        "uncertainty": 0.2638
+      },
+      "auc_novel": {
+        "greedy": 0.2747,
+        "random": 0.2727,
+        "uncertainty": 0.2638
+      },
+      "n_mols": 731,
+      "n_seeds": 3
+    }
+  },
+  "provenance": {
+    "git_sha": "17a358133562efd9557b3ca41d59faea4d06e817",
+    "utc": "2026-07-31T17:43:36Z"
+  },
+  "runtime_sec": 1541.5,
+  "summary": {
+    "frac_targets_adv_indomain_pos_uncertainty": 0.333,
+    "frac_targets_adv_novel_pos_uncertainty": 0.542,
+    "median_acq_sim": {
+      "greedy": 0.5649,
+      "random": 0.5004,
+      "uncertainty": 0.4602
+    },
+    "median_adv_indomain_greedy": -0.0296,
+    "median_adv_indomain_uncertainty": -0.0129,
+    "median_adv_novel_greedy": 0.0127,
+    "median_adv_novel_uncertainty": 0.0165,
+    "n_targets": 24,
+    "verdict": "FLAT NULL (H1 and H2 both UNSUPPORTED): in this small-label novel-chemistry-hard MoleculeACE potency regime, neither uncertainty nor greedy acquisition reliably beats RANDOM on EITHER test set \u2014 in-domain adv -0.013 (frac_pos 0.333), novel adv +0.017 (frac_pos 0.542); all within noise (|median|<0.03, sign ~50/50). The acquisition functions demonstrably selected the intended compounds (uncertainty acq_sim 0.4602 < random 0.5004 < greedy 0.5649), so correct acquisition simply did NOT translate into better generalization. REINFORCES B62: when signal is weak, WHICH points you label barely matters \u2014 the lever is information quantity/quality, not acquisition strategy. First-class negative; tempers P4 in the weak-signal small-label regime."
+  }
+}
