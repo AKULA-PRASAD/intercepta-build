@@ -78,3 +78,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## ESM-2 protein embeddings + UniProt sequences — B49
 - ESM-2: facebook/esm2_t30_150M_UR50D (HuggingFace, open); cached `$INTERCEPTA_DATA/hf_cache`, embeddings `$INTERCEPTA_DATA/esm_cache/`.
 - Sequences: UniProt REST `{acc}.fasta` for 14 accessions (P07550,P00352,P03372,P39748,P04062,O75874,Q92830,P28482,P42345,P41145,P14618,P37231,P04637,P11473). PUBLIC/OPEN. Cached, never committed.
+
+## GuacaMol benchmark + ChEMBL seeds — B52
+- guacamol 0.5.2 (pip, open); goal-directed scoring functions used with a scipy.histogram compat shim. Published baselines = Brown et al., JCIM 2019 (hard-coded reference).
+- ChEMBL seeds: `$INTERCEPTA_DATA/tdc_gen/chembl.tab` (already logged). PUBLIC/OPEN; never committed.

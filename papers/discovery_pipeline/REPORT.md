@@ -258,6 +258,17 @@ the integration negatives: value comes not from combining scores but from **usin
 to measure next**. In-silico DMTA proxy on real labels (not a live assay), 3 targets, subsampled pool; finding actives
 fast ≠ a drug; not wet-lab. (payload e71129f4)
 
+## 3l. External SOTA footing for the generator — GuacaMol (B52)
+
+Our design module (B33 BRICS-GA) had only ever been scored on our own objectives. B52 places it on the community
+GuacaMol goal-directed benchmark (Brown et al. 2019) with the *exact* published scoring functions (6 of 20 tasks), vs
+the published leaderboard. Honest calibration: the GA **genuinely optimises but is below SOTA** — mean score **0.568 vs
+published Graph-GA 0.893** (clears Best-of-Dataset on 2/6). The gap is smallest on MPO (Osimertinib 0.802 vs 0.953) and
+largest exactly where **exact structural reconstruction** is required (C11H24 isomers 0.258; rediscovery/similarity
+~0.66) — consistent with the analog-level reach seen in B42. So the generator is a real optimiser but would need a
+stronger backbone (graph-GA / SMILES-LSTM / RL) to reach SOTA. Outputs are computational hypotheses, not validated
+molecules; no SOTA claim; not wet-lab. (payload d67f949d)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -297,4 +308,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d.

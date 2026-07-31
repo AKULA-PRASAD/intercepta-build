@@ -90,7 +90,7 @@
     ],
     "batch": 100,
     "experiment": "B51_active_learning_loop",
-    "git_sha": "0aa6631efd4f8bb55311cdac5ff7fdb9fffc5f53",
+    "git_sha": "98278360d8b90247e3264ffde72420f51e5be4f3",
     "kappa": 1.0,
     "libs": {
       "numpy": "1.26.4",
@@ -107,7 +107,7 @@
       "MAPK1",
       "ALDH1"
     ],
-    "timestamp_utc": "2026-07-31T01:35:14Z"
+    "timestamp_utc": "2026-07-31T01:51:46Z"
   },
   "summary": {
     "H1_loop_beats_random_2x": true,

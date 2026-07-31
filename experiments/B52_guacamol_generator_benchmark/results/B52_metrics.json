@@ -1,0 +1,77 @@
+{
+  "per_benchmark": {
+    "Aripiprazole similarity": {
+      "beats_best_of_dataset": true,
+      "best_of_dataset": 0.595,
+      "gap_vs_graph_ga": -0.35,
+      "graph_ga": 1.0,
+      "ours": 0.65,
+      "smiles_lstm": 1.0
+    },
+    "C11H24": {
+      "beats_best_of_dataset": false,
+      "best_of_dataset": 0.684,
+      "gap_vs_graph_ga": -0.7132,
+      "graph_ga": 0.971,
+      "ours": 0.2578,
+      "smiles_lstm": 0.993
+    },
+    "Celecoxib rediscovery": {
+      "beats_best_of_dataset": true,
+      "best_of_dataset": 0.505,
+      "gap_vs_graph_ga": -0.3333,
+      "graph_ga": 1.0,
+      "ours": 0.6667,
+      "smiles_lstm": 1.0
+    },
+    "Fexofenadine MPO": {
+      "beats_best_of_dataset": false,
+      "best_of_dataset": 0.817,
+      "gap_vs_graph_ga": -0.2434,
+      "graph_ga": 0.998,
+      "ours": 0.7546,
+      "smiles_lstm": 0.959
+    },
+    "Median molecules 1": {
+      "beats_best_of_dataset": false,
+      "best_of_dataset": 0.334,
+      "gap_vs_graph_ga": -0.1583,
+      "graph_ga": 0.438,
+      "ours": 0.2797,
+      "smiles_lstm": 0.432
+    },
+    "Osimertinib MPO": {
+      "beats_best_of_dataset": false,
+      "best_of_dataset": 0.839,
+      "gap_vs_graph_ga": -0.1513,
+      "graph_ga": 0.953,
+      "ours": 0.8017,
+      "smiles_lstm": 0.907
+    }
+  },
+  "provenance": {
+    "experiment": "B52_guacamol_generator_benchmark",
+    "generations": 15,
+    "git_sha": "98278360d8b90247e3264ffde72420f51e5be4f3",
+    "libs": {
+      "guacamol": "0.5.2",
+      "numpy": "2.5.1",
+      "rdkit": "2025.09.5"
+    },
+    "n_seeds": 3000,
+    "note": "published baselines = Brown et al. 2019 (approx), hard-coded reference",
+    "pop_min": 120,
+    "python": "3.12.13",
+    "timestamp_utc": "2026-07-31T01:56:25Z"
+  },
+  "summary": {
+    "H1_functional_optimizer": true,
+    "H2_below_sota_graph_ga": true,
+    "mean_gap_vs_graph_ga": -0.3249,
+    "mean_graph_ga_published": 0.8933,
+    "mean_ours": 0.5684,
+    "n_beats_best_of_dataset": 2,
+    "n_benchmarks": 6,
+    "verdict": "GENERATOR OPTIMISES BUT IS BELOW SOTA (honest calibration): mean goal-directed score 0.5684 vs published Graph-GA 0.8933 (gap -0.325); clears the Best-of-Dataset floor on 2/6 tasks. The BRICS fragment-recombination GA genuinely optimises (H1 pass) but does NOT match the graph-GA/LSTM SOTA (H2) \u2014 as expected, the gap is largest on rediscovery/similarity (exact reconstruction needed; our reach is analog-level, cf. B42) and smaller on MPO. Honest external calibration of the design module; outputs are computational hypotheses, NOT validated molecules; no SOTA claim; 6/20 tasks; not wet-lab."
+  }
+}
