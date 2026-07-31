@@ -434,6 +434,25 @@ recalibratable): the only remaining levers are *more/different information* (new
 linkage) was caught and documented before running. Retrospective, in-silico, n=24; oracle recalibration is an upper
 bound (uses test labels); not wet-lab. (payload c74983c8)
 
+## 3w. Does P6 (bias independence/additivity) survive a different decoy paradigm? — no; it is HTS-paradigm-specific (B63)
+
+P6 (analogue-bias and decoy-bias are independent and additive; interaction ≈ 0) is our most novel, replicated principle
+— but B54/B56 established it only under the **HTS decoy paradigm** (decoys = assay inactives). B63 constructs the
+missing instrument — diverse ChEMBL actives plus **DUD-E-style decoys** (property-matched in 6-D physchem *and*
+topology-dissimilar, greedy no-replacement 3:1, built from an 8,000-compound ChEMBL background) — and re-runs the 2×2
+factorial across 14 targets. **The interaction is −0.0553** (|·| ≥ 0.03), unlike the HTS-paradigm ≈ 0 (B54 −0.019, B56
+−0.0005): under DUD-E-style decoys the two biases are **sub-additively entangled** — the decoy effect is larger in the
+novel-chemistry regime (0.080) than the standard regime (0.025), because DUD-E decoys are topology-dissimilar by
+construction, so once actives are also forced novel, property-matching does more of the separating work. **P6 therefore
+demotes from a candidate general law to an HTS-paradigm-specific principle**; honest evaluation under constructed decoys
+needs both controls *and* their interaction term, not a simple additive subtraction. A strong doubly-controlled signal
+still survives (A1B1 = 0.763). Integrity: the first execution had a decoy-builder defect (over-generated ~all-background
+decoys instead of 3:1, confounding the very A0-vs-A1 contrast being measured, and was pathologically slow); it was
+caught pre-result by investigating the slowness (`sample` profile), corrected to the pre-registered 3:1 round-robin
+design with a dated prereg amendment, and nothing was committed before the fix. Retrospective, in-silico, constructed
+decoys (documented recipe), n = 14; whether the negative interaction is mechanistic or a construction artifact is the
+natural follow-up; not wet-lab. (payload 07372f1a)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -473,4 +492,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3 · B61 e204be60 · B62 c74983c8.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3 · B61 e204be60 · B62 c74983c8 · B63 07372f1a.

@@ -1,0 +1,292 @@
+{
+  "per_target": {
+    "CHEMBL1862_Ki": {
+      "analog_effect": 0.1429,
+      "cells": {
+        "A0B0": 0.9785,
+        "A0B1": 0.8773,
+        "A1B0": 0.9551,
+        "A1B1": 0.7705
+      },
+      "decoy_effect": 0.0651,
+      "interaction": -0.0834,
+      "irreducible_A1B1": 0.7705,
+      "n_actives": 400
+    },
+    "CHEMBL1871_Ki": {
+      "analog_effect": 0.1291,
+      "cells": {
+        "A0B0": 0.9945,
+        "A0B1": 0.8759,
+        "A1B0": 0.9929,
+        "A1B1": 0.8533
+      },
+      "decoy_effect": 0.0121,
+      "interaction": -0.021,
+      "irreducible_A1B1": 0.8533,
+      "n_actives": 400
+    },
+    "CHEMBL2034_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL2047_EC50": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL204_Ki": {
+      "analog_effect": 0.0546,
+      "cells": {
+        "A0B0": 0.9845,
+        "A0B1": 0.9528,
+        "A1B0": 0.9741,
+        "A1B1": 0.8966
+      },
+      "decoy_effect": 0.0333,
+      "interaction": -0.0458,
+      "irreducible_A1B1": 0.8966,
+      "n_actives": 400
+    },
+    "CHEMBL2147_Ki": {
+      "analog_effect": 0.1543,
+      "cells": {
+        "A0B0": 0.9603,
+        "A0B1": 0.85,
+        "A1B0": 0.9238,
+        "A1B1": 0.7255
+      },
+      "decoy_effect": 0.0805,
+      "interaction": -0.088,
+      "irreducible_A1B1": 0.7255,
+      "n_actives": 400
+    },
+    "CHEMBL214_Ki": {
+      "analog_effect": 0.1253,
+      "cells": {
+        "A0B0": 0.9532,
+        "A0B1": 0.8442,
+        "A1B0": 0.9202,
+        "A1B1": 0.7787
+      },
+      "decoy_effect": 0.0493,
+      "interaction": -0.0325,
+      "irreducible_A1B1": 0.7787,
+      "n_actives": 400
+    },
+    "CHEMBL218_EC50": {
+      "analog_effect": 0.1965,
+      "cells": {
+        "A0B0": 0.9671,
+        "A0B1": 0.7967,
+        "A1B0": 0.9655,
+        "A1B1": 0.743
+      },
+      "decoy_effect": 0.0276,
+      "interaction": -0.0521,
+      "irreducible_A1B1": 0.743,
+      "n_actives": 400
+    },
+    "CHEMBL219_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL228_Ki": {
+      "analog_effect": 0.1186,
+      "cells": {
+        "A0B0": 0.9558,
+        "A0B1": 0.8706,
+        "A1B0": 0.931,
+        "A1B1": 0.779
+      },
+      "decoy_effect": 0.0582,
+      "interaction": -0.0668,
+      "irreducible_A1B1": 0.779,
+      "n_actives": 400
+    },
+    "CHEMBL231_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL233_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL234_Ki": {
+      "analog_effect": 0.1229,
+      "cells": {
+        "A0B0": 0.9581,
+        "A0B1": 0.8419,
+        "A1B0": 0.9463,
+        "A1B1": 0.8167
+      },
+      "decoy_effect": 0.0185,
+      "interaction": -0.0134,
+      "irreducible_A1B1": 0.8167,
+      "n_actives": 400
+    },
+    "CHEMBL235_EC50": {
+      "analog_effect": 0.2464,
+      "cells": {
+        "A0B0": 0.978,
+        "A0B1": 0.7853,
+        "A1B0": 0.9606,
+        "A1B1": 0.6606
+      },
+      "decoy_effect": 0.0711,
+      "interaction": -0.1073,
+      "irreducible_A1B1": 0.6606,
+      "n_actives": 400
+    },
+    "CHEMBL236_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL237_EC50": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL237_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL238_Ki": {
+      "analog_effect": 0.1189,
+      "cells": {
+        "A0B0": 0.9647,
+        "A0B1": 0.8556,
+        "A1B0": 0.9218,
+        "A1B1": 0.7931
+      },
+      "decoy_effect": 0.0527,
+      "interaction": -0.0196,
+      "irreducible_A1B1": 0.7931,
+      "n_actives": 400
+    },
+    "CHEMBL239_EC50": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL244_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL262_Ki": {
+      "analog_effect": 0.1741,
+      "cells": {
+        "A0B0": 0.9418,
+        "A0B1": 0.8221,
+        "A1B0": 0.9013,
+        "A1B1": 0.6727
+      },
+      "decoy_effect": 0.095,
+      "interaction": -0.1089,
+      "irreducible_A1B1": 0.6727,
+      "n_actives": 400
+    },
+    "CHEMBL264_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL2835_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL287_Ki": {
+      "analog_effect": 0.2206,
+      "cells": {
+        "A0B0": 0.9683,
+        "A0B1": 0.7794,
+        "A1B0": 0.9363,
+        "A1B1": 0.6841
+      },
+      "decoy_effect": 0.0636,
+      "interaction": -0.0633,
+      "irreducible_A1B1": 0.6841,
+      "n_actives": 400
+    },
+    "CHEMBL2971_Ki": {
+      "analog_effect": 0.1738,
+      "cells": {
+        "A0B0": 0.9523,
+        "A0B1": 0.807,
+        "A1B0": 0.9355,
+        "A1B1": 0.7333
+      },
+      "decoy_effect": 0.0453,
+      "interaction": -0.0569,
+      "irreducible_A1B1": 0.7333,
+      "n_actives": 400
+    },
+    "CHEMBL3979_EC50": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL4005_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL4203_Ki": {
+      "analog_effect": 0.089,
+      "cells": {
+        "A0B0": 0.9242,
+        "A0B1": 0.843,
+        "A1B0": 0.8661,
+        "A1B1": 0.7693
+      },
+      "decoy_effect": 0.0659,
+      "interaction": -0.0156,
+      "irreducible_A1B1": 0.7693,
+      "n_actives": 400
+    },
+    "CHEMBL4616_EC50": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "CHEMBL4792_Ki": {
+      "n_actives": 400,
+      "note": "insufficient novel-chemistry test actives"
+    }
+  },
+  "provenance": {
+    "bg_n": 8000,
+    "experiment": "B63_p6_dude_paradigm_generality",
+    "git_sha": "990aa9f73ff8d91175d9dc97b22397d698c134a8",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0"
+    },
+    "max_act": 400,
+    "nn_novel": 0.4,
+    "python": "3.11.14",
+    "ratio": 3,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "timestamp_utc": "2026-07-31T15:30:05Z",
+    "topo_max": 0.5
+  },
+  "summary": {
+    "H1_P6_generalises_across_decoy_paradigms": false,
+    "H2_P6_paradigm_specific": true,
+    "analog_bias_effect": 0.1476,
+    "decoy_bias_effect": 0.0527,
+    "interaction": -0.0553,
+    "irreducible_A1B1": 0.7626,
+    "n_targets": 14,
+    "panel_cells": {
+      "A0B0": 0.963,
+      "A0B1": 0.843,
+      "A1B0": 0.9379,
+      "A1B1": 0.7626
+    },
+    "reference": {
+      "B54_interaction": -0.019,
+      "B56_interaction": -0.0005
+    },
+    "verdict": "P6 IS DECOY-PARADIGM-SPECIFIC (honest boundary): under the DUD-E paradigm the interaction is -0.0553 (|.|>=0.03), unlike the HTS-paradigm B54/B56 (~0). So analogue and decoy bias are NOT cleanly independent under DUD-E-style decoys -> P6's additivity does not transfer across decoy constructions; it is HTS-paradigm-specific. First-class boundary on P6's generality. 14 targets; constructed decoys; not wet-lab."
+  }
+}
