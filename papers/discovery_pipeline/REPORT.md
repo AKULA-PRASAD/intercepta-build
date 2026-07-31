@@ -492,4 +492,28 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3 · B61 e204be60 · B62 c74983c8 · B63 07372f1a.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3 · B61 e204be60 · B62 c74983c8 · B63 07372f1a · B64 739f5230.
+
+---
+
+## 8. End-to-end platform demonstration (B64) — FEN1, honest confidence as the deliverable
+
+To show the validated modules compose into a *usable* engine — not just isolated results — B64 runs the whole pipeline
+end-to-end on one real disease target and produces a ranked, calibrated candidate shortlist. Target: **FEN1** (flap
+endonuclease 1; DNA-repair / synthetic-lethality oncology), chosen for honesty — it carries our **strongest
+doubly-controlled ligand signal** (B45 novel-chemistry residual ≈ 0.80), so the activity channel is genuinely
+informative rather than similarity-inflated. Composition: FEN1 activity QSAR (LIT-PCBA; Morgan-1024 → HGB; Tanimoto
+applicability domain + Mondrian conformal) → target-conditioned BRICS-GA generation (`F = QED × synth × safety ×
+P(FEN1-active)`) → multi-channel scoring (activity + conformal + AD; safety = 1 − mean hERG/AMES/DILI; synthesizability;
+QED) → ranked, annotated top-20. The QSAR was validated up front (random held-out AUROC **0.941**, scaffold-disjoint
+**0.960**), and the generator measurably improved the objective (best 0.14 → 0.31 over 8 generations).
+
+The result — and the reason it matters — is the **honesty**: of 20 candidates, only **3 are flagged reliable
+(in-domain)**; the 19 novel-chemistry candidates are marked *"out-of-domain — do not trust the activity call,"* and the
+high-`p_active` (0.90+) molecules are almost all out-of-domain with mostly-empty conformal sets. **The platform
+generates molecules and simultaneously reports which of its own predictions it cannot trust** — a direct consequence of
+P2 (similarity-inflation) and P9/B60–B62 (novel-chemistry extrapolation is an information ceiling). A pipeline that
+confidently promoted those 0.90+ out-of-domain molecules as leads would be misleading; this one flags them. This is a
+usable **computational hypothesis engine**, not a drug: `p_target_active` is a QSAR probability, not measured activity,
+and a real lead still requires wet-lab validation (resource-gated). Deterministic; reproduced ×2 byte-identical.
+Write-up + shortlist: `experiments/B64_endtoend_fen1_demonstration/`. (payload 739f5230)
