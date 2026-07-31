@@ -1,0 +1,163 @@
+{
+  "per_target": {
+    "ALDH1": {
+      "group": "biochemical",
+      "residual": 0.5809
+    },
+    "ESR1_ant": {
+      "group": "biochemical",
+      "residual": 0.5765
+    },
+    "FEN1": {
+      "group": "biochemical",
+      "residual": 0.7989
+    },
+    "GBA": {
+      "group": "biochemical",
+      "residual": 0.5544
+    },
+    "KAT2A": {
+      "group": "biochemical",
+      "residual": 0.5808
+    },
+    "MAPK1": {
+      "group": "biochemical",
+      "residual": 0.5965
+    },
+    "PKM2": {
+      "group": "biochemical",
+      "residual": 0.6709
+    },
+    "VDR": {
+      "group": "biochemical",
+      "residual": 0.6624
+    },
+    "cav3_t-type_calcium_channels_butkiewicz": {
+      "group": "cell_functional",
+      "residual": 0.6684
+    },
+    "choline_transporter_butkiewicz": {
+      "group": "cell_functional",
+      "residual": 0.6628
+    },
+    "hiv": {
+      "group": "phenotypic",
+      "residual": 0.5685
+    },
+    "kcnq2_potassium_channel_butkiewicz": {
+      "group": "cell_functional",
+      "residual": 0.5281
+    },
+    "m1_muscarinic_receptor_agonists_butkiewicz": {
+      "group": "cell_functional",
+      "residual": 0.5127
+    },
+    "m1_muscarinic_receptor_antagonists_butkiewicz": {
+      "group": "cell_functional",
+      "residual": 0.6491
+    },
+    "orexin1_receptor_butkiewicz": {
+      "group": "cell_functional",
+      "residual": 0.6431
+    },
+    "potassium_ion_channel_kir2.1_butkiewicz": {
+      "group": "cell_functional",
+      "residual": 0.7502
+    },
+    "sarscov2_vitro_touret": {
+      "group": "phenotypic",
+      "residual": 0.4505
+    },
+    "serine_threonine_kinase_33_butkiewicz": {
+      "group": "cell_functional",
+      "residual": 0.773
+    },
+    "tyrosyl-dna_phosphodiesterase_butkiewicz": {
+      "group": "biochemical",
+      "residual": 0.6645
+    }
+  },
+  "provenance": {
+    "classification": {
+      "ambiguous": [
+        "serine_threonine_kinase_33_butkiewicz",
+        "VDR",
+        "ESR1_ant"
+      ],
+      "biochemical": [
+        "FEN1",
+        "MAPK1",
+        "ALDH1",
+        "GBA",
+        "KAT2A",
+        "PKM2",
+        "tyrosyl-dna_phosphodiesterase_butkiewicz",
+        "VDR",
+        "ESR1_ant"
+      ],
+      "cell_functional": [
+        "m1_muscarinic_receptor_agonists_butkiewicz",
+        "m1_muscarinic_receptor_antagonists_butkiewicz",
+        "orexin1_receptor_butkiewicz",
+        "potassium_ion_channel_kir2.1_butkiewicz",
+        "kcnq2_potassium_channel_butkiewicz",
+        "cav3_t-type_calcium_channels_butkiewicz",
+        "choline_transporter_butkiewicz",
+        "serine_threonine_kinase_33_butkiewicz"
+      ],
+      "phenotypic": [
+        "hiv",
+        "sarscov2_vitro_touret"
+      ]
+    },
+    "experiment": "B59_assayclass_residual",
+    "git_sha": "211b2733a138dcda27b24c7de153578a67a194fd",
+    "libs": {
+      "numpy": "1.26.4",
+      "scipy": "1.16.3"
+    },
+    "python": "3.11.14",
+    "residual_source": "B58_metrics.json cells A1B1",
+    "timestamp_utc": "2026-07-31T12:51:32Z"
+  },
+  "summary": {
+    "H1_biochem_gt_cellbased": false,
+    "main_test": {
+      "label": "biochemical_vs_cellbased(functional+phenotypic)",
+      "mannwhitney_U": 50.0,
+      "mean_biochem": 0.6318,
+      "mean_cell": 0.6206,
+      "median_biochem": 0.5965,
+      "median_cell": 0.6461,
+      "n_biochem": 9,
+      "n_cell": 10,
+      "p_one_sided_biochem_gt": 0.3567,
+      "p_two_sided": 0.7133,
+      "rank_biserial_effect": -0.1111
+    },
+    "n_targets": 19,
+    "phenotypic_descriptive": {
+      "mean": 0.5095,
+      "n": 2,
+      "residuals": [
+        0.4505,
+        0.5685
+      ],
+      "vs_rest_mean": 0.6396
+    },
+    "sensitivity_test": {
+      "label": "sensitivity_excluding_ambiguous(VDR,ESR1,STK33)",
+      "mannwhitney_U": 39.0,
+      "mean_biochem": 0.6353,
+      "mean_cell": 0.6037,
+      "median_biochem": 0.5965,
+      "median_cell": 0.6431,
+      "n_biochem": 7,
+      "n_cell": 9,
+      "p_one_sided_biochem_gt": 0.2349,
+      "p_two_sided": 0.4698,
+      "rank_biserial_effect": -0.2381
+    },
+    "verdict": "NULL \u2014 ASSAY FORMAT DOES NOT EXPLAIN THE RESIDUAL (bounds B58's suggestive signal): biochemical vs cell-based residual medians 0.5965 vs 0.6461 (one-sided p=0.3567, two-sided 0.7133, rank-biserial -0.1111) \u2014 NOT significant. B58's assay-type signal (Spearman -0.44) was driven by the 2 phenotypic antiviral points (residuals [0.4505, 0.5685]), NOT a general biochemical/cell-based effect; the powerable dichotomy shows no difference (sensitivity excluding ambiguous: p=0.2349). The PURE phenotypic test is infeasible (only 2 datasets). So the phenotypic 'mechanism' is NOT supported at power; the residual's target-dependence stays unexplained (consistent with B57/B58). First-class null; confirmatory/post-hoc, n=19; not wet-lab."
+  }
+}

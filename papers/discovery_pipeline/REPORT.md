@@ -368,6 +368,19 @@ methodological point (principled ROGI > threshold cliff). We do **not** achieve 
 ligand-based VS trustworthy" — the dominant driver likely needs 3D/pocket features, continuous potency, or larger n.
 Retrospective, in-silico meta-analysis, n=19; ROGI reimplemented (validated, not bit-exact); not wet-lab. (payload 54865883)
 
+## 3s. Does the residual depend on assay format? — a null that bounds B58 (B59)
+
+B58 flagged a *suggestive* assay-type signal (Spearman −0.44), but it rested on only 2 phenotypic targets. B59 tests
+whether it generalizes to a powerable **biochemical (isolated-protein) vs cell-based (functional + phenotypic)**
+dichotomy across the 19 targets (confirmatory/post-hoc; residuals already committed). It does not: biochemical vs
+cell-based median residual **0.597 vs 0.646** (Mann–Whitney two-sided p=0.71; one-sided biochem>cell p=0.36;
+rank-biserial −0.11 — if anything cell-based is marginally higher), and a sensitivity analysis excluding the 3
+ambiguous targets stays null (p=0.23). So B58's assay-type signal was **driven by the 2 phenotypic antiviral points, not
+a general assay-format effect**, and the *pure* phenotypic test is infeasible (only 2 such datasets exist). The residual's
+target-dependence therefore remains **unexplained** — consistent with B57/B58 — and we do not claim a phenotypic
+mechanism. This is a first-class null that correctly bounds an over-eager reading of B58. Confirmatory/post-hoc, n=19;
+not wet-lab. (payload 2d7628c5)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -407,4 +420,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5.

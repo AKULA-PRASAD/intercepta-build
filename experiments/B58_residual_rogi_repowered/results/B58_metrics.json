@@ -179,7 +179,7 @@
   "provenance": {
     "cliff_sim": 0.4,
     "experiment": "B58_residual_rogi_repowered",
-    "git_sha": "56eee73faa04ead71c21ff7ecbd1b92f96a9b46b",
+    "git_sha": "211b2733a138dcda27b24c7de153578a67a194fd",
     "libs": {
       "numpy": "1.26.4",
       "rdkit": "2023.09.6",
@@ -189,7 +189,7 @@
     "nn_novel": 0.4,
     "python": "3.11.14",
     "rogi": "reimplemented: 1 - integral SD(t) dt / SD(0), complete-linkage Tanimoto, binary label",
-    "timestamp_utc": "2026-07-31T12:41:17Z"
+    "timestamp_utc": "2026-07-31T12:50:46Z"
   },
   "summary": {
     "H1_rogi_mechanism": false,
