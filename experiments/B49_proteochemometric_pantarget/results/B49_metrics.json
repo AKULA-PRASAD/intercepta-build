@@ -1,0 +1,93 @@
+{
+  "provenance": {
+    "esm_model": "facebook/esm2_t30_150M_UR50D",
+    "experiment": "B49_proteochemometric_pantarget",
+    "git_sha": "fec8d947e2b1fcaa1db25a2930c81dce1cacd91c",
+    "libs": {
+      "numpy": "1.26.4",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "torch": "2.13.0",
+      "transformers": "4.50.3"
+    },
+    "max_act": 300,
+    "max_dec": 600,
+    "python": "3.11.14",
+    "seed": 42,
+    "timestamp_utc": "2026-07-31T01:12:21Z"
+  },
+  "summary": {
+    "H1_pcm_generalizes_unseen_targets": true,
+    "H2_protein_features_add_value": false,
+    "delta_pcm_minus_ligand": -0.0375,
+    "ligand_only_mean_auroc": 0.636,
+    "n_proteins": 14,
+    "n_rows": 11258,
+    "n_targets_evaluated": 15,
+    "n_targets_pcm_gt0.60": 10,
+    "pcm_mean_auroc": 0.5985,
+    "per_target": {
+      "ADRB2": {
+        "ligand_only": 0.4779,
+        "pcm": 0.3884
+      },
+      "ALDH1": {
+        "ligand_only": 0.6054,
+        "pcm": 0.5678
+      },
+      "ESR1_ago": {
+        "ligand_only": 0.6954,
+        "pcm": 0.6091
+      },
+      "ESR1_ant": {
+        "ligand_only": 0.5991,
+        "pcm": 0.52
+      },
+      "FEN1": {
+        "ligand_only": 0.7455,
+        "pcm": 0.8034
+      },
+      "GBA": {
+        "ligand_only": 0.6834,
+        "pcm": 0.6766
+      },
+      "IDH1": {
+        "ligand_only": 0.7268,
+        "pcm": 0.6857
+      },
+      "KAT2A": {
+        "ligand_only": 0.6395,
+        "pcm": 0.6125
+      },
+      "MAPK1": {
+        "ligand_only": 0.6448,
+        "pcm": 0.6208
+      },
+      "MTORC1": {
+        "ligand_only": 0.6025,
+        "pcm": 0.5775
+      },
+      "OPRK1": {
+        "ligand_only": 0.4642,
+        "pcm": 0.3561
+      },
+      "PKM2": {
+        "ligand_only": 0.6044,
+        "pcm": 0.61
+      },
+      "PPARG": {
+        "ligand_only": 0.6686,
+        "pcm": 0.6322
+      },
+      "TP53": {
+        "ligand_only": 0.6907,
+        "pcm": 0.6291
+      },
+      "VDR": {
+        "ligand_only": 0.6911,
+        "pcm": 0.6886
+      }
+    },
+    "verdict": "PCM GENERALIZES TO UNSEEN TARGETS BUT PROTEIN FEATURES ADD LITTLE: leave-protein-out mean PCM AUROC 0.5985 (10/15 unseen targets >0.60), vs ligand-only 0.636 (delta -0.0375). Protein embeddings add ~no usable target-specific signal over pooled ligand structure (literature-consistent) \u2014 cross-target generalization here is carried by ligand structure, not the protein representation. Honest first-class result. Retrospective, in-silico, 14 proteins, seq truncated to 1022; enrichment != proven activity; not wet-lab."
+  }
+}

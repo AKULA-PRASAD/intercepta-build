@@ -230,6 +230,19 @@ captures the accessible discriminative signal. It is the strongest confirmation 
 bottleneck is **information, not combination**. Retrospective, 3 targets, subsampled, heuristic docking; not wet-lab;
 no SOTA claim. First-class negative. (payload 68c5b043)
 
+## 3j. The "any disease" axis — proteochemometric pan-target generalization (B49)
+
+Every QSAR so far needs the target's own ligand data. B49 probes the universal-platform axis: can we predict activity
+for a target whose ligands were never seen, using **ligand ⊕ protein (ESM-2)** features and **leave-protein-out** CV
+across 14 proteins? Result: weak generalization *exists* (mean PCM AUROC 0.599, 10/15 unseen targets >0.60), but it is
+**carried entirely by ligand chemistry, not the protein representation** — a pooled *ligand-only* model actually scores
+higher (0.636), so the ESM-2 embedding adds no usable target-specific signal and slightly dilutes (Δ −0.038). This is
+literature-consistent (protein-language-model embeddings capture limited target-specific bioactivity) and it falsifies,
+in this setup, the "any disease *via protein features*" route: there is a general "active-like" chemical signal that
+transfers across targets, but naive PCM cannot make it target-specific. Notably B49 *uses* the low-active targets B46
+had to skip (pooling). Retrospective, in-silico, seq truncated to 1022, decoys not property-matched; not wet-lab; no
+SOTA claim. (payload 755706ee)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -269,4 +282,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover}`. Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee.

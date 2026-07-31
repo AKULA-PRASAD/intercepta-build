@@ -74,3 +74,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - Content: 15 targets, per target `actives.smi` + `inactives.smi` (SMILES + PubChem CID) + co-crystal `*_protein.mol2`/`*_ligand.mol2`
 - Access class: PUBLIC / OPEN. Never committed to git (data cache only).
 - Caveats (documented): extreme active:inactive imbalance (1:1000–1:20000); known analog leakage/redundancy across splits (arXiv:2507.21404) — handled via our NN<0.4 novel-band lens + cross-label dedup.
+
+## ESM-2 protein embeddings + UniProt sequences — B49
+- ESM-2: facebook/esm2_t30_150M_UR50D (HuggingFace, open); cached `$INTERCEPTA_DATA/hf_cache`, embeddings `$INTERCEPTA_DATA/esm_cache/`.
+- Sequences: UniProt REST `{acc}.fasta` for 14 accessions (P07550,P00352,P03372,P39748,P04062,O75874,Q92830,P28482,P42345,P41145,P14618,P37231,P04637,P11473). PUBLIC/OPEN. Cached, never committed.
