@@ -1,3 +1,85 @@
+# GOVERNING NORTH STAR (strategic correction, 2026-07-31) — read this first, every planning cycle
+
+**This section governs. The 2026-07-29 charter below is a validated but NARROW branch (cancer drug-response
+prediction); it remains true and is kept, but it is NOT the north star.** The north star is:
+
+> **A computational system capable of discovering the best therapeutic intervention for ANY disease — including
+> diseases humanity has never seen before.**
+
+Benchmark scores, AUROC, "better QSAR," another molecular-ML paper are **supporting tools only**, never the objective.
+
+**The stress test (the only one that counts).** Tomorrow a new pandemic appears: no activity dataset, no IC50 labels,
+no known inhibitors, no medchem campaigns, no training data. **Can INTERCEPTA begin producing scientifically credible
+drug candidates within hours?** If the answer is "no, we need labeled data," we are optimizing the wrong thing.
+
+**Evaluation filter for every proposed experiment/chapter:** (1) "Does this move us closer to the ZERO-DATA disease
+problem?" (2) "Would this capability still matter if the disease had never existed before?" If no → supporting work.
+
+**The 11 fundamental capabilities (think in these, not in models):** disease understanding · mechanism inference ·
+target prioritization · structure prediction when unknown · binding reasoning · molecule generation · multi-objective
+optimization · ADMET reasoning · manufacturability · experimental prioritization · continuous learning from new
+evidence. **ML is one tool inside this pipeline, never the foundation.**
+
+**Reconciliation with our hard-won evidence (why this is not backsliding).** The ceilings we proved (the +0.212 wall,
+the six-front intrinsic-ceiling proof, B54–B65) are all about *predicting from labeled molecular profiles / activity
+data*. The zero-data discovery front is **orthogonal** to those falsifications — it is label-FREE (physics / structure
+/ transferred knowledge), a front our evidence never tested. The label-dependent line (ligand-based VS, QSAR roughness,
+active learning) is now explicitly **supporting work**.
+
+**What deep research (2026-07-31) establishes as the honest shape of the solution — and its limits.**
+- "Zero-data" never means zero *knowledge*: a new pathogen's proteins usually have homologs, and the system's power is
+  **how well it TRANSFERS** known druggability, scaffolds, and reference chemistry to the unseen target
+  (Paxlovid/nirmatrelvir was homology transfer from a 2003 SARS-CoV-1 inhibitor; SARS-CoV-2 Mpro/RdRp were prioritized
+  in weeks because they were ~96% identical to SARS-CoV-1).
+- The credible label-free pipeline is **homology-anchored, physics-filtered**: sequence → fold (AlphaFold/ESMFold, gate
+  on pLDDT/PAE) → pocket/druggability (reliable zero-shot) → **transfer inhibitor scaffolds/reference ligands from the
+  nearest homolog** → structure-based generation + ultra-large docking for *pose-plausible* hits → transfer-ADMET/synth.
+- **The weakest link is binding-affinity RANKING:** no method ranks affinity credibly with zero target data (docking is
+  near-random prospectively; FEP needs a reference series). So the honest zero-data OUTPUT is *pose-plausible,
+  homology-anchored candidate hypotheses*, explicitly requiring assay confirmation — NOT potency-ranked leads.
+- **The hard failure case** (state it, never hide it): a truly novel fold with no sequence/structure homolog and no
+  reference ligand breaks target-ID, affinity-ranking, and scaffold transfer simultaneously. Advancing *this* frontier
+  (the "dark proteome" case) is the deepest version of the vision.
+- **Assets already in-house for the label-free path:** AutoDock Vina 1.2.7 + Open Babel (`docking` env), ESM-2/ESMFold
+  via transformers, real target structures (LIT-PCBA `.mol2`), and the generate/admet/synth modules.
+
+**The honest stress test we can run at zero budget:** a **target-level zero-data holdout** — take a target with a known
+answer (e.g. SARS-CoV-2 Mpro), DELETE every inhibitor/label, and measure whether the homology-anchored label-free
+pipeline recovers scientifically credible candidates from sequence alone. That is the vision's true benchmark, and it
+is cheaply evaluable.
+
+**Method mandate:** repeated deep literature review + first-principles reasoning + multiple *fundamentally different*
+solution families before coding; optimize for long-term capability, not benchmark performance. (See memory
+`north-star-zero-data-disease`.)
+
+## The development PATH is not the destination (2026-07-31 refinement)
+We cannot directly prove a system works on a disease that does not yet exist — science does not work that way. We
+build confidence **progressively**, up a ladder. Known diseases are the **PROVING GROUND, not the destination**; each
+success on a known disease increases confidence that the underlying scientific reasoning (not the memorized labels) is
+correct.
+
+**The confidence ladder:** (1) build each fundamental capability independently → (2) validate each on well-understood
+diseases with reliable ground truth → (3) demonstrate the system solves MANY diverse known diseases across different
+mechanisms/targets/classes → (4) **progressively remove information** to simulate the unknown: fewer labels → unseen
+chemistry → unseen targets → temporal splits → cold-start → (5) solve diseases with NO disease-specific activity data →
+(6) prospectively predict candidates before new experimental results are public → (7) validate experimentally where
+possible → (8) only then claim rising confidence that the SAME system can respond to a future unknown disease.
+
+This re-values the "information-removal" experiments as **rungs, not detours**: label-efficiency under scarcity (B65),
+temporal/prospective splits, unseen-chemistry (NN<0.4), unseen-target holdouts are all steps 4–6 of the ladder — the
+supporting-work label applies only to work that does NOT ladder toward the zero-data goal.
+
+## The standard every major experiment must meet (answer before starting)
+1. Which capability of the ultimate system does this improve? 2. Does it generalize beyond today's benchmark? 3. Will
+it still matter for a disease humanity has never seen? 4. If it succeeds, does it increase confidence INTERCEPTA could
+respond to a future pandemic faster/better than today's approaches? 5. If it fails, what fundamental assumption about
+the system does it eliminate? — Choose experiments that strengthen the COMPLETE discovery system, not just one model.
+**Long-term success = INTERCEPTA repeatedly takes a disease it was never trained on, reasons from first principles +
+all computational evidence, generates scientifically credible candidates, and has them independently validated.** That
+is the only metric that ultimately matters.
+
+---
+
 # INTERCEPTA — the fullest vision that is real (reconstructed 2026-07-29)
 
 This replaces the original founding vision as the working charter. The original is not deleted — it is
