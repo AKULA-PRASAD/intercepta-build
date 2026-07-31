@@ -1,0 +1,235 @@
+{
+  "per_target": {
+    "CHEMBL1862_Ki": {
+      "cliff_fraction": 0.4156,
+      "n": 794,
+      "novel_generalization": 0.3875,
+      "potency_std": 1.505,
+      "random_generalization": 0.8541,
+      "rogi": 0.1188
+    },
+    "CHEMBL1871_Ki": {
+      "n": 659,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL2034_Ki": {
+      "n": 750,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL2047_EC50": {
+      "n": 631,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL204_Ki": {
+      "cliff_fraction": 0.3972,
+      "n": 2754,
+      "novel_generalization": -0.0546,
+      "potency_std": 1.5088,
+      "random_generalization": 0.8528,
+      "rogi": 0.1696
+    },
+    "CHEMBL2147_Ki": {
+      "cliff_fraction": 0.3929,
+      "n": 1456,
+      "novel_generalization": 0.3233,
+      "potency_std": 1.9557,
+      "random_generalization": 0.9052,
+      "rogi": 0.1013
+    },
+    "CHEMBL214_Ki": {
+      "cliff_fraction": 0.3684,
+      "n": 3317,
+      "novel_generalization": 0.2611,
+      "potency_std": 1.1387,
+      "random_generalization": 0.7633,
+      "rogi": 0.1815
+    },
+    "CHEMBL218_EC50": {
+      "cliff_fraction": 0.3579,
+      "n": 1031,
+      "novel_generalization": 0.3221,
+      "potency_std": 1.0508,
+      "random_generalization": 0.7122,
+      "rogi": 0.1866
+    },
+    "CHEMBL219_Ki": {
+      "cliff_fraction": 0.3968,
+      "n": 1865,
+      "novel_generalization": 0.4286,
+      "potency_std": 1.0654,
+      "random_generalization": 0.7063,
+      "rogi": 0.1963
+    },
+    "CHEMBL228_Ki": {
+      "cliff_fraction": 0.3744,
+      "n": 1704,
+      "novel_generalization": 0.3963,
+      "potency_std": 1.2122,
+      "random_generalization": 0.7805,
+      "rogi": 0.1724
+    },
+    "CHEMBL231_Ki": {
+      "cliff_fraction": 0.2436,
+      "n": 973,
+      "novel_generalization": 0.3528,
+      "potency_std": 1.2547,
+      "random_generalization": 0.8186,
+      "rogi": 0.1407
+    },
+    "CHEMBL233_Ki": {
+      "cliff_fraction": 0.4118,
+      "n": 3142,
+      "novel_generalization": 0.2791,
+      "potency_std": 1.2923,
+      "random_generalization": 0.7938,
+      "rogi": 0.1785
+    },
+    "CHEMBL234_Ki": {
+      "cliff_fraction": 0.4386,
+      "n": 3657,
+      "novel_generalization": 0.2289,
+      "potency_std": 1.1781,
+      "random_generalization": 0.8111,
+      "rogi": 0.1653
+    },
+    "CHEMBL235_EC50": {
+      "cliff_fraction": 0.3768,
+      "n": 2349,
+      "novel_generalization": -0.0195,
+      "potency_std": 1.094,
+      "random_generalization": 0.7726,
+      "rogi": 0.2019
+    },
+    "CHEMBL236_Ki": {
+      "n": 2598,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL237_EC50": {
+      "n": 955,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL237_Ki": {
+      "cliff_fraction": 0.4264,
+      "n": 2603,
+      "novel_generalization": 0.0997,
+      "potency_std": 1.3294,
+      "random_generalization": 0.8265,
+      "rogi": 0.1938
+    },
+    "CHEMBL238_Ki": {
+      "cliff_fraction": 0.2529,
+      "n": 1052,
+      "novel_generalization": 0.3314,
+      "potency_std": 1.0906,
+      "random_generalization": 0.7796,
+      "rogi": 0.1494
+    },
+    "CHEMBL239_EC50": {
+      "cliff_fraction": 0.4062,
+      "n": 1721,
+      "novel_generalization": 0.0868,
+      "potency_std": 1.0913,
+      "random_generalization": 0.7404,
+      "rogi": 0.2274
+    },
+    "CHEMBL244_Ki": {
+      "n": 3097,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL262_Ki": {
+      "cliff_fraction": 0.1869,
+      "n": 856,
+      "novel_generalization": 0.2563,
+      "potency_std": 1.0632,
+      "random_generalization": 0.6595,
+      "rogi": 0.1778
+    },
+    "CHEMBL264_Ki": {
+      "cliff_fraction": 0.4161,
+      "n": 2862,
+      "novel_generalization": 0.1472,
+      "potency_std": 1.1036,
+      "random_generalization": 0.78,
+      "rogi": 0.1937
+    },
+    "CHEMBL2835_Ki": {
+      "n": 615,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL287_Ki": {
+      "cliff_fraction": 0.3818,
+      "n": 1328,
+      "novel_generalization": 0.4534,
+      "potency_std": 1.0866,
+      "random_generalization": 0.7133,
+      "rogi": 0.201
+    },
+    "CHEMBL2971_Ki": {
+      "cliff_fraction": 0.166,
+      "n": 976,
+      "novel_generalization": 0.3161,
+      "potency_std": 1.4481,
+      "random_generalization": 0.885,
+      "rogi": 0.0862
+    },
+    "CHEMBL3979_EC50": {
+      "n": 1125,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL4005_Ki": {
+      "n": 960,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL4203_Ki": {
+      "cliff_fraction": 0.0876,
+      "n": 731,
+      "novel_generalization": 0.484,
+      "potency_std": 1.0204,
+      "random_generalization": 0.6353,
+      "rogi": 0.1455
+    },
+    "CHEMBL4616_EC50": {
+      "n": 682,
+      "note": "insufficient novel-chemistry test compounds"
+    },
+    "CHEMBL4792_Ki": {
+      "n": 1471,
+      "note": "insufficient novel-chemistry test compounds"
+    }
+  },
+  "provenance": {
+    "data": "MoleculeACE 30 ChEMBL targets",
+    "experiment": "B60_continuous_potency_roughness",
+    "git_sha": "2705e1fc0b36f86fed288df3fbe90abb02a24e19",
+    "libs": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3"
+    },
+    "nn_novel": 0.4,
+    "python": "3.11.14",
+    "rogi_n": 500,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "timestamp_utc": "2026-07-31T13:03:04Z"
+  },
+  "summary": {
+    "B58_binary_reference_spearman": -0.42,
+    "H1_rogi_predicts_novel_generalization": false,
+    "H2_roughness_matters_more_for_extrapolation": false,
+    "mean_novel_generalization": 0.2674,
+    "mean_random_generalization": 0.7784,
+    "n_targets": 19,
+    "p_novel": 0.1655,
+    "p_random": 0.0138,
+    "spearman_cliff_fraction_vs_novel_gen": -0.4105,
+    "spearman_rogi_vs_novel_generalization": -0.3316,
+    "spearman_rogi_vs_random_generalization": -0.5544,
+    "verdict": "ROUGHNESS ONLY WEAKLY PREDICTS NOVEL-CHEMISTRY GENERALIZATION even with continuous potency + n=19 (honest): ROGI vs novel-gen Spearman -0.332 (p=0.1655; pre-registered <=-0.5 not met), vs random-split -0.554. So P7 is GENUINELY WEAK/MULTIFACTORIAL even with the proper instrument \u2014 binary labels (B58 -0.42) were not the main limitation. Landscape roughness is a real but partial driver of ligand-based model generalization; other factors dominate. Strong first-class null; n=19; not wet-lab."
+  }
+}

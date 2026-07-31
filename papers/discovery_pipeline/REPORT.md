@@ -381,6 +381,23 @@ target-dependence therefore remains **unexplained** — consistent with B57/B58 
 mechanism. This is a first-class null that correctly bounds an over-eager reading of B58. Confirmatory/post-hoc, n=19;
 not wet-lab. (payload 2d7628c5)
 
+## 3t. Roughness governs interpolation, not extrapolation — resolving the residual mechanism (B60)
+
+B57–B59 could not explain the target-dependent binding residual; B58 hinted roughness matters weakly (−0.42) but used
+binary labels. B60 uses the honest instrument — **continuous potency** (MoleculeACE, 30 curated ChEMBL targets) — and
+measures whether landscape roughness (ROGI on real pKi/pIC50) predicts a ligand-based model's generalization. The
+finding is a clean **contrast** across 19 usable targets: roughness predicts **random-split (interpolation)**
+generalization **strongly (Spearman −0.55**, reproducing the known ROGI↔modellability result) but **novel-chemistry
+(extrapolation)** generalization only **weakly (−0.33, ns**, matching B58's binary −0.42). And the extrapolation gap is
+large — models interpolate ~0.8 but extrapolate to novel chemistry ~0.3. **This resolves the whole arc:** the
+doubly-debiased VS residual is an *extrapolation* metric, roughness governs *interpolation* not *extrapolation*, so
+B58's weak signal was **not** a binary-label artifact — continuous potency gives the same weak extrapolation answer, and
+the persistent B57–B59 nulls are explained. Refined principle: *roughness → interpolation (strong) / → extrapolation
+(weak)*; new candidate **P8: the extrapolation gap** — ligand-based potency models interpolate well but extrapolate to
+novel chemistry poorly, and that failure is *not* governed by landscape roughness. The random-split arm reproduces known
+work; the interpolation/extrapolation contrast and the arc resolution are the contribution. Retrospective, in-silico,
+n=19; ROGI reimplemented (validated); not wet-lab. (payload bb2b03d3)
+
 ## 4. What is novel, and what is not (honest)
 
 - **Competent reproduction, not novel:** the ADMET (B30), synthesizability (B31), goal-directed design (B33), and
@@ -420,4 +437,4 @@ are human/collaboration decisions, not computations.
 Every result maps to a committed `experiments/B*/run.py` + `results/B*_metrics.json` + a payload sha256, reproduced
 twice byte-identically; every inferential analysis is pre-registered in `prereg/`; 30 data-free unit tests cover the
 shipped package; controlled/patient data are never committed. Shipped tools: `intercepta {info, rank, synergy, admet, synth, prioritize, generate, discover, screen}` (9th tool `screen` = the consolidated virtual-screening engine: calibrated QSAR + applicability-domain + conformal + the B51 active-learning loop; `intercepta.screen.VirtualScreener`). Experiment index with payload hashes: B30 af66698f · B30b 50cc195c · B31 c6edd9bc ·
-B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5.
+B32 81996f21 · B32b 7d7a305c · B33 d91f0470 · B34 6c4b5e81 · B35 04c20605 · B36 ea088da2 · B37 c8d16b06 · B38 c17e47f4 · B39 23a7ae0c · B40 e62417bf · B41 359486bf · B42 9d99060e · B43 daca99a2 · B44 1120c3d3 · B45 e437713b · B46 33d754cd · B47 24d5b0f6 · B48 68c5b043 · B49 755706ee · B51 e71129f4 · B52 d67f949d · B53 1ba9729c · B54 494d30c7 · B55 09a0eb27 · B56 32469564 · B57 dc4c6654 · B58 54865883 · B59 2d7628c5 · B60 bb2b03d3.

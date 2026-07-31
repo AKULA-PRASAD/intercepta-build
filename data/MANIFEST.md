@@ -86,3 +86,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## DUD-E (Directory of Useful Decoys, Enhanced) — B55
 - Source: https://dude.docking.org (Mysinger et al., J. Med. Chem. 2012). 8 targets (egfr,vgfr2,akt1,aa2ar,fa10,hivpr,ppara,gcr): actives_final.ism + decoys_final.ism.
 - ChEMBL actives + property-matched (topology-dissimilar) ZINC decoys, 50/active. Cached `$INTERCEPTA_DATA/dude/` (~19 MB). PUBLIC/OPEN; never committed.
+
+## MoleculeACE (continuous-potency ChEMBL benchmark) — B60
+- Source: https://github.com/molML/MoleculeACE (van Tilborg et al., JCIM 2022; ChEMBL v29). 30 targets, continuous potency (pKi/pIC50/pEC50) + activity-cliff flags.
+- Files: CHEMBL{id}_{Ki,IC50,EC50}.csv (cols: smiles, exp_mean[nM], y, cliff_mol, split, y[pEC50/pKi]). Cached `$INTERCEPTA_DATA/moleculeace/` (~5.1 MB). PUBLIC/OPEN; never committed.
