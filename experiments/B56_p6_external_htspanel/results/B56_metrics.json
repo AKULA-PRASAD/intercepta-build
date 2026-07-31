@@ -1,0 +1,125 @@
+{
+  "per_target": {
+    "hiv": {
+      "analog_effect": 0.1964,
+      "cells": {
+        "A0B0": 0.7448,
+        "A0B1": 0.5428,
+        "A1B0": 0.7592,
+        "A1B1": 0.5685
+      },
+      "decoy_effect": -0.0201,
+      "interaction": 0.0113,
+      "irreducible_A1B1": 0.5685,
+      "n_actives": 400
+    },
+    "m1_muscarinic_receptor_antagonists_butkiewicz": {
+      "analog_effect": 0.1218,
+      "cells": {
+        "A0B0": 0.8221,
+        "A0B1": 0.6943,
+        "A1B0": 0.7648,
+        "A1B1": 0.6491
+      },
+      "decoy_effect": 0.0513,
+      "interaction": 0.0121,
+      "irreducible_A1B1": 0.6491,
+      "n_actives": 362
+    },
+    "orexin1_receptor_butkiewicz": {
+      "analog_effect": 0.0688,
+      "cells": {
+        "A0B0": 0.7975,
+        "A0B1": 0.7315,
+        "A1B0": 0.7148,
+        "A1B1": 0.6431
+      },
+      "decoy_effect": 0.0856,
+      "interaction": -0.0057,
+      "irreducible_A1B1": 0.6431,
+      "n_actives": 233
+    },
+    "potassium_ion_channel_kir2.1_butkiewicz": {
+      "analog_effect": 0.0402,
+      "cells": {
+        "A0B0": 0.8445,
+        "A0B1": 0.8078,
+        "A1B0": 0.7939,
+        "A1B1": 0.7502
+      },
+      "decoy_effect": 0.0541,
+      "interaction": -0.007,
+      "irreducible_A1B1": 0.7502,
+      "n_actives": 172
+    },
+    "sarscov2_3clpro_diamond": {
+      "n_actives": 78,
+      "note": "insufficient novel-chemistry test actives"
+    },
+    "serine_threonine_kinase_33_butkiewicz": {
+      "analog_effect": 0.0723,
+      "cells": {
+        "A0B0": 0.9235,
+        "A0B1": 0.8578,
+        "A1B0": 0.852,
+        "A1B1": 0.773
+      },
+      "decoy_effect": 0.0781,
+      "interaction": -0.0133,
+      "irreducible_A1B1": 0.773,
+      "n_actives": 172
+    }
+  },
+  "provenance": {
+    "experiment": "B56_p6_external_htspanel",
+    "git_sha": "3439d717665121854b12dee405676b3e1b829bee",
+    "libs": {
+      "numpy": "1.26.4",
+      "rdkit": "2023.09.6",
+      "scikit-learn": "1.8.0"
+    },
+    "max_act": 400,
+    "nn_novel": 0.4,
+    "pool_cap": 8000,
+    "python": "3.11.14",
+    "ratio": 3,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "targets": [
+      "hiv",
+      "m1_muscarinic_receptor_antagonists_butkiewicz",
+      "orexin1_receptor_butkiewicz",
+      "potassium_ion_channel_kir2.1_butkiewicz",
+      "serine_threonine_kinase_33_butkiewicz",
+      "sarscov2_3clpro_diamond"
+    ],
+    "timestamp_utc": "2026-07-31T11:44:00Z"
+  },
+  "summary": {
+    "B54_reference": {
+      "analog": 0.087,
+      "decoy": 0.075,
+      "interaction": -0.019,
+      "irreducible": 0.628
+    },
+    "H1_P6_replicates_independent": true,
+    "H2_P6_fails": false,
+    "analog_bias_effect": 0.0999,
+    "decoy_bias_effect": 0.0498,
+    "interaction": -0.0005,
+    "irreducible_A1B1": 0.6768,
+    "n_targets": 5,
+    "panel_cells": {
+      "A0B0": 0.8265,
+      "A0B1": 0.7268,
+      "A1B0": 0.7769,
+      "A1B1": 0.6768
+    },
+    "verdict": "P6 REPLICATES on a different HTS curation/target set \u2014 biases INDEPENDENT/ADDITIVE: interaction -0.0005 (|.|<0.03; B54 -0.019). Decoy-effect +0.0498 (B54 +0.075), analog-effect +0.0999 (B54 +0.087). Panel standard 0.8265 -> doubly-controlled 0.6768. P6 graduates toward a SCIENTIFIC PRINCIPLE: analog and physicochemical/decoy biases are separate additive inflation sources across LIT-PCBA AND the TDC/Butkiewicz HTS panel; honest evaluation needs BOTH controls. PARTIAL external replication (different curation/targets, both PubChem-HTS); 5 targets, in-silico; not wet-lab."
+  }
+}
