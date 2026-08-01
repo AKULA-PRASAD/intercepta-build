@@ -1,0 +1,80 @@
+{
+  "per_organism": {
+    "ecoli": {
+      "auroc_combined_model": 0.7353,
+      "auroc_cons_model": 0.7309,
+      "auroc_cons_null": 0.7309,
+      "auroc_length_null": 0.6437,
+      "auroc_structural_alone": 0.5732,
+      "delta_auroc_combined_minus_cons": 0.0044,
+      "n": 582,
+      "n_targets": 182,
+      "precAtk_cons_null": 0.533,
+      "precAtk_structural": 0.3626
+    },
+    "mtb": {
+      "auroc_combined_model": 0.7391,
+      "auroc_cons_model": 0.7274,
+      "auroc_cons_null": 0.7274,
+      "auroc_length_null": 0.6268,
+      "auroc_structural_alone": 0.5402,
+      "delta_auroc_combined_minus_cons": 0.0117,
+      "n": 531,
+      "n_targets": 131,
+      "precAtk_cons_null": 0.4733,
+      "precAtk_structural": 0.2748
+    },
+    "paeruginosa": {
+      "auroc_combined_model": 0.6895,
+      "auroc_cons_model": 0.6966,
+      "auroc_cons_null": 0.6966,
+      "auroc_length_null": 0.6632,
+      "auroc_structural_alone": 0.5168,
+      "delta_auroc_combined_minus_cons": -0.0071,
+      "n": 446,
+      "n_targets": 46,
+      "precAtk_cons_null": 0.2826,
+      "precAtk_structural": 0.1087
+    },
+    "pfalciparum": {
+      "auroc_combined_model": 0.7606,
+      "auroc_cons_model": 0.7544,
+      "auroc_cons_null": 0.7544,
+      "auroc_length_null": 0.5341,
+      "auroc_structural_alone": 0.5456,
+      "delta_auroc_combined_minus_cons": 0.0062,
+      "n": 452,
+      "n_targets": 52,
+      "precAtk_cons_null": 0.4423,
+      "precAtk_structural": 0.1923
+    }
+  },
+  "provenance": {
+    "afdb": "v6",
+    "fpocket": "4.2.3",
+    "git_sha": "2f73518d24d397d0d84594495832e6b44791f302",
+    "utc": "2026-08-01T03:22:27Z"
+  },
+  "runtime_sec": 8.9,
+  "summary": {
+    "H1_structural_beats_conservation_null": false,
+    "H2_adds_meaningfully_beyond_conservation": false,
+    "median_auroc_cons_null": 0.7291,
+    "median_auroc_structural_alone": 0.5429,
+    "median_delta_auroc_combined_minus_cons": 0.0053,
+    "median_precAtk_cons_null": 0.4578,
+    "median_precAtk_structural": 0.2335,
+    "n_eval": 2011,
+    "n_organisms_delta_positive": 3,
+    "n_targets_total": 411,
+    "panel": [
+      "mtb",
+      "ecoli",
+      "paeruginosa",
+      "pfalciparum"
+    ],
+    "pooled_logit_coef_conservation": 0.6997,
+    "pooled_logit_coef_structural": 0.0659,
+    "verdict": "H2 FALSE / MARGINAL (first-class boundary): intrinsic pocket druggability does NOT add MEANINGFULLY beyond conservation \u2014 structural ALONE AUROC 0.5429 is near-random and far below the conservation null 0.7291 (precision@k 0.2335 vs 0.4578); after partialling out conservation it adds only a whisper (held-out \u0394AUROC +0.005, 3/4 orgs positive, partial coef +0.066 vs conservation +0.700). fpocket's low specificity makes it a poor target discriminator here. BOUNDS structural target-ID at ~the conservation ceiling \u2192 forces mechanistic signals (essentiality/chokepoint) or accepting a homology+structure ceiling. Consistent with Thread-1's caution that fpocket calls too much of the proteome druggable."
+  }
+}

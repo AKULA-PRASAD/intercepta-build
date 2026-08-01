@@ -100,3 +100,10 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - Drug-target lists `$INTERCEPTA_DATA/tid1/targets/*_chembl.txt`: mtb aff79bed1c4c (131), ecoli 374f2e126cb8 (182),
   paeruginosa c431976f41a8 (46 in-proteome), pfalciparum 08f14b5d4fc2 (52), human b770a6d2c6e0, sarscov2 fb5a841fee13.
 - PUBLIC/OPEN (UniProt CC-BY 4.0); cached (~26 MB), never committed. Essentiality (OGEE/DEG) deferred — endpoints unreachable 2026-07-31.
+
+## AlphaFold DB v6 structures + fpocket druggability (TID2 — structural target-ID)
+- Source: AlphaFold DB v6 per-accession models (https://alphafold.ebi.ac.uk/files/AF-{ACC}-F1-model_v6.pdb), fetched 2026-07-31.
+- `$INTERCEPTA_DATA/tid2/structures/` = 1990 PDBs (497M) for the TID2 eval set (411 ChEMBL targets + seeded ~400 non-targets/org).
+- `$INTERCEPTA_DATA/tid2/druggability.tsv` (sha256 aab3c3f3cbd4, 2011 rows: accession, organism, is_target, max_druggability, n_pockets, has_structure)
+  = fpocket 4.2.3 max Druggability Score per protein (deterministic intermediate; regenerable via experiments/TID2_.../build_druggability_cache.py).
+- PUBLIC/OPEN (AlphaFold DB CC-BY 4.0); never committed.
