@@ -78,6 +78,55 @@ the system does it eliminate? — Choose experiments that strengthen the COMPLET
 all computational evidence, generates scientifically credible candidates, and has them independently validated.** That
 is the only metric that ultimately matters.
 
+## Enduring intent (recovered from the founding docs) vs disposable architecture
+The destination has been CONSTANT since the founding Universal Net Spec (2026-03-29): *"a universal computational engine
+that, for ANY disease — past, present, or future — discovers novel drug molecules… The key word is ANY. This includes
+diseases that do not yet exist."* The enduring PRINCIPLES (permanent): (1) **universality via extensibility** — Charter
+law **U2: "no disease-specific code paths in the core engine; all disease-awareness through configuration"**; the system
+must *compose many evidence types and absorb new capabilities/methods that do not exist yet* ("any disease becomes a
+query against the net"; "we develop novel approaches when the vision demands it"); (2) **abstention as a first-class
+output** — refuse/flag when the input is unlike anything known (epistemic vs aleatoric vs OOD); (3) **selectivity/safety
+as a design constraint, not a final filter**; (4) **validation-first / self-improving** — reproduce known ground truth
+before trusting novelty; every disease solved adds reusable knowledge; (5) the **Constitution** (truth over vision;
+disposable everything-but-the-destination); (6) **CONTINUOUS KNOWLEDGE ABSORPTION — the system is LIVING, not a snapshot
+(2026-07-31, Prasad).** It is not built *around* current knowledge; it is built to continuously absorb, on two
+timescales: (a) EXTERNAL/FUTURE science — new databases, evidence types, and methods that do not exist yet plug in over
+time; (b) SELF-GENERATED findings WHILE WORKING — every result it produces (predicted target, docking outcome, validated
+hit, or NEGATIVE) becomes new evidence that improves both the current problem and every future one ("the net grows with
+every query"). **GUARDRAIL (non-negotiable, or the self-improving loop becomes a self-deception loop):** all absorbed
+knowledge is **provenance- and confidence-TIERED** — external-validated fact ≠ own-hypothesis ≠ own-reproduced-×2 result;
+self-generated / low-tier records are QUARANTINED and down-weighted until they survive the falsification battery, never
+treated as ground truth. Continuous absorption + falsify-first are the two halves that keep it honest (guards against the
+curation-circularity + degree/popularity error-amplification the research flagged). DISPOSABLE (never defend): the 15-layer Neo4j Net, the 6 scouts, KAALCURA,
+the RNA-velocity time-machine, the two-population ODE, cancer-first scoping — **and equally the current label-free /
+homology / docking pipeline.** Docking, physics, ML, generative chemistry, knowledge graphs are candidate CAPABILITIES,
+not the architecture.
+
+## Capability map (2026-07-31) — what a universal any-disease system needs, and our HONEST status
+Think in capabilities, held architecture-agnostically. Status: ✅ validated corner · ◑ partial · ✗ absent.
+- **Foundational/cross-cutting:** extensible evidence substrate ("any disease → a query", U2) ✗ · uncertainty/abstention
+  /applicability-domain ◑ (conformal+AD validated B30b) · continuous learning / evidence integration ✗ · **validation-
+  first proving-ground methodology ✅ (our strongest asset: Constitution + prereg + reproduce×2 + information-removal ladder).**
+- **Front half (disease → target) — the biggest gap:** disease understanding ✗ · mechanism inference ✗ · target
+  identification + essentiality + selectivity ◑ (B34 genetic-evidence target-ID, not zero-data/homology yet).
+- **Structure & binding:** structure-from-sequence when unknown ✗ (assets present, unused) · binding/interaction
+  reasoning ◑ (C1: weak-but-real zero-data docking signal on Mpro).
+- **Back half (target → candidate):** molecule generation ◑ (B33 optimization over known chemistry, not de novo) ·
+  combination/synergy ✅ (generalizes to unseen combos of known drugs, 2 corpora) · multi-objective optimization ◑ ·
+  ADMET/safety ✅ (B30, disease-agnostic → survives zero-data) · synthesizability ✅ (B31, disease-agnostic) ·
+  experimental prioritization / active learning ◑ (B51; B65 bounded — acquisition *strategy* is not the lever).
+- **Meta:** architecture extensibility (absorb capabilities/methods not yet invented) ✗ — a design principle to bake in.
+
+**Recalibration verdict:** we have built strong BACK-HALF capabilities (score/generate a molecule against a GIVEN
+target) and world-class *validation methodology*, but the vision's hardest and most-missing part — the **FRONT HALF
+(disease → mechanism → target)** and the **extensible substrate** that makes "any disease becomes a query" real and lets
+new capabilities plug in — is largely absent. That gap, not another molecule-scoring module, is where the leverage is.
+Held loosely: the *principle* (extensible multi-evidence front-half reasoning) is enduring; its *implementation* (KG vs
+retrieval-augmented reasoning vs tool-composition vs something new) is entirely open and to be chosen by evidence. The
+substrate must be **LIVING** — append-only, provenance- and confidence-tiered — so both external/future science and the
+system's OWN findings-while-working are continuously absorbed (principle 6), without ever letting unvalidated
+self-generated records masquerade as ground truth.
+
 ---
 
 # INTERCEPTA — the fullest vision that is real (reconstructed 2026-07-29)

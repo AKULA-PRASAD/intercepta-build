@@ -90,3 +90,13 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## MoleculeACE (continuous-potency ChEMBL benchmark) — B60
 - Source: https://github.com/molML/MoleculeACE (van Tilborg et al., JCIM 2022; ChEMBL v29). 30 targets, continuous potency (pKi/pIC50/pEC50) + activity-cliff flags.
 - Files: CHEMBL{id}_{Ki,IC50,EC50}.csv (cols: smiles, exp_mean[nM], y, cliff_mol, split, y[pEC50/pKi]). Cached `$INTERCEPTA_DATA/moleculeace/` (~5.1 MB). PUBLIC/OPEN; never committed.
+
+## UniProt proteomes + ChEMBL-xref drug targets (TID1 — front-half target-ID)
+- Source: UniProt REST (https://rest.uniprot.org), 2026-07-31. Full reference proteomes (FASTA) + per-organism drug-target
+  accession lists (UniProt entries carrying a ChEMBL cross-reference).
+- Panel proteomes `$INTERCEPTA_DATA/tid1/proteomes/`: mtb 8133534fc2c1 (3997 prot), ecoli edc6d75adaef (4403),
+  paeruginosa 4a4590a3d029 (5563), pfalciparum 3f28eb812794 (5361), sarscov2 ce74ba3a605d (17),
+  human(reviewed) d624e83ef467 (20431).
+- Drug-target lists `$INTERCEPTA_DATA/tid1/targets/*_chembl.txt`: mtb aff79bed1c4c (131), ecoli 374f2e126cb8 (182),
+  paeruginosa c431976f41a8 (46 in-proteome), pfalciparum 08f14b5d4fc2 (52), human b770a6d2c6e0, sarscov2 fb5a841fee13.
+- PUBLIC/OPEN (UniProt CC-BY 4.0); cached (~26 MB), never committed. Essentiality (OGEE/DEG) deferred — endpoints unreachable 2026-07-31.

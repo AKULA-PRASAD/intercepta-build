@@ -1,0 +1,637 @@
+{
+  "per_organism": {
+    "ecoli": {
+      "abstain_rate": 0.9257,
+      "auroc_armA_druggability": 0.6066,
+      "auroc_armB_human_subtracted": 0.5531,
+      "auroc_conservation_null": 0.7275,
+      "auroc_human_only_null": 0.5759,
+      "auroc_length_null": 0.6347,
+      "auroc_random_null": 0.5384,
+      "n_proteins": 4403,
+      "n_targets": 182,
+      "precAtk_armA": 0.2308,
+      "precAtk_armB": 0.2363,
+      "precAtk_conservation_null": 0.1429,
+      "target_rate_abstained": 0.0326,
+      "target_rate_predicted": 0.1498
+    },
+    "mtb": {
+      "abstain_rate": 0.9147,
+      "auroc_armA_druggability": 0.6543,
+      "auroc_armB_human_subtracted": 0.5221,
+      "auroc_conservation_null": 0.7137,
+      "auroc_human_only_null": 0.6384,
+      "auroc_length_null": 0.6419,
+      "auroc_random_null": 0.5397,
+      "n_proteins": 3997,
+      "n_targets": 131,
+      "precAtk_armA": 0.2366,
+      "precAtk_armB": 0.1985,
+      "precAtk_conservation_null": 0.0992,
+      "target_rate_abstained": 0.0224,
+      "target_rate_predicted": 0.1437
+    },
+    "paeruginosa": {
+      "abstain_rate": 0.8857,
+      "auroc_armA_druggability": 0.6991,
+      "auroc_armB_human_subtracted": 0.6846,
+      "auroc_conservation_null": 0.6829,
+      "auroc_human_only_null": 0.5624,
+      "auroc_length_null": 0.6486,
+      "auroc_random_null": 0.486,
+      "n_proteins": 5563,
+      "n_targets": 46,
+      "precAtk_armA": 0.1522,
+      "precAtk_armB": 0.1739,
+      "precAtk_conservation_null": 0.087,
+      "target_rate_abstained": 0.0049,
+      "target_rate_predicted": 0.0346
+    },
+    "pfalciparum": {
+      "abstain_rate": 0.964,
+      "auroc_armA_druggability": 0.6279,
+      "auroc_armB_human_subtracted": 0.2241,
+      "auroc_conservation_null": 0.756,
+      "auroc_human_only_null": 0.8078,
+      "auroc_length_null": 0.5068,
+      "auroc_random_null": 0.547,
+      "n_proteins": 5361,
+      "n_targets": 52,
+      "precAtk_armA": 0.0769,
+      "precAtk_armB": 0.0385,
+      "precAtk_conservation_null": 0.0769,
+      "target_rate_abstained": 0.0072,
+      "target_rate_predicted": 0.0777
+    }
+  },
+  "provenance": {
+    "evalue": 0.001,
+    "git_sha": "c82c86add1217c7c80489df2f84b51dee87e5f87",
+    "mmseqs": "18",
+    "utc": "2026-07-31T19:28:52Z"
+  },
+  "runtime_sec": 145.6,
+  "substrate_records_sample": [
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1096.0,
+      "human_homology_bits": 192.0,
+      "is_known_target": true,
+      "organism": "mtb",
+      "protein": "P9WGY9"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1074.0,
+      "human_homology_bits": 192.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WGY7"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 744.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WGP5"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 718.0,
+      "human_homology_bits": 92.0,
+      "is_known_target": true,
+      "organism": "mtb",
+      "protein": "P9WG47"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 706.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WNT7"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 597.0,
+      "human_homology_bits": 473.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WPE7"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 565.0,
+      "human_homology_bits": 110.0,
+      "is_known_target": true,
+      "organism": "mtb",
+      "protein": "P9WG45"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 554.0,
+      "human_homology_bits": 359.0,
+      "is_known_target": true,
+      "organism": "mtb",
+      "protein": "P9WFV1"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 524.0,
+      "human_homology_bits": 504.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WGV3"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 522.0,
+      "human_homology_bits": 492.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WPK1"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 518.0,
+      "human_homology_bits": 393.0,
+      "is_known_target": true,
+      "organism": "mtb",
+      "protein": "P9WFW3"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 502.0,
+      "human_homology_bits": 405.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WPE9"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 500.0,
+      "human_homology_bits": 322.0,
+      "is_known_target": true,
+      "organism": "mtb",
+      "protein": "P9WKI7"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 498.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WN39"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 488.0,
+      "human_homology_bits": 218.0,
+      "is_known_target": false,
+      "organism": "mtb",
+      "protein": "P9WNU5"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1438.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": true,
+      "organism": "ecoli",
+      "protein": "P31224"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1339.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "ecoli",
+      "protein": "P24181"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1251.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "ecoli",
+      "protein": "P24177"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1236.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "ecoli",
+      "protein": "P37637"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1149.0,
+      "human_homology_bits": 80.0,
+      "is_known_target": true,
+      "organism": "ecoli",
+      "protein": "P0AES4"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1134.0,
+      "human_homology_bits": 134.0,
+      "is_known_target": true,
+      "organism": "ecoli",
+      "protein": "P0AES6"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1106.0,
+      "human_homology_bits": 132.0,
+      "is_known_target": true,
+      "organism": "ecoli",
+      "protein": "P0A8V2"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1076.0,
+      "human_homology_bits": 189.0,
+      "is_known_target": false,
+      "organism": "ecoli",
+      "protein": "P39452"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1023.0,
+      "human_homology_bits": 68.0,
+      "is_known_target": true,
+      "organism": "ecoli",
+      "protein": "P0AFI2"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 968.0,
+      "human_homology_bits": 129.0,
+      "is_known_target": true,
+      "organism": "ecoli",
+      "protein": "P20083"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 712.0,
+      "human_homology_bits": 219.0,
+      "is_known_target": false,
+      "organism": "ecoli",
+      "protein": "P63284"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 686.0,
+      "human_homology_bits": 426.0,
+      "is_known_target": false,
+      "organism": "ecoli",
+      "protein": "P24182"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 635.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": true,
+      "organism": "ecoli",
+      "protein": "P02918"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 630.0,
+      "human_homology_bits": 304.0,
+      "is_known_target": true,
+      "organism": "ecoli",
+      "protein": "P0ADG7"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 573.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "ecoli",
+      "protein": "P0ACB0"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 2137.0,
+      "human_homology_bits": 220.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q9HWC9"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 2021.0,
+      "human_homology_bits": 122.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q51561"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1435.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": true,
+      "organism": "paeruginosa",
+      "protein": "P52002"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1354.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q9HXZ1"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1204.0,
+      "human_homology_bits": 156.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q9HZJ5"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1153.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q9LCT3"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1151.0,
+      "human_homology_bits": 75.0,
+      "is_known_target": true,
+      "organism": "paeruginosa",
+      "protein": "P48372"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1140.0,
+      "human_homology_bits": 135.0,
+      "is_known_target": true,
+      "organism": "paeruginosa",
+      "protein": "Q9I7C2"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1123.0,
+      "human_homology_bits": 229.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q9HT80"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1119.0,
+      "human_homology_bits": 562.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q9HVM4"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1050.0,
+      "human_homology_bits": 565.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q9HX33"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1026.0,
+      "human_homology_bits": 66.0,
+      "is_known_target": true,
+      "organism": "paeruginosa",
+      "protein": "Q9HUK1"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 1012.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "G3XCW2"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 980.0,
+      "human_homology_bits": 139.0,
+      "is_known_target": true,
+      "organism": "paeruginosa",
+      "protein": "Q9HUJ8"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 975.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "paeruginosa",
+      "protein": "Q9HVI9"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 612.0,
+      "human_homology_bits": 174.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IB03"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 546.0,
+      "human_homology_bits": 568.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IJN9"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 540.0,
+      "human_homology_bits": 709.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8I0V2"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 521.0,
+      "human_homology_bits": 361.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IE10"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 520.0,
+      "human_homology_bits": 134.0,
+      "is_known_target": true,
+      "organism": "pfalciparum",
+      "protein": "O96935"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 477.0,
+      "human_homology_bits": 614.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "O96252"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 451.0,
+      "human_homology_bits": 153.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IIJ8"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 370.0,
+      "human_homology_bits": 377.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8I0V3"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 368.0,
+      "human_homology_bits": 376.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IDI4"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 366.0,
+      "human_homology_bits": 92.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8I528"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 350.0,
+      "human_homology_bits": 138.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IM28"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 272.0,
+      "human_homology_bits": 478.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IDK7"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 269.0,
+      "human_homology_bits": 950.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IDZ9"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 269.0,
+      "human_homology_bits": 475.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8I2U5"
+    },
+    {
+      "abstained": false,
+      "confidence_tier": "high",
+      "druggability_bits": 266.0,
+      "human_homology_bits": 0.0,
+      "is_known_target": false,
+      "organism": "pfalciparum",
+      "protein": "Q8IE02"
+    }
+  ],
+  "summary": {
+    "H1_target_specific_transfer": false,
+    "H3_human_subtraction_helps_precision": false,
+    "H4_abstention_calibrated": true,
+    "median_abstain_rate": 0.9202,
+    "median_auroc_armA_druggability": 0.6411,
+    "median_auroc_armB_human_subtracted": 0.5376,
+    "median_auroc_conservation_null": 0.7206,
+    "median_auroc_length_null": 0.6383,
+    "median_precAtk_armA": 0.1915,
+    "median_precAtk_conservation_null": 0.0931,
+    "n_organisms": 4,
+    "panel": [
+      "mtb",
+      "ecoli",
+      "paeruginosa",
+      "pfalciparum"
+    ],
+    "verdict": "H1 FALSE/weak (first-class): druggability transfer AUROC 0.6411 is not clearly above the conservation null 0.7206 \u2014 homology-to-targets is largely generic conservation here; forces structure/mechanistic capabilities earlier. Honest boundary on homology-only target-ID."
+  }
+}
