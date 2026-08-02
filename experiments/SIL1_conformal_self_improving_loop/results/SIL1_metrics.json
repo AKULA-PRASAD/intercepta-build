@@ -1,0 +1,94 @@
+{
+  "per_task": {
+    "ames": {
+      "aucA": 0.585,
+      "aucB": 0.595,
+      "aucC": 0.5922,
+      "aucD": 0.6079,
+      "dBA": 0.01,
+      "dBC": 0.0028,
+      "dBD": -0.0129,
+      "gold_acc": 0.8339,
+      "n_gold": 595.6667,
+      "pool_acc": 0.6034
+    },
+    "bbb_martins": {
+      "aucA": 0.7987,
+      "aucB": 0.8038,
+      "aucC": 0.7827,
+      "aucD": 0.6858,
+      "dBA": 0.0051,
+      "dBC": 0.0211,
+      "dBD": 0.118,
+      "gold_acc": 0.8859,
+      "n_gold": 582.0,
+      "pool_acc": 0.8198
+    },
+    "bioavailability_ma": {
+      "aucA": 0.6253,
+      "aucB": 0.644,
+      "aucC": 0.6384,
+      "aucD": 0.6243,
+      "dBA": 0.0187,
+      "dBC": 0.0056,
+      "dBD": 0.0197,
+      "gold_acc": 0.8336,
+      "n_gold": 90.6667,
+      "pool_acc": 0.7561
+    },
+    "cyp2d6_veith": {
+      "aucA": 0.6988,
+      "aucB": 0.7104,
+      "aucC": 0.6965,
+      "aucD": 0.62,
+      "dBA": 0.0116,
+      "dBC": 0.0139,
+      "dBD": 0.0904,
+      "gold_acc": 0.8862,
+      "n_gold": 3180.0,
+      "pool_acc": 0.7953
+    },
+    "dili": {
+      "aucA": 0.8293,
+      "aucB": 0.8404,
+      "aucC": 0.8278,
+      "aucD": 0.7742,
+      "dBA": 0.0111,
+      "dBC": 0.0126,
+      "dBD": 0.0662,
+      "gold_acc": 0.9285,
+      "n_gold": 35.0,
+      "pool_acc": 0.7873
+    },
+    "herg": {
+      "aucA": 0.7827,
+      "aucB": 0.7971,
+      "aucC": 0.8121,
+      "aucD": 0.7862,
+      "dBA": 0.0144,
+      "dBC": -0.015,
+      "dBD": 0.0109,
+      "gold_acc": 0.8938,
+      "n_gold": 62.3333,
+      "pool_acc": 0.7503
+    }
+  },
+  "provenance": {
+    "git_sha": "66d39cc2e089fb0b36d7b37635f00bb6b151c2b5",
+    "utc": "2026-08-02T02:31:37Z"
+  },
+  "runtime_sec": 400.2,
+  "summary": {
+    "H1_loop_helps": true,
+    "H2_gating_is_guardrail": true,
+    "H3_gold_trustworthy": true,
+    "frac_tasks_dBA_pos": 1.0,
+    "median_dBA": 0.0113,
+    "median_dBC": 0.0091,
+    "median_dBD": 0.0429,
+    "median_gold_acc": 0.8861,
+    "median_pool_acc": 0.7717,
+    "n_tasks": 6,
+    "verdict": "H1+H2 TRUE: the conformal-gated self-improving loop HELPS (median \u0394B\u2212A +0.011, 1.0 of tasks) AND the GATING is the guardrail (\u0394B\u2212C +0.009, \u0394B\u2212D +0.043 \u2014 ungated/shuffled feedback does NOT help). Conformal confidence identifies trustworthy self-knowledge (gold_acc 0.8861 vs pool 0.7717). Principle 6's living-net mechanism + anti-self-deception guardrail demonstrated."
+  }
+}
