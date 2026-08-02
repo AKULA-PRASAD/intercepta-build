@@ -1,0 +1,130 @@
+{
+  "per_organism": {
+    "calbicans": {
+      "abstain_rate": 0.9327,
+      "auroc_conservation_null": 0.7803,
+      "auroc_druggability": 0.7355,
+      "kingdom": "fungus",
+      "n_targets": 19,
+      "precAtk_conservation": 0.0,
+      "precAtk_druggability": 0.0,
+      "same_kingdom_refs": 0,
+      "target_rate_abstained": 0.0016,
+      "target_rate_predicted": 0.0246
+    },
+    "ecoli": {
+      "abstain_rate": 0.9212,
+      "auroc_conservation_null": 0.7309,
+      "auroc_druggability": 0.6078,
+      "kingdom": "bacteria",
+      "n_targets": 182,
+      "precAtk_conservation": 0.1429,
+      "precAtk_druggability": 0.2363,
+      "same_kingdom_refs": 2,
+      "target_rate_abstained": 0.0325,
+      "target_rate_predicted": 0.1441
+    },
+    "lmajor": {
+      "abstain_rate": 0.9369,
+      "auroc_conservation_null": 0.7519,
+      "auroc_druggability": 0.7312,
+      "kingdom": "parasite",
+      "n_targets": 12,
+      "precAtk_conservation": 0.0,
+      "precAtk_druggability": 0.0833,
+      "same_kingdom_refs": 2,
+      "target_rate_abstained": 0.0008,
+      "target_rate_predicted": 0.0118
+    },
+    "mtb": {
+      "abstain_rate": 0.9012,
+      "auroc_conservation_null": 0.7324,
+      "auroc_druggability": 0.661,
+      "kingdom": "bacteria",
+      "n_targets": 131,
+      "precAtk_conservation": 0.0992,
+      "precAtk_druggability": 0.2519,
+      "same_kingdom_refs": 2,
+      "target_rate_abstained": 0.0219,
+      "target_rate_predicted": 0.1316
+    },
+    "paeruginosa": {
+      "abstain_rate": 0.8826,
+      "auroc_conservation_null": 0.6793,
+      "auroc_druggability": 0.709,
+      "kingdom": "bacteria",
+      "n_targets": 46,
+      "precAtk_conservation": 0.087,
+      "precAtk_druggability": 0.1522,
+      "same_kingdom_refs": 2,
+      "target_rate_abstained": 0.0047,
+      "target_rate_predicted": 0.0352
+    },
+    "pfalciparum": {
+      "abstain_rate": 0.9575,
+      "auroc_conservation_null": 0.8438,
+      "auroc_druggability": 0.6845,
+      "kingdom": "parasite",
+      "n_targets": 52,
+      "precAtk_conservation": 0.0192,
+      "precAtk_druggability": 0.2115,
+      "same_kingdom_refs": 2,
+      "target_rate_abstained": 0.006,
+      "target_rate_predicted": 0.0921
+    },
+    "tbrucei": {
+      "abstain_rate": 0.9473,
+      "auroc_conservation_null": 0.8532,
+      "auroc_druggability": 0.7513,
+      "kingdom": "parasite",
+      "n_targets": 13,
+      "precAtk_conservation": 0.0,
+      "precAtk_druggability": 0.0769,
+      "same_kingdom_refs": 2,
+      "target_rate_abstained": 0.0007,
+      "target_rate_predicted": 0.0155
+    }
+  },
+  "provenance": {
+    "git_sha": "2c3ae615fb17680d5e73fbe88892cdd7439dd9a6",
+    "utc": "2026-08-02T04:08:16Z"
+  },
+  "runtime_sec": 320.1,
+  "summary": {
+    "H1_generalizes_across_kingdoms": true,
+    "H2_crosskingdom_degradation": true,
+    "H3_abstention_tracks_isolation": false,
+    "abstain_kingdom_isolated": 0.9327,
+    "abstain_with_same_kingdom_ref": 0.929,
+    "isolated_orgs": [
+      "calbicans"
+    ],
+    "n_organisms": 7,
+    "panel_median_auroc_conservation_null": 0.7519,
+    "panel_median_auroc_druggability": 0.709,
+    "panel_median_precAtk_druggability": 0.1522,
+    "per_kingdom": {
+      "bacteria": {
+        "median_abstain_rate": 0.9012,
+        "median_auroc_druggability": 0.661,
+        "median_precAtk_druggability": 0.2363,
+        "n_orgs": 3
+      },
+      "fungus": {
+        "median_abstain_rate": 0.9327,
+        "median_auroc_druggability": 0.7355,
+        "median_precAtk_druggability": 0.0,
+        "n_orgs": 1
+      },
+      "parasite": {
+        "median_abstain_rate": 0.9473,
+        "median_auroc_druggability": 0.7312,
+        "median_precAtk_druggability": 0.0833,
+        "n_orgs": 3
+      }
+    },
+    "precAtk_kingdom_isolated": 0.0,
+    "precAtk_with_same_kingdom_ref": 0.1819,
+    "verdict": "H1 (weakly/unevenly) + H2 TRUE, H3 FALSE: zero-data target-ID DEGRADES MONOTONICALLY across kingdoms \u2014 precision@k bacteria 0.2363 > parasite 0.0833 > fungus 0.0 (the kingdom-isolated fungus recovers ZERO of its targets at top-k); homology transfer weakens with phylogenetic distance. The conservation ceiling persists per-kingdom (druggability \u2248/< conservation-null everywhere). CRITICAL nuance (H3 FALSE): abstention does NOT track the degradation \u2014 the fungus abstains at ~the same rate (0.9327 vs 0.929) yet recovers nothing \u2192 it is CONFIDENTLY WRONG on a distant kingdom (abstention miscalibrated cross-kingdom). Honest boundary: zero-data target-ID is bounded to organisms with reasonably-close characterized relatives; it silently fails on phylogenetically isolated pathogens."
+  }
+}

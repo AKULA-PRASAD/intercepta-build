@@ -107,3 +107,9 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - `$INTERCEPTA_DATA/tid2/druggability.tsv` (sha256 aab3c3f3cbd4, 2011 rows: accession, organism, is_target, max_druggability, n_pockets, has_structure)
   = fpocket 4.2.3 max Druggability Score per protein (deterministic intermediate; regenerable via experiments/TID2_.../build_druggability_cache.py).
 - PUBLIC/OPEN (AlphaFold DB CC-BY 4.0); never committed.
+
+## Cross-kingdom pathogen proteomes + ChEMBL-xref targets (TID3 — breadth)
+- Source: UniProt REST reference proteomes + ChEMBL-xref target lists, fetched 2026-08-01. Added to $INTERCEPTA_DATA/tid1/.
+- calbicans(fungus) proteome 518a55bfe7d0 6036prot/19tgt · tbrucei(parasite) 316f1286886c 8588/13 · lmajor(parasite) 032b2248cacb 8039/12.
+- K. pneumoniae fetched but DROPPED (0 in-proteome ChEMBL targets — strain mismatch). Viruses excluded (species-level proteomes strain-fragmented/near-empty).
+- PUBLIC/OPEN (UniProt CC-BY 4.0); never committed.

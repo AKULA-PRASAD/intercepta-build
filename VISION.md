@@ -131,7 +131,8 @@ self-generated records masquerade as ground truth.
 The first pass at the north star built + validated each capability on proving-ground pathogens, then mapped its honest
 boundary: **target-ID** from sequence is dominated by generic conservation (~0.73 AUROC) — neither target-homology (TID1)
 nor structural pocket druggability (TID2) beats it; the recipe is rank-by-conservation + host-nonhomology + calibrated
-abstention. **Binding** carries a real-but-weak zero-data signal (C1; the GNINA rescoring lever is Linux/CUDA-only,
+abstention — but this **degrades monotonically across kingdoms and SILENTLY FAILS on phylogenetically-isolated pathogens**
+(TID3: bacteria→parasite→fungus recovery falls to zero, and abstention does not flag the failure). **Binding** carries a real-but-weak zero-data signal (C1; the GNINA rescoring lever is Linux/CUDA-only,
 infeasible here). The pieces **compose end-to-end** from a proteome (E2E1, on M. tuberculosis, zero TB data → ranked
 candidate *hypotheses*). The **self-improving loop** (principle 6) genuinely helps + is guarded by calibrated conformal
 confidence WHERE the model has signal (SIL1, in-domain), but its benefit does NOT reliably cross to novel chemistry

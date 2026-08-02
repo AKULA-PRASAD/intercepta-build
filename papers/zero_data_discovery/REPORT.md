@@ -24,7 +24,13 @@ partial coef 0.07 vs conservation 0.70; TID2). **Conclusion: for zero-data targe
 (≈0.73 AUROC) is the robust workhorse; neither target-specific homology nor pocket geometry beats it. The practical,
 honest recipe is rank-by-conservation + host-nonhomology selectivity + calibrated abstention** (abstention is
 well-calibrated: the ~92% of proteins with no homolog are correctly flagged low-confidence, and the committed-to
-minority is enriched for true targets).
+minority is enriched for true targets). **This degrades monotonically across kingdoms** (TID3): target recovery falls
+bacteria → parasite → fungus as the held-out organism becomes phylogenetically isolated from the reference, and the
+kingdom-isolated fungus recovers *none* of its targets — homology transfer weakens with evolutionary distance.
+**Critically, the abstention does NOT track this failure** (the fungus abstains at the same rate yet recovers nothing —
+confidently wrong), so the honest boundary is sharp: **zero-data target-ID works only for organisms with reasonably-close
+characterized relatives, and silently fails on phylogenetically isolated pathogens** — a real limitation for the
+truly-novel-pathogen case the vision targets.
 
 **2. Structure-based binding carries a real but weak zero-data signal.**
 Docking compounds into a target's pocket with **zero target activity data** separates real binders from non-binders
