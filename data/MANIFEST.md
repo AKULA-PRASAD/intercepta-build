@@ -125,3 +125,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/met1/essentiality.tsv (organism, uniprot, gene_id, essential, growth_ratio). E. coli iML1515: 1515 genes
   w/ UniProt xref, 195 FBA-essential (13%). S. aureus iYS854 / K. pneumoniae iYL1228 loaded but genes lack UniProt
   annotations (0 mapped) -> MET1 scoped to E. coli. PUBLIC/OPEN (BiGG); deterministic; never committed.
+
+## MET2 de-novo CarveMe GEMs + FBA essentiality (3 bacteria)
+- CarveMe 1.6.6 (SCIP/pyscipopt + diamond 2.2.4, arm64) GEMs built de-novo from TID1 full proteomes (genes = UniProt
+  accessions by construction), 2026-08-02. $INTERCEPTA_DATA/met2/gems/{ecoli,mtb,paeruginosa}.xml + essentiality.tsv
+  (default/complete medium, single-gene-deletion). Regenerable via carve + build_essentiality_cache.py. PUBLIC/OPEN; never committed.
