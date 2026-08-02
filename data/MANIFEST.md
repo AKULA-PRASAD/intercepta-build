@@ -119,3 +119,9 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/tid4/{proteomes,targets}/: 7 bacteria (mtb/ecoli/paeruginosa/saureus/hpylori/ngonorrhoeae/kpneumoniae)
   + 2 parasites (pfalciparum/tcruzi) + 2 fungi (calbicans/afumigatus). Filter: reviewed proteome >=100 & >=5 in-proteome targets.
   Most pathogens excluded: ChEMBL drug-target ground truth is sparse/strain-fragmented (a data limit, stated). PUBLIC/OPEN; never committed.
+
+## MET1 FBA gene-essentiality (BiGG GEMs via COBRApy)
+- Source: BiGG Models (bigg.ucsd.edu) genome-scale metabolic models loaded via COBRApy 0.31.1; FBA single-gene-deletion, 2026-08-02.
+- $INTERCEPTA_DATA/met1/essentiality.tsv (organism, uniprot, gene_id, essential, growth_ratio). E. coli iML1515: 1515 genes
+  w/ UniProt xref, 195 FBA-essential (13%). S. aureus iYS854 / K. pneumoniae iYL1228 loaded but genes lack UniProt
+  annotations (0 mapped) -> MET1 scoped to E. coli. PUBLIC/OPEN (BiGG); deterministic; never committed.

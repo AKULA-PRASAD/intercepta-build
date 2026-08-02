@@ -34,7 +34,7 @@ truly-novel-pathogen case the vision targets. **And this silent failure is not c
 expanded 11-organism panel, no label-free query-time signal (homological connectedness, closest-relative proximity)
 predicts whether target-ID will succeed for a given organism (best Spearman −0.31; organism-level abstention worse than
 random) — well-connected pathogens can recover nothing while distant ones recover well. So the system genuinely cannot
-tell, from sequence alone, *when it is out of its depth* — a hard limitation for deploying on a novel pathogen.
+tell, from sequence alone, *when it is out of its depth* — a hard limitation for deploying on a novel pathogen. **But a genuinely orthogonal signal DOES break the ceiling** (MET1): mechanistic FBA gene-essentiality — computed from an organism's own genome-scale metabolic model, not from homology — enriches strongly for drug targets (odds ratio 8.6) and adds target-ID signal *beyond* conservation (5-fold-CV ΔAUROC +0.132, essentiality outweighing conservation 0.71 to 0.35) on E. coli's metabolic subproteome. So the ceiling is specific to *homology-based* signals; a mechanistic layer is the path through it — bounded, for now, to metabolic targets and validated on one organism (the only metabolic model with a usable gene→protein mapping).
 
 **2. Structure-based binding carries a real but weak zero-data signal.**
 Docking compounds into a target's pocket with **zero target activity data** separates real binders from non-binders

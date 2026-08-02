@@ -1,0 +1,27 @@
+{
+  "provenance": {
+    "gem": "iML1515",
+    "git_sha": "281e62fdb8f7658cb9b2b1756b3b40276f1b2e69",
+    "utc": "2026-08-02T11:47:40Z"
+  },
+  "runtime_sec": 1.8,
+  "summary": {
+    "H1_essentiality_enriches_targets": true,
+    "H1_odds_ratio": 8.573,
+    "H1_target_rate_essential": 0.2564,
+    "H1_target_rate_nonessential": 0.0387,
+    "H2_adds_beyond_conservation": true,
+    "auroc_conservation": 0.6088,
+    "auroc_essentiality": 0.6962,
+    "cv_auroc_conservation_only": 0.6076,
+    "cv_auroc_conservation_plus_essentiality": 0.7396,
+    "cv_delta_auroc_essentiality_adds": 0.132,
+    "n_drug_targets_in_gem": 101,
+    "n_fba_essential": 195,
+    "n_genes": 1514,
+    "organism": "ecoli",
+    "pooled_logit_coef_conservation": 0.3491,
+    "pooled_logit_coef_essentiality": 0.7119,
+    "verdict": "H2 TRUE \u2014 CEILING BROKEN (on E. coli metabolic subproteome): FBA essentiality adds target-ID signal BEYOND conservation \u2014 5-fold-CV \u0394AUROC +0.132 (cons 0.607557460770941 -> cons+ess 0.7395500010143645), partial coef +0.712 vs conservation +0.349. The FIRST orthogonal, non-homology signal that beats the conservation ceiling. H1: essential genes 0.2564 vs non 0.0387 drug-target rate (OR 8.573360378634213)."
+  }
+}
