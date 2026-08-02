@@ -127,6 +127,20 @@ substrate must be **LIVING** — append-only, provenance- and confidence-tiered 
 system's OWN findings-while-working are continuously absorbed (principle 6), without ever letting unvalidated
 self-generated records masquerade as ground truth.
 
+## Zero-data arc — honest state (2026-08, consolidated in `papers/zero_data_discovery/REPORT.md`)
+The first pass at the north star built + validated each capability on proving-ground pathogens, then mapped its honest
+boundary: **target-ID** from sequence is dominated by generic conservation (~0.73 AUROC) — neither target-homology (TID1)
+nor structural pocket druggability (TID2) beats it; the recipe is rank-by-conservation + host-nonhomology + calibrated
+abstention. **Binding** carries a real-but-weak zero-data signal (C1; the GNINA rescoring lever is Linux/CUDA-only,
+infeasible here). The pieces **compose end-to-end** from a proteome (E2E1, on M. tuberculosis, zero TB data → ranked
+candidate *hypotheses*). The **self-improving loop** (principle 6) genuinely helps + is guarded by calibrated conformal
+confidence WHERE the model has signal (SIL1, in-domain), but its benefit does NOT reliably cross to novel chemistry
+(SIL2 — near-domain only). **Net honest position:** sequence-and-transfer-only discovery reaches pose-plausible,
+conservation-ranked candidate HYPOTHESES with calibrated confidence and a self-improving loop that knows its limits; the
+ceiling beyond is an INFORMATION ceiling (novel chemistry/targets) that needs NEW data — prospective/wet-lab/3D — to
+cross, which is resource-gated, not a computation. Every claim traces to a pre-registered, reproduced-×2 experiment
+(LEDGER.md). This bounds where in-silico reaches; it does not shrink the destination.
+
 ---
 
 # INTERCEPTA — the fullest vision that is real (reconstructed 2026-07-29)
