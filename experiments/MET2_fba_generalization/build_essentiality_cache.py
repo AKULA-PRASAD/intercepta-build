@@ -7,7 +7,7 @@ from cobra.io import read_sbml_model
 from cobra.flux_analysis import single_gene_deletion
 
 DATA = os.path.join(os.environ.get("INTERCEPTA_DATA", "/Users/kalki/intercepta_data"), "met2")
-ORGS = ["ecoli", "mtb", "paeruginosa"]
+ORGS = ["ecoli", "mtb", "paeruginosa", "bsubtilis", "hpylori", "salmonella", "efaecalis"]
 TSV = os.path.join(DATA, "essentiality.tsv")
 # glucose aerobic minimal medium (standard BiGG exchange ids) — consistent across CarveMe models
 MINIMAL = {"EX_glc__D_e": 10, "EX_o2_e": 20, "EX_nh4_e": 1000, "EX_pi_e": 1000, "EX_so4_e": 1000,

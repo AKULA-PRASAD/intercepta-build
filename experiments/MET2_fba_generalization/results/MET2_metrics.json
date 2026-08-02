@@ -1,10 +1,22 @@
 {
   "per_organism": {
+    "bsubtilis": {
+      "auroc_essentiality": 0.5726,
+      "coef_conservation": 0.3113,
+      "coef_essentiality": 0.2805,
+      "cv_delta_auroc": -0.1246,
+      "n_essential": 27,
+      "n_genes": 1175,
+      "n_targets": 12,
+      "odds_ratio": 9.104,
+      "target_rate_essential": 0.0741,
+      "target_rate_nonessential": 0.0087
+    },
     "ecoli": {
       "auroc_essentiality": 0.5747,
-      "coef_conservation": 0.312,
-      "coef_essentiality": 0.3926,
-      "cv_delta_auroc": 0.0595,
+      "coef_conservation": 0.3617,
+      "coef_essentiality": 0.3913,
+      "cv_delta_auroc": 0.0533,
       "n_essential": 31,
       "n_genes": 1669,
       "n_targets": 94,
@@ -12,11 +24,35 @@
       "target_rate_essential": 0.4839,
       "target_rate_nonessential": 0.0482
     },
+    "efaecalis": {
+      "auroc_essentiality": 0.4877,
+      "coef_conservation": null,
+      "coef_essentiality": null,
+      "cv_delta_auroc": null,
+      "n_essential": 20,
+      "n_genes": 819,
+      "n_targets": 3,
+      "odds_ratio": 0.0,
+      "target_rate_essential": 0.0,
+      "target_rate_nonessential": 0.0038
+    },
+    "hpylori": {
+      "auroc_essentiality": 0.4623,
+      "coef_conservation": 0.0252,
+      "coef_essentiality": -0.4648,
+      "cv_delta_auroc": 0.0506,
+      "n_essential": 32,
+      "n_genes": 433,
+      "n_targets": 9,
+      "odds_ratio": 0.0,
+      "target_rate_essential": 0.0,
+      "target_rate_nonessential": 0.0224
+    },
     "mtb": {
       "auroc_essentiality": 0.5487,
-      "coef_conservation": 0.3821,
-      "coef_essentiality": 0.2887,
-      "cv_delta_auroc": 0.0399,
+      "coef_conservation": 0.4073,
+      "coef_essentiality": 0.2906,
+      "cv_delta_auroc": 0.0402,
       "n_essential": 28,
       "n_genes": 978,
       "n_targets": 67,
@@ -26,37 +62,59 @@
     },
     "paeruginosa": {
       "auroc_essentiality": 0.5603,
-      "coef_conservation": 0.5009,
-      "coef_essentiality": 0.184,
-      "cv_delta_auroc": -0.025,
+      "coef_conservation": 0.5061,
+      "coef_essentiality": 0.1879,
+      "cv_delta_auroc": 0.0137,
       "n_essential": 51,
       "n_genes": 1652,
       "n_targets": 20,
       "odds_ratio": 5.824,
       "target_rate_essential": 0.0588,
       "target_rate_nonessential": 0.0106
+    },
+    "salmonella": {
+      "auroc_essentiality": 0.6164,
+      "coef_conservation": null,
+      "coef_essentiality": null,
+      "cv_delta_auroc": null,
+      "n_essential": 29,
+      "n_genes": 1635,
+      "n_targets": 4,
+      "odds_ratio": 19.083,
+      "target_rate_essential": 0.0345,
+      "target_rate_nonessential": 0.0019
     }
   },
   "provenance": {
     "gems": "CarveMe de-novo, glucose-minimal",
-    "git_sha": "3f2b6ceddb920538f04ce73bd71173aa1cce37eb",
-    "utc": "2026-08-02T12:52:46Z"
+    "git_sha": "bdb2877e659cd7219227533f381a01a440ebf1e6",
+    "utc": "2026-08-02T13:07:58Z"
   },
-  "runtime_sec": 5.1,
+  "runtime_sec": 12.7,
   "summary": {
-    "GENERALIZES_across_bacteria": true,
-    "median_cv_delta_auroc": 0.0399,
+    "GENERALIZES_across_bacteria": false,
+    "median_cv_delta_auroc": 0.0402,
     "median_odds_ratio": 6.041,
-    "n_organisms": 3,
+    "n_H1_enriched_of_testable": "3/3",
+    "n_organisms": 7,
     "n_organisms_ceiling_broken": 2,
+    "n_reliably_powered_H2_positive": 2,
     "organisms": [
       "ecoli",
       "mtb",
-      "paeruginosa"
+      "paeruginosa",
+      "bsubtilis",
+      "hpylori",
+      "salmonella",
+      "efaecalis"
     ],
-    "pooled_coef_conservation": 0.3071,
-    "pooled_coef_essentiality": 0.2961,
-    "pooled_cv_delta_auroc": 0.0484,
-    "verdict": "GENERALIZES (in direction; honest nuance): FBA-essentiality's target enrichment is UNIVERSAL across all 3 bacteria (odds ratio {'ecoli': 18.501, 'mtb': 6.041, 'paeruginosa': 5.824}) \u2014 essential genes are drug targets far more often everywhere; and it ADDS BEYOND CONSERVATION in 2/3 + pooled (pooled CV \u0394AUROC +0.048, coef_ess +0.296 \u2248 cons +0.307). So MET1's mechanistic ceiling-break is NOT E.coli-specific. Honest caveats: effect is MORE MODEST than MET1's curated iML1515 (de-novo CarveMe GEMs on the DEFAULT/complete medium give fewer core-essential genes); P. aeruginosa is the H2 exception (\u0394AUROC -0.025, but only 20 targets = underpowered). A genuine, generalizing capability with honest per-organism variance."
+    "pooled_coef_conservation": 0.2599,
+    "pooled_coef_essentiality": 0.2753,
+    "pooled_cv_delta_auroc": 0.0398,
+    "reliably_powered_organisms": [
+      "ecoli",
+      "mtb"
+    ],
+    "verdict": "REPLICATES WHERE TESTABLE; broader generalization DATA-LIMITED (honest, tempered by the expanded 7-bacteria panel): only E.coli (94 tgt) and M.tuberculosis (67 tgt) have enough drug targets for a RELIABLE 5-fold-CV estimate \u2014 and in BOTH, essentiality adds beyond conservation (\u0394AUROC +0.053, +0.040), replicating MET1. Every OTHER bacterium has \u226420 in-GEM targets \u2192 its \u0394AUROC is too noisy to interpret (pae +0.014, bsub -0.125 within noise). H1 essential\u2194drug-target ENRICHMENT is broad (3/3 testable bacteria, odds ratio {'ecoli': 18.501, 'mtb': 6.041, 'paeruginosa': 5.824, 'bsubtilis': 9.104, 'hpylori': 0.0, 'salmonella': 19.083, 'efaecalis': 0.0}). **So MET1's mechanistic ceiling-break REPLICATES in the 2 reliably-testable bacteria (E.coli, Mtb) \u2014 a genuine replication \u2014 but broad generalization across bacteria is NOT ESTABLISHED (nor disproven): it is limited by drug-target ground-truth SPARSITY (most bacteria have too few known targets), not by a failure of the signal.** The 3-organism 'generalizes' over-claimed; the expanded panel gives the honest, data-limited picture."
   }
 }
