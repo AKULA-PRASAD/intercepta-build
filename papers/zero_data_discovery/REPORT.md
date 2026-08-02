@@ -30,7 +30,11 @@ kingdom-isolated fungus recovers *none* of its targets — homology transfer wea
 **Critically, the abstention does NOT track this failure** (the fungus abstains at the same rate yet recovers nothing —
 confidently wrong), so the honest boundary is sharp: **zero-data target-ID works only for organisms with reasonably-close
 characterized relatives, and silently fails on phylogenetically isolated pathogens** — a real limitation for the
-truly-novel-pathogen case the vision targets.
+truly-novel-pathogen case the vision targets. **And this silent failure is not cheaply fixable** (TID4): across an
+expanded 11-organism panel, no label-free query-time signal (homological connectedness, closest-relative proximity)
+predicts whether target-ID will succeed for a given organism (best Spearman −0.31; organism-level abstention worse than
+random) — well-connected pathogens can recover nothing while distant ones recover well. So the system genuinely cannot
+tell, from sequence alone, *when it is out of its depth* — a hard limitation for deploying on a novel pathogen.
 
 **2. Structure-based binding carries a real but weak zero-data signal.**
 Docking compounds into a target's pocket with **zero target activity data** separates real binders from non-binders

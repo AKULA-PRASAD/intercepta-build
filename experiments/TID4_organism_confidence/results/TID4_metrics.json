@@ -1,0 +1,124 @@
+{
+  "per_organism": {
+    "afumigatus": {
+      "S1_median_bits": 0.0,
+      "S2_frac_homolog": 0.411,
+      "S3_same_kingdom_refs": 1,
+      "S4_p90_bits": 263.3,
+      "kingdom": "fungus",
+      "n_targets": 5,
+      "recovery_precAtk": 0.0
+    },
+    "calbicans": {
+      "S1_median_bits": 136.0,
+      "S2_frac_homolog": 0.6604,
+      "S3_same_kingdom_refs": 1,
+      "S4_p90_bits": 567.0,
+      "kingdom": "fungus",
+      "n_targets": 19,
+      "recovery_precAtk": 0.3158
+    },
+    "ecoli": {
+      "S1_median_bits": 39.0,
+      "S2_frac_homolog": 0.5017,
+      "S3_same_kingdom_refs": 6,
+      "S4_p90_bits": 368.0,
+      "kingdom": "bacteria",
+      "n_targets": 182,
+      "recovery_precAtk": 0.2527
+    },
+    "hpylori": {
+      "S1_median_bits": 140.5,
+      "S2_frac_homolog": 0.829,
+      "S3_same_kingdom_refs": 6,
+      "S4_p90_bits": 417.8,
+      "kingdom": "bacteria",
+      "n_targets": 9,
+      "recovery_precAtk": 0.0
+    },
+    "kpneumoniae": {
+      "S1_median_bits": 164.0,
+      "S2_frac_homolog": 0.7835,
+      "S3_same_kingdom_refs": 6,
+      "S4_p90_bits": 629.0,
+      "kingdom": "bacteria",
+      "n_targets": 7,
+      "recovery_precAtk": 0.0
+    },
+    "mtb": {
+      "S1_median_bits": 44.0,
+      "S2_frac_homolog": 0.5141,
+      "S3_same_kingdom_refs": 6,
+      "S4_p90_bits": 285.7,
+      "kingdom": "bacteria",
+      "n_targets": 125,
+      "recovery_precAtk": 0.28
+    },
+    "ngonorrhoeae": {
+      "S1_median_bits": 130.0,
+      "S2_frac_homolog": 0.7143,
+      "S3_same_kingdom_refs": 6,
+      "S4_p90_bits": 601.1,
+      "kingdom": "bacteria",
+      "n_targets": 5,
+      "recovery_precAtk": 0.4
+    },
+    "paeruginosa": {
+      "S1_median_bits": 199.0,
+      "S2_frac_homolog": 0.8299,
+      "S3_same_kingdom_refs": 6,
+      "S4_p90_bits": 578.6,
+      "kingdom": "bacteria",
+      "n_targets": 39,
+      "recovery_precAtk": 0.1795
+    },
+    "pfalciparum": {
+      "S1_median_bits": 42.0,
+      "S2_frac_homolog": 0.5016,
+      "S3_same_kingdom_refs": 1,
+      "S4_p90_bits": 260.0,
+      "kingdom": "parasite",
+      "n_targets": 33,
+      "recovery_precAtk": 0.303
+    },
+    "saureus": {
+      "S1_median_bits": 58.0,
+      "S2_frac_homolog": 0.5511,
+      "S3_same_kingdom_refs": 6,
+      "S4_p90_bits": 396.0,
+      "kingdom": "bacteria",
+      "n_targets": 33,
+      "recovery_precAtk": 0.3939
+    },
+    "tcruzi": {
+      "S1_median_bits": 0.0,
+      "S2_frac_homolog": 0.4912,
+      "S3_same_kingdom_refs": 1,
+      "S4_p90_bits": 572.2,
+      "kingdom": "parasite",
+      "n_targets": 6,
+      "recovery_precAtk": 0.5
+    }
+  },
+  "provenance": {
+    "git_sha": "345fa6aaf52cce153625fc8d2fe2f13c8c75af25",
+    "utc": "2026-08-02T04:32:34Z"
+  },
+  "runtime_sec": 43.6,
+  "summary": {
+    "H1_labelfree_signal_predicts_failure": false,
+    "abstention_auroc_best_signal": 0.3833,
+    "best_signal": "S1_median_bits",
+    "best_signal_spearman": -0.3081,
+    "n_kingdoms": 3,
+    "n_organisms": 11,
+    "panel_median_recovery": 0.28,
+    "spearman_signal_vs_recovery": {
+      "S1_median_bits": -0.3081,
+      "S2_frac_homolog": -0.2661,
+      "S3_same_kingdom_refs": -0.2412,
+      "S4_p90_bits": 0.1101
+    },
+    "verdict": "H0 (first-class): NO label-free signal reliably predicts organism-level recovery (best S1_median_bits Spearman -0.31, all |r|<0.5) \u2192 the silent failure TID3 exposed is NOT cheaply fixable from homological distance alone; organism-level confidence needs a richer signal. Honest boundary. Signals: {'S1_median_bits': -0.3081, 'S2_frac_homolog': -0.2661, 'S3_same_kingdom_refs': -0.2412, 'S4_p90_bits': 0.1101}. (n=11.)"
+  }
+}

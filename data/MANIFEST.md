@@ -113,3 +113,9 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - calbicans(fungus) proteome 518a55bfe7d0 6036prot/19tgt · tbrucei(parasite) 316f1286886c 8588/13 · lmajor(parasite) 032b2248cacb 8039/12.
 - K. pneumoniae fetched but DROPPED (0 in-proteome ChEMBL targets — strain mismatch). Viruses excluded (species-level proteomes strain-fragmented/near-empty).
 - PUBLIC/OPEN (UniProt CC-BY 4.0); never committed.
+
+## TID4 expanded panel (UniProt reviewed proteomes + ChEMBL-xref targets, 11 organisms)
+- Source: UniProt REST reviewed proteomes + ChEMBL-xref targets by organism_id (targets ⊆ proteome by construction), 2026-08-02.
+- $INTERCEPTA_DATA/tid4/{proteomes,targets}/: 7 bacteria (mtb/ecoli/paeruginosa/saureus/hpylori/ngonorrhoeae/kpneumoniae)
+  + 2 parasites (pfalciparum/tcruzi) + 2 fungi (calbicans/afumigatus). Filter: reviewed proteome >=100 & >=5 in-proteome targets.
+  Most pathogens excluded: ChEMBL drug-target ground truth is sparse/strain-fragmented (a data limit, stated). PUBLIC/OPEN; never committed.
