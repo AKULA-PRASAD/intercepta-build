@@ -130,3 +130,9 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - CarveMe 1.6.6 (SCIP/pyscipopt + diamond 2.2.4, arm64) GEMs built de-novo from TID1 full proteomes (genes = UniProt
   accessions by construction), 2026-08-02. $INTERCEPTA_DATA/met2/gems/{ecoli,mtb,paeruginosa}.xml + essentiality.tsv
   (default/complete medium, single-gene-deletion). Regenerable via carve + build_essentiality_cache.py. PUBLIC/OPEN; never committed.
+
+## MET4 STRING v12 E. coli PPI network (mechanism-beyond-metabolism test)
+- Source: STRING v12.0 (stringdb-downloads.org), E. coli K-12 taxid 511145, fetched 2026-08-03.
+  $INTERCEPTA_DATA/met4/links.full.txt.gz (per-channel scores; sha256 159c78d4…) + aliases.txt.gz (UniProt_AC map;
+  sha256 9379c356…). 984,760 edges, 4,091 UniProt-mapped proteins. Channels used: combined(≥700), experiments-direct(≥400),
+  coexpression-direct(≥400), textmining-direct(≥400, = study-intensity proxy). PUBLIC/OPEN (STRING CC-BY 4.0); never committed.

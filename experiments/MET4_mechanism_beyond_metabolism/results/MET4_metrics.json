@@ -1,0 +1,225 @@
+{
+  "per_population": {
+    "fullproteome": {
+      "auroc_conservation": 0.6389,
+      "auroc_study_intensity_alone": 0.8034,
+      "n": 4403,
+      "n_targets": 182,
+      "nets": {
+        "coexp": {
+          "H1_2x2": [
+            53,
+            1183,
+            129,
+            3038
+          ],
+          "H1_OR_topquartile_degree": 1.061,
+          "beyond_cons_plus_studyintensity": {
+            "auroc_base": 0.8226,
+            "auroc_full": 0.8135,
+            "coef_added": [
+              -0.058,
+              -0.117
+            ],
+            "cv_delta_auroc": -0.0091
+          },
+          "beyond_conservation": {
+            "auroc_base": 0.6383,
+            "auroc_full": 0.6566,
+            "coef_added": [
+              0.119,
+              -0.013
+            ],
+            "cv_delta_auroc": 0.0183
+          }
+        },
+        "exp": {
+          "H1_2x2": [
+            95,
+            1207,
+            87,
+            3014
+          ],
+          "H1_OR_topquartile_degree": 2.725,
+          "beyond_cons_plus_studyintensity": {
+            "auroc_base": 0.8226,
+            "auroc_full": 0.8087,
+            "coef_added": [
+              -0.033,
+              0.05
+            ],
+            "cv_delta_auroc": -0.014
+          },
+          "beyond_conservation": {
+            "auroc_base": 0.6383,
+            "auroc_full": 0.7026,
+            "coef_added": [
+              0.126,
+              0.104
+            ],
+            "cv_delta_auroc": 0.0643
+          }
+        },
+        "full": {
+          "H1_2x2": [
+            128,
+            1012,
+            54,
+            3209
+          ],
+          "H1_OR_topquartile_degree": 7.474,
+          "beyond_cons_plus_studyintensity": {
+            "auroc_base": 0.8226,
+            "auroc_full": 0.8243,
+            "coef_added": [
+              0.123,
+              0.025
+            ],
+            "cv_delta_auroc": 0.0017
+          },
+          "beyond_conservation": {
+            "auroc_base": 0.6383,
+            "auroc_full": 0.7986,
+            "coef_added": [
+              0.361,
+              0.103
+            ],
+            "cv_delta_auroc": 0.1603
+          }
+        }
+      },
+      "prevalence": 0.0413
+    },
+    "nonmetabolic": {
+      "auroc_conservation": 0.6314,
+      "auroc_study_intensity_alone": 0.8261,
+      "n": 2734,
+      "n_targets": 88,
+      "nets": {
+        "coexp": {
+          "H1_2x2": [
+            34,
+            769,
+            54,
+            1877
+          ],
+          "H1_OR_topquartile_degree": 1.545,
+          "beyond_cons_plus_studyintensity": {
+            "auroc_base": 0.8315,
+            "auroc_full": 0.8278,
+            "coef_added": [
+              -0.021,
+              0.008
+            ],
+            "cv_delta_auroc": -0.0037
+          },
+          "beyond_conservation": {
+            "auroc_base": 0.6158,
+            "auroc_full": 0.6573,
+            "coef_added": [
+              0.252,
+              -0.022
+            ],
+            "cv_delta_auroc": 0.0415
+          }
+        },
+        "exp": {
+          "H1_2x2": [
+            55,
+            722,
+            33,
+            1924
+          ],
+          "H1_OR_topquartile_degree": 4.413,
+          "beyond_cons_plus_studyintensity": {
+            "auroc_base": 0.8315,
+            "auroc_full": 0.8279,
+            "coef_added": [
+              -0.051,
+              0.148
+            ],
+            "cv_delta_auroc": -0.0036
+          },
+          "beyond_conservation": {
+            "auroc_base": 0.6158,
+            "auroc_full": 0.7442,
+            "coef_added": [
+              0.122,
+              0.264
+            ],
+            "cv_delta_auroc": 0.1284
+          }
+        },
+        "full": {
+          "H1_2x2": [
+            71,
+            649,
+            17,
+            1997
+          ],
+          "H1_OR_topquartile_degree": 12.565,
+          "beyond_cons_plus_studyintensity": {
+            "auroc_base": 0.8315,
+            "auroc_full": 0.8335,
+            "coef_added": [
+              0.135,
+              0.034
+            ],
+            "cv_delta_auroc": 0.002
+          },
+          "beyond_conservation": {
+            "auroc_base": 0.6158,
+            "auroc_full": 0.819,
+            "coef_added": [
+              0.368,
+              0.245
+            ],
+            "cv_delta_auroc": 0.2032
+          }
+        }
+      },
+      "prevalence": 0.0322
+    }
+  },
+  "provenance": {
+    "git_sha": "03fac933f2cefa0454ee58befd316d55d5f15d38",
+    "graph": {
+      "coexp": {
+        "edges": 9520,
+        "nodes": 2185
+      },
+      "exp": {
+        "edges": 5825,
+        "nodes": 1303
+      },
+      "full": {
+        "edges": 32244,
+        "nodes": 4006
+      },
+      "tm": {
+        "edges": 28438,
+        "nodes": 4070
+      }
+    },
+    "thresholds": {
+      "coexp": 400,
+      "exp": 400,
+      "full": 700,
+      "tm": 400
+    },
+    "utc": "2026-08-04T03:59:31Z"
+  },
+  "runtime_sec": 41.0,
+  "summary": {
+    "COEXP_delta_beyond_cons_plus_studyintensity": -0.0037,
+    "EXP_delta_beyond_cons_plus_studyintensity": -0.0036,
+    "EXP_delta_beyond_conservation": 0.1284,
+    "genuine_mechanistic_nonhomology_signal": false,
+    "nonmet_n": 2734,
+    "nonmet_targets": 88,
+    "organism": "ecoli",
+    "population": "non-metabolic subproteome (FBA-blind)",
+    "study_intensity_alone_auroc": 0.8261,
+    "verdict": "H0/CONFOUNDED (mechanism stays metabolism-bound as tested): the apparent PPI-centrality signal for non-metabolic targets is NOT a confound-robust non-homology mechanism \u2014 the raw experimental lift (\u0394|cons +0.128) COLLAPSES once study-intensity is controlled (\u0394|cons+SI -0.004); study-intensity alone already predicts targets at AUROC 0.826; the unbiased coexpression network shows no robust lift (\u0394|cons+SI -0.004). Honest boundary: unlike FBA-essentiality (a genuine mechanism for METABOLIC targets), PPI-network centrality target-ID for the FBA-blind half is largely a STUDY-BIAS artifact (drug targets are studied more -> more edges). E. coli, in-domain."
+  }
+}
