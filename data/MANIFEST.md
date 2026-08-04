@@ -136,3 +136,11 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
   $INTERCEPTA_DATA/met4/links.full.txt.gz (per-channel scores; sha256 159c78d4…) + aliases.txt.gz (UniProt_AC map;
   sha256 9379c356…). 984,760 edges, 4,091 UniProt-mapped proteins. Channels used: combined(≥700), experiments-direct(≥400),
   coexpression-direct(≥400), textmining-direct(≥400, = study-intensity proxy). PUBLIC/OPEN (STRING CC-BY 4.0); never committed.
+
+## HIT1 molecule-half ligand data (MoleculeACE) + LIT-PCBA docking subset
+- MoleculeACE (github.com/molML/MoleculeACE, CC-BY): 30 curated ChEMBL targets, 48,714 compounds, fetched 2026-08-04.
+  $INTERCEPTA_DATA/hit1/moleculeace/CHEMBL*.csv — per compound: SMILES, pActivity (y[pKi/pEC50]), cliff_mol, train/test split.
+- LIT-PCBA 9-target subset (Zenodo record 10682034, Berenger strain study, 16.4 MB), fetched 2026-08-04:
+  $INTERCEPTA_DATA/hit1/litpcba/ — crystal structures + GOLD-docked poses + docking/strain scores + active/decoy labels.
+  NOTE: this is a docking/strain-STUDY subset (compound-selection-biased) → reserved for HIT2 relative analysis only, NOT
+  headline enrichment. Full LIT-PCBA (unistra) was 404 at fetch time. PUBLIC/OPEN; never committed.

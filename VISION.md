@@ -140,7 +140,12 @@ confidence WHERE the model has signal (SIL1, in-domain), but its benefit does NO
 (SIL2 — near-domain only). **Net honest position:** sequence-and-transfer-only discovery reaches pose-plausible,
 conservation-ranked candidate HYPOTHESES with calibrated confidence and a self-improving loop that knows its limits; the
 ceiling beyond is an INFORMATION ceiling (novel chemistry/targets) that needs NEW data — prospective/wet-lab/3D — to
-cross, which is resource-gated, not a computation. Every claim traces to a pre-registered, reproduced-×2 experiment
+cross, which is resource-gated, not a computation. The **molecule half** (given a target, produce candidates) is now
+opening on the same spine: HIT1 finds that ligand-based zero/low-data hit-finding is strongly ANALOG-DRIVEN and degrades
+sharply on scaffold-novel chemotypes (learned QSAR 0.90→0.67 AUROC) — a soft ceiling — but, unlike the target-ID
+conservation ceiling, a learned ligand model retains a partial, noisy signal for novel chemistry (an auto-verdict claiming
+clean "learning generalizes" was caught as a tautology and corrected pre-commit; the physics/structure floor for novel
+chemotypes is the next test, HIT2). Every claim traces to a pre-registered, reproduced-×2 experiment
 (LEDGER.md). This bounds where in-silico reaches; it does not shrink the destination.
 
 ---

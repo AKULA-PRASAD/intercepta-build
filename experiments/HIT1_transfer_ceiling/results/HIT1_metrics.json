@@ -1,0 +1,703 @@
+{
+  "per_target": {
+    "CHEMBL1862_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9266,
+        "sim": 0.7868
+      },
+      "frac_test_act_novel": 0.107,
+      "n_analog_act": 109,
+      "n_novel_act": 13,
+      "n_seed_act": 454,
+      "n_test": 161,
+      "n_test_act": 122,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.4527,
+        "sim": 0.3491
+      },
+      "overall": {
+        "null_BEDROC": 0.8602,
+        "qsar_AUROC": 0.8761,
+        "qsar_BEDROC": 0.9913,
+        "qsar_EF1": 1.32,
+        "sim_AUROC": 0.7401,
+        "sim_BEDROC": 0.8885,
+        "sim_EF1": 1.32
+      }
+    },
+    "CHEMBL1871_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9327,
+        "sim": 0.8563
+      },
+      "frac_test_act_novel": 0.023,
+      "n_analog_act": 84,
+      "n_novel_act": 2,
+      "n_seed_act": 348,
+      "n_test": 134,
+      "n_test_act": 86,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.672,
+        "qsar_AUROC": 0.9208,
+        "qsar_BEDROC": 0.9997,
+        "qsar_EF1": 1.558,
+        "sim_AUROC": 0.8424,
+        "sim_BEDROC": 0.9042,
+        "sim_EF1": 1.558
+      }
+    },
+    "CHEMBL2047_EC50": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8935,
+        "sim": 0.8242
+      },
+      "frac_test_act_novel": 0.0,
+      "n_analog_act": 50,
+      "n_novel_act": 0,
+      "n_seed_act": 196,
+      "n_test": 128,
+      "n_test_act": 50,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.2959,
+        "qsar_AUROC": 0.8935,
+        "qsar_BEDROC": 0.9153,
+        "qsar_EF1": 2.56,
+        "sim_AUROC": 0.8242,
+        "sim_BEDROC": 0.8063,
+        "sim_EF1": 2.56
+      }
+    },
+    "CHEMBL204_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.943,
+        "sim": 0.8545
+      },
+      "frac_test_act_novel": 0.017,
+      "n_analog_act": 287,
+      "n_novel_act": 5,
+      "n_seed_act": 1250,
+      "n_test": 553,
+      "n_test_act": 292,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.6854,
+        "sim": 0.0912
+      },
+      "overall": {
+        "null_BEDROC": 0.4815,
+        "qsar_AUROC": 0.9386,
+        "qsar_BEDROC": 0.9543,
+        "qsar_EF1": 1.894,
+        "sim_AUROC": 0.8415,
+        "sim_BEDROC": 0.8039,
+        "sim_EF1": 1.578
+      }
+    },
+    "CHEMBL2147_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9861,
+        "sim": 0.9488
+      },
+      "frac_test_act_novel": 0.031,
+      "n_analog_act": 186,
+      "n_novel_act": 6,
+      "n_seed_act": 756,
+      "n_test": 294,
+      "n_test_act": 192,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.6642,
+        "sim": 0.3717
+      },
+      "overall": {
+        "null_BEDROC": 0.6602,
+        "qsar_AUROC": 0.9761,
+        "qsar_BEDROC": 1.0,
+        "qsar_EF1": 1.531,
+        "sim_AUROC": 0.9308,
+        "sim_BEDROC": 0.9663,
+        "sim_EF1": 1.531
+      }
+    },
+    "CHEMBL214_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8941,
+        "sim": 0.771
+      },
+      "frac_test_act_novel": 0.03,
+      "n_analog_act": 493,
+      "n_novel_act": 15,
+      "n_seed_act": 1980,
+      "n_test": 666,
+      "n_test_act": 508,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.6838,
+        "sim": 0.1447
+      },
+      "overall": {
+        "null_BEDROC": 0.7015,
+        "qsar_AUROC": 0.8879,
+        "qsar_BEDROC": 0.9961,
+        "qsar_EF1": 1.311,
+        "sim_AUROC": 0.7525,
+        "sim_BEDROC": 0.9292,
+        "sim_EF1": 1.311
+      }
+    },
+    "CHEMBL218_EC50": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8907,
+        "sim": 0.8285
+      },
+      "frac_test_act_novel": 0.042,
+      "n_analog_act": 115,
+      "n_novel_act": 5,
+      "n_seed_act": 463,
+      "n_test": 208,
+      "n_test_act": 120,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.725,
+        "sim": 0.1807
+      },
+      "overall": {
+        "null_BEDROC": 0.4044,
+        "qsar_AUROC": 0.8838,
+        "qsar_BEDROC": 0.9962,
+        "qsar_EF1": 1.733,
+        "sim_AUROC": 0.8015,
+        "sim_BEDROC": 0.9516,
+        "sim_EF1": 1.733
+      }
+    },
+    "CHEMBL219_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8792,
+        "sim": 0.7801
+      },
+      "frac_test_act_novel": 0.023,
+      "n_analog_act": 259,
+      "n_novel_act": 6,
+      "n_seed_act": 1099,
+      "n_test": 374,
+      "n_test_act": 265,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.5986,
+        "sim": 0.1315
+      },
+      "overall": {
+        "null_BEDROC": 0.7701,
+        "qsar_AUROC": 0.8728,
+        "qsar_BEDROC": 0.9968,
+        "qsar_EF1": 1.411,
+        "sim_AUROC": 0.7654,
+        "sim_BEDROC": 0.9011,
+        "sim_EF1": 1.411
+      }
+    },
+    "CHEMBL228_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.923,
+        "sim": 0.8094
+      },
+      "frac_test_act_novel": 0.034,
+      "n_analog_act": 253,
+      "n_novel_act": 9,
+      "n_seed_act": 985,
+      "n_test": 342,
+      "n_test_act": 262,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.5931,
+        "sim": 0.1458
+      },
+      "overall": {
+        "null_BEDROC": 0.7911,
+        "qsar_AUROC": 0.9117,
+        "qsar_BEDROC": 0.9994,
+        "qsar_EF1": 1.305,
+        "sim_AUROC": 0.7866,
+        "sim_BEDROC": 0.8843,
+        "sim_EF1": 0.979
+      }
+    },
+    "CHEMBL231_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9291,
+        "sim": 0.8565
+      },
+      "frac_test_act_novel": 0.052,
+      "n_analog_act": 110,
+      "n_novel_act": 6,
+      "n_seed_act": 465,
+      "n_test": 197,
+      "n_test_act": 116,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.7356,
+        "sim": 0.108
+      },
+      "overall": {
+        "null_BEDROC": 0.6834,
+        "qsar_AUROC": 0.9191,
+        "qsar_BEDROC": 0.98,
+        "qsar_EF1": 1.698,
+        "sim_AUROC": 0.8178,
+        "sim_BEDROC": 0.9601,
+        "sim_EF1": 1.698
+      }
+    },
+    "CHEMBL233_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8929,
+        "sim": 0.8136
+      },
+      "frac_test_act_novel": 0.009,
+      "n_analog_act": 434,
+      "n_novel_act": 4,
+      "n_seed_act": 1732,
+      "n_test": 630,
+      "n_test_act": 438,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.6731,
+        "qsar_AUROC": 0.8903,
+        "qsar_BEDROC": 0.9713,
+        "qsar_EF1": 1.438,
+        "sim_AUROC": 0.8067,
+        "sim_BEDROC": 0.9607,
+        "sim_EF1": 1.438
+      }
+    },
+    "CHEMBL234_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9352,
+        "sim": 0.8095
+      },
+      "frac_test_act_novel": 0.007,
+      "n_analog_act": 580,
+      "n_novel_act": 4,
+      "n_seed_act": 2207,
+      "n_test": 733,
+      "n_test_act": 584,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.7183,
+        "qsar_AUROC": 0.9324,
+        "qsar_BEDROC": 1.0,
+        "qsar_EF1": 1.255,
+        "sim_AUROC": 0.8047,
+        "sim_BEDROC": 0.9015,
+        "sim_EF1": 1.255
+      }
+    },
+    "CHEMBL235_EC50": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9017,
+        "sim": 0.8484
+      },
+      "frac_test_act_novel": 0.023,
+      "n_analog_act": 208,
+      "n_novel_act": 5,
+      "n_seed_act": 813,
+      "n_test": 472,
+      "n_test_act": 213,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.668,
+        "sim": 0.1873
+      },
+      "overall": {
+        "null_BEDROC": 0.3323,
+        "qsar_AUROC": 0.8963,
+        "qsar_BEDROC": 0.9364,
+        "qsar_EF1": 2.216,
+        "sim_AUROC": 0.8329,
+        "sim_BEDROC": 0.7936,
+        "sim_EF1": 1.773
+      }
+    },
+    "CHEMBL236_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9304,
+        "sim": 0.8216
+      },
+      "frac_test_act_novel": 0.009,
+      "n_analog_act": 334,
+      "n_novel_act": 3,
+      "n_seed_act": 1302,
+      "n_test": 521,
+      "n_test_act": 337,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.6001,
+        "qsar_AUROC": 0.9266,
+        "qsar_BEDROC": 0.9996,
+        "qsar_EF1": 1.546,
+        "sim_AUROC": 0.8157,
+        "sim_BEDROC": 0.8712,
+        "sim_EF1": 1.288
+      }
+    },
+    "CHEMBL237_EC50": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9034,
+        "sim": 0.7998
+      },
+      "frac_test_act_novel": 0.016,
+      "n_analog_act": 127,
+      "n_novel_act": 2,
+      "n_seed_act": 550,
+      "n_test": 193,
+      "n_test_act": 129,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.842,
+        "qsar_AUROC": 0.9005,
+        "qsar_BEDROC": 0.9989,
+        "qsar_EF1": 1.496,
+        "sim_AUROC": 0.7897,
+        "sim_BEDROC": 0.9046,
+        "sim_EF1": 1.496
+      }
+    },
+    "CHEMBL237_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9056,
+        "sim": 0.7827
+      },
+      "frac_test_act_novel": 0.017,
+      "n_analog_act": 357,
+      "n_novel_act": 6,
+      "n_seed_act": 1433,
+      "n_test": 522,
+      "n_test_act": 363,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.609,
+        "sim": 0.065
+      },
+      "overall": {
+        "null_BEDROC": 0.7569,
+        "qsar_AUROC": 0.9007,
+        "qsar_BEDROC": 0.9927,
+        "qsar_EF1": 1.438,
+        "sim_AUROC": 0.7709,
+        "sim_BEDROC": 0.8975,
+        "sim_EF1": 1.198
+      }
+    },
+    "CHEMBL238_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.969,
+        "sim": 0.8977
+      },
+      "frac_test_act_novel": 0.062,
+      "n_analog_act": 106,
+      "n_novel_act": 7,
+      "n_seed_act": 434,
+      "n_test": 213,
+      "n_test_act": 113,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.6914,
+        "sim": 0.2207
+      },
+      "overall": {
+        "null_BEDROC": 0.6788,
+        "qsar_AUROC": 0.9518,
+        "qsar_BEDROC": 0.9996,
+        "qsar_EF1": 1.885,
+        "sim_AUROC": 0.8558,
+        "sim_BEDROC": 0.8988,
+        "sim_EF1": 1.885
+      }
+    },
+    "CHEMBL239_EC50": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9036,
+        "sim": 0.852
+      },
+      "frac_test_act_novel": 0.029,
+      "n_analog_act": 135,
+      "n_novel_act": 4,
+      "n_seed_act": 575,
+      "n_test": 347,
+      "n_test_act": 139,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.3716,
+        "qsar_AUROC": 0.8917,
+        "qsar_BEDROC": 0.9308,
+        "qsar_EF1": 2.496,
+        "sim_AUROC": 0.8317,
+        "sim_BEDROC": 0.7348,
+        "sim_EF1": 1.872
+      }
+    },
+    "CHEMBL244_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9414,
+        "sim": 0.8076
+      },
+      "frac_test_act_novel": 0.0,
+      "n_analog_act": 387,
+      "n_novel_act": 0,
+      "n_seed_act": 1475,
+      "n_test": 621,
+      "n_test_act": 387,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.7175,
+        "qsar_AUROC": 0.9414,
+        "qsar_BEDROC": 0.9968,
+        "qsar_EF1": 1.605,
+        "sim_AUROC": 0.8076,
+        "sim_BEDROC": 0.9192,
+        "sim_EF1": 1.605
+      }
+    },
+    "CHEMBL262_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9156,
+        "sim": 0.8972
+      },
+      "frac_test_act_novel": 0.12,
+      "n_analog_act": 73,
+      "n_novel_act": 10,
+      "n_seed_act": 297,
+      "n_test": 173,
+      "n_test_act": 83,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.5256,
+        "sim": 0.2028
+      },
+      "overall": {
+        "null_BEDROC": 0.3089,
+        "qsar_AUROC": 0.8686,
+        "qsar_BEDROC": 0.997,
+        "qsar_EF1": 2.084,
+        "sim_AUROC": 0.8135,
+        "sim_BEDROC": 0.8607,
+        "sim_EF1": 2.084
+      }
+    },
+    "CHEMBL264_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8736,
+        "sim": 0.6969
+      },
+      "frac_test_act_novel": 0.008,
+      "n_analog_act": 487,
+      "n_novel_act": 4,
+      "n_seed_act": 1967,
+      "n_test": 574,
+      "n_test_act": 491,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.8009,
+        "qsar_AUROC": 0.8709,
+        "qsar_BEDROC": 0.9992,
+        "qsar_EF1": 1.169,
+        "sim_AUROC": 0.6917,
+        "sim_BEDROC": 0.9276,
+        "sim_EF1": 0.974
+      }
+    },
+    "CHEMBL287_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8714,
+        "sim": 0.7306
+      },
+      "frac_test_act_novel": 0.045,
+      "n_analog_act": 210,
+      "n_novel_act": 10,
+      "n_seed_act": 857,
+      "n_test": 267,
+      "n_test_act": 220,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.5479,
+        "sim": 0.1723
+      },
+      "overall": {
+        "null_BEDROC": 0.8503,
+        "qsar_AUROC": 0.8567,
+        "qsar_BEDROC": 0.9999,
+        "qsar_EF1": 1.214,
+        "sim_AUROC": 0.7052,
+        "sim_BEDROC": 0.906,
+        "sim_EF1": 1.214
+      }
+    },
+    "CHEMBL2971_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.961,
+        "sim": 0.9058
+      },
+      "frac_test_act_novel": 0.078,
+      "n_analog_act": 142,
+      "n_novel_act": 12,
+      "n_seed_act": 577,
+      "n_test": 197,
+      "n_test_act": 154,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.7403,
+        "sim": 0.2025
+      },
+      "overall": {
+        "null_BEDROC": 0.7085,
+        "qsar_AUROC": 0.9438,
+        "qsar_BEDROC": 1.0,
+        "qsar_EF1": 1.279,
+        "sim_AUROC": 0.851,
+        "sim_BEDROC": 0.993,
+        "sim_EF1": 1.279
+      }
+    },
+    "CHEMBL3979_EC50": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.9239,
+        "sim": 0.865
+      },
+      "frac_test_act_novel": 0.034,
+      "n_analog_act": 114,
+      "n_novel_act": 4,
+      "n_seed_act": 473,
+      "n_test": 226,
+      "n_test_act": 118,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.5324,
+        "qsar_AUROC": 0.9097,
+        "qsar_BEDROC": 0.992,
+        "qsar_EF1": 1.915,
+        "sim_AUROC": 0.8441,
+        "sim_BEDROC": 0.7959,
+        "sim_EF1": 0.638
+      }
+    },
+    "CHEMBL4005_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8298,
+        "sim": 0.7451
+      },
+      "frac_test_act_novel": 0.0,
+      "n_analog_act": 163,
+      "n_novel_act": 0,
+      "n_seed_act": 656,
+      "n_test": 193,
+      "n_test_act": 163,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.8989,
+        "qsar_AUROC": 0.8298,
+        "qsar_BEDROC": 0.9439,
+        "qsar_EF1": 1.184,
+        "sim_AUROC": 0.7451,
+        "sim_BEDROC": 0.9794,
+        "sim_EF1": 1.184
+      }
+    },
+    "CHEMBL4203_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8811,
+        "sim": 0.877
+      },
+      "frac_test_act_novel": 0.383,
+      "n_analog_act": 37,
+      "n_novel_act": 23,
+      "n_seed_act": 253,
+      "n_test": 149,
+      "n_test_act": 60,
+      "novel_vs_inactive_AUROC": {
+        "qsar": 0.6837,
+        "sim": 0.4199
+      },
+      "overall": {
+        "null_BEDROC": 0.4106,
+        "qsar_AUROC": 0.8054,
+        "qsar_BEDROC": 0.9327,
+        "qsar_EF1": 2.483,
+        "sim_AUROC": 0.7018,
+        "sim_BEDROC": 0.7647,
+        "sim_EF1": 1.242
+      }
+    },
+    "CHEMBL4792_Ki": {
+      "analog_vs_inactive_AUROC": {
+        "qsar": 0.8804,
+        "sim": 0.7177
+      },
+      "frac_test_act_novel": 0.0,
+      "n_analog_act": 176,
+      "n_novel_act": 0,
+      "n_seed_act": 735,
+      "n_test": 297,
+      "n_test_act": 176,
+      "novel_vs_inactive_AUROC": {
+        "qsar": NaN,
+        "sim": NaN
+      },
+      "overall": {
+        "null_BEDROC": 0.4748,
+        "qsar_AUROC": 0.8804,
+        "qsar_BEDROC": 0.9883,
+        "qsar_EF1": 1.688,
+        "sim_AUROC": 0.7177,
+        "sim_BEDROC": 0.8042,
+        "sim_EF1": 1.125
+      }
+    }
+  },
+  "provenance": {
+    "act_cut": 6.5,
+    "git_sha": "0420ca8bc61076d4963c4512faaf68a1894567ae",
+    "novel_tan": 0.4,
+    "utc": "2026-08-04T04:28:34Z"
+  },
+  "runtime_sec": 13.7,
+  "summary": {
+    "H1_aggregate_potency_ranking_works": true,
+    "frac_targets_qsar_novel_above_0.55": 0.8,
+    "median_analog_vs_inactive_AUROC_qsar": 0.9056,
+    "median_analog_vs_inactive_AUROC_sim": 0.8216,
+    "median_novel_actives_per_target": 5,
+    "median_novel_vs_inactive_AUROC_qsar": 0.668,
+    "median_novel_vs_inactive_AUROC_sim_TAUTOLOGICAL": 0.1807,
+    "median_overall_AUROC_qsar": 0.8963,
+    "median_overall_AUROC_sim": 0.8067,
+    "n_targets": 27,
+    "n_targets_novel_testable": 15,
+    "novel_chemotype_hard_ceiling": false,
+    "novel_chemotype_partial_residual_signal": true,
+    "overall_to_novel_degradation_qsar": 0.2283,
+    "verdict": "SOFT CEILING with RESIDUAL novel signal (honest, non-over-read): aggregate ligand-based potency-ranking works (median overall AUROC sim 0.8067 / qsar 0.8963) and is ANALOG-DRIVEN (analog-vs-inactive AUROC sim 0.8216). On SCAFFOLD-NOVEL chemotypes, a learned QSAR degrades SUBSTANTIALLY \u2014 from 0.8963 (overall) to 0.668 (novel), \u22120.2283 \u2014 but retains MODEST ABOVE-RANDOM recovery (>0.55 in 0.8 of the 15 testable targets). So ligand-based hit-finding rides mostly on chemical ANALOGY, yet \u2014 UNLIKE the target-ID conservation ceiling (where nothing beat conservation for novel targets) \u2014 a learned ligand model keeps a partial, noisy signal for novel chemotypes. NOT a hard ceiling, NOT a clean 'learning solves novel'. The tautological sim-vs-qsar 'gain' is REJECTED as the basis. CAVEATS: (i) actives = a LARGE fraction (potency-ranking, not needle-in-haystack VS) so AUROC \u2014 not BEDROC/EF (null BEDROC 0.6788) \u2014 is the valid metric; (ii) NOVEL actives are RARE (median 5/target; only 15/27 targets testable) => novel estimates are LOW-POWERED; (iii) the similarity baseline's novel AUROC (0.1807) is TAUTOLOGICALLY < 0.5 (novel := low sim) and does NOT anchor the comparison; (iv) novelty is defined vs SEED actives only, so 'novel' test actives may still resemble other train compounds \u2014 a permissive novelty bar. Ligand-only; MoleculeACE potency data; not wet-lab."
+  }
+}

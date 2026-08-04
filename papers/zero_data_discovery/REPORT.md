@@ -38,6 +38,24 @@ tell, from sequence alone, *when it is out of its depth* — a hard limitation f
 
 Crucially, this mechanistic win is scoped to *metabolic* targets — FBA is blind to roughly half of all drug targets (proteases, polymerases, ribosomal and structural proteins, the kind a novel pandemic often presents). We tested the obvious extension to that FBA-blind half — PPI-network topology essentiality (network hubs/bottlenecks), a mechanistic signal independent of homology *if the network is measured* (MET4). The naive result looked like a second ceiling-break: on a non-homology experimental interaction network, centrality added ΔAUROC +0.128 beyond conservation. But it does not survive the confound that matters most here: **study bias**. Drug targets are the most-studied proteins in existence, so they accumulate experimental interaction edges from research attention rather than biology (reverse causation). Study-intensity alone (literature-derived) predicts drug-targethood at AUROC 0.826, and once it is controlled — or once one uses a coexpression network that scores every gene uniformly regardless of study effort — the entire lift collapses (+0.128 → −0.004). So PPI-network centrality is *not* a confound-robust mechanistic signal for non-metabolic targets; it is largely a study-bias artifact. This is an important negative: it sharply separates FBA-essentiality (a genuine mechanism, which survived every control) from network centrality (which does not), and it means the non-metabolic half of target space remains genuinely hard — no clean, information-honest mechanistic signal for it has been found. (The first, unconfounded run would have been a false "mechanism generalizes" claim; the falsify-first protocol caught it before it was recorded.)
 
+**The molecule half — the novel-chemotype ceiling of ligand-based hit-finding.**
+Target identification is only half of discovery; the other half is producing candidate molecules for a target with no
+activity data. This half has the same information-ceiling spine, and the field hides it: a 2025 audit of the standard
+LIT-PCBA benchmark shows "zero-shot" virtual-screening scores are inflated by *analog leakage* and do not measure
+recovery of genuinely novel chemotypes. We measured that ceiling directly (HIT1) on 30 curated ChEMBL targets
+(MoleculeACE): given known binders, rank a library by chemical similarity (transfer) or by a learned model (QSAR on
+ECFP4), and evaluate on actives split into analogs vs scaffold-*novel* chemotypes. Aggregate potency-ranking works well
+(median AUROC 0.81 similarity / 0.90 learned) but is **analog-driven** (analog-vs-inactive AUROC 0.82). On scaffold-novel
+chemotypes a learned model degrades sharply — 0.90 → 0.67 AUROC — but, importantly, does *not* collapse to random: it
+retains a modest, noisy, above-random signal in most targets. So ligand-based hit-finding rides mostly on chemical
+analogy, yet — unlike the target-ID conservation ceiling, where nothing beat conservation for a novel target — a learned
+ligand model keeps partial traction on novel chemistry. This is a *soft* ceiling. (An automatic verdict initially read
+this as a clean "learning generalizes beyond analogy"; that rested on a tautology — novel actives were *defined* as
+low-similarity, so the similarity baseline was rigged to fail — and was corrected before recording. Caveats: this is
+potency-transfer among measured binders, not needle-in-haystack screening; novel actives are rare in the data, so the
+novel estimate is low-powered; the physics/structure floor for novel chemotypes — the only signal that does not depend on
+chemical analogy at all — is the next test.)
+
 **2. Structure-based binding carries a real but weak zero-data signal.**
 Docking compounds into a target's pocket with **zero target activity data** separates real binders from non-binders
 significantly (Mann-Whitney p=0.0001) but weakly — near-random *early* enrichment (AUROC 0.63, EF1% ≈ 1.25; C1 on
