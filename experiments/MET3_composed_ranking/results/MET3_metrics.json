@@ -1,0 +1,131 @@
+{
+  "per_organism": {
+    "ecoli": {
+      "EF_at_k_composite": 6.233,
+      "EF_at_k_conservation": 4.911,
+      "auroc_composite_oof": 0.6767,
+      "auroc_conservation": 0.6328,
+      "delta_precAtk": 0.0745,
+      "n_genes": 1669,
+      "n_targets": 94,
+      "precAtk_composite": 0.3511,
+      "precAtk_conservation": 0.2766,
+      "prevalence": 0.0563,
+      "top10_composite": [
+        {
+          "acc": "P31224",
+          "is_target": 1
+        },
+        {
+          "acc": "P24177",
+          "is_target": 0
+        },
+        {
+          "acc": "P37637",
+          "is_target": 0
+        },
+        {
+          "acc": "P39452",
+          "is_target": 0
+        },
+        {
+          "acc": "P24181",
+          "is_target": 0
+        },
+        {
+          "acc": "P62617",
+          "is_target": 1
+        },
+        {
+          "acc": "P0ABU0",
+          "is_target": 0
+        },
+        {
+          "acc": "P0A6W3",
+          "is_target": 1
+        },
+        {
+          "acc": "P0ABQ0",
+          "is_target": 0
+        },
+        {
+          "acc": "P32166",
+          "is_target": 0
+        }
+      ]
+    },
+    "mtb": {
+      "EF_at_k_composite": 3.704,
+      "EF_at_k_conservation": 3.486,
+      "auroc_composite_oof": 0.6499,
+      "auroc_conservation": 0.6312,
+      "delta_precAtk": 0.0149,
+      "n_genes": 978,
+      "n_targets": 67,
+      "precAtk_composite": 0.2537,
+      "precAtk_conservation": 0.2388,
+      "prevalence": 0.0685,
+      "top10_composite": [
+        {
+          "acc": "P9WMJ9",
+          "is_target": 0
+        },
+        {
+          "acc": "P9WGV3",
+          "is_target": 0
+        },
+        {
+          "acc": "P9WPK1",
+          "is_target": 0
+        },
+        {
+          "acc": "P9WJK9",
+          "is_target": 0
+        },
+        {
+          "acc": "P9WJL9",
+          "is_target": 0
+        },
+        {
+          "acc": "P9WMW7",
+          "is_target": 1
+        },
+        {
+          "acc": "P9WKE9",
+          "is_target": 0
+        },
+        {
+          "acc": "P9WFF1",
+          "is_target": 0
+        },
+        {
+          "acc": "P9WK25",
+          "is_target": 0
+        },
+        {
+          "acc": "P9WN39",
+          "is_target": 0
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "git_sha": "7d090b6eddf3bd6cfdfaa9f7ff57cff8d509f3ad",
+    "utc": "2026-08-04T03:43:47Z"
+  },
+  "runtime_sec": 3.4,
+  "summary": {
+    "H1_composite_improves_topk": true,
+    "both_organisms_improved": true,
+    "median_delta_precAtk": 0.0447,
+    "organisms": [
+      "ecoli",
+      "mtb"
+    ],
+    "per_organism_delta_precAtk": {
+      "ecoli": 0.0745,
+      "mtb": 0.0149
+    },
+    "verdict": "H1 PARTIAL/DIRECTIONAL: adding FBA-essentiality to the ranking improves top-k known-target recovery in BOTH bacteria, but the magnitudes differ sharply \u2014 SUBSTANTIAL in E. coli (P@k 0.2766\u21920.3511, \u0394P@k +0.074, EF 4.911\u21926.233\u00d7) but MARGINAL in M. tuberculosis (P@k 0.2388\u21920.2537, \u0394P@k +0.015 \u2248 one extra target \u2014 smaller than Mtb's MET2 \u0394AUROC, i.e. the global-AUROC gain does NOT fully reach the TOP of the Mtb list). Honest reading: the MET essentiality signal IS a practical front-half (ranked-shortlist) improvement, clearly in E. coli, weakly in Mtb \u2014 consistent with MET2 (direction robust, magnitude organism-dependent). Capstone of the MET line; not a new discovery \u2014 the practical form of MET1/MET2."
+  }
+}
