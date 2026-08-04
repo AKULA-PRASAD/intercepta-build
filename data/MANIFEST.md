@@ -144,3 +144,10 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
   $INTERCEPTA_DATA/hit1/litpcba/ — crystal structures + GOLD-docked poses + docking/strain scores + active/decoy labels.
   NOTE: this is a docking/strain-STUDY subset (compound-selection-biased) → reserved for HIT2 relative analysis only, NOT
   headline enrichment. Full LIT-PCBA (unistra) was 404 at fetch time. PUBLIC/OPEN; never committed.
+
+## FRONT1 front-half inputs (chokepoint cache + human core-essential genes)
+- $INTERCEPTA_DATA/front1/chokepoints.tsv — metabolic chokepoint genes per bacterium, computed by build_chokepoint.py from
+  the MET2 CarveMe GEMs (COBRApy stoichiometry pass; regenerable). Deterministic.
+- $INTERCEPTA_DATA/front1/CEGv2.txt — Hart lab CEG2 human core-essential genes (684 gene symbols; github hart-lab/bagel,
+  fetched 2026-08-04) — H2 host-toxicity ground truth. Human proteome = existing tid1/proteomes/human.fasta (UniProt, GN=).
+  PUBLIC/OPEN; never committed.

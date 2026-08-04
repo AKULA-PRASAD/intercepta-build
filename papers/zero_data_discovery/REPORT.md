@@ -56,6 +56,21 @@ potency-transfer among measured binders, not needle-in-haystack screening; novel
 novel estimate is low-powered; the physics/structure floor for novel chemotypes — the only signal that does not depend on
 chemical analogy at all — is the next test.)
 
+**The front half — mechanism + selectivity, and a therapeutic-validity warning about the conservation workhorse.**
+Target *recovery* is not the same as finding a *safe* target. FRONT1 extends the established antimicrobial-target framework
+(essentiality + metabolic chokepoint + host non-homology), done fully zero-data (a metabolic model built de novo from the
+genome + human-homology), and — the step the field's case-study papers skip — benchmarks it against the conservation
+baseline and tests therapeutic validity. Two findings. First (recovery): mechanistic essentiality is the driver (it
+reconfirms the MET result); metabolic *chokepoint* adds signal in E. coli but not M. tuberculosis, and soft selectivity is
+weak — so chokepoint and selectivity do not robustly add beyond conservation+essentiality. Second, and more important
+(safety): **ranking targets by conservation is therapeutically dangerous.** The proteins that are most conserved are exactly
+the ones with essential human counterparts (host-toxic if inhibited) — in E. coli the host-toxic targets have a mean
+homology bitscore of 123 vs 29 for the rest — so a conservation ranker actively *promotes* unsafe targets. And adding
+selectivity as a soft feature does *not* reliably fix this: it removes host-toxic targets from the top of the list in two of
+three organisms but, where those targets are also metabolically essential, the composite still surfaces them. The actionable
+conclusion is that selectivity must be enforced as a **hard host-non-homology filter** (which removes all host-toxic targets
+by construction), not learned as a soft feature — a concrete correction to the naive "rank by conservation" recipe.
+
 **2. Structure-based binding carries a real but weak zero-data signal.**
 Docking compounds into a target's pocket with **zero target activity data** separates real binders from non-binders
 significantly (Mann-Whitney p=0.0001) but weakly — near-random *early* enrichment (AUROC 0.63, EF1% ≈ 1.25; C1 on

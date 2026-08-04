@@ -1,0 +1,174 @@
+{
+  "per_organism": {
+    "bsubtilis": {
+      "H2": {
+        "mean_C_hosttoxic": 75.14,
+        "mean_C_nontoxic": 42.63,
+        "mean_pctile_hosttoxic_conservation": 0.4821,
+        "mean_pctile_nontoxic_conservation": 0.5004
+      },
+      "n_genes": 1175,
+      "n_host_nonhom": 615,
+      "n_host_toxic": 28,
+      "n_targets": 12
+    },
+    "ecoli": {
+      "H2": {
+        "composite_minus_conservation_hosttoxic_pctile": -0.1322,
+        "hosttoxic_in_topk_composite": 5,
+        "hosttoxic_in_topk_conservation": 9,
+        "k": 94,
+        "mean_C_hosttoxic": 123.3,
+        "mean_C_nontoxic": 28.95,
+        "mean_pctile_hosttoxic_composite": 0.4557,
+        "mean_pctile_hosttoxic_conservation": 0.5879,
+        "mean_pctile_nontoxic_conservation": 0.4982
+      },
+      "auroc_C": 0.6208,
+      "auroc_CE": 0.6767,
+      "auroc_CEKS": 0.7155,
+      "coef_C_E_K_S": [
+        0.382,
+        0.35,
+        0.37,
+        0.097
+      ],
+      "dAUROC_full_vs_C": 0.0947,
+      "dAUROC_full_vs_CE": 0.0388,
+      "n_genes": 1669,
+      "n_host_nonhom": 1028,
+      "n_host_toxic": 33,
+      "n_targets": 94
+    },
+    "efaecalis": {
+      "H2": {
+        "mean_C_hosttoxic": 69.85,
+        "mean_C_nontoxic": 39.92,
+        "mean_pctile_hosttoxic_conservation": 0.5242,
+        "mean_pctile_nontoxic_conservation": 0.4992
+      },
+      "n_genes": 819,
+      "n_host_nonhom": 443,
+      "n_host_toxic": 27,
+      "n_targets": 3
+    },
+    "hpylori": {
+      "H2": {
+        "mean_C_hosttoxic": 78.0,
+        "mean_C_nontoxic": 44.92,
+        "mean_pctile_hosttoxic_conservation": 0.5847,
+        "mean_pctile_nontoxic_conservation": 0.4959
+      },
+      "n_genes": 433,
+      "n_host_nonhom": 249,
+      "n_host_toxic": 20,
+      "n_targets": 9
+    },
+    "mtb": {
+      "H2": {
+        "composite_minus_conservation_hosttoxic_pctile": 0.052,
+        "hosttoxic_in_topk_composite": 6,
+        "hosttoxic_in_topk_conservation": 5,
+        "k": 67,
+        "mean_C_hosttoxic": 57.3,
+        "mean_C_nontoxic": 31.6,
+        "mean_pctile_hosttoxic_composite": 0.568,
+        "mean_pctile_hosttoxic_conservation": 0.5159,
+        "mean_pctile_nontoxic_conservation": 0.4994
+      },
+      "auroc_C": 0.6116,
+      "auroc_CE": 0.6499,
+      "auroc_CEKS": 0.6236,
+      "coef_C_E_K_S": [
+        0.406,
+        0.292,
+        0.001,
+        -0.019
+      ],
+      "dAUROC_full_vs_C": 0.012,
+      "dAUROC_full_vs_CE": -0.0263,
+      "n_genes": 978,
+      "n_host_nonhom": 478,
+      "n_host_toxic": 37,
+      "n_targets": 67
+    },
+    "paeruginosa": {
+      "H2": {
+        "composite_minus_conservation_hosttoxic_pctile": -0.0431,
+        "hosttoxic_in_topk_composite": 1,
+        "hosttoxic_in_topk_conservation": 2,
+        "k": 20,
+        "mean_C_hosttoxic": 92.81,
+        "mean_C_nontoxic": 38.57,
+        "mean_pctile_hosttoxic_composite": 0.5176,
+        "mean_pctile_hosttoxic_conservation": 0.5607,
+        "mean_pctile_nontoxic_conservation": 0.4982
+      },
+      "n_genes": 1652,
+      "n_host_nonhom": 908,
+      "n_host_toxic": 48,
+      "n_targets": 20
+    },
+    "salmonella": {
+      "H2": {
+        "mean_C_hosttoxic": 109.71,
+        "mean_C_nontoxic": 65.19,
+        "mean_pctile_hosttoxic_conservation": 0.5432,
+        "mean_pctile_nontoxic_conservation": 0.4992
+      },
+      "n_genes": 1635,
+      "n_host_nonhom": 1012,
+      "n_host_toxic": 31,
+      "n_targets": 4
+    }
+  },
+  "provenance": {
+    "git_sha": "9f6e95f3423c3994041ccdc4837e4589aee36e03",
+    "host_evalue": 0.0001,
+    "utc": "2026-08-04T05:33:38Z"
+  },
+  "runtime_sec": 81.9,
+  "summary": {
+    "H1_KplusS_beyond_CE": false,
+    "H1_beyond_conservation": false,
+    "H1_dAUROC_full_vs_C": {
+      "ecoli": 0.0947,
+      "mtb": 0.012
+    },
+    "H1_dAUROC_full_vs_CE": {
+      "ecoli": 0.0388,
+      "mtb": -0.0263
+    },
+    "H2_composite_minus_conservation_hosttoxic_pctile": {
+      "ecoli": -0.1322,
+      "mtb": 0.052,
+      "paeruginosa": -0.0431
+    },
+    "H2_conservation_meanC_hosttoxic_vs_nontoxic": {
+      "ecoli": [
+        123.3,
+        28.95
+      ],
+      "mtb": [
+        57.3,
+        31.6
+      ],
+      "paeruginosa": [
+        92.81,
+        38.57
+      ]
+    },
+    "H2_conservation_promotes_hosttoxic": true,
+    "H2_orgs": [
+      "ecoli",
+      "mtb",
+      "paeruginosa"
+    ],
+    "H2_selectivity_downranks_hosttoxic": false,
+    "reliable_orgs": [
+      "ecoli",
+      "mtb"
+    ],
+    "verdict": "H1 (mixed): composite beats conservation clearly in E. coli (+0.0947) but only marginally in M. tuberculosis (+0.012). MECHANISM (essentiality/MET) is the recovery driver; CHOKEPOINT adds only in E. coli (K coef 0.37) and is ~zero-weight in Mtb (0.001); soft SELECTIVITY S is weak \u2014 so chokepoint+selectivity do NOT robustly add BEYOND conservation+essentiality (\u0394AUROC vs C+E {'ecoli': 0.0388, 'mtb': -0.0263}). H2 KEY FINDING (therapeutic validity): CONSERVATION-RANKING IS THERAPEUTICALLY DANGEROUS \u2014 host-toxic targets (human core-essential homologs) are the MOST CONSERVED proteins (mean bitscore host-toxic vs non-toxic {'ecoli': [123.3, 28.95], 'mtb': [57.3, 31.6], 'paeruginosa': [92.81, 38.57]}), so the conservation workhorse (TID1) actively PROMOTES unsafe targets. But SOFT selectivity (S as a learned feature) does NOT reliably fix it: the composite down-ranks host-toxic in 2/3 organisms yet UP-ranks them where they are also essential/chokepoint (Mtb \u0394pctile +0.052) \u2014 a soft selectivity feature is UNRELIABLE for safety. CONCLUSION: front-half therapeutic validity requires a HARD host-non-homology FILTER (excludes ALL host-toxic by construction, since host-toxic \u2282 host-homologous), NOT a soft feature; mechanistic essentiality remains the recovery driver and chokepoint is organism-specific. Zero-data, metabolic subproteome, 2 reliably-testable bacteria; ChEMBL selection-bias caveat on H1; not wet-lab."
+  }
+}

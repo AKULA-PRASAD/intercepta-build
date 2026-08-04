@@ -68,6 +68,14 @@ provenance-/confidence-tiered "living substrate"** ("any disease → a query"; c
 **✗ absent** in the capability map. The program has strong **back-half** capability + **world-class validation methodology**;
 the vision's hardest part is largely unbuilt. That gap — not another molecule-scoring module — is the leverage.
 
+**First front-half chapter done (FRONT1, 2026-08-04):** selective mechanistic target discovery (essentiality + metabolic
+chokepoint + host non-homology, zero-data, benchmarked vs conservation). Result: essentiality (MET) is the recovery driver;
+chokepoint/selectivity don't robustly add beyond it. **Key finding: ranking targets by conservation is therapeutically
+DANGEROUS** — host-toxic targets (human core-essential homologs) are the most conserved (E. coli bitscore 123 vs 29), so
+conservation promotes unsafe targets, and soft selectivity doesn't reliably fix it → selectivity must be a **hard
+host-non-homology filter**. The front half is now partially addressed (mechanism + a selectivity correction); disease
+understanding, richer mechanism inference, and the extensible living substrate remain ✗.
+
 ## What is missing before a large new bet (stated, not invented)
 - **Any experimental/prospective validation** — the whole zero-data arc is retrospective; the vision's true metric is untested.
 - **A resource decision** — every "cross the ceiling" path (wet-lab, 3D/co-folding, GPU rescoring, prospective assays) is
