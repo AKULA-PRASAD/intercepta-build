@@ -76,6 +76,12 @@ conservation promotes unsafe targets, and soft selectivity doesn't reliably fix 
 host-non-homology filter**. The front half is now partially addressed (mechanism + a selectivity correction); disease
 understanding, richer mechanism inference, and the extensible living substrate remain ✗.
 
+**Corrected pipeline built (E2E2, 2026-08-04):** mechanistic essentiality + hard host-non-homology filter + calibrated
+abstention. Result is an honest tension both recipes get wrong: naive conservation ranking is UNSAFE (shortlists 5–9
+host-toxic targets); the hard-filter fix is SAFE (0 host-toxic) but OVER-EXCLUDES 35–52% of real known targets (those with
+human homologs, many drugged selectively in reality). True selectivity needs binding-site-level pathogen-vs-host reasoning
+(structure), which sequence homology can't provide — the information ceiling in a new place.
+
 ## What is missing before a large new bet (stated, not invented)
 - **Any experimental/prospective validation** — the whole zero-data arc is retrospective; the vision's true metric is untested.
 - **A resource decision** — every "cross the ceiling" path (wet-lab, 3D/co-folding, GPU rescoring, prospective assays) is

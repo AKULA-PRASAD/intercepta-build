@@ -71,6 +71,17 @@ three organisms but, where those targets are also metabolically essential, the c
 conclusion is that selectivity must be enforced as a **hard host-non-homology filter** (which removes all host-toxic targets
 by construction), not learned as a soft feature — a concrete correction to the naive "rank by conservation" recipe.
 
+Building that correction into the pipeline (E2E2) then exposes an honest tension that *both* recipes get wrong. The
+corrected pipeline (mechanistic essentiality + hard host-non-homology filter + calibrated abstention) is safe by
+construction — its shortlist contains no host-toxic targets, whereas the naive conservation shortlist would include several.
+At the top of the list the recall looks nearly preserved. But the deeper cost is large and structural: a blunt
+sequence-level host-non-homology filter *permanently excludes* 35–52% of all known drug targets — the ones that have a human
+homolog — from the searchable space, even though many such targets are drugged *selectively* in practice by exploiting
+binding-site differences a sequence filter cannot see. So neither recipe is right: ranking by conservation is unsafe, and
+the sequence-level safety fix over-excludes. Genuinely correct selectivity requires binding-site-level pathogen-vs-host
+difference reasoning — structural, not sequence-homology — which sequence transfer cannot provide. It is the same
+information ceiling in a new place: sequence is enough to flag danger crudely, but not to reason about true selectivity.
+
 **2. Structure-based binding carries a real but weak zero-data signal.**
 Docking compounds into a target's pocket with **zero target activity data** separates real binders from non-binders
 significantly (Mann-Whitney p=0.0001) but weakly — near-random *early* enrichment (AUROC 0.63, EF1% ≈ 1.25; C1 on

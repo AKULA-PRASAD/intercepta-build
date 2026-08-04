@@ -1,0 +1,66 @@
+{
+  "per_organism": {
+    "ecoli": {
+      "RECALL_targets_in_topk_corrected": 26,
+      "RECALL_targets_in_topk_naive": 26,
+      "SAFETY_hosttoxic_in_topk_corrected": 0,
+      "SAFETY_hosttoxic_in_topk_naive": 9,
+      "abstain_target_rate": 0.0412,
+      "committed_target_rate": 0.1303,
+      "known_target_host_homolog_frac": 0.351,
+      "n_abstain_no_homolog": 1385,
+      "n_genes": 1669,
+      "n_host_nonhom": 1028,
+      "n_host_toxic": 33,
+      "n_known_targets_host_homologous": 33,
+      "n_targets": 94,
+      "precision_at_k_corrected": 0.2766,
+      "precision_at_k_naive": 0.2766
+    },
+    "mtb": {
+      "RECALL_targets_in_topk_corrected": 13,
+      "RECALL_targets_in_topk_naive": 16,
+      "SAFETY_hosttoxic_in_topk_corrected": 0,
+      "SAFETY_hosttoxic_in_topk_naive": 5,
+      "abstain_target_rate": 0.0497,
+      "committed_target_rate": 0.1355,
+      "known_target_host_homolog_frac": 0.522,
+      "n_abstain_no_homolog": 764,
+      "n_genes": 978,
+      "n_host_nonhom": 478,
+      "n_host_toxic": 37,
+      "n_known_targets_host_homologous": 35,
+      "n_targets": 67,
+      "precision_at_k_corrected": 0.194,
+      "precision_at_k_naive": 0.2388
+    }
+  },
+  "provenance": {
+    "git_sha": "67558aaafc6379e66f1b4ead9a62d7e2dab8f3fc",
+    "host_evalue": 0.0001,
+    "utc": "2026-08-04T05:44:22Z"
+  },
+  "runtime_sec": 25.2,
+  "summary": {
+    "SAFETY_hosttoxic_removed_from_topk": {
+      "ecoli": 9,
+      "mtb": 5
+    },
+    "abstention_calibrated": true,
+    "corrected_all_safe": true,
+    "hardfilter_over_excludes_real_targets": true,
+    "known_targets_EXCLUDED_by_hardfilter_frac": {
+      "ecoli": 0.351,
+      "mtb": 0.522
+    },
+    "organisms": [
+      "mtb",
+      "ecoli"
+    ],
+    "topk_RECALL_corrected_over_naive": {
+      "ecoli": 1.0,
+      "mtb": 0.812
+    },
+    "verdict": "HONEST TENSION (both naive and hard-filter are wrong in different ways). SAFETY: the corrected pipeline is safe by construction (0 host-toxic in top-k both orgs) whereas the NAIVE conservation shortlist would include {'mtb': 5, 'ecoli': 9} host-toxic (human-essential-homolog) targets \u2014 a real safety gain. TOP-K RECALL looks nearly preserved (corrected/naive {'mtb': 0.812, 'ecoli': 1.0}; precision@k mtb 0.2388->0.194, ecoli 0.2766->0.2766). BUT THE REAL COST IS LARGE AND STRUCTURAL: a blunt sequence-level host-non-homology hard filter PERMANENTLY EXCLUDES {'mtb': 0.522, 'ecoli': 0.351} of ALL known drug targets (those WITH a human homolog) from the searchable space \u2014 the pipeline can NEVER find them. Top-k recall only looks preserved because base recall is low and the surviving host-non-homologous targets rank well mechanistically. Many host-homologous targets ARE drugged SELECTIVELY in reality by exploiting binding-site differences a sequence filter cannot see. NET: naive-conservation is UNSAFE (promotes host-toxic); the hard filter is SAFE but OVER-EXCLUDES 52% of real targets; the genuinely correct selectivity needs BINDING-SITE-level pathogen-vs-host difference reasoning (structure, not sequence homology) \u2014 which sequence transfer cannot provide (another instance of the information ceiling). Abstention IS calibrated (no-homolog genes are target-poor). SCOPE: metabolic subproteome; 2 bacteria; unsupervised zero-label composite; ChEMBL selection-bias likely UNDER-estimates exclusion for a truly novel pathogen; molecule-half stage weak (C1/HIT2); not wet-lab."
+  }
+}
