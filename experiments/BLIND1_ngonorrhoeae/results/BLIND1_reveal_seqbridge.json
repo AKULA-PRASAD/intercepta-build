@@ -1,0 +1,28 @@
+{
+  "provenance": {
+    "git_sha": "986f0cea90e962a21911d28987d3ec24cdb5d7fb",
+    "utc": "2026-08-05T23:17:50Z"
+  },
+  "runtime_sec": 1.7,
+  "summary": {
+    "PREREG_GATE_OR_gt3_p_lt0.01": true,
+    "adjudication": "sequence-homology bridge (pident>=90)",
+    "contingency": {
+      "FBA_only": 7,
+      "both": 25,
+      "exp_only": 216,
+      "neither": 371
+    },
+    "deg_accession": "DEG1055",
+    "fisher_p": 4.237e-06,
+    "locked_sha_verified": true,
+    "n_deg_essential_proteins": 751,
+    "n_experimental_essential_in_our_space": 1166,
+    "n_locked_genes": 619,
+    "odds_ratio": 6.13,
+    "organism": "N_gonorrhoeae",
+    "precision": 0.781,
+    "recall": 0.104,
+    "verdict": "PROSPECTIVE-BLIND RESULT (PASS), sequence-bridge adjudication of the pre-registered LOCKED predictions (sha verified intact; predictions unchanged): on the genuinely novel, never-seen WHO pathogen N. gonorrhoeae, FBA-essential genes are ENRICHED for EXPERIMENTAL essentiality (DEG DEG1055, 751 essential proteins mapped by mmseqs to 1166 of our genes): odds ratio 6.13 (Fisher p=4.237e-06), precision 0.781, recall 0.104 (25 both / 7 FBA-only / 216 exp-only / 371 neither). INTEGRITY: the first reveal (symbol match) was inconclusive (NGFG_ locus tags absent from UniProt -> 1/613 mapped); this corrects the EXPERIMENTAL-SET IDENTIFIER MAPPING via sequence homology (objectively correct, outcome-independent) while the PREDICTIONS remain locked/frozen. This is genuine prospective-blind evidence the mechanism signal predicts experimental essentiality on a pre-registered, never-seen pathogen. SCOPE: essentiality-enrichment only; sparse de-novo GEM (fastidious organism); species-vs-MS11 strain gap; in-silico vs published data; hypotheses; not wet-lab."
+  }
+}

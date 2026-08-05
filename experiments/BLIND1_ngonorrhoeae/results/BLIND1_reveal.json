@@ -1,0 +1,27 @@
+{
+  "provenance": {
+    "git_sha": "986f0cea90e962a21911d28987d3ec24cdb5d7fb",
+    "utc": "2026-08-05T23:10:49Z"
+  },
+  "runtime_sec": 0.5,
+  "summary": {
+    "PREREG_GATE_OR_gt3_p_lt0.01": false,
+    "contingency": {
+      "FBA_only": 32,
+      "both": 0,
+      "exp_only": 1,
+      "neither": 580
+    },
+    "deg_accession": "DEG1055",
+    "fisher_p": 1.0,
+    "locked_sha_verified": true,
+    "n_adjudicable": 613,
+    "n_experimental_essential_mapped": 1,
+    "n_locked_genes": 619,
+    "odds_ratio": 0.0,
+    "organism": "N_gonorrhoeae",
+    "precision": 0.0,
+    "recall": 0.0,
+    "verdict": "PROSPECTIVE-BLIND RESULT (FAIL): the pre-registered, LOCKED FBA-essentiality predictions for the genuinely novel WHO pathogen N. gonorrhoeae (committed before any experimental data; lock sha verified intact) are NOT sufficiently enriched for EXPERIMENTAL essentiality (DEG DEG1055): odds ratio 0.0 (Fisher p=1.0), precision 0.0, recall 0.0 over 613 adjudicable genes (0 both / 32 FBA-only / 1 exp-only / 580 neither). Honest NEGATIVE, reported as pre-registered: the locked predictions did not clear the gate on this fastidious organism's sparse de-novo GEM \u2014 a real deployment limitation, not re-run to a better number. SCOPE: essentiality-enrichment only; species-level proteome vs MS11 experimental set; de-novo GEM; in-silico vs published data; hypotheses; not wet-lab."
+  }
+}

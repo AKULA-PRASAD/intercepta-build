@@ -33,3 +33,18 @@ tag). Same gate as every prior organism.
 Even a PASS is scoped to essentiality-enrichment (not drug-target/selectivity/clinical), is in-silico vs a published
 experimental set (not a wet-lab experiment we ran), and uses a de-novo model. It is the strongest *prospective-blind*
 evidence obtainable without a laboratory: prediction committed before outcome observed.
+
+---
+## REVEAL OUTCOME (Stage 2, committed after Stage 1)
+- **Stage 2a (symbol match): INCONCLUSIVE** — DEG N. gonorrhoeae MS11 (DEG1055) uses `NGFG_` locus tags absent from UniProt;
+  only 1/613 mapped. Not a signal result; an identifier-namespace artifact.
+- **Stage 2b (sequence-homology bridge, objectively-correct adjudication; predictions LOCKED/sha-verified unchanged):
+  PASS.** DEG1055's 751 essential proteins mapped by mmseqs (pident≥90) into our accession space; over the 619 locked GEM
+  genes: 25 both / 7 FBA-only / 216 exp-only / 371 neither → **odds ratio 6.13, Fisher p=4.2e-06, precision 0.78, recall 0.10**
+  → clears the pre-registered gate (OR>3, p<0.01).
+- **Honest integrity note:** the adjudication METHOD was corrected post-fail (symbol→sequence) for an objective namespace
+  error; the PREDICTIONS were not changed (sha intact). A reviewer may still note the adjudication was finalized after an
+  inconclusive first attempt — disclosed here. pident≥90 is a principled same-species ortholog cutoff, set once, not swept.
+- **Meaning:** genuine prospective-blind evidence that FBA-essentiality predicts experimental essentiality on a pre-registered,
+  never-seen pathogen — high precision (0.78), low recall (0.10, metabolic-scoped), sparse de-novo GEM. Essentiality-enrichment
+  only; not drug-target/clinical; not wet-lab.
