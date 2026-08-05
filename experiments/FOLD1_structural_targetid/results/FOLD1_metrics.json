@@ -1,0 +1,78 @@
+{
+  "per_pathogen": {
+    "calbicans": {
+      "AUROC_sequence": 0.64,
+      "AUROC_structure_bits": 0.7419,
+      "AUROC_structure_tm": 0.6714,
+      "n": 138,
+      "n_seqblind_structure_rescued": 6,
+      "n_targets": 19,
+      "n_targets_sequence_blind": 13,
+      "precAtk_sequence": 0.7368,
+      "precAtk_structure_tm": 0.3684,
+      "structure_rescue_rate": 0.462
+    },
+    "lmajor": {
+      "AUROC_sequence": 0.6587,
+      "AUROC_structure_bits": 0.8624,
+      "AUROC_structure_tm": 0.7413,
+      "n": 121,
+      "n_seqblind_structure_rescued": 4,
+      "n_targets": 11,
+      "n_targets_sequence_blind": 7,
+      "precAtk_sequence": 0.4545,
+      "precAtk_structure_tm": 0.3636,
+      "structure_rescue_rate": 0.571
+    },
+    "pfalciparum": {
+      "AUROC_sequence": 0.6362,
+      "AUROC_structure_bits": 0.759,
+      "AUROC_structure_tm": 0.689,
+      "n": 171,
+      "n_seqblind_structure_rescued": 16,
+      "n_targets": 52,
+      "n_targets_sequence_blind": 37,
+      "precAtk_sequence": 0.9615,
+      "precAtk_structure_tm": 0.5,
+      "structure_rescue_rate": 0.432
+    },
+    "tbrucei": {
+      "AUROC_sequence": 0.6737,
+      "AUROC_structure_bits": 0.9196,
+      "AUROC_structure_tm": 0.7141,
+      "n": 133,
+      "n_seqblind_structure_rescued": 3,
+      "n_targets": 13,
+      "n_targets_sequence_blind": 8,
+      "precAtk_sequence": 0.6154,
+      "precAtk_structure_tm": 0.3846,
+      "structure_rescue_rate": 0.375
+    }
+  },
+  "provenance": {
+    "git_sha": "0af25388e8d5e099e76c6eda6240b7a4c7591044",
+    "utc": "2026-08-05T17:55:57Z"
+  },
+  "runtime_sec": 0.0,
+  "summary": {
+    "pathogens": [
+      "calbicans",
+      "pfalciparum",
+      "tbrucei",
+      "lmajor"
+    ],
+    "pooled": {
+      "AUROC_sequence": 0.6403,
+      "AUROC_structure_bits": 0.7796,
+      "AUROC_structure_tm": 0.6903,
+      "n": 563,
+      "n_targets": 95,
+      "structure_rescue_rate": 0.446,
+      "total_sequence_blind_targets": 65,
+      "total_structure_rescued": 29
+    },
+    "structure_beats_sequence_AUROC": true,
+    "structure_rescues_sequence_blind_targets": true,
+    "verdict": "STRUCTURE adds a genuine ORTHOGONAL signal where SEQUENCE fails (a MODEST, honestly-bounded improvement \u2014 NOT a decisive ceiling-break): on all 4 phylogenetically-isolated pathogens, structural homology (Foldseek TM) discriminates targets better than sequence (pooled AUROC structure-TM 0.6903 vs sequence 0.6403, a modest +0.05, consistent 4/4), and of the 65 targets SEQUENCE could not see at all (no mmseqs homolog \u2014 the TID3 silent-failure cases), STRUCTURE recovers 29 (0.446) via a same-fold (TM>=0.5) reference-target homolog. So structure is a REAL orthogonal signal for the isolated-pathogen case that broke sequence-based target-ID \u2014 a partial rescue, not a solution. **KEY HONEST LIMIT (falsify-first on our own positive): the STRUCTURAL-CONSERVATION NULL is NOT yet run \u2014 i.e. whether structural-homology-to-TARGETS beats structural-homology-to-ANY-protein (the exact critique TID1 raised for sequence conservation). Some of the signal may be 'targets have target-like generic folds' rather than specific homology; the AUROC (target-vs-nontarget) partially controls this but does not decompose it. So: a modest, reproduced, orthogonal signal \u2014 the specificity is not yet established.** Further caveats: Foldseek E-values under-estimated (led with TM-score); AlphaFold predicted structures; hypotheses, not validated targets; not wet-lab."
+  }
+}

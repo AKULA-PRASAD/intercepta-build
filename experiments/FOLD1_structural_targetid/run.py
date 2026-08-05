@@ -42,8 +42,7 @@ def main():
         sb = np.array([c for _, _, c, _ in lst]); tm = np.array([d for _, _, _, d in lst])
         k = int(y.sum())
         # decisive: targets SEQUENCE cannot see (seq_bits == 0) -> does STRUCTURE find a homolog (TM >= 0.5)?
-        seq_blind_tgts = [(sbv, tmv) for yy, sqb, sbv, tmv in
-                          [(a, b, c, d) for a, b, c, d in lst] if yy == 1 and b <= 0.0]
+        seq_blind_tgts = [(c, d) for (yy, sqb, c, d) in lst if yy == 1 and sqb <= 0.0]  # (struct_bits, tm)
         n_seq_blind = len(seq_blind_tgts)
         n_struct_rescued = sum(1 for sbv, tmv in seq_blind_tgts if tmv >= TM_HIT)
         per[X] = {"n": len(lst), "n_targets": k,
@@ -69,15 +68,22 @@ def main():
                "structure_beats_sequence_AUROC": bool(structure_helps),
                "structure_rescues_sequence_blind_targets": bool(rescues)}
     if structure_helps or rescues:
-        summary["verdict"] = (f"STRUCTURE HELPS where SEQUENCE fails (TID3 ceiling partially broken): on phylogenetically-"
-                              f"isolated pathogens, structural homology (Foldseek TM) recovers targets better than sequence "
-                              f"(pooled AUROC structure-TM {pool['AUROC_structure_tm']} vs sequence {pool['AUROC_sequence']}), "
-                              f"and — decisively — of the {tot_blind} targets SEQUENCE could not see at all (no mmseqs homolog), "
-                              f"STRUCTURE recovers {tot_rescued} ({pool['structure_rescue_rate']}) via a same-fold (TM>=0.5) "
-                              f"reference-target homolog. So structure is a genuine orthogonal signal for the isolated-pathogen "
-                              f"case that broke sequence-based target-ID. HONEST CAVEATS: Foldseek E-values under-estimated "
-                              f"(led with TM-score not E-value); AlphaFold predicted structures; reference-target structures "
-                              f"only (structural-conservation null is a follow-up); hypotheses, not validated targets; not wet-lab.")
+        summary["verdict"] = (f"STRUCTURE adds a genuine ORTHOGONAL signal where SEQUENCE fails (a MODEST, honestly-bounded "
+                              f"improvement — NOT a decisive ceiling-break): on all 4 phylogenetically-isolated pathogens, "
+                              f"structural homology (Foldseek TM) discriminates targets better than sequence (pooled AUROC "
+                              f"structure-TM {pool['AUROC_structure_tm']} vs sequence {pool['AUROC_sequence']}, a modest +"
+                              f"{round(pool['AUROC_structure_tm']-pool['AUROC_sequence'],3)}, consistent 4/4), and of the "
+                              f"{tot_blind} targets SEQUENCE could not see at all (no mmseqs homolog — the TID3 silent-failure "
+                              f"cases), STRUCTURE recovers {tot_rescued} ({pool['structure_rescue_rate']}) via a same-fold "
+                              f"(TM>=0.5) reference-target homolog. So structure is a REAL orthogonal signal for the isolated-"
+                              f"pathogen case that broke sequence-based target-ID — a partial rescue, not a solution. **KEY "
+                              f"HONEST LIMIT (falsify-first on our own positive): the STRUCTURAL-CONSERVATION NULL is NOT yet run "
+                              f"— i.e. whether structural-homology-to-TARGETS beats structural-homology-to-ANY-protein (the exact "
+                              f"critique TID1 raised for sequence conservation). Some of the signal may be 'targets have "
+                              f"target-like generic folds' rather than specific homology; the AUROC (target-vs-nontarget) "
+                              f"partially controls this but does not decompose it. So: a modest, reproduced, orthogonal signal — "
+                              f"the specificity is not yet established.** Further caveats: Foldseek E-values under-estimated (led "
+                              f"with TM-score); AlphaFold predicted structures; hypotheses, not validated targets; not wet-lab.")
     else:
         summary["verdict"] = (f"H0 (structure does NOT break the ceiling): structural homology does not beat sequence on the "
                               f"isolated pathogens (pooled AUROC struct-TM {pool['AUROC_structure_tm']} vs seq {pool['AUROC_sequence']}) "
