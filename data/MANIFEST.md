@@ -221,3 +221,9 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## ENGINE A. baumannii multi-axis run (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/engine/abaumannii_breadth.tsv, $INTERCEPTA_DATA/synleth/abaumannii_condition_robust.tsv — AB-native
   conservation-breadth (mmseqs vs 7-panel) + condition-robustness (multi-medium FBA on the AB CarveMe GEM). Regenerable.
+
+## SAUREUS Gram-positive generalization (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/newbug3/saureus.fasta — S. aureus NCTC 8325 proteome (UniProt taxid 93061, 2891 proteins).
+- $INTERCEPTA_DATA/newbug3/saureus.xml — de-novo CarveMe GEM (860 genes). Regenerable. Essential-gene truth = DEG1032
+  (S. aureus NCTC 8325, TMDH/Tn-based) from the DEG bulk download. engine/synleth S. aureus breadth/resistance/condition
+  are derived. PUBLIC/OPEN; never committed.
