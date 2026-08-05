@@ -1,0 +1,166 @@
+{
+  "provenance": {
+    "git_sha": "67bd678a071c98f5b4017f2e4f2022fe7378a6cc",
+    "utc": "2026-08-05T21:47:44Z"
+  },
+  "runtime_sec": 46.9,
+  "summary": {
+    "ecoli_transfer_agreement_on_nominated": {
+      "detail": [
+        {
+          "agree": true,
+          "ecoli_transfer": "monotherapy_robust",
+          "gene": "murb",
+          "native_kp": "monotherapy_robust"
+        },
+        {
+          "agree": true,
+          "ecoli_transfer": "monotherapy_robust",
+          "gene": "murg",
+          "native_kp": "monotherapy_robust"
+        },
+        {
+          "agree": true,
+          "ecoli_transfer": "monotherapy_robust",
+          "gene": "murf",
+          "native_kp": "monotherapy_robust"
+        },
+        {
+          "agree": true,
+          "ecoli_transfer": "monotherapy_robust",
+          "gene": "ispe",
+          "native_kp": "monotherapy_robust"
+        },
+        {
+          "agree": true,
+          "ecoli_transfer": "monotherapy_robust",
+          "gene": "ispg",
+          "native_kp": "monotherapy_robust"
+        },
+        {
+          "agree": true,
+          "ecoli_transfer": "monotherapy_robust",
+          "gene": "coad",
+          "native_kp": "monotherapy_robust"
+        },
+        {
+          "agree": true,
+          "ecoli_transfer": "non_essential",
+          "gene": "menc",
+          "native_kp": "non_essential"
+        },
+        {
+          "agree": true,
+          "ecoli_transfer": "monotherapy_robust",
+          "gene": "mray",
+          "native_kp": "monotherapy_robust"
+        }
+      ],
+      "n_agree_on_monotherapy_robust": 8,
+      "n_compared": 8
+    },
+    "organisms": {
+      "abaumannii": {
+        "ess_gene_accs": [
+          "A0A7U3Y3V4",
+          "A0A7U3Y4P5",
+          "A0A7U3Y4T1",
+          "A0A7U3Y5E8",
+          "A0A7U3Y5M7",
+          "A0A7U3Y5M9",
+          "A0A7U3Y6P4",
+          "A0A7U3Y7J1",
+          "A0A7U3Y7K0",
+          "A0A7U3Y7V8",
+          "A0A7U3Y896",
+          "A0A7U3Y8E8",
+          "A0A7U3Y8K9",
+          "A0A7U3Y8V9",
+          "A0A7U3Y9D0",
+          "A0A7U3Y9F0",
+          "A0A7U3Y9R9",
+          "A0A7U4DFD0",
+          "A0A7U4DFK0",
+          "A0A7U4DGF0",
+          "A0A7U4DGX3",
+          "A0A7U4DHE6",
+          "A0A7U4DHN4",
+          "A0A7U4DI43",
+          "A0A7U4DI82",
+          "B7I4U0",
+          "B7I585",
+          "B7I5G7",
+          "B7I784",
+          "B7I7P3",
+          "B7I9U9",
+          "B7I9W0",
+          "B7IAW6",
+          "B7ICE5"
+        ],
+        "n_combination_required": 1,
+        "n_essential_genes": 34,
+        "n_essential_reactions": 48,
+        "n_genes": 1138,
+        "n_monotherapy_functions": 36,
+        "verified": {
+          "checked": 1,
+          "confirmed": 1
+        },
+        "wt": 92.755
+      },
+      "kpneumoniae": {
+        "ess_gene_accs": [
+          "A6T4F9",
+          "A6T4M9",
+          "A6T4N0",
+          "A6T4N3",
+          "A6T4P5",
+          "A6T4T1",
+          "A6T4X5",
+          "A6T4X6",
+          "A6T5E7",
+          "A6T5E8",
+          "A6T5F3",
+          "A6T5F4",
+          "A6T5N7",
+          "A6T7F8",
+          "A6T7Y5",
+          "A6T8L1",
+          "A6T9Y6",
+          "A6TAP2",
+          "A6TBN8",
+          "A6TBV6",
+          "A6TC01",
+          "A6TCD4",
+          "A6TCM2",
+          "A6TD38",
+          "A6TD39",
+          "A6TDV1",
+          "A6TE29",
+          "A6TE37",
+          "A6TEJ6",
+          "A6TEK6",
+          "A6TEK8",
+          "A6TFM5",
+          "A6TFN0",
+          "A6TFP7",
+          "A6TGC0",
+          "A6TGM9",
+          "A6TGN1",
+          "A6TGR6"
+        ],
+        "n_combination_required": 10,
+        "n_essential_genes": 38,
+        "n_essential_reactions": 59,
+        "n_genes": 1927,
+        "n_monotherapy_functions": 41,
+        "verified": {
+          "checked": 10,
+          "confirmed": 6
+        },
+        "wt": 82.333
+      }
+    },
+    "verdict": "ORGANISM-NATIVE resistance classification on the HELD-OUT pathogens' OWN GEMs (removes the E. coli transfer approximation). K. pneumoniae: 38 essential genes, 10 combination-required functions (verified 6/10). A. baumannii: 34 essential, 1 combination-required (1/1). Native per-accession classes written -> plug directly into the DiscoveryEngine (no ortholog transfer). E. coli->KP transfer agreement on nominated targets: 8/8. **HONEST BOUNDS: de-novo CarveMe GEMs on DEFAULT/complete medium give FAR FEWER essentials than curated iML1515 (rich medium masks auxotrophy) and use AUTO-generated GPRs -> this native classification is LOWER-CONFIDENCE than the iML1515 result; it is organism-native but model-quality-limited. Models metabolic bypass only; hypotheses; not wet-lab.**"
+  }
+}

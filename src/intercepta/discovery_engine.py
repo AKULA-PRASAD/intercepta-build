@@ -76,13 +76,17 @@ class DiscoveryEngine:
             eng.register(P.HostToxicSafetyProvider(proteome_fasta, human_fasta, ceg2_path, scratch))
             active.append("host_safety_filter[FRONT1/E2E2]")
         if resistance_classes_tsv and os.path.exists(resistance_classes_tsv):
-            sym2cls = {}
+            raw = {}
             for ln in open(resistance_classes_tsv).read().splitlines()[1:]:
                 p = ln.split("\t")
-                if len(p) >= 2: sym2cls[p[0].strip().lower()] = p[1].strip()
-            ent2cls = {a: sym2cls[acc2sym[a]] for a in accs if acc2sym.get(a) in sym2cls}
-            eng.register(P.ResistanceProvider(ent2cls))
-            active.append("resistance_robustness[SYNLETH1]")
+                if len(p) >= 2: raw[p[0].strip()] = p[1].strip()
+            low = {k.lower(): v for k, v in raw.items()}
+            ent2cls = {}                                   # accepts EITHER accession-keyed (native, SYNLETH2) OR symbol-keyed (transfer, SYNLETH1)
+            for a in accs:
+                if a in raw: ent2cls[a] = raw[a]                                   # organism-native accession match
+                elif acc2sym.get(a) and acc2sym[a] in low: ent2cls[a] = low[acc2sym[a]]  # ortholog-transfer symbol match
+            if ent2cls:
+                eng.register(P.ResistanceProvider(ent2cls)); active.append("resistance_robustness[SYNLETH]")
         return cls(pathogen, accs, eng, active)
 
     # ---- run --------------------------------------------------------------

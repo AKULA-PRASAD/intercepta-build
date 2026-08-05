@@ -1,7 +1,7 @@
 {
   "provenance": {
-    "git_sha": "7fa45004b805083ceb99358ff78a613b0cb49473",
-    "utc": "2026-08-05T21:42:14Z"
+    "git_sha": "67bd678a071c98f5b4017f2e4f2022fe7378a6cc",
+    "utc": "2026-08-05T21:49:54Z"
   },
   "report": {
     "active_signals": [
@@ -10,7 +10,7 @@
       "conservation_breadth[REACH1]",
       "conservation[TID1]",
       "host_safety_filter[FRONT1/E2E2]",
-      "resistance_robustness[SYNLETH1]"
+      "resistance_robustness[SYNLETH]"
     ],
     "confidence_histogram": {
       "excluded": 77,
@@ -539,5 +539,5 @@
     ],
     "shortlist_experimentally_essential_confirmed": 15
   },
-  "runtime_sec": 19.7
+  "runtime_sec": 19.5
 }
