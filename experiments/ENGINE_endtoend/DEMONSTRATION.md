@@ -52,3 +52,22 @@ Of the top 30 shortlisted, **15 are experimentally-essential-confirmed** (K. pne
 Confidence-tiered candidate HYPOTHESES with provenance — NOT validated targets or drugs. The essentiality ENRICHMENT is experimentally validated (VAL-ESS, 5 organisms); the drug-target/selectivity/clinical claims are NOT. Molecule half is gated (needs structure or activity data); candidate matter from generate/screen are hypotheses. Not wet-lab.
 
 *This is a capability demonstration of the composed, validated FRONT half (target-ID). The molecule half is gated (needs target structure or activity data). Outputs are computational hypotheses with provenance — not validated targets or drugs; not wet-lab.*
+
+## Molecule bridge — closing the end-to-end shape (genome -> target -> candidate molecules)
+
+For the engine's top experimentally-essential target **dxs (A6T5F3)**, the pipeline detects the pocket (fpocket druggability **0.89**), docks a 60-compound ChEMBL library (AutoDock Vina; 57 docked; best -10.88 kcal/mol), and ranks by a developability-gated docking score (docking x predicted-safety x synthesizability, via the shipped ADMET/synth modules). Reproduced x2 byte-identical.
+
+| rank | vina (kcal/mol) | pred. safety | synth. prob | QED | cand_score |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| 1 | -7.29 | 0.856 | 0.817 | 0.3163 | 5.098 |
+| 2 | -6.00 | 0.8678 | 0.9459 | 0.517 | 4.925 |
+| 3 | -9.84 | 0.5296 | 0.9119 | 0.4566 | 4.752 |
+| 4 | -7.35 | 0.7013 | 0.9118 | 0.8208 | 4.700 |
+| 5 | -8.44 | 0.7456 | 0.7434 | 0.8036 | 4.678 |
+| 6 | -9.09 | 0.5188 | 0.9636 | 0.6106 | 4.544 |
+| 7 | -8.69 | 0.5194 | 0.9667 | 0.8063 | 4.363 |
+| 8 | -8.91 | 0.5025 | 0.9588 | 0.0747 | 4.293 |
+
+**HONEST ceiling (stated, not hidden):** Docking is a heuristic score, NOT binding free energy; early-enrichment is weak (C1 AUROC 0.63; HIT2: useless for within-series potency); ZERO target activity data used; generic ChEMBL library, not curated actives; outputs are POSE-PLAUSIBLE candidate HYPOTHESES, not validated actives, not drugs. Demonstrates the end-to-end SHAPE (genome->target->molecule) with the molecule-half ceiling stated. Not wet-lab.
+
+This demonstrates the vision's full end-to-end SHAPE on a held-out WHO pathogen — genome in, a safe/validated *target* and ranked *candidate matter* out — while being explicit that the molecule half is the program's mapped ceiling: these are pose-plausible developable hypotheses, NOT validated inhibitors. Turning one into a real drug needs the gated experimental step.

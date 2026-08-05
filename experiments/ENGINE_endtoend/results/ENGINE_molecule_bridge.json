@@ -1,0 +1,111 @@
+{
+  "provenance": {
+    "git_sha": "c76eb4b98e1bf6788bcd464d7beae06d3d31f106",
+    "utc": "2026-08-05T20:55:07Z"
+  },
+  "runtime_sec": 881.8,
+  "summary": {
+    "best_vina_kcal_mol": -10.88,
+    "honest_scope": "Docking is a heuristic score, NOT binding free energy; early-enrichment is weak (C1 AUROC 0.63; HIT2: useless for within-series potency); ZERO target activity data used; generic ChEMBL library, not curated actives; outputs are POSE-PLAUSIBLE candidate HYPOTHESES, not validated actives, not drugs. Demonstrates the end-to-end SHAPE (genome->target->molecule) with the molecule-half ceiling stated. Not wet-lab.",
+    "library_size": 60,
+    "n_docked": 57,
+    "pocket_box": {
+      "center": [
+        8.631,
+        1.194,
+        -0.941
+      ],
+      "druggability": 0.89,
+      "pocket": 1,
+      "size": [
+        23.123,
+        20.685,
+        18.944
+      ]
+    },
+    "target_acc": "A6T5F3",
+    "target_gene": "dxs",
+    "top_candidates": [
+      {
+        "cand_score": 5.09827608,
+        "predicted_safety": 0.856,
+        "qed": 0.3163,
+        "smiles": "CC[C@H](C)[C@H](NC(C)=O)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(F)F)C(=O)C(=O)O",
+        "synth_solvable_prob": 0.817,
+        "vina_kcal_mol": -7.29
+      },
+      {
+        "cand_score": 4.9251121200000005,
+        "predicted_safety": 0.8678,
+        "qed": 0.517,
+        "smiles": "CC(=O)C1C(=O)CCCC1=O",
+        "synth_solvable_prob": 0.9459,
+        "vina_kcal_mol": -6.0
+      },
+      {
+        "cand_score": 4.7521516416,
+        "predicted_safety": 0.5296,
+        "qed": 0.4566,
+        "smiles": "NCCCCCN(Cc1ccccc1)C(=O)[C@H](N)Cc1ccc(-c2ccccc2)cc1",
+        "synth_solvable_prob": 0.9119,
+        "vina_kcal_mol": -9.84
+      },
+      {
+        "cand_score": 4.699923249,
+        "predicted_safety": 0.7013,
+        "qed": 0.8208,
+        "smiles": "CCN(CC1CCOCC1)C(=O)Cn1cccc(C(F)(F)F)c1=O",
+        "synth_solvable_prob": 0.9118,
+        "vina_kcal_mol": -7.35
+      },
+      {
+        "cand_score": 4.678115097599999,
+        "predicted_safety": 0.7456,
+        "qed": 0.8036,
+        "smiles": "O=C(NC1(CO)CCCCC1)c1cc(OCC(F)(F)F)c(C2CC2)cn1",
+        "synth_solvable_prob": 0.7434,
+        "vina_kcal_mol": -8.44
+      },
+      {
+        "cand_score": 4.544233531200001,
+        "predicted_safety": 0.5188,
+        "qed": 0.6106,
+        "smiles": "O=S(=O)(Nc1nccs1)c1ccc(NCc2cccc(F)c2O)cc1",
+        "synth_solvable_prob": 0.9636,
+        "vina_kcal_mol": -9.09
+      },
+      {
+        "cand_score": 4.3632835862,
+        "predicted_safety": 0.5194,
+        "qed": 0.8063,
+        "smiles": "COC(=O)c1cc(COC(=O)CNC(=O)c2cccc(C)c2)oc1C",
+        "synth_solvable_prob": 0.9667,
+        "vina_kcal_mol": -8.69
+      },
+      {
+        "cand_score": 4.29281127,
+        "predicted_safety": 0.5025,
+        "qed": 0.0747,
+        "smiles": "COCCOCCC(=O)NCC(=O)Nc1cccc(S(=O)(=O)N[C@@H](Cc2cccc(C(=N)N)c2)C(=O)N2CCC(CCN)CC2)c1",
+        "synth_solvable_prob": 0.9588,
+        "vina_kcal_mol": -8.91
+      },
+      {
+        "cand_score": 4.2252887040000005,
+        "predicted_safety": 0.7215,
+        "qed": 0.5837,
+        "smiles": "COC(=O)N1CC2(CC2)C[C@H](C(=O)NO)[C@H]1C(=O)N1CC=C(c2ccccc2)CC1",
+        "synth_solvable_prob": 0.6536,
+        "vina_kcal_mol": -8.96
+      },
+      {
+        "cand_score": 4.2051777676,
+        "predicted_safety": 0.5506,
+        "qed": 0.7866,
+        "smiles": "COC(=O)CN(c1ccc(C)cc1)S(=O)(=O)c1ccc(F)cc1",
+        "synth_solvable_prob": 0.9523,
+        "vina_kcal_mol": -8.02
+      }
+    ]
+  }
+}
