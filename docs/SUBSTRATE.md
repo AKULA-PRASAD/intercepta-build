@@ -80,6 +80,28 @@ cannot drive a decision; every output row carries its confidence tier, contribut
 (`intercepta.substrate` + `substrate_providers`) is used when you want live bio providers (mmseqs/COBRApy/fpocket) as in the
 SUBSTRATE1–4 experiments.
 
+## The unified end-to-end engine (`intercepta discover-targets`)
+`intercepta.discovery_engine.DiscoveryEngine` assembles **all validated signals** for a pathogen in one call — the concrete
+embodiment of the north-star: **genome → safe, confidence-tiered, provenance-tagged, abstaining target shortlist**. It wires
+FBA essentiality (**experimentally validated in 5 organisms incl. 2 held-out — VAL-ESS**), metabolic chokepoint, conservation
+(TID1), REACH1 conservation-breadth (recovers the non-metabolic half FBA misses), FOLD structural homology (isolated
+pathogens), and a **hard host-non-homology safety filter**. Confidence is calibrated to accuracy (CALIB1).
+
+```
+intercepta discover-targets --pathogen kpneumoniae --proteome kp.fasta \
+  --essentiality ess.tsv --chokepoint choke.tsv --breadth breadth.tsv \
+  --reference-targets refs.fasta --human human.fasta --ceg2 CEGv2.txt --out targets.json
+```
+
+Demonstrated end-to-end on the **held-out WHO pathogen K. pneumoniae** (`experiments/ENGINE_endtoend`, reproduced ×2): 77
+host-toxic excluded by construction; the top shortlist spans metabolic (murB/murG/mraY/dxs/ispE) **and** non-metabolic
+(dnaE/ileS/leuS/secA/topA — via REACH1) essentials; 15/30 experimentally-essential-confirmed. **Honest self-report:** at
+genome scale the "high" confidence tier *saturates* (conservation+breadth fire for most genes) — use `rank_score`, not the
+label, for ordering (confidence is discriminative in the emit-if-positive regime, CALIB1). The engine composes the **validated
+FRONT half**; the molecule half (target → candidate molecules) is gated (needs structure or activity data) — the
+`ENGINE_endtoend/molecule_bridge` demo shows the end-to-end shape (genome→target→docked candidates) with docking's weak-
+enrichment ceiling (C1/HIT2) stated, not hidden.
+
 ## Honest scope
 The substrate is composition + governance — it does **not** itself validate biology. Each provider carries its own
 validation tier (traceable to LEDGER.md), and the substrate only lets sufficiently-tiered evidence drive a decision. Outputs

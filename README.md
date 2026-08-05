@@ -114,6 +114,7 @@ intercepta generate   --objective multi --out generate.csv                      
 intercepta discover   --out discover.csv                                                         # end-to-end candidate discovery: generate + ADMET/synth screen + rank (B39)
 intercepta discover   --target-hts hiv --out discover_hiv.csv                                   # target-conditioned discovery: steer candidates toward a target (B40)
 intercepta substrate  --evidence evidence.csv --out shortlist.csv                                # extensible "any disease -> a query" engine: compose evidence -> safe, provenance-tiered, abstaining shortlist (docs/SUBSTRATE.md)
+intercepta discover-targets --pathogen X --proteome p.fasta --essentiality e.tsv ... --out t.json # UNIFIED end-to-end: pathogen genome -> safe, confidence-tiered target shortlist (all validated signals; docs/SUBSTRATE.md)
 ```
 `intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
 `intercepta admet` predicts ADMET/safety properties from SMILES (structure-only screening filter, B30 — beats
