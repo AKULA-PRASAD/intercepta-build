@@ -18,36 +18,32 @@ def save(fig, name):
 plt.rcParams.update({"font.size": 10, "axes.spines.top": False, "axes.spines.right": False, "figure.dpi": 200})
 PANEL, HELDOUT = "#3b6ea5", "#c1442e"
 
-# ---- Figure 1: five-organism experimental validation of FBA-essentiality ----
-ec = L("VALIDATE_essentiality/results/VALIDATE_essentiality.json")["summary"]
-mt = L("VALIDATE_essentiality/results/VALIDATE_essentiality_mtb.json")["summary"]
-kp = L("VALIDATE_essentiality/results/VALIDATE_essentiality_kp.json")["summary"]
-deg = L("VALIDATE_essentiality/results/VALIDATE_essentiality_deg.json")["summary"]["organisms"]
-sa = L("SAUREUS_gram_positive/results/SAUREUS_metrics.json")["summary"]["validation"]
-rows = [  # (label, source, odds_ratio, fisher_p, held_out)
-    ("E. coli",        "PEC knockouts",   ec["odds_ratio"], ec["fisher_p"], False),
-    ("P. aeruginosa",  "Turner Tn-seq",   deg["paeruginosa"]["odds_ratio"], deg["paeruginosa"]["fisher_p"], False),
-    ("M. tuberculosis","DeJesus Tn-seq",  mt["odds_ratio"], mt["fisher_p"], False),
-    ("A. baumannii",   "Wang INSeq",      deg["abaumannii"]["odds_ratio"], deg["abaumannii"]["fisher_p"], True),
-    ("K. pneumoniae",  "CRISPRi/Tn-seq",  kp["odds_ratio"], kp["fisher_p"], True),
-    ("S. aureus (Gram+)", "DEG Tn-based",  sa["odds_ratio"], sa["fisher_p"], True),
-]
-rows.sort(key=lambda r: r[2])
-fig, ax = plt.subplots(figsize=(7.2, 3.6))
-y = np.arange(len(rows)); ors = [r[2] for r in rows]
-cols = [HELDOUT if r[4] else PANEL for r in rows]
-ax.barh(y, ors, color=cols, height=0.62)
-ax.axvline(3, ls="--", color="grey", lw=1); ax.text(3, len(rows)-0.35, " pre-registered gate (OR>3)", color="grey", fontsize=8, va="top")
+# ---- Figure 1: PRIMARY validation — curated cross-Gram / cross-phylum panel (CROSSVAL_curated) ----
+cv = L("CROSSVAL_curated/results/CROSSVAL_metrics.json")["summary"]["panel"]
+CLADE_COL = {"gamma-proteo (Gram-)": "#3b6ea5", "Firmicute (Gram+)": "#2e8b57", "Actinobacteria": "#8a5a2b"}
+HELD = {"K. pneumoniae", "S. aureus (MRSA)"}   # not in the 7-organism development panel
+rows = [(name, d["clade"], d["model"], d["odds_ratio"], d["fisher_p"], d["precision"], d["recall"], name in HELD)
+        for name, d in cv.items()]
+rows.sort(key=lambda r: r[3])
+fig, ax = plt.subplots(figsize=(8.4, 4.0))
+y = np.arange(len(rows))
+ax.barh(y, [r[3] for r in rows], color=[CLADE_COL.get(r[1], "#777") for r in rows], height=0.64,
+        edgecolor=["black" if r[7] else "none" for r in rows], linewidth=[1.6 if r[7] else 0 for r in rows])
+ax.axvline(3, ls="--", color="grey", lw=1); ax.text(3, len(rows)-0.4, " pre-registered gate (OR>3)", color="grey", fontsize=8, va="top")
 for i, r in enumerate(rows):
-    p = r[3]; ptxt = "p<1e-15" if (p is not None and p < 1e-15) else (f"p={p:.1e}" if p else "")
-    ax.text(r[2]*1.03, i, f"OR {r[2]:.0f}  {ptxt}", va="center", fontsize=8)
-ax.set_yticks(y); ax.set_yticklabels([f"{r[0]}\n({r[1]})" for r in rows], fontsize=8.5)
-ax.set_xscale("log"); ax.set_xlim(1, 300); ax.set_xlabel("Odds ratio: FBA-essential enriched for EXPERIMENTALLY-essential genes (log scale)")
-ax.set_title("Fig 1. FBA gene-essentiality validated against experimental knockout data in 6 bacteria (incl. Gram-positive)", fontsize=9.5, loc="left")
+    p = r[4]; ptxt = "p<1e-15" if (p is not None and p < 1e-15) else (f"p={p:.0e}" if p else "")
+    ax.text(r[3]*1.04, i, f"OR {r[3]:.0f}  {ptxt}  (prec {r[5]:.2f}, rec {r[6]:.2f})", va="center", fontsize=7.6)
+ax.set_yticks(y); ax.set_yticklabels([f"{r[0]}\n({r[2]})" for r in rows], fontsize=8.3)
+ax.set_xscale("log"); ax.set_xlim(1, 250)
+ax.set_xlabel("Odds ratio: FBA-essential enriched for EXPERIMENTALLY-essential genes (log scale)")
+ax.set_title("Fig 1. FBA gene-essentiality vs experimental essentiality — 6 CURATED models across 3 phyla (all pass; bold outline = held-out)", fontsize=8.8, loc="left")
 from matplotlib.patches import Patch
-ax.legend(handles=[Patch(color=PANEL, label="development panel"), Patch(color=HELDOUT, label="held-out WHO pathogen")],
-          loc="lower right", fontsize=8, frameon=False)
-save(fig, "fig1_five_organism_validation")
+ax.legend(handles=[Patch(color=CLADE_COL["gamma-proteo (Gram-)"], label="γ-proteobacteria (Gram−)"),
+                   Patch(color=CLADE_COL["Firmicute (Gram+)"], label="Firmicutes (Gram+)"),
+                   Patch(color=CLADE_COL["Actinobacteria"], label="Actinobacteria"),
+                   Patch(facecolor="white", edgecolor="black", linewidth=1.6, label="held-out (not in dev panel)")],
+          loc="lower right", fontsize=7.6, frameon=False)
+save(fig, "fig1_curated_crossphylum_validation")
 
 # ---- Figure 2: mechanism (FBA-essentiality) breaks the conservation ceiling (MET1) ----
 m1 = L("MET1_fba_essentiality_targets/results/MET1_metrics.json"); m1 = m1.get("summary", m1)

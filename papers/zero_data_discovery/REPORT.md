@@ -18,8 +18,10 @@ structural pocket druggability beats a generic **conservation** null, and the si
 and can fail *silently* — an honest ceiling the field's positive-publication bias rarely reports. **(2) The one signal that
 breaks the ceiling, now experimentally verified:** mechanistic **FBA gene-essentiality**, computed from an organism's own
 genome-scale metabolic model, adds target information beyond conservation, and — tested against independent published
-gene-knockout data — is enriched for **experimentally essential genes in six bacteria spanning Gram-negative, Gram-positive and acid-fast, three of them
-outside the development panel (two are held-out WHO critical-priority pathogens)** (odds ratios 5.4–64, all clearing a pre-registered OR>3 gate; 6/7 pre-locked predictions experimentally essential).
+gene-knockout data — is enriched for experimentally essential genes across **six CURATED genome-scale models spanning three phyla
+(γ-proteobacteria, Firmicutes, Actinobacteria), all clearing a pre-registered OR>3 gate (odds ratios 4.3–45; precision/recall up to
+0.68/0.79)**; the genuinely novel-pathogen case (no curated model) is separately confirmed on de-novo reconstructions of two held-out
+WHO critical-priority pathogens (*K. pneumoniae*, *A. baumannii*), which also pass but more weakly (sparser de-novo models). 6/7 pre-locked E. coli predictions are experimentally essential.
 **(3) A shipped, honest engine:** the validated signals compose into a single disease-agnostic engine that turns a pathogen
 genome into a **safe, calibrated-confidence, provenance-tagged, abstaining** target shortlist, scored on seven axes
 (essentiality, conservation, non-metabolic recall, structural homology, a hard host-non-homology safety filter,
@@ -274,14 +276,17 @@ possible in-silico evidence that the mechanism biology is real, not luck.
 
 **The truth-test (now performed — the loop is closed on essentiality).** These predictions are pre-registered, falsifiable
 hypotheses, and the single cheapest rigorous test — costing nothing — has now been **done**: the FBA-predicted essentiality was
-checked against decades of *experimental* essentiality. The experimental data were auto-sourced directly (PEC single-gene
-knockouts for *E. coli*; DeJesus 2017 Tn-seq for *M. tuberculosis*; DEG/Turner and DEG/Wang Tn-seq/INSeq for *P. aeruginosa* and
-the held-out *A. baumannii*; aggregated CRISPRi/Tn-seq for the held-out *K. pneumoniae*), and the turnkey validator
-(`experiments/VALIDATE_essentiality`) confirms a strong, reproduced enrichment in all **six organisms** (odds ratios 64 / 63 / 23 / 13 / 7.9 / 5.4 for E. coli / K. pneumoniae /
-P. aeruginosa / A. baumannii / M. tuberculosis / Gram-positive S. aureus — the last the weakest, limited by a sparse de-novo Gram-positive
-GEM, but still clearing the pre-registered gate; 6/7 locked predictions experimentally essential; a per-target
-scorecard confirming the headline murB/murG/dxr/murF/ispE nominations). **So the mechanistic core is no longer a
-prediction awaiting test — it is validated against laboratory ground truth**, including on a pathogen the method never saw. What
+checked against decades of *experimental* essentiality (Fig 1). **Primary validation (`experiments/CROSSVAL_curated`):** across
+**six CURATED genome-scale models spanning three phyla** — γ-proteobacteria (E. coli iML1515 OR 45, K. pneumoniae iYL1228 6.0,
+Salmonella STM_v1_0 4.3), Firmicutes (B. subtilis iYO844 12.5, S. aureus USA300/MRSA iYS854 15.9), and Actinobacteria
+(M. tuberculosis iEK1008 26.1) — FBA-essential genes are enriched for experimental essentiality with **6/6 clearing the
+pre-registered gate** and precision/recall up to 0.68/0.79 (reproduced ×2). **Novel-pathogen deployment case
+(`experiments/VALIDATE_essentiality`):** where no curated model exists, the pipeline builds a *de-novo* GEM and still validates
+on the genuinely **held-out** WHO pathogens *K. pneumoniae* and *A. baumannii* (odds ratios 63 and 13 on the adjudicable subset)
+— honestly weaker/sparser than the curated models (the deployment caveat), plus 6/7 pre-locked E. coli predictions
+experimentally essential and a per-target scorecard confirming the headline murB/murG/dxr/murF/ispE nominations. **So the
+mechanistic core is no longer a prediction awaiting test — it is validated against laboratory ground truth across the bacterial
+tree**, including on pathogens the method never saw. What
 remains gated is the *next* rung: a wet-lab CRISPRi/knockout test of a specific novel top prediction (e.g. **murB**), and the
 translation from essential-and-druggable target to an actual selective inhibitor — resource decisions, not computations. The
 substrate is built so each new experimental result enters as high-tier evidence and improves every future answer. The
@@ -291,12 +296,15 @@ anchored, and the remaining distance to a drug is experimental.
 ## Figures
 *All figures are generated directly from the committed experiment metrics by `gen_figures.py` — every value traces to a reproduced-×2 experiment.*
 
-![Figure 1](figures/fig1_five_organism_validation.png)
-**Fig 1. FBA gene-essentiality is validated against experimental knockout data in six bacteria (incl. Gram-positive S. aureus).** Odds ratio for the
-enrichment of FBA-predicted-essential genes among experimentally-essential genes (log scale); all five clear the
-pre-registered gate (OR>3). Red = held-out WHO critical-priority pathogens (never used in method development). Sources:
-PEC (E. coli), Turner Tn-seq (P. aeruginosa), DeJesus Tn-seq (M. tuberculosis), Wang INSeq (A. baumannii), CRISPRi/Tn-seq
-(K. pneumoniae), and DEG Tn-based (Gram-positive S. aureus, the weakest but still passing).
+![Figure 1](figures/fig1_curated_crossphylum_validation.png)
+**Fig 1 (primary validation). FBA gene-essentiality vs experimental essentiality across six CURATED genome-scale models spanning
+three phyla.** Odds ratio for enrichment of FBA-predicted-essential genes among experimentally-essential genes (log scale); all
+six clear the pre-registered gate (OR>3), with precision/recall up to 0.68/0.79. Colour = clade (γ-proteobacteria / Firmicutes /
+Actinobacteria); bold outline = held-out (not in the development panel). Models: iML1515 (E. coli), iYL1228 (K. pneumoniae),
+STM_v1_0 (Salmonella), iYO844 (B. subtilis), iYS854 (S. aureus USA300/MRSA), iEK1008 (M. tuberculosis). Experimental sets:
+PEC, CRISPRi, DEG (Tn-seq/INSeq), DeJesus 2017. *Curated models give the rigorous cross-phylum picture; the genuinely
+novel-pathogen case (no curated model) is validated separately on de-novo CarveMe reconstructions of the held-out
+K. pneumoniae and A. baumannii — which still pass but are sparser (a real deployment caveat).*
 
 ![Figure 2](figures/fig2_mechanism_ceiling_break.png)
 **Fig 2. Mechanism breaks the conservation ceiling.** Held-out (5-fold CV) target-recovery AUROC in E. coli (iML1515):
@@ -375,6 +383,7 @@ result can enter as high-tier evidence.
 5. Wang N, et al. Genome-wide identification of *Acinetobacter baumannii* genes necessary for persistence in the lung. *mBio* 2014.
 6. Luo H, Lin Y, Gao F, et al. DEG: Database of Essential Genes. *Nucleic Acids Res* (DEG 10/15 updates).
 7. Monk JM, et al. iML1515, a knowledgebase that computes *Escherichia coli* traits. *Nat Biotechnol* 2017.
+7b. King ZA, et al. BiGG Models: a platform for integrating, standardizing and sharing genome-scale models. *Nucleic Acids Res* 2016. (Curated models used: iML1515, iYL1228, STM_v1_0, iYO844, iYS854, iEK1008.)
 8. Machado D, et al. Fast automated reconstruction of genome-scale metabolic models for microbial species and communities (CarveMe). *Nucleic Acids Res* 2018.
 9. Ebrahim A, et al. COBRApy: constraints-based reconstruction and analysis for Python. *BMC Syst Biol* 2013.
 10. Steinegger M, Söding J. MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets. *Nat Biotechnol* 2017.
