@@ -1,4 +1,4 @@
-# Zero-data drug discovery: an honest map of what transfers, what doesn't, and a self-improving loop that knows its limits
+# Zero-data drug discovery: an honest map of what transfers, what doesn't, a mechanistic signal validated against experimental gene-knockouts, and a self-improving loop that knows its limits
 
 *A consolidation of the INTERCEPTA "zero-data disease" research arc (2026-07/08). Written to be understandable without
 reference to INTERCEPTA: it is a set of falsifiable claims about the behaviour of computational drug-discovery
@@ -37,6 +37,24 @@ random) — well-connected pathogens can recover nothing while distant ones reco
 tell, from sequence alone, *when it is out of its depth* — a hard limitation for deploying on a novel pathogen. **But a genuinely orthogonal signal DOES break the ceiling** (MET1): mechanistic FBA gene-essentiality — computed from an organism's own genome-scale metabolic model, not from homology — enriches strongly for drug targets (odds ratio 8.6) and adds target-ID signal *beyond* conservation (5-fold-CV ΔAUROC +0.132, essentiality outweighing conservation 0.71 to 0.35) on E. coli's metabolic subproteome. So the ceiling is specific to *homology-based* signals; a mechanistic layer is the path through it — bounded, for now, to metabolic targets. Building metabolic models DE NOVO from each proteome (CarveMe, UniProt-keyed by construction) shows the essentiality↔drug-target ENRICHMENT is broad across bacteria (MET2: odds ratio 5.8–18.5 in the organisms with enough targets to test), and the *beyond-conservation* ceiling-break REPLICATES in the two bacteria with enough drug targets for a reliable estimate (E. coli +0.053, M. tuberculosis +0.040) — a genuine replication. Broader bacterial generalization is honestly NOT ESTABLISHED (nor disproven): most bacteria have too few known drug targets (≤20) to test reliably — the limit is ground-truth sparsity, not the signal. (An initial 3-organism run over-claimed 'generalizes'; an expanded 7-bacteria panel tempered it to this honest picture.) Finally, because a discovery pipeline consumes a *ranked* shortlist rather than a regression coefficient, we ask whether that gain reaches the *top* of the list where target-ID decisions are made (MET3): adding essentiality to the ranking lifts precision-at-k substantially on E. coli (0.28→0.35, enrichment 4.9→6.2× over prevalence, top candidates recovering real essential-metabolic targets — AcrB, IspF, MurG) but only marginally on M. tuberculosis (+0.015, ≈ one extra target — the global-AUROC gain does not fully reach the top of that list). So the mechanistic signal is a genuine *practical* front-half improvement, clearly organism-dependent in magnitude: strong where it lands, real but weak where the list is already harder.
 
 Crucially, this mechanistic win is scoped to *metabolic* targets — FBA is blind to roughly half of all drug targets (proteases, polymerases, ribosomal and structural proteins, the kind a novel pandemic often presents). We tested the obvious extension to that FBA-blind half — PPI-network topology essentiality (network hubs/bottlenecks), a mechanistic signal independent of homology *if the network is measured* (MET4). The naive result looked like a second ceiling-break: on a non-homology experimental interaction network, centrality added ΔAUROC +0.128 beyond conservation. But it does not survive the confound that matters most here: **study bias**. Drug targets are the most-studied proteins in existence, so they accumulate experimental interaction edges from research attention rather than biology (reverse causation). Study-intensity alone (literature-derived) predicts drug-targethood at AUROC 0.826, and once it is controlled — or once one uses a coexpression network that scores every gene uniformly regardless of study effort — the entire lift collapses (+0.128 → −0.004). So PPI-network centrality is *not* a confound-robust mechanistic signal for non-metabolic targets; it is largely a study-bias artifact. This is an important negative: it sharply separates FBA-essentiality (a genuine mechanism, which survived every control) from network centrality (which does not), and it means the non-metabolic half of target space remains genuinely hard — no clean, information-honest mechanistic signal for it has been found. (The first, unconfounded run would have been a false "mechanism generalizes" claim; the falsify-first protocol caught it before it was recorded.)
+
+**The mechanistic signal is now EXPERIMENTALLY VALIDATED — the arc's first result tested against independent laboratory ground truth.**
+Everything above is retrospective known-target recovery; the FBA-essentiality signal (MET1–3, the one signal that breaks the
+conservation ceiling) has now been tested against decades of *experimental* gene-essentiality — systematic single-gene knockouts
+and saturating transposon mutagenesis — in three organisms. In *E. coli* (PEC single-gene-knockout essentiality) FBA-predicted
+essential genes are enriched for experimentally-essential genes at **odds ratio 64** (Fisher p≈3×10⁻²⁴), and **6 of 7**
+pre-registered locked target predictions (ribA, ribB, folB, ribD, ispG, ispD — only mtnN is not) are experimentally essential.
+It **generalizes to a second organism** — *M. tuberculosis* (DeJesus 2017 saturating Tn-seq), odds ratio **7.9** (p≈2×10⁻⁷) — and,
+most importantly, **to a genuinely held-out WHO critical-priority pathogen the method never saw during development** —
+*K. pneumoniae* (independent CRISPRi/Tn-seq essentiality), odds ratio **63**, precision **92%**. Honest bounds (falsify-first on our
+own positive): the validated quantity is the *binary essentiality enrichment* — precision is high but recall is low (9–25%),
+because FBA is metabolic-scoped and misses translational/non-metabolic essentials exactly as MET1 caveated; the *continuous*
+growth-ratio ranking is only modestly informative (AUROC 0.54–0.63, at chance in Mtb); and this validates essentiality, not the
+downstream drug-target, selectivity, or clinical claims, which remain unvalidated. Separately, the substrate's **confidence tier is
+shown to be calibrated to accuracy** — high-confidence calls (≥2 agreeing signals) are monotonically more target-enriched than
+moderate or low across two independent regimes (CALIB1, ordinal-confidence AUROC 0.66), a derivative but real governance guarantee.
+**This moves the arc's central positive from "computational-only" to "experimentally validated in three organisms including a
+held-out pathogen" — the credibility milestone — while everything else in the map below remains retrospective.**
 
 **The molecule half — the novel-chemotype ceiling of ligand-based hit-finding.**
 Target identification is only half of discovery; the other half is producing candidate molecules for a target with no
@@ -128,15 +146,22 @@ already has signal.**
 ## The complete arc (every claim reproduced ×2, pre-registered)
 Target-ID: conservation ceiling (TID1–2), kingdom degradation + silent failure (TID3), un-predictable failure (TID4);
 mechanism breaks the ceiling for metabolic targets (MET1–3) but not the non-metabolic half (MET4, a study-bias artifact);
+that mechanistic signal is EXPERIMENTALLY VALIDATED vs gene-knockout essentiality in three organisms incl. a held-out
+pathogen (VAL-ESS: E. coli OR 64 / Mtb OR 7.9 / K. pneumoniae OR 63); substrate confidence is calibrated to accuracy (CALIB1);
 front-half selectivity (FRONT1 danger of conservation-ranking → E2E2 safety/recall tension → FRONT2 structure can't rescue).
 Molecule half: weak-but-real docking for binder-vs-nonbinder (C1), analog-bound ligand hit-finding (HIT1), no physics
 signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-improving loop (SIL1–2).
 
 ## What is genuinely contributed
-- **The one thing that breaks the ceiling — and its exact boundary.** FBA gene-essentiality, computed from a pathogen's
-  own metabolic model (mechanism, not homology), is the single signal that adds target-ID information *beyond* the
+- **The one thing that breaks the ceiling — and it is EXPERIMENTALLY VALIDATED.** FBA gene-essentiality, computed from a
+  pathogen's own metabolic model (mechanism, not homology), is the single signal that adds target-ID information *beyond* the
   conservation ceiling (MET1, replicated MET2, better shortlist MET3) — but only for *metabolic* targets; the obvious
-  extension to the rest is a study-bias artifact (MET4). A precise, reproduced statement of where mechanism helps and stops.
+  extension to the rest is a study-bias artifact (MET4). This signal is now tested against independent **experimental**
+  gene-knockout essentiality and holds in **three organisms** — *E. coli* (PEC, odds ratio 64), *M. tuberculosis* (DeJesus
+  Tn-seq, 7.9), and a **held-out** WHO pathogen *K. pneumoniae* (CRISPRi/Tn-seq, 63, precision 92%) — with 6/7 locked
+  predictions experimentally essential. It is the arc's first laboratory-validated result (binary-enrichment scope: high
+  precision, low recall; essentiality only). A precise, reproduced, now-externally-validated statement of where mechanism
+  helps and stops.
 - **A well-controlled negative-boundary on zero-data target-ID:** conservation is the ceiling; more homology (sequence,
   structural, or learned) mostly re-encodes it — a result the field's positive-publication bias rarely produces,
   established against degree/conservation nulls with calibrated abstention.
@@ -153,8 +178,11 @@ signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-i
   contradiction) were caught and corrected *before commit*, repeatedly. The falsify-first protocol demonstrably works.
 
 ## Honest scope and what remains gated
-All results are retrospective and in-silico, on open data, on a modest pathogen/target panel. None is a validated hit, a
-drug, or a clinical claim. Every hard problem in the arc — novel-fold/isolated-pathogen target-ID, non-metabolic mechanism,
+With one exception, results are retrospective and in-silico, on open data, on a modest pathogen/target panel; none is a
+validated hit, a drug, or a clinical claim. **The exception is the FBA-essentiality signal, now validated against experimental
+gene-knockout data in three organisms (E. coli/Mtb/held-out K. pneumoniae) — but that validation is scoped to essentiality
+enrichment (binary, high-precision/low-recall), not to the drug-target or clinical claims, which remain retrospective.** Every
+other hard problem in the arc — novel-fold/isolated-pathogen target-ID, non-metabolic mechanism,
 true binding-site selectivity, novel-chemotype hit-finding — converges on the same **information ceiling**: transfer and
 self-accumulation cannot manufacture information that isn't in sequence/structure alone. Crossing it requires *new
 information* — prospective assays, wet-lab, or 3D/experimental data — which is a **resource decision, not a computation**.
@@ -186,10 +214,15 @@ method — told nothing about drugs — independently reconstructs the pathways 
 three converging angles (literature concordance, cross-bacteria breadth, and druggable-pocket quality). That is the strongest
 possible in-silico evidence that the mechanism biology is real, not luck.
 
-**The truth-test (what closes the loop).** These predictions are pre-registered, falsifiable hypotheses. The single cheapest
-rigorous test — costing nothing — is to check the FBA-predicted essentiality against decades of *experimental* essentiality
-(Keio/Goodall/DeJesus); a turnkey validator (`experiments/VALIDATE_essentiality`) runs the instant that data is provided.
-The next rung, a single CRISPRi essentiality test of the top prediction (murB or a novel one), is the first real-world
-evidence. Everything is built so that the moment one experimental result exists, it enters the substrate as high-tier
-evidence and every future answer improves. The arc is complete as far as computation on open data can honestly carry it; the
-remaining distance is experimental.
+**The truth-test (now performed — the loop is closed on essentiality).** These predictions are pre-registered, falsifiable
+hypotheses, and the single cheapest rigorous test — costing nothing — has now been **done**: the FBA-predicted essentiality was
+checked against decades of *experimental* essentiality. The experimental data were auto-sourced directly (PEC single-gene
+knockouts for *E. coli*; DeJesus 2017 saturating Tn-seq for *M. tuberculosis*; aggregated CRISPRi/Tn-seq for the held-out
+*K. pneumoniae*), and the turnkey validator (`experiments/VALIDATE_essentiality`) confirms a strong, reproduced enrichment in all
+three (odds ratios 64 / 7.9 / 63; 6/7 locked predictions experimentally essential). **So the mechanistic core is no longer a
+prediction awaiting test — it is validated against laboratory ground truth**, including on a pathogen the method never saw. What
+remains gated is the *next* rung: a wet-lab CRISPRi/knockout test of a specific novel top prediction (e.g. **murB**), and the
+translation from essential-and-druggable target to an actual selective inhibitor — resource decisions, not computations. The
+substrate is built so each new experimental result enters as high-tier evidence and improves every future answer. The
+computational arc is complete as far as open data on CPU can honestly carry it; the essentiality signal is now experimentally
+anchored, and the remaining distance to a drug is experimental.
