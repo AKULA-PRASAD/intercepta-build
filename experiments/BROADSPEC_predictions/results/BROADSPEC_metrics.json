@@ -1,0 +1,147 @@
+{
+  "per_prediction": {
+    "P0A7I7": {
+      "breadth": 1,
+      "essential_in": [
+        "ecoli"
+      ],
+      "gene": "ribA",
+      "orthologs": {
+        "bsubtilis": "P17620",
+        "ecoli": "P0A7I7",
+        "hpylori": "O08315",
+        "mtb": "P9WHF1",
+        "paeruginosa": "Q9HWY1",
+        "salmonella": "P66030"
+      },
+      "pathway": "riboflavin"
+    },
+    "P0A7J0": {
+      "breadth": 2,
+      "essential_in": [
+        "ecoli",
+        "paeruginosa"
+      ],
+      "gene": "ribB",
+      "orthologs": {
+        "bsubtilis": "P17620",
+        "ecoli": "P0A7J0",
+        "hpylori": "O25484",
+        "mtb": "P9WHF1",
+        "paeruginosa": "Q9HWX4",
+        "salmonella": "P66032"
+      },
+      "pathway": "riboflavin"
+    },
+    "P0AC16": {
+      "breadth": 2,
+      "essential_in": [
+        "ecoli",
+        "paeruginosa"
+      ],
+      "gene": "folB",
+      "orthologs": {
+        "ecoli": "P0AC16",
+        "paeruginosa": "Q9I5V5",
+        "salmonella": "Q8ZLY2"
+      },
+      "pathway": "folate"
+    },
+    "P0AF12": {
+      "breadth": 3,
+      "essential_in": [
+        "ecoli",
+        "bsubtilis",
+        "salmonella"
+      ],
+      "gene": "mtnN",
+      "orthologs": {
+        "bsubtilis": "O32028",
+        "ecoli": "P0AF12",
+        "efaecalis": "Q830S8",
+        "hpylori": "O24915",
+        "mtb": "P9WJM3",
+        "salmonella": "P60217"
+      },
+      "pathway": "methionine salvage"
+    },
+    "P25539": {
+      "breadth": 1,
+      "essential_in": [
+        "ecoli"
+      ],
+      "gene": "ribD",
+      "orthologs": {
+        "bsubtilis": "P17618",
+        "ecoli": "P25539",
+        "efaecalis": "Q832M0",
+        "hpylori": "O26035",
+        "mtb": "P9WPH1",
+        "paeruginosa": "Q9HWX2",
+        "salmonella": "Q8ZRD4"
+      },
+      "pathway": "riboflavin"
+    },
+    "P62620": {
+      "breadth": 4,
+      "essential_in": [
+        "ecoli",
+        "bsubtilis",
+        "hpylori",
+        "salmonella"
+      ],
+      "gene": "ispG",
+      "orthologs": {
+        "bsubtilis": "P54482",
+        "ecoli": "P62620",
+        "hpylori": "O25342",
+        "mtb": "P9WKG3",
+        "paeruginosa": "Q9HXJ4",
+        "salmonella": "P58671"
+      },
+      "pathway": "MEP/isoprenoid"
+    },
+    "Q46893": {
+      "breadth": 4,
+      "essential_in": [
+        "ecoli",
+        "paeruginosa",
+        "bsubtilis",
+        "salmonella"
+      ],
+      "gene": "ispD",
+      "orthologs": {
+        "bsubtilis": "Q06755",
+        "ecoli": "Q46893",
+        "efaecalis": "Q832P8",
+        "mtb": "P9WKG9",
+        "paeruginosa": "P57707",
+        "salmonella": "Q8ZMF6"
+      },
+      "pathway": "MEP/isoprenoid"
+    }
+  },
+  "provenance": {
+    "git_sha": "681ecefc31b4ac777e57ec91732e985f2a51203b",
+    "utc": "2026-08-05T12:52:18Z"
+  },
+  "runtime_sec": 6.8,
+  "summary": {
+    "breadth": {
+      "folB": 2,
+      "ispD": 4,
+      "ispG": 4,
+      "mtnN": 3,
+      "ribA": 1,
+      "ribB": 2,
+      "ribD": 1
+    },
+    "broad_spectrum_ge4of7": [
+      "ispG",
+      "ispD"
+    ],
+    "max_breadth": 4,
+    "n_predictions": 7,
+    "verdict": "Cross-bacteria robustness of the substrate's 7 E. coli predictions. Breadth (essential ortholog in N/7 bacteria): ispG=4, ispD=4, mtnN=3, ribB=2, folB=2, ribA=1, ribD=1. BROAD-SPECTRUM (essential in >=4/7 bacteria): ['ispG', 'ispD'] \u2014 these are the highest-value, most de-risked antibacterial target predictions (host-absent + essential across diverse pathogens = the broad-spectrum ideal). The predictions concentrate in the MEP/isoprenoid, riboflavin and folate pathways, whose broad bacterial essentiality is exactly why the field pursues them for broad-spectrum antibiotics \u2014 independent, zero-cost corroboration that the method's biology is real. SCOPE: FBA-predicted essentiality (not experimental \u2014 that is docs/EXPERIMENTAL_VALIDATION.md Tier 0); orthology by best mmseqs hit; 7 bacteria; hypotheses, not validated targets; not wet-lab."
+  }
+}

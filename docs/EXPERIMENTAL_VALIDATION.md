@@ -42,8 +42,11 @@ Then this runs to completion in minutes. This is the highest-value, zero-cost ne
 
 ## Tier 1 — the minimal NEW wet-lab experiment (cheapest rigorous prospective test)
 **Goal:** prospectively confirm ONE prediction is a real essential (and thus a real target) — the first real-world evidence.
-- **Target choice (pre-registered):** test **mtnN** (P0AF12) — the LEAST prior-validated of the 7, so a positive is a
-  genuine new finding, not a re-confirmation. (Alternative de-risking choice: ispG, known-good, confirms the method works.)
+- **Target choice (pre-registered; refined by BROADSPEC cross-bacteria robustness):** the substrate's top predictions by
+  BREADTH (essential ortholog across N/7 bacteria) are **ispG (4/7) and ispD (4/7)** — both MEP/isoprenoid pathway,
+  independently literature-validated AND broad-spectrum → the **highest-value, most de-risked** test (confirming one
+  validates a broad-spectrum target). **mtnN (3/7, methionine salvage)** is the least prior-validated → a positive there is
+  a genuinely novel finding. Recommended: test **ispG** (broadest-spectrum, highest value) first; **mtnN** for novelty.
 - **Assay (cheapest rigorous option): CRISPRi essentiality knockdown.**
   - Reagents: an *E. coli* dCas9 CRISPRi system (Addgene, e.g. pdCas9/pgRNA; ~$65–130 total plasmids) + one target sgRNA vs
     a non-targeting-control sgRNA (oligos, ~$20) + standard media/consumables. **Total reagents ≈ $200–400.**
