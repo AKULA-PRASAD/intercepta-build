@@ -5,6 +5,34 @@ reference to INTERCEPTA: it is a set of falsifiable claims about the behaviour o
 capabilities when a target/pathogen has NO activity data — only its sequence, structure, and transferable prior
 knowledge. Every number traces to a committed, pre-registered, reproduced-×2 experiment (LEDGER.md).*
 
+**Authors:** Prasad Akula¹ *(author list and affiliations to be finalized by the corresponding author)*
+¹ Northeastern University. **Correspondence:** akula.pra@northeastern.edu
+**Preprint — not peer reviewed.** Code and full experiment ledger: see *Data & code availability*.
+
+## Abstract
+When a new or neglected pathogen appears with **zero activity data**, how far can a computational system get toward
+credible drug targets from sequence, structure, and transferable prior knowledge alone — and where does it break? We built
+and pre-registered a series of controlled, reproduced-×2 experiments (open data, CPU-only) that map this frontier. Three
+results stand out. **(1) A well-controlled negative:** for zero-data target identification, neither sequence homology nor
+structural pocket druggability beats a generic **conservation** null, and the signal degrades across phylogenetic distance
+and can fail *silently* — an honest ceiling the field's positive-publication bias rarely reports. **(2) The one signal that
+breaks the ceiling, now experimentally verified:** mechanistic **FBA gene-essentiality**, computed from an organism's own
+genome-scale metabolic model, adds target information beyond conservation, and — tested against independent published
+gene-knockout data — is enriched for **experimentally essential genes in five bacteria, two of them held out of method
+development** (odds ratios 7.9–64, all clearing a pre-registered gate; 6/7 pre-locked predictions experimentally essential).
+**(3) A shipped, honest engine:** the validated signals compose into a single disease-agnostic engine that turns a pathogen
+genome into a **safe, calibrated-confidence, provenance-tagged, abstaining** target shortlist, scored on seven axes
+(essentiality, conservation, non-metabolic recall, structural homology, a hard host-non-homology safety filter,
+resistance-robustness, and environment/condition-robustness), demonstrated end-to-end on both held-out WHO critical-priority
+pathogens (*Klebsiella pneumoniae*, *Acinetobacter baumannii*). We are deliberately explicit about the limits: the
+experimental validation is scoped to *essentiality enrichment* (high precision, low recall), the molecule-generation half is
+an information ceiling (candidates are pose-plausible hypotheses, not validated actives), and no claim is clinical. The
+contribution is a rigorous, reproducible map of how far zero-data discovery reaches, an experimentally-anchored mechanistic
+core, and an engine that reports what it cannot know.
+
+**Keywords:** zero-data drug discovery, antibacterial target identification, flux balance analysis, gene essentiality,
+metabolic modeling, WHO priority pathogens, honest machine learning, applicability domain, resistance robustness.
+
 ## The question
 When a new pathogen appears with **zero activity data** — no known inhibitors, no assays, no training labels — how far
 can a computational system get toward credible drug candidates from **sequence and transferable knowledge alone**, and
@@ -220,6 +248,21 @@ conservation-breadth signal — the **non-metabolic** essentials FBA is blind to
 being experimentally-essential-confirmed. It even reports its own limitation: at genome scale the confidence tier saturates,
 so ranking is by score, not label (honest by construction).
 
+**Beyond "is it essential" — toward "is it a good intervention" (seven axes).** The engine now annotates each target with
+axes that a *good* target must pass, each a separately-validated result: **druggability** (pocket geometry) and
+**breadth** (broad-spectrum); **resistance-robustness** — computed zero-data from the metabolic network, distinguishing
+*monotherapy-robust* targets (no metabolic bypass) from isozyme-buffered *combination-required* (synthetic-lethal) sets, with
+8/9 of the nominated broad-spectrum targets bypass-robust and a sample of combination sets verified jointly lethal by
+double-gene-deletion; and **condition-robustness** — a *validated* quality filter (targets essential across nutrient
+environments including a host-like medium are 79% vs 48% experimentally essential, +0.32), which flags biosynthesis targets
+that a host could bypass by supplying the nutrient. A single **transparent, equal-weighted best-intervention score** (no
+fitted weights — there is no ground truth of "best intervention" to fit against) fuses these axes and, validated against the
+one available truth axis, orders targets by real experimental essentiality (Spearman 0.69). Across four independent analyses
+the same weak nomination (menC) is consistently down-ranked — the framework self-correcting. The full seven-axis engine runs
+end-to-end on **both** held-out WHO critical-priority pathogens (*K. pneumoniae* and *A. baumannii*), the latter with
+organism-native resistance/condition classes; the top targets are the canonical resistance- and condition-robust cell-wall
+(murB/murG/mraY) and isoprenoid (dxr/ispE) cores plus non-metabolic essentials recovered by conservation-breadth.
+
 **The predictions (the payoff).** Run on bacterial genomes with **zero drug data**, the engine's novel safe predictions —
 FBA-essential + metabolic chokepoint + host-non-homologous + not-already-a-drug-target — number 85 across 7 pathogens, and
 the broad-spectrum, druggable subset is **exactly the canonical antibacterial target landscape**: cell-wall/peptidoglycan
@@ -243,3 +286,77 @@ translation from essential-and-druggable target to an actual selective inhibitor
 substrate is built so each new experimental result enters as high-tier evidence and improves every future answer. The
 computational arc is complete as far as open data on CPU can honestly carry it; the essentiality signal is now experimentally
 anchored, and the remaining distance to a drug is experimental.
+
+## Methods (summary)
+**Rigor protocol.** Every claim was pre-registered (hypotheses and pass/fail thresholds fixed before data), reproduced
+**×2 byte-identical** (SHA-256 over a deterministic metrics payload excluding the verdict), and controlled against the
+trivial/null baselines the field often omits (conservation nulls, study-bias controls, decoy/analogue controls, shuffled and
+ungated negative controls). Auto-generated verdicts that over-read were corrected *before commit* (documented cases:
+novelty tautology, study-bias artifact, coin-flip median, precision-gate falsy-collapse); negative and null results are
+reported first-class. All decisions are logged in `LEDGER.md`.
+
+**Data (all open; never committed — see MANIFEST).** UniProt reference proteomes and ChEMBL-xref target lists; AlphaFold DB
+v6 structures; BiGG iML1515; de-novo genome-scale models via CarveMe; experimental essentiality from PEC, the Keio/Goodall
+set, DeJesus 2017 (Mtb), and DEG (Turner 2015 *P. aeruginosa*; Wang 2014 *A. baumannii*) plus an aggregated *K. pneumoniae*
+CRISPRi/Tn-seq set; Hart CEG2 core-essential genes; LIT-PCBA, MoleculeACE, Open Targets, DepMap (for the molecule-half and
+human-disease arms).
+
+**Tools (CPU-only, Apple-Silicon arm64; no GPU).** mmseqs2 (homology), Foldseek (structural homology, TM-score), fpocket
+(pocket druggability), COBRApy+GLPK (FBA single-/double-gene and reaction deletion, multi-medium essentiality), CarveMe+SCIP
+(de-novo GEMs), RDKit and AutoDock Vina (molecule half), ESM-2 and scikit-learn (learned baselines). The engine
+(`src/intercepta/substrate.py` + `substrate_providers.py` + `discovery_engine.py`) composes providers by z-scored,
+provenance-tier-weighted RANK aggregation with a hard SAFETY filter and honest abstention; 15/15 data-free unit tests.
+
+**Experimental validation.** FBA-predicted essentiality was compared to each organism's experimental essential-gene set by a
+2×2 Fisher enrichment (pre-registered gate: odds ratio > 3, p < 0.01) plus a growth-ratio AUROC, over the metabolic
+subproteome; identifiers mapped by accession, gene symbol, or locus tag.
+
+## Data & code availability
+All source code, the append-only results ledger (`LEDGER.md`), per-experiment code and reproduced metrics
+(`experiments/*/`), the engine (`src/intercepta/`), and documentation (`docs/SUBSTRATE.md`) are in the INTERCEPTA
+repository. Input datasets are open and referenced (with checksums) in `data/MANIFEST.md`; per project policy, data files
+themselves are never committed and are regenerable from the cited public sources.
+
+## Limitations (explicit)
+(1) The **experimental verification is against existing published data**, not experiments we performed, and is **prospective
+only in the held-out sense** (organisms/targets excluded from development), not a prospective wet-lab test. (2) It is scoped
+to **essentiality enrichment** — high precision but **low recall (9–25%)** because FBA is metabolic-scoped; it does **not**
+validate drug-target quality, selectivity, or clinical value. (3) The **molecule-generation half is an information ceiling**:
+candidates are pose-plausible hypotheses, not validated actives, and receptor docking shows weak early enrichment.
+(4) **Human single-disease** target-ID is popularity-confounded and near-random — the "any disease" architecture is universal
+but answer quality is disease-class-specific. (5) De-novo (CarveMe, default-medium) GEMs are **sparse** relative to curated
+iML1515; some resistance/condition classes are **ortholog-transferred**; FBA synthetic-lethality has modest accuracy; the
+best-intervention score uses **equal (unfitted) weights** and its validation is only partly independent. (6) All target and
+molecule outputs are **computational hypotheses with provenance, not validated targets or drugs; no result is clinical.**
+
+## Conclusion
+For pathogens with zero activity data, the honest reachable frontier is now mapped and, at its core, **experimentally
+anchored**: mechanistic gene-essentiality is the one signal that breaks the conservation ceiling, it is validated against
+laboratory knockout data in five bacteria (two held out, including two WHO critical-priority pathogens), and it composes into
+a shipped, disease-agnostic engine that returns safe, calibrated, resistance- and environment-aware target shortlists while
+abstaining where it lacks signal. The remaining distance to a drug — a validated *novel* target, a real inhibitor for a novel
+target, selectivity, and clinical efficacy — is gated by **new experimental information, not more computation**. The value of
+this work is a reproducible method, an honest negative map, and an experimentally-anchored core that any future experimental
+result can enter as high-tier evidence.
+
+## References
+1. Baba T, et al. Construction of *Escherichia coli* K-12 in-frame, single-gene knockout mutants: the Keio collection. *Mol Syst Biol* 2006.
+2. Goodall ECA, et al. The essential genome of *Escherichia coli* K-12. *mBio* 2018.
+3. DeJesus MA, et al. Comprehensive essentiality analysis of the *Mycobacterium tuberculosis* genome via saturating transposon mutagenesis. *mBio* 2017.
+4. Turner KH, et al. Essential genome of *Pseudomonas aeruginosa* in cystic fibrosis sputum. *PNAS* 2015.
+5. Wang N, et al. Genome-wide identification of *Acinetobacter baumannii* genes necessary for persistence in the lung. *mBio* 2014.
+6. Luo H, Lin Y, Gao F, et al. DEG: Database of Essential Genes. *Nucleic Acids Res* (DEG 10/15 updates).
+7. Monk JM, et al. iML1515, a knowledgebase that computes *Escherichia coli* traits. *Nat Biotechnol* 2017.
+8. Machado D, et al. Fast automated reconstruction of genome-scale metabolic models for microbial species and communities (CarveMe). *Nucleic Acids Res* 2018.
+9. Ebrahim A, et al. COBRApy: constraints-based reconstruction and analysis for Python. *BMC Syst Biol* 2013.
+10. Steinegger M, Söding J. MMseqs2 enables sensitive protein sequence searching for the analysis of massive data sets. *Nat Biotechnol* 2017.
+11. van Kempen M, et al. Fast and accurate protein structure search with Foldseek. *Nat Biotechnol* 2024.
+12. Jumper J, et al. Highly accurate protein structure prediction with AlphaFold. *Nature* 2021; Varadi M, et al. AlphaFold Protein Structure Database. *Nucleic Acids Res* 2022.
+13. Le Guilloux V, Schmidtke P, Tufféry P. Fpocket: an open source platform for ligand pocket detection. *BMC Bioinformatics* 2009.
+14. Eberhardt J, et al. AutoDock Vina 1.2.0. *J Chem Inf Model* 2021 (Trott O, Olson AJ, 2010).
+15. Tran-Nguyen VK, Jacquemard C, Rognan D. LIT-PCBA. *J Chem Inf Model* 2020.
+16. van Tilborg D, Alenicheva A, Grisoni F. Exposing the limitations of molecular machine learning with activity cliffs (MoleculeACE). *J Chem Inf Model* 2022.
+17. Hart T, et al. High-resolution CRISPR screens reveal fitness genes and genotype-specific cancer liabilities (core-essential CEG2). *Cell* 2015 / *G3* 2017.
+18. Ochoa D, et al. The Open Targets Platform. *Nucleic Acids Res* 2021/2023.
+19. Nelson MR, et al. The support of human genetic evidence for approved drug indications. *Nat Genet* 2015.
+20. Vigouroux A, Bikard D. Mobile-CRISPRi / CRISPR interference for essential-gene knockdown in diverse bacteria (K. pneumoniae, A. baumannii applications, 2020–2023).
