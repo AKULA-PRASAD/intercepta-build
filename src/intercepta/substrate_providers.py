@@ -87,11 +87,14 @@ def _best_tm(query_struct_dir, ref_struct_dir, scratch, tag):
 class StructuralHomologyProvider(EvidenceProvider):
     """RANK by STRUCTURAL homology (Foldseek TM-score) to reference target structures — the signal that recovers targets
     when SEQUENCE homology fails (phylogenetically-isolated / novel-fold pathogens; FOLD1). Entities are UniProt accessions
-    with a structure file `<acc>.pdb` in the query dir. **Default tier OWN_SINGLE => QUARANTINED under the default
-    min_decision_tier (OWN_REPRODUCED): it cannot drive a decision until FOLD1 validates + reproduces it (the guardrail);
-    promote to OWN_REPRODUCED once validated.**"""
+    with a structure file `<acc>.pdb` in the query dir. **VALIDATED (FOLD1, reproduced x2): on 4 phylogenetically-isolated
+    pathogens structural homology discriminates targets better than sequence (AUROC 0.69 vs 0.64) and recovers 44% of the
+    targets sequence made invisible; the structural-conservation NULL SURVIVED — structure-to-TARGETS (AUROC 0.69) beats a
+    matched random NON-target reference (0.56, near-random), delta +0.13 consistent 4/4, so the signal is target-SPECIFIC,
+    not generic fold. Promoted to OWN_REPRODUCED => drives decisions under the default min_decision_tier.** Modest effect;
+    Foldseek TM (not the under-estimated E-value); AlphaFold predicted structures; hypotheses, not validated targets."""
     role = SignalRole.RANK
-    tier = ProvenanceTier.OWN_SINGLE
+    tier = ProvenanceTier.OWN_REPRODUCED   # FOLD1 + structural-conservation null validated (reproduced x2)
     direction = 1.0
 
     def __init__(self, query_struct_dir, ref_struct_dir, scratch, name="structural_homology", signal="structural_homology_tm"):

@@ -130,22 +130,23 @@ def test_substrate_is_entity_agnostic_ranks_molecules_and_excludes_pains():
     assert aspirin in sl and quinone not in sl
 
 
-# ---- new StructuralHomologyProvider is quarantined until validated (the continuous-absorption guardrail) ----
-def test_structural_homology_provider_quarantined_until_validated():
+# ---- StructuralHomologyProvider: FOLD1 + structural-conservation null VALIDATED it (promoted to OWN_REPRODUCED) ----
+def test_structural_homology_provider_validated_drives_decision():
     from intercepta.substrate_providers import StructuralHomologyProvider
     p = StructuralHomologyProvider("q", "r", "scr")
     p._best = {"P1": 0.82, "P2": 0.0}                         # mock Foldseek TM-scores (bypass the tool)
     recs = list(p.provide(Query(pathogen="bug", entities=["P1", "P2"])))
     assert len(recs) == 1 and recs[0].entity == "P1"          # only TM>0 emits a record
-    assert recs[0].role == SignalRole.RANK and recs[0].tier == ProvenanceTier.OWN_SINGLE
-    # OWN_SINGLE is below the default min_decision_tier (OWN_REPRODUCED) -> cannot drive a decision until FOLD1 validates
+    # FOLD1 (reproduced x2) + structural-conservation null (survived) validated it -> default OWN_REPRODUCED
+    assert recs[0].role == SignalRole.RANK and recs[0].tier == ProvenanceTier.OWN_REPRODUCED
     eng = TargetEngine().register(p)
     v = {x.entity: x for x in eng.query(Query(pathogen="bug", entities=["P1", "P2"]))}
-    assert v["P1"].abstain is True                            # structural evidence quarantined -> no confident call yet
-    # once promoted to OWN_REPRODUCED (FOLD1 validated + reproduced x2), it drives the decision
-    p2 = StructuralHomologyProvider("q", "r", "scr"); p2.tier = ProvenanceTier.OWN_REPRODUCED; p2._best = {"P1": 0.82}
+    assert v["P1"].abstain is False and v["P1"].safe is True  # validated structural evidence drives the decision
+    assert v["P2"].abstain is True                            # no structural homolog -> honest abstain
+    # a FRESH/unreplicated structural signal must still be quarantined until it reproduces (the guardrail is intact)
+    p2 = StructuralHomologyProvider("q", "r", "scr"); p2.tier = ProvenanceTier.OWN_SINGLE; p2._best = {"P1": 0.82}
     v2 = {x.entity: x for x in TargetEngine().register(p2).query(Query(pathogen="bug", entities=["P1"]))}
-    assert v2["P1"].abstain is False and v2["P1"].safe is True
+    assert v2["P1"].abstain is True
 
 
 # ---- CLI: the substrate as a shipped tool (source-agnostic evidence composition) ----

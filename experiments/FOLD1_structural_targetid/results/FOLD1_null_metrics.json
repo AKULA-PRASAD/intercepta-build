@@ -1,0 +1,56 @@
+{
+  "per_pathogen": {
+    "calbicans": {
+      "AUROC_TM_to_nontargets": 0.5911,
+      "AUROC_TM_to_targets": 0.6714,
+      "mean_target_margin": 0.0575,
+      "n": 138,
+      "n_targets": 19
+    },
+    "lmajor": {
+      "AUROC_TM_to_nontargets": 0.4289,
+      "AUROC_TM_to_targets": 0.7413,
+      "mean_target_margin": 0.2053,
+      "n": 121,
+      "n_targets": 11
+    },
+    "pfalciparum": {
+      "AUROC_TM_to_nontargets": 0.5573,
+      "AUROC_TM_to_targets": 0.689,
+      "mean_target_margin": 0.0924,
+      "n": 171,
+      "n_targets": 52
+    },
+    "tbrucei": {
+      "AUROC_TM_to_nontargets": 0.6205,
+      "AUROC_TM_to_targets": 0.7141,
+      "mean_target_margin": 0.1379,
+      "n": 133,
+      "n_targets": 13
+    }
+  },
+  "provenance": {
+    "git_sha": "46a2eb75f3b7b2613a1919d828d0c4bc7b85929a",
+    "utc": "2026-08-05T18:03:35Z"
+  },
+  "runtime_sec": 0.0,
+  "summary": {
+    "consistent_across_pathogens": true,
+    "delta_AUROC_targets_minus_nontargets": 0.1346,
+    "pathogens": [
+      "calbicans",
+      "pfalciparum",
+      "tbrucei",
+      "lmajor"
+    ],
+    "pooled": {
+      "AUROC_TM_to_nontargets": 0.5557,
+      "AUROC_TM_to_targets": 0.6903,
+      "mean_target_margin": 0.1047,
+      "n": 563,
+      "n_targets": 95
+    },
+    "structural_signal_is_target_specific": true,
+    "verdict": "NULL SURVIVED \u2014 the FOLD1 structural signal is TARGET-SPECIFIC, not generic fold similarity: structure-to-reference-TARGETS discriminates isolated-pathogen targets better than a matched random NON-target reference (pooled AUROC 0.6903 vs 0.5557, delta +0.1346, consistent across all pathogens=True), and targets are on average structurally closer to OTHER targets than to random proteins (mean per-target margin +0.1047). So structural homology to known targets is a genuine specific signal for isolated-pathogen target-ID -> PROMOTE StructuralHomologyProvider to OWN_REPRODUCED. Caveats unchanged: modest effect; Foldseek TM; AlphaFold predicted structures; hypotheses, not validated targets; not wet-lab."
+  }
+}
