@@ -55,4 +55,20 @@ method to organisms with metabolic-model machinery.
 
 ---
 ## REVEAL OUTCOME (Stage 2 — appended after Stage 1 is committed)
-(pending)
+**Result: FAIL — honest negative (reproduced ×2, payload sha d58f9e7e).** At the pre-registered threshold
+(e ≤ 1e-5), **0 of 30** SARS-CoV-2 mature proteins had ANY non-coronaviral drugged-*sequence* homolog. A
+relaxed diagnostic probe (e = 100, max sensitivity) found only noise (best hit e ≈ 0.13, ~29% identity over
+31 residues). The approved-drug targets nsp5/Mpro and nsp12/RdRp did **not** clear the gate (no detectable
+homolog; their apparent rank positions #5/#11 are input-order artifacts among all-zero scores, so the gate
+requires bits > 0 to count — corrected in `score.py`).
+
+**Meaning (honest):** the SEQUENCE-homology intervention signal that works for bacteria (INTERVENE1 — where a
+pathogen's drugged homologs are evolutionarily close) does **not** generalize to a divergent emerging virus.
+Cross-family viral sequence identity (e.g. SARS-CoV-2 Mpro vs picornaviral 3C protease; RdRp vs HCV NS5B /
+HIV RT) is below sequence-detection limits. This is a genuine boundary of the method, reported first-class,
+not re-run to a better number.
+
+**What it points to (hypothesis, tested separately in GENERALIZE2, not claimed here):** the enzyme FOLDS
+(chymotrypsin-like protease fold; right-hand RdRp fold) are conserved even when sequence is not, so a
+STRUCTURAL-homology bridge (Foldseek) is the correct tool for cross-family viral target prioritization.
+This negative is precisely what motivates the structural follow-up.
