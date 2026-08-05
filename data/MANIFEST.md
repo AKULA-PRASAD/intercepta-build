@@ -209,3 +209,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## REACH1 non-metabolic recall (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/reach1/breadth.tsv — per-E.coli-gene conservation breadth (0-6 diverse panel bacteria with a homolog;
   mmseqs2). Regenerable from tid1 proteomes via build_conservation.py. Reuses PEC essentials + MET2 GEM.
+
+## ENGINE end-to-end (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/engine/kpneumoniae_breadth.tsv, reference_targets.fasta — on-the-fly inputs for the held-out K. pneumoniae
+  DiscoveryEngine demo (conservation breadth vs 7 panel; other-org known-target sequences). Regenerable via ENGINE prep.py.

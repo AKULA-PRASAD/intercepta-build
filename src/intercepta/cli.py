@@ -249,6 +249,24 @@ def _cmd_substrate(args):
     return 0
 
 
+def _cmd_discover_targets(args):
+    """Unified end-to-end zero-data target discovery: genome -> safe, confidence-tiered, provenance-tagged shortlist."""
+    from .discovery_engine import DiscoveryEngine
+    import json
+    eng = DiscoveryEngine.for_pathogen(
+        args.pathogen, args.proteome, scratch=args.scratch,
+        essentiality_tsv=args.essentiality, chokepoint_tsv=args.chokepoint, breadth_tsv=args.breadth,
+        reference_targets_fasta=args.reference_targets, human_fasta=args.human, ceg2_path=args.ceg2)
+    rep = eng.report(top=args.top)
+    json.dump(rep, open(args.out, "w"), indent=2, sort_keys=True)
+    print(f"{args.pathogen}: {rep['n_confident_safe_targets']} confident safe targets, "
+          f"{rep['n_excluded_by_safety']} host-toxic excluded, {rep['n_abstained']} abstained -> {args.out}")
+    print("active validated signals:", ", ".join(rep["active_signals"]) or "(none)")
+    print(rep["confidence_note"])
+    print("HONEST SCOPE:", rep["honest_scope"])
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -327,6 +345,21 @@ def main(argv=None):
     su.add_argument("--name", default="query", help="label for the query/disease")
     su.add_argument("--out", default="intercepta_substrate.csv")
     su.set_defaults(func=_cmd_substrate)
+    dt = sub.add_parser("discover-targets", help="end-to-end zero-data target discovery: pathogen genome -> safe, "
+                        "confidence-tiered, provenance-tagged target shortlist (composes ALL validated signals: "
+                        "essentiality[validated]/chokepoint/conservation/breadth/structure + hard host-safety filter)")
+    dt.add_argument("--pathogen", required=True, help="organism key (matches the org column in the cache TSVs)")
+    dt.add_argument("--proteome", required=True, help="pathogen proteome FASTA (UniProt headers)")
+    dt.add_argument("--essentiality", help="FBA essentiality TSV (org<TAB>uniprot<TAB>essential[...])")
+    dt.add_argument("--chokepoint", help="metabolic chokepoint TSV (org<TAB>uniprot<TAB>chokepoint)")
+    dt.add_argument("--breadth", help="conservation-breadth TSV (uniprot<TAB>breadth)")
+    dt.add_argument("--reference-targets", dest="reference_targets", help="other-organisms' known-target FASTA (conservation)")
+    dt.add_argument("--human", help="human proteome FASTA (host-safety filter)")
+    dt.add_argument("--ceg2", help="Hart CEG2 core-essential gene list (host-toxicity ground truth)")
+    dt.add_argument("--scratch", default="/tmp/intercepta_engine", help="scratch dir for mmseqs")
+    dt.add_argument("--top", type=int, default=30)
+    dt.add_argument("--out", default="targets.json")
+    dt.set_defaults(func=_cmd_discover_targets)
     args = p.parse_args(argv)
     return args.func(args)
 

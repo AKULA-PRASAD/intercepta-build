@@ -165,6 +165,27 @@ def test_conservation_breadth_provider_ranks_and_thresholds():
     assert v["P1"].confidence == "high" and v["P1"].safe is True
 
 
+# ---- DiscoveryEngine: the unified end-to-end assembly composes validated signals + honest confidence diagnostic ----
+def test_discovery_engine_assembles_and_reports(tmp_path):
+    from intercepta.discovery_engine import DiscoveryEngine
+    prot = tmp_path / "bug.fasta"
+    prot.write_text(">tr|P1|P1_BUG x GN=murB\nMAAA\n>tr|P2|P2_BUG y GN=ftsZ\nMBBB\n>tr|P3|P3_BUG z GN=acc\nMCCC\n")
+    ess = tmp_path / "ess.tsv"
+    ess.write_text("organism\tuniprot\tessential\tgrowth\nbug\tP1\t1\t0.0\nbug\tP2\t0\t1.0\nbug\tP3\t1\t0.0\n")
+    br = tmp_path / "breadth.tsv"
+    br.write_text("uniprot\tbreadth\nP1\t6\nP2\t5\nP3\t0\n")
+    eng = DiscoveryEngine.for_pathogen("bug", str(prot), scratch=str(tmp_path / "scr"),
+                                       essentiality_tsv=str(ess), breadth_tsv=str(br))
+    rep = eng.report(top=10)
+    assert any("essentiality" in s for s in rep["active_signals"])
+    assert any("conservation_breadth" in s for s in rep["active_signals"])
+    assert rep["n_entities"] == 3
+    assert "confidence_note" in rep and "high_fraction_of_ranked" in rep
+    # P1 (essential + breadth 6) is a confident target; P3 (essential but breadth 0 below min) still has essentiality
+    ents = {r["entity"] for r in rep["shortlist"]}
+    assert "P1" in ents
+
+
 # ---- CLI: the substrate as a shipped tool (source-agnostic evidence composition) ----
 def test_cli_substrate_composes_evidence_with_governance(tmp_path):
     import pandas as pd
