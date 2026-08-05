@@ -212,7 +212,13 @@ recovers the known targets by homology at honestly-degraded confidence, and abst
 human cancers (where the architecture runs but honestly surfaces that within-disease human target evidence is
 popularity-confounded and near-random — a real ceiling). The honest "any disease" bound: **the governance architecture is
 universal; the quality of the answer is disease-class-specific — strong where real mechanism exists (pathogens), weak where
-only popularity-confounded evidence does (human single-disease queries).**
+only popularity-confounded evidence does (human single-disease queries).** These signals are now assembled into one shipped
+end-to-end engine (`intercepta.discovery_engine` / CLI `intercepta discover-targets`): a pathogen genome in, a safe,
+confidence-tiered, provenance-tagged target shortlist out. Run on the **held-out** *K. pneumoniae*, it excludes host-toxic
+targets by construction and returns a shortlist spanning **metabolic** essentials (murB/murG/mraY/dxs/ispE) *and* — via the
+conservation-breadth signal — the **non-metabolic** essentials FBA is blind to (dnaE/ileS/leuS/secA/topA), 15/30 of the top
+being experimentally-essential-confirmed. It even reports its own limitation: at genome scale the confidence tier saturates,
+so ranking is by score, not label (honest by construction).
 
 **The predictions (the payoff).** Run on bacterial genomes with **zero drug data**, the engine's novel safe predictions —
 FBA-essential + metabolic chokepoint + host-non-homologous + not-already-a-drug-target — number 85 across 7 pathogens, and
