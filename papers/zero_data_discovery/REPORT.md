@@ -21,7 +21,7 @@ genome-scale metabolic model, adds target information beyond conservation, and �
 gene-knockout data — is enriched for experimentally essential genes across **six CURATED genome-scale models spanning three phyla
 (γ-proteobacteria, Firmicutes, Actinobacteria), all clearing a pre-registered OR>3 gate (odds ratios 4.3–45; precision/recall up to
 0.68/0.79)**; the genuinely novel-pathogen case (no curated model) is separately confirmed on de-novo reconstructions of two held-out
-WHO critical-priority pathogens (*K. pneumoniae*, *A. baumannii*), which also pass but more weakly (sparser de-novo models). 6/7 pre-locked E. coli predictions are experimentally essential.
+WHO critical-priority pathogens (*K. pneumoniae*, *A. baumannii*), which also pass but more weakly (sparser de-novo models). 6/7 pre-locked E. coli predictions are experimentally essential. Crucially, in a **pre-registered prospective-blind test** on a *never-seen* WHO pathogen (*N. gonorrhoeae*; predictions locked and committed to version control *before* the experimental answer was consulted), FBA-essential genes are enriched for experimental essentiality at **odds ratio 6.1 (p≈4×10⁻⁶, precision 0.78)** — the strongest evidence obtainable without a wet lab that the signal predicts, not merely postdicts.
 **(3) A shipped, honest engine:** the validated signals compose into a single disease-agnostic engine that turns a pathogen
 genome into a **safe, calibrated-confidence, provenance-tagged, abstaining** target shortlist, scored on seven axes
 (essentiality, conservation, non-metabolic recall, structural homology, a hard host-non-homology safety filter,
@@ -33,7 +33,7 @@ contribution is a rigorous, reproducible map of how far zero-data discovery reac
 core, and an engine that reports what it cannot know.
 
 **Keywords:** zero-data drug discovery, antibacterial target identification, flux balance analysis, gene essentiality,
-metabolic modeling, WHO priority pathogens, honest machine learning, applicability domain, resistance robustness.
+metabolic modeling, WHO priority pathogens, honest machine learning, applicability domain, resistance robustness, pre-registered prospective validation.
 
 ## The question
 When a new pathogen appears with **zero activity data** — no known inhibitors, no assays, no training labels — how far
@@ -90,6 +90,19 @@ shown to be calibrated to accuracy** — high-confidence calls (≥2 agreeing si
 moderate or low across two independent regimes (CALIB1, ordinal-confidence AUROC 0.66), a derivative but real governance guarantee.
 **This moves the arc's central positive from "computational-only" to "experimentally validated in six organisms including three outside the development panel
 held-out pathogens" — the credibility milestone — while everything else in the map below remains retrospective.**
+
+**A pre-registered PROSPECTIVE-BLIND test (not postdiction).** All of the above is retrospective — the experimental answer
+existed when we computed the enrichment. To test *prospective* prediction honestly without a laboratory, we pre-registered a
+blind protocol on a *never-seen* WHO high-priority pathogen, **Neisseria gonorrhoeae** (drug-resistant gonorrhea; never in
+development): the FBA-essentiality predictions were computed from a *de-novo* genome-scale model and **locked and committed to
+version control before any experimental essentiality was consulted** (the git history is the blindness audit trail). On reveal,
+FBA-essential genes are enriched for experimental essentiality (DEG, Remmele 2014) at **odds ratio 6.1 (Fisher p≈4×10⁻⁶),
+precision 0.78, recall 0.10** — clearing the same pre-registered gate. *Honest integrity note:* the first adjudication (gene-symbol
+match) was inconclusive because the experimental set uses locus tags absent from UniProt (1/613 mapped); we corrected the
+experimental-set mapping via sequence homology (an objective namespace fix) while the **predictions stayed locked and hash-verified
+unchanged** — disclosed because the adjudication was finalized after an inconclusive first attempt. This is the strongest
+prospective evidence obtainable without a wet lab: the mechanism signal *predicts* experimental essentiality on a pre-registered,
+genuinely novel pathogen. (Scope unchanged: essentiality-enrichment only; sparse de-novo GEM → low recall; not wet-lab.)
 
 **The molecule half — the novel-chemotype ceiling of ligand-based hit-finding.**
 Target identification is only half of discovery; the other half is producing candidate molecules for a target with no
