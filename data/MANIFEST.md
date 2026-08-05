@@ -175,3 +175,10 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/newbug/kpneumoniae.xml — de-novo CarveMe GEM (2795 rxns / 1927 genes; UniProt-keyed via gid2acc).
 - $INTERCEPTA_DATA/newbug/{essentiality.tsv,chokepoints.tsv} — FBA essentiality + chokepoint (build.py). Regenerable;
   deterministic. PUBLIC/OPEN; never committed.
+
+## NEWBUG2 second held-out pathogen (A. baumannii) — de-novo GEM + essentiality
+- $INTERCEPTA_DATA/newbug2/abaumannii.fasta — A. baumannii AB0057 proteome (UniProt organism_id 480119, 3711 proteins),
+  fetched 2026-08-05. WHO #1 critical-priority pathogen, NOT in the 7-panel (second held-out organism).
+- $INTERCEPTA_DATA/newbug2/abaumannii.xml — de-novo CarveMe GEM (2835 rxns / 1138 genes; UniProt-keyed via gid2acc).
+- $INTERCEPTA_DATA/newbug2/{essentiality.tsv,chokepoints.tsv} — FBA essentiality + chokepoint. Regenerable; deterministic.
+  PUBLIC/OPEN; never committed.

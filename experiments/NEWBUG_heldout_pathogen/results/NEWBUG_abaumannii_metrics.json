@@ -1,0 +1,62 @@
+{
+  "provenance": {
+    "git_sha": "bbbffc2da3805af0582372685e9c58fcb2a5e514",
+    "utc": "2026-08-05T17:28:19Z"
+  },
+  "runtime_sec": 7.2,
+  "summary": {
+    "canonical_hits": [
+      "coaBC",
+      "coaD",
+      "coaE",
+      "coaX",
+      "dxr",
+      "dxs",
+      "ispD",
+      "ispE",
+      "ispF",
+      "ispG",
+      "mraY",
+      "murA",
+      "murB",
+      "murF",
+      "murG",
+      "thiE",
+      "thiL"
+    ],
+    "frac_canonical": 0.708,
+    "n_essential": 34,
+    "n_excluded_host_toxic": 38,
+    "n_genes_metabolic": 1137,
+    "n_in_canonical_antibacterial_pathways": 17,
+    "n_novel_safe_predictions": 24,
+    "pathogen": "Acinetobacter baumannii (WHO critical; HELD-OUT, not in panel)",
+    "predictions": [
+      "AB57_0874",
+      "AB57_1817",
+      "AB57_2987",
+      "AB57_2997",
+      "AB57_3153",
+      "AB57_3182",
+      "coaBC",
+      "coaD",
+      "coaE",
+      "coaX",
+      "dxr",
+      "dxs",
+      "ispD",
+      "ispE",
+      "ispF",
+      "ispG",
+      "mraY",
+      "murA",
+      "murB",
+      "murF",
+      "murG",
+      "thiE",
+      "thiL",
+      "ubiA"
+    ],
+    "verdict": "HELD-OUT north-star demonstration: from Acinetobacter baumannii's GENOME ALONE (a WHO critical-priority pathogen NEVER used to build the method \u2014 de-novo CarveMe GEM), the substrate produces a safe target shortlist in minutes and yields 24 novel safe predictions (essential + chokepoint + host-non-homologous), excluding 38 host-toxic genes by construction. **17/24 (70%) land in the CANONICAL antibacterial target landscape** (cell-wall mur*/mraY, isoprenoid isp*/dxr, CoA coa*, folate/riboflavin/thiamine/menaquinone): ['coaBC', 'coaD', 'coaE', 'coaX', 'dxr', 'dxs', 'ispD', 'ispE', 'ispF', 'ispG', 'mraY', 'murA', 'murB', 'murF', 'murG', 'thiE', 'thiL']. So the method reconstructs the established antibacterial target biology on a genuinely HELD-OUT pathogen \u2014 the north-star 'new pathogen genome -> credible safe targets within minutes' claim, demonstrated on an organism it had never seen. SCOPE: FBA-predicted essentiality (experimental check = VALIDATE Tier 0); de-novo GEM (default medium); hypotheses, not validated targets; not wet-lab."
+  }
+}

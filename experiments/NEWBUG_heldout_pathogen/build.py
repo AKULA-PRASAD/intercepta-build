@@ -7,9 +7,9 @@ from collections import defaultdict
 from cobra.io import read_sbml_model
 from cobra.flux_analysis import single_gene_deletion
 
-DATA = os.path.join(os.environ.get("INTERCEPTA_DATA", "/Users/kalki/intercepta_data"), "newbug")
-GEM = os.path.join(DATA, "kpneumoniae.xml")
-ORG = "kpneumoniae"
+DATA = os.environ.get("NEWBUG_DIR", os.path.join(os.environ.get("INTERCEPTA_DATA", "/Users/kalki/intercepta_data"), "newbug"))
+ORG = os.environ.get("NEWBUG_ORG", "kpneumoniae")
+GEM = os.path.join(DATA, os.environ.get("NEWBUG_GEM", "kpneumoniae.xml"))
 CURRENCY = {"h", "h2o", "atp", "adp", "amp", "pi", "ppi", "nad", "nadh", "nadp", "nadph", "co2", "o2", "nh4", "coa",
             "h2o2", "fad", "fadh2", "gtp", "gdp", "gmp", "utp", "udp", "ump", "ctp", "cdp", "cmp", "so4", "hco3", "na1",
             "k", "cl", "mg2", "fe2", "fe3", "ca2", "mn2", "zn2", "cu2", "cobalt2", "mobd", "ni2", "h2s", "so3", "acp",

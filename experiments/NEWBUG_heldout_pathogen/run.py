@@ -9,7 +9,11 @@ from intercepta.substrate import TargetEngine, Query, ProvenanceTier
 from intercepta.substrate_providers import ConservationProvider, CacheRankProvider, HostToxicSafetyProvider
 
 DATA = os.environ.get("INTERCEPTA_DATA", "/Users/kalki/intercepta_data")
-NB, TID1, FRONT1 = os.path.join(DATA, "newbug"), os.path.join(DATA, "tid1"), os.path.join(DATA, "front1")
+NB = os.environ.get("NEWBUG_DIR", os.path.join(DATA, "newbug"))
+ORG = os.environ.get("NEWBUG_ORG", "kpneumoniae")
+FASTA = os.path.join(NB, os.environ.get("NEWBUG_FASTA", "kpneumoniae.fasta"))
+DISPLAY = os.environ.get("NEWBUG_DISPLAY", "Klebsiella pneumoniae")
+TID1, FRONT1 = os.path.join(DATA, "tid1"), os.path.join(DATA, "front1")
 HUMAN = os.path.join(TID1, "proteomes", "human.fasta")
 HERE = os.path.dirname(os.path.abspath(__file__)); SCR = os.path.join(HERE, "scratch")
 PANEL = ["ecoli", "mtb", "paeruginosa", "bsubtilis", "hpylori", "salmonella", "efaecalis", "pfalciparum", "tbrucei", "lmajor", "calbicans"]
@@ -39,10 +43,10 @@ def gene_names(p):
 
 def main():
     t0 = time.time(); shutil.rmtree(SCR, ignore_errors=True); os.makedirs(SCR, exist_ok=True)
-    print("=== NEWBUG: substrate on a HELD-OUT pathogen (K. pneumoniae, never seen) ===")
-    prot = read_fasta(os.path.join(NB, "kpneumoniae.fasta")); gn = gene_names(os.path.join(NB, "kpneumoniae.fasta"))
-    ess = {p.split("\t")[1]: int(p.split("\t")[2]) for p in open(os.path.join(NB, "essentiality.tsv")) if p.startswith("kpneumoniae\t")}
-    choke = {p.split("\t")[1]: int(p.rstrip().split("\t")[2]) for p in open(os.path.join(NB, "chokepoints.tsv")) if p.startswith("kpneumoniae\t")}
+    print(f"=== NEWBUG: substrate on a HELD-OUT pathogen ({DISPLAY}, never seen) ===")
+    prot = read_fasta(FASTA); gn = gene_names(FASTA)
+    ess = {p.split("\t")[1]: int(p.split("\t")[2]) for p in open(os.path.join(NB, "essentiality.tsv")) if p.startswith(ORG + "\t")}
+    choke = {p.split("\t")[1]: int(p.rstrip().split("\t")[2]) for p in open(os.path.join(NB, "chokepoints.tsv")) if p.startswith(ORG + "\t")}
     genes = sorted(a for a in ess if a in prot and a in choke)
     with open(os.path.join(SCR, "q.fasta"), "w") as f:
         for a in genes: f.write(f">{a}\n{prot[a]}\n")
@@ -57,10 +61,10 @@ def main():
     cons = ConservationProvider(os.path.join(SCR, "q.fasta"), os.path.join(SCR, "ot.fasta"), SCR)
     eng = (TargetEngine(min_decision_tier=ProvenanceTier.OWN_REPRODUCED)
            .register(cons)
-           .register(CacheRankProvider(os.path.join(NB, "essentiality.tsv"), "kpneumoniae", "fba_essentiality"))
-           .register(CacheRankProvider(os.path.join(NB, "chokepoints.tsv"), "kpneumoniae", "metabolic_chokepoint"))
+           .register(CacheRankProvider(os.path.join(NB, "essentiality.tsv"), ORG, "fba_essentiality"))
+           .register(CacheRankProvider(os.path.join(NB, "chokepoints.tsv"), ORG, "metabolic_chokepoint"))
            .register(HostToxicSafetyProvider(os.path.join(SCR, "q.fasta"), HUMAN, os.path.join(FRONT1, "CEGv2.txt"), SCR)))
-    verdicts = eng.query(Query(pathogen="kpneumoniae", entities=genes))
+    verdicts = eng.query(Query(pathogen=ORG, entities=genes))
     n_excluded = sum(1 for v in verdicts if not v.safe)
     # novel safe predictions: essential + chokepoint + host-non-homologous (safe, not excluded)
     safe = {v.entity for v in verdicts if v.safe}
@@ -68,12 +72,12 @@ def main():
     names = [gn.get(a, "?") for a in preds]
     canon = [n for n in names if n != "?" and n.lower().startswith(CANONICAL)]
     frac_canon = round(len(canon) / max(len(names), 1), 3)
-    summary = {"pathogen": "Klebsiella pneumoniae (WHO critical; HELD-OUT, not in panel)", "n_genes_metabolic": len(genes),
+    summary = {"pathogen": f"{DISPLAY} (WHO critical; HELD-OUT, not in panel)", "n_genes_metabolic": len(genes),
                "n_essential": int(sum(v == 1 for v in ess.values())), "n_excluded_host_toxic": n_excluded,
                "n_novel_safe_predictions": len(preds), "predictions": sorted(set(names)),
                "n_in_canonical_antibacterial_pathways": len(canon), "frac_canonical": frac_canon,
                "canonical_hits": sorted(set(canon)),
-               "verdict": (f"HELD-OUT north-star demonstration: from K. pneumoniae's GENOME ALONE (a WHO critical-priority "
+               "verdict": (f"HELD-OUT north-star demonstration: from {DISPLAY}'s GENOME ALONE (a WHO critical-priority "
                            f"pathogen NEVER used to build the method — de-novo CarveMe GEM), the substrate produces a safe "
                            f"target shortlist in minutes and yields {len(preds)} novel safe predictions (essential + chokepoint "
                            f"+ host-non-homologous), excluding {n_excluded} host-toxic genes by construction. "
@@ -91,9 +95,9 @@ def main():
     prov = {"git_sha": os.popen("git rev-parse HEAD 2>/dev/null").read().strip(), "utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
     os.makedirs(os.path.join(HERE, "results"), exist_ok=True)
     out = {"summary": summary, "provenance": prov, "runtime_sec": round(time.time() - t0, 1)}
-    json.dump(out, open(os.path.join(HERE, "results", "NEWBUG_metrics.json"), "w"), indent=2, sort_keys=True)
+    json.dump(out, open(os.path.join(HERE, "results", f"NEWBUG_{ORG}_metrics.json"), "w"), indent=2, sort_keys=True)
     payload = json.dumps({k: v for k, v in summary.items() if k != "verdict"}, sort_keys=True)
-    open(os.path.join(HERE, "results", "NEWBUG_payload.sha256"), "w").write(hashlib.sha256(payload.encode()).hexdigest() + "\n")
+    open(os.path.join(HERE, "results", f"NEWBUG_{ORG}_payload.sha256"), "w").write(hashlib.sha256(payload.encode()).hexdigest() + "\n")
     print("payload sha256:", hashlib.sha256(payload.encode()).hexdigest(), f"[{time.time()-t0:.0f}s]")
 
 
