@@ -58,8 +58,8 @@ scorecard (PREDVAL) confirms the pipeline's actual headline nominations directly
 mtnN is correctly exposed as a false positive. Separately, the substrate's **confidence tier is
 shown to be calibrated to accuracy** — high-confidence calls (≥2 agreeing signals) are monotonically more target-enriched than
 moderate or low across two independent regimes (CALIB1, ordinal-confidence AUROC 0.66), a derivative but real governance guarantee.
-**This moves the arc's central positive from "computational-only" to "experimentally validated in three organisms including a
-held-out pathogen" — the credibility milestone — while everything else in the map below remains retrospective.**
+**This moves the arc's central positive from "computational-only" to "experimentally validated in five organisms including two
+held-out pathogens" — the credibility milestone — while everything else in the map below remains retrospective.**
 
 **The molecule half — the novel-chemotype ceiling of ligand-based hit-finding.**
 Target identification is only half of discovery; the other half is producing candidate molecules for a target with no
