@@ -43,7 +43,7 @@ class DiscoveryEngine:
     def for_pathogen(cls, pathogen, proteome_fasta, scratch, essentiality_tsv=None, chokepoint_tsv=None,
                      breadth_tsv=None, reference_targets_fasta=None, human_fasta=None, ceg2_path=None,
                      query_struct_dir=None, ref_struct_dir=None, resistance_classes_tsv=None,
-                     min_decision_tier=ProvenanceTier.OWN_REPRODUCED, entities=None):
+                     condition_robust_tsv=None, min_decision_tier=ProvenanceTier.OWN_REPRODUCED, entities=None):
         os.makedirs(scratch, exist_ok=True)
         eng = TargetEngine(min_decision_tier=min_decision_tier)
         active = []
@@ -75,18 +75,24 @@ class DiscoveryEngine:
         if human_fasta and ceg2_path and os.path.exists(human_fasta) and os.path.exists(ceg2_path):
             eng.register(P.HostToxicSafetyProvider(proteome_fasta, human_fasta, ceg2_path, scratch))
             active.append("host_safety_filter[FRONT1/E2E2]")
-        if resistance_classes_tsv and os.path.exists(resistance_classes_tsv):
+        def _load_classes(tsv):
+            """Map entities -> class from a TSV keyed by EITHER accession (organism-native) OR gene symbol (ortholog transfer)."""
             raw = {}
-            for ln in open(resistance_classes_tsv).read().splitlines()[1:]:
+            for ln in open(tsv).read().splitlines()[1:]:
                 p = ln.split("\t")
                 if len(p) >= 2: raw[p[0].strip()] = p[1].strip()
             low = {k.lower(): v for k, v in raw.items()}
-            ent2cls = {}                                   # accepts EITHER accession-keyed (native, SYNLETH2) OR symbol-keyed (transfer, SYNLETH1)
+            out = {}
             for a in accs:
-                if a in raw: ent2cls[a] = raw[a]                                   # organism-native accession match
-                elif acc2sym.get(a) and acc2sym[a] in low: ent2cls[a] = low[acc2sym[a]]  # ortholog-transfer symbol match
-            if ent2cls:
-                eng.register(P.ResistanceProvider(ent2cls)); active.append("resistance_robustness[SYNLETH]")
+                if a in raw: out[a] = raw[a]                                       # accession match (native)
+                elif acc2sym.get(a) and acc2sym[a] in low: out[a] = low[acc2sym[a]]  # symbol match (transfer)
+            return out
+        if resistance_classes_tsv and os.path.exists(resistance_classes_tsv):
+            ec = _load_classes(resistance_classes_tsv)
+            if ec: eng.register(P.ResistanceProvider(ec)); active.append("resistance_robustness[SYNLETH]")
+        if condition_robust_tsv and os.path.exists(condition_robust_tsv):
+            cc = _load_classes(condition_robust_tsv)
+            if cc: eng.register(P.ConditionRobustnessProvider(cc)); active.append("condition_robustness[CONDROB1]")
         return cls(pathogen, accs, eng, active)
 
     # ---- run --------------------------------------------------------------
@@ -127,6 +133,7 @@ class DiscoveryEngine:
             "n_confident_safe_targets": len(safe_ranked),
             "n_monotherapy_robust": sum(1 for v in safe_ranked if "monotherapy_robust" in v.flags),
             "n_combination_required": sum(1 for v in safe_ranked if "combination_required" in v.flags),
+            "n_condition_robust": sum(1 for v in safe_ranked if "condition_robust" in v.flags),
             "shortlist": shortlist,
             "honest_scope": ("Confidence-tiered candidate HYPOTHESES with provenance — NOT validated targets or drugs. "
                              "The essentiality ENRICHMENT is experimentally validated (VAL-ESS, 5 organisms); the "

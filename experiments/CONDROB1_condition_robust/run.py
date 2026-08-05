@@ -85,6 +85,16 @@ def main():
           "specific_n": len(specific), "specific_pec_precision": prec(specific),
           "all_essential_n": len(allgenes), "all_pec_precision": prec(allgenes)}
 
+    # persist per-gene-SYMBOL condition-robustness classes (for the DiscoveryEngine ConditionRobustnessProvider)
+    with open(os.path.join(DATA, "synleth", "ecoli_condition_robust.tsv"), "w") as f:
+        f.write("gene\tclass\n"); seen = set()
+        for g in m.genes:
+            sym = (g.name or "").lower()
+            if not sym or sym in seen: continue
+            seen.add(sym); k = robustness.get(g.id, 0)
+            cls = "condition_robust" if k == N else "condition_partial" if k >= 1 else "non_essential"
+            f.write(f"{sym}\t{cls}\n")
+
     # H2: condition-robustness of INTERCEPTA nominated targets
     preds = json.load(open(os.path.join(ROOT, "experiments/DRUGGABLE_predictions/results/DRUGGABLE_metrics.json")))["per_gene"]
     nominated = [g["gene"] for g in preds if g["breadth"] >= 3]

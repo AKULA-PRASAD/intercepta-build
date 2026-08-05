@@ -180,6 +180,20 @@ def test_resistance_provider_flags_monotherapy_vs_combination():
     assert v["P1"].safe is True and v["P2"].safe is True
 
 
+# ---- ConditionRobustnessProvider: CONDROB1 environment-independence flag ----
+def test_condition_robustness_provider_flags():
+    from intercepta.substrate_providers import ConditionRobustnessProvider
+    p = ConditionRobustnessProvider({"P1": "condition_robust", "P2": "condition_partial", "P3": "non_essential"})
+    eng = (TargetEngine()
+           .register(StaticProvider("ess", "essential", SignalRole.RANK, ProvenanceTier.OWN_REPRODUCED, {"P1": 1, "P2": 1, "P3": 1}))
+           .register(p))
+    v = {x.entity: x for x in eng.query(_q(["P1", "P2", "P3"]))}
+    assert "condition_robust" in v["P1"].flags            # environment-independent target flagged
+    assert "condition_partial" in v["P2"].flags
+    assert not any(f.startswith("condition_") for f in v["P3"].flags)  # non-essential -> no flag
+    assert v["P1"].safe is True                            # advisory only
+
+
 # ---- DiscoveryEngine: the unified end-to-end assembly composes validated signals + honest confidence diagnostic ----
 def test_discovery_engine_assembles_and_reports(tmp_path):
     from intercepta.discovery_engine import DiscoveryEngine

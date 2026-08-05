@@ -186,6 +186,28 @@ class ResistanceProvider(EvidenceProvider):
                                      provider=self.name, tier=self.tier)
 
 
+class ConditionRobustnessProvider(EvidenceProvider):
+    """FLAG: CONDITION-ROBUSTNESS class per target (CONDROB1), zero-data from multi-medium FBA. Emits `condition_robust`
+    (essential across ALL tested nutrient environments incl. a host-like supplemented medium -> environment-independent,
+    higher-quality intervention) or `condition_partial` (essential only in some media -> may be bypassed by host-supplied
+    nutrients -> weaker monotherapy). Advisory only. **VALIDATED (CONDROB1): condition-robust essentials are 79% vs 48%
+    experimentally (PEC) essential — a strong quality filter. SCOPE: FBA media approximate environments, NOT a real host;
+    classes may be ortholog-transferred across close species.**"""
+    role = SignalRole.FLAG
+    tier = ProvenanceTier.OWN_REPRODUCED
+
+    def __init__(self, classes, name="condition_robustness"):
+        self.name, self.signal = name, "condition_robustness"
+        self._classes = dict(classes)            # entity -> "condition_robust" | "condition_partial"
+
+    def provide(self, query):
+        for e in query.entities:
+            c = self._classes.get(e)
+            if c in ("condition_robust", "condition_partial"):
+                yield EvidenceRecord(entity=e, signal=c, value=1.0, role=SignalRole.FLAG,
+                                     provider=self.name, tier=self.tier)
+
+
 class HostToxicSafetyProvider(EvidenceProvider):
     """SAFETY_FILTER (host-toxic) + FLAG (needs_experimental_selectivity). External CEG2 + human proteome. EXTERNAL tier."""
     tier = ProvenanceTier.EXTERNAL_VALIDATED

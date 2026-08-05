@@ -1,9 +1,9 @@
 {
   "provenance": {
-    "git_sha": "5118c7d261043a0ac04aa941e1cc786c4ecd619c",
-    "utc": "2026-08-05T21:57:44Z"
+    "git_sha": "0b6432c70eddc3a4a10f2027555f999ee90e3dc6",
+    "utc": "2026-08-05T22:03:51Z"
   },
-  "runtime_sec": 39.6,
+  "runtime_sec": 39.5,
   "summary": {
     "H1_pec_enrichment": {
       "all_essential_n": 199,
