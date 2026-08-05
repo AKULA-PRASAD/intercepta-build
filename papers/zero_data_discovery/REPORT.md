@@ -18,8 +18,8 @@ structural pocket druggability beats a generic **conservation** null, and the si
 and can fail *silently* — an honest ceiling the field's positive-publication bias rarely reports. **(2) The one signal that
 breaks the ceiling, now experimentally verified:** mechanistic **FBA gene-essentiality**, computed from an organism's own
 genome-scale metabolic model, adds target information beyond conservation, and — tested against independent published
-gene-knockout data — is enriched for **experimentally essential genes in five bacteria, two of them held out of method
-development** (odds ratios 7.9–64, all clearing a pre-registered gate; 6/7 pre-locked predictions experimentally essential).
+gene-knockout data — is enriched for **experimentally essential genes in six bacteria spanning Gram-negative, Gram-positive and acid-fast, three of them
+outside the development panel (two are held-out WHO critical-priority pathogens)** (odds ratios 5.4–64, all clearing a pre-registered OR>3 gate; 6/7 pre-locked predictions experimentally essential).
 **(3) A shipped, honest engine:** the validated signals compose into a single disease-agnostic engine that turns a pathogen
 genome into a **safe, calibrated-confidence, provenance-tagged, abstaining** target shortlist, scored on seven axes
 (essentiality, conservation, non-metabolic recall, structural homology, a hard host-non-homology safety filter,
@@ -69,7 +69,7 @@ Crucially, this mechanistic win is scoped to *metabolic* targets — FBA is blin
 **The mechanistic signal is now EXPERIMENTALLY VALIDATED — the arc's first result tested against independent laboratory ground truth.**
 Everything above is retrospective known-target recovery; the FBA-essentiality signal (MET1–3, the one signal that breaks the
 conservation ceiling) has now been tested against decades of *experimental* gene-essentiality — systematic single-gene knockouts
-and saturating transposon mutagenesis — in **five organisms, two of them genuinely held out of method development**. In *E. coli*
+and saturating transposon mutagenesis — in **six organisms (Gram-negative, Gram-positive, and acid-fast), three of them outside the development panel**. In *E. coli*
 (PEC single-gene-knockout essentiality) FBA-predicted essential genes are enriched for experimentally-essential genes at **odds
 ratio 64** (Fisher p≈3×10⁻²⁴), and **6 of 7** pre-registered locked target predictions (ribA, ribB, folB, ribD, ispG, ispD — only
 mtnN is not) are experimentally essential. It **generalizes across the panel** — *M. tuberculosis* (DeJesus 2017 Tn-seq, OR **7.9**)
@@ -86,7 +86,7 @@ scorecard (PREDVAL) confirms the pipeline's actual headline nominations directly
 mtnN is correctly exposed as a false positive. Separately, the substrate's **confidence tier is
 shown to be calibrated to accuracy** — high-confidence calls (≥2 agreeing signals) are monotonically more target-enriched than
 moderate or low across two independent regimes (CALIB1, ordinal-confidence AUROC 0.66), a derivative but real governance guarantee.
-**This moves the arc's central positive from "computational-only" to "experimentally validated in five organisms including two
+**This moves the arc's central positive from "computational-only" to "experimentally validated in six organisms including three outside the development panel
 held-out pathogens" — the credibility milestone — while everything else in the map below remains retrospective.**
 
 **The molecule half — the novel-chemotype ceiling of ligand-based hit-finding.**
@@ -179,7 +179,7 @@ already has signal.**
 ## The complete arc (every claim reproduced ×2, pre-registered)
 Target-ID: conservation ceiling (TID1–2), kingdom degradation + silent failure (TID3), un-predictable failure (TID4);
 mechanism breaks the ceiling for metabolic targets (MET1–3) but not the non-metabolic half (MET4, a study-bias artifact);
-that mechanistic signal is EXPERIMENTALLY VALIDATED vs gene-knockout essentiality in five organisms incl. two held-out
+that mechanistic signal is EXPERIMENTALLY VALIDATED vs gene-knockout essentiality in six organisms incl. three outside the panel
 pathogens (VAL-ESS: E. coli 64 / Mtb 7.9 / P. aeruginosa 23 / K. pneumoniae held-out 63 / A. baumannii held-out 13; per-target
 scorecard PREDVAL); substrate confidence is calibrated to accuracy (CALIB1);
 front-half selectivity (FRONT1 danger of conservation-ranking → E2E2 safety/recall tension → FRONT2 structure can't rescue).
@@ -191,7 +191,7 @@ signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-i
   pathogen's own metabolic model (mechanism, not homology), is the single signal that adds target-ID information *beyond* the
   conservation ceiling (MET1, replicated MET2, better shortlist MET3) — but only for *metabolic* targets; the obvious
   extension to the rest is a study-bias artifact (MET4). This signal is now tested against independent **experimental**
-  gene-knockout essentiality and holds in **five organisms, two held out of development**: *E. coli* (PEC, odds ratio 64),
+  gene-knockout essentiality and holds in **six organisms (Gram-negative, Gram-positive, acid-fast)**: *E. coli* (PEC, odds ratio 64),
   *M. tuberculosis* (DeJesus Tn-seq, 7.9), *P. aeruginosa* (Turner Tn-seq, 23), and the **held-out** WHO pathogens
   *K. pneumoniae* (CRISPRi/Tn-seq, 63, precision 92%) and *A. baumannii* (Wang INSeq, 13) — every one clearing the same
   pre-registered gate, with 6/7 locked predictions experimentally essential and a per-target scorecard confirming
@@ -216,7 +216,7 @@ signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-i
 ## Honest scope and what remains gated
 With one exception, results are retrospective and in-silico, on open data, on a modest pathogen/target panel; none is a
 validated hit, a drug, or a clinical claim. **The exception is the FBA-essentiality signal, now validated against experimental
-gene-knockout data in five organisms (E. coli, Mtb, P. aeruginosa, and the held-out K. pneumoniae and A. baumannii) — but that
+gene-knockout data in six organisms (E. coli, Mtb, P. aeruginosa, held-out K. pneumoniae and A. baumannii, and Gram-positive S. aureus — the weakest) — but that
 validation is scoped to essentiality enrichment (binary, high-precision/low-recall), not to the drug-target or clinical claims,
 which remain retrospective.** Every
 other hard problem in the arc — novel-fold/isolated-pathogen target-ID, non-metabolic mechanism,
@@ -277,8 +277,9 @@ hypotheses, and the single cheapest rigorous test — costing nothing — has no
 checked against decades of *experimental* essentiality. The experimental data were auto-sourced directly (PEC single-gene
 knockouts for *E. coli*; DeJesus 2017 Tn-seq for *M. tuberculosis*; DEG/Turner and DEG/Wang Tn-seq/INSeq for *P. aeruginosa* and
 the held-out *A. baumannii*; aggregated CRISPRi/Tn-seq for the held-out *K. pneumoniae*), and the turnkey validator
-(`experiments/VALIDATE_essentiality`) confirms a strong, reproduced enrichment in all **five organisms** (odds ratios
-64 / 7.9 / 23 / 63 / 13, every one clearing the pre-registered gate; 6/7 locked predictions experimentally essential; a per-target
+(`experiments/VALIDATE_essentiality`) confirms a strong, reproduced enrichment in all **six organisms** (odds ratios 64 / 63 / 23 / 13 / 7.9 / 5.4 for E. coli / K. pneumoniae /
+P. aeruginosa / A. baumannii / M. tuberculosis / Gram-positive S. aureus — the last the weakest, limited by a sparse de-novo Gram-positive
+GEM, but still clearing the pre-registered gate; 6/7 locked predictions experimentally essential; a per-target
 scorecard confirming the headline murB/murG/dxr/murF/ispE nominations). **So the mechanistic core is no longer a
 prediction awaiting test — it is validated against laboratory ground truth**, including on a pathogen the method never saw. What
 remains gated is the *next* rung: a wet-lab CRISPRi/knockout test of a specific novel top prediction (e.g. **murB**), and the
@@ -291,11 +292,11 @@ anchored, and the remaining distance to a drug is experimental.
 *All figures are generated directly from the committed experiment metrics by `gen_figures.py` — every value traces to a reproduced-×2 experiment.*
 
 ![Figure 1](figures/fig1_five_organism_validation.png)
-**Fig 1. FBA gene-essentiality is validated against experimental knockout data in five bacteria.** Odds ratio for the
+**Fig 1. FBA gene-essentiality is validated against experimental knockout data in six bacteria (incl. Gram-positive S. aureus).** Odds ratio for the
 enrichment of FBA-predicted-essential genes among experimentally-essential genes (log scale); all five clear the
 pre-registered gate (OR>3). Red = held-out WHO critical-priority pathogens (never used in method development). Sources:
 PEC (E. coli), Turner Tn-seq (P. aeruginosa), DeJesus Tn-seq (M. tuberculosis), Wang INSeq (A. baumannii), CRISPRi/Tn-seq
-(K. pneumoniae).
+(K. pneumoniae), and DEG Tn-based (Gram-positive S. aureus, the weakest but still passing).
 
 ![Figure 2](figures/fig2_mechanism_ceiling_break.png)
 **Fig 2. Mechanism breaks the conservation ceiling.** Held-out (5-fold CV) target-recovery AUROC in E. coli (iML1515):
@@ -359,7 +360,7 @@ molecule outputs are **computational hypotheses with provenance, not validated t
 ## Conclusion
 For pathogens with zero activity data, the honest reachable frontier is now mapped and, at its core, **experimentally
 anchored**: mechanistic gene-essentiality is the one signal that breaks the conservation ceiling, it is validated against
-laboratory knockout data in five bacteria (two held out, including two WHO critical-priority pathogens), and it composes into
+laboratory knockout data in six bacteria (Gram-negative, Gram-positive and acid-fast; three outside the development panel, including two WHO critical-priority held-out pathogens), and it composes into
 a shipped, disease-agnostic engine that returns safe, calibrated, resistance- and environment-aware target shortlists while
 abstaining where it lacks signal. The remaining distance to a drug — a validated *novel* target, a real inhibitor for a novel
 target, selectivity, and clinical efficacy — is gated by **new experimental information, not more computation**. The value of

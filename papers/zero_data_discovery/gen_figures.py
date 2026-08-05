@@ -23,12 +23,14 @@ ec = L("VALIDATE_essentiality/results/VALIDATE_essentiality.json")["summary"]
 mt = L("VALIDATE_essentiality/results/VALIDATE_essentiality_mtb.json")["summary"]
 kp = L("VALIDATE_essentiality/results/VALIDATE_essentiality_kp.json")["summary"]
 deg = L("VALIDATE_essentiality/results/VALIDATE_essentiality_deg.json")["summary"]["organisms"]
+sa = L("SAUREUS_gram_positive/results/SAUREUS_metrics.json")["summary"]["validation"]
 rows = [  # (label, source, odds_ratio, fisher_p, held_out)
     ("E. coli",        "PEC knockouts",   ec["odds_ratio"], ec["fisher_p"], False),
     ("P. aeruginosa",  "Turner Tn-seq",   deg["paeruginosa"]["odds_ratio"], deg["paeruginosa"]["fisher_p"], False),
     ("M. tuberculosis","DeJesus Tn-seq",  mt["odds_ratio"], mt["fisher_p"], False),
     ("A. baumannii",   "Wang INSeq",      deg["abaumannii"]["odds_ratio"], deg["abaumannii"]["fisher_p"], True),
     ("K. pneumoniae",  "CRISPRi/Tn-seq",  kp["odds_ratio"], kp["fisher_p"], True),
+    ("S. aureus (Gram+)", "DEG Tn-based",  sa["odds_ratio"], sa["fisher_p"], True),
 ]
 rows.sort(key=lambda r: r[2])
 fig, ax = plt.subplots(figsize=(7.2, 3.6))
@@ -41,7 +43,7 @@ for i, r in enumerate(rows):
     ax.text(r[2]*1.03, i, f"OR {r[2]:.0f}  {ptxt}", va="center", fontsize=8)
 ax.set_yticks(y); ax.set_yticklabels([f"{r[0]}\n({r[1]})" for r in rows], fontsize=8.5)
 ax.set_xscale("log"); ax.set_xlim(1, 300); ax.set_xlabel("Odds ratio: FBA-essential enriched for EXPERIMENTALLY-essential genes (log scale)")
-ax.set_title("Fig 1. FBA gene-essentiality validated against experimental knockout data in 5 bacteria", fontsize=10, loc="left")
+ax.set_title("Fig 1. FBA gene-essentiality validated against experimental knockout data in 6 bacteria (incl. Gram-positive)", fontsize=9.5, loc="left")
 from matplotlib.patches import Patch
 ax.legend(handles=[Patch(color=PANEL, label="development panel"), Patch(color=HELDOUT, label="held-out WHO pathogen")],
           loc="lower right", fontsize=8, frameon=False)
