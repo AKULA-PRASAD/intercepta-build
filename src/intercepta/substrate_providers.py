@@ -127,3 +127,74 @@ class NoHomologAbstainProvider(EvidenceProvider):
         for e in query.entities:
             if b.get(e, (None, 0.0))[1] <= 0.0:
                 yield self._rec(e, 1.0)
+
+
+# ==========================================================================================================
+# BACK-HALF (molecule) providers — demonstrate the substrate is ENTITY-AGNOSTIC: the SAME core that ranks
+# proteins (front half) ranks candidate MOLECULES (back half). Entities are SMILES; free RDKit descriptors
+# (no training needed). These wrap standard published methods, tiered accordingly.
+# ==========================================================================================================
+_SASCORER = None
+
+
+def _mol(smiles):
+    from rdkit import Chem
+    return Chem.MolFromSmiles(smiles)
+
+
+class QEDProvider(EvidenceProvider):
+    """RANK candidate molecules by QED drug-likeness (Bickerton 2012; published metric). Entities are SMILES."""
+    role = SignalRole.RANK
+    tier = ProvenanceTier.EXTERNAL_VALIDATED
+    direction = 1.0
+    name = "qed"
+    signal = "qed_druglikeness"
+
+    def provide(self, query):
+        from rdkit.Chem import QED
+        for smi in query.entities:
+            m = _mol(smi)
+            if m is not None:
+                yield self._rec(smi, float(QED.qed(m)))
+
+
+class SAscoreProvider(EvidenceProvider):
+    """RANK candidate molecules by synthetic accessibility (Ertl 2009 SAscore; lower is easier -> direction=-1)."""
+    role = SignalRole.RANK
+    tier = ProvenanceTier.OWN_REPRODUCED
+    direction = -1.0
+    name = "sascore"
+    signal = "synthetic_accessibility"
+
+    def provide(self, query):
+        global _SASCORER
+        if _SASCORER is None:
+            import os, sys
+            from rdkit.Chem import RDConfig
+            sys.path.append(os.path.join(RDConfig.RDContribDir, "SA_Score"))
+            import sascorer as _s
+            _SASCORER = _s
+        for smi in query.entities:
+            m = _mol(smi)
+            if m is not None:
+                yield self._rec(smi, float(_SASCORER.calculateScore(m)))
+
+
+class StructuralAlertSafetyProvider(EvidenceProvider):
+    """SAFETY_FILTER for candidate molecules: a PAINS (pan-assay-interference) structural alert EXCLUDES the molecule by
+    construction — the molecule-half analogue of the host-toxic filter (Baell & Holloway 2010; RDKit FilterCatalog)."""
+    tier = ProvenanceTier.EXTERNAL_VALIDATED
+    name = "structural_alert"
+    signal = "pains_alert"
+    role = SignalRole.SAFETY_FILTER
+
+    def __init__(self):
+        from rdkit.Chem.FilterCatalog import FilterCatalog, FilterCatalogParams
+        p = FilterCatalogParams(); p.AddCatalog(FilterCatalogParams.FilterCatalogs.PAINS)
+        self._cat = FilterCatalog(p)
+
+    def provide(self, query):
+        for smi in query.entities:
+            m = _mol(smi)
+            if m is not None and self._cat.HasMatch(m):
+                yield self._rec(smi, 1.0)

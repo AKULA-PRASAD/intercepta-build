@@ -2,6 +2,8 @@
 Tests the core governance logic — provenance-tier quarantine, hard safety filters, honest abstention, tiered
 composition ranking — with synthetic providers (no external data). Fast + CI-able.
 """
+import pytest
+
 from intercepta.substrate import (
     ProvenanceTier, SignalRole, EvidenceRecord, EvidenceProvider, EvidenceStore, TargetEngine, Query,
 )
@@ -107,3 +109,22 @@ def test_flag_surfaces_needs_experimental_selectivity():
     )
     v = {x.entity: x for x in eng.query(_q(["P1"]))}
     assert "needs_experimental_selectivity" in v["P1"].flags
+
+
+# ---- entity-agnostic: the SAME core ranks MOLECULES via molecule providers (SUBSTRATE2) ----
+def test_substrate_is_entity_agnostic_ranks_molecules_and_excludes_pains():
+    pytest.importorskip("rdkit")
+    from intercepta.substrate_providers import QEDProvider, SAscoreProvider, StructuralAlertSafetyProvider
+    aspirin = "CC(=O)Oc1ccccc1C(=O)O"
+    quinone = "O=C1C=CC(=O)C=C1"          # 1,4-benzoquinone -> PAINS quinone alert
+    eng = (TargetEngine()
+           .register(QEDProvider())
+           .register(SAscoreProvider())
+           .register(StructuralAlertSafetyProvider()))
+    v = {x.entity: x for x in eng.query(Query(pathogen="lib", entities=[aspirin, quinone]))}
+    # aspirin: safe, two RANK signals (QED + SAscore) -> high confidence, in shortlist
+    assert v[aspirin].safe is True and v[aspirin].confidence == "high"
+    # PAINS quinone: excluded by construction, never in the shortlist
+    assert v[quinone].safe is False and v[quinone].confidence == "excluded"
+    sl = [x.entity for x in eng.shortlist(Query(pathogen="lib", entities=[aspirin, quinone]))]
+    assert aspirin in sl and quinone not in sl

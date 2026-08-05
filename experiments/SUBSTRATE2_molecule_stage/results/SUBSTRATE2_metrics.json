@@ -1,0 +1,77 @@
+{
+  "provenance": {
+    "git_sha": "4dd0ba4843c050b8e69d57f18f6d9b3e3525ee5b",
+    "utc": "2026-08-05T03:13:42Z"
+  },
+  "runtime_sec": 7.5,
+  "summary": {
+    "confidence_distribution": {
+      "excluded": 112,
+      "high": 2642
+    },
+    "n_candidate_molecules": 2754,
+    "n_excluded_structural_alert": 112,
+    "n_high_confidence": 2642,
+    "pains_in_shortlist": 0,
+    "pct_excluded": 4.1,
+    "top8_shortlist": [
+      {
+        "conf": "high",
+        "qed": 0.877,
+        "sascore": 1.47,
+        "score": 2.9671,
+        "smiles": "COc1ccc(C(=O)Nc2ccccn2)cc1"
+      },
+      {
+        "conf": "high",
+        "qed": 0.799,
+        "sascore": 1.81,
+        "score": 2.4995,
+        "smiles": "Cc1cccc(OCCNc2ccncc2)c1"
+      },
+      {
+        "conf": "high",
+        "qed": 0.767,
+        "sascore": 1.65,
+        "score": 2.4699,
+        "smiles": "N#Cc1ccc2cc(NC(=O)c3ccccc3)ccc2c1"
+      },
+      {
+        "conf": "high",
+        "qed": 0.885,
+        "sascore": 2.46,
+        "score": 2.448,
+        "smiles": "O=C(NCc1cccc(Cl)c1)[C@@H]1CCCN1C(=O)CC1CCCC1"
+      },
+      {
+        "conf": "high",
+        "qed": 0.863,
+        "sascore": 2.47,
+        "score": 2.36,
+        "smiles": "O=C(NCc1cccc(Cl)c1)[C@@H]1CCCN1C(=O)CC1CCCCC1"
+      },
+      {
+        "conf": "high",
+        "qed": 0.736,
+        "sascore": 1.65,
+        "score": 2.3573,
+        "smiles": "c1ccc(COc2ccc(CNc3ccncc3)cc2)cc1"
+      },
+      {
+        "conf": "high",
+        "qed": 0.833,
+        "sascore": 2.48,
+        "score": 2.25,
+        "smiles": "O=C(NCc1cccc(Cl)c1)[C@@H]1CCCN1C(=O)CCC1CCCC1"
+      },
+      {
+        "conf": "high",
+        "qed": 0.834,
+        "sascore": 2.52,
+        "score": 2.2344,
+        "smiles": "N[C@H](Cc1ccccc1)C(=O)N1CCC[C@H]1C(=O)NCc1ccccc1"
+      }
+    ],
+    "verdict": "The SAME disease-agnostic substrate core that ranked PROTEINS (SUBSTRATE1) now ranks 2754 candidate MOLECULES purely by swapping providers \u2014 QED + SAscore (RANK) + PAINS (SAFETY_FILTER) \u2014 under identical provenance-tiered governance. It EXCLUDES 112 (4.1%) structural-alert (PAINS) liabilities by construction (0 in the shortlist \u2014 the molecule-half analogue of the host-toxic filter), ranks the rest by composed developability, and tiers confidence. This proves the 'any disease -> a query' architecture is ENTITY-AGNOSTIC and spans the whole pipeline (front-half proteins AND back-half molecules through ONE governance layer). SCOPE: free RDKit descriptors (QED/SAscore/PAINS) \u2014 a developability/liability composition demo, NOT activity or a validated drug; the honest binding/potency stage remains weak (C1/HIT2); outputs are hypotheses. Not wet-lab."
+  }
+}
