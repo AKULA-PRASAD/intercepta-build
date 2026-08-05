@@ -1,7 +1,10 @@
 {
   "per_disease": {
     "breast carcinoma": {
+      "AUROC_genetic_composite": 0.308,
+      "AUROC_popularity_literature": 0.539,
       "beats_popularity": false,
+      "evidence_beats_popularity_AUROC": false,
       "n_clinic_reached": 74,
       "n_excluded_pan_essential": 30,
       "n_targets": 300,
@@ -43,7 +46,10 @@
       ]
     },
     "melanoma": {
+      "AUROC_genetic_composite": 0.527,
+      "AUROC_popularity_literature": 0.732,
       "beats_popularity": false,
+      "evidence_beats_popularity_AUROC": false,
       "n_clinic_reached": 70,
       "n_excluded_pan_essential": 21,
       "n_targets": 300,
@@ -85,7 +91,10 @@
       ]
     },
     "non-small cell lung carcinoma": {
+      "AUROC_genetic_composite": 0.364,
+      "AUROC_popularity_literature": 0.586,
       "beats_popularity": false,
+      "evidence_beats_popularity_AUROC": false,
       "n_clinic_reached": 130,
       "n_excluded_pan_essential": 23,
       "n_targets": 300,
@@ -128,29 +137,29 @@
     }
   },
   "provenance": {
-    "git_sha": "d58e25da2fa097b464e6fc88ab415d8cd9b55ebe",
-    "utc": "2026-08-05T04:30:12Z"
+    "git_sha": "708f4cb17ce5abf285940a79844b960a5e302caa",
+    "utc": "2026-08-05T05:01:08Z"
   },
   "runtime_sec": 2.5,
   "summary": {
-    "architecture_spans_human_disease": true,
-    "composite_recovery": {
-      "breast carcinoma": 9,
-      "melanoma": 18,
-      "non-small cell lung carcinoma": 38
+    "AUROC_genetic_composite": {
+      "breast carcinoma": 0.308,
+      "melanoma": 0.527,
+      "non-small cell lung carcinoma": 0.364
     },
+    "AUROC_popularity_literature": {
+      "breast carcinoma": 0.539,
+      "melanoma": 0.732,
+      "non-small cell lung carcinoma": 0.586
+    },
+    "architecture_spans_human_disease": true,
     "diseases": [
       "non-small cell lung carcinoma",
       "breast carcinoma",
       "melanoma"
     ],
-    "genetic_composite_beats_popularity_raw_in_n": 0,
+    "evidence_beats_popularity_AUROC_in_n": 0,
     "pan_essential_safety_filter_all_safe": true,
-    "popularity_recovery": {
-      "breast carcinoma": 28,
-      "melanoma": 30,
-      "non-small cell lung carcinoma": 67
-    },
-    "verdict": "TWO results, one positive (architecture) and one HONEST caveat (study bias). POSITIVE: the SAME disease-agnostic substrate core that ranked pathogen proteins (SUBSTRATE1-4) now runs HUMAN-DISEASE target-ID across 3 cancers by swapping in Open Targets genetic/mutation/pathway evidence + a DepMap PAN-ESSENTIAL safety filter (the human analog of host-toxic \u2014 common-essential genes are toxic to inhibit), EXCLUDING pan-essential genes by construction (0 in every shortlist). **So 'any disease -> a query' spans INFECTIOUS (pathogens) AND NON-INFECTIOUS (cancer) through ONE governance layer \u2014 the architecture generalizes.** HONEST CAVEAT (the study-bias theme recurs): on RAW target recovery the genetic/mechanistic composite does NOT beat a study-popularity baseline (0/3; composite {'non-small ce': 38, 'breast carci': 9, 'melanoma': 18} vs popularity {'non-small ce': 67, 'breast carci': 28, 'melanoma': 30}) \u2014 because clinic-reached targets ARE the most-studied, so literature trivially recovers them (the SAME popularity confound that killed MET4's PPI signal). This does NOT contradict B34, whose finding was that genetic evidence beats popularity ONLY in a CONTROLLED (popularity-partialled, leave-disease-out) comparison \u2014 so a correct human-disease substrate needs a POPULARITY-CONTROL provider (residualize evidence against literature), exactly as the pathogen case needed the host-non-homology hard filter. The architecture is proven; the human-disease PROVIDERS must control study bias before their ranking is trustworthy. SCOPE: composition/governance on curated evidence (Open Targets B34; DepMap); human drug-response has hard ceilings (B10/B23); hypotheses with provenance, not validated targets; not clinical."
+    "verdict": "TWO honest results \u2014 a POSITIVE (architecture) and a real CEILING (within-disease human target evidence). POSITIVE: the SAME disease-agnostic core that ranked pathogen proteins (SUBSTRATE1-4) runs HUMAN-DISEASE target-ID across 3 cancers via Open Targets evidence + a DepMap PAN-ESSENTIAL safety filter (the human analog of host-toxic), EXCLUDING pan-essential genes by construction (0 in every shortlist). **So 'any disease -> a query' spans INFECTIOUS (pathogens) AND NON-INFECTIOUS (cancer) through ONE governance layer \u2014 the ARCHITECTURE generalizes.** REAL CEILING (verified on the FAIR, prevalence-independent AUROC metric, not just top-k): WITHIN a single disease, the genetic/mechanistic evidence composite does NOT beat study-popularity at identifying clinic-reached targets \u2014 AUROC composite {'non-small ce': 0.364, 'breast carci': 0.308, 'melanoma': 0.527} vs popularity {'non-small ce': 0.586, 'breast carci': 0.539, 'melanoma': 0.732} (composite near/below random; popularity wins 3/3). INTEGRITY: I first wrote this off as a top-k metric artifact fixable by a popularity control (as B34 did) \u2014 the AUROC check REFUTED that: the evidence is genuinely weak WITHIN a disease. B34's positive (genetic beats popularity) was a CROSS-disease TRAINED model (leave-disease-out); it does NOT transfer to the substrate's single-disease query. **Honest 'any disease' bound: the governance ARCHITECTURE is universal, but the QUALITY of target-ID is disease-class-specific \u2014 STRONG for pathogens (real mechanism/essentiality signal, SUBSTRATE1) but WEAK for human single-disease queries (popularity-confounded evidence, a real ceiling consistent with B10/B23).** SCOPE: curated evidence; human drug-response has hard ceilings; hypotheses, not validated targets; not clinical."
   }
 }

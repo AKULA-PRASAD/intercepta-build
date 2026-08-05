@@ -8,8 +8,13 @@ Deterministic. Env: intercepta-build (pandas). Data: opentargets parquet (B34) +
 import os, sys, json, time, hashlib
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "src"))
 import pandas as pd, numpy as np
+from sklearn.metrics import roc_auc_score
 from intercepta.substrate import TargetEngine, Query, ProvenanceTier
 from intercepta.substrate_providers import OpenTargetsProvider, SetSafetyProvider
+
+
+def _z(s):
+    s = np.asarray(s, float); return (s - s.mean()) / (s.std() + 1e-9)
 
 DATA = os.environ.get("INTERCEPTA_DATA", "/Users/kalki/intercepta_data")
 OT = os.path.join(DATA, "opentargets", "ot_target_disease.parquet")
@@ -57,9 +62,19 @@ def main():
         lit = {s: v for s, v in zip(sub["target_symbol"], sub["literature"])}
         pop_topk = set(sorted(entities, key=lambda e: lit.get(e, 0), reverse=True)[:k])
         pop_recovered = sum(1 for e in pop_topk if e in known)
+        # FAIR metric (prevalence-independent, not popularity-rewarding): AUROC for predicting clinic-reached
+        g = sub.set_index("target_symbol")
+        y = np.array([1 if e in known else 0 for e in entities])
+        comp = _z([g.loc[e, "genetic_association"] for e in entities]) + _z([g.loc[e, "somatic_mutation"] for e in entities]) \
+            + _z([g.loc[e, "affected_pathway"] for e in entities])
+        litarr = np.array([lit.get(e, 0.0) for e in entities])
+        auroc_comp = round(float(roc_auc_score(y, comp)), 3) if 0 < y.sum() < len(y) else float("nan")
+        auroc_lit = round(float(roc_auc_score(y, litarr)), 3) if 0 < y.sum() < len(y) else float("nan")
         per[disease] = {"n_targets": len(entities), "n_clinic_reached": k, "n_excluded_pan_essential": n_excluded,
                         "shortlist_recovered_clinic_targets": recovered, "precision_at_k": round(recovered / max(k, 1), 4),
                         "popularity_baseline_recovered": pop_recovered, "pan_essential_in_shortlist": pan_in_shortlist,
+                        "AUROC_genetic_composite": auroc_comp, "AUROC_popularity_literature": auroc_lit,
+                        "evidence_beats_popularity_AUROC": bool(auroc_comp == auroc_comp and auroc_comp > auroc_lit),
                         "beats_popularity": bool(recovered > pop_recovered),
                         "top5": [{"gene": v.entity, "conf": v.confidence, "score": v.rank_score,
                                   "clinic_reached": v.entity in known} for v in topk[:5]]}
@@ -67,30 +82,31 @@ def main():
               f"(popularity {pop_recovered}); excluded {n_excluded} pan-essential; pan-essential in shortlist {pan_in_shortlist} [{time.time()-t0:.0f}s]")
 
     all_safe = all(per[d]["pan_essential_in_shortlist"] == 0 for d in DISEASES)
-    beats_pop = sum(per[d]["beats_popularity"] for d in DISEASES)
+    beats_auroc = sum(per[d]["evidence_beats_popularity_AUROC"] for d in DISEASES)
     summary = {"diseases": DISEASES, "architecture_spans_human_disease": True,
                "pan_essential_safety_filter_all_safe": bool(all_safe),
-               "genetic_composite_beats_popularity_raw_in_n": int(beats_pop),
-               "popularity_recovery": {d: per[d]["popularity_baseline_recovered"] for d in DISEASES},
-               "composite_recovery": {d: per[d]["shortlist_recovered_clinic_targets"] for d in DISEASES},
-               "verdict": (f"TWO results, one positive (architecture) and one HONEST caveat (study bias). POSITIVE: the SAME "
-                           f"disease-agnostic substrate core that ranked pathogen proteins (SUBSTRATE1-4) now runs HUMAN-DISEASE "
-                           f"target-ID across {len(DISEASES)} cancers by swapping in Open Targets genetic/mutation/pathway "
-                           f"evidence + a DepMap PAN-ESSENTIAL safety filter (the human analog of host-toxic — common-essential "
-                           f"genes are toxic to inhibit), EXCLUDING pan-essential genes by construction (0 in every shortlist). "
-                           f"**So 'any disease -> a query' spans INFECTIOUS (pathogens) AND NON-INFECTIOUS (cancer) through ONE "
-                           f"governance layer — the architecture generalizes.** HONEST CAVEAT (the study-bias theme recurs): on "
-                           f"RAW target recovery the genetic/mechanistic composite does NOT beat a study-popularity baseline "
-                           f"(0/{len(DISEASES)}; composite {summary_recovery(per,'shortlist_recovered_clinic_targets')} vs "
-                           f"popularity {summary_recovery(per,'popularity_baseline_recovered')}) — because clinic-reached targets "
-                           f"ARE the most-studied, so literature trivially recovers them (the SAME popularity confound that killed "
-                           f"MET4's PPI signal). This does NOT contradict B34, whose finding was that genetic evidence beats "
-                           f"popularity ONLY in a CONTROLLED (popularity-partialled, leave-disease-out) comparison — so a correct "
-                           f"human-disease substrate needs a POPULARITY-CONTROL provider (residualize evidence against literature), "
-                           f"exactly as the pathogen case needed the host-non-homology hard filter. The architecture is proven; "
-                           f"the human-disease PROVIDERS must control study bias before their ranking is trustworthy. SCOPE: "
-                           f"composition/governance on curated evidence (Open Targets B34; DepMap); human drug-response has hard "
-                           f"ceilings (B10/B23); hypotheses with provenance, not validated targets; not clinical.")}
+               "AUROC_genetic_composite": {d: per[d]["AUROC_genetic_composite"] for d in DISEASES},
+               "AUROC_popularity_literature": {d: per[d]["AUROC_popularity_literature"] for d in DISEASES},
+               "evidence_beats_popularity_AUROC_in_n": int(beats_auroc),
+               "verdict": (f"TWO honest results — a POSITIVE (architecture) and a real CEILING (within-disease human target "
+                           f"evidence). POSITIVE: the SAME disease-agnostic core that ranked pathogen proteins (SUBSTRATE1-4) runs "
+                           f"HUMAN-DISEASE target-ID across {len(DISEASES)} cancers via Open Targets evidence + a DepMap "
+                           f"PAN-ESSENTIAL safety filter (the human analog of host-toxic), EXCLUDING pan-essential genes by "
+                           f"construction (0 in every shortlist). **So 'any disease -> a query' spans INFECTIOUS (pathogens) AND "
+                           f"NON-INFECTIOUS (cancer) through ONE governance layer — the ARCHITECTURE generalizes.** REAL CEILING "
+                           f"(verified on the FAIR, prevalence-independent AUROC metric, not just top-k): WITHIN a single disease, "
+                           f"the genetic/mechanistic evidence composite does NOT beat study-popularity at identifying clinic-reached "
+                           f"targets — AUROC composite {summary_recovery(per,'AUROC_genetic_composite')} vs popularity "
+                           f"{summary_recovery(per,'AUROC_popularity_literature')} (composite near/below random; popularity wins "
+                           f"{len(DISEASES)}/{len(DISEASES)}). INTEGRITY: I first wrote this off as a top-k metric artifact fixable "
+                           f"by a popularity control (as B34 did) — the AUROC check REFUTED that: the evidence is genuinely weak "
+                           f"WITHIN a disease. B34's positive (genetic beats popularity) was a CROSS-disease TRAINED model "
+                           f"(leave-disease-out); it does NOT transfer to the substrate's single-disease query. **Honest 'any "
+                           f"disease' bound: the governance ARCHITECTURE is universal, but the QUALITY of target-ID is "
+                           f"disease-class-specific — STRONG for pathogens (real mechanism/essentiality signal, SUBSTRATE1) but "
+                           f"WEAK for human single-disease queries (popularity-confounded evidence, a real ceiling consistent with "
+                           f"B10/B23).** SCOPE: curated evidence; human drug-response has hard ceilings; hypotheses, not validated "
+                           f"targets; not clinical.")}
     print("\nVERDICT:", summary["verdict"])
 
     prov = {"git_sha": os.popen("git rev-parse HEAD 2>/dev/null").read().strip(), "utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
