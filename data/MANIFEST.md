@@ -190,3 +190,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
   Wang18; ersilia-os/gradi-target-prioritization). sha256 1996d05f…. 209 experimentally-essential rows.
 - $INTERCEPTA_DATA/expval/ecoli_essential.txt — derived: PEC Class-1 gene symbols + b-numbers (605 tokens) the validator
   consumes. Regenerable from PECData.dat. PUBLIC/OPEN; never committed.
+
+## VALIDATE_essentiality Mtb generalization (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/expval_mtb/dejesus2017.xlsx — DeJesus et al. 2017 mBio Table 1 ORF essentiality calls (Rv_ID/Name/
+  Final Call; ES=461 strict-essential), via ajinich/mtb_tn_db. sha256 989848da…
+- $INTERCEPTA_DATA/expval_mtb/rvmap.tsv — UniProt Rv-number->accession+symbol map (rest.uniprot.org, taxid 83332, 4059).

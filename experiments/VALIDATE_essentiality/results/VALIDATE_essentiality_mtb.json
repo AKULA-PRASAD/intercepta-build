@@ -1,0 +1,25 @@
+{
+  "provenance": {
+    "git_sha": "e4e9f380da3f73b47b9156a4d05443d70092ddfd",
+    "utc": "2026-08-05T18:42:11Z"
+  },
+  "runtime_sec": 1.0,
+  "summary": {
+    "H1_enrichment_OR_gt3_p_lt0.01": true,
+    "auroc_growthratio_vs_experimental": 0.5437,
+    "contingency_FBAess_vs_expess": {
+      "FBA_only": 9,
+      "both": 19,
+      "exp_only": 200,
+      "neither": 751
+    },
+    "experimental_source": "DeJesus_2017_mBio_ES",
+    "fisher_p": 2.2e-07,
+    "n_experimental_mapped": 219,
+    "odds_ratio": 7.93,
+    "organism": "M_tuberculosis",
+    "precision_FBAess": 0.679,
+    "recall_FBAess": 0.087,
+    "verdict": "ENRICHMENT GENERALIZES (weaker) \u2014 the BINARY FBA-essentiality validation holds in a SECOND organism: in M. tuberculosis, FBA-predicted essential genes are enriched for EXPERIMENTAL (DeJesus 2017 Tn-seq) essentiality at odds ratio 7.9 (Fisher p=2.2e-07), precision 68%. So MET1-3's mechanism signal is validated against experiment in BOTH E. coli (PEC, OR 64) AND Mtb (DeJesus, OR 7.9) \u2014 not an E. coli quirk. **HONEST BOUNDS (falsify-first): (1) it is MARKEDLY WEAKER than E. coli (OR 7.9 vs 64; recall 9% vs 22%) \u2014 the de-novo default-medium CarveMe Mtb GEM is lower-quality than E. coli's iML1515-grade model and DeJesus is a different (in-vitro) medium, so many experimental essentials are missed. (2) The CONTINUOUS growth-ratio AUROC is 0.54 = ESSENTIALLY CHANCE \u2014 the fine RANKING does NOT generalize to Mtb, only the binary enrichment does (consistent with MET3, where Mtb's top-k gain was a whisper). (3) Essentiality only, not drug-target/clinical.** Net: the mechanism signal is real in Mtb too, but as a weak binary enrichment, not a strong ranker \u2014 the honest two-organism picture."
+  }
+}
