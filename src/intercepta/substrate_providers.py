@@ -180,6 +180,44 @@ class SAscoreProvider(EvidenceProvider):
                 yield self._rec(smi, float(_SASCORER.calculateScore(m)))
 
 
+class OpenTargetsProvider(EvidenceProvider):
+    """RANK human genes for a DISEASE by an Open Targets non-clinical evidence type (genetic_association, somatic_mutation,
+    affected_pathway, ...). Curated external evidence (B34: genetic evidence predicts clinic-reached targets beyond a
+    popularity baseline). Entities are gene symbols. Demonstrates the substrate on human (non-infectious) diseases."""
+    role = SignalRole.RANK
+    tier = ProvenanceTier.EXTERNAL_VALIDATED
+    direction = 1.0
+
+    def __init__(self, parquet_path, disease_name, col, name=None):
+        import pandas as pd
+        df = pd.read_parquet(parquet_path)
+        df = df[df["disease_name"] == disease_name]
+        self._vals = {s: float(v) for s, v in zip(df["target_symbol"], df[col]) if v == v}
+        self.name = name or col
+        self.signal = col
+
+    def provide(self, query):
+        for e in query.entities:
+            v = self._vals.get(e, 0.0)
+            if v > 0:
+                yield self._rec(e, v)
+
+
+class SetSafetyProvider(EvidenceProvider):
+    """SAFETY_FILTER: any entity in a given set is UNSAFE and EXCLUDED by construction. Generic — e.g. pan-essential
+    (common-essential across DepMap) human genes are toxic to inhibit (the human analog of the host-toxic filter)."""
+    role = SignalRole.SAFETY_FILTER
+    tier = ProvenanceTier.EXTERNAL_VALIDATED
+
+    def __init__(self, gene_set, name="pan_essential_toxic", signal="pan_essential"):
+        self._set, self.name, self.signal = set(gene_set), name, signal
+
+    def provide(self, query):
+        for e in query.entities:
+            if e in self._set:
+                yield self._rec(e, 1.0)
+
+
 class StructuralAlertSafetyProvider(EvidenceProvider):
     """SAFETY_FILTER for candidate molecules: a PAINS (pan-assay-interference) structural alert EXCLUDES the molecule by
     construction — the molecule-half analogue of the host-toxic filter (Baell & Holloway 2010; RDKit FilterCatalog)."""

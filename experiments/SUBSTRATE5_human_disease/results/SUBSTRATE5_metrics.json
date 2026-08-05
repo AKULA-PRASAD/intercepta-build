@@ -1,0 +1,156 @@
+{
+  "per_disease": {
+    "breast carcinoma": {
+      "beats_popularity": false,
+      "n_clinic_reached": 74,
+      "n_excluded_pan_essential": 30,
+      "n_targets": 300,
+      "pan_essential_in_shortlist": 0,
+      "popularity_baseline_recovered": 28,
+      "precision_at_k": 0.1216,
+      "shortlist_recovered_clinic_targets": 9,
+      "top5": [
+        {
+          "clinic_reached": true,
+          "conf": "high",
+          "gene": "PIK3CA",
+          "score": 1.2728
+        },
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "PTEN",
+          "score": 1.2421
+        },
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "TP53",
+          "score": 0.9309
+        },
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "CDH1",
+          "score": 0.8981
+        },
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "BRCA1",
+          "score": 0.8802
+        }
+      ]
+    },
+    "melanoma": {
+      "beats_popularity": false,
+      "n_clinic_reached": 70,
+      "n_excluded_pan_essential": 21,
+      "n_targets": 300,
+      "pan_essential_in_shortlist": 0,
+      "popularity_baseline_recovered": 30,
+      "precision_at_k": 0.2571,
+      "shortlist_recovered_clinic_targets": 18,
+      "top5": [
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "CDKN2A",
+          "score": 1.2626
+        },
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "NF1",
+          "score": 0.9443
+        },
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "NRAS",
+          "score": 0.8789
+        },
+        {
+          "clinic_reached": true,
+          "conf": "high",
+          "gene": "BRAF",
+          "score": 0.8566
+        },
+        {
+          "clinic_reached": true,
+          "conf": "high",
+          "gene": "MAP2K2",
+          "score": 0.8056
+        }
+      ]
+    },
+    "non-small cell lung carcinoma": {
+      "beats_popularity": false,
+      "n_clinic_reached": 130,
+      "n_excluded_pan_essential": 23,
+      "n_targets": 300,
+      "pan_essential_in_shortlist": 0,
+      "popularity_baseline_recovered": 67,
+      "precision_at_k": 0.2923,
+      "shortlist_recovered_clinic_targets": 38,
+      "top5": [
+        {
+          "clinic_reached": true,
+          "conf": "high",
+          "gene": "EGFR",
+          "score": 1.6589
+        },
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "NRG1",
+          "score": 1.1338
+        },
+        {
+          "clinic_reached": true,
+          "conf": "high",
+          "gene": "BRAF",
+          "score": 1.061
+        },
+        {
+          "clinic_reached": true,
+          "conf": "high",
+          "gene": "KRAS",
+          "score": 1.0419
+        },
+        {
+          "clinic_reached": false,
+          "conf": "high",
+          "gene": "STK11",
+          "score": 1.0044
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "git_sha": "d58e25da2fa097b464e6fc88ab415d8cd9b55ebe",
+    "utc": "2026-08-05T04:30:12Z"
+  },
+  "runtime_sec": 2.5,
+  "summary": {
+    "architecture_spans_human_disease": true,
+    "composite_recovery": {
+      "breast carcinoma": 9,
+      "melanoma": 18,
+      "non-small cell lung carcinoma": 38
+    },
+    "diseases": [
+      "non-small cell lung carcinoma",
+      "breast carcinoma",
+      "melanoma"
+    ],
+    "genetic_composite_beats_popularity_raw_in_n": 0,
+    "pan_essential_safety_filter_all_safe": true,
+    "popularity_recovery": {
+      "breast carcinoma": 28,
+      "melanoma": 30,
+      "non-small cell lung carcinoma": 67
+    },
+    "verdict": "TWO results, one positive (architecture) and one HONEST caveat (study bias). POSITIVE: the SAME disease-agnostic substrate core that ranked pathogen proteins (SUBSTRATE1-4) now runs HUMAN-DISEASE target-ID across 3 cancers by swapping in Open Targets genetic/mutation/pathway evidence + a DepMap PAN-ESSENTIAL safety filter (the human analog of host-toxic \u2014 common-essential genes are toxic to inhibit), EXCLUDING pan-essential genes by construction (0 in every shortlist). **So 'any disease -> a query' spans INFECTIOUS (pathogens) AND NON-INFECTIOUS (cancer) through ONE governance layer \u2014 the architecture generalizes.** HONEST CAVEAT (the study-bias theme recurs): on RAW target recovery the genetic/mechanistic composite does NOT beat a study-popularity baseline (0/3; composite {'non-small ce': 38, 'breast carci': 9, 'melanoma': 18} vs popularity {'non-small ce': 67, 'breast carci': 28, 'melanoma': 30}) \u2014 because clinic-reached targets ARE the most-studied, so literature trivially recovers them (the SAME popularity confound that killed MET4's PPI signal). This does NOT contradict B34, whose finding was that genetic evidence beats popularity ONLY in a CONTROLLED (popularity-partialled, leave-disease-out) comparison \u2014 so a correct human-disease substrate needs a POPULARITY-CONTROL provider (residualize evidence against literature), exactly as the pathogen case needed the host-non-homology hard filter. The architecture is proven; the human-disease PROVIDERS must control study bias before their ranking is trustworthy. SCOPE: composition/governance on curated evidence (Open Targets B34; DepMap); human drug-response has hard ceilings (B10/B23); hypotheses with provenance, not validated targets; not clinical."
+  }
+}
