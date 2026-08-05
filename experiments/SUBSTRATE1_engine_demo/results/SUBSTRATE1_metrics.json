@@ -1,0 +1,176 @@
+{
+  "per_organism": {
+    "ecoli": {
+      "confidence_distribution": {
+        "excluded": 33,
+        "high": 1636
+      },
+      "host_toxic_in_shortlist": 0,
+      "known_targets_recovered_in_shortlist": 33,
+      "n_abstain_no_signal": 0,
+      "n_candidates": 1669,
+      "n_excluded_unsafe": 33,
+      "n_flagged_needs_experimental_selectivity": 608,
+      "n_known_targets": 94,
+      "precision_at_k": 0.3511,
+      "shortlist_k": 94,
+      "top5": [
+        {
+          "acc": "P31224",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": true,
+          "score": 4.1698,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        },
+        {
+          "acc": "P24181",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": false,
+          "score": 3.8546,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        },
+        {
+          "acc": "P62617",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": true,
+          "score": 3.7422,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        },
+        {
+          "acc": "P0A6W3",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": true,
+          "score": 3.5766,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        },
+        {
+          "acc": "P24177",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": false,
+          "score": 3.5743,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        }
+      ]
+    },
+    "mtb": {
+      "confidence_distribution": {
+        "excluded": 37,
+        "high": 941
+      },
+      "host_toxic_in_shortlist": 0,
+      "known_targets_recovered_in_shortlist": 17,
+      "n_abstain_no_signal": 0,
+      "n_candidates": 978,
+      "n_excluded_unsafe": 37,
+      "n_flagged_needs_experimental_selectivity": 463,
+      "n_known_targets": 67,
+      "precision_at_k": 0.2537,
+      "shortlist_k": 67,
+      "top5": [
+        {
+          "acc": "P9WMW7",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": true,
+          "score": 3.1448,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        },
+        {
+          "acc": "P9WJL1",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": false,
+          "score": 2.9281,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        },
+        {
+          "acc": "P9WJK9",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": false,
+          "score": 2.8814,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        },
+        {
+          "acc": "P9WKJ7",
+          "conf": "high",
+          "flags": [],
+          "is_known_target": false,
+          "score": 2.8432,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        },
+        {
+          "acc": "P9WFF5",
+          "conf": "high",
+          "flags": [
+            "needs_experimental_selectivity"
+          ],
+          "is_known_target": true,
+          "score": 2.8304,
+          "signals": [
+            "conservation",
+            "fba_essentiality",
+            "metabolic_chokepoint"
+          ]
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "git_sha": "e24148d238091964d8f04ef086456ab8262d500a",
+    "utc": "2026-08-05T03:07:11Z"
+  },
+  "runtime_sec": 15.9,
+  "summary": {
+    "abstention_enforced": true,
+    "organisms": [
+      "ecoli",
+      "mtb"
+    ],
+    "provenance_tiering_enforced": true,
+    "substrate_recovers_known_targets": true,
+    "substrate_shortlist_is_safe_by_construction": true,
+    "verdict": "The extensible evidence substrate runs 'genome -> a query' end-to-end on 2 pathogens with a disease-agnostic core (U2): it composes conservation + FBA-essentiality + chokepoint under provenance-tiered governance, EXCLUDES host-toxic targets by construction (0 in every shortlist \u2014 reproduces E2E2's safety), holds honest ABSTENTION machinery (fires in the conservation-only regime; here mechanism covers every metabolic gene so ~none abstain), FLAGS host-homologous survivors as needs_experimental_selectivity (E2E2/FRONT2), and still recovers known targets in its SAFE shortlist. It is the composition + governance layer that makes 'any disease a query' real while the continuous-absorption guardrail (self-generated evidence quarantined until reproduced) keeps it honest. SCOPE: composition/governance demo on validated bacterial signals; metabolic subproteome; outputs are confidence-tiered hypotheses with full provenance, NOT validated targets; not wet-lab."
+  }
+}

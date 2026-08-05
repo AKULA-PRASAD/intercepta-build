@@ -79,7 +79,16 @@ understanding, richer mechanism inference, and the extensible living substrate r
 **Corrected pipeline built (E2E2, 2026-08-04):** mechanistic essentiality + hard host-non-homology filter + calibrated
 abstention. Result is an honest tension both recipes get wrong: naive conservation ranking is UNSAFE (shortlists 5–9
 host-toxic targets); the hard-filter fix is SAFE (0 host-toxic) but OVER-EXCLUDES 35–52% of real known targets (those with
-human homologs, many drugged selectively in reality). True selectivity needs binding-site-level pathogen-vs-host reasoning
+human homologs, many drugged selectively in reality). **Extensible substrate BUILT (SUBSTRATE1, 2026-08-04) — the vision's differentiator, previously ✗, now shipped.**
+`src/intercepta/substrate.py` + `substrate_providers.py`: a disease-agnostic "any disease → a query" engine (charter U2)
+that composes the validated signals under provenance-tiered governance — hard safety filter (excludes host-toxic by
+construction), `needs_experimental_selectivity` flags on host-homologous survivors, and the continuous-absorption guardrail
+(self-generated evidence auto-quarantined until reproduced). It reproduces E2E2's safety (0 host-toxic) AND beats the naive
+baseline on recovery (33/94 E.coli, 17/67 Mtb vs 26/13) by properly composing mechanism with conservation. 8 data-free unit
+tests + integration demo; 41/41 suite passes. It is the composition+governance layer, not new biology — each provider
+carries its own LEDGER validation tier.
+
+True selectivity needs binding-site-level pathogen-vs-host reasoning
 (structure), which sequence homology can't provide — the information ceiling in a new place. **FRONT2 then tested whether
 structure closes the gap: it does not** — among host-homologous targets, pathogen pocket druggability (AUROC 0.51) and the
 pathogen-vs-host difference (0.53) are both random. So the selectivity sub-arc (FRONT1→E2E2→FRONT2) is complete and
