@@ -41,16 +41,21 @@ Crucially, this mechanistic win is scoped to *metabolic* targets — FBA is blin
 **The mechanistic signal is now EXPERIMENTALLY VALIDATED — the arc's first result tested against independent laboratory ground truth.**
 Everything above is retrospective known-target recovery; the FBA-essentiality signal (MET1–3, the one signal that breaks the
 conservation ceiling) has now been tested against decades of *experimental* gene-essentiality — systematic single-gene knockouts
-and saturating transposon mutagenesis — in three organisms. In *E. coli* (PEC single-gene-knockout essentiality) FBA-predicted
-essential genes are enriched for experimentally-essential genes at **odds ratio 64** (Fisher p≈3×10⁻²⁴), and **6 of 7**
-pre-registered locked target predictions (ribA, ribB, folB, ribD, ispG, ispD — only mtnN is not) are experimentally essential.
-It **generalizes to a second organism** — *M. tuberculosis* (DeJesus 2017 saturating Tn-seq), odds ratio **7.9** (p≈2×10⁻⁷) — and,
-most importantly, **to a genuinely held-out WHO critical-priority pathogen the method never saw during development** —
-*K. pneumoniae* (independent CRISPRi/Tn-seq essentiality), odds ratio **63**, precision **92%**. Honest bounds (falsify-first on our
-own positive): the validated quantity is the *binary essentiality enrichment* — precision is high but recall is low (9–25%),
-because FBA is metabolic-scoped and misses translational/non-metabolic essentials exactly as MET1 caveated; the *continuous*
-growth-ratio ranking is only modestly informative (AUROC 0.54–0.63, at chance in Mtb); and this validates essentiality, not the
-downstream drug-target, selectivity, or clinical claims, which remain unvalidated. Separately, the substrate's **confidence tier is
+and saturating transposon mutagenesis — in **five organisms, two of them genuinely held out of method development**. In *E. coli*
+(PEC single-gene-knockout essentiality) FBA-predicted essential genes are enriched for experimentally-essential genes at **odds
+ratio 64** (Fisher p≈3×10⁻²⁴), and **6 of 7** pre-registered locked target predictions (ribA, ribB, folB, ribD, ispG, ispD — only
+mtnN is not) are experimentally essential. It **generalizes across the panel** — *M. tuberculosis* (DeJesus 2017 Tn-seq, OR **7.9**)
+and *P. aeruginosa* (Turner 2015 Tn-seq, OR **23**) — and, most importantly, **to the two WHO critical-priority pathogens the method
+never saw during development**: *K. pneumoniae* (independent CRISPRi/Tn-seq, OR **63**, precision **92%**) and *A. baumannii*
+(Wang 2014 INSeq, OR **13**, p≈3×10⁻⁶). Every organism clears the same pre-registered gate (OR>3, p<0.01). Honest bounds
+(falsify-first on our own positive): the validated quantity is the *binary essentiality enrichment* — precision is high but recall
+is low (9–25%), because FBA is metabolic-scoped and misses translational/non-metabolic essentials exactly as MET1 caveated; the
+*continuous* growth-ratio ranking is only modestly informative (AUROC 0.54–0.63, at chance in Mtb); the *A. baumannii* set is a
+condition-specific lung-persistence screen (its weaker OR reflects that plus sparse gene naming and a strain mismatch); and this
+validates essentiality, not the downstream drug-target, selectivity, or clinical claims, which remain unvalidated. A per-target
+scorecard (PREDVAL) confirms the pipeline's actual headline nominations directly: of the broad-spectrum druggable targets,
+**murB, murG, dxr, murF, ispE** (and the cell-wall/MEP cores) are experimentally essential in all three tested organisms, while
+mtnN is correctly exposed as a false positive. Separately, the substrate's **confidence tier is
 shown to be calibrated to accuracy** — high-confidence calls (≥2 agreeing signals) are monotonically more target-enriched than
 moderate or low across two independent regimes (CALIB1, ordinal-confidence AUROC 0.66), a derivative but real governance guarantee.
 **This moves the arc's central positive from "computational-only" to "experimentally validated in three organisms including a
@@ -146,8 +151,9 @@ already has signal.**
 ## The complete arc (every claim reproduced ×2, pre-registered)
 Target-ID: conservation ceiling (TID1–2), kingdom degradation + silent failure (TID3), un-predictable failure (TID4);
 mechanism breaks the ceiling for metabolic targets (MET1–3) but not the non-metabolic half (MET4, a study-bias artifact);
-that mechanistic signal is EXPERIMENTALLY VALIDATED vs gene-knockout essentiality in three organisms incl. a held-out
-pathogen (VAL-ESS: E. coli OR 64 / Mtb OR 7.9 / K. pneumoniae OR 63); substrate confidence is calibrated to accuracy (CALIB1);
+that mechanistic signal is EXPERIMENTALLY VALIDATED vs gene-knockout essentiality in five organisms incl. two held-out
+pathogens (VAL-ESS: E. coli 64 / Mtb 7.9 / P. aeruginosa 23 / K. pneumoniae held-out 63 / A. baumannii held-out 13; per-target
+scorecard PREDVAL); substrate confidence is calibrated to accuracy (CALIB1);
 front-half selectivity (FRONT1 danger of conservation-ranking → E2E2 safety/recall tension → FRONT2 structure can't rescue).
 Molecule half: weak-but-real docking for binder-vs-nonbinder (C1), analog-bound ligand hit-finding (HIT1), no physics
 signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-improving loop (SIL1–2).
@@ -157,9 +163,11 @@ signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-i
   pathogen's own metabolic model (mechanism, not homology), is the single signal that adds target-ID information *beyond* the
   conservation ceiling (MET1, replicated MET2, better shortlist MET3) — but only for *metabolic* targets; the obvious
   extension to the rest is a study-bias artifact (MET4). This signal is now tested against independent **experimental**
-  gene-knockout essentiality and holds in **three organisms** — *E. coli* (PEC, odds ratio 64), *M. tuberculosis* (DeJesus
-  Tn-seq, 7.9), and a **held-out** WHO pathogen *K. pneumoniae* (CRISPRi/Tn-seq, 63, precision 92%) — with 6/7 locked
-  predictions experimentally essential. It is the arc's first laboratory-validated result (binary-enrichment scope: high
+  gene-knockout essentiality and holds in **five organisms, two held out of development**: *E. coli* (PEC, odds ratio 64),
+  *M. tuberculosis* (DeJesus Tn-seq, 7.9), *P. aeruginosa* (Turner Tn-seq, 23), and the **held-out** WHO pathogens
+  *K. pneumoniae* (CRISPRi/Tn-seq, 63, precision 92%) and *A. baumannii* (Wang INSeq, 13) — every one clearing the same
+  pre-registered gate, with 6/7 locked predictions experimentally essential and a per-target scorecard confirming
+  murB/murG/dxr/murF/ispE. It is the arc's first laboratory-validated result (binary-enrichment scope: high
   precision, low recall; essentiality only). A precise, reproduced, now-externally-validated statement of where mechanism
   helps and stops.
 - **A well-controlled negative-boundary on zero-data target-ID:** conservation is the ceiling; more homology (sequence,
@@ -180,8 +188,9 @@ signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-i
 ## Honest scope and what remains gated
 With one exception, results are retrospective and in-silico, on open data, on a modest pathogen/target panel; none is a
 validated hit, a drug, or a clinical claim. **The exception is the FBA-essentiality signal, now validated against experimental
-gene-knockout data in three organisms (E. coli/Mtb/held-out K. pneumoniae) — but that validation is scoped to essentiality
-enrichment (binary, high-precision/low-recall), not to the drug-target or clinical claims, which remain retrospective.** Every
+gene-knockout data in five organisms (E. coli, Mtb, P. aeruginosa, and the held-out K. pneumoniae and A. baumannii) — but that
+validation is scoped to essentiality enrichment (binary, high-precision/low-recall), not to the drug-target or clinical claims,
+which remain retrospective.** Every
 other hard problem in the arc — novel-fold/isolated-pathogen target-ID, non-metabolic mechanism,
 true binding-site selectivity, novel-chemotype hit-finding — converges on the same **information ceiling**: transfer and
 self-accumulation cannot manufacture information that isn't in sequence/structure alone. Crossing it requires *new
@@ -217,9 +226,11 @@ possible in-silico evidence that the mechanism biology is real, not luck.
 **The truth-test (now performed — the loop is closed on essentiality).** These predictions are pre-registered, falsifiable
 hypotheses, and the single cheapest rigorous test — costing nothing — has now been **done**: the FBA-predicted essentiality was
 checked against decades of *experimental* essentiality. The experimental data were auto-sourced directly (PEC single-gene
-knockouts for *E. coli*; DeJesus 2017 saturating Tn-seq for *M. tuberculosis*; aggregated CRISPRi/Tn-seq for the held-out
-*K. pneumoniae*), and the turnkey validator (`experiments/VALIDATE_essentiality`) confirms a strong, reproduced enrichment in all
-three (odds ratios 64 / 7.9 / 63; 6/7 locked predictions experimentally essential). **So the mechanistic core is no longer a
+knockouts for *E. coli*; DeJesus 2017 Tn-seq for *M. tuberculosis*; DEG/Turner and DEG/Wang Tn-seq/INSeq for *P. aeruginosa* and
+the held-out *A. baumannii*; aggregated CRISPRi/Tn-seq for the held-out *K. pneumoniae*), and the turnkey validator
+(`experiments/VALIDATE_essentiality`) confirms a strong, reproduced enrichment in all **five organisms** (odds ratios
+64 / 7.9 / 23 / 63 / 13, every one clearing the pre-registered gate; 6/7 locked predictions experimentally essential; a per-target
+scorecard confirming the headline murB/murG/dxr/murF/ispE nominations). **So the mechanistic core is no longer a
 prediction awaiting test — it is validated against laboratory ground truth**, including on a pathogen the method never saw. What
 remains gated is the *next* rung: a wet-lab CRISPRi/knockout test of a specific novel top prediction (e.g. **murB**), and the
 translation from essential-and-druggable target to an actual selective inhibitor — resource decisions, not computations. The
