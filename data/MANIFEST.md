@@ -227,3 +227,9 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/newbug3/saureus.xml — de-novo CarveMe GEM (860 genes). Regenerable. Essential-gene truth = DEG1032
   (S. aureus NCTC 8325, TMDH/Tn-based) from the DEG bulk download. engine/synleth S. aureus breadth/resistance/condition
   are derived. PUBLIC/OPEN; never committed.
+
+## CROSSVAL_curated cross-phylum validation (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/crossval/gems/{iYL1228,iCN718,iEK1008,iYS854,iYO844,STM_v1_0}.xml — curated BiGG genome-scale models
+  (bigg.ucsd.edu) for K. pneumoniae / A. baumannii / M. tuberculosis / S. aureus USA300 / B. subtilis / Salmonella LT2.
+- $INTERCEPTA_DATA/expval_mtb/dejesus_es_ids.txt — pre-extracted DeJesus 2017 ES ids. Experimental sets: PEC, DEG (1001/1011/
+  1062), ersilia KP, DeJesus. All PUBLIC/OPEN; never committed.

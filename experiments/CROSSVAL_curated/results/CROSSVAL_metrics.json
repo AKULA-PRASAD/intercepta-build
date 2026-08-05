@@ -1,0 +1,133 @@
+{
+  "provenance": {
+    "git_sha": "f1fe563426bf62837d21611bcd976f048b5c25f1",
+    "utc": "2026-08-05T22:54:53Z"
+  },
+  "runtime_sec": 36.2,
+  "summary": {
+    "clades": [
+      "Actinobacteria",
+      "Firmicute (Gram+)",
+      "gamma-proteo (Gram-)"
+    ],
+    "n_organisms": 6,
+    "n_pass_gate": 6,
+    "panel": {
+      "B. subtilis": {
+        "auroc": null,
+        "clade": "Firmicute (Gram+)",
+        "contingency": {
+          "FBA_only": 117,
+          "both": 54,
+          "exp_only": 24,
+          "neither": 649
+        },
+        "fisher_p": 2.89e-23,
+        "gate_pass": true,
+        "model": "iYO844",
+        "n_exp_essential_mapped": 78,
+        "n_fba_essential": 171,
+        "n_genes": 844,
+        "odds_ratio": 12.48,
+        "precision": 0.316,
+        "recall": 0.692
+      },
+      "E. coli": {
+        "auroc": null,
+        "clade": "gamma-proteo (Gram-)",
+        "contingency": {
+          "FBA_only": 103,
+          "both": 93,
+          "exp_only": 26,
+          "neither": 1294
+        },
+        "fisher_p": 2.44e-68,
+        "gate_pass": true,
+        "model": "iML1515",
+        "n_exp_essential_mapped": 119,
+        "n_fba_essential": 196,
+        "n_genes": 1516,
+        "odds_ratio": 44.94,
+        "precision": 0.474,
+        "recall": 0.782
+      },
+      "K. pneumoniae": {
+        "auroc": null,
+        "clade": "gamma-proteo (Gram-)",
+        "contingency": {
+          "FBA_only": 84,
+          "both": 35,
+          "exp_only": 73,
+          "neither": 1037
+        },
+        "fisher_p": 2.82e-12,
+        "gate_pass": true,
+        "model": "iYL1228",
+        "n_exp_essential_mapped": 108,
+        "n_fba_essential": 119,
+        "n_genes": 1229,
+        "odds_ratio": 5.92,
+        "precision": 0.294,
+        "recall": 0.324
+      },
+      "M. tuberculosis": {
+        "auroc": null,
+        "clade": "Actinobacteria",
+        "contingency": {
+          "FBA_only": 84,
+          "both": 178,
+          "exp_only": 56,
+          "neither": 690
+        },
+        "fisher_p": 3.48e-81,
+        "gate_pass": true,
+        "model": "iEK1008",
+        "n_exp_essential_mapped": 234,
+        "n_fba_essential": 262,
+        "n_genes": 1008,
+        "odds_ratio": 26.11,
+        "precision": 0.679,
+        "recall": 0.761
+      },
+      "S. aureus (MRSA)": {
+        "auroc": null,
+        "clade": "Firmicute (Gram+)",
+        "contingency": {
+          "FBA_only": 132,
+          "both": 124,
+          "exp_only": 34,
+          "neither": 576
+        },
+        "fisher_p": 2.16e-46,
+        "gate_pass": true,
+        "model": "iYS854",
+        "n_exp_essential_mapped": 158,
+        "n_fba_essential": 256,
+        "n_genes": 866,
+        "odds_ratio": 15.91,
+        "precision": 0.484,
+        "recall": 0.785
+      },
+      "Salmonella Tm": {
+        "auroc": null,
+        "clade": "gamma-proteo (Gram-)",
+        "contingency": {
+          "FBA_only": 171,
+          "both": 31,
+          "exp_only": 43,
+          "neither": 1026
+        },
+        "fisher_p": 2.83e-08,
+        "gate_pass": true,
+        "model": "STM_v1_0",
+        "n_exp_essential_mapped": 74,
+        "n_fba_essential": 202,
+        "n_genes": 1271,
+        "odds_ratio": 4.33,
+        "precision": 0.153,
+        "recall": 0.419
+      }
+    },
+    "verdict": "CURATED cross-Gram/cross-phylum validation: FBA gene-essentiality from CURATED genome-scale models is enriched for EXPERIMENTAL essentiality in 6/6 organisms spanning 3 clades (Actinobacteria, Firmicute (Gram+), gamma-proteo (Gram-)). Odds ratios: E. coli 44.94 (p2.44e-68); K. pneumoniae 5.92 (p2.82e-12); Salmonella Tm 4.33 (p2.83e-08); B. subtilis 12.48 (p2.89e-23); S. aureus (MRSA) 15.91 (p2.16e-46); M. tuberculosis 26.11 (p3.48e-81). This upgrades the essentiality validation from a curated+sparse-CarveMe mix to a RIGOROUS curated panel: with curated Gram-positive models (B. subtilis iYO844; S. aureus iYS854/USA300-MRSA) the Gram-positive validation is far stronger than the sparse-CarveMe S. aureus (OR 5.4). HONEST SCOPE: in-silico FBA vs published experimental essentiality; curated models are still models (medium/gap-fill assumptions); enrichment (precision/recall bounded by model scope); essentiality only, not drug-target/clinical; hypotheses; not wet-lab."
+  }
+}
