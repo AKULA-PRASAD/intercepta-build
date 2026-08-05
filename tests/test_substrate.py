@@ -165,6 +165,21 @@ def test_conservation_breadth_provider_ranks_and_thresholds():
     assert v["P1"].confidence == "high" and v["P1"].safe is True
 
 
+# ---- ResistanceProvider: SYNLETH1 metabolic resistance-robustness flag ----
+def test_resistance_provider_flags_monotherapy_vs_combination():
+    from intercepta.substrate_providers import ResistanceProvider
+    p = ResistanceProvider({"P1": "monotherapy_robust", "P2": "combination_required", "P3": "non_essential"})
+    eng = (TargetEngine()
+           .register(StaticProvider("ess", "essential", SignalRole.RANK, ProvenanceTier.OWN_REPRODUCED, {"P1": 1, "P2": 1, "P3": 1}))
+           .register(p))
+    v = {x.entity: x for x in eng.query(_q(["P1", "P2", "P3"]))}
+    assert "monotherapy_robust" in v["P1"].flags          # bypass-robust target flagged
+    assert "combination_required" in v["P2"].flags        # isozyme-buffered -> combination flagged
+    assert "non_essential" not in v["P3"].flags and "monotherapy_robust" not in v["P3"].flags  # only the two classes flag
+    # advisory only: does not exclude or abstain
+    assert v["P1"].safe is True and v["P2"].safe is True
+
+
 # ---- DiscoveryEngine: the unified end-to-end assembly composes validated signals + honest confidence diagnostic ----
 def test_discovery_engine_assembles_and_reports(tmp_path):
     from intercepta.discovery_engine import DiscoveryEngine

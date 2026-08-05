@@ -33,7 +33,8 @@ def main():
         breadth_tsv=os.path.join(ENG, "kpneumoniae_breadth.tsv"),
         reference_targets_fasta=os.path.join(ENG, "reference_targets.fasta"),
         human_fasta=os.path.join(TID1, "proteomes", "human.fasta"),
-        ceg2_path=os.path.join(F1, "CEGv2.txt"))
+        ceg2_path=os.path.join(F1, "CEGv2.txt"),
+        resistance_classes_tsv=os.path.join(DATA, "synleth", "ecoli_resistance_classes.tsv"))  # E.coli->KP ortholog transfer
     rep = eng.report(top=30)
     a2s = acc2sym()
     # experimentally-validated essential symbols (PREDVAL/VAL-ESS-KP source): K. pneumoniae experimental essential set
@@ -56,6 +57,8 @@ def main():
     print("confidence histogram:", rep["confidence_histogram"])
     print(f"excluded by safety (host-toxic): {rep['n_excluded_by_safety']} | abstained: {rep['n_abstained']} | "
           f"confident safe targets: {rep['n_confident_safe_targets']}")
+    print(f"resistance (metabolic bypass): monotherapy-robust {rep.get('n_monotherapy_robust')} | "
+          f"combination-required {rep.get('n_combination_required')} (E.coli->KP ortholog transfer)")
     print(f"of top {len(rep['shortlist'])} shortlist, experimentally-essential-confirmed: {n_val}")
     print("\nTOP TARGETS (gene | confidence | rank | exp-essential | flags):")
     for r in rep["shortlist"][:20]:

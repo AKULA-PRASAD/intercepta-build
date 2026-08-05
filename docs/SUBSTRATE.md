@@ -85,7 +85,8 @@ SUBSTRATE1–4 experiments.
 embodiment of the north-star: **genome → safe, confidence-tiered, provenance-tagged, abstaining target shortlist**. It wires
 FBA essentiality (**experimentally validated in 5 organisms incl. 2 held-out — VAL-ESS**), metabolic chokepoint, conservation
 (TID1), REACH1 conservation-breadth (recovers the non-metabolic half FBA misses), FOLD structural homology (isolated
-pathogens), and a **hard host-non-homology safety filter**. Confidence is calibrated to accuracy (CALIB1).
+pathogens), a **hard host-non-homology safety filter**, and a **resistance-robustness** flag (SYNLETH1: monotherapy-robust
+vs isozyme-buffered *combination-required* targets, from metabolic bypass). Confidence is calibrated to accuracy (CALIB1).
 
 ```
 intercepta discover-targets --pathogen kpneumoniae --proteome kp.fasta \

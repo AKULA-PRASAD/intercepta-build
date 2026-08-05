@@ -65,6 +65,20 @@ def main():
         lethal = (dd["growth"] < thr).any()
         checked += 1; verified += int(bool(lethal))
 
+    # persist a reusable per-gene-SYMBOL resistance classification (for the DiscoveryEngine ResistanceProvider)
+    combo_genes = set(g for _, gs in combo for g in gs)
+    b2sym = {v: k for k, v in sym2b.items()}
+    with open(os.path.join(DATA, "synleth", "ecoli_resistance_classes.tsv"), "w") as f:
+        f.write("gene\tclass\n")
+        written = set()
+        for g in m.genes:
+            sym = (g.name or "").lower()
+            if not sym or sym in written: continue
+            written.add(sym)
+            cls = ("monotherapy_robust" if g.id in ess_genes else
+                   "combination_required" if g.id in combo_genes else "non_essential")
+            f.write(f"{sym}\t{cls}\n")
+
     # INTERCEPTA nominated targets (DRUGGABLE broad-spectrum) -> bypass-robust?
     preds = json.load(open(os.path.join(ROOT, "experiments/DRUGGABLE_predictions/results/DRUGGABLE_metrics.json")))["per_gene"]
     nominated = [g["gene"] for g in preds if g["breadth"] >= 3]      # headline broad-spectrum set

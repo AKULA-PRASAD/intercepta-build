@@ -42,14 +42,21 @@ class DiscoveryEngine:
     @classmethod
     def for_pathogen(cls, pathogen, proteome_fasta, scratch, essentiality_tsv=None, chokepoint_tsv=None,
                      breadth_tsv=None, reference_targets_fasta=None, human_fasta=None, ceg2_path=None,
-                     query_struct_dir=None, ref_struct_dir=None, min_decision_tier=ProvenanceTier.OWN_REPRODUCED,
-                     entities=None):
+                     query_struct_dir=None, ref_struct_dir=None, resistance_classes_tsv=None,
+                     min_decision_tier=ProvenanceTier.OWN_REPRODUCED, entities=None):
         os.makedirs(scratch, exist_ok=True)
         eng = TargetEngine(min_decision_tier=min_decision_tier)
         active = []
-        # entities: genome-scale = every protein in the proteome
-        accs = entities or [ (ln[1:].split()[0].split("|")[1] if "|" in ln else ln[1:].split()[0])
-                             for ln in open(proteome_fasta) if ln.startswith(">") ]
+        # entities: genome-scale = every protein in the proteome; also capture acc -> gene symbol (for resistance transfer)
+        accs, acc2sym = [], {}
+        for ln in open(proteome_fasta):
+            if not ln.startswith(">"): continue
+            acc = ln[1:].split()[0].split("|")[1] if "|" in ln else ln[1:].split()[0]
+            accs.append(acc)
+            for tok in ln.split():
+                if tok.startswith("GN="): acc2sym[acc] = tok[3:].lower()
+        if entities is not None:
+            accs = entities
         if essentiality_tsv and os.path.exists(essentiality_tsv):
             eng.register(P.CacheRankProvider(essentiality_tsv, pathogen, "fba_essential", name="essentiality"))
             active.append("essentiality[VALIDATED:MET1-3+VAL-ESS]")
@@ -68,6 +75,14 @@ class DiscoveryEngine:
         if human_fasta and ceg2_path and os.path.exists(human_fasta) and os.path.exists(ceg2_path):
             eng.register(P.HostToxicSafetyProvider(proteome_fasta, human_fasta, ceg2_path, scratch))
             active.append("host_safety_filter[FRONT1/E2E2]")
+        if resistance_classes_tsv and os.path.exists(resistance_classes_tsv):
+            sym2cls = {}
+            for ln in open(resistance_classes_tsv).read().splitlines()[1:]:
+                p = ln.split("\t")
+                if len(p) >= 2: sym2cls[p[0].strip().lower()] = p[1].strip()
+            ent2cls = {a: sym2cls[acc2sym[a]] for a in accs if acc2sym.get(a) in sym2cls}
+            eng.register(P.ResistanceProvider(ent2cls))
+            active.append("resistance_robustness[SYNLETH1]")
         return cls(pathogen, accs, eng, active)
 
     # ---- run --------------------------------------------------------------
@@ -106,6 +121,8 @@ class DiscoveryEngine:
             "n_excluded_by_safety": by_conf.get("excluded", 0),
             "n_abstained": sum(1 for v in vs if v.abstain),
             "n_confident_safe_targets": len(safe_ranked),
+            "n_monotherapy_robust": sum(1 for v in safe_ranked if "monotherapy_robust" in v.flags),
+            "n_combination_required": sum(1 for v in safe_ranked if "combination_required" in v.flags),
             "shortlist": shortlist,
             "honest_scope": ("Confidence-tiered candidate HYPOTHESES with provenance — NOT validated targets or drugs. "
                              "The essentiality ENRICHMENT is experimentally validated (VAL-ESS, 5 organisms); the "

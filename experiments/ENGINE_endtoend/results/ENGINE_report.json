@@ -1,7 +1,7 @@
 {
   "provenance": {
-    "git_sha": "81f10234346b48b5672f135117045a82a37b2403",
-    "utc": "2026-08-05T20:29:49Z"
+    "git_sha": "7fa45004b805083ceb99358ff78a613b0cb49473",
+    "utc": "2026-08-05T21:42:14Z"
   },
   "report": {
     "active_signals": [
@@ -9,7 +9,8 @@
       "chokepoint[FRONT1]",
       "conservation_breadth[REACH1]",
       "conservation[TID1]",
-      "host_safety_filter[FRONT1/E2E2]"
+      "host_safety_filter[FRONT1/E2E2]",
+      "resistance_robustness[SYNLETH1]"
     ],
     "confidence_histogram": {
       "excluded": 77,
@@ -21,9 +22,11 @@
     "high_fraction_of_ranked": 0.885,
     "honest_scope": "Confidence-tiered candidate HYPOTHESES with provenance \u2014 NOT validated targets or drugs. The essentiality ENRICHMENT is experimentally validated (VAL-ESS, 5 organisms); the drug-target/selectivity/clinical claims are NOT. Molecule half is gated (needs structure or activity data); candidate matter from generate/screen are hypotheses. Not wet-lab.",
     "n_abstained": 0,
+    "n_combination_required": 62,
     "n_confident_safe_targets": 5049,
     "n_entities": 5126,
     "n_excluded_by_safety": 77,
+    "n_monotherapy_robust": 171,
     "pathogen": "kpneumoniae",
     "shortlist": [
       {
@@ -31,6 +34,7 @@
         "entity": "A6T5F3",
         "experimentally_essential_kp": true,
         "flags": [
+          "monotherapy_robust",
           "needs_experimental_selectivity"
         ],
         "gene": "dxs",
@@ -40,7 +44,8 @@
           "metabolic_chokepoint",
           "conservation_breadth",
           "conservation",
-          "needs_experimental_selectivity"
+          "needs_experimental_selectivity",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -61,14 +66,17 @@
         "confidence": "high",
         "entity": "A6TEK8",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "murA",
         "rank_score": 3.6087,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -76,14 +84,17 @@
         "confidence": "high",
         "entity": "A6T4M9",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "murF",
         "rank_score": 3.568,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -91,14 +102,17 @@
         "confidence": "high",
         "entity": "A6T4N0",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "mraY",
         "rank_score": 3.5179,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -107,6 +121,7 @@
         "entity": "A6TC01",
         "experimentally_essential_kp": false,
         "flags": [
+          "monotherapy_robust",
           "needs_experimental_selectivity"
         ],
         "gene": "folC",
@@ -116,7 +131,8 @@
           "metabolic_chokepoint",
           "conservation_breadth",
           "conservation",
-          "needs_experimental_selectivity"
+          "needs_experimental_selectivity",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -124,14 +140,17 @@
         "confidence": "high",
         "entity": "A6T4N3",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "murG",
         "rank_score": 3.4022,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -140,6 +159,7 @@
         "entity": "A6TEK6",
         "experimentally_essential_kp": false,
         "flags": [
+          "monotherapy_robust",
           "needs_experimental_selectivity"
         ],
         "gene": "ispB",
@@ -149,7 +169,8 @@
           "metabolic_chokepoint",
           "conservation_breadth",
           "conservation",
-          "needs_experimental_selectivity"
+          "needs_experimental_selectivity",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -173,6 +194,7 @@
         "entity": "A6T5F4",
         "experimentally_essential_kp": false,
         "flags": [
+          "monotherapy_robust",
           "needs_experimental_selectivity"
         ],
         "gene": "ispA",
@@ -182,7 +204,8 @@
           "metabolic_chokepoint",
           "conservation_breadth",
           "conservation",
-          "needs_experimental_selectivity"
+          "needs_experimental_selectivity",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -190,14 +213,17 @@
         "confidence": "high",
         "entity": "A6TEJ6",
         "experimentally_essential_kp": false,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "folP",
         "rank_score": 3.1988,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -234,14 +260,17 @@
         "confidence": "high",
         "entity": "A6TGN1",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "coaA",
         "rank_score": 3.0624,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -249,14 +278,17 @@
         "confidence": "high",
         "entity": "A6TAP2",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "ispE",
         "rank_score": 3.0493,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -264,14 +296,17 @@
         "confidence": "high",
         "entity": "A6TGM9",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "murB",
         "rank_score": 3.0421,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -355,14 +390,17 @@
         "confidence": "high",
         "entity": "A6TD38",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "ispF",
         "rank_score": 2.9079,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -400,14 +438,17 @@
         "confidence": "high",
         "entity": "A6TFM5",
         "experimentally_essential_kp": true,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "coaD",
         "rank_score": 2.8406,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -415,14 +456,17 @@
         "confidence": "high",
         "entity": "A6T4T1",
         "experimentally_essential_kp": false,
-        "flags": [],
+        "flags": [
+          "monotherapy_robust"
+        ],
         "gene": "folK",
         "rank_score": 2.8094,
         "signals": [
           "fba_essential",
           "metabolic_chokepoint",
           "conservation_breadth",
-          "conservation"
+          "conservation",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -431,6 +475,7 @@
         "entity": "A6TFN0",
         "experimentally_essential_kp": false,
         "flags": [
+          "monotherapy_robust",
           "needs_experimental_selectivity"
         ],
         "gene": "dfp",
@@ -440,7 +485,8 @@
           "metabolic_chokepoint",
           "conservation_breadth",
           "conservation",
-          "needs_experimental_selectivity"
+          "needs_experimental_selectivity",
+          "monotherapy_robust"
         ],
         "top_tier": "own_reproduced"
       },
@@ -493,5 +539,5 @@
     ],
     "shortlist_experimentally_essential_confirmed": 15
   },
-  "runtime_sec": 19.3
+  "runtime_sec": 19.7
 }

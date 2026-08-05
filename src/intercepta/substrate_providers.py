@@ -165,6 +165,27 @@ class ConservationBreadthProvider(EvidenceProvider):
                 yield self._rec(e, v)
 
 
+class ResistanceProvider(EvidenceProvider):
+    """FLAG: metabolic RESISTANCE-ROBUSTNESS class per target (SYNLETH1), zero-data from the GEM. Emits `monotherapy_robust`
+    (individually essential -> no metabolic bypass -> a single drug suffices) or `combination_required` (isozyme-buffered
+    essential function -> a single drug is bypassed -> must hit the synthetic-lethal set). Advisory only (does not change
+    ranking). **SCOPE: models METABOLIC bypass ONLY (NOT target-site mutation / efflux / drug modification — the dominant
+    clinical routes); classes may be ortholog-transferred across close species (e.g. E. coli -> Enterobacteriaceae).**"""
+    role = SignalRole.FLAG
+    tier = ProvenanceTier.OWN_REPRODUCED
+
+    def __init__(self, classes, name="resistance_robustness"):
+        self.name, self.signal = name, "resistance"
+        self._classes = dict(classes)            # entity -> "monotherapy_robust" | "combination_required"
+
+    def provide(self, query):
+        for e in query.entities:
+            c = self._classes.get(e)
+            if c in ("monotherapy_robust", "combination_required"):
+                yield EvidenceRecord(entity=e, signal=c, value=1.0, role=SignalRole.FLAG,
+                                     provider=self.name, tier=self.tier)
+
+
 class HostToxicSafetyProvider(EvidenceProvider):
     """SAFETY_FILTER (host-toxic) + FLAG (needs_experimental_selectivity). External CEG2 + human proteome. EXTERNAL tier."""
     tier = ProvenanceTier.EXTERNAL_VALIDATED
