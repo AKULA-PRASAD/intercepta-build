@@ -1,0 +1,542 @@
+{
+  "provenance": {
+    "git_sha": "106603f08679b3736e5e3b0c167dfd47157eb26b",
+    "utc": "2026-08-05T22:08:35Z"
+  },
+  "ranking": [
+    {
+      "best_intervention_score": 0.9151,
+      "breadth_frac": 0.714,
+      "condition_robust": 1.0,
+      "druggability": 0.946,
+      "exp_essential_orgs": 3,
+      "gene": "murB",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.9011,
+      "breadth_frac": 0.714,
+      "condition_robust": 1.0,
+      "druggability": 0.89,
+      "exp_essential_orgs": 3,
+      "gene": "murG",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.8766,
+      "breadth_frac": 0.571,
+      "condition_robust": 1.0,
+      "druggability": 0.935,
+      "exp_essential_orgs": 3,
+      "gene": "dxr",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.8721,
+      "breadth_frac": 0.571,
+      "condition_robust": 1.0,
+      "druggability": 0.917,
+      "exp_essential_orgs": 3,
+      "gene": "murF",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.8111,
+      "breadth_frac": 0.571,
+      "condition_robust": 1.0,
+      "druggability": 0.673,
+      "exp_essential_orgs": 3,
+      "gene": "ispE",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.8036,
+      "breadth_frac": 0.429,
+      "condition_robust": 1.0,
+      "druggability": 0.786,
+      "exp_essential_orgs": 2,
+      "gene": "mraY",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.7944,
+      "breadth_frac": 0.286,
+      "condition_robust": 1.0,
+      "druggability": 0.892,
+      "exp_essential_orgs": 3,
+      "gene": "murD",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.7941,
+      "breadth_frac": 0.571,
+      "condition_robust": 1.0,
+      "druggability": 0.605,
+      "exp_essential_orgs": 2,
+      "gene": "ispG",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.7764,
+      "breadth_frac": 0.286,
+      "condition_robust": 1.0,
+      "druggability": 0.82,
+      "exp_essential_orgs": 3,
+      "gene": "murE",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.725,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.757,
+      "exp_essential_orgs": 1,
+      "gene": "ribC",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.7231,
+      "breadth_frac": 0.571,
+      "condition_robust": 1.0,
+      "druggability": 0.321,
+      "exp_essential_orgs": 2,
+      "gene": "coaD",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.722,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.745,
+      "exp_essential_orgs": 3,
+      "gene": "murC",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.7212,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.742,
+      "exp_essential_orgs": 3,
+      "gene": "coaA",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.7144,
+      "breadth_frac": 0.286,
+      "condition_robust": 1.0,
+      "druggability": 0.572,
+      "exp_essential_orgs": 1,
+      "gene": "folB",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6975,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.647,
+      "exp_essential_orgs": 3,
+      "gene": "murI",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6897,
+      "breadth_frac": 0.286,
+      "condition_robust": 0.5,
+      "druggability": 0.973,
+      "exp_essential_orgs": 1,
+      "gene": "thiE",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6852,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.598,
+      "exp_essential_orgs": 2,
+      "gene": "dxs",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6667,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.524,
+      "exp_essential_orgs": 2,
+      "gene": "ribA",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6615,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.503,
+      "exp_essential_orgs": 3,
+      "gene": "ispD",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6549,
+      "breadth_frac": 0.286,
+      "condition_robust": 1.0,
+      "druggability": 0.334,
+      "exp_essential_orgs": 2,
+      "gene": "ribB",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6432,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.43,
+      "exp_essential_orgs": 0,
+      "gene": "luxS",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.634,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.393,
+      "exp_essential_orgs": 0,
+      "gene": "folP",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6237,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.352,
+      "exp_essential_orgs": 3,
+      "gene": "dapB",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6222,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.346,
+      "exp_essential_orgs": 3,
+      "gene": "ispF",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6177,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.328,
+      "exp_essential_orgs": 1,
+      "gene": "ribD",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6067,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.5,
+      "druggability": 0.784,
+      "exp_essential_orgs": 0,
+      "gene": "cysE",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.6032,
+      "breadth_frac": 0.286,
+      "condition_robust": 0.5,
+      "druggability": 0.627,
+      "exp_essential_orgs": 0,
+      "gene": "thiD",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.5845,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.195,
+      "exp_essential_orgs": 3,
+      "gene": "glmU",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.5839,
+      "breadth_frac": 0.286,
+      "condition_robust": 1.0,
+      "druggability": 0.05,
+      "exp_essential_orgs": 3,
+      "gene": "thiL",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.5727,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.148,
+      "exp_essential_orgs": 2,
+      "gene": "dapF",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.5722,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.5,
+      "druggability": 0.646,
+      "exp_essential_orgs": 1,
+      "gene": "panB",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.57,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.137,
+      "exp_essential_orgs": 1,
+      "gene": "ribE",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.554,
+      "breadth_frac": 0.143,
+      "condition_robust": 1.0,
+      "druggability": 0.073,
+      "exp_essential_orgs": 3,
+      "gene": "tmk",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.5122,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.5,
+      "druggability": 0.406,
+      "exp_essential_orgs": 1,
+      "gene": "ilvC",
+      "resistance_robust": 1.0
+    },
+    {
+      "best_intervention_score": 0.3399,
+      "breadth_frac": 0.429,
+      "condition_robust": 0.0,
+      "druggability": 0.931,
+      "exp_essential_orgs": 1,
+      "gene": "menC",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.3121,
+      "breadth_frac": 0.429,
+      "condition_robust": 0.0,
+      "druggability": 0.82,
+      "exp_essential_orgs": 0,
+      "gene": "mtnN",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.2855,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.999,
+      "exp_essential_orgs": 0,
+      "gene": "EF_2056",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.2837,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.992,
+      "exp_essential_orgs": 0,
+      "gene": "uppP",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.2547,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.876,
+      "exp_essential_orgs": 0,
+      "gene": "yoaC",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.2405,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.819,
+      "exp_essential_orgs": 1,
+      "gene": "menD",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.2312,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.782,
+      "exp_essential_orgs": 0,
+      "gene": "EF_1541",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.2305,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.779,
+      "exp_essential_orgs": 0,
+      "gene": "ybgC",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.1882,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.61,
+      "exp_essential_orgs": 0,
+      "gene": "ispDF",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.1757,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.56,
+      "exp_essential_orgs": 0,
+      "gene": "ycnE",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.1685,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.531,
+      "exp_essential_orgs": 0,
+      "gene": "ribA1",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.167,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.525,
+      "exp_essential_orgs": 2,
+      "gene": "ribH",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.1472,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.446,
+      "exp_essential_orgs": 0,
+      "gene": "motB",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.1202,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.338,
+      "exp_essential_orgs": 0,
+      "gene": "coaX",
+      "resistance_robust": 0.0
+    },
+    {
+      "best_intervention_score": 0.0697,
+      "breadth_frac": 0.143,
+      "condition_robust": 0.0,
+      "druggability": 0.136,
+      "exp_essential_orgs": 0,
+      "gene": "HP_0740",
+      "resistance_robust": 0.0
+    }
+  ],
+  "runtime_sec": 0.4,
+  "summary": {
+    "bottom5": [
+      {
+        "exp_ess_orgs": 0,
+        "gene": "ribA1",
+        "score": 0.1685
+      },
+      {
+        "exp_ess_orgs": 2,
+        "gene": "ribH",
+        "score": 0.167
+      },
+      {
+        "exp_ess_orgs": 0,
+        "gene": "motB",
+        "score": 0.1472
+      },
+      {
+        "exp_ess_orgs": 0,
+        "gene": "coaX",
+        "score": 0.1202
+      },
+      {
+        "exp_ess_orgs": 0,
+        "gene": "HP_0740",
+        "score": 0.0697
+      }
+    ],
+    "menC_rank_of_49": 35,
+    "n_targets_scored": 49,
+    "top10": [
+      {
+        "exp_ess_orgs": 3,
+        "gene": "murB",
+        "score": 0.9151
+      },
+      {
+        "exp_ess_orgs": 3,
+        "gene": "murG",
+        "score": 0.9011
+      },
+      {
+        "exp_ess_orgs": 3,
+        "gene": "dxr",
+        "score": 0.8766
+      },
+      {
+        "exp_ess_orgs": 3,
+        "gene": "murF",
+        "score": 0.8721
+      },
+      {
+        "exp_ess_orgs": 3,
+        "gene": "ispE",
+        "score": 0.8111
+      },
+      {
+        "exp_ess_orgs": 2,
+        "gene": "mraY",
+        "score": 0.8036
+      },
+      {
+        "exp_ess_orgs": 3,
+        "gene": "murD",
+        "score": 0.7944
+      },
+      {
+        "exp_ess_orgs": 2,
+        "gene": "ispG",
+        "score": 0.7941
+      },
+      {
+        "exp_ess_orgs": 3,
+        "gene": "murE",
+        "score": 0.7764
+      },
+      {
+        "exp_ess_orgs": 1,
+        "gene": "ribC",
+        "score": 0.725
+      }
+    ],
+    "validation_vs_experimental_essentiality": {
+      "n": 49,
+      "p": 0.0,
+      "rest_mean_expEssOrgs": 1.135,
+      "spearman_score_vs_expEssOrgs": 0.6896,
+      "top_quartile_mean_expEssOrgs": 2.583
+    },
+    "verdict": "BEST-INTERVENTION multi-axis score (transparent, equal-weighted synthesis of the validated axes druggability + breadth + resistance-robustness + condition-robustness; host-safety is a hard upstream filter). Ranked 49 nominated targets. Top: murB, murG, dxr, murF, ispE, mraY. VALIDATION (vs experimental essentiality, PREDVAL, the only truth axis available): Spearman(score, #organisms-experimentally-essential) = 0.6896 (p=0.0); top-quartile targets are experimentally essential in 2.583 organisms on average vs 1.135 for the rest -> the score DOES rank experimentally-real targets higher. Consistency: menC (flagged weak by PREDVAL+SYNLETH+CONDROB) ranks 35/49 (near the bottom). **HONEST BOUNDS (falsify-first): (1) DECISION-SUPPORT synthesis, NOT a validated predictor of clinical/drug success \u2014 no ground-truth of 'best intervention' exists to fit against, so weights are EQUAL by design (fitting would fabricate confidence). (2) The Spearman-0.69 validation is only PARTLY INDEPENDENT: two of the four axes (resistance, condition-robustness) are FBA-essentiality-DERIVED and the truth axis is EXPERIMENTAL essentiality, so the correlation partly re-expresses the already-validated essentiality signal (VAL-ESS); the genuinely-independent contributions are druggability + breadth. So this confirms the composite orders targets sensibly and does not destroy the essentiality signal \u2014 it is not an independent oracle. (3) A few bottom ranks (e.g. HP_0740, ribA1) are UNMAPPED-AXIS artifacts (locus-tag genes with no resistance/condition class -> R=C=0 -> artificially low), not genuinely poor targets. Axes are cross-organism/ortholog-transferred; hypotheses; not wet-lab.**",
+    "weights": "equal (D,B,R,C); no ground truth to fit"
+  }
+}
