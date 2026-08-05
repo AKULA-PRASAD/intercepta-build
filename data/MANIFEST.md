@@ -213,3 +213,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## ENGINE end-to-end (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/engine/kpneumoniae_breadth.tsv, reference_targets.fasta — on-the-fly inputs for the held-out K. pneumoniae
   DiscoveryEngine demo (conservation breadth vs 7 panel; other-org known-target sequences). Regenerable via ENGINE prep.py.
+
+## SYNLETH1 resistance-robustness (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/synleth/iML1515.xml — curated E. coli genome-scale model iML1515 (BiGG, bigg.ucsd.edu; Monk et al. 2017).
+  Used for single-reaction/gene deletion + double-gene-deletion (metabolic bypass / synthetic-lethal classification).

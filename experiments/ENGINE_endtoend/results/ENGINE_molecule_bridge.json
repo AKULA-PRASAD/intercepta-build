@@ -1,9 +1,9 @@
 {
   "provenance": {
-    "git_sha": "c76eb4b98e1bf6788bcd464d7beae06d3d31f106",
-    "utc": "2026-08-05T20:55:07Z"
+    "git_sha": "a1fb31a05a15994877e5390fc797c183ca74cb36",
+    "utc": "2026-08-05T21:09:45Z"
   },
-  "runtime_sec": 881.8,
+  "runtime_sec": 843.4,
   "summary": {
     "best_vina_kcal_mol": -10.88,
     "honest_scope": "Docking is a heuristic score, NOT binding free energy; early-enrichment is weak (C1 AUROC 0.63; HIT2: useless for within-series potency); ZERO target activity data used; generic ChEMBL library, not curated actives; outputs are POSE-PLAUSIBLE candidate HYPOTHESES, not validated actives, not drugs. Demonstrates the end-to-end SHAPE (genome->target->molecule) with the molecule-half ceiling stated. Not wet-lab.",

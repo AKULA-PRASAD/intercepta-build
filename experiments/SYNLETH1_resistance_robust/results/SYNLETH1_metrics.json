@@ -1,0 +1,102 @@
+{
+  "provenance": {
+    "git_sha": "efe6be69fdfc76e9cbb1aa762c09a42b4661cecd",
+    "utc": "2026-08-05T21:34:37Z"
+  },
+  "runtime_sec": 39.2,
+  "summary": {
+    "combination_required_verified": {
+      "checked": 15,
+      "jointly_lethal_confirmed": 11
+    },
+    "fraction_nominated_bypass_robust": 0.889,
+    "gem": "iML1515",
+    "n_combination_required_functions": 46,
+    "n_essential_genes": 196,
+    "n_essential_reactions": 270,
+    "n_monotherapy_robust_functions": 205,
+    "nominated_bypass_robust": 8,
+    "nominated_individually_essential": 8,
+    "nominated_target_table": [
+      {
+        "bnum": "b3972",
+        "bypass_robust": true,
+        "gene": "murB",
+        "in_model": true,
+        "individually_essential": true,
+        "participates_in_multigene_reaction": false
+      },
+      {
+        "bnum": "b0090",
+        "bypass_robust": true,
+        "gene": "murG",
+        "in_model": true,
+        "individually_essential": true,
+        "participates_in_multigene_reaction": false
+      },
+      {
+        "bnum": "b0173",
+        "bypass_robust": true,
+        "gene": "dxr",
+        "in_model": true,
+        "individually_essential": true,
+        "participates_in_multigene_reaction": false
+      },
+      {
+        "bnum": "b0086",
+        "bypass_robust": true,
+        "gene": "murF",
+        "in_model": true,
+        "individually_essential": true,
+        "participates_in_multigene_reaction": false
+      },
+      {
+        "bnum": "b1208",
+        "bypass_robust": true,
+        "gene": "ispE",
+        "in_model": true,
+        "individually_essential": true,
+        "participates_in_multigene_reaction": false
+      },
+      {
+        "bnum": "b2515",
+        "bypass_robust": true,
+        "gene": "ispG",
+        "in_model": true,
+        "individually_essential": true,
+        "participates_in_multigene_reaction": true
+      },
+      {
+        "bnum": "b3634",
+        "bypass_robust": true,
+        "gene": "coaD",
+        "in_model": true,
+        "individually_essential": true,
+        "participates_in_multigene_reaction": false
+      },
+      {
+        "bnum": "b2261",
+        "bypass_robust": false,
+        "gene": "menC",
+        "in_model": true,
+        "individually_essential": false,
+        "participates_in_multigene_reaction": false
+      },
+      {
+        "gene": "mtnN",
+        "in_model": false
+      },
+      {
+        "bnum": "b0087",
+        "bypass_robust": true,
+        "gene": "mraY",
+        "in_model": true,
+        "individually_essential": true,
+        "participates_in_multigene_reaction": false
+      }
+    ],
+    "nominated_targets_in_model": 9,
+    "verdict": "RESISTANCE-ROBUSTNESS DIMENSION (metabolic bypass, zero-data from iML1515): of 270 essential metabolic functions, 205 are MONOTHERAPY-ROBUST (a single essential gene) and 46 are COMBINATION-REQUIRED (isozyme-buffered -> a single drug is bypassed; must hit the synthetic-lethal set \u2014 verified jointly lethal in 11/15 sampled sets by double-gene-deletion). For our picks: of 9 nominated broad-spectrum targets mapped, 8/9 (0.889) are individually essential = BYPASS-ROBUST (single-gene KO lethal => no metabolic reroute); the one exception is menC (non-essential aerobically) \u2014 the SAME target PREDVAL independently flagged as weak (1/3 experimentally essential), an internal-consistency check. So INTERCEPTA's shortlist is overwhelmingly resistance-robust to metabolic bypass, and the buffered essential functions are flagged as combination-required (synthetic-lethal) targets. **HONEST BOUNDS (falsify-first): (1) bypass-robustness PARTLY FOLLOWS from the chokepoint filter we already applied (a chokepoint has no alternative route by construction) \u2014 so this QUANTIFIES/CONFIRMS the picks on a resistance axis rather than independently discovering it; the genuinely new outputs are the menC exception and the 46 combination-required sets. (2) Models METABOLIC BYPASS only \u2014 NOT the main clinical routes (target-site mutation, efflux, drug modification). (3) iML1515/E. coli, glucose-minimal (essentiality is medium-dependent); combination-required sets are FBA predictions (11/15 verified => imperfect). Hypotheses, not validated; not wet-lab.**",
+    "wt_growth": 0.877
+  }
+}
