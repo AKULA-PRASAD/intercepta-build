@@ -1,0 +1,357 @@
+{
+  "per_gene": [
+    {
+      "breadth": 5,
+      "druggable": true,
+      "gene": "murB",
+      "max_druggability": 0.946
+    },
+    {
+      "breadth": 5,
+      "druggable": true,
+      "gene": "murG",
+      "max_druggability": 0.89
+    },
+    {
+      "breadth": 4,
+      "druggable": true,
+      "gene": "dxr",
+      "max_druggability": 0.935
+    },
+    {
+      "breadth": 4,
+      "druggable": true,
+      "gene": "murF",
+      "max_druggability": 0.917
+    },
+    {
+      "breadth": 4,
+      "druggable": true,
+      "gene": "ispE",
+      "max_druggability": 0.673
+    },
+    {
+      "breadth": 4,
+      "druggable": true,
+      "gene": "ispG",
+      "max_druggability": 0.605
+    },
+    {
+      "breadth": 4,
+      "druggable": false,
+      "gene": "coaD",
+      "max_druggability": 0.321
+    },
+    {
+      "breadth": 3,
+      "druggable": true,
+      "gene": "menC",
+      "max_druggability": 0.931
+    },
+    {
+      "breadth": 3,
+      "druggable": true,
+      "gene": "mtnN",
+      "max_druggability": 0.82
+    },
+    {
+      "breadth": 3,
+      "druggable": true,
+      "gene": "mraY",
+      "max_druggability": 0.786
+    },
+    {
+      "breadth": 2,
+      "druggable": true,
+      "gene": "thiE",
+      "max_druggability": 0.973
+    },
+    {
+      "breadth": 2,
+      "druggable": true,
+      "gene": "murD",
+      "max_druggability": 0.892
+    },
+    {
+      "breadth": 2,
+      "druggable": true,
+      "gene": "murE",
+      "max_druggability": 0.82
+    },
+    {
+      "breadth": 2,
+      "druggable": true,
+      "gene": "thiD",
+      "max_druggability": 0.627
+    },
+    {
+      "breadth": 2,
+      "druggable": true,
+      "gene": "folB",
+      "max_druggability": 0.572
+    },
+    {
+      "breadth": 2,
+      "druggable": false,
+      "gene": "ribB",
+      "max_druggability": 0.334
+    },
+    {
+      "breadth": 2,
+      "druggable": false,
+      "gene": "thiL",
+      "max_druggability": 0.05
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "EF_2056",
+      "max_druggability": 0.999
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "uppP",
+      "max_druggability": 0.992
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "yoaC",
+      "max_druggability": 0.876
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "menD",
+      "max_druggability": 0.819
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "cysE",
+      "max_druggability": 0.784
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "EF_1541",
+      "max_druggability": 0.782
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "ybgC",
+      "max_druggability": 0.779
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "ribC",
+      "max_druggability": 0.757
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "murC",
+      "max_druggability": 0.745
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "coaA",
+      "max_druggability": 0.742
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "murI",
+      "max_druggability": 0.647
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "panB",
+      "max_druggability": 0.646
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "ispDF",
+      "max_druggability": 0.61
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "dxs",
+      "max_druggability": 0.598
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "ycnE",
+      "max_druggability": 0.56
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "ribA1",
+      "max_druggability": 0.531
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "ribH",
+      "max_druggability": 0.525
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "ribA",
+      "max_druggability": 0.524
+    },
+    {
+      "breadth": 1,
+      "druggable": true,
+      "gene": "ispD",
+      "max_druggability": 0.503
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "motB",
+      "max_druggability": 0.446
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "luxS",
+      "max_druggability": 0.43
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "ilvC",
+      "max_druggability": 0.406
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "folP",
+      "max_druggability": 0.393
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "dapB",
+      "max_druggability": 0.352
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "ispF",
+      "max_druggability": 0.346
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "coaX",
+      "max_druggability": 0.338
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "ribD",
+      "max_druggability": 0.328
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "glmU",
+      "max_druggability": 0.195
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "dapF",
+      "max_druggability": 0.148
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "ribE",
+      "max_druggability": 0.137
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "HP_0740",
+      "max_druggability": 0.136
+    },
+    {
+      "breadth": 1,
+      "druggable": false,
+      "gene": "tmk",
+      "max_druggability": 0.073
+    }
+  ],
+  "provenance": {
+    "git_sha": "8c5ddb05fc98af88c086bf178f9b538c8f6fad89",
+    "utc": "2026-08-05T16:46:11Z"
+  },
+  "runtime_sec": 40.4,
+  "summary": {
+    "druggable_threshold": 0.5,
+    "n_genes": 49,
+    "n_predictions_profiled": 85,
+    "n_structures_fpocketed": 85,
+    "top_broad_and_druggable": [
+      {
+        "breadth": 5,
+        "druggability": 0.946,
+        "gene": "murB"
+      },
+      {
+        "breadth": 5,
+        "druggability": 0.89,
+        "gene": "murG"
+      },
+      {
+        "breadth": 4,
+        "druggability": 0.935,
+        "gene": "dxr"
+      },
+      {
+        "breadth": 4,
+        "druggability": 0.917,
+        "gene": "murF"
+      },
+      {
+        "breadth": 4,
+        "druggability": 0.673,
+        "gene": "ispE"
+      },
+      {
+        "breadth": 4,
+        "druggability": 0.605,
+        "gene": "ispG"
+      },
+      {
+        "breadth": 3,
+        "druggability": 0.931,
+        "gene": "menC"
+      },
+      {
+        "breadth": 3,
+        "druggability": 0.82,
+        "gene": "mtnN"
+      },
+      {
+        "breadth": 3,
+        "druggability": 0.786,
+        "gene": "mraY"
+      }
+    ],
+    "verdict": "Completed the target-quality profile of the pan-bacterial predictions by adding fpocket druggability (85/85 structures scored). The fully-profiled TOP targets (broad-spectrum >=3/7 AND druggable pocket >= 0.5): murB(b5,d0.946), murG(b5,d0.89), dxr(b4,d0.935), murF(b4,d0.917), ispE(b4,d0.673), ispG(b4,d0.605), menC(b3,d0.931), mtnN(b3,d0.82), mraY(b3,d0.786). These satisfy ALL zero-data target criteria at once \u2014 essential + metabolic chokepoint + host-non-homologous (safe) + broad-spectrum + druggable \u2014 the strongest, most complete predictions for the experimental validation. SCOPE: fpocket heuristic druggability on AlphaFold apo structures (TID2 found it modest); FBA-predicted essentiality; hypotheses, not validated targets; not wet-lab."
+  }
+}
