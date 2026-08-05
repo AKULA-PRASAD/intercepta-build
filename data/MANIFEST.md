@@ -168,3 +168,10 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/substrate4/sars1.fasta — SARS-CoV-1 proteome (UniProt UP000000354, 15 proteins), fetched 2026-08-04 —
   the "prior coronavirus knowledge" reference (Spike P59594 / Nucleoprotein P59595 / Replicase P0C6X7). SARS-CoV-2 proteome
   + targets reuse existing tid1/proteomes/sarscov2.fasta + tid1/targets/sarscov2_chembl.txt. PUBLIC/OPEN; never committed.
+
+## NEWBUG held-out pathogen (K. pneumoniae) — de-novo GEM + essentiality
+- $INTERCEPTA_DATA/newbug/kpneumoniae.fasta — K. pneumoniae MGH 78578 proteome (UniProt organism_id 272620, 5126 proteins),
+  fetched 2026-08-05. A WHO critical-priority pathogen NOT in the 7-panel (genuinely held out).
+- $INTERCEPTA_DATA/newbug/kpneumoniae.xml — de-novo CarveMe GEM (2795 rxns / 1927 genes; UniProt-keyed via gid2acc).
+- $INTERCEPTA_DATA/newbug/{essentiality.tsv,chokepoints.tsv} — FBA essentiality + chokepoint (build.py). Regenerable;
+  deterministic. PUBLIC/OPEN; never committed.

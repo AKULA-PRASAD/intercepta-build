@@ -23,6 +23,13 @@ MINIMAL = {"EX_glc__D_e": 10, "EX_o2_e": 20, "EX_nh4_e": 1000, "EX_pi_e": 1000, 
 def base(mid): return mid.rsplit("_", 1)[0]
 
 
+def gid2acc(gid):
+    """CarveMe encodes the UniProt FASTA header 'tr|A6T680|A6T680_KLEP7' as gene id 'tr_A6T680_A6T680_KLEP7'
+    (| -> _). Recover the UniProt accession = the 2nd field."""
+    p = gid.split("_")
+    return p[1] if len(p) >= 2 and p[0] in ("sp", "tr") else gid
+
+
 def main():
     t0 = time.time()
     m = read_sbml_model(GEM)
@@ -41,7 +48,7 @@ def main():
             ids = list(row["ids"]) if "ids" in row else list(row.name)
             if len(ids) != 1 or gmap.get(ids[0]) is None: continue
             gr = (row["growth"] / wt) if row["growth"] == row["growth"] else 0.0
-            fh.write(f"{ORG}\t{ids[0]}\t{1 if gr < 0.01 else 0}\t{gr:.4f}\n"); n += 1
+            fh.write(f"{ORG}\t{gid2acc(ids[0])}\t{1 if gr < 0.01 else 0}\t{gr:.4f}\n"); n += 1
     # chokepoint
     producers, consumers = defaultdict(set), defaultdict(set)
     for r in m.reactions:
@@ -59,7 +66,7 @@ def main():
     with open(os.path.join(DATA, "chokepoints.tsv"), "w") as fh:
         fh.write("organism\tuniprot\tchokepoint\n")
         for g in m.genes:
-            fh.write(f"{ORG}\t{g.id}\t{1 if any(r.id in choke_rxn for r in g.reactions) else 0}\n")
+            fh.write(f"{ORG}\t{gid2acc(g.id)}\t{1 if any(r.id in choke_rxn for r in g.reactions) else 0}\n")
     ne = sum(1 for ln in open(os.path.join(DATA, 'essentiality.tsv')) if ln.rstrip().endswith('\t1') is False and '\t1\t' in ln)
     print(f"{ORG}: essentiality + chokepoints written [{time.time()-t0:.0f}s]", flush=True)
 
