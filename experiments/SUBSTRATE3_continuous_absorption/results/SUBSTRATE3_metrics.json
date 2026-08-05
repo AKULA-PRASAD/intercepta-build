@@ -1,0 +1,19 @@
+{
+  "provenance": {
+    "git_sha": "f1d2484ac1aca000575605ff507a87fbe3bcdbab",
+    "utc": "2026-08-05T03:23:12Z"
+  },
+  "runtime_sec": 9.6,
+  "summary": {
+    "base_score_demo": 0.686,
+    "demo_gene": "P0AEB2",
+    "external_evidence_score_demo": 1.665,
+    "false_gene": "Q47146",
+    "false_self_belief_never_corrupts": true,
+    "guardrail_holds_self_evidence_inert": true,
+    "net_grows_only_on_external_validated_evidence": true,
+    "organism": "ecoli",
+    "self_derived_score_demo": 0.686,
+    "verdict": "Continuous-absorption guardrail DEMONSTRATED on real E. coli. The net absorbs its OWN strong predictions, but provenance tiering QUARANTINES self-derived evidence so it is INERT: the self-belief about P0AEB2 leaves every decision UNCHANGED (base 0.686 == self-derived 0.686) \u2014 the loop CANNOT hallucinate itself into confidence (no self-reinforcement). A self-belief about a non-target (Q47146) NEVER reaches the shortlist. By contrast, when a genuinely INDEPENDENT experimental result arrives (EXTERNAL_VALIDATED, not self-derived) the net GROWS \u2014 P0AEB2's score rises to 1.665. So the living net improves ONLY on external/validated evidence, never on its own unvalidated output \u2014 the SIL1/SIL2 finding (self-improvement is real + safe ONLY when confidence-gated) enforced STRUCTURALLY by the substrate's provenance tiers. SCOPE: composition/governance demonstration on validated signals; the external result is simulated to exercise the guardrail; not wet-lab."
+  }
+}
