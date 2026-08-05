@@ -1,0 +1,70 @@
+{
+  "provenance": {
+    "git_sha": "9bbe463267f922f01e1e2f1fef2eaa2354133aba",
+    "utc": "2026-08-05T19:13:41Z"
+  },
+  "runtime_sec": 0.8,
+  "summary": {
+    "calibrated": true,
+    "ordinal_confidence_AUROC": 0.6624,
+    "per_regime": {
+      "bacteria": {
+        "high": {
+          "n": 157,
+          "n_targets": 26,
+          "precision": 0.1656
+        },
+        "low": {
+          "n": 4671,
+          "n_targets": 86,
+          "precision": 0.0184
+        },
+        "moderate": {
+          "n": 3540,
+          "n_targets": 97,
+          "precision": 0.0274
+        }
+      },
+      "isolated": {
+        "high": {
+          "n": 48,
+          "n_targets": 30,
+          "precision": 0.625
+        },
+        "low": {
+          "n": 25,
+          "n_targets": 0,
+          "precision": 0.0
+        },
+        "moderate": {
+          "n": 490,
+          "n_targets": 65,
+          "precision": 0.1327
+        }
+      }
+    },
+    "per_regime_monotonic": {
+      "bacteria": true,
+      "isolated": true
+    },
+    "pooled": {
+      "high": {
+        "n": 205,
+        "n_targets": 56,
+        "precision": 0.2732
+      },
+      "low": {
+        "n": 4696,
+        "n_targets": 86,
+        "precision": 0.0183
+      },
+      "moderate": {
+        "n": 4030,
+        "n_targets": 162,
+        "precision": 0.0402
+      }
+    },
+    "pooled_monotonic_high_gt_moderate_gt_low": true,
+    "verdict": "CALIBRATED \u2014 the substrate's confidence tracks accuracy: pooled precision HIGH 0.2732 > MODERATE 0.0402 > LOW 0.0183 (monotonic), ordinal-confidence AUROC 0.6624, and the ordering holds in both independent regimes (bacteria essentiality+chokepoint; isolated-pathogen seq+struct homology): {'bacteria': True, 'isolated': True}. So when the engine reports HIGH confidence (>=2 agreeing signals) the entity is empirically more often a true target than at MODERATE (1 signal) or LOW (abstain) \u2014 the vision's honest-confidence promise is validated on real recovery data. **HONEST READING (falsify-first): this is a DERIVATIVE property, not independent magic \u2014 confidence = count of agreeing signals, so the precision ordering INHERITS from the already-validated underlying signals (MET essentiality / FRONT chokepoint / FOLD homology); the audit confirms the GOVERNANCE correctly propagates signal agreement into the confidence label (a real, useful guarantee), it does not add new biology. Absolute precision is MODEST and a LOWER BOUND \u2014 ChEMBL known-targets are incomplete, so many high-confidence essential+chokepoint genes scored 'wrong' here are plausibly real targets not yet in ChEMBL.** SCOPE: retrospective known-target recovery; 2 regimes/cached signals; confidence is ORDINAL (not a calibrated probability); hypotheses, not validated targets; not wet-lab."
+  }
+}
