@@ -65,6 +65,21 @@ way. That is the "living net that grows with every query."
 - **SUBSTRATE3** — continuous absorption: self-derived evidence is quarantined and inert (no self-deception); the net grows
   only on independent/external evidence; false self-beliefs never corrupt a decision.
 
+## Use it (CLI — the 10th shipped tool)
+The source-agnostic governance engine is shipped as `intercepta substrate`: pipe in an evidence table (from any source) and
+get a safe, provenance-tiered, abstaining ranked shortlist.
+
+```
+intercepta substrate --evidence evidence.csv --min-tier own_reproduced --out shortlist.csv
+# evidence.csv columns: entity,signal,value[,role,tier,direction,provider]
+#   role in {rank,safety_filter,abstain,flag}; tier in {quarantined,own_hypothesis,own_single,own_reproduced,external_validated}
+```
+
+`SAFETY_FILTER` rows exclude by construction; evidence below `--min-tier` (and self-generated evidence) is quarantined and
+cannot drive a decision; every output row carries its confidence tier, contributing signals, and flags. The Python API
+(`intercepta.substrate` + `substrate_providers`) is used when you want live bio providers (mmseqs/COBRApy/fpocket) as in the
+SUBSTRATE1–4 experiments.
+
 ## Honest scope
 The substrate is composition + governance — it does **not** itself validate biology. Each provider carries its own
 validation tier (traceable to LEDGER.md), and the substrate only lets sufficiently-tiered evidence drive a decision. Outputs

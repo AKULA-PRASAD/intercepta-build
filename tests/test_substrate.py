@@ -128,3 +128,25 @@ def test_substrate_is_entity_agnostic_ranks_molecules_and_excludes_pains():
     assert v[quinone].safe is False and v[quinone].confidence == "excluded"
     sl = [x.entity for x in eng.shortlist(Query(pathogen="lib", entities=[aspirin, quinone]))]
     assert aspirin in sl and quinone not in sl
+
+
+# ---- CLI: the substrate as a shipped tool (source-agnostic evidence composition) ----
+def test_cli_substrate_composes_evidence_with_governance(tmp_path):
+    import pandas as pd
+    from intercepta.cli import main as cli_main
+    ev = tmp_path / "ev.csv"
+    ev.write_text(
+        "entity,signal,value,role,tier,direction\n"
+        "P1,essentiality,1,rank,own_reproduced,1\n"
+        "P1,conservation,8,rank,own_reproduced,1\n"          # P1: two signals -> high
+        "P2,host_toxic,1,safety_filter,external_validated,1\n"  # P2: excluded by safety
+        "P2,essentiality,1,rank,own_reproduced,1\n"
+        "P4,guess,9,rank,own_hypothesis,1\n"                 # P4: below min-tier -> quarantined -> abstain
+    )
+    out = tmp_path / "out.csv"
+    rc = cli_main(["substrate", "--evidence", str(ev), "--out", str(out)])
+    assert rc == 0
+    df = pd.read_csv(out).set_index("entity")
+    assert bool(df.loc["P1", "safe"]) and df.loc["P1", "confidence"] == "high"
+    assert not bool(df.loc["P2", "safe"]) and df.loc["P2", "confidence"] == "excluded"
+    assert bool(df.loc["P4", "abstain"])                    # unvalidated evidence cannot drive a decision (guardrail)

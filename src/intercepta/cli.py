@@ -10,6 +10,7 @@ Subcommands:
   generate — goal-directed molecular design / optimization (BRICS-GA; B33)
   discover — end-to-end candidate discovery: generate + ADMET/synth screen + rank (B39)
   screen   — virtual-screening engine: rank candidates by calibrated P(active) (QSAR+AD+conformal; loop=B51)
+  substrate — compose an evidence table into a safe, provenance-tiered, abstaining ranked shortlist (extensible "any disease -> a query" engine)
 
 HONEST SCOPE: every subcommand is a RESEARCH hypothesis-ranking/screening tool, validated at the
 cell-line/ex-vivo (rank, synergy) or scaffold-split benchmark (admet) level only. NONE is a validated human
@@ -204,6 +205,50 @@ def _cmd_screen(args):
     return 0
 
 
+def _cmd_substrate(args):
+    """Compose an evidence table into a safe, provenance-tiered, abstaining ranked shortlist (the extensible substrate)."""
+    import csv
+    from intercepta.substrate import (TargetEngine, Query, EvidenceStore, EvidenceRecord, SignalRole, ProvenanceTier)
+    role_map = {r.name.lower(): r for r in SignalRole}
+    tier_map = {t.name.lower(): t for t in ProvenanceTier}
+    rows = list(csv.DictReader(open(args.evidence)))
+    if not rows:
+        print("ERROR: empty evidence file. Columns: entity,signal,value[,role,tier,direction,provider]", file=sys.stderr)
+        return 2
+    store, entities = EvidenceStore(), []
+    for r in rows:
+        e = (r.get("entity") or "").strip()
+        if not e:
+            continue
+        if e not in entities:
+            entities.append(e)
+        role = role_map.get((r.get("role") or "rank").strip().lower(), SignalRole.RANK)
+        tier = tier_map.get((r.get("tier") or "own_reproduced").strip().lower(), ProvenanceTier.OWN_REPRODUCED)
+        try:
+            val = float(r.get("value") or 1.0); direc = float(r.get("direction") or 1.0)
+        except ValueError:
+            val, direc = 1.0, 1.0
+        store.add([EvidenceRecord(e, (r.get("signal") or "signal").strip(), val, role,
+                                  (r.get("provider") or "user").strip(), tier, direc)],
+                  quarantine_self_generated=False)
+    eng = TargetEngine(min_decision_tier=tier_map.get(args.min_tier.lower(), ProvenanceTier.OWN_REPRODUCED))
+    verdicts = eng.query(Query(pathogen=args.name, entities=sorted(entities)), store=store)
+    import pandas as pd
+    df = pd.DataFrame([{"entity": v.entity, "safe": v.safe, "abstain": v.abstain, "confidence": v.confidence,
+                        "rank_score": v.rank_score, "n_evidence": len(v.evidence),
+                        "flags": ";".join(v.flags), "signals": ";".join(sorted({r.signal for r in v.evidence}))}
+                       for v in verdicts])
+    df.to_csv(args.out, index=False)
+    n_safe = int(df["safe"].sum()); n_excl = int((~df["safe"]).sum()); n_abst = int((df["safe"] & df["abstain"]).sum())
+    print(f"composed {len(rows)} evidence rows over {len(entities)} entities -> {n_excl} excluded (safety), "
+          f"{n_abst} abstained, {n_safe - n_abst} ranked -> {args.out}")
+    print("NOTE: the substrate is a COMPOSITION + GOVERNANCE layer — it does not validate biology. Each evidence row "
+          "carries its own provenance tier; SAFETY_FILTER rows exclude by construction; unvalidated (below --min-tier) "
+          "and self-generated evidence are quarantined. Outputs are confidence-tiered HYPOTHESES with provenance, NOT "
+          "validated targets/drugs. See docs/SUBSTRATE.md.")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -272,6 +317,16 @@ def main(argv=None):
     sc.add_argument("--top", type=int, default=None, help="write only the top-N ranked candidates")
     sc.add_argument("--out", default="intercepta_screen.csv")
     sc.set_defaults(func=_cmd_screen)
+    su = sub.add_parser("substrate", help="compose an evidence table into a safe, provenance-tiered, abstaining ranked "
+                                          "shortlist — the extensible 'any disease -> a query' engine (docs/SUBSTRATE.md)")
+    su.add_argument("--evidence", required=True, help="CSV with columns: entity,signal,value[,role,tier,direction,provider]. "
+                                                      "role in {rank,safety_filter,abstain,flag}; tier in "
+                                                      "{quarantined,own_hypothesis,own_single,own_reproduced,external_validated}")
+    su.add_argument("--min-tier", dest="min_tier", default="own_reproduced",
+                    help="minimum provenance tier allowed to drive a decision (default own_reproduced)")
+    su.add_argument("--name", default="query", help="label for the query/disease")
+    su.add_argument("--out", default="intercepta_substrate.csv")
+    su.set_defaults(func=_cmd_substrate)
     args = p.parse_args(argv)
     return args.func(args)
 
