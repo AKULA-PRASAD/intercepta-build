@@ -50,6 +50,28 @@ de-risked, pre-registered prospective design is in [`docs/BREAKTHROUGH_ROADMAP.m
 [`docs/TRACK1_PROTOCOL.md`](docs/TRACK1_PROTOCOL.md), and the frozen analysis plan
 [`prereg/TRACK1_SAP.md`](prereg/TRACK1_SAP.md) (design target N≈200; power reproduced ×2).
 
+## The second arc — zero-data / "any disease" discovery + the extensible substrate
+Beyond the cancer engine, the governing north star ([`VISION.md`](VISION.md)) is zero-data discovery for **any** disease.
+That arc is built and, in the same falsify-first spirit, honestly bounded (full map:
+[`papers/zero_data_discovery/REPORT.md`](papers/zero_data_discovery/REPORT.md); every chapter in `LEDGER.md`, reproduced ×2):
+- **What it maps:** an **information ceiling** — zero-data target-ID from sequence ≈ generic conservation (TID1–4); the
+  molecule half is analog-bound (HIT1) with a weak physics floor (C1/HIT2). Crossing it needs new experimental data.
+- **The one signal that breaks it:** mechanistic **FBA gene-essentiality** adds *beyond* conservation (MET1–3, replicated);
+  the non-metabolic extension (PPI-centrality) was caught as a **study-bias artifact** (MET4) — a representative example of
+  the falsify-first discipline killing a tempting positive before it was recorded (see also the HIT1 tautology and E2E2/
+  SUBSTRATE5 corrections, all pre-commit).
+- **The engine:** an extensible, disease-agnostic **"any disease → a query" substrate** (`src/intercepta/substrate.py`,
+  [`docs/SUBSTRATE.md`](docs/SUBSTRATE.md); `intercepta substrate`) with provenance-tiered governance (hard safety filter,
+  abstention, self-generated-evidence quarantine). Data-free unit tests in `tests/test_substrate.py`; demonstrations in
+  `experiments/SUBSTRATE1–5` (bacteria / virus / molecules / human cancer). Honest bound: **architecture universal; answer
+  quality disease-class-specific** (strong for pathogens, a real ceiling for human single-disease queries).
+- **Concrete falsifiable predictions + how to check them for $0:** the method's novel safe bacterial predictions are the
+  canonical antibacterial target landscape (murB/murG/mraY, MEP dxr/isp*, CoA, folate, riboflavin; EXPVAL/BROADSPEC/PANBACT/
+  DRUGGABLE). The pre-registered truth-test ([`docs/EXPERIMENTAL_VALIDATION.md`](docs/EXPERIMENTAL_VALIDATION.md)) is a
+  turnkey validator (`experiments/VALIDATE_essentiality`) that scores FBA-predicted vs experimental essentiality the instant
+  an essential-gene list is provided. To reproduce the arc: run any `experiments/{TID,MET,HIT,FRONT,E2E,SUBSTRATE,PANBACT,
+  BROADSPEC,DRUGGABLE}*/run.py` (needs `INTERCEPTA_DATA`; deterministic, reproduce ×2).
+
 ## Scope note
 This is the clean **Phase-B build** — the validated, honest core of the broader INTERCEPTA vision, plus the
 evidence-forced roadmap to the rest. It is a rigorous module and an honest map, **not a finished platform**. That
