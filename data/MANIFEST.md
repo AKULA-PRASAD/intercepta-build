@@ -163,3 +163,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
   (Mtb+E.coli; pathogen side reuses TID2 AF structures) AND their best human homologs (AlphaFold v6 fetched + fpocket),
   built by build_druggability.py. Human homolog structures = AlphaFold DB (alphafold.ebi.ac.uk, CC-BY). Regenerable;
   deterministic (seeded non-target sample). PUBLIC/OPEN; never committed.
+
+## SUBSTRATE4 pandemic stress test (SARS-CoV-1 reference proteome)
+- $INTERCEPTA_DATA/substrate4/sars1.fasta — SARS-CoV-1 proteome (UniProt UP000000354, 15 proteins), fetched 2026-08-04 —
+  the "prior coronavirus knowledge" reference (Spike P59594 / Nucleoprotein P59595 / Replicase P0C6X7). SARS-CoV-2 proteome
+  + targets reuse existing tid1/proteomes/sarscov2.fasta + tid1/targets/sarscov2_chembl.txt. PUBLIC/OPEN; never committed.

@@ -1,0 +1,65 @@
+{
+  "provenance": {
+    "git_sha": "b49615261853caf70e9376ed9a490995940021f3",
+    "utc": "2026-08-05T03:43:54Z"
+  },
+  "runtime_sec": 5.8,
+  "summary": {
+    "A_homology_anchored": {
+      "known_targets_recovered": [
+        "P0DTC2",
+        "P0DTC9",
+        "P0DTD1"
+      ],
+      "n_abstain": 13,
+      "n_recovered": 3,
+      "n_shortlist": 4,
+      "recovered_confidence": {
+        "P0DTC2": "moderate",
+        "P0DTC9": "moderate",
+        "P0DTD1": "moderate"
+      },
+      "top": [
+        {
+          "acc": "P0DTD1",
+          "conf": "moderate",
+          "known": true,
+          "score": 3.4109
+        },
+        {
+          "acc": "P0DTC1",
+          "conf": "moderate",
+          "known": false,
+          "score": 1.7881
+        },
+        {
+          "acc": "P0DTC2",
+          "conf": "moderate",
+          "known": true,
+          "score": 0.1999
+        },
+        {
+          "acc": "P0DTC9",
+          "conf": "moderate",
+          "known": true,
+          "score": -0.1777
+        }
+      ]
+    },
+    "B_isolated": {
+      "known_targets_recovered": [],
+      "n_abstain": 17,
+      "n_recovered": 0,
+      "n_shortlist": 0,
+      "recovered_confidence": {},
+      "top": []
+    },
+    "homology_anchored_recovers_targets": true,
+    "honest_confidence_degradation_no_mechanism": true,
+    "isolated_reference_abstains_honestly": true,
+    "n_known_targets": 3,
+    "n_proteins": 17,
+    "pathogen": "SARS-CoV-2",
+    "verdict": "PANDEMIC STRESS TEST \u2014 the substrate on SARS-CoV-2, zero activity data, NO metabolic mechanism (viral). (A) HOMOLOGY-ANCHORED to a related coronavirus (SARS-CoV-1, the 2003 prior knowledge): the engine recovers 3/3 known targets ['P0DTC2', 'P0DTC9', 'P0DTD1'] \u2014 the real mechanism by which SARS-CoV-2 targets were prioritized in weeks \u2014 but HONESTLY at '['moderate']' confidence, NOT 'high': with no metabolic model there is only ONE signal (conservation), so the substrate AUTOMATICALLY down-tiers confidence (vs 'high' 3-signal bacterial targets) \u2014 honest degradation BY CONSTRUCTION. (B) With only a BACTERIAL reference (no related coronavirus), the virus is phylogenetically ISOLATED (TID3), so the substrate ABSTAINS on 17/17 proteins and recovers 0 \u2014 it KNOWS it is out of its depth rather than being confidently wrong. This is the north-star 'any disease -> a query' behaviour on the actual pandemic case: homology-anchored where a relative exists, honestly abstaining where none does, and never over-confident without mechanism. SCOPE: 17-protein viral proteome; targets at polyprotein level; conservation-only (no viral mechanism signal exists); demonstration on validated signals; not wet-lab."
+  }
+}
