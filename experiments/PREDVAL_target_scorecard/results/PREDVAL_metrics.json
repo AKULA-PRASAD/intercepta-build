@@ -1,0 +1,531 @@
+{
+  "provenance": {
+    "git_sha": "3e382458153078c94b317fc113b2fe775db4127a",
+    "utc": "2026-08-05T19:21:36Z"
+  },
+  "runtime_sec": 0.3,
+  "scorecard": [
+    {
+      "breadth_fba": 5,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "murB",
+      "max_druggability": 0.946,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 5,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "murG",
+      "max_druggability": 0.89,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 4,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "dxr",
+      "max_druggability": 0.935,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 4,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "murF",
+      "max_druggability": 0.917,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 4,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "ispE",
+      "max_druggability": 0.673,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 4,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": false,
+      "gene": "ispG",
+      "max_druggability": 0.605,
+      "n_orgs_exp_essential": 2
+    },
+    {
+      "breadth_fba": 4,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": false,
+      "gene": "coaD",
+      "max_druggability": 0.321,
+      "n_orgs_exp_essential": 2
+    },
+    {
+      "breadth_fba": 3,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": true,
+      "gene": "menC",
+      "max_druggability": 0.931,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 3,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "mtnN",
+      "max_druggability": 0.82,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 3,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": false,
+      "gene": "mraY",
+      "max_druggability": 0.786,
+      "n_orgs_exp_essential": 2
+    },
+    {
+      "breadth_fba": 2,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": true,
+      "gene": "thiE",
+      "max_druggability": 0.973,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 2,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "murD",
+      "max_druggability": 0.892,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 2,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "murE",
+      "max_druggability": 0.82,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 2,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "thiD",
+      "max_druggability": 0.627,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 2,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "folB",
+      "max_druggability": 0.572,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 2,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": false,
+      "gene": "ribB",
+      "max_druggability": 0.334,
+      "n_orgs_exp_essential": 2
+    },
+    {
+      "breadth_fba": 2,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "thiL",
+      "max_druggability": 0.05,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "EF_2056",
+      "max_druggability": 0.999,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "uppP",
+      "max_druggability": 0.992,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "yoaC",
+      "max_druggability": 0.876,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": true,
+      "gene": "menD",
+      "max_druggability": 0.819,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "cysE",
+      "max_druggability": 0.784,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "EF_1541",
+      "max_druggability": 0.782,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "ybgC",
+      "max_druggability": 0.779,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "ribC",
+      "max_druggability": 0.757,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "murC",
+      "max_druggability": 0.745,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "coaA",
+      "max_druggability": 0.742,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "murI",
+      "max_druggability": 0.647,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": true,
+      "gene": "panB",
+      "max_druggability": 0.646,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "ispDF",
+      "max_druggability": 0.61,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": false,
+      "gene": "dxs",
+      "max_druggability": 0.598,
+      "n_orgs_exp_essential": 2
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "ycnE",
+      "max_druggability": 0.56,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "ribA1",
+      "max_druggability": 0.531,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "ribH",
+      "max_druggability": 0.525,
+      "n_orgs_exp_essential": 2
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": false,
+      "gene": "ribA",
+      "max_druggability": 0.524,
+      "n_orgs_exp_essential": 2
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": true,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "ispD",
+      "max_druggability": 0.503,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "motB",
+      "max_druggability": 0.446,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "luxS",
+      "max_druggability": 0.43,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": true,
+      "gene": "ilvC",
+      "max_druggability": 0.406,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "folP",
+      "max_druggability": 0.393,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "dapB",
+      "max_druggability": 0.352,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "ispF",
+      "max_druggability": 0.346,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "coaX",
+      "max_druggability": 0.338,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "ribD",
+      "max_druggability": 0.328,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "glmU",
+      "max_druggability": 0.195,
+      "n_orgs_exp_essential": 3
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "dapF",
+      "max_druggability": 0.148,
+      "n_orgs_exp_essential": 2
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "ribE",
+      "max_druggability": 0.137,
+      "n_orgs_exp_essential": 1
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": false,
+      "exp_essential_kpneumoniae": false,
+      "exp_essential_mtb": false,
+      "gene": "HP_0740",
+      "max_druggability": 0.136,
+      "n_orgs_exp_essential": 0
+    },
+    {
+      "breadth_fba": 1,
+      "druggable": false,
+      "exp_essential_ecoli": true,
+      "exp_essential_kpneumoniae": true,
+      "exp_essential_mtb": true,
+      "gene": "tmk",
+      "max_druggability": 0.073,
+      "n_orgs_exp_essential": 3
+    }
+  ],
+  "summary": {
+    "all_nominations_exp_essential_ge1_org": 33,
+    "exp_set_sizes": {
+      "ecoli": 302,
+      "kpneumoniae": 275,
+      "mtb": 384
+    },
+    "focus_exp_essential_in_ge1_org": 8,
+    "focus_exp_essential_in_ge2_orgs": 7,
+    "focus_frac_ge1": 0.889,
+    "n_focus_broadspectrum_druggable": 9,
+    "n_nominations_total": 49,
+    "nominations_experimentally_NONessential_in_all_tested": [
+      "mtnN",
+      "thiD",
+      "EF_2056",
+      "uppP",
+      "yoaC",
+      "cysE",
+      "EF_1541",
+      "ybgC",
+      "ispDF",
+      "ycnE",
+      "ribA1",
+      "motB",
+      "luxS",
+      "folP",
+      "coaX",
+      "HP_0740"
+    ],
+    "verdict": "PER-TARGET SCORECARD: of the 9 headline broad-spectrum (FBA-breadth>=3) DRUGGABLE nominations, 8 (89%) are EXPERIMENTALLY essential in >=1 of the 3 tested organisms and 7 in >=2 \u2014 e.g. the cell-wall (murB/murG/murF/mraY) and MEP/isoprenoid (dxr/ispE/ispG) nominations are confirmed experimental essentials, giving a decision-grade validated target table. HONEST: concordance is EXPECTED (nominations are FBA-essential and VAL-ESS showed FBA->experimental enrichment), so this is a per-target confirmation + FALSE-POSITIVE audit, not an independent test. Nominations experimentally NON-essential in every tested organism (candidate false positives / conditionally-essential \u2014 e.g. menaquinone/thiamine/salvage genes): ['mtnN', 'thiD', 'EF_2056', 'uppP', 'yoaC', 'cysE', 'EF_1541', 'ybgC', 'ispDF', 'ycnE', 'ribA1', 'motB', 'luxS', 'folP', 'coaX', 'HP_0740']. Gene-symbol membership; essentiality only (not drug-target/selectivity/clinical); symbol may miss organism-specific names (under-counts); hypotheses; not wet-lab."
+  }
+}
