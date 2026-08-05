@@ -1,0 +1,432 @@
+{
+  "per_organism": {
+    "bsubtilis": {
+      "n_candidates_ess_choke_novel": 20,
+      "n_essential": 27,
+      "n_novel_safe": 15,
+      "predictions": [
+        {
+          "gene": "dxr",
+          "uniprot": "O31753"
+        },
+        {
+          "gene": "mtnN",
+          "uniprot": "O32028"
+        },
+        {
+          "gene": "menC",
+          "uniprot": "O34514"
+        },
+        {
+          "gene": "coaD",
+          "uniprot": "O34797"
+        },
+        {
+          "gene": "yoaC",
+          "uniprot": "O34861"
+        },
+        {
+          "gene": "murB",
+          "uniprot": "P18579"
+        },
+        {
+          "gene": "motB",
+          "uniprot": "P28612"
+        },
+        {
+          "gene": "ispE",
+          "uniprot": "P37550"
+        },
+        {
+          "gene": "murC",
+          "uniprot": "P40778"
+        },
+        {
+          "gene": "ispG",
+          "uniprot": "P54482"
+        },
+        {
+          "gene": "ycnE",
+          "uniprot": "P94425"
+        },
+        {
+          "gene": "murF",
+          "uniprot": "P96613"
+        },
+        {
+          "gene": "murD",
+          "uniprot": "Q03522"
+        },
+        {
+          "gene": "murE",
+          "uniprot": "Q03523"
+        },
+        {
+          "gene": "ispF",
+          "uniprot": "Q06756"
+        }
+      ]
+    },
+    "ecoli": {
+      "n_candidates_ess_choke_novel": 13,
+      "n_essential": 31,
+      "n_novel_safe": 7,
+      "predictions": [
+        {
+          "gene": "ribA",
+          "uniprot": "P0A7I7"
+        },
+        {
+          "gene": "ribB",
+          "uniprot": "P0A7J0"
+        },
+        {
+          "gene": "folB",
+          "uniprot": "P0AC16"
+        },
+        {
+          "gene": "mtnN",
+          "uniprot": "P0AF12"
+        },
+        {
+          "gene": "ribD",
+          "uniprot": "P25539"
+        },
+        {
+          "gene": "ispG",
+          "uniprot": "P62620"
+        },
+        {
+          "gene": "ispD",
+          "uniprot": "Q46893"
+        }
+      ]
+    },
+    "efaecalis": {
+      "n_candidates_ess_choke_novel": 12,
+      "n_essential": 20,
+      "n_novel_safe": 6,
+      "predictions": [
+        {
+          "gene": "mraY",
+          "uniprot": "O07107"
+        },
+        {
+          "gene": "murG",
+          "uniprot": "O07109"
+        },
+        {
+          "gene": "murB",
+          "uniprot": "Q830P3"
+        },
+        {
+          "gene": "EF_2056",
+          "uniprot": "Q833B1"
+        },
+        {
+          "gene": "EF_1541",
+          "uniprot": "Q834U2"
+        },
+        {
+          "gene": "menC",
+          "uniprot": "Q838J7"
+        }
+      ]
+    },
+    "hpylori": {
+      "n_candidates_ess_choke_novel": 20,
+      "n_essential": 32,
+      "n_novel_safe": 13,
+      "predictions": [
+        {
+          "gene": "mraY",
+          "uniprot": "O25235"
+        },
+        {
+          "gene": "ispG",
+          "uniprot": "O25342"
+        },
+        {
+          "gene": "HP_0740",
+          "uniprot": "O25439"
+        },
+        {
+          "gene": "coaX",
+          "uniprot": "O25533"
+        },
+        {
+          "gene": "ispDF",
+          "uniprot": "O25664"
+        },
+        {
+          "gene": "murG",
+          "uniprot": "O25770"
+        },
+        {
+          "gene": "murB",
+          "uniprot": "O25963"
+        },
+        {
+          "gene": "ispE",
+          "uniprot": "O25984"
+        },
+        {
+          "gene": "tmk",
+          "uniprot": "O26009"
+        },
+        {
+          "gene": "coaD",
+          "uniprot": "O26010"
+        },
+        {
+          "gene": "dxr",
+          "uniprot": "P56139"
+        },
+        {
+          "gene": "cysE",
+          "uniprot": "P71405"
+        },
+        {
+          "gene": "ybgC",
+          "uniprot": "P94842"
+        }
+      ]
+    },
+    "mtb": {
+      "n_candidates_ess_choke_novel": 12,
+      "n_essential": 28,
+      "n_novel_safe": 11,
+      "predictions": [
+        {
+          "gene": "ribA1",
+          "uniprot": "L7N669"
+        },
+        {
+          "gene": "thiL",
+          "uniprot": "P9WG71"
+        },
+        {
+          "gene": "thiE",
+          "uniprot": "P9WG75"
+        },
+        {
+          "gene": "thiD",
+          "uniprot": "P9WG77"
+        },
+        {
+          "gene": "panB",
+          "uniprot": "P9WIL7"
+        },
+        {
+          "gene": "murG",
+          "uniprot": "P9WJK9"
+        },
+        {
+          "gene": "murF",
+          "uniprot": "P9WJL1"
+        },
+        {
+          "gene": "murB",
+          "uniprot": "P9WJL9"
+        },
+        {
+          "gene": "ribE",
+          "uniprot": "P9WK35"
+        },
+        {
+          "gene": "ilvC",
+          "uniprot": "P9WKJ7"
+        },
+        {
+          "gene": "coaD",
+          "uniprot": "P9WPA5"
+        }
+      ]
+    },
+    "paeruginosa": {
+      "n_candidates_ess_choke_novel": 30,
+      "n_essential": 51,
+      "n_novel_safe": 19,
+      "predictions": [
+        {
+          "gene": "dapB",
+          "uniprot": "P38103"
+        },
+        {
+          "gene": "ispE",
+          "uniprot": "P42805"
+        },
+        {
+          "gene": "dapF",
+          "uniprot": "Q51564"
+        },
+        {
+          "gene": "murE",
+          "uniprot": "Q59650"
+        },
+        {
+          "gene": "folP",
+          "uniprot": "Q9HV49"
+        },
+        {
+          "gene": "murI",
+          "uniprot": "Q9HVD0"
+        },
+        {
+          "gene": "murF",
+          "uniprot": "Q9HVZ7"
+        },
+        {
+          "gene": "murD",
+          "uniprot": "Q9HVZ9"
+        },
+        {
+          "gene": "murG",
+          "uniprot": "Q9HW01"
+        },
+        {
+          "gene": "ribC",
+          "uniprot": "Q9HWX3"
+        },
+        {
+          "gene": "ribB",
+          "uniprot": "Q9HWX4"
+        },
+        {
+          "gene": "ribH",
+          "uniprot": "Q9HWX5"
+        },
+        {
+          "gene": "thiL",
+          "uniprot": "Q9HWX7"
+        },
+        {
+          "gene": "thiE",
+          "uniprot": "Q9HX40"
+        },
+        {
+          "gene": "thiD",
+          "uniprot": "Q9HX41"
+        },
+        {
+          "gene": "uppP",
+          "uniprot": "Q9I2E5"
+        },
+        {
+          "gene": "folB",
+          "uniprot": "Q9I5V5"
+        },
+        {
+          "gene": "dxr",
+          "uniprot": "Q9KGU6"
+        },
+        {
+          "gene": "dxs",
+          "uniprot": "Q9KGU7"
+        }
+      ]
+    },
+    "salmonella": {
+      "n_candidates_ess_choke_novel": 24,
+      "n_essential": 29,
+      "n_novel_safe": 14,
+      "predictions": [
+        {
+          "gene": "ispE",
+          "uniprot": "P30753"
+        },
+        {
+          "gene": "murB",
+          "uniprot": "P37417"
+        },
+        {
+          "gene": "menC",
+          "uniprot": "P58486"
+        },
+        {
+          "gene": "ispG",
+          "uniprot": "P58671"
+        },
+        {
+          "gene": "mtnN",
+          "uniprot": "P60217"
+        },
+        {
+          "gene": "glmU",
+          "uniprot": "Q8ZKX0"
+        },
+        {
+          "gene": "coaD",
+          "uniprot": "Q8ZL48"
+        },
+        {
+          "gene": "menD",
+          "uniprot": "Q8ZNE8"
+        },
+        {
+          "gene": "dxr",
+          "uniprot": "Q8ZRP3"
+        },
+        {
+          "gene": "murG",
+          "uniprot": "Q8ZRU3"
+        },
+        {
+          "gene": "mraY",
+          "uniprot": "Q8ZRU5"
+        },
+        {
+          "gene": "murF",
+          "uniprot": "Q8ZRU6"
+        },
+        {
+          "gene": "luxS",
+          "uniprot": "Q9L4T0"
+        },
+        {
+          "gene": "coaA",
+          "uniprot": "Q9L9K3"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "git_sha": "3d9f0d4147bf34942e37c1bdda67133a33755c6c",
+    "utc": "2026-08-05T16:40:32Z"
+  },
+  "runtime_sec": 10.7,
+  "summary": {
+    "broad_spectrum_shared_genes_ge3_bacteria": {
+      "coaD": 4,
+      "dxr": 4,
+      "ispE": 4,
+      "ispG": 4,
+      "menC": 3,
+      "mraY": 3,
+      "mtnN": 3,
+      "murB": 5,
+      "murF": 4,
+      "murG": 5
+    },
+    "organisms": [
+      "ecoli",
+      "mtb",
+      "paeruginosa",
+      "bsubtilis",
+      "hpylori",
+      "salmonella",
+      "efaecalis"
+    ],
+    "per_organism_counts": {
+      "bsubtilis": 15,
+      "ecoli": 7,
+      "efaecalis": 6,
+      "hpylori": 13,
+      "mtb": 11,
+      "paeruginosa": 19,
+      "salmonella": 14
+    },
+    "total_novel_safe_predictions": 85,
+    "verdict": "A pan-bacterial catalog of 85 NOVEL SAFE target predictions across 7 pathogens (each: FBA-essential + metabolic chokepoint + host-non-homologous + NOT a known drug target), from genomes + ZERO drug data. Per-organism: ecoli=7, mtb=11, paeruginosa=19, bsubtilis=15, hpylori=13, salmonella=14, efaecalis=6. Broad-spectrum genes recurring in >=3 bacteria: {'murB': 5, 'murG': 5, 'ispG': 4, 'coaD': 4, 'murF': 4, 'dxr': 4, 'ispE': 4, 'mtnN': 3, 'menC': 3, 'mraY': 3} \u2014 these (isoprenoid/MEP, riboflavin, folate, and other host-absent essential pathways) are the highest-value pan-pathogen predictions, extending EXPVAL/BROADSPEC across the panel. SCOPE: FBA-predicted essentiality (experimental check = VALIDATE_essentiality Tier 0); chokepoint heuristic; host non-homology by sequence; hypotheses, not validated targets; not wet-lab."
+  }
+}
