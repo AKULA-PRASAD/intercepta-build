@@ -1,0 +1,28 @@
+{
+  "provenance": {
+    "git_sha": "2251b8ce1970ff0e9bdba97118bb1c5b52bb0ce3",
+    "utc": "2026-08-05T19:08:37Z"
+  },
+  "runtime_sec": 0.8,
+  "summary": {
+    "H1_enrichment_OR_gt3_p_lt0.01": true,
+    "auroc_growthratio_vs_experimental": 0.624,
+    "contingency_FBAess_vs_expess": {
+      "FBA_only": 2,
+      "both": 24,
+      "exp_only": 73,
+      "neither": 384
+    },
+    "experimental_source": "ersilia_gradi_CRISPRi_Tnseq_experimentally_essential",
+    "fisher_p": 0.0,
+    "label_contamination_excluded": 2,
+    "n_adjudicable": 483,
+    "n_experimental_essential": 97,
+    "n_our_genes": 1927,
+    "odds_ratio": 63.12,
+    "organism": "K_pneumoniae_HELD_OUT",
+    "precision_FBAess": 0.923,
+    "recall_FBAess": 0.247,
+    "verdict": "HELD-OUT VALIDATION HOLDS \u2014 on K. pneumoniae (a WHO pathogen the method NEVER saw in development), the NEWBUG FBA-essentiality predictions are enriched for INDEPENDENT EXPERIMENTAL (CRISPRi/Tn-seq) essentiality at odds ratio 63.1 (Fisher p=3.5e-16), precision 92%. So the experimentally-validated mechanism signal is NOT confined to development organisms \u2014 it holds on a genuinely held-out pathogen (the north-star claim), now against experimental truth. THREE-ORGANISM picture: E. coli OR 64, Mtb OR 7.9, K. pneumoniae (held-out) OR 63.1. HONEST BOUNDS: binary enrichment validated; recall 25% (FBA metabolic-scoped); continuous AUROC 0.62; experimental label is an aggregation of published K. pneumoniae essentiality studies (verified experiment-backed, 2 non-experimental rows excluded); essentiality only, not drug-target/clinical. COVERAGE CAVEAT: only 483/1927 of our genes were adjudicable (gene-symbol-mappable into the experimental table; strain-proteome versions differ so direct-accession overlap is 0) \u2014 that subset skews toward well-annotated core genes, so the association is valid WITHIN it but not a whole-proteome estimate."
+  }
+}

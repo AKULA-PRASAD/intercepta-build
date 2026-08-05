@@ -195,3 +195,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/expval_mtb/dejesus2017.xlsx — DeJesus et al. 2017 mBio Table 1 ORF essentiality calls (Rv_ID/Name/
   Final Call; ES=461 strict-essential), via ajinich/mtb_tn_db. sha256 989848da…
 - $INTERCEPTA_DATA/expval_mtb/rvmap.tsv — UniProt Rv-number->accession+symbol map (rest.uniprot.org, taxid 83332, 4059).
+
+## VALIDATE_essentiality K. pneumoniae HELD-OUT generalization (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/expval_kp/kp_ess.csv — genome-wide K. pneumoniae essentiality (ersilia-os/gradi-target-prioritization;
+  aggregates published CRISPRi KPNIH1 + Tn-seq experimental essentiality; 'experimentally_essential' 353 True/5728).
+  sha256 52a258ed…. Only its EXPERIMENTAL label used (its own fba_* columns IGNORED).
