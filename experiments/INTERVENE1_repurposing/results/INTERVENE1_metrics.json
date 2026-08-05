@@ -1,0 +1,116 @@
+{
+  "provenance": {
+    "git_sha": "625a25b4e938cfdd94208ea85308e39e2c4bb063",
+    "utc": "2026-08-05T23:44:13Z"
+  },
+  "runtime_sec": 7.1,
+  "summary": {
+    "application_ngonorrhoeae": {
+      "n_essential": 32,
+      "n_essential_with_repurposing_candidate": 1,
+      "top": [
+        {
+          "acc": "A0ACH0F5P0",
+          "drug_target_homolog": "Q8IKG4",
+          "gene": "ispC",
+          "moa": "1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic inhibitor",
+          "n_existing_drugs": 1,
+          "pident": 37.6
+        }
+      ]
+    },
+    "knowledge_base": {
+      "drug_target_proteins": 2148,
+      "source": "ChEMBL drug-mechanism (open)"
+    },
+    "validation_ecoli": {
+      "canonical_correct_moa": 9,
+      "canonical_detail": [
+        {
+          "correct": true,
+          "expected_moa_kw": "d-ala",
+          "gene": "ddlB",
+          "homolog": "P9WP31",
+          "n_drugs": 1,
+          "pident": 35.0,
+          "retrieved_moa": "D-alanylalanine synthetase inhibitor"
+        },
+        {
+          "correct": true,
+          "expected_moa_kw": "alanine racemase",
+          "gene": "alr",
+          "homolog": "P9WQA9",
+          "n_drugs": 1,
+          "pident": 35.8,
+          "retrieved_moa": "Alanine racemase inhibitor"
+        },
+        {
+          "correct": true,
+          "expected_moa_kw": "carboxyvinyltransferase",
+          "gene": "murA",
+          "homolog": "P0A749",
+          "n_drugs": 1,
+          "pident": 100.0,
+          "retrieved_moa": "UDP-N-acetylglucosamine 1-carboxyvinyltransferase inhibitor"
+        },
+        {
+          "correct": true,
+          "expected_moa_kw": "rna polymerase",
+          "gene": "rpoB",
+          "homolog": "P0A8V2",
+          "n_drugs": 7,
+          "pident": 100.0,
+          "retrieved_moa": "Bacterial DNA-directed RNA polymerase inhibitor | DNA-directed RNA polymerase inhibitor"
+        },
+        {
+          "correct": true,
+          "expected_moa_kw": "gyrase",
+          "gene": "gyrA",
+          "homolog": "P0AES4",
+          "n_drugs": 29,
+          "pident": 100.0,
+          "retrieved_moa": "Bacterial DNA gyrase inhibitor"
+        },
+        {
+          "correct": true,
+          "expected_moa_kw": "gyrase",
+          "gene": "gyrB",
+          "homolog": "P0AES6",
+          "n_drugs": 29,
+          "pident": 100.0,
+          "retrieved_moa": "Bacterial DNA gyrase inhibitor"
+        },
+        {
+          "correct": true,
+          "expected_moa_kw": "topoisomerase",
+          "gene": "parC",
+          "homolog": "P0AFI2",
+          "n_drugs": 21,
+          "pident": 100.0,
+          "retrieved_moa": "Topoisomerase IV inhibitor"
+        },
+        {
+          "correct": true,
+          "expected_moa_kw": "topoisomerase",
+          "gene": "parE",
+          "homolog": "P20083",
+          "n_drugs": 21,
+          "pident": 100.0,
+          "retrieved_moa": "Topoisomerase IV inhibitor"
+        },
+        {
+          "correct": true,
+          "expected_moa_kw": "reductoisomerase",
+          "gene": "dxr",
+          "homolog": "Q8IKG4",
+          "n_drugs": 1,
+          "pident": 37.3,
+          "retrieved_moa": "1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic inhibitor"
+        }
+      ],
+      "canonical_targets_tested": 9,
+      "n_proteins_with_drug_homolog_pident>=35": 154
+    },
+    "verdict": "INTERVENTION LAYER (repurposing via drug-target homology) \u2014 the achievable slice of 'best intervention', attacking the target->drug bottleneck. Knowledge base: 2148 ChEMBL drug-target proteins. VALIDATION (E. coli, no hardcoded answers): of 9 canonical antibacterial-target genes, the homology mapper independently retrieved a drug whose mechanism-of-action matches the known class in 9/9 (PASS) \u2014 e.g. it recovers real pharmacology (MurA->fosfomycin-class, gyrase->fluoroquinolone, RNA-pol->rifamycin, DXR->fosmidomycin, Ddl/Alr). So the intervention-MAPPING is real. **BUT THE HONEST CEILING is the key finding: for novel N. gonorrhoeae, only 1/32 validated-essential targets have an existing-drug repurposing candidate** \u2014 i.e. repurposing addresses only the SMALL fraction of a novel pathogen's essential targets that happen to have an already-drugged homolog; the majority have NO existing drug and fall back to de-novo chemistry (a verified ceiling) or new experimental work. (154 E. coli proteins overall have a drug-target homolog.) **HONEST BOUNDS: repurposing HYPOTHESES via target homology only \u2014 this does NOT establish whole-cell activity, penetration, or selectivity (the residual, EXPERIMENT-GATED bottleneck the audit identified); a drugged homolog must exist; de-novo chemistry for undrugged targets remains a ceiling; not wet-lab, not clinical.** This moves the system target->candidate-intervention (the achievable part); the rest is data-gated."
+  }
+}

@@ -233,3 +233,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
   (bigg.ucsd.edu) for K. pneumoniae / A. baumannii / M. tuberculosis / S. aureus USA300 / B. subtilis / Salmonella LT2.
 - $INTERCEPTA_DATA/expval_mtb/dejesus_es_ids.txt — pre-extracted DeJesus 2017 ES ids. Experimental sets: PEC, DEG (1001/1011/
   1062), ersilia KP, DeJesus. All PUBLIC/OPEN; never committed.
+
+## INTERVENE1 repurposing intervention layer (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/intervene/drug_targets.{tsv,fasta} — ChEMBL drug-mechanism knowledge base (7561 drug->target
+  mechanisms; 2148 drug-target protein sequences via UniProt). Open (ChEMBL REST + UniProt); regenerable; never committed.
