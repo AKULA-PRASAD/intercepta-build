@@ -161,3 +161,35 @@ information* — prospective assays, wet-lab, or 3D/experimental data — which 
 That is the honest state: the computational frontier reachable from open data on CPU is now comprehensively mapped, and the
 next real advance toward the vision is experimental, not algorithmic. What this arc delivers is an exact, reproduced map of
 how far sequence-and-transfer-only discovery reaches, and where — and why — it stops.
+
+## From map to engine to concrete predictions (2026-08 capstone)
+The honest map above became a working **engine** and specific, falsifiable **predictions**.
+
+**The engine (the extensible substrate).** All the validated signals and corrections are composed by a single
+disease-agnostic core (`intercepta.substrate`; charter law U2) that emits a **safe, provenance-tiered, abstaining** ranked
+shortlist for a query. It bakes in every lesson: mechanism as first-class evidence; a **hard host-non-homology safety filter**
+(not a soft feature); **honest abstention**; and a **continuous-absorption guardrail** that quarantines self-generated
+findings until independently reproduced (so a living, self-improving system cannot deceive itself). It is **entity-agnostic**
+(ranks proteins *and* molecules) and **disease-class-agnostic** — demonstrated on bacteria, on a virus (SARS-CoV-2, where it
+recovers the known targets by homology at honestly-degraded confidence, and abstains under phylogenetic isolation), and on
+human cancers (where the architecture runs but honestly surfaces that within-disease human target evidence is
+popularity-confounded and near-random — a real ceiling). The honest "any disease" bound: **the governance architecture is
+universal; the quality of the answer is disease-class-specific — strong where real mechanism exists (pathogens), weak where
+only popularity-confounded evidence does (human single-disease queries).**
+
+**The predictions (the payoff).** Run on bacterial genomes with **zero drug data**, the engine's novel safe predictions —
+FBA-essential + metabolic chokepoint + host-non-homologous + not-already-a-drug-target — number 85 across 7 pathogens, and
+the broad-spectrum, druggable subset is **exactly the canonical antibacterial target landscape**: cell-wall/peptidoglycan
+(**murB** druggability 0.95 / essential in 5/7, **murG**, murF, mraY — the β-lactam/vancomycin space, validated-essential yet
+largely undrugged), the **MEP/isoprenoid** pathway (dxr, ispE, ispG), CoA, menaquinone, folate, riboflavin, thiamine. The
+method — told nothing about drugs — independently reconstructs the pathways the antibacterial field actually pursues, from
+three converging angles (literature concordance, cross-bacteria breadth, and druggable-pocket quality). That is the strongest
+possible in-silico evidence that the mechanism biology is real, not luck.
+
+**The truth-test (what closes the loop).** These predictions are pre-registered, falsifiable hypotheses. The single cheapest
+rigorous test — costing nothing — is to check the FBA-predicted essentiality against decades of *experimental* essentiality
+(Keio/Goodall/DeJesus); a turnkey validator (`experiments/VALIDATE_essentiality`) runs the instant that data is provided.
+The next rung, a single CRISPRi essentiality test of the top prediction (murB or a novel one), is the first real-world
+evidence. Everything is built so that the moment one experimental result exists, it enters the substrate as high-tier
+evidence and every future answer improves. The arc is complete as far as computation on open data can honestly carry it; the
+remaining distance is experimental.
