@@ -1,0 +1,77 @@
+{
+  "provenance": {
+    "git_sha": "36b919a05f53bcd209867eb1ef0603951bea520a",
+    "utc": "2026-08-05T19:37:14Z"
+  },
+  "runtime_sec": 0.7,
+  "summary": {
+    "H1_breadth_AUROC_among_nonmetabolic": 0.8567,
+    "H2_fba_alone": {
+      "n_pred": 31,
+      "precision": 0.774,
+      "recall": 0.085
+    },
+    "H2_fba_plus_breadth": {
+      "fba_or_breadth>=4": {
+        "n_pred": 719,
+        "precision": 0.218,
+        "recall": 0.557,
+        "recall_gain_vs_fba": 0.472
+      },
+      "fba_or_breadth>=5": {
+        "n_pred": 488,
+        "precision": 0.301,
+        "recall": 0.521,
+        "recall_gain_vs_fba": 0.436
+      },
+      "fba_or_breadth>=6": {
+        "n_pred": 291,
+        "precision": 0.44,
+        "recall": 0.454,
+        "recall_gain_vs_fba": 0.369
+      }
+    },
+    "breadth6_enrichment_over_base_rate": 6.2,
+    "breadth_thresholds_nonmetabolic": {
+      "1": {
+        "n_pred": 2160,
+        "precision": 0.081,
+        "recall_of_nonmet_ess": 0.994
+      },
+      "2": {
+        "n_pred": 1430,
+        "precision": 0.114,
+        "recall_of_nonmet_ess": 0.931
+      },
+      "3": {
+        "n_pred": 949,
+        "precision": 0.153,
+        "recall_of_nonmet_ess": 0.829
+      },
+      "4": {
+        "n_pred": 688,
+        "precision": 0.193,
+        "recall_of_nonmet_ess": 0.76
+      },
+      "5": {
+        "n_pred": 457,
+        "precision": 0.269,
+        "recall_of_nonmet_ess": 0.703
+      },
+      "6": {
+        "n_pred": 260,
+        "precision": 0.4,
+        "recall_of_nonmet_ess": 0.594
+      }
+    },
+    "exp_essential_metabolic": 107,
+    "exp_essential_nonmetabolic": 175,
+    "exp_essential_total": 282,
+    "frac_exp_essential_nonmetabolic": 0.621,
+    "n_genes": 4403,
+    "n_metabolic": 1669,
+    "n_nonmetabolic": 2734,
+    "nonmetabolic_essentiality_base_rate": 0.064,
+    "verdict": "MIXED POSITIVE \u2014 conservation breadth is a genuine, confound-robust RANKING signal that recovers much of the non-metabolic essential gap, at a real precision cost. THE GAP IS REAL: 62% of experimental essentials are NON-metabolic (FBA-blind) \u2014 the direct cause of FBA's low recall (0.085 here). THE SIGNAL IS REAL (NOT generic): among non-metabolic genes conservation-breadth discriminates essentiality at AUROC 0.8567, and universal-core (breadth 6) genes are essential at 40% vs a 6.4% base rate = 6.2x enrichment \u2014 so unlike TID1's DRUGGABILITY case, conservation IS informative for ESSENTIALITY. RECALL EXTENDS: FBA-essential OR high-breadth-non-metabolic raises total recall 0.085 -> up to 0.557 (sequence-only, non-study-biased, unlike MET4's PPI). THE HONEST COST: precision drops from FBA's 0.774 to 0.218-0.44 \u2014 conservation-breadth is a PRIORITIZATION signal for the FBA-blind half, NOT a precise filter, and cannot match FBA's metabolic precision. NET: the non-metabolic gap is PARTIALLY closable \u2014 well-RANKED but not cleanly SHORTLISTED \u2014 a real complementary signal with an honest recall/precision tradeoff. SCOPE: E. coli only; conservation-breadth is known biology (core genome ~ essential) applied+VALIDATED against PEC for recall extension, not a novel signal; essentiality only; not wet-lab."
+  }
+}

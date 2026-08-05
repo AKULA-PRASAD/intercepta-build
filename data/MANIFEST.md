@@ -205,3 +205,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/expval_deg/deg_bacteria.csv, deg_annotation_p.csv, DEG10.aa.gz — DEG (Database of Essential Genes,
   tubic.org) bulk downloads. Used: DEG1043 (A. baumannii ATCC 17978, Wang 2014 INSeq lung-persistence, 458) + DEG1036
   (P. aeruginosa PAO1, Turner 2015 Tn-seq, 336). Gene-name essential symbols extracted from deg_annotation_p.csv.
+
+## REACH1 non-metabolic recall (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/reach1/breadth.tsv — per-E.coli-gene conservation breadth (0-6 diverse panel bacteria with a homolog;
+  mmseqs2). Regenerable from tid1 proteomes via build_conservation.py. Reuses PEC essentials + MET2 GEM.
