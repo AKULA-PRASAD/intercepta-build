@@ -107,10 +107,19 @@ def main():
                "predictions_experimentally_essential": preds_exp, "n_predictions_confirmed": n_preds_confirmed,
                "H1_enrichment_OR_gt3_p_lt0.01": bool(H1), "H2_ge5of7_predictions_essential": bool(H2)}
     if H1 and H2:
-        summary["verdict"] = (f"VALIDATED: FBA-predicted essentiality matches experiment — odds ratio {orr:.1f} (Fisher "
-                              f"p={p_fisher:.1e}), AUROC {auroc:.2f}, and {n_preds_confirmed}/7 locked predictions are "
-                              f"experimentally essential. The mechanism signal (MET1-3, the arc's key positive) is REAL against "
-                              f"experimental ground truth — not in-silico luck.")
+        summary["verdict"] = (f"VALIDATED (first EXTERNAL EXPERIMENTAL validation in the program): FBA-predicted essentiality is "
+                              f"strongly enriched for EXPERIMENTAL (PEC single-gene-knockout) essentiality — odds ratio {orr:.1f} "
+                              f"(Fisher p={p_fisher:.1e}), and {n_preds_confirmed}/7 locked EXPVAL predictions are experimentally "
+                              f"essential (ribA/ribB/folB/ribD/ispG/ispD confirmed; mtnN is a confirmed FALSE POSITIVE). So the "
+                              f"mechanism signal (MET1-3, the arc's key positive) is REAL against independent experimental ground "
+                              f"truth — not in-silico luck. **HONEST SCOPE (falsify-first on our own positive): (1) the validated "
+                              f"quantity is the binary FBA-essential ENRICHMENT (precision {a}/{a+b}={a/(a+b):.0%}); RECALL is LOW "
+                              f"({a}/{a+c}={a/(a+c):.0%}) — FBA is metabolic-scoped and misses {c} experimentally-essential genes "
+                              f"(translation/non-metabolic), exactly as caveated in MET1. (2) The CONTINUOUS growth-ratio AUROC is a "
+                              f"modest {auroc:.2f} — the binary call is what is strongly validated, not fine ranking. (3) This "
+                              f"validates ESSENTIALITY enrichment vs experiment; it does NOT validate the drug-target, selectivity, "
+                              f"or clinical claims (those remain separate and unvalidated). PEC is E. coli only; broad-bacterial "
+                              f"validation still open.**")
     else:
         summary["verdict"] = (f"PARTIAL/NULL (honest): OR {orr:.1f} (p={p_fisher}), AUROC {auroc if auroc==auroc else 'NA'}, "
                               f"{n_preds_confirmed}/7 predictions experimentally essential. H1={H1}, H2={H2}. Reported plainly; "

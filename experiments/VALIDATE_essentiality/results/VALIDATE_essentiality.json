@@ -1,0 +1,33 @@
+{
+  "provenance": {
+    "git_sha": "eb94948c86208b50a799877c4d02c7a1705bd92d",
+    "utc": "2026-08-05T18:30:56Z"
+  },
+  "runtime_sec": 0.8,
+  "summary": {
+    "H1_enrichment_OR_gt3_p_lt0.01": true,
+    "H2_ge5of7_predictions_essential": true,
+    "auroc_growthratio_vs_experimental": 0.6251,
+    "contingency_FBAess_vs_expess": {
+      "FBA_only": 7,
+      "both": 24,
+      "exp_only": 83,
+      "neither": 1556
+    },
+    "experimental_file": "ecoli_essential.txt",
+    "fisher_p": 0.0,
+    "n_experimental_mapped": 107,
+    "n_predictions_confirmed": 6,
+    "odds_ratio": 64.28,
+    "predictions_experimentally_essential": {
+      "folB": true,
+      "ispD": true,
+      "ispG": true,
+      "mtnN": false,
+      "ribA": true,
+      "ribB": true,
+      "ribD": true
+    },
+    "verdict": "VALIDATED (first EXTERNAL EXPERIMENTAL validation in the program): FBA-predicted essentiality is strongly enriched for EXPERIMENTAL (PEC single-gene-knockout) essentiality \u2014 odds ratio 64.3 (Fisher p=3.1e-24), and 6/7 locked EXPVAL predictions are experimentally essential (ribA/ribB/folB/ribD/ispG/ispD confirmed; mtnN is a confirmed FALSE POSITIVE). So the mechanism signal (MET1-3, the arc's key positive) is REAL against independent experimental ground truth \u2014 not in-silico luck. **HONEST SCOPE (falsify-first on our own positive): (1) the validated quantity is the binary FBA-essential ENRICHMENT (precision 24/31=77%); RECALL is LOW (24/107=22%) \u2014 FBA is metabolic-scoped and misses 83 experimentally-essential genes (translation/non-metabolic), exactly as caveated in MET1. (2) The CONTINUOUS growth-ratio AUROC is a modest 0.63 \u2014 the binary call is what is strongly validated, not fine ranking. (3) This validates ESSENTIALITY enrichment vs experiment; it does NOT validate the drug-target, selectivity, or clinical claims (those remain separate and unvalidated). PEC is E. coli only; broad-bacterial validation still open.**"
+  }
+}

@@ -182,3 +182,11 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/newbug2/abaumannii.xml — de-novo CarveMe GEM (2835 rxns / 1138 genes; UniProt-keyed via gid2acc).
 - $INTERCEPTA_DATA/newbug2/{essentiality.tsv,chokepoints.tsv} — FBA essentiality + chokepoint. Regenerable; deterministic.
   PUBLIC/OPEN; never committed.
+
+## VALIDATE_essentiality (Tier-0 experimental truth — E. coli essentiality; PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/expval/PECData.dat — PEC (Profiling of E. coli Chromosome; NBRP/NIG, shigen.nig.ac.jp) systematic
+  single-gene-knockout essentiality table (4497 ORFs; Class 1=essential=302). sha256 6a6f98af…. Source of ground truth.
+- $INTERCEPTA_DATA/expval/ersilia_ess.csv — independent multi-source consensus cross-check (Keio;Goodall;Rousset18;
+  Wang18; ersilia-os/gradi-target-prioritization). sha256 1996d05f…. 209 experimentally-essential rows.
+- $INTERCEPTA_DATA/expval/ecoli_essential.txt — derived: PEC Class-1 gene symbols + b-numbers (605 tokens) the validator
+  consumes. Regenerable from PECData.dat. PUBLIC/OPEN; never committed.
