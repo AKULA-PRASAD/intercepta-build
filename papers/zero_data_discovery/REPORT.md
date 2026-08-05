@@ -287,6 +287,33 @@ substrate is built so each new experimental result enters as high-tier evidence 
 computational arc is complete as far as open data on CPU can honestly carry it; the essentiality signal is now experimentally
 anchored, and the remaining distance to a drug is experimental.
 
+## Figures
+*All figures are generated directly from the committed experiment metrics by `gen_figures.py` — every value traces to a reproduced-×2 experiment.*
+
+![Figure 1](figures/fig1_five_organism_validation.png)
+**Fig 1. FBA gene-essentiality is validated against experimental knockout data in five bacteria.** Odds ratio for the
+enrichment of FBA-predicted-essential genes among experimentally-essential genes (log scale); all five clear the
+pre-registered gate (OR>3). Red = held-out WHO critical-priority pathogens (never used in method development). Sources:
+PEC (E. coli), Turner Tn-seq (P. aeruginosa), DeJesus Tn-seq (M. tuberculosis), Wang INSeq (A. baumannii), CRISPRi/Tn-seq
+(K. pneumoniae).
+
+![Figure 2](figures/fig2_mechanism_ceiling_break.png)
+**Fig 2. Mechanism breaks the conservation ceiling.** Held-out (5-fold CV) target-recovery AUROC in E. coli (iML1515):
+adding FBA-essentiality to conservation raises AUROC by ΔAUROC ≈ +0.13; FBA-essential genes are drug targets at odds ratio
+≈ 8.6. This is the one orthogonal signal that adds information beyond generic conservation.
+
+![Figure 3](figures/fig3_condition_robustness.png)
+**Fig 3. Condition-robustness is a validated target-quality axis.** Fraction of genes that are experimentally essential
+(PEC): condition-robust essentials (essential across all nutrient media incl. a host-like supplemented medium) are far more
+often truly essential than the full FBA-essential set (+0.32) — quantifying, and partly resolving, the medium-dependence
+caveat.
+
+![Figure 4](figures/fig4_best_intervention_scorecard.png)
+**Fig 4. Multi-axis best-intervention scorecard and its validation.** (a) Top-15 nominated targets scored on four validated
+axes (druggability, breadth, resistance-robustness, condition-robustness); the composite (equal weights, unfitted) is shown
+in parentheses. (b) The composite score orders targets by real experimental essentiality (Spearman ρ≈0.69) — a
+decision-support ranking, not a clinical predictor.
+
 ## Methods (summary)
 **Rigor protocol.** Every claim was pre-registered (hypotheses and pass/fail thresholds fixed before data), reproduced
 **×2 byte-identical** (SHA-256 over a deterministic metrics payload excluding the verdict), and controlled against the
