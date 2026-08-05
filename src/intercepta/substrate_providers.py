@@ -60,6 +60,57 @@ class ConservationProvider(EvidenceProvider):
             yield self._rec(e, b.get(e, (None, 0.0))[1])
 
 
+_FOLDSEEK = os.path.expanduser("~/miniconda3/envs/bioinfo/bin/foldseek")
+
+
+def _best_tm(query_struct_dir, ref_struct_dir, scratch, tag):
+    """Best Foldseek TM-score of each query structure to any reference structure (structural homology).
+    Structure is far more conserved than sequence -> recovers remote homologs mmseqs misses (Foldseek, biorxiv 2022).
+    We use TM-score (bounded 0-1 structural similarity), NOT Foldseek E-values (under-estimated; Reseek 2024)."""
+    out = os.path.join(scratch, f"{tag}.m8"); tmp = os.path.join(scratch, f"fstmp_{tag}")
+    shutil.rmtree(tmp, ignore_errors=True)
+    subprocess.run([_FOLDSEEK, "easy-search", query_struct_dir, ref_struct_dir, out, tmp, "--threads", "4",
+                    "--format-output", "query,target,alntmscore", "-e", "10"], capture_output=True, text=True)
+    best = {}
+    if os.path.exists(out):
+        for ln in open(out):
+            p = ln.rstrip("\n").split("\t")
+            if len(p) < 3: continue
+            q = p[0].split(".pdb")[0]
+            try: tm = float(p[2])
+            except ValueError: continue
+            if q not in best or tm > best[q]: best[q] = tm
+    shutil.rmtree(tmp, ignore_errors=True)
+    return best
+
+
+class StructuralHomologyProvider(EvidenceProvider):
+    """RANK by STRUCTURAL homology (Foldseek TM-score) to reference target structures — the signal that recovers targets
+    when SEQUENCE homology fails (phylogenetically-isolated / novel-fold pathogens; FOLD1). Entities are UniProt accessions
+    with a structure file `<acc>.pdb` in the query dir. **Default tier OWN_SINGLE => QUARANTINED under the default
+    min_decision_tier (OWN_REPRODUCED): it cannot drive a decision until FOLD1 validates + reproduces it (the guardrail);
+    promote to OWN_REPRODUCED once validated.**"""
+    role = SignalRole.RANK
+    tier = ProvenanceTier.OWN_SINGLE
+    direction = 1.0
+
+    def __init__(self, query_struct_dir, ref_struct_dir, scratch, name="structural_homology", signal="structural_homology_tm"):
+        self.name, self.signal = name, signal
+        self._q, self._r, self._scr = query_struct_dir, ref_struct_dir, scratch
+        self._best = None
+
+    def best(self):
+        if self._best is None:
+            self._best = _best_tm(self._q, self._r, self._scr, "struct")
+        return self._best
+
+    def provide(self, query):
+        b = self.best()
+        for e in query.entities:
+            if b.get(e, 0.0) > 0:
+                yield self._rec(e, b[e])
+
+
 class CacheRankProvider(EvidenceProvider):
     """RANK from a UniProt-keyed TSV cache. col_key/col_val select the columns; org filters column 0. Reproduced."""
     role = SignalRole.RANK
