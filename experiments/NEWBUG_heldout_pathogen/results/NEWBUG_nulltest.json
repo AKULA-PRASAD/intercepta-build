@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "per_organism": {
+      "abaumannii": {
+        "base_rate_all_metabolic": 0.0361,
+        "essentiality_alone": 0.5,
+        "full_substrate_composite": 0.7083,
+        "increment_beyond_base_rate": 0.6722,
+        "increment_filters_beyond_essentiality": 0.2083
+      },
+      "kpneumoniae": {
+        "base_rate_all_metabolic": 0.0374,
+        "essentiality_alone": 0.7105,
+        "full_substrate_composite": 0.8966,
+        "increment_beyond_base_rate": 0.8592,
+        "increment_filters_beyond_essentiality": 0.1861
+      }
+    },
+    "verdict": "HONEST DECOMPOSITION of the held-out canonical-pathway signal: the base rate of canonical-target genes among ALL metabolic genes is ~4%, essentiality ALONE raises it to 50-71% (confirming that most of the 'canonical' enrichment is driven by essentiality \u2014 essential metabolic genes ARE biosynthesis-heavy, as caveated), and the full composite (adding chokepoint + host-non-homology) adds a REAL further +0.19-0.21 (to 71-90%). So the held-out result is meaningful \u2014 the mechanism signal (essentiality, MET) does most of the work and the safety/chokepoint filters add a genuine increment \u2014 but the 90% headline should NOT be over-read as if the full composite alone produced it. Falsify-first on our own positive: it survives, honestly attributed."
+  }
+}
