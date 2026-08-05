@@ -1,0 +1,78 @@
+{
+  "per_pathogen": {
+    "calbicans": {
+      "abstention_reduction": 13,
+      "n": 138,
+      "n_targets": 19,
+      "recovery_at_k_seq_plus_struct": 6,
+      "recovery_at_k_seqonly": 6,
+      "recovery_gain": 0,
+      "seq_blind_targets": 13,
+      "seq_blind_targets_rescued_into_shortlist": 1,
+      "target_abstentions_seq_plus_struct": 0,
+      "target_abstentions_seqonly": 13
+    },
+    "lmajor": {
+      "abstention_reduction": 7,
+      "n": 121,
+      "n_targets": 11,
+      "recovery_at_k_seq_plus_struct": 4,
+      "recovery_at_k_seqonly": 4,
+      "recovery_gain": 0,
+      "seq_blind_targets": 7,
+      "seq_blind_targets_rescued_into_shortlist": 2,
+      "target_abstentions_seq_plus_struct": 0,
+      "target_abstentions_seqonly": 7
+    },
+    "pfalciparum": {
+      "abstention_reduction": 37,
+      "n": 171,
+      "n_targets": 52,
+      "recovery_at_k_seq_plus_struct": 26,
+      "recovery_at_k_seqonly": 15,
+      "recovery_gain": 11,
+      "seq_blind_targets": 37,
+      "seq_blind_targets_rescued_into_shortlist": 12,
+      "target_abstentions_seq_plus_struct": 0,
+      "target_abstentions_seqonly": 37
+    },
+    "tbrucei": {
+      "abstention_reduction": 8,
+      "n": 133,
+      "n_targets": 13,
+      "recovery_at_k_seq_plus_struct": 5,
+      "recovery_at_k_seqonly": 5,
+      "recovery_gain": 0,
+      "seq_blind_targets": 8,
+      "seq_blind_targets_rescued_into_shortlist": 1,
+      "target_abstentions_seq_plus_struct": 0,
+      "target_abstentions_seqonly": 8
+    }
+  },
+  "provenance": {
+    "git_sha": "af45e8ccf8ada6c4241d6d591e57a2ca5b3fb2f0",
+    "utc": "2026-08-05T18:09:24Z"
+  },
+  "runtime_sec": 0.0,
+  "summary": {
+    "pathogens": [
+      "calbicans",
+      "lmajor",
+      "pfalciparum",
+      "tbrucei"
+    ],
+    "pooled": {
+      "abstention_reduction": 65,
+      "n_targets": 95,
+      "recovery_at_k_seq_plus_struct": 41,
+      "recovery_at_k_seqonly": 30,
+      "recovery_gain": 11,
+      "seq_blind_targets": 65,
+      "seq_blind_targets_rescued_into_shortlist": 16,
+      "target_abstentions_seq_plus_struct": 0,
+      "target_abstentions_seqonly": 65
+    },
+    "structure_rescues_substrate_target_id": true,
+    "verdict": "YES (real but PATHOGEN-SPECIFIC) \u2014 adding the FOLD1-validated StructuralHomologyProvider to the REAL substrate improves isolated-pathogen target recovery: pooled recovery@k rises 30 -> 41 (+11), and 16 of the 65 SEQUENCE-BLIND targets are lifted into the top-k shortlist \u2014 through the substrate's real tiered composition, by plugging in ONE new provider without touching the core (the living-net design). **HONEST BOUNDS (falsify-first on our own positive): (1) the recovery@k gain is CONCENTRATED IN P. FALCIPARUM (15->26); the other 3 pathogens are +0 on recovery@k and gain only 1-2 shortlist rescues \u2014 so this is a pathogen-specific rescue, not a uniform lift. (2) The engine's abstentions drop to ~0 mainly because Foldseek finds SOME structural hit for nearly every protein (structure is rarely blind), which also lowers abstention for non-targets \u2014 so the abstention drop is largely MECHANICAL and is NOT itself a quality gain; recovery@k is the honest metric.** Still, it concretely expands the vision's reach into the phylogenetically-isolated class that SUBSTRATE4 fully abstained on, and structure alone is a single RANK signal so these never reach the engine's high-confidence tier (needs 2 signals). SCOPE: ranking-quality on real homology scores; hypotheses w/ provenance, not validated targets; AlphaFold predicted structures; not wet-lab."
+  }
+}
