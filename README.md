@@ -18,10 +18,12 @@ reproduce ×2, never fabricate. Where legacy code docstrings overclaim, the modu
 > (transfer ranking + verified-marker bonus + OOD confidence gating). Quickstart: [`examples/README.md`](examples/README.md).
 
 ## What INTERCEPTA is (the honest one sentence)
-> A prognostic + mechanistic drug-response engine on **known cancer biology**, with a verified transferable
-> cell-line→patient signal and verified mutation→drug mechanisms — **not** (yet) a novel-molecule or
-> therapy-*selection* platform. The original "universal / any-disease / de novo / therapy-selection" vision was
-> tested against our own evidence and reconstructed into an evidence-earned milestone ladder ([`VISION.md`](VISION.md)).
+> Two honestly-bounded halves under one Constitution: (1) a validated **mechanism-anchored cancer drug-response engine**
+> (verified cell-line→patient transfer + mutation→drug mechanism; NOT a clinical predictor), and (2) an extensible
+> **"any disease → a query" evidence substrate** for zero-data discovery that reconstructs the canonical antibacterial
+> target landscape from genomes alone — with a precise, reproduced map of where computation reaches and where (an
+> information ceiling needing new experimental data) it stops. Every claim is pre-registered, reproduced ×2, and in
+> [`LEDGER.md`](LEDGER.md); the governing north star is [`VISION.md`](VISION.md).
 
 ## Where we are — the honest ladder (tested to the ceiling)
 | Rung | Status |
@@ -50,6 +52,33 @@ reproduce ×2, never fabricate. Where legacy code docstrings overclaim, the modu
   (ODE directional; 2/6 trials, "5/5" retracted) ❌ RNA-velocity "time machine" (untestable).
 - **Net:** a validated cell-line/ex-vivo drug-response + mechanism engine — NOT a clinical predictor.
 
+## The zero-data / any-disease arc + the substrate (the fullest vision, honestly mapped)
+Beyond the cancer engine, INTERCEPTA's governing north star ([`VISION.md`](VISION.md)) is discovering interventions for
+**ANY disease, including never-seen ones, from a genome with zero activity data**. That arc is built and honestly bounded
+(full map: [`papers/zero_data_discovery/REPORT.md`](papers/zero_data_discovery/REPORT.md), all reproduced ×2 in `LEDGER.md`):
+
+- **The information ceiling (mapped):** zero-data target-ID from sequence is dominated by generic **conservation** (TID1–4);
+  the molecule half is analog-bound with a weak physics floor (C1/HIT1/HIT2). Both hit an information ceiling on genuinely
+  novel targets/chemistry — new (experimental) data is required to cross it.
+- **The one signal that breaks it:** mechanistic **FBA gene-essentiality** adds target-ID signal *beyond* conservation
+  (MET1–3, replicated) — mechanism, not more homology, is the path through the ceiling (bounded to metabolic targets;
+  the non-metabolic extension via PPI-centrality was a study-bias artifact, MET4).
+- **Selectivity, honestly:** ranking by conservation is *therapeutically dangerous* (promotes host-toxic targets); the fix
+  is a **hard host-non-homology filter** (FRONT1/E2E2), and structure can't cheaply rescue the over-excluded (FRONT2).
+- **The engine — the extensible substrate** (`src/intercepta/substrate.py`; [`docs/SUBSTRATE.md`](docs/SUBSTRATE.md)): a
+  disease-agnostic **"any disease → a query"** core (charter law U2) that composes evidence under **provenance-tiered
+  governance** — hard safety filter, honest abstention, and a **continuous-absorption guardrail** (self-generated findings
+  quarantined until independently reproduced). Demonstrated on **bacteria, a virus (SARS-CoV-2), molecules, and human
+  cancer** (`experiments/SUBSTRATE1–5`), and shipped as `intercepta substrate`. Honest "any disease" bound: the
+  **architecture is universal; answer quality is disease-class-specific** — strong where real mechanism exists (pathogens),
+  weak where only popularity-confounded evidence does (human single-disease).
+- **Concrete, falsifiable predictions:** from bacterial genomes + zero drug data, the method's novel *safe* predictions are
+  **exactly the canonical antibacterial target landscape** — cell-wall (**murB** druggability 0.95, essential 5/7 bacteria;
+  murG/murF/mraY), MEP/isoprenoid (dxr/ispE/ispG), CoA, folate, riboflavin, thiamine, menaquinone (EXPVAL/BROADSPEC/PANBACT/
+  DRUGGABLE) — corroborated by literature, cross-bacteria breadth, and druggable-pocket quality. **Truth-test:** a turnkey $0
+  validator (`experiments/VALIDATE_essentiality`) checks these against experimental essentiality the moment that data is
+  provided ([`docs/EXPERIMENTAL_VALIDATION.md`](docs/EXPERIMENTAL_VALIDATION.md)). Predictions are hypotheses until confirmed.
+
 ## Repository layout
 ```
 CONSTITUTION.md VISION.md LEDGER.md DECISIONS.md CONSOLIDATION_PLAN.md
@@ -65,7 +94,7 @@ experiments/            B1–B10 + engine validation: pre-registered, permutatio
 prereg/                 pre-registrations (written before each run)
 verification/           independent AML verification ledger + prereg + reproduction scripts
 papers/                 intercepta_engine/MANUSCRIPT.md (the honest paper) + AML response paper
-pyproject.toml tests/   installable `intercepta` package + CLI + 30 unit tests
+pyproject.toml tests/   installable `intercepta` package + CLI + 43 unit tests
 data/MANIFEST.md        provenance + access class for every external input (nothing committed)
 INTEGRITY_SWEEP.md      transparent record of removed/flagged content
 reproduce.sh requirements.txt
@@ -74,7 +103,7 @@ reproduce.sh requirements.txt
 ## Install & use as a tool
 ```bash
 pip install -e .            # installs the `intercepta` package + CLI
-pytest                      # 30 unit tests (leakage, markers, calibration, axes, synergy, admet, synth, integrate, generate, discover) — no data needed
+pytest                      # 43 unit tests (leakage, markers, calibration, axes, synergy, admet, synth, integrate, generate, discover) — no data needed
 intercepta info             # version + HONEST SCOPE
 intercepta rank    --expr tumor_expr.csv --drugs trametinib,gemcitabine --out ranking.csv   # needs INTERCEPTA_DATA
 intercepta synergy --expr tumor_expr.csv --library drugcomb --out synergy.csv               # combinations arm (V23)
@@ -84,6 +113,7 @@ intercepta prioritize --molecules "CC(=O)Oc1ccccc1C(=O)O" --out prioritize.csv  
 intercepta generate   --objective multi --out generate.csv                                       # goal-directed molecular design (BRICS-GA optimizer, B33)
 intercepta discover   --out discover.csv                                                         # end-to-end candidate discovery: generate + ADMET/synth screen + rank (B39)
 intercepta discover   --target-hts hiv --out discover_hiv.csv                                   # target-conditioned discovery: steer candidates toward a target (B40)
+intercepta substrate  --evidence evidence.csv --out shortlist.csv                                # extensible "any disease -> a query" engine: compose evidence -> safe, provenance-tiered, abstaining shortlist (docs/SUBSTRATE.md)
 ```
 `intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
 `intercepta admet` predicts ADMET/safety properties from SMILES (structure-only screening filter, B30 — beats
