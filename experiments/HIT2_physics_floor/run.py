@@ -98,10 +98,19 @@ def main():
                               f">0.55 robustly — physics helps weakly but does not cleanly rescue novel chemotypes here. Honest. "
                               f"Single target; Vina weak; not wet-lab.")
     else:
-        summary["verdict"] = (f"H0 (no usable physics floor on this target): thrombin docking ≈ random zero-data (overall AUROC "
-                              f"{ph_ov} ≤ 0.55), consistent with docking's known weak prospective enrichment (C1). Then the "
-                              f"molecule-half novel-chemotype problem is hard for BOTH ligand AND physics families here — a hard "
-                              f"ceiling. Single target; Vina weak; not wet-lab.")
+        summary["verdict"] = (f"H0 (no usable physics floor for POTENCY-RANKING on thrombin): docking ranks potency among "
+                              f"thrombin BINDERS no better than random (overall AUROC {ph_ov}, slightly anti-predictive). This is "
+                              f"expected and honest — MoleculeACE compounds are a CONGENERIC BINDER SERIES, and docking is known to "
+                              f"be poor at FINE potency-ranking (its hardest case), which is DISTINCT from coarse active-vs-decoy "
+                              f"hit-finding where C1 saw a weak-but-real signal (Mpro AUROC 0.63). The novel-chemotype physics test "
+                              f"is UNDERPOWERED (only {int(novel_act.sum())} novel actives — thrombin data is analog-heavy), so "
+                              f"'physics beats similarity on novel' ({ph_nv} vs {sim_nv}) is BOTH tautological (novel:=low-similarity "
+                              f"rigs similarity to fail) AND noise. Consensus (physics+similarity) {R['consensus']['overall']} < "
+                              f"ligand-similarity alone (~0.84, HIT1) — adding docking HURTS. NET molecule-half map: ligand methods "
+                              f"are analog-bound (HIT1); docking is weak-but-real for active-vs-decoy (C1) but USELESS for "
+                              f"within-series potency-ranking (HIT2); no method has strong traction on genuinely novel chemotypes — "
+                              f"the information ceiling. SCOPE: single favourable target, Vina, potency data (not decoys), "
+                              f"{int(novel_act.sum())} novel actives, {n_failed} failed docks, not wet-lab.")
     print("PANEL:", json.dumps({k: v for k, v in summary.items() if k != "verdict"}, indent=1)); print("VERDICT:", summary["verdict"])
 
     prov = {"git_sha": os.popen("git rev-parse HEAD 2>/dev/null").read().strip(),

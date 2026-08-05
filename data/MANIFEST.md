@@ -151,3 +151,9 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/front1/CEGv2.txt — Hart lab CEG2 human core-essential genes (684 gene symbols; github hart-lab/bagel,
   fetched 2026-08-04) — H2 host-toxicity ground truth. Human proteome = existing tid1/proteomes/human.fasta (UniProt, GN=).
   PUBLIC/OPEN; never committed.
+
+## HIT2 thrombin docking (physics floor)
+- Thrombin receptor: RCSB PDB 1OYT (recombinant human thrombin + inhibitor FSN), fetched 2026-08-04. $INTERCEPTA_DATA/hit2/
+  {1oyt.pdb, receptor.pdbqt (obabel -xr -p7.4), vina.conf (box from FSN centroid)}. Cognate FSN redocked −11.21 kcal/mol.
+- $INTERCEPTA_DATA/hit2/thrombin_vina.tsv — AutoDock Vina 1.2.7 (seed 42, exh 16) best-pose scores for the 553 MoleculeACE
+  CHEMBL204 test compounds (regenerable via build_dock_cache.py; deterministic). PUBLIC/OPEN; never committed.

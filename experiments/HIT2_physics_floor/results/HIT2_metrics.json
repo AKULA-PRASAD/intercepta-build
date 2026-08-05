@@ -1,0 +1,49 @@
+{
+  "provenance": {
+    "act_cut": 6.5,
+    "git_sha": "be884c8bb9a0f3f8d89ce2555d99991007b20ea3",
+    "novel_tan": 0.4,
+    "utc": "2026-08-05T02:37:20Z"
+  },
+  "rankers": {
+    "consensus": {
+      "analog_vs_inactive": 0.7015,
+      "novel_vs_inactive": 0.364,
+      "overall": 0.6958
+    },
+    "physics": {
+      "analog_vs_inactive": 0.4269,
+      "novel_vs_inactive": 0.5226,
+      "overall": 0.4285
+    },
+    "qsar": {
+      "analog_vs_inactive": 0.943,
+      "novel_vs_inactive": 0.6854,
+      "overall": 0.9386
+    },
+    "similarity": {
+      "analog_vs_inactive": 0.8545,
+      "novel_vs_inactive": 0.0912,
+      "overall": 0.8415
+    }
+  },
+  "runtime_sec": 1.3,
+  "summary": {
+    "H1_physics_floor_exists": false,
+    "H2_physics_analogy_independent": false,
+    "consensus_novel_AUROC": 0.364,
+    "consensus_overall_AUROC": 0.6958,
+    "corr_physics_novelty": -0.1175,
+    "n_active": 292,
+    "n_failed_dock": 24,
+    "n_novel_active": 5,
+    "n_test": 553,
+    "physics_analog_AUROC": 0.4269,
+    "physics_beats_similarity_on_novel": true,
+    "physics_novel_AUROC": 0.5226,
+    "physics_overall_AUROC": 0.4285,
+    "similarity_novel_AUROC": 0.0912,
+    "target": "thrombin (CHEMBL204)",
+    "verdict": "H0 (no usable physics floor for POTENCY-RANKING on thrombin): docking ranks potency among thrombin BINDERS no better than random (overall AUROC 0.4285, slightly anti-predictive). This is expected and honest \u2014 MoleculeACE compounds are a CONGENERIC BINDER SERIES, and docking is known to be poor at FINE potency-ranking (its hardest case), which is DISTINCT from coarse active-vs-decoy hit-finding where C1 saw a weak-but-real signal (Mpro AUROC 0.63). The novel-chemotype physics test is UNDERPOWERED (only 5 novel actives \u2014 thrombin data is analog-heavy), so 'physics beats similarity on novel' (0.5226 vs 0.0912) is BOTH tautological (novel:=low-similarity rigs similarity to fail) AND noise. Consensus (physics+similarity) 0.6958 < ligand-similarity alone (~0.84, HIT1) \u2014 adding docking HURTS. NET molecule-half map: ligand methods are analog-bound (HIT1); docking is weak-but-real for active-vs-decoy (C1) but USELESS for within-series potency-ranking (HIT2); no method has strong traction on genuinely novel chemotypes \u2014 the information ceiling. SCOPE: single favourable target, Vina, potency data (not decoys), 5 novel actives, 24 failed docks, not wet-lab."
+  }
+}

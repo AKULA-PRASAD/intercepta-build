@@ -56,6 +56,15 @@ potency-transfer among measured binders, not needle-in-haystack screening; novel
 novel estimate is low-powered; the physics/structure floor for novel chemotypes — the only signal that does not depend on
 chemical analogy at all — is the next test.)
 
+We ran that test (HIT2): docking the same thrombin compounds with zero activity data. It provides no usable signal — docking
+ranks potency among the binders no better than random (AUROC 0.43), and adding it to the ligand score only hurts. The honest
+scope matters: these compounds are a congeneric binder series, so this is fine potency-ranking (docking's hardest case),
+distinct from coarse active-vs-decoy hit-finding where docking carries a weak-but-real signal (C1 on Mpro, AUROC 0.63); and
+the novel-chemotype physics test is underpowered (only five novel actives). So the molecule-half map is now coherent and
+honest: ligand methods are analog-bound, docking is weak-but-real for separating binders from non-binders but useless for
+ranking potency within a series, and for genuinely novel chemotypes no method has strong traction — the same information
+ceiling that governs target identification.
+
 **The front half — mechanism + selectivity, and a therapeutic-validity warning about the conservation workhorse.**
 Target *recovery* is not the same as finding a *safe* target. FRONT1 extends the established antimicrobial-target framework
 (essentiality + metabolic chokepoint + host non-homology), done fully zero-data (a metabolic model built de novo from the
