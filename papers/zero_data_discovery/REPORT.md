@@ -125,20 +125,39 @@ in-domain knowledge does **not** reliably cross the novel-chemistry information 
 loop is real and safe when gated by calibrated confidence, but its reach is bounded to the regime where the model
 already has signal.**
 
+## The complete arc (every claim reproduced ×2, pre-registered)
+Target-ID: conservation ceiling (TID1–2), kingdom degradation + silent failure (TID3), un-predictable failure (TID4);
+mechanism breaks the ceiling for metabolic targets (MET1–3) but not the non-metabolic half (MET4, a study-bias artifact);
+front-half selectivity (FRONT1 danger of conservation-ranking → E2E2 safety/recall tension → FRONT2 structure can't rescue).
+Molecule half: weak-but-real docking for binder-vs-nonbinder (C1), analog-bound ligand hit-finding (HIT1), no physics
+signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-improving loop (SIL1–2).
+
 ## What is genuinely contributed
-- A **well-controlled negative-boundary** on zero-data target identification: conservation is the ceiling; more homology
-  (sequence, structural, or learned) mostly re-encodes it — a result the field's positive-publication bias rarely
-  produces, established here against degree/conservation nulls with calibrated abstention.
-- A **rigorous demonstration of a self-improving loop and its anti-self-deception guardrail** (with the shuffled/ungated
-  negative controls most such claims omit), tied to calibrated conformal prediction — plus its honest boundary
-  (near-domain only).
-- The **reusable discipline** throughout: pre-registration, reproduce-×2, trivial-baseline/null controls, verdict
-  honesty (auto-verdicts that over-read a coin-flip median were corrected pre-commit, repeatedly), and explicit scope.
+- **The one thing that breaks the ceiling — and its exact boundary.** FBA gene-essentiality, computed from a pathogen's
+  own metabolic model (mechanism, not homology), is the single signal that adds target-ID information *beyond* the
+  conservation ceiling (MET1, replicated MET2, better shortlist MET3) — but only for *metabolic* targets; the obvious
+  extension to the rest is a study-bias artifact (MET4). A precise, reproduced statement of where mechanism helps and stops.
+- **A well-controlled negative-boundary on zero-data target-ID:** conservation is the ceiling; more homology (sequence,
+  structural, or learned) mostly re-encodes it — a result the field's positive-publication bias rarely produces,
+  established against degree/conservation nulls with calibrated abstention.
+- **A therapeutic-validity finding the field's target-list papers miss:** ranking targets by conservation is *dangerous*
+  (the most-conserved proteins are the host-toxic ones), the sequence-level safety fix over-excludes 35–52% of real
+  targets, and neither sequence nor apo structure can reason about true selectivity from zero data (FRONT1→E2E2→FRONT2) —
+  a self-consistent proof that selectivity is resource-gated.
+- **An honest molecule-half map:** ligand methods are analog-bound (HIT1), docking is weak-but-real for binder separation
+  but useless for potency-ranking (C1, HIT2) — no method has traction on genuinely novel chemotypes.
+- **A rigorous self-improving loop + anti-self-deception guardrail** (with the shuffled/ungated negative controls most
+  such claims omit), tied to calibrated conformal prediction — plus its honest near-domain-only boundary (SIL1–2).
+- **The reusable discipline:** pre-registration, reproduce-×2, trivial-baseline/null controls, and verdict honesty —
+  auto-verdicts that over-read (a coin-flip median; a study-bias artifact; a novelty tautology; a "recall cost is low"
+  contradiction) were caught and corrected *before commit*, repeatedly. The falsify-first protocol demonstrably works.
 
 ## Honest scope and what remains gated
 All results are retrospective and in-silico, on open data, on a modest pathogen/target panel. None is a validated hit, a
-drug, or a clinical claim. The recurring theme is an **information ceiling**: for genuinely novel chemistry/targets,
-transfer-based signals are weak and self-accumulation cannot manufacture information that isn't there. Crossing that
-ceiling requires *new information* — prospective assays, wet-lab, or 3D/experimental data — which is a resource decision,
-not a computation. What the arc delivers is an honest map of exactly how far sequence-and-transfer-only discovery
-reaches, and where — and why — it stops.
+drug, or a clinical claim. Every hard problem in the arc — novel-fold/isolated-pathogen target-ID, non-metabolic mechanism,
+true binding-site selectivity, novel-chemotype hit-finding — converges on the same **information ceiling**: transfer and
+self-accumulation cannot manufacture information that isn't in sequence/structure alone. Crossing it requires *new
+information* — prospective assays, wet-lab, or 3D/experimental data — which is a **resource decision, not a computation**.
+That is the honest state: the computational frontier reachable from open data on CPU is now comprehensively mapped, and the
+next real advance toward the vision is experimental, not algorithmic. What this arc delivers is an exact, reproduced map of
+how far sequence-and-transfer-only discovery reaches, and where — and why — it stops.
