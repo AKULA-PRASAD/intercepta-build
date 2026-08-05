@@ -91,6 +91,15 @@ the sequence-level safety fix over-excludes. Genuinely correct selectivity requi
 difference reasoning — structural, not sequence-homology — which sequence transfer cannot provide. It is the same
 information ceiling in a new place: sequence is enough to flag danger crudely, but not to reason about true selectivity.
 
+We then asked whether structure closes that gap (FRONT2): among the host-homologous targets, does the pathogen protein's own
+predicted pocket, and its difference from the human homolog's pocket, distinguish the genuinely druggable/selective targets?
+It does not — pocket druggability is no better than random here (AUROC 0.51), and the pathogen-vs-host difference adds
+nothing (0.53). So zero-data structural druggability cannot cheaply rescue the host-homologous targets the sequence filter
+over-excludes; distinguishing which of them are *selectively* druggable needs more than an apo predicted pocket — real
+ligand, induced-fit, or experimental data. The selectivity story is therefore complete and self-consistent: conservation
+ranking is unsafe, the sequence-level safety filter over-excludes, and neither sequence nor apo structure can reason about
+true selectivity from zero data. It is resource-gated, not a computation.
+
 **2. Structure-based binding carries a real but weak zero-data signal.**
 Docking compounds into a target's pocket with **zero target activity data** separates real binders from non-binders
 significantly (Mann-Whitney p=0.0001) but weakly — near-random *early* enrichment (AUROC 0.63, EF1% ≈ 1.25; C1 on

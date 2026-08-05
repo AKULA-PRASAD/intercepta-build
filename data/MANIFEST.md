@@ -157,3 +157,9 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
   {1oyt.pdb, receptor.pdbqt (obabel -xr -p7.4), vina.conf (box from FSN centroid)}. Cognate FSN redocked −11.21 kcal/mol.
 - $INTERCEPTA_DATA/hit2/thrombin_vina.tsv — AutoDock Vina 1.2.7 (seed 42, exh 16) best-pose scores for the 553 MoleculeACE
   CHEMBL204 test compounds (regenerable via build_dock_cache.py; deterministic). PUBLIC/OPEN; never committed.
+
+## FRONT2 structural selectivity (fpocket druggability of pathogen targets + human homologs)
+- $INTERCEPTA_DATA/front2/druggability.tsv — fpocket max Druggability Score for host-homologous pathogen metabolic genes
+  (Mtb+E.coli; pathogen side reuses TID2 AF structures) AND their best human homologs (AlphaFold v6 fetched + fpocket),
+  built by build_druggability.py. Human homolog structures = AlphaFold DB (alphafold.ebi.ac.uk, CC-BY). Regenerable;
+  deterministic (seeded non-target sample). PUBLIC/OPEN; never committed.

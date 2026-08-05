@@ -1,0 +1,51 @@
+{
+  "per_organism": {
+    "ecoli": {
+      "AUROC_human_druggability": 0.4905,
+      "AUROC_pathogen_druggability": 0.5509,
+      "AUROC_selectivity_diff": 0.5078,
+      "OR_topq_pathogen_druggability": 1.03,
+      "mean_diff_nontarget": -0.115,
+      "mean_diff_target": -0.072,
+      "mean_path_drug_nontarget": 0.546,
+      "mean_path_drug_target": 0.592,
+      "n": 132,
+      "n_target": 32,
+      "perm_p_pathogen": 0.2039
+    },
+    "mtb": {
+      "AUROC_human_druggability": 0.4346,
+      "AUROC_pathogen_druggability": 0.465,
+      "AUROC_selectivity_diff": 0.5571,
+      "OR_topq_pathogen_druggability": 0.56,
+      "mean_diff_nontarget": -0.044,
+      "mean_diff_target": -0.006,
+      "mean_path_drug_nontarget": 0.663,
+      "mean_path_drug_target": 0.64,
+      "n": 135,
+      "n_target": 35,
+      "perm_p_pathogen": 0.7106
+    }
+  },
+  "provenance": {
+    "git_sha": "f1f6cb0d72c30b296d3362a5c39d8bd92f9bdf1b",
+    "utc": "2026-08-05T02:51:08Z"
+  },
+  "runtime_sec": 2.2,
+  "summary": {
+    "H1_structure_rescues": false,
+    "H2_selectivity_diff_adds": false,
+    "organisms": [
+      "mtb",
+      "ecoli"
+    ],
+    "pooled": {
+      "AUROC_pathogen_druggability": 0.5111,
+      "AUROC_selectivity_diff": 0.5345,
+      "n": 267,
+      "n_target": 67,
+      "perm_p_pathogen": 0.4058
+    },
+    "verdict": "H0 (structure does NOT rescue zero-data): among host-homologous genes, neither pathogen pocket druggability (pooled AUROC 0.511, perm p 0.4058) nor the pathogen-vs-host difference (AUROC 0.535) meaningfully distinguishes known targets from non-targets \u2014 the information ceiling extends from SEQUENCE to STRUCTURAL selectivity (consistent with TID2, pocket druggability \u2248 conservation, weak). So the 35\u201352% host-homologous targets E2E2 over-excludes CANNOT be cheaply rescued by zero-data structural druggability; distinguishing selectively-druggable host-homologous targets needs more than an apo predicted pocket (real ligand / induced-fit / experimental data). SCOPE: fpocket heuristic, AF apo structures, metabolic subproteome, 2 bacteria; not wet-lab."
+  }
+}

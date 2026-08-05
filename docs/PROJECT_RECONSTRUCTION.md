@@ -80,7 +80,11 @@ understanding, richer mechanism inference, and the extensible living substrate r
 abstention. Result is an honest tension both recipes get wrong: naive conservation ranking is UNSAFE (shortlists 5–9
 host-toxic targets); the hard-filter fix is SAFE (0 host-toxic) but OVER-EXCLUDES 35–52% of real known targets (those with
 human homologs, many drugged selectively in reality). True selectivity needs binding-site-level pathogen-vs-host reasoning
-(structure), which sequence homology can't provide — the information ceiling in a new place.
+(structure), which sequence homology can't provide — the information ceiling in a new place. **FRONT2 then tested whether
+structure closes the gap: it does not** — among host-homologous targets, pathogen pocket druggability (AUROC 0.51) and the
+pathogen-vs-host difference (0.53) are both random. So the selectivity sub-arc (FRONT1→E2E2→FRONT2) is complete and
+self-consistent: conservation ranking is unsafe, the sequence filter over-excludes, and neither sequence nor apo structure
+can reason about true selectivity from zero data — it is resource-gated, needing experimental/ligand/induced-fit data.
 
 ## What is missing before a large new bet (stated, not invented)
 - **Any experimental/prospective validation** — the whole zero-data arc is retrospective; the vision's true metric is untested.
