@@ -149,6 +149,22 @@ def test_structural_homology_provider_validated_drives_decision():
     assert v2["P1"].abstain is True
 
 
+# ---- ConservationBreadthProvider: REACH1-validated recall signal for the non-metabolic half ----
+def test_conservation_breadth_provider_ranks_and_thresholds():
+    from intercepta.substrate_providers import ConservationBreadthProvider
+    p = ConservationBreadthProvider(values={"P1": 6.0, "P2": 3.0, "P3": 0.0}, min_breadth=1)
+    recs = {r.entity: r for r in p.provide(Query(pathogen="bug", entities=["P1", "P2", "P3"]))}
+    assert set(recs) == {"P1", "P2"}                       # P3 (breadth 0) below min_breadth -> no signal (honest abstain)
+    assert recs["P1"].role == SignalRole.RANK and recs["P1"].tier == ProvenanceTier.OWN_REPRODUCED
+    assert recs["P1"].value > recs["P2"].value             # higher breadth ranks higher
+    # composes: a universally-conserved gene with a second RANK signal reaches high confidence
+    eng = (TargetEngine()
+           .register(ConservationBreadthProvider(values={"P1": 6.0}))
+           .register(StaticProvider("ess", "essential", SignalRole.RANK, ProvenanceTier.OWN_REPRODUCED, {"P1": 1})))
+    v = {x.entity: x for x in eng.query(_q(["P1"]))}
+    assert v["P1"].confidence == "high" and v["P1"].safe is True
+
+
 # ---- CLI: the substrate as a shipped tool (source-agnostic evidence composition) ----
 def test_cli_substrate_composes_evidence_with_governance(tmp_path):
     import pandas as pd

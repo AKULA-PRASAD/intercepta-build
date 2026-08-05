@@ -134,6 +134,37 @@ class CacheRankProvider(EvidenceProvider):
                 yield self._rec(e, self._vals[e])
 
 
+class ConservationBreadthProvider(EvidenceProvider):
+    """RANK by UNIVERSAL CONSERVATION BREADTH — across how many diverse reference bacteria a gene has a homolog (0..N).
+    Complements FBA-essentiality for the NON-METABOLIC half of the proteome that FBA is blind to (REACH1). **VALIDATED
+    (REACH1, reproduced x2): 62% of experimental essentials are non-metabolic; among them conservation-breadth discriminates
+    essentiality at AUROC 0.86 (universal-core genes essential at ~6x the base rate), and it is SEQUENCE-derived so NOT
+    study-biased (the confound that killed MET4's PPI centrality). HONEST SCOPE: it is a PRIORITIZATION signal for the
+    FBA-blind half, NOT a precise filter — as a hard predictor its precision is modest (0.2-0.4), so it composes as one RANK
+    signal (tier OWN_REPRODUCED) alongside FBA/chokepoint, never as a standalone shortlist; safety filtering still excludes
+    host-homologous.** Entities are UniProt accessions; feed a breadth TSV (uniprot<TAB>breadth) or a dict via `values`."""
+    role = SignalRole.RANK
+    tier = ProvenanceTier.OWN_REPRODUCED
+    direction = 1.0
+
+    def __init__(self, breadth_path=None, values=None, min_breadth=1, name="conservation_breadth",
+                 signal="conservation_breadth"):
+        self.name, self.signal, self._min = name, signal, min_breadth
+        self._vals = dict(values) if values is not None else {}
+        if breadth_path:
+            for ln in open(breadth_path).read().splitlines()[1:]:   # skip header
+                p = ln.split("\t")
+                if len(p) >= 2:
+                    try: self._vals[p[0]] = float(p[1])
+                    except ValueError: continue
+
+    def provide(self, query):
+        for e in query.entities:
+            v = self._vals.get(e, 0.0)
+            if v >= self._min:                                       # below-threshold => no signal => honest abstain
+                yield self._rec(e, v)
+
+
 class HostToxicSafetyProvider(EvidenceProvider):
     """SAFETY_FILTER (host-toxic) + FLAG (needs_experimental_selectivity). External CEG2 + human proteome. EXTERNAL tier."""
     tier = ProvenanceTier.EXTERNAL_VALIDATED
