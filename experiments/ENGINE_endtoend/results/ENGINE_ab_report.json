@@ -1,0 +1,570 @@
+{
+  "provenance": {
+    "git_sha": "f0b67777b0399beb1026b0a71dcc53fcbd9af297",
+    "utc": "2026-08-05T22:13:30Z"
+  },
+  "report": {
+    "active_signals": [
+      "essentiality[VALIDATED:MET1-3+VAL-ESS]",
+      "chokepoint[FRONT1]",
+      "conservation_breadth[REACH1]",
+      "conservation[TID1]",
+      "host_safety_filter[FRONT1/E2E2]",
+      "resistance_robustness[SYNLETH]",
+      "condition_robustness[CONDROB1]"
+    ],
+    "confidence_histogram": {
+      "excluded": 67,
+      "high": 2630,
+      "low": 0,
+      "moderate": 1014
+    },
+    "confidence_note": "WARNING: confidence tier SATURATED (72% of ranked entities are 'high') because near-universal signals (conservation/breadth) fire for most genes in this full-signal genome-scale config -> the 'high' label is NOT discriminative here; use rank_score for ordering. Confidence is discriminative only with emit-if-positive signals (CALIB1).",
+    "high_fraction_of_ranked": 0.722,
+    "honest_scope": "Confidence-tiered candidate HYPOTHESES with provenance \u2014 NOT validated targets or drugs. The essentiality ENRICHMENT is experimentally validated (VAL-ESS, 5 organisms); the drug-target/selectivity/clinical claims are NOT. Molecule half is gated (needs structure or activity data); candidate matter from generate/screen are hypotheses. Not wet-lab.",
+    "n_abstained": 0,
+    "n_combination_required": 2,
+    "n_condition_robust": 34,
+    "n_confident_safe_targets": 3644,
+    "n_entities": 3711,
+    "n_excluded_by_safety": 67,
+    "n_monotherapy_robust": 34,
+    "pathogen": "abaumannii",
+    "shortlist": [
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y9F0",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "dxs",
+        "rank_score": 3.4411,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y4P5",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "murA",
+        "rank_score": 3.322,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U4DH16",
+        "flags": [],
+        "gene": "AB57_3157",
+        "rank_score": 3.2568,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U4DFF8",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "topA",
+        "rank_score": 3.1458,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": true,
+        "entity": "A0A7U4DF42",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "ileS",
+        "rank_score": 3.0474,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U4DGD2",
+        "flags": [],
+        "gene": "AB57_1696",
+        "rank_score": 3.0272,
+        "signals": [
+          "conservation_breadth",
+          "conservation"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "B7IAW6",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "mraY",
+        "rank_score": 2.9965,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U4DF65",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "gyrB",
+        "rank_score": 2.9641,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "B7I8J5",
+        "flags": [],
+        "gene": "secA",
+        "rank_score": 2.9313,
+        "signals": [
+          "conservation_breadth",
+          "conservation"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U4DHL3",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "gyrA",
+        "rank_score": 2.9212,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "B7I9U9",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "dxr",
+        "rank_score": 2.7977,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y9R9",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "murF",
+        "rank_score": 2.7366,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "B7I5I5",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "leuS",
+        "rank_score": 2.7143,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y7K0",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust",
+          "needs_experimental_selectivity"
+        ],
+        "gene": "AB57_3153",
+        "rank_score": 2.6937,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": true,
+        "entity": "B7ICE5",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "murG",
+        "rank_score": 2.6382,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y7V8",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust",
+          "needs_experimental_selectivity"
+        ],
+        "gene": "coaBC",
+        "rank_score": 2.5701,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y7J1",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust",
+          "needs_experimental_selectivity"
+        ],
+        "gene": "AB57_3182",
+        "rank_score": 2.5322,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y9Z8",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "parE",
+        "rank_score": 2.5201,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "B7I7P3",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "ispE",
+        "rank_score": 2.5171,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y5M9",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "coaD",
+        "rank_score": 2.4843,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y4N3",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "polA",
+        "rank_score": 2.4343,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": true,
+        "entity": "B7I9W0",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "ispF",
+        "rank_score": 2.4086,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U4DHI4",
+        "flags": [],
+        "gene": "AB57_3075",
+        "rank_score": 2.4076,
+        "signals": [
+          "conservation_breadth",
+          "conservation"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y749",
+        "flags": [],
+        "gene": "AB57_2081",
+        "rank_score": 2.3773,
+        "signals": [
+          "conservation_breadth",
+          "conservation"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": true,
+        "entity": "A0A7U3Y8V9",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust"
+        ],
+        "gene": "murB",
+        "rank_score": 2.3517,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y5L5",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "metG",
+        "rank_score": 2.3081,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U3Y891",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "AB57_2773",
+        "rank_score": 2.2711,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": true,
+        "entity": "B7I4U0",
+        "flags": [
+          "condition_robust",
+          "monotherapy_robust",
+          "needs_experimental_selectivity"
+        ],
+        "gene": "thyA",
+        "rank_score": 2.2693,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity",
+          "monotherapy_robust",
+          "condition_robust"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "B7I854",
+        "flags": [
+          "needs_experimental_selectivity"
+        ],
+        "gene": "proS",
+        "rank_score": 2.2526,
+        "signals": [
+          "conservation_breadth",
+          "conservation",
+          "needs_experimental_selectivity"
+        ],
+        "top_tier": "own_reproduced"
+      },
+      {
+        "confidence": "high",
+        "deg_experimentally_essential": false,
+        "entity": "A0A7U4DI48",
+        "flags": [],
+        "gene": "AB57_3649",
+        "rank_score": 2.2439,
+        "signals": [
+          "fba_essential",
+          "metabolic_chokepoint",
+          "conservation_breadth",
+          "conservation"
+        ],
+        "top_tier": "own_reproduced"
+      }
+    ],
+    "shortlist_deg_experimentally_essential": 5
+  },
+  "runtime_sec": 14.6
+}

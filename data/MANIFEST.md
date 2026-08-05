@@ -217,3 +217,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## SYNLETH1 resistance-robustness (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/synleth/iML1515.xml — curated E. coli genome-scale model iML1515 (BiGG, bigg.ucsd.edu; Monk et al. 2017).
   Used for single-reaction/gene deletion + double-gene-deletion (metabolic bypass / synthetic-lethal classification).
+
+## ENGINE A. baumannii multi-axis run (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/engine/abaumannii_breadth.tsv, $INTERCEPTA_DATA/synleth/abaumannii_condition_robust.tsv — AB-native
+  conservation-breadth (mmseqs vs 7-panel) + condition-robustness (multi-medium FBA on the AB CarveMe GEM). Regenerable.
