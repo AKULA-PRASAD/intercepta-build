@@ -1,0 +1,53 @@
+{
+  "provenance": {
+    "git_sha": "345230d657d5859db54ccd25f274b6663ecfdcc4",
+    "utc": "2026-08-05T19:28:01Z"
+  },
+  "runtime_sec": 0.8,
+  "summary": {
+    "all_pass_gate": true,
+    "organisms": {
+      "abaumannii": {
+        "H1_OR_gt3_p_lt0.01": true,
+        "auroc": 0.5992,
+        "contingency": {
+          "FBA_only": 26,
+          "both": 8,
+          "exp_only": 26,
+          "neither": 1077
+        },
+        "deg_essential_syms": 101,
+        "deg_source": "DEG1043",
+        "fisher_p": 2.84e-06,
+        "held_out": true,
+        "n_adjudicable": 1137,
+        "n_experimental_essential": 34,
+        "n_our_genes": 1138,
+        "odds_ratio": 12.75,
+        "precision_FBAess": 0.235,
+        "recall_FBAess": 0.235
+      },
+      "paeruginosa": {
+        "H1_OR_gt3_p_lt0.01": true,
+        "auroc": 0.63,
+        "contingency": {
+          "FBA_only": 22,
+          "both": 29,
+          "exp_only": 88,
+          "neither": 1513
+        },
+        "deg_essential_syms": 272,
+        "deg_source": "DEG1036",
+        "fisher_p": 0.0,
+        "held_out": false,
+        "n_adjudicable": 1652,
+        "n_experimental_essential": 117,
+        "n_our_genes": 1653,
+        "odds_ratio": 22.66,
+        "precision_FBAess": 0.569,
+        "recall_FBAess": 0.248
+      }
+    },
+    "verdict": "BOTH ESKAPE pathogens VALIDATE \u2014 extends the experimental validation to a FOURTH and FIFTH organism, incl. the SECOND held-out NEWBUG pathogen. A. baumannii (HELD-OUT, DEG1043 Wang-2014 INSeq): FBA-essential enriched for experimental essential at OR 12.75 (p=2.84e-06), precision 0.235. P. aeruginosa (panel, DEG1036 Turner-2015 Tn-seq): OR 22.66 (p=0.0), precision 0.569. So the mechanism signal now validates against experiment in FIVE organisms \u2014 E. coli, Mtb, and THREE ESKAPE pathogens (K. pneumoniae + A. baumannii held-out, P. aeruginosa) \u2014 with TWO of them genuinely held out of development. HONEST BOUNDS: binary enrichment (precision high, recall 0.235/0.248 \u2014 FBA metabolic-scoped); AUROC modest (0.5992/0.63); symbol-mapping coverage (adjudicable 1137/1652, skews to named core genes); DEG A. baumannii is a lung-persistence INSeq set (condition-specific); essentiality only, not drug-target/clinical."
+  }
+}

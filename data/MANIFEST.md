@@ -200,3 +200,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/expval_kp/kp_ess.csv — genome-wide K. pneumoniae essentiality (ersilia-os/gradi-target-prioritization;
   aggregates published CRISPRi KPNIH1 + Tn-seq experimental essentiality; 'experimentally_essential' 353 True/5728).
   sha256 52a258ed…. Only its EXPERIMENTAL label used (its own fba_* columns IGNORED).
+
+## VALIDATE_essentiality A. baumannii (held-out) + P. aeruginosa via DEG (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/expval_deg/deg_bacteria.csv, deg_annotation_p.csv, DEG10.aa.gz — DEG (Database of Essential Genes,
+  tubic.org) bulk downloads. Used: DEG1043 (A. baumannii ATCC 17978, Wang 2014 INSeq lung-persistence, 458) + DEG1036
+  (P. aeruginosa PAO1, Turner 2015 Tn-seq, 336). Gene-name essential symbols extracted from deg_annotation_p.csv.
