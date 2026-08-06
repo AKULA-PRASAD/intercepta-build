@@ -69,13 +69,21 @@ insufficient*.
 looked like FBA is "the wrong signal for host-embedded biology." **HARDENP1 falsified that as a universal rule:**
 a *second* host-dependent parasite, *Toxoplasma gondii* (curated iTgo2020 GEM vs Sidik-2016 CRISPR screen),
 **PASSES strongly — OR 14.10, recall 0.51** — the opposite of Plasmodium (OR 2.47, recall 0.20).
-- **Corrected statement:** FBA-essentiality's reach is **model/organism-specific**, governed by whether the
-  *specific GEM's topology encodes genuine biosynthetic dependence* — **NOT by host-embeddedness as a category.**
-  Plasmodium's failure is most plausibly iPfal19's pervasive salvage-bypass topology (the HOSTCTX1/2 root cause:
-  essentials read dispensable → recall 0.20) + a high metabolic-essential base rate (0.64 vs 0.42), not
-  host-dependence per se. Both GEMs run fully-open media, so it is not mere medium permissiveness.
-- **Honest confound:** the two GEMs are from different curation teams and the two screens use different
-  technologies (CRISPR vs piggyBac), so n=2 cannot be pinned on organism biology alone.
+- **Corrected statement:** FBA-essentiality's reach is **model/organism-specific** — **NOT determined by
+  host-embeddedness as a category** (a host-dependent parasite, Toxoplasma, passes strongly).
+- **⚠ Confound partially resolved + a mechanism CORRECTION (PARARESOLVE1, 3487e6c):** a controlled GEM swap
+  (same organism *Plasmodium*, same Zhang screen, different independent GEMs) shows the **GEM axis is a major
+  driver** — six Pf reconstructions span OR 0.86→3.07; iPfal19 (2.47) is mid-pack, and the independent
+  iAM-Pf480 **passes** (3.07) → the failure is not uniquely iPfal19, and GEM choice can flip fail↔pass. **BUT
+  GEM choice does NOT close the Plasmodium↔Toxoplasma gap** (best Pf 3.07 vs Toxo 14.10; the two independent Pf
+  GEMs disagree; base rate is GEM-invariant ~0.65 vs Toxo 0.42) → a **base-rate/biology residual survives.**
+  **And the specific "salvage-bypass topology" mechanism I earlier attributed to iPfal19 is FALSIFIED** — the
+  salvage-explained false-negative fraction is iPfal19 0.907 ≈ iTgo2020 0.867 (Toxoplasma's false-negatives are
+  *also* salvageable); the PASS/FAIL difference is recall/FN-count, not a qualitatively different salvage
+  topology (caveat: fully-open media saturates the salvage category, limiting its discriminating power).
+- **Residual confounds still UNRESOLVED:** screen technology (piggyBac vs CRISPR) is **not controllable
+  CPU-only** — no genome-wide *Plasmodium* CRISPR essentiality screen exists; plus organism biology, base rate,
+  and knowledgebase non-independence of Pf GEMs. So n=2 still cannot be pinned on organism biology alone.
 - **What still stands (not overturned):** DEPEND1 remains a validated functional-dependency signal for human
   cancer; TRANSFER1 still shows that signal does NOT transfer label-free to a zero-screen organism. So
   functional dependency is *a* valid host-embedded signal (where a screen exists), **and** FBA can *also* work

@@ -82,10 +82,13 @@ drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.
 - **⚠ CORRECTED by HARDENP1 (Wave 4, n=2):** the tempting conclusion "metabolic essentiality is the WRONG signal
   for host-embedded biology" is **FALSIFIED as a universal rule** — a second host-dependent parasite,
   *Toxoplasma gondii*, PASSES FBA strongly (OR 14.10, recall 0.51). Corrected statement: **FBA-essentiality's
-  reach is GEM-topology/organism-specific — NOT determined by host-embeddedness.** Plasmodium's failure is most
-  plausibly iPfal19's salvage-bypass topology + high base rate, not host-dependence per se (confound: different
-  GEM teams + screen technologies). Functional dependency (DEPEND1) remains a valid host-embedded signal *where
-  a screen exists*, and FBA *also* works on host-embedded organisms with a good-topology GEM — complementary,
+  reach is GEM/organism-specific — NOT determined by host-embeddedness.** **PARARESOLVE1 (3487e6c) partially
+  resolved the confound:** the GEM axis is a major driver (independent Pf GEMs span OR 0.86→3.07; iAM-Pf480
+  *passes* at 3.07), but GEM choice does NOT close the Pf↔Toxo gap (base-rate/biology residual survives), and
+  the specific salvage-topology mechanism is **FALSIFIED** (salvage-FN fraction iPfal19 0.907 ≈ Toxo 0.867);
+  screen technology (piggyBac vs CRISPR) is not controllable CPU-only — a standing residual. Functional
+  dependency (DEPEND1) remains a valid host-embedded signal *where a screen exists*, and FBA *also* works on
+  host-embedded organisms with a good GEM — complementary,
   not one-replaces-the-other.
 - **DEPEND1 (Wave 3, VERIFIED G1/G2/G3 PASS, 5b3cb7a) — the redirection realized:** the functional-dependency
   target-ID layer (DepMap CRISPR) recovers known cancer targets (0.80, p 5.6e-21), **generalizes to held-out

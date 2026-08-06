@@ -40,13 +40,18 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
 **F2 — FBA-essentiality is GEM/organism-specific on host-dependent organisms (NOT a categorical failure).**
 - ⚠ **CORRECTED (HARDENP1, Wave 4).** The n=1 framing of this failure ("FBA fails on host-embedded biology")
   was an overgeneralization. On *Plasmodium* FBA fails (GENERALIZE5 OR 2.47; HOSTCTX1 expression + HOSTCTX2
-  boundary curation both NEGATIVE — the wall there is iPfal19's salvage-bypass topology, GPR-bypass not flux).
-  **But on a second host-dependent parasite, *Toxoplasma gondii*, FBA PASSES strongly (HARDENP1 OR 14.10,
-  recall 0.51).** So host-embeddedness does NOT predict FBA failure.
-- Corrected root cause: whether FBA works is governed by the **specific GEM's topology** (does it encode genuine
-  biosynthetic dependence, or pervasive salvage bypasses?) + base rate — not the host-embedded category.
-- **Compute-solvable? Organism/GEM-dependent.** Where a good-topology GEM exists it works (Toxoplasma); where
-  the GEM is salvage-heavy it fails and patching (expression/medium) doesn't rescue it (Plasmodium). Honest
+  boundary curation both NEGATIVE). **But on a second host-dependent parasite, *Toxoplasma gondii*, FBA PASSES
+  strongly (HARDENP1 OR 14.10, recall 0.51).** So host-embeddedness does NOT predict FBA failure.
+- Corrected root cause + confound status (**PARARESOLVE1, 3487e6c**): the **GEM axis is a major driver** —
+  swapping in independent Pf GEMs spans OR 0.86→3.07 and one (iAM-Pf480) *passes* → not uniquely iPfal19. **But
+  GEM choice does NOT close the Pf↔Toxo gap** (base rate is GEM-invariant ~0.65 vs 0.42; a base-rate/biology
+  residual survives), and the specific **"salvage-bypass topology" mechanism is FALSIFIED** (salvage-FN
+  fraction iPfal19 0.907 ≈ Toxo 0.867). **Screen technology (piggyBac vs CRISPR) is not controllable CPU-only**
+  (no genome-wide Pf CRISPR screen) — a standing residual. So the honest root cause is "GEM-dependent + a
+  base-rate/biology residual + an uncontrollable screen-tech confound," not a clean salvage-topology story.
+- **Compute-solvable? Organism/GEM-dependent, incompletely.** A good GEM can flip it (iAM-Pf480 passes), but
+  we cannot a-priori predict which GEM will work (COMPOSITE3 flags uncertainty), and the residual is unresolved.
+  Honest
   confound on the n=2 comparison: different GEM curation teams + different screen technologies.
 - **Complementary signal (DEPEND1, Wave 3, VERIFIED G1/G2/G3 PASS):** where FBA is weak/unavailable, the
   **functional-DEPENDENCY layer** is a validated alternative — selective dependency recovers known cancer
