@@ -101,6 +101,12 @@ and un-fundable zero-budget.** This is the true gate on "real therapeutic discov
 ### Layer 8 — Decision engine
 **ENGINEERING / COMPUTED.** Multi-axis ranking, calibrated confidence, abstention, provenance tiers, explicit
 failure-mode reporting are shipped (ENGINE/CALIB1/BESTINT1). Bayesian/causal/clinical evidence fusion: ABSENT.
+**COMPOSITE1 (verified, 759c8b7) — the explicit biology-class-aware ROUTER** now wraps the engine with a
+transfer-condition gate: it fires the right validated signal per class and ABSTAINS where none transfers.
+Verified on 3 classes (bacterium→FBA shortlist == committed ENGINE; virus→structural, FBA not fired;
+host-dependent parasite→ABSTENTION). This is the composite "spine" that turns many validated models into one
+system delivering **honest decision coverage** (a real answer where a signal transfers, an explicit abstention
+where none does) — not a universal model. See `COMPOSITE_ARCHITECTURE.md`.
 
 ### Layer 9 — Autonomous scientist
 **EMERGING (this is what today's parallel waves are).** Hypothesis generation, prereg, self-critique, honest

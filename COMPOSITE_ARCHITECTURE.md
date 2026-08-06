@@ -98,10 +98,13 @@ Each validated model is a standalone contribution (paper); the book is the integ
   BESTINT1) — the book's binding.
 
 ## 6. Connected plan — what building the book requires next (ranked, evidence-based)
-1. **Make the router explicit (COMPOSITE1):** a biology-class detector + transfer-condition gate wrapping the
-   existing DiscoveryEngine, so it fires FBA/structure/dependency per class and ABSTAINS otherwise. This is the
-   literal "combine many models into one" build — mostly composition of validated parts; high value, low new
-   risk. *(the book's spine)*
+1. ~~**Make the router explicit (COMPOSITE1)**~~ **✅ BUILT + VERIFIED (759c8b7).** `src/intercepta/
+   composite_router.py` wraps the DiscoveryEngine with an explicit transfer-condition gate. 14/14 data-free
+   unit tests; reproduced ×2 (sha f8e98243). Three pre-registered routings hold: bacterium→FBA+composite
+   shortlist (cores present, top-20 == committed ENGINE); virus→structural class-ID (FBA correctly NOT fired);
+   **host-dependent parasite→ABSTENTION** (the decisive integrity test — refuses the wrong FBA answer). The
+   spine exists. Next: as DEPEND1 (Wave 3) validates a functional-dependency signal, the router's currently
+   "NOT BUILT → never fires" gate for host-embedded biology gets un-gated to that signal.
 2. **Wave 3 — functional-dependency layer for host-embedded biology** (the F2↔F3 unification): the validated
    signal parasites/cancer need. Hardest, highest-leverage.
 3. **STRUCTREPURPOSE1** — DONE, NEGATIVE: structural repurposing validates known pharmacology (11/11) but does
