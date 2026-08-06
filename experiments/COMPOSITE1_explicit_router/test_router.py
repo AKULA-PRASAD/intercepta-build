@@ -7,7 +7,8 @@ import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "src"))
 from intercepta.composite_router import (  # noqa: E402
     CompositeRouter, BiologyClass, Signal, decide, detect_class,
-    HOST_EMBEDDED_ABSTENTION, TRANSFER_GATE, VIRUS_MAX_PROTEOME,
+    HOST_EMBEDDED_ABSTENTION, HOST_DEPENDENT_PARASITE_NO_GEM_ABSTENTION,
+    TRANSFER_GATE, VIRUS_MAX_PROTEOME,
 )
 
 
@@ -38,16 +39,42 @@ def test_virus_structure_only_no_fba():
     assert Signal.FBA_ESSENTIALITY.value in gated
 
 
-# ---- host-dependent parasite: FBA gated out -> ABSTAIN with the exact reason ----------------------
-def test_parasite_abstains_fba_gated():
-    d = decide(BiologyClass.HOST_DEPENDENT_PARASITE, organism="pfalciparum")
+# ---- COMPOSITE3: host-dependent parasite with NO GEM -> ABSTAIN (no signal available) --------------
+# v3 correction: this is now the ONLY parasite abstention case. WITH a GEM, FBA fires capped-and-flagged
+# (see the next test) rather than blanket-abstaining -- the old "metabolic essentiality falsified" premise
+# was falsified by HARDENP1 (Toxoplasma PASS OR 14.10).
+def test_parasite_no_gem_abstains():
+    d = decide(BiologyClass.HOST_DEPENDENT_PARASITE, organism="pfalciparum", has_curated_gem=False)
     assert d.output_type == "abstention"
-    assert d.signals_fired == []                      # NO discovery signal transfers
-    assert d.abstention == HOST_EMBEDDED_ABSTENTION
-    for cite in ("GENERALIZE5", "HOSTCTX1/2", "metabolic essentiality falsified", "functional-dependency"):
+    assert d.signals_fired == []                      # NO discovery signal transfers (no GEM -> no capped FBA)
+    assert d.uncertain is False
+    assert d.abstention == HOST_EMBEDDED_ABSTENTION == HOST_DEPENDENT_PARASITE_NO_GEM_ABSTENTION
+    # v3 reason: no-GEM / GEM-topology-contingent, NOT "metabolic essentiality falsified"
+    assert "NO curated GEM" in d.abstention
+    assert "metabolic essentiality falsified" not in d.abstention   # the corrected overgeneralization is gone
+    for cite in ("HARDENP1", "GENERALIZE5", "capped-and-flagged", "functional-dependency"):
         assert cite in d.abstention
     gated = {g.signal for g in d.signals_gated_out}
-    assert Signal.FBA_ESSENTIALITY.value in gated
+    assert Signal.FBA_ESSENTIALITY.value in gated             # gated ONLY because no GEM (would fire if present)
+    assert Signal.FUNCTIONAL_DEPENDENCY.value in gated        # TRANSFER1: still does not transfer to a parasite
+
+
+# ---- COMPOSITE3: host-dependent parasite WITH a curated GEM -> FBA FIRES, capped + uncertainty-flagged ---
+def test_parasite_with_gem_fires_capped_flagged():
+    d = decide(BiologyClass.HOST_DEPENDENT_PARASITE, organism="toxoplasma", has_curated_gem=True)
+    assert d.output_type == "shortlist"                       # NOT an abstention
+    assert d.abstention is None
+    assert Signal.FBA_ESSENTIALITY.value in d.signals_fired   # FBA fires (the correction)
+    assert d.uncertain is True                                # ... but flagged
+    assert d.confidence_cap == 0.5                            # ... and capped (< bacterial full-grade)
+    flags = {f["signal"]: f for f in d.uncertainty_flags}
+    assert Signal.FBA_ESSENTIALITY.value in flags
+    note = flags[Signal.FBA_ESSENTIALITY.value]["note"]
+    for cite in ("GEM-topology-dependent", "n=2", "Toxoplasma", "Plasmodium", "lower-confidence"):
+        assert cite in note
+    # FUNCTIONAL_DEPENDENCY still does NOT fire for the parasite even with a GEM (unchanged; TRANSFER1)
+    assert Signal.FUNCTIONAL_DEPENDENCY.value not in d.signals_fired
+    gated = {g.signal for g in d.signals_gated_out}
     assert Signal.FUNCTIONAL_DEPENDENCY.value in gated
 
 
@@ -98,12 +125,19 @@ def test_sequence_repurposing_never_discovery():
 
 # ---- the gate table itself encodes the falsified host-dependent FBA boundary ----------------------
 def test_gate_table_fba_domain():
-    dom = TRANSFER_GATE[Signal.FBA_ESSENTIALITY].domain
+    spec = TRANSFER_GATE[Signal.FBA_ESSENTIALITY]
+    dom = spec.domain
     assert BiologyClass.BACTERIUM in dom
     assert BiologyClass.FREE_EUKARYOTE in dom
-    assert BiologyClass.HOST_DEPENDENT_PARASITE not in dom   # GENERALIZE5/HOSTCTX1/2
+    assert BiologyClass.HOST_DEPENDENT_PARASITE not in dom   # NOT full-grade ...
     assert BiologyClass.HUMAN_CANCER not in dom
     assert BiologyClass.VIRUS not in dom                     # no metabolism
+    # COMPOSITE3: host-dependent parasite is in the CAPPED/UNCERTAIN (GEM-contingent) domain, not full domain
+    assert BiologyClass.HOST_DEPENDENT_PARASITE in spec.uncertain_domain
+    assert spec.uncertain_requires == "curated_gem"
+    assert spec.confidence_cap is not None and spec.confidence_cap < 1.0
+    for cite in ("GEM-topology-dependent", "n=2", "Toxoplasma", "Plasmodium"):
+        assert cite in spec.uncertainty_note
 
 
 # ---- COMPOSITE2 — the gate table encodes functional-dependency's HUMAN_CANCER-ONLY validated domain ---

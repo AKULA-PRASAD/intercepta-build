@@ -1,0 +1,360 @@
+{
+  "payload": {
+    "advisory_diagnostic_NOT_VALIDATED": {
+      "assertions": {
+        "advisory_labeled_not_validated": true,
+        "does_not_separate_pass_from_fail_apriori": true
+      },
+      "interpretation": "FAIL (Plasmodium) frac 0.1684 < PASS (Toxoplasma) frac 0.2536: the descriptor does NOT give a usable a-priori direction/threshold; the true discriminators (recall 0.51 vs 0.20, base rate 0.42 vs 0.64) need a screen a novel organism lacks. ADVISORY ONLY, never gates.",
+      "plasmodium": {
+        "diagnostic": "gem_topology_advisory (frac_genes_fba_essential_default_medium)",
+        "does_not_predict_fba_reliability": true,
+        "frac_fba_essential": 0.1684,
+        "n_fba_essential": 80,
+        "n_model_genes": 475,
+        "organism": "Plasmodium falciparum (FAIL OR 2.47)",
+        "status": "HEURISTIC / ADVISORY / NOT VALIDATED \u2014 reported as context only, NEVER gates routing",
+        "why_not_validated": "n=2: Toxoplasma frac ~0.25 PASS vs Plasmodium frac ~0.17 FAIL -- the FAILING organism has the LOWER fraction, so no direction/threshold is established; the true discriminators (recall, base rate) need an experimental screen a novel organism does not have. Separating pass from fail a-priori is UNSOLVED."
+      },
+      "toxoplasma": {
+        "diagnostic": "gem_topology_advisory (frac_genes_fba_essential_default_medium)",
+        "does_not_predict_fba_reliability": true,
+        "frac_fba_essential": 0.2536,
+        "n_fba_essential": 141,
+        "n_model_genes": 556,
+        "organism": "Toxoplasma gondii (PASS OR 14.10)",
+        "status": "HEURISTIC / ADVISORY / NOT VALIDATED \u2014 reported as context only, NEVER gates routing",
+        "why_not_validated": "n=2: Toxoplasma frac ~0.25 PASS vs Plasmodium frac ~0.17 FAIL -- the FAILING organism has the LOWER fraction, so no direction/threshold is established; the true discriminators (recall, base rate) need an experimental screen a novel organism does not have. Separating pass from fail a-priori is UNSOLVED."
+      }
+    },
+    "all_assertions_pass": true,
+    "case_A_toxoplasma": {
+      "assertions": {
+        "aposteriori_OR_is_14_10": true,
+        "aposteriori_bacterial_gate_PASS": true,
+        "confidence_capped_below_full": true,
+        "fba_FIRES": true,
+        "fba_flag_present_with_verbatim_note": true,
+        "functional_dependency_did_NOT_fire": true,
+        "output_is_shortlist_not_abstention": true,
+        "uncertain_flag_set": true
+      },
+      "fba_capped_shortlist": {
+        "a_posteriori_validation": {
+          "auroc": 0.725,
+          "bacterial_gate_pass": true,
+          "fisher_p_greater": 7.672e-33,
+          "note": "this OR/recall is knowable ONLY with an experimental screen; a NOVEL host-dependent organism has none, so the router could NOT have known a-priori whether FBA would pass (Toxoplasma) or fail (Plasmodium) -- hence the capped confidence + flag",
+          "odds_ratio": 14.097,
+          "precision": 0.843,
+          "recall": 0.511
+        },
+        "confidence_cap": 0.5,
+        "model": "iTgo2020 (Krishnan et al. 2020)",
+        "organism": "Toxoplasma gondii",
+        "scope": "host-dependent-parasite FBA essentiality (in-silico vs a published screen); fires at CAPPED confidence because a curated GEM exists, but transfer reliability is GEM-topology-contingent and validated at only n=2; NOT bacterial-grade; not wet-lab; candidate HYPOTHESES only",
+        "signal": "fba_essentiality (CAPPED / uncertainty-flagged; host-dependent GEM-topology-contingent)",
+        "uncertain": true,
+        "uncertain_evidence": "HARDENP1 Toxoplasma iTgo2020 vs Sidik2016 CRISPR: OR 14.10 recall 0.51 PASS; GENERALIZE5 Plasmodium iPfal19 vs Zhang2018 piggyBac: OR 2.47 recall 0.20 FAIL (HOSTCTX1/2 could not rescue). n=2; which outcome occurs is NOT predictable a-priori",
+        "uncertainty_note": "FBA-essentiality transfer to host-dependent organisms is GEM-topology-dependent, validated at only n=2 (Toxoplasma PASS OR 14.10 / Plasmodium FAIL OR 2.47); treat as lower-confidence, GEM-quality-contingent."
+      },
+      "routing": {
+        "abstention": null,
+        "biology_class": "host_dependent_parasite",
+        "class_source": "declared",
+        "confidence_cap": 0.5,
+        "organism": "Toxoplasma gondii",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "fba_essentiality"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: requires an existing 3D structure with a conserved drugged fold",
+            "signal": "structural_homology"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+            "signal": "functional_dependency"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: needs a known host proteome to compare against",
+            "signal": "host_safety"
+          }
+        ],
+        "supporting_signals": [
+          "sequence_repurposing"
+        ],
+        "uncertain": true,
+        "uncertainty_flags": [
+          {
+            "confidence_cap": 0.5,
+            "evidence": "HARDENP1 Toxoplasma iTgo2020 vs Sidik2016 CRISPR: OR 14.10 recall 0.51 PASS; GENERALIZE5 Plasmodium iPfal19 vs Zhang2018 piggyBac: OR 2.47 recall 0.20 FAIL (HOSTCTX1/2 could not rescue). n=2; which outcome occurs is NOT predictable a-priori",
+            "note": "FBA-essentiality transfer to host-dependent organisms is GEM-topology-dependent, validated at only n=2 (Toxoplasma PASS OR 14.10 / Plasmodium FAIL OR 2.47); treat as lower-confidence, GEM-quality-contingent.",
+            "signal": "fba_essentiality"
+          }
+        ]
+      }
+    },
+    "case_B_plasmodium": {
+      "assertions": {
+        "SAME_flag_note_as_toxoplasma": true,
+        "aposteriori_OR_is_2_47": true,
+        "aposteriori_bacterial_gate_FAIL": true,
+        "confidence_capped_below_full": true,
+        "fba_FIRES": true,
+        "functional_dependency_did_NOT_fire": true,
+        "output_is_shortlist_not_abstention": true,
+        "uncertain_flag_set": true
+      },
+      "fba_capped_shortlist": {
+        "a_posteriori_validation": {
+          "auroc": 0.559,
+          "bacterial_gate_pass": false,
+          "fisher_p_greater": 0.002166,
+          "note": "this OR/recall is knowable ONLY with an experimental screen; a NOVEL host-dependent organism has none, so the router could NOT have known a-priori whether FBA would pass (Toxoplasma) or fail (Plasmodium) -- hence the capped confidence + flag",
+          "odds_ratio": 2.469,
+          "precision": 0.797,
+          "recall": 0.201
+        },
+        "confidence_cap": 0.5,
+        "model": "iPfal19",
+        "organism": "Plasmodium falciparum",
+        "scope": "host-dependent-parasite FBA essentiality (in-silico vs a published screen); fires at CAPPED confidence because a curated GEM exists, but transfer reliability is GEM-topology-contingent and validated at only n=2; NOT bacterial-grade; not wet-lab; candidate HYPOTHESES only",
+        "signal": "fba_essentiality (CAPPED / uncertainty-flagged; host-dependent GEM-topology-contingent)",
+        "uncertain": true,
+        "uncertain_evidence": "HARDENP1 Toxoplasma iTgo2020 vs Sidik2016 CRISPR: OR 14.10 recall 0.51 PASS; GENERALIZE5 Plasmodium iPfal19 vs Zhang2018 piggyBac: OR 2.47 recall 0.20 FAIL (HOSTCTX1/2 could not rescue). n=2; which outcome occurs is NOT predictable a-priori",
+        "uncertainty_note": "FBA-essentiality transfer to host-dependent organisms is GEM-topology-dependent, validated at only n=2 (Toxoplasma PASS OR 14.10 / Plasmodium FAIL OR 2.47); treat as lower-confidence, GEM-quality-contingent."
+      },
+      "routing": {
+        "abstention": null,
+        "biology_class": "host_dependent_parasite",
+        "class_source": "declared",
+        "confidence_cap": 0.5,
+        "organism": "Plasmodium falciparum",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "fba_essentiality"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: requires an existing 3D structure with a conserved drugged fold",
+            "signal": "structural_homology"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+            "signal": "functional_dependency"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: needs a known host proteome to compare against",
+            "signal": "host_safety"
+          }
+        ],
+        "supporting_signals": [
+          "sequence_repurposing"
+        ],
+        "uncertain": true,
+        "uncertainty_flags": [
+          {
+            "confidence_cap": 0.5,
+            "evidence": "HARDENP1 Toxoplasma iTgo2020 vs Sidik2016 CRISPR: OR 14.10 recall 0.51 PASS; GENERALIZE5 Plasmodium iPfal19 vs Zhang2018 piggyBac: OR 2.47 recall 0.20 FAIL (HOSTCTX1/2 could not rescue). n=2; which outcome occurs is NOT predictable a-priori",
+            "note": "FBA-essentiality transfer to host-dependent organisms is GEM-topology-dependent, validated at only n=2 (Toxoplasma PASS OR 14.10 / Plasmodium FAIL OR 2.47); treat as lower-confidence, GEM-quality-contingent.",
+            "signal": "fba_essentiality"
+          }
+        ]
+      }
+    },
+    "case_C_no_gem": {
+      "abstention_reason": "host-dependent parasite with NO curated GEM: FBA-essentiality is the only signal with any validated host-dependent transfer, and it is GEM-topology-contingent (HARDENP1 Toxoplasma PASS OR 14.10 / GENERALIZE5 Plasmodium FAIL OR 2.47, n=2) -- WITHOUT a GEM it cannot even be attempted (not blanket-refused: the router would FIRE it capped-and-flagged IF a GEM existed). The functional-dependency layer is BUILT and VALIDATED for HUMAN_CANCER only (DEPEND1 G1/G2/G3 on DepMap) but does NOT transfer to this parasite -- no dependency data for the organism and DEPEND1's label-free expr->dep arm was NOT organism-transferred (validated on held-out DepMap human lines only). Structural/conservation are out of domain. No signal available -> the router ABSTAINS rather than fabricate an answer",
+      "assertions": {
+        "abstention_matches_no_gem_constant": true,
+        "fba_gated_because_no_gem": true,
+        "functional_dependency_still_gated": true,
+        "no_signal_fired": true,
+        "not_uncertain": true,
+        "output_is_abstention": true,
+        "reason_NOT_metabolic_falsified": true,
+        "reason_cites_hardenp1_and_generalize5": true,
+        "reason_cites_no_gem": true
+      },
+      "routing": {
+        "abstention": "host-dependent parasite with NO curated GEM: FBA-essentiality is the only signal with any validated host-dependent transfer, and it is GEM-topology-contingent (HARDENP1 Toxoplasma PASS OR 14.10 / GENERALIZE5 Plasmodium FAIL OR 2.47, n=2) -- WITHOUT a GEM it cannot even be attempted (not blanket-refused: the router would FIRE it capped-and-flagged IF a GEM existed). The functional-dependency layer is BUILT and VALIDATED for HUMAN_CANCER only (DEPEND1 G1/G2/G3 on DepMap) but does NOT transfer to this parasite -- no dependency data for the organism and DEPEND1's label-free expr->dep arm was NOT organism-transferred (validated on held-out DepMap human lines only). Structural/conservation are out of domain. No signal available -> the router ABSTAINS rather than fabricate an answer",
+        "biology_class": "host_dependent_parasite",
+        "class_source": "declared",
+        "confidence_cap": null,
+        "organism": "novel host-dependent organism (no curated GEM)",
+        "output_type": "abstention",
+        "signals_fired": [],
+        "signals_gated_out": [
+          {
+            "reason": "capped/uncertain (GEM-contingent) transfer domain for host_dependent_parasite, but required resource 'curated_gem' unavailable -> cannot attempt (would fire capped-and-flagged IF present): FBA-essentiality transfer to host-dependent organisms is GEM-topology-dependent, validated at only n=2 (Toxoplasma PASS OR 14.10 / Plasmodium FAIL OR 2.47); treat as lower-confidence, GEM-quality-contingent.",
+            "signal": "fba_essentiality"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: requires an existing 3D structure with a conserved drugged fold",
+            "signal": "structural_homology"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+            "signal": "functional_dependency"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: needs a known host proteome to compare against",
+            "signal": "host_safety"
+          }
+        ],
+        "supporting_signals": [
+          "sequence_repurposing"
+        ],
+        "uncertain": false,
+        "uncertainty_flags": []
+      }
+    },
+    "case_D_regression": {
+      "assertions": {
+        "D1_bacterium_shortlist": true,
+        "D1_cores_present": true,
+        "D1_fba_fired_FULL_grade": true,
+        "D2_Mpro_protease": true,
+        "D2_RdRp_polymerase": true,
+        "D2_fba_not_fired": true,
+        "D2_virus_structural": true,
+        "D3_fba_not_fired": true,
+        "D3_functional_dependency_fired": true,
+        "D3_human_cancer_shortlist": true,
+        "D3_not_uncertain": true
+      },
+      "bacterium": {
+        "abstention": null,
+        "biology_class": "bacterium",
+        "class_source": "declared",
+        "confidence_cap": null,
+        "organism": "Klebsiella pneumoniae",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "conservation_breadth",
+          "fba_essentiality",
+          "structural_homology"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for bacterium: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+            "signal": "functional_dependency"
+          }
+        ],
+        "supporting_signals": [
+          "host_safety",
+          "sequence_repurposing"
+        ],
+        "uncertain": false,
+        "uncertainty_flags": []
+      },
+      "cores_present": {
+        "dxs": true,
+        "mraY": true,
+        "murA": true,
+        "murG": true
+      },
+      "human_cancer": {
+        "abstention": null,
+        "biology_class": "human_cancer",
+        "class_source": "declared",
+        "confidence_cap": null,
+        "organism": "human cancer (DepMap)",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "functional_dependency"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for human_cancer: full-grade transfer needs a self-contained metabolism; not applicable to viruses (no metabolism); host-dependent organisms are NOT out-of-domain but CAPPED/UNCERTAIN (see uncertain_domain) -- GEM-topology-contingent, not knowable a-priori",
+            "signal": "fba_essentiality"
+          },
+          {
+            "reason": "out of transfer domain for human_cancer: requires an existing 3D structure with a conserved drugged fold",
+            "signal": "structural_homology"
+          },
+          {
+            "reason": "out of transfer domain for human_cancer: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          },
+          {
+            "reason": "out of transfer domain for human_cancer: needs a known host proteome to compare against",
+            "signal": "host_safety"
+          }
+        ],
+        "supporting_signals": [
+          "sequence_repurposing"
+        ],
+        "uncertain": false,
+        "uncertainty_flags": []
+      },
+      "structural_hypotheses": [
+        {
+          "best_drugged_analog": "thrombin",
+          "protein": "nsp5_Mpro",
+          "rank": 6,
+          "target_class": "protease",
+          "tm": 0.462
+        },
+        {
+          "best_drugged_analog": "HCV-NS5B-RdRp",
+          "protein": "nsp12_RdRp",
+          "rank": 5,
+          "target_class": "polymerase",
+          "tm": 0.473
+        }
+      ],
+      "virus": {
+        "abstention": null,
+        "biology_class": "virus",
+        "class_source": "autodetected",
+        "confidence_cap": null,
+        "organism": "SARS-CoV-2",
+        "output_type": "structural_class_id",
+        "signals_fired": [
+          "structural_homology"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for virus: full-grade transfer needs a self-contained metabolism; not applicable to viruses (no metabolism); host-dependent organisms are NOT out-of-domain but CAPPED/UNCERTAIN (see uncertain_domain) -- GEM-topology-contingent, not knowable a-priori",
+            "signal": "fba_essentiality"
+          },
+          {
+            "reason": "out of transfer domain for virus: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+            "signal": "functional_dependency"
+          },
+          {
+            "reason": "out of transfer domain for virus: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          }
+        ],
+        "supporting_signals": [
+          "host_safety",
+          "sequence_repurposing"
+        ],
+        "uncertain": false,
+        "uncertainty_flags": []
+      }
+    },
+    "test": "COMPOSITE3 host-dependent FBA refinement (router v3): fire-capped-and-flagged, not blanket-abstain"
+  },
+  "provenance": {
+    "git_sha": "fb42c2369b96db994bfe8b6e67ccec010e4eb24b",
+    "runtime_sec": 0.02,
+    "utc": "2026-08-06T03:32:50Z"
+  },
+  "verdict": "ROUTER v3 host-dependent FBA refinement: (A) Toxoplasma (GOOD GEM) -> shortlist -- FBA FIRES capped(0.5)+flagged, NO LONGER abstains (HARDENP1 OR 14.10 PASS a-posteriori); (B) Plasmodium (salvage GEM) -> shortlist -- FBA FIRES with the SAME cap+flag (GENERALIZE5 OR 2.47 FAIL a-posteriori = exactly why confidence is capped; unknowable a-priori); (C) no-GEM host-dependent -> abstention (no signal; NOT 'metabolic falsified'); (D) REGRESSION bacterium=full-grade shortlist / virus=structural / human_cancer=functional-dep, all unchanged. ALL ASSERTIONS PASS: True. HONEST ADMISSION: the router CANNOT predict a-priori whether a novel host-dependent organism's GEM is Toxoplasma-like (pass) or Plasmodium-like (fail); it fires FBA with flagged, capped uncertainty rather than pretending to know. The advisory GEM-topology descriptor is HEURISTIC/NOT VALIDATED and does NOT separate pass from fail."
+}
