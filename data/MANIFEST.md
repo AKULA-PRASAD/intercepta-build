@@ -271,3 +271,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - DepMap/CCLE public (22Q2-era Chronos): depmap_crispr_gene_effect.csv (1095 lines x 17931 genes),
   depmap_expression.csv, sample metadata, somatic MAF — at /Users/kalki/kaalcura/data/ (pre-existing open
   cache; hashes frozen in DEPEND1 PREREG.md). Open (depmap.org); regenerable; never committed.
+
+## TRANSFER1 label-free zero-screen transfer (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/transfer1/ — S. cerevisiae proteome + P.falciparum<->human and <->yeast mmseqs RBH ortholog
+  TSVs. Reuses DepMap (kaalcura/data), Zhang 2018 + P.falciparum proteome (generalize5/tid1), yeast essentials
+  (generalize4) read-only. Open; regenerable; never committed.

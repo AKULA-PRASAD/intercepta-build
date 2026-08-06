@@ -1,0 +1,176 @@
+{
+  "bootstrap_OR_combined_minus_OR_nullA": {
+    "ci95_hi": 2.3878,
+    "ci95_lo": 1.1677,
+    "ci_excludes_0": true,
+    "note": "Haldane-Anscombe 0.5-corrected ORs; seed 42; 2000 resamples",
+    "point": 1.6874
+  },
+  "counts_transfer": {
+    "orth_human_pan": 453,
+    "orth_human_sel": 319,
+    "orth_yeast_ess": 434,
+    "var_combined_c": 901,
+    "var_common_a": 633,
+    "var_selective_b": 319
+  },
+  "decisive_beyond_conservation_among_ortholog_havers": {
+    "a_common": {
+      "contingency": {
+        "both": 562,
+        "ess_only": 508,
+        "neither": 296,
+        "pred_only": 71
+      },
+      "fisher_p_greater": 3.448e-30,
+      "n_pred_pos": 633,
+      "odds_ratio": 4.6122,
+      "precision": 0.8878,
+      "predictor": "beyond-cons: (a) common | among ortholog-havers",
+      "recall": 0.5252
+    },
+    "c_combined": {
+      "contingency": {
+        "both": 757,
+        "ess_only": 313,
+        "neither": 223,
+        "pred_only": 144
+      },
+      "fisher_p_greater": 1.751e-26,
+      "n_pred_pos": 901,
+      "odds_ratio": 3.7454,
+      "precision": 0.8402,
+      "predictor": "beyond-cons: (c) combined | among ortholog-havers",
+      "recall": 0.7075
+    },
+    "selective_only": {
+      "contingency": {
+        "both": 195,
+        "ess_only": 875,
+        "neither": 294,
+        "pred_only": 73
+      },
+      "fisher_p_greater": 0.7847,
+      "n_pred_pos": 268,
+      "odds_ratio": 0.8975,
+      "precision": 0.7276,
+      "predictor": "beyond-cons: SELECTIVE-only (excl. common) | among ortholog-havers",
+      "recall": 0.1822
+    }
+  },
+  "dep_thresh": -0.5,
+  "gates": {
+    "G1_transfer_OR_gt3_p_lt01": true,
+    "G2_decisive": false,
+    "G2i_transfer_above_conservation_CI": true,
+    "G2ii_selective_beyond_core": false,
+    "verdict": "PARTIAL"
+  },
+  "nboot": 2000,
+  "null_B_pan_essential_triviality": {
+    "frac_signal_that_is_conserved_core": 0.7026,
+    "n_pan_common_core": 633,
+    "n_selective_only_beyond_core": 268,
+    "n_transfer_pos_combined": 901
+  },
+  "orthology": {
+    "max_pident": 0.986,
+    "median_pident": 0.337,
+    "method": "mmseqs2 easy-rbh RBH",
+    "min_pident": 0.17,
+    "n_rbh_human_pairs": 1298,
+    "n_rbh_yeast_pairs": 1077,
+    "params": "-e 1e-5 -c 0.5 --cov-mode 0 -s 5.7"
+  },
+  "pan_frac": 0.9,
+  "provenance": {
+    "depmap_sha256": "d1633bfa0bf4719e72e564f15d9bcda7fddbbd3dac2a8a3aebf4898ac9f56f00",
+    "git_sha": "f5b57ec3119eb63b9e943ba86ba6db4ba27cd264",
+    "payload_sha256": "ef47a342019173a410274423740fa0a1b4ec4d8a5181bea656af5502356b33b1",
+    "python": "3.11.14",
+    "runtime_sec": 3.4,
+    "sklearn": "1.8.0",
+    "utc": "2026-08-06T02:32:02Z"
+  },
+  "reference_labels": {
+    "depmap_n_genes": 17931,
+    "depmap_n_lines": 1095,
+    "human_pan_essential_n": 1020,
+    "human_selective_n": 3664,
+    "yeast_deg_essential_n": 1110
+  },
+  "scoring_over_U": {
+    "NULL_A_conservation": {
+      "contingency": {
+        "both": 1070,
+        "ess_only": 2185,
+        "neither": 1593,
+        "pred_only": 367
+      },
+      "fisher_p_greater": 1.172e-29,
+      "n_pred_pos": 1437,
+      "odds_ratio": 2.1256,
+      "precision": 0.7446,
+      "predictor": "NULL-A: has ANY human/yeast ortholog (conservation-only)",
+      "recall": 0.3287
+    },
+    "a_common": {
+      "contingency": {
+        "both": 562,
+        "ess_only": 2693,
+        "neither": 1889,
+        "pred_only": 71
+      },
+      "fisher_p_greater": 3.347e-56,
+      "n_pred_pos": 633,
+      "odds_ratio": 5.5523,
+      "precision": 0.8878,
+      "predictor": "(a) COMMON-essential transfer",
+      "recall": 0.1727
+    },
+    "b_selective": {
+      "contingency": {
+        "both": 242,
+        "ess_only": 3013,
+        "neither": 1883,
+        "pred_only": 77
+      },
+      "fisher_p_greater": 9.651e-08,
+      "n_pred_pos": 319,
+      "odds_ratio": 1.9642,
+      "precision": 0.7586,
+      "predictor": "(b) SELECTIVE-dependency transfer",
+      "recall": 0.0743
+    },
+    "c_combined": {
+      "contingency": {
+        "both": 757,
+        "ess_only": 2498,
+        "neither": 1816,
+        "pred_only": 144
+      },
+      "fisher_p_greater": 3e-54,
+      "n_pred_pos": 901,
+      "odds_ratio": 3.8217,
+      "precision": 0.8402,
+      "predictor": "(c) COMBINED transfer",
+      "recall": 0.2326
+    }
+  },
+  "seed": 42,
+  "sel_band": [
+    0.01,
+    0.5
+  ],
+  "universe": {
+    "base_rate_among_ortholog_havers": 0.7446,
+    "n_U_pf3d7_genes_with_zhang": 5215,
+    "n_proteome_accessions": 5361,
+    "n_with_any_ortholog": 1437,
+    "n_with_human_ortholog": 1250,
+    "n_with_yeast_ortholog": 1024,
+    "orthology_coverage_of_U": 0.2756,
+    "zhang_base_rate_in_U": 0.6242
+  },
+  "verdict": "LABEL-FREE zero-screen transfer to P. falciparum (simulated zero-screen organism), validated vs HELD-OUT Zhang 2018. Orthology coverage of U: 1437/5215 (28%). Zhang base rate in U = 0.62. G1 combined-transfer vs Zhang: OR=3.8217 p=3e-54 (gate OR>3 & p<0.01: True). CONSERVATION NULL-A OR=2.1256. DECISIVE OR_transfer - OR_conservation = 1.69 [95% CI 1.17,2.39] (above conservation: True). SELECTIVE-only beyond conserved-core among ortholog-havers: OR=0.8975 p=0.7847 (beyond-core: False). Conserved-core fraction of transfer signal = 0.7026. VERDICT: PARTIAL. Transfer works but is ONLY conserved-core -> router should KEEP abstaining (or offer only conserved-core, which conservation already provides); do NOT claim label-free selective-dependency prediction. SCOPE: in-silico orthology-transfer; held-out published screen (not wet-lab); one organism."
+}
