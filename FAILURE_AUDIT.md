@@ -81,8 +81,12 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
   fails; needs prospective clinical data we do not have. State this plainly; make no patient-response claim.
   (2) **The validated human deliverable is dependency *TARGET-ID*, not response prediction** — DEPEND1 (which
   genes are selective cancer dependencies) generalizes across held-out cell lines and recovers known targets.
-  That is a real, honest, *different* claim (target biology), and its patient RELEVANCE (vs patient tumor
-  drivers) is being tested honestly in **F3CLIN1** — explicitly NOT response prediction.
+  Its patient RELEVANCE is now **VALIDATED (F3CLIN1, f741774, PASS)**: selective cell-line dependencies are
+  enriched for patient-tumor drivers (IntOGen, OR 2.55, p 3.4e-26) and the enrichment **survives study-bias
+  controls** (publication-matched null + Mantel–Haenszel OR 2.72) with a recurrence dose-response. So the human
+  *target-ID* claim is COMPUTED-validated with a genuine cell-line→patient RELEVANCE bridge — a real, honest,
+  *different* claim from response prediction. **Hard scope line: F3CLIN1 is target-relevance ONLY — it does NOT
+  rescue drug-response prediction (still negative) and is NOT clinical validation.**
   (3) The *clinical endpoint* (patient outcome) remains **GATED — needs prospective data** (≡ F0). No shortcut.
 
 **F4 — Molecule half is a demonstrated ceiling (novel-target potency ≈ chance).**

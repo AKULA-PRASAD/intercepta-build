@@ -42,10 +42,11 @@ do **not** do organism-ID from raw/environmental samples, imaging, or clinical s
 they land very differently. **(a) Patient drug-RESPONSE prediction = TESTED-AND-LARGELY-NEGATIVE** — external
 replication on a 2nd patient cohort (B20/FIMM) FAILS, TCGA outcome (B10) is cancer-type-confounded, clinical
 outcome (B17) is negative, PDXE-PRISM (B9) is null. This claim is **downgraded to NEGATIVE/gated**; the clinical
-endpoint needs prospective data (≡ F0). **(b) Dependency TARGET-ID = COMPUTED-validated (cell-line)** — DEPEND1
-generalizes across held-out cell lines and recovers known cancer targets; its patient-tumor-driver relevance is
-under honest test (F3CLIN1). The composite fires dependency for human/cancer as *target-ID*, and makes **no**
-patient-response claim. This is the program's weakest disease area, stated as such — not at parity with the
+endpoint needs prospective data (≡ F0). **(b) Dependency TARGET-ID = COMPUTED-validated (cell-line), with a patient-relevance
+bridge** — DEPEND1 generalizes across held-out cell lines and recovers known cancer targets, and **F3CLIN1
+(PASS, verified)** shows its selective dependencies are enriched for patient-tumor drivers (OR 2.55, surviving
+study-bias controls) — a genuine cell-line→patient *target-relevance* bridge. The composite fires dependency
+for human/cancer as *target-ID*, and makes **no** patient-response claim (that's (a), negative). This is the program's weakest disease area, stated as such — not at parity with the
 validated bacterial result.
 
 ### Layer 2 — Representation
