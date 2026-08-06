@@ -52,6 +52,13 @@ drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.
   essentials, at a precision cost).
 - Condition-robustness — **COMPUTED** (CONDROB1; core-robust essentials 79% PEC-essential vs 48%).
 - Regulation, expression, epistasis, immune escape, causal mechanism: **ABSENT/HYPOTHESIS.**
+- **Cross-disease-class generalization (GENERALIZE1–5, fused — see `experiments/GENERALIZE_SYNTHESIS.md`):**
+  the method generalizes across classes but NOT uniformly, and the *right signal differs by class*.
+  FBA-essentiality: bacteria STRONG (OR 5–64) → yeast/eukaryote TRANSFERS weaker (OR 4.65, PASS) → malaria
+  parasite FAILS the bar (OR 2.47 — host-salvage metabolism breaks it). Virus: FBA inapplicable + sequence
+  fails, but **blind structural homology recovers both approved targets** (PASS). Governing principle:
+  FBA's reach ∝ how self-contained the metabolism is; where metabolism can't carry the signal, structure can.
+  **Boundary: host-dependent organisms need host-context-aware modeling, not plain FBA.**
 
 ### Layer 4 — Target discovery
 **VERIFIED (bacterial essential-target enrichment) / COMPUTED (multi-axis).** DiscoveryEngine composes 7 signals
