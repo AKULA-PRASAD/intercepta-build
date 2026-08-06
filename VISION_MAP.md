@@ -79,6 +79,13 @@ drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.
   **succeeds and generalizes**. Honest bounds: cancer cell-line (not clinical); label-free validated on
   held-out DepMap lines, not yet on a true zero-screen organism; lineage-level misses mutation-subset
   dependencies (FLT3).
+- **TRANSFER1 (37caa0d) — the honest boundary of zero-data host-embedded discovery:** tested whether the
+  label-free dependency signal transfers to a NOVEL/zero-screen host-embedded organism (P. falciparum, held-out
+  Zhang). Verdict PARTIAL → **it does not** beyond conservation: the SELECTIVE signal fails organism-transfer
+  (OR 0.90, chance); only conserved-core transfers (redundant with REACH1 conservation), at ~28% orthology
+  coverage. **So for a novel host-embedded pathogen with no screen we can honestly offer only the conserved-core
+  (via conservation), never selective targets — and the composite router correctly ABSTAINS there.** A real
+  North-Star limit, empirically established, not hidden.
 
 ### Layer 4 — Target discovery
 **VERIFIED (bacterial essential-target enrichment) / COMPUTED (multi-axis).** DiscoveryEngine composes 7 signals

@@ -50,8 +50,13 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
   the F3 gap), and a **label-free expr→dependency** arm beats baseline (the zero-data case). So the F2↔F3
   redirection is not just a direction — it is validated: for the host-embedded class, dependency > metabolic
   essentiality. **Remaining honest gaps:** DEPEND1 is cancer cell-line (not patient/clinical); the label-free
-  arm is validated on held-out DepMap lines, **not yet transferred to a true zero-screen novel pathogen**
-  (parasite/intracellular) — that organism-transfer is the next real test. Do NOT claim clinical or
+  arm is validated on held-out DepMap lines. **Organism-transfer to a true zero-screen novel pathogen — now
+  TESTED (TRANSFER1, 37caa0d): it FAILS.** The selective-dependency signal does not survive transfer to a
+  zero-screen parasite (OR 0.90, chance); only conserved-core transfers (redundant with REACH1 conservation),
+  at ~28% orthology coverage. **Honest boundary established:** for a novel host-embedded pathogen with no
+  screen, we can offer only the conserved-core (via conservation), NEVER selective targets — the composite
+  router correctly abstains there. So DEPEND1's win is real *where the organism (or its close domain) has a
+  screen* (human cancer), and does NOT extend to novel-pathogen zero-data discovery. Do NOT claim clinical or
   novel-pathogen success.
 
 ## Tier 2 — real weaknesses needing an honest fix or an honest downgrade

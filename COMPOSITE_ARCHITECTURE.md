@@ -37,7 +37,7 @@ those signals. This is the rigorous answer to the transfer question:
 | **Structural homology** (Foldseek) — for target CLASS-ID | B's protein **fold is conserved** with a known target/drug + a structure exists | GENERALIZE2/3 recovers Mpro/RdRp at <10% seq id | no structure available (AF-DB viral gap) |
 | **Structural REPURPOSING** (coverage) — ⚠ FALSIFIED as a coverage-expander | (does NOT transfer for coverage) | STRUCTREPURPOSE1 NEGATIVE: validates 11/11 but a random-protein null matched *more* targets than drug targets — "expanded coverage" was fold-census promiscuity | at "same-fold" TM almost any large structure set matches almost any enzyme → use structure to CONFIRM a known drug's class, NOT to widen the drugged-target set |
 | **Conservation breadth** | the essential is part of a **broadly conserved core** | REACH1 AUROC 0.86 for non-metabolic essentials | lineage-specific essentials |
-| **Functional dependency** (CRISPR) — ✅ VALIDATED (DEPEND1) | a **context-specific dependency signal** exists or an expr→dependency map is learnable | **DEPEND1 G1/G2/G3 PASS**: selective dependencies recover known targets (0.80), generalize to held-out lines (0.80), label-free expr→dep beats baseline (ρ 0.36); + V13/V16–18 | no dependency data AND no learnable expr→dep map; label-free not yet shown on a true zero-screen organism |
+| **Functional dependency** (CRISPR) — ✅ VALIDATED (DEPEND1), transfer bound TESTED | a **context-specific dependency signal** exists (or an in-domain learnable expr→dep map) | **DEPEND1 G1/G2/G3 PASS**: selective dependencies recover known targets (0.80), generalize to held-out lines (0.80), label-free expr→dep beats baseline (ρ 0.36); + V13/V16–18 | does NOT transfer to a novel/zero-screen organism — **TRANSFER1**: selective signal fails organism-transfer (OR 0.90, chance); only conserved-core transfers (redundant with conservation). So it fires only where the organism itself (or its close domain) has a screen. |
 | **Host-safety filter** | B's targets can be compared to the **host proteome** | ENGINE hard filter (Hart CEG2 + human homology) | host unknown |
 
 **The unifying law:** a signal transfers exactly as far as the *biological invariant it rides on* is conserved
@@ -80,7 +80,7 @@ answer for a parasite (which GENERALIZE5 shows would be wrong).
 | Free-living eukaryote/fungus | FBA(weaker) + breadth | COMPUTED/VERIFIED | validated enrichment (GENERALIZE4) |
 | Virus | structural-homology (+ structural-repurposing) | COMPUTED | PASS, structure-gated (GENERALIZE3; STRUCTREPURPOSE1 pending) |
 | Human / cancer | **functional-dependency (DEPEND1)** | **COMPUTED (validated + held-out generalization)** | selective dependency recovers known targets, generalizes to disjoint lines, + label-free arm (DEPEND1 G1/G2/G3); cell-line, not clinical |
-| Host-dependent parasite | functional-dependency **in principle** (label-free expr→dep); no parasite screen yet → ABSTAIN until transferred | GATED (signal validated in human cancer; not yet organism-transferred) | FBA falsified ×3; DEPEND1 validated the signal + label-free inference, but not yet on a zero-screen parasite |
+| Host-dependent parasite (novel/zero-screen) | ABSTAIN (empirically justified) — only conserved-core available via conservation, NOT selective dependency | GATED (organism-transfer TESTED and failed the decisive guard) | TRANSFER1: label-free dependency transfer to a zero-screen parasite recovers only conserved-core (redundant with REACH1); the SELECTIVE signal does NOT transfer (OR 0.90, chance). Router keeps abstaining. |
 | Unknown organism | detector + whatever conditions hold | ENGINEERING | the honest general case: apply-what-transfers, abstain otherwise |
 
 ## 5. "Papers → book" — the publication/deliverable structure
@@ -112,7 +112,12 @@ Each validated model is a standalone contribution (paper); the book is the integ
    router now FIRES functional-dependency for the human/cancer class (skin→SOX10, KRAS-hotspot→KRAS, both rank
    #1; FBA gated out), while the novel parasite STILL ABSTAINS (transfer-condition-precise: no parasite screen;
    label-free not organism-transferred). 16/16 unit tests, reproduced ×2 (sha aebe8543). Remaining honest gaps:
-   cell-line not clinical; parasite un-gating awaits label-free organism-transfer.
+   cell-line not clinical; parasite un-gating awaits label-free organism-transfer — **now TESTED (TRANSFER1,
+   37caa0d): it does NOT transfer.** The selective-dependency signal fails organism-transfer to a zero-screen
+   parasite (OR 0.90, chance); only conserved-core transfers, redundant with conservation. So the router's
+   novel-parasite abstention is now **empirically justified**, not a placeholder — a genuine boundary of
+   zero-data host-embedded discovery: for a novel host-embedded pathogen with no screen we can honestly offer
+   only the conserved-core (via conservation, ~28% coverage), never selective targets.
 3. **STRUCTREPURPOSE1** — DONE, NEGATIVE: structural repurposing validates known pharmacology (11/11) but does
    NOT expand novel coverage (promiscuity; null matched more than drug targets). Consequence: the intervention
    module honestly covers only the drugged-homolog fraction; novel-target intervention is de-novo-gated (F4),
