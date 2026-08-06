@@ -1,0 +1,652 @@
+{
+  "provenance": {
+    "git_sha": "8381af08b6988cbd132db6ae58b583ad98a285cc",
+    "utc": "2026-08-06T00:23:17Z"
+  },
+  "runtime_sec": 2.4,
+  "summary": {
+    "G1_nsp5_protease_TM>=0.4": true,
+    "G2_nsp12_polymerase_TM>=0.4": true,
+    "G3_both_in_top_half": true,
+    "GATE": "PASS",
+    "confound": "Only structured subset ranked; proteins without experimental PDB are excluded. qtmscore is query-normalized (large multidomain queries can score low). n=1 virus.",
+    "coverage_n_structured": 21,
+    "coverage_total_proteome": 30,
+    "nsp12_RdRp": {
+      "best": "HCV-NS5B-RdRp",
+      "class": "polymerase",
+      "rank": 5,
+      "seq_ident": 0.068,
+      "tm": 0.473,
+      "top3": [
+        {
+          "class": "polymerase",
+          "evalue": 0.5802,
+          "label": "HCV-NS5B-RdRp",
+          "ref": "4wtg",
+          "seq_ident": 0.068,
+          "tm": 0.473
+        },
+        {
+          "class": "polymerase",
+          "evalue": 0.2562,
+          "label": "HIV-RT",
+          "ref": "3hvt",
+          "seq_ident": 0.01,
+          "tm": 0.226
+        },
+        {
+          "class": "esterase",
+          "evalue": 0.2376,
+          "label": "acetylcholinesterase",
+          "ref": "1acj",
+          "seq_ident": 0.013,
+          "tm": 0.206
+        }
+      ]
+    },
+    "nsp5_Mpro": {
+      "best": "thrombin",
+      "class": "protease",
+      "rank": 6,
+      "seq_ident": 0.052,
+      "tm": 0.462,
+      "top3": [
+        {
+          "class": "protease",
+          "evalue": 0.4856,
+          "label": "thrombin",
+          "ref": "1ppb",
+          "seq_ident": 0.052,
+          "tm": 0.462
+        },
+        {
+          "class": "protease",
+          "evalue": 0.5431,
+          "label": "rhinovirus-3C-protease",
+          "ref": "1cqq",
+          "seq_ident": 0.099,
+          "tm": 0.43
+        },
+        {
+          "class": "kinase",
+          "evalue": 0.2824,
+          "label": "EGFR-kinase",
+          "ref": "1m17",
+          "seq_ident": 0.017,
+          "tm": 0.308
+        }
+      ]
+    },
+    "proteins_no_structure_excluded": [
+      "nsp4",
+      "nsp6",
+      "ORF3b",
+      "ORF6",
+      "ORF7b",
+      "ORF9c",
+      "ORF10",
+      "ORF3c",
+      "ORF3d"
+    ],
+    "query_clean_report": {
+      "E": {
+        "chain_residues": 310,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.38,
+        "n_chains_in_file": 5,
+        "pdb": "7K3G"
+      },
+      "M": {
+        "chain_residues": 188,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.844,
+        "n_chains_in_file": 2,
+        "pdb": "8CTK"
+      },
+      "N": {
+        "chain_residues": 126,
+        "chosen_chain": "B",
+        "kmer_overlap": 0.287,
+        "n_chains_in_file": 4,
+        "pdb": "6M3M"
+      },
+      "ORF3a": {
+        "chain_residues": 193,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.683,
+        "n_chains_in_file": 2,
+        "pdb": "6XDC"
+      },
+      "ORF7a": {
+        "chain_residues": 66,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.53,
+        "n_chains_in_file": 1,
+        "pdb": "6W37"
+      },
+      "ORF8": {
+        "chain_residues": 102,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.803,
+        "n_chains_in_file": 2,
+        "pdb": "7JTL"
+      },
+      "ORF9b": {
+        "chain_residues": 84,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.817,
+        "n_chains_in_file": 2,
+        "pdb": "6Z4U"
+      },
+      "nsp1": {
+        "chain_residues": 106,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.557,
+        "n_chains_in_file": 1,
+        "pdb": "7K3N"
+      },
+      "nsp10": {
+        "chain_residues": 125,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.874,
+        "n_chains_in_file": 1,
+        "pdb": "6ZCT"
+      },
+      "nsp12_RdRp": {
+        "chain_residues": 834,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.881,
+        "n_chains_in_file": 3,
+        "pdb": "7BV2"
+      },
+      "nsp13": {
+        "chain_residues": 585,
+        "chosen_chain": "B",
+        "kmer_overlap": 0.96,
+        "n_chains_in_file": 2,
+        "pdb": "6ZSL"
+      },
+      "nsp14": {
+        "chain_residues": 512,
+        "chosen_chain": "B",
+        "kmer_overlap": 0.964,
+        "n_chains_in_file": 2,
+        "pdb": "7N0B"
+      },
+      "nsp15": {
+        "chain_residues": 348,
+        "chosen_chain": "A",
+        "kmer_overlap": 1.0,
+        "n_chains_in_file": 2,
+        "pdb": "6VWW"
+      },
+      "nsp16": {
+        "chain_residues": 299,
+        "chosen_chain": "A",
+        "kmer_overlap": 1.0,
+        "n_chains_in_file": 2,
+        "pdb": "6W4H"
+      },
+      "nsp2": {
+        "chain_residues": 635,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.995,
+        "n_chains_in_file": 1,
+        "pdb": "7MSW"
+      },
+      "nsp3_PLpro": {
+        "chain_residues": 310,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.156,
+        "n_chains_in_file": 3,
+        "pdb": "6W9C"
+      },
+      "nsp5_Mpro": {
+        "chain_residues": 306,
+        "chosen_chain": "A",
+        "kmer_overlap": 1.0,
+        "n_chains_in_file": 2,
+        "pdb": "6LU7"
+      },
+      "nsp7": {
+        "chain_residues": 63,
+        "chosen_chain": "C",
+        "kmer_overlap": 0.744,
+        "n_chains_in_file": 3,
+        "pdb": "7BV2"
+      },
+      "nsp8": {
+        "chain_residues": 114,
+        "chosen_chain": "B",
+        "kmer_overlap": 0.567,
+        "n_chains_in_file": 3,
+        "pdb": "7BV2"
+      },
+      "nsp9": {
+        "chain_residues": 116,
+        "chosen_chain": "B",
+        "kmer_overlap": 1.0,
+        "n_chains_in_file": 2,
+        "pdb": "6W4B"
+      },
+      "spike": {
+        "chain_residues": 972,
+        "chosen_chain": "A",
+        "kmer_overlap": 0.731,
+        "n_chains_in_file": 3,
+        "pdb": "6VXX"
+      }
+    },
+    "ranked_table_by_best_tm": [
+      {
+        "best_class": "gpcr",
+        "best_label": "A2A-GPCR",
+        "best_seq_ident": 0.007,
+        "best_tm": 0.701,
+        "protein": "nsp7",
+        "rank": 1,
+        "source_pdb": "7BV2"
+      },
+      {
+        "best_class": "protease",
+        "best_label": "chymotrypsin",
+        "best_seq_ident": 0.007,
+        "best_tm": 0.498,
+        "protein": "nsp9",
+        "rank": 2,
+        "source_pdb": "6W4B"
+      },
+      {
+        "best_class": "methyltransferase",
+        "best_label": "DNA-adenine-MTase",
+        "best_seq_ident": 0.05,
+        "best_tm": 0.491,
+        "protein": "nsp16",
+        "rank": 3,
+        "source_pdb": "6W4H"
+      },
+      {
+        "best_class": "phosphatase",
+        "best_label": "PTP1B-phosphatase",
+        "best_seq_ident": 0.034,
+        "best_tm": 0.489,
+        "protein": "ORF7a",
+        "rank": 4,
+        "source_pdb": "6W37"
+      },
+      {
+        "best_class": "polymerase",
+        "best_label": "HCV-NS5B-RdRp",
+        "best_seq_ident": 0.068,
+        "best_tm": 0.473,
+        "protein": "nsp12_RdRp",
+        "rank": 5,
+        "source_pdb": "7BV2"
+      },
+      {
+        "best_class": "protease",
+        "best_label": "thrombin",
+        "best_seq_ident": 0.052,
+        "best_tm": 0.462,
+        "protein": "nsp5_Mpro",
+        "rank": 6,
+        "source_pdb": "6LU7"
+      },
+      {
+        "best_class": "helicase",
+        "best_label": "PcrA-helicase",
+        "best_seq_ident": 0.053,
+        "best_tm": 0.459,
+        "protein": "nsp13",
+        "rank": 7,
+        "source_pdb": "6ZSL"
+      },
+      {
+        "best_class": "esterase",
+        "best_label": "acetylcholinesterase",
+        "best_seq_ident": 0.015,
+        "best_tm": 0.431,
+        "protein": "M",
+        "rank": 8,
+        "source_pdb": "8CTK"
+      },
+      {
+        "best_class": "lyase",
+        "best_label": "carbonic-anhydrase-II",
+        "best_seq_ident": 0.018,
+        "best_tm": 0.425,
+        "protein": "ORF8",
+        "rank": 9,
+        "source_pdb": "7JTL"
+      },
+      {
+        "best_class": "polymerase",
+        "best_label": "HIV-RT",
+        "best_seq_ident": 0.035,
+        "best_tm": 0.408,
+        "protein": "nsp10",
+        "rank": 10,
+        "source_pdb": "6ZCT"
+      },
+      {
+        "best_class": "protease",
+        "best_label": "thrombin",
+        "best_seq_ident": 0.012,
+        "best_tm": 0.386,
+        "protein": "nsp1",
+        "rank": 11,
+        "source_pdb": "7K3N"
+      },
+      {
+        "best_class": "reductase",
+        "best_label": "HMG-CoA-reductase",
+        "best_seq_ident": 0.009,
+        "best_tm": 0.385,
+        "protein": "N",
+        "rank": 12,
+        "source_pdb": "6M3M"
+      },
+      {
+        "best_class": "nuclear_receptor",
+        "best_label": "androgen-receptor",
+        "best_seq_ident": 0.018,
+        "best_tm": 0.384,
+        "protein": "ORF3a",
+        "rank": 13,
+        "source_pdb": "6XDC"
+      },
+      {
+        "best_class": "phosphatase",
+        "best_label": "PTP1B-phosphatase",
+        "best_seq_ident": 0.01,
+        "best_tm": 0.38,
+        "protein": "nsp8",
+        "rank": 14,
+        "source_pdb": "7BV2"
+      },
+      {
+        "best_class": "kinase",
+        "best_label": "EGFR-kinase",
+        "best_seq_ident": 0.02,
+        "best_tm": 0.36,
+        "protein": "nsp3_PLpro",
+        "rank": 15,
+        "source_pdb": "6W9C"
+      },
+      {
+        "best_class": "polymerase",
+        "best_label": "HCV-NS5B-RdRp",
+        "best_seq_ident": 0.018,
+        "best_tm": 0.357,
+        "protein": "nsp15",
+        "rank": 16,
+        "source_pdb": "6VWW"
+      },
+      {
+        "best_class": "nuclease",
+        "best_label": "RNaseA",
+        "best_seq_ident": 0.058,
+        "best_tm": 0.354,
+        "protein": "ORF9b",
+        "rank": 17,
+        "source_pdb": "6Z4U"
+      },
+      {
+        "best_class": "polymerase",
+        "best_label": "DNApol-Klenow",
+        "best_seq_ident": 0.016,
+        "best_tm": 0.274,
+        "protein": "nsp14",
+        "rank": 18,
+        "source_pdb": "7N0B"
+      },
+      {
+        "best_class": "esterase",
+        "best_label": "acetylcholinesterase",
+        "best_seq_ident": 0.027,
+        "best_tm": 0.258,
+        "protein": "nsp2",
+        "rank": 19,
+        "source_pdb": "7MSW"
+      },
+      {
+        "best_class": "polymerase",
+        "best_label": "DNApol-Klenow",
+        "best_seq_ident": 0.01,
+        "best_tm": 0.161,
+        "protein": "spike",
+        "rank": 20,
+        "source_pdb": "6VXX"
+      },
+      {
+        "best_class": null,
+        "best_label": null,
+        "best_seq_ident": null,
+        "best_tm": 0.0,
+        "protein": "E",
+        "rank": 21,
+        "source_pdb": "7K3G"
+      }
+    ],
+    "ref_clean_report": {
+      "1acj": {
+        "chain_residues": 528,
+        "chosen_chain": "A",
+        "class": "esterase",
+        "label": "acetylcholinesterase"
+      },
+      "1atp": {
+        "chain_residues": 334,
+        "chosen_chain": "E",
+        "class": "kinase",
+        "label": "PKA-kinase"
+      },
+      "1bl8": {
+        "chain_residues": 97,
+        "chosen_chain": "A",
+        "class": "ion_channel",
+        "label": "KcsA-Kchannel"
+      },
+      "1cqq": {
+        "chain_residues": 180,
+        "chosen_chain": "A",
+        "class": "protease",
+        "label": "rhinovirus-3C-protease"
+      },
+      "1e3g": {
+        "chain_residues": 250,
+        "chosen_chain": "A",
+        "class": "nuclear_receptor",
+        "label": "androgen-receptor"
+      },
+      "1err": {
+        "chain_residues": 224,
+        "chosen_chain": "A",
+        "class": "nuclear_receptor",
+        "label": "estrogen-receptor"
+      },
+      "1f88": {
+        "chain_residues": 338,
+        "chosen_chain": "A",
+        "class": "gpcr",
+        "label": "rhodopsin-GPCR"
+      },
+      "1hck": {
+        "chain_residues": 294,
+        "chosen_chain": "A",
+        "class": "kinase",
+        "label": "CDK2-kinase"
+      },
+      "1hw9": {
+        "chain_residues": 408,
+        "chosen_chain": "A",
+        "class": "reductase",
+        "label": "HMG-CoA-reductase"
+      },
+      "1hxw": {
+        "chain_residues": 99,
+        "chosen_chain": "A",
+        "class": "protease",
+        "label": "HIV-protease"
+      },
+      "1kln": {
+        "chain_residues": 595,
+        "chosen_chain": "A",
+        "class": "polymerase",
+        "label": "DNApol-Klenow"
+      },
+      "1m17": {
+        "chain_residues": 312,
+        "chosen_chain": "A",
+        "class": "kinase",
+        "label": "EGFR-kinase"
+      },
+      "1pjr": {
+        "chain_residues": 623,
+        "chosen_chain": "A",
+        "class": "helicase",
+        "label": "PcrA-helicase"
+      },
+      "1ppb": {
+        "chain_residues": 259,
+        "chosen_chain": "H",
+        "class": "protease",
+        "label": "thrombin"
+      },
+      "1rnb": {
+        "chain_residues": 109,
+        "chosen_chain": "A",
+        "class": "nuclease",
+        "label": "barnase"
+      },
+      "1rx2": {
+        "chain_residues": 159,
+        "chosen_chain": "A",
+        "class": "reductase",
+        "label": "DHFR"
+      },
+      "1tlp": {
+        "chain_residues": 316,
+        "chosen_chain": "E",
+        "class": "protease",
+        "label": "thermolysin"
+      },
+      "1vid": {
+        "chain_residues": 213,
+        "chosen_chain": "A",
+        "class": "methyltransferase",
+        "label": "COMT-MTase"
+      },
+      "2adm": {
+        "chain_residues": 385,
+        "chosen_chain": "A",
+        "class": "methyltransferase",
+        "label": "DNA-adenine-MTase"
+      },
+      "2cba": {
+        "chain_residues": 258,
+        "chosen_chain": "A",
+        "class": "lyase",
+        "label": "carbonic-anhydrase-II"
+      },
+      "2hnp": {
+        "chain_residues": 278,
+        "chosen_chain": "A",
+        "class": "phosphatase",
+        "label": "PTP1B-phosphatase"
+      },
+      "2prg": {
+        "chain_residues": 271,
+        "chosen_chain": "A",
+        "class": "nuclear_receptor",
+        "label": "PPARg"
+      },
+      "2rh1": {
+        "chain_residues": 442,
+        "chosen_chain": "A",
+        "class": "gpcr",
+        "label": "beta2-GPCR"
+      },
+      "2src": {
+        "chain_residues": 449,
+        "chosen_chain": "A",
+        "class": "kinase",
+        "label": "Src-kinase"
+      },
+      "3eml": {
+        "chain_residues": 448,
+        "chosen_chain": "A",
+        "class": "gpcr",
+        "label": "A2A-GPCR"
+      },
+      "3hvt": {
+        "chain_residues": 555,
+        "chosen_chain": "A",
+        "class": "polymerase",
+        "label": "HIV-RT"
+      },
+      "3pjr": {
+        "chain_residues": 646,
+        "chosen_chain": "A",
+        "class": "helicase",
+        "label": "PcrA-helicase-DNA"
+      },
+      "4cha": {
+        "chain_residues": 131,
+        "chosen_chain": "B",
+        "class": "protease",
+        "label": "chymotrypsin"
+      },
+      "4wtg": {
+        "chain_residues": 535,
+        "chosen_chain": "A",
+        "class": "polymerase",
+        "label": "HCV-NS5B-RdRp"
+      },
+      "7rsa": {
+        "chain_residues": 124,
+        "chosen_chain": "A",
+        "class": "nuclease",
+        "label": "RNaseA"
+      },
+      "9pap": {
+        "chain_residues": 211,
+        "chosen_chain": "A",
+        "class": "protease",
+        "label": "papain"
+      }
+    },
+    "reference_classes": [
+      "esterase",
+      "gpcr",
+      "helicase",
+      "ion_channel",
+      "kinase",
+      "lyase",
+      "methyltransferase",
+      "nuclear_receptor",
+      "nuclease",
+      "phosphatase",
+      "polymerase",
+      "protease",
+      "reductase"
+    ],
+    "reference_panel_size": 31,
+    "secondary_nsp13_helicase": {
+      "best": "PcrA-helicase",
+      "class": "helicase",
+      "rank": 7,
+      "tm": 0.459
+    },
+    "secondary_nsp3_PLpro": {
+      "best": "EGFR-kinase",
+      "class": "kinase",
+      "rank": 15,
+      "tm": 0.36
+    },
+    "test": "GENERALIZE3 BLIND structural target-prioritization (Foldseek TMalign, query-normalized qtmscore)",
+    "topk_halfway": 11,
+    "verdict": "BLIND STRUCTURAL TEST (PASS). Coverage 21/30 SARS-CoV-2 mature proteins had a usable cleaned experimental structure. Against an UNBIASED 31-structure corona-free panel spanning 13 drug-target classes, nsp5/Mpro's best drugged-analog was thrombin (class protease, TM 0.462, rank 6/21); nsp12/RdRp's was HCV-NS5B-RdRp (class polymerase, TM 0.473, rank 5/21). Structure BLINDLY recovers the correct drugged fold+class for BOTH approved targets from a broad unbiased panel, exactly where sequence gave zero (GENERALIZE1) and without hand-picked controls (unlike GENERALIZE2). The viral-generalization failure is a sequence-tool limitation. SCOPE: in-silico target prioritization on structured subset only; not wet-lab; n=1 virus; establishes the principle, not a deployed pipeline."
+  }
+}

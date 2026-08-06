@@ -237,3 +237,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## INTERVENE1 repurposing intervention layer (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/intervene/drug_targets.{tsv,fasta} — ChEMBL drug-mechanism knowledge base (7561 drug->target
   mechanisms; 2148 drug-target protein sequences via UniProt). Open (ChEMBL REST + UniProt); regenerable; never committed.
+
+## GENERALIZE3 viral structural blind (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/generalize3/ — experimental RCSB PDB structures for 21/30 SARS-CoV-2 mature proteins
+  (query_clean/) + a frozen corona-free 31-structure drug-target panel across 13 classes (ref_clean/) +
+  Foldseek aln.m8. Open (RCSB PDB); regenerable; never committed.
