@@ -266,3 +266,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/structrepurpose1/ — AlphaFold v6 structures for 2009 ChEMBL drug-target accessions +
   2009 organism-matched random NON-drug proteins (null reference) + query target structures. ~1.3 GB. Open
   (AlphaFold DB / UniProt); regenerable; never committed.
+
+## DEPEND1 functional-dependency layer (PUBLIC/OPEN, never committed)
+- DepMap/CCLE public (22Q2-era Chronos): depmap_crispr_gene_effect.csv (1095 lines x 17931 genes),
+  depmap_expression.csv, sample metadata, somatic MAF — at /Users/kalki/kaalcura/data/ (pre-existing open
+  cache; hashes frozen in DEPEND1 PREREG.md). Open (depmap.org); regenerable; never committed.

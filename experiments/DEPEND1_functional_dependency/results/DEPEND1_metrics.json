@@ -1,0 +1,539 @@
+{
+  "G1": {
+    "k_top1pct": 179,
+    "n_recovered_top10": 8,
+    "n_tested": 10,
+    "pairs": [
+      {
+        "context": "BRAF-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 94,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.7868,
+        "target": "BRAF",
+        "target_dep_frac": 0.0712,
+        "top_lineage_in_ctx": "skin=0.49"
+      },
+      {
+        "context": "KRAS-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 170,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 1.2206,
+        "target": "KRAS",
+        "target_dep_frac": 0.4164,
+        "top_lineage_in_ctx": "pancreas=0.25"
+      },
+      {
+        "context": "NRAS-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 54,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 1.1678,
+        "target": "NRAS",
+        "target_dep_frac": 0.0731,
+        "top_lineage_in_ctx": "blood=0.20"
+      },
+      {
+        "context": "PIK3CA-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 112,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.4305,
+        "target": "PIK3CA",
+        "target_dep_frac": 0.3461,
+        "top_lineage_in_ctx": "breast=0.14"
+      },
+      {
+        "context": "CTNNB1-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 41,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.5767,
+        "target": "CTNNB1",
+        "target_dep_frac": 0.1105,
+        "top_lineage_in_ctx": "lung=0.17"
+      },
+      {
+        "context": "EGFR-hotspot",
+        "in_top10": false,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 22,
+        "perm_p": 0.01649,
+        "rank": 38,
+        "sel_score": 0.1754,
+        "target": "EGFR",
+        "target_dep_frac": 0.1817,
+        "top_lineage_in_ctx": "lung=0.36"
+      },
+      {
+        "context": "TP53-wildtype",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 391,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.6464,
+        "target": "MDM2",
+        "target_dep_frac": 0.3288,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "skin",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 67,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 1.0349,
+        "target": "SOX10",
+        "target_dep_frac": 0.0995,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "ovary",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 57,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.5671,
+        "target": "PAX8",
+        "target_dep_frac": 0.074,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "blood",
+        "in_top10": false,
+        "in_top1pct": false,
+        "is_pan_essential": false,
+        "n_ctx": 58,
+        "perm_p": 0.0005,
+        "rank": 557,
+        "sel_score": 0.1241,
+        "target": "FLT3",
+        "target_dep_frac": 0.0082,
+        "top_lineage_in_ctx": null
+      }
+    ],
+    "pooled_perm_p": 5.583169802863192e-21,
+    "recovery_top10": 0.8,
+    "recovery_top1pct": 0.9
+  },
+  "G2_split": {
+    "n_test": 326,
+    "n_train": 769
+  },
+  "G2_test": {
+    "k_top1pct": 179,
+    "n_recovered_top10": 8,
+    "n_tested": 10,
+    "pairs": [
+      {
+        "context": "BRAF-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 28,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.8993,
+        "target": "BRAF",
+        "target_dep_frac": 0.0712,
+        "top_lineage_in_ctx": "skin=0.57"
+      },
+      {
+        "context": "KRAS-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 46,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 1.196,
+        "target": "KRAS",
+        "target_dep_frac": 0.4164,
+        "top_lineage_in_ctx": "pancreas=0.28"
+      },
+      {
+        "context": "NRAS-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 13,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 1.3383,
+        "target": "NRAS",
+        "target_dep_frac": 0.0731,
+        "top_lineage_in_ctx": "blood=0.15"
+      },
+      {
+        "context": "PIK3CA-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 30,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.4255,
+        "target": "PIK3CA",
+        "target_dep_frac": 0.3461,
+        "top_lineage_in_ctx": "ovary=0.17"
+      },
+      {
+        "context": "CTNNB1-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 13,
+        "perm_p": 0.0005,
+        "rank": 4,
+        "sel_score": 0.501,
+        "target": "CTNNB1",
+        "target_dep_frac": 0.1105,
+        "top_lineage_in_ctx": "colorectal=0.23"
+      },
+      {
+        "context": "EGFR-hotspot",
+        "in_top10": false,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 6,
+        "perm_p": 0.02849,
+        "rank": 43,
+        "sel_score": 0.2897,
+        "target": "EGFR",
+        "target_dep_frac": 0.1817,
+        "top_lineage_in_ctx": "lung=0.33"
+      },
+      {
+        "context": "TP53-wildtype",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 122,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.7193,
+        "target": "MDM2",
+        "target_dep_frac": 0.3288,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "skin",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 20,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 1.2624,
+        "target": "SOX10",
+        "target_dep_frac": 0.0995,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "ovary",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 17,
+        "perm_p": 0.0005,
+        "rank": 2,
+        "sel_score": 0.5902,
+        "target": "PAX8",
+        "target_dep_frac": 0.074,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "blood",
+        "in_top10": false,
+        "in_top1pct": false,
+        "is_pan_essential": false,
+        "n_ctx": 17,
+        "perm_p": 0.0005,
+        "rank": 476,
+        "sel_score": 0.1406,
+        "target": "FLT3",
+        "target_dep_frac": 0.0082,
+        "top_lineage_in_ctx": null
+      }
+    ],
+    "pooled_perm_p": 9.018273254906083e-21,
+    "recovery_top10": 0.8,
+    "recovery_top1pct": 0.9
+  },
+  "G2_train": {
+    "k_top1pct": 179,
+    "n_recovered_top10": 8,
+    "n_tested": 10,
+    "pairs": [
+      {
+        "context": "BRAF-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 66,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.7391,
+        "target": "BRAF",
+        "target_dep_frac": 0.0712,
+        "top_lineage_in_ctx": "skin=0.45"
+      },
+      {
+        "context": "KRAS-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 124,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 1.2294,
+        "target": "KRAS",
+        "target_dep_frac": 0.4164,
+        "top_lineage_in_ctx": "pancreas=0.24"
+      },
+      {
+        "context": "NRAS-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 41,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 1.1152,
+        "target": "NRAS",
+        "target_dep_frac": 0.0731,
+        "top_lineage_in_ctx": "blood=0.22"
+      },
+      {
+        "context": "PIK3CA-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 82,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.4306,
+        "target": "PIK3CA",
+        "target_dep_frac": 0.3461,
+        "top_lineage_in_ctx": "breast=0.15"
+      },
+      {
+        "context": "CTNNB1-hotspot",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 28,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.6123,
+        "target": "CTNNB1",
+        "target_dep_frac": 0.1105,
+        "top_lineage_in_ctx": "lung=0.21"
+      },
+      {
+        "context": "EGFR-hotspot",
+        "in_top10": false,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 16,
+        "perm_p": 0.06997,
+        "rank": 161,
+        "sel_score": 0.1317,
+        "target": "EGFR",
+        "target_dep_frac": 0.1817,
+        "top_lineage_in_ctx": "lung=0.38"
+      },
+      {
+        "context": "TP53-wildtype",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 269,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.613,
+        "target": "MDM2",
+        "target_dep_frac": 0.3288,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "skin",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 47,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.9381,
+        "target": "SOX10",
+        "target_dep_frac": 0.0995,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "ovary",
+        "in_top10": true,
+        "in_top1pct": true,
+        "is_pan_essential": false,
+        "n_ctx": 40,
+        "perm_p": 0.0005,
+        "rank": 1,
+        "sel_score": 0.5573,
+        "target": "PAX8",
+        "target_dep_frac": 0.074,
+        "top_lineage_in_ctx": null
+      },
+      {
+        "context": "blood",
+        "in_top10": false,
+        "in_top1pct": false,
+        "is_pan_essential": false,
+        "n_ctx": 41,
+        "perm_p": 0.0005,
+        "rank": 661,
+        "sel_score": 0.1172,
+        "target": "FLT3",
+        "target_dep_frac": 0.0082,
+        "top_lineage_in_ctx": null
+      }
+    ],
+    "pooled_perm_p": 1.9816473022295357e-20,
+    "recovery_top10": 0.8,
+    "recovery_top1pct": 0.9
+  },
+  "G3": {
+    "median_abs_rho_model": 0.3585,
+    "median_abs_rho_own_expr": 0.2013,
+    "median_absmodel_minus_absown": 0.1376,
+    "median_cv_rho_model": 0.3585,
+    "n_common_lines": 988,
+    "per_target": [
+      {
+        "cv_rho_model": 0.3335,
+        "gene": "BRAF",
+        "n": 988,
+        "rho_own_expr_baseline": -0.1066,
+        "target_dep_frac": 0.0712
+      },
+      {
+        "cv_rho_model": 0.4274,
+        "gene": "CTNNB1",
+        "n": 988,
+        "rho_own_expr_baseline": -0.2665,
+        "target_dep_frac": 0.1105
+      },
+      {
+        "cv_rho_model": 0.5564,
+        "gene": "EGFR",
+        "n": 988,
+        "rho_own_expr_baseline": -0.4314,
+        "target_dep_frac": 0.1817
+      },
+      {
+        "cv_rho_model": 0.1376,
+        "gene": "FLT3",
+        "n": 988,
+        "rho_own_expr_baseline": -0.0079,
+        "target_dep_frac": 0.0082
+      },
+      {
+        "cv_rho_model": 0.3834,
+        "gene": "KRAS",
+        "n": 988,
+        "rho_own_expr_baseline": -0.2384,
+        "target_dep_frac": 0.4164
+      },
+      {
+        "cv_rho_model": 0.5817,
+        "gene": "MDM2",
+        "n": 988,
+        "rho_own_expr_baseline": -0.4515,
+        "target_dep_frac": 0.3288
+      },
+      {
+        "cv_rho_model": 0.1288,
+        "gene": "NRAS",
+        "n": 988,
+        "rho_own_expr_baseline": -0.1259,
+        "target_dep_frac": 0.0731
+      },
+      {
+        "cv_rho_model": 0.3159,
+        "gene": "PAX8",
+        "n": 988,
+        "rho_own_expr_baseline": -0.2792,
+        "target_dep_frac": 0.074
+      },
+      {
+        "cv_rho_model": 0.4428,
+        "gene": "PIK3CA",
+        "n": 988,
+        "rho_own_expr_baseline": 0.0172,
+        "target_dep_frac": 0.3461
+      },
+      {
+        "cv_rho_model": 0.3267,
+        "gene": "SOX10",
+        "n": 988,
+        "rho_own_expr_baseline": -0.1642,
+        "target_dep_frac": 0.0995
+      }
+    ],
+    "perm_p_model_gt_own": 0.003
+  },
+  "K": 2000,
+  "dep_thresh": -0.5,
+  "gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS"
+  },
+  "git_sha": "2f512acc0be45716531770ef0cc34ee31981480d",
+  "input_sha256": {
+    "depmap_crispr_gene_effect.csv": "d1633bfa0bf4719e72e564f15d9bcda7fddbbd3dac2a8a3aebf4898ac9f56f00",
+    "depmap_expression.csv": "6b8d5f3c00ce73a5e025922d52b74929e19359e323786a0314410762b0c08a16",
+    "depmap_meta.csv": "382c0c26cf57a2fb82449f797c58cb0dfc2313949908d8f83560ebcf3e5bcbaa",
+    "depmap_mut_try1.csv": "e99e43789c1c4821ccb737a45cd6f4fbbeac709c5a8cca326846d6d9a16cf5c8"
+  },
+  "intermediate_n": 562,
+  "n_genes": 17931,
+  "n_lines": 1095,
+  "null_recovery_top10": 0.000558,
+  "pan_essential_n": 1020,
+  "pan_frac": 0.9,
+  "payload_sha256": "a7b57531de5e99dcff796cda8eabb1fe06cd84db9c187d7b334118c3d95de5dc",
+  "python": "3.11.14",
+  "rare_n": 12685,
+  "seed": 42,
+  "sel_band": [
+    0.01,
+    0.5
+  ],
+  "selective_n": 3664,
+  "sklearn": "1.8.0",
+  "timestamp_utc": "2026-08-06T01:48:41Z",
+  "topN": 2000,
+  "verdict": "G1 selective-dependency recovery=PASS (top10=0.80 vs null 0.0006); G2 held-out generalization=PASS (TEST top10=0.80); G3 label-free expr->dependency=PASS (median CV rho=0.36, beats own-expr=True). Scope: cancer cell-line Chronos dependency; NOT patient/clinical, NOT wet-lab."
+}
