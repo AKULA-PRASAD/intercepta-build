@@ -38,6 +38,16 @@ viral structures** (GENERALIZE2 boundary); clinical/real-world/proprietary omics
 **PARTIAL.** For bacteria/eukaryotic-pathogens we infer essential machinery & metabolism from genome alone. We
 do **not** do organism-ID from raw/environmental samples, imaging, or clinical symptoms — those are ABSENT.
 
+**Human-disease / oncology status (F3, consolidated — honest):** the human line has TWO separable claims and
+they land very differently. **(a) Patient drug-RESPONSE prediction = TESTED-AND-LARGELY-NEGATIVE** — external
+replication on a 2nd patient cohort (B20/FIMM) FAILS, TCGA outcome (B10) is cancer-type-confounded, clinical
+outcome (B17) is negative, PDXE-PRISM (B9) is null. This claim is **downgraded to NEGATIVE/gated**; the clinical
+endpoint needs prospective data (≡ F0). **(b) Dependency TARGET-ID = COMPUTED-validated (cell-line)** — DEPEND1
+generalizes across held-out cell lines and recovers known cancer targets; its patient-tumor-driver relevance is
+under honest test (F3CLIN1). The composite fires dependency for human/cancer as *target-ID*, and makes **no**
+patient-response claim. This is the program's weakest disease area, stated as such — not at parity with the
+validated bacterial result.
+
 ### Layer 2 — Representation
 **ENGINEERING.** Genome→proteome→GEM (CarveMe de-novo / curated BiGG), sequence & structure homology graphs,
 drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.

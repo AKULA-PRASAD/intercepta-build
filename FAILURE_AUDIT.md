@@ -64,22 +64,26 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
   novel-pathogen success.
 
 ## Tier 2 — real weaknesses needing an honest fix or an honest downgrade
-**F3 — The human-disease / oncology line (V1–V18+) is WEAK, and one claim was already downgraded.**
-- Evidence: most signals single-cohort (BeatAML); small effect sizes (ρ ≈ 0.05–0.2); **V14 external
-  drug-specificity DOWNGRADED — not robust**; **N1 mechanistic-coherence claim WITHDRAWN**. The one genuinely
-  promising piece is the *functional-inference layer* (V15–V18: expr→CRISPR-dependency rescues FLT3/BCL2
-  prediction where direct transcriptomics fails) — but cell-line / ex-vivo, single cohort.
-- Root cause: patient data is scarce/one-cohort; drug-response signal is mostly generic proliferation.
-- **Compute-solvable? PARTIALLY.**
-- **Real solution — PARTIALLY ADVANCED (DEPEND1):** (1) **Honesty first — VISION_MAP still states human-disease
-  is weaker than the bacterial result** (the *drug-response* line remains single-cohort). (2) BUT the
-  functional-dependency *target-ID* layer — the real human lead — is now **validated with held-out
-  generalization** (DEPEND1 G2: recovery holds on disjoint cell lines, closing the single-cohort criticism
-  *for the target-ID layer specifically*) plus a label-free arm (G3). So the human **target-ID** claim rises
-  from HYPOTHESIS toward COMPUTED-validated (cell-line). (3) **Still GATED:** the *patient/clinical* endpoint
-  and the *drug-response* transfer line (V-series) remain single-cohort/weak — DEPEND1 is cell-line dependency,
-  not clinical outcome. The next real human experiment is external replication on an independent patient/tumor
-  cohort; until then no clinical claim.
+**F3 — The human-disease / oncology *drug-response prediction* line is TESTED-AND-LARGELY-NEGATIVE (consolidated).**
+- **Consolidated evidence (F3 is NOT an untested gap — it was attacked five ways and mostly fails):**
+  - **B20 (FIMM/Malani, a genuine 2nd patient cohort): FAILS to replicate** — the decisive external test.
+  - **B10 (TCGA patient outcome): CONFOUNDED** — the raw signal is cancer-type, not drug-level prediction.
+  - **B17 (clinical outcome): HONEST NEGATIVE** — inferred-FLT3-dependency does not mark FLT3i survival benefit.
+  - **B9 (PDXE-PRISM): NULL**; **B11: NULL** (no novel BeatAML marker replicates cross-system); **V14 DOWNGRADED**
+    (PDXE drug-specificity not robust); **N1 WITHDRAWN**. Only B7/B3c are weak/borderline/same-cohort.
+- Root cause: patient drug response is dominated by non-cell-autonomous factors (microenvironment/immune/stroma)
+  + cross-institution assay differences + tiny effect sizes — a hard, field-wide gap, and retrospective cohort
+  mining has been exhausted here without a robust positive.
+- **Compute-solvable? For *response prediction* — NO (evidence says so).** More retrospective replications would
+  be cohort-shopping toward a false positive; do not run them.
+- **Real solution — the HONEST REFRAME (not more replication):**
+  (1) **DOWNGRADE the human *drug-response prediction* claim to NEGATIVE/gated** — tested five ways, largely
+  fails; needs prospective clinical data we do not have. State this plainly; make no patient-response claim.
+  (2) **The validated human deliverable is dependency *TARGET-ID*, not response prediction** — DEPEND1 (which
+  genes are selective cancer dependencies) generalizes across held-out cell lines and recovers known targets.
+  That is a real, honest, *different* claim (target biology), and its patient RELEVANCE (vs patient tumor
+  drivers) is being tested honestly in **F3CLIN1** — explicitly NOT response prediction.
+  (3) The *clinical endpoint* (patient outcome) remains **GATED — needs prospective data** (≡ F0). No shortcut.
 
 **F4 — Molecule half is a demonstrated ceiling (novel-target potency ≈ chance).**
 - Evidence: HIT1/HIT2/B48/B65 — docking heuristic (not ΔG); within-series potency ~chance without target
