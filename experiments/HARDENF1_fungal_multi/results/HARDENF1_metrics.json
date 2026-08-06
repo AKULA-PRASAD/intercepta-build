@@ -1,0 +1,33 @@
+{
+  "payload": {
+    "auroc": 0.5355,
+    "contingency": {
+      "FBA_only": 1,
+      "both": 6,
+      "exp_only": 230,
+      "neither": 534
+    },
+    "essentiality_source": "CGD phenotype annotations: inviable + LOF mutant (null/repressible/conditional)",
+    "fisher_p": 0.00409,
+    "gate": "OR>3 AND p<0.01",
+    "gate_pass": true,
+    "model": "Mirhakkak_Schaeuble_2021 (BioModels MODEL2110210002)",
+    "n_exp_essential_mapped_in_model": 236,
+    "n_exp_essential_total": 1666,
+    "n_fba_essential": 7,
+    "n_genes": 771,
+    "n_genes_resolved_to_a22_universe": 768,
+    "odds_ratio": 13.93,
+    "organism": "Candida albicans SC5314 (real fungal pathogen)",
+    "precision": 0.857,
+    "recall": 0.025
+  },
+  "provenance": {
+    "git_sha": "5475768cd2da46b20365969cd5fe3259eb2dfb90",
+    "model_sha256": "b92fe385e452c09b29f6205e66f1009c22aa6b4c7252425de7ceb3a55d8df972",
+    "pheno_sha256": "7a05dd6615aa093599013b50aea12fcc72da0fbba76ee66e3b1dfee250e22587",
+    "utc": "2026-08-06T03:06:43Z"
+  },
+  "runtime_sec": 6.9,
+  "verdict": "HARDENING TEST (eukaryote FBA-essentiality on a REAL FUNGAL PATHOGEN): on Candida albicans SC5314 (Mirhakkak-2021 curated GEM vs CGD curated inviable/loss-of-function essentiality), FBA single-gene-deletion essentiality is ENRICHED for experimental essentiality among the model's metabolic genes: OR 13.93 (Fisher one-sided p 0.00409), precision 0.857, recall 0.025, AUROC 0.5355. Contingency {'both': 6, 'FBA_only': 1, 'exp_only': 230, 'neither': 534}. Gate (OR>3 AND p<0.01): PASS. ID mapping 768/771 GEM genes -> CGD A22 systematic (3 mtDNA CM_ genes unmapped), no namespace artifact. This HARDENS the eukaryote->FBA entry beyond the n=1 model-yeast (GENERALIZE4) to a clinically relevant fungal pathogen. SCOPE: essentiality-enrichment only; in-silico FBA vs a curated published essentiality resource (not wet-lab); curated model is still a model; recall bounded by the metabolic subproteome; non-annotated genes treated non-essential (absence of evidence). S. pombe attempted but reported as an honest boundary (no open curated GEM with usable GPRs CPU-only)."
+}

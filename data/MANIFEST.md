@@ -285,3 +285,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## HARDENP1 parasite FBA n>1 Toxoplasma (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/hardenp1/ — iTgo2020 curated T. gondii GEM (Krishnan 2020, PARADIGM models/published) +
   Sidik 2016 genome-wide CRISPR phenotype table (Cell, open Elsevier suppl mmc3.xlsx). Open; regenerable; never committed.
+
+## HARDENF1 fungal pathogen FBA n>1 Candida (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/hardenf1/ — C. albicans curated GEM (Mirhakkak & Schäuble 2021, BioModels MODEL2110210002)
+  + CGD curated inviable/loss-of-function essentiality (Roemer 2003 GRACE + later) + CGD A22 ID map. Open;
+  regenerable; never committed.
