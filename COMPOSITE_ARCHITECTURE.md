@@ -13,9 +13,11 @@ A single universal predictor for "any disease" is not just infeasible — our ev
 *dishonest*, because **the signal that carries target-discovery information is different for different
 biology**:
 - Free-living **bacteria** → metabolic **FBA-essentiality** is strong (VERIFIED, OR 5–64, prospective-blind).
-- Free-living **eukaryote/fungus** → FBA-essentiality **transfers, weaker** (GENERALIZE4, OR 4.65).
-- Host-dependent **parasite** → FBA **fails** three ways (GENERALIZE5 + HOSTCTX1 + HOSTCTX2); it is the WRONG
-  signal for host-embedded metabolism.
+- **Eukaryote / fungal pathogen** → FBA-essentiality **transfers** (GENERALIZE4 yeast OR 4.65; HARDENF1
+  *Candida* OR 13.93 — n≥2, incl. a clinical pathogen; precise-but-narrow, rich-medium → low recall).
+- Host-dependent **parasite** → **GEM-dependent, NOT categorical** (corrected by HARDENP1): FBA FAILS on
+  *Plasmodium* (GENERALIZE5 + HOSTCTX1/2 — iPfal19 salvage-bypass topology) but PASSES on *Toxoplasma* (HARDENP1
+  OR 14.10). Host-embeddedness does not decide it; GEM topology quality does.
 - **Virus** → no metabolism (FBA n/a), sequence homology fails, but **structural homology** recovers the
   drugged folds (GENERALIZE2/3, PASS).
 - Human cell / **cancer** → the promising signal is **functional dependency** (V15–18), not metabolism.
@@ -32,7 +34,7 @@ those signals. This is the rigorous answer to the transfer question:
 
 | Signal (module) | Transfers from A→B **when…** | Evidence for the condition | Breaks when… |
 |---|---|---|---|
-| **FBA gene-essentiality** | B has a **self-contained metabolism** captured by a quality GEM | bacteria OR 5–64; yeast OR 4.65; parasite FAILS | metabolism is host-embedded (salvage bypass) — GENERALIZE5/HOSTCTX1/2 |
+| **FBA gene-essentiality** | B's GEM **topology encodes genuine biosynthetic dependence** (a quality GEM) — NOT determined by host-embeddedness | bacteria OR 5–64 (n=6); yeast OR 4.65 + *Candida* OR 13.93; **Toxoplasma OR 14.10 (host-dependent, PASSES)** | the specific GEM is salvage-bypass-heavy → essentials read dispensable (*Plasmodium*/iPfal19, GENERALIZE5/HOSTCTX1/2) — a GEM-quality failure, not a host-embeddedness rule (HARDENP1) |
 | **Sequence homology** (target/drug) | B shares **detectable sequence identity** with A's known targets/drugs | INTERVENE1 9/9 canonical; bacteria panels | cross-family distance (virus: 0 hits) — GENERALIZE1 |
 | **Structural homology** (Foldseek) — for target CLASS-ID | B's protein **fold is conserved** with a known target/drug + a structure exists | GENERALIZE2/3 recovers Mpro/RdRp at <10% seq id | no structure available (AF-DB viral gap) |
 | **Structural REPURPOSING** (coverage) — ⚠ FALSIFIED as a coverage-expander | (does NOT transfer for coverage) | STRUCTREPURPOSE1 NEGATIVE: validates 11/11 but a random-protein null matched *more* targets than drug targets — "expanded coverage" was fold-census promiscuity | at "same-fold" TM almost any large structure set matches almost any enzyme → use structure to CONFIRM a known drug's class, NOT to widen the drugged-target set |
@@ -80,7 +82,7 @@ answer for a parasite (which GENERALIZE5 shows would be wrong).
 | Free-living eukaryote/fungus | FBA(weaker) + breadth | COMPUTED/VERIFIED | validated enrichment (GENERALIZE4) |
 | Virus | structural-homology (+ structural-repurposing) | COMPUTED | PASS, structure-gated (GENERALIZE3; STRUCTREPURPOSE1 pending) |
 | Human / cancer | **functional-dependency (DEPEND1)** | **COMPUTED (validated + held-out generalization)** | selective dependency recovers known targets, generalizes to disjoint lines, + label-free arm (DEPEND1 G1/G2/G3); cell-line, not clinical |
-| Host-dependent parasite (novel/zero-screen) | ABSTAIN (empirically justified) — only conserved-core available via conservation, NOT selective dependency | GATED (organism-transfer TESTED and failed the decisive guard) | TRANSFER1: label-free dependency transfer to a zero-screen parasite recovers only conserved-core (redundant with REACH1); the SELECTIVE signal does NOT transfer (OR 0.90, chance). Router keeps abstaining. |
+| Host-dependent parasite | **FBA IF a good-topology curated GEM exists** (Toxoplasma PASS OR 14.10) — flag elevated uncertainty (Plasmodium fails on a salvage-heavy GEM); dependency path ABSTAINS for zero-screen | MIXED (FBA GEM-dependent; label-free dependency GATED) | HARDENP1: FBA works with a quality GEM, not categorically gated. TRANSFER1: label-free dependency does NOT transfer to a zero-screen parasite (only conserved-core, redundant with REACH1). Net: try FBA w/ a curated GEM (uncertain a-priori), else conserved-core via conservation. |
 | Unknown organism | detector + whatever conditions hold | ENGINEERING | the honest general case: apply-what-transfers, abstain otherwise |
 
 ## 5. "Papers → book" — the publication/deliverable structure

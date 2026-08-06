@@ -66,11 +66,16 @@ drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.
   exchanges exist), not regulatory *state* — so the indicated fix is host-exchange/medium curation (HOSTCTX2),
   not transcriptomics.** Directly relevant to the whole host-embedded class (intracellular pathogens, cancer).
 - **HOSTCTX2 (exchange/medium curation) — also NEGATIVE, verified:** moves the set (recall 0.20→0.30) but OR
-  stays flat 2.43 (<3), robust ×3 a-priori media, no precision collapse. **UNIFIED CONCLUSION (3 negatives —
-  plain + expression + boundary FBA all fail on host-dependent biology): metabolic essentiality is the WRONG
-  signal for host-embedded systems (parasite→intracellular→cancer). Evidence-based redirection: pivot to a
-  functional-DEPENDENCY layer (CRISPR fitness) — exactly what the human/oncology line's best result (V15–18)
-  already uses. For host-embedded target-ID, dependency > metabolic essentiality.**
+  stays flat 2.43 (<3), robust ×3 a-priori media, no precision collapse. On *Plasmodium*, plain + expression +
+  boundary FBA all fail.
+- **⚠ CORRECTED by HARDENP1 (Wave 4, n=2):** the tempting conclusion "metabolic essentiality is the WRONG signal
+  for host-embedded biology" is **FALSIFIED as a universal rule** — a second host-dependent parasite,
+  *Toxoplasma gondii*, PASSES FBA strongly (OR 14.10, recall 0.51). Corrected statement: **FBA-essentiality's
+  reach is GEM-topology/organism-specific — NOT determined by host-embeddedness.** Plasmodium's failure is most
+  plausibly iPfal19's salvage-bypass topology + high base rate, not host-dependence per se (confound: different
+  GEM teams + screen technologies). Functional dependency (DEPEND1) remains a valid host-embedded signal *where
+  a screen exists*, and FBA *also* works on host-embedded organisms with a good-topology GEM — complementary,
+  not one-replaces-the-other.
 - **DEPEND1 (Wave 3, VERIFIED G1/G2/G3 PASS, 5b3cb7a) — the redirection realized:** the functional-dependency
   target-ID layer (DepMap CRISPR) recovers known cancer targets (0.80, p 5.6e-21), **generalizes to held-out
   disjoint cell lines** (0.80, p 9e-21 — closing the F3 single-cohort gap for the target-ID layer), and a

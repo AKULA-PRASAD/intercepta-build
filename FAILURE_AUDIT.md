@@ -37,19 +37,23 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
   F4)**, not a coverage bug. The honest deliverable: repurposing covers the small drugged-homolog fraction
   (validated); the rest is experiment/chemistry-gated and must be labelled so — no false "expanded coverage".
 
-**F2 — FBA-essentiality FAILS on host-dependent organisms (parasites; and by extension human/cancer).**
-- Evidence: GENERALIZE5 malaria OR 2.47 (sub-threshold). HOSTCTX1: expression context (E-Flux) does NOT fix
-  it — the wall is *structural* (GPR bypass topology, not flux magnitude).
-- Root cause: host-salvage "workaround" reactions in the network keep true essentials looking dispensable.
-- **Compute-solvable? TESTED — NO, not with FBA.** Three verified negatives now: plain FBA (GENERALIZE5),
-  expression-context E-Flux (HOSTCTX1), and host-exchange/medium curation (HOSTCTX2). Boundary curation was
-  *directionally* correct (recall 0.20→0.30) but OR stayed flat (2.43<3) — enrichment never improved.
-- **Real solution — REALIZED (DEPEND1, Wave 3, VERIFIED G1/G2/G3 PASS):** metabolic FBA is the wrong signal
-  for host-embedded biology; the **functional-DEPENDENCY layer** is the right one and now clears the bar —
-  selective dependency recovers known cancer targets (0.80), **generalizes to held-out disjoint lines** (0.80,
-  the F3 gap), and a **label-free expr→dependency** arm beats baseline (the zero-data case). So the F2↔F3
-  redirection is not just a direction — it is validated: for the host-embedded class, dependency > metabolic
-  essentiality. **Remaining honest gaps:** DEPEND1 is cancer cell-line (not patient/clinical); the label-free
+**F2 — FBA-essentiality is GEM/organism-specific on host-dependent organisms (NOT a categorical failure).**
+- ⚠ **CORRECTED (HARDENP1, Wave 4).** The n=1 framing of this failure ("FBA fails on host-embedded biology")
+  was an overgeneralization. On *Plasmodium* FBA fails (GENERALIZE5 OR 2.47; HOSTCTX1 expression + HOSTCTX2
+  boundary curation both NEGATIVE — the wall there is iPfal19's salvage-bypass topology, GPR-bypass not flux).
+  **But on a second host-dependent parasite, *Toxoplasma gondii*, FBA PASSES strongly (HARDENP1 OR 14.10,
+  recall 0.51).** So host-embeddedness does NOT predict FBA failure.
+- Corrected root cause: whether FBA works is governed by the **specific GEM's topology** (does it encode genuine
+  biosynthetic dependence, or pervasive salvage bypasses?) + base rate — not the host-embedded category.
+- **Compute-solvable? Organism/GEM-dependent.** Where a good-topology GEM exists it works (Toxoplasma); where
+  the GEM is salvage-heavy it fails and patching (expression/medium) doesn't rescue it (Plasmodium). Honest
+  confound on the n=2 comparison: different GEM curation teams + different screen technologies.
+- **Complementary signal (DEPEND1, Wave 3, VERIFIED G1/G2/G3 PASS):** where FBA is weak/unavailable, the
+  **functional-DEPENDENCY layer** is a validated alternative — selective dependency recovers known cancer
+  targets (0.80), **generalizes to held-out disjoint lines** (0.80, the F3 gap), and a **label-free
+  expr→dependency** arm beats baseline. *(Post-HARDENP1 framing: dependency and FBA are COMPLEMENTARY
+  host-embedded signals — dependency where a screen exists, FBA where a good-topology GEM exists — not "one
+  replaces the other".)* **Remaining honest gaps:** DEPEND1 is cancer cell-line (not patient/clinical); the label-free
   arm is validated on held-out DepMap lines. **Organism-transfer to a true zero-screen novel pathogen — now
   TESTED (TRANSFER1, 37caa0d): it FAILS.** The selective-dependency signal does not survive transfer to a
   zero-screen parasite (OR 0.90, chance); only conserved-core transfers (redundant with REACH1 conservation),
