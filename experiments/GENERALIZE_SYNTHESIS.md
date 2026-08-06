@@ -42,6 +42,25 @@ signal to the organism's biology.**
     reasoning layer. This is exactly the gap the human/oncology line (V-series, mostly weak/single-cohort)
     already hinted at.
 
+## Host-context wall — attack #1 (HOSTCTX1, E-Flux): the wall is STRUCTURAL, not flux
+The parasite FAIL (GENERALIZE5) was diagnosed as host-salvage "workarounds" making the default-medium GEM
+over-permissive. **HOSTCTX1 tested the first fix — expression-constrained context-specific FBA (E-Flux) — in a
+clean controlled A/B (same GEM/truth/gate; only variable = blood-stage transcriptomics). Result: NEGATIVE,
+verified, reproduced ×2 (sha a3c5c3c2), robust across 6 scaling variants.** E-Flux left the essential set
+byte-identical (OR unchanged 2.47).
+
+**Why it matters (mechanism, not excuse):** single-gene essentiality is governed by **GPR bypass topology**
+(can biomass route around the deletion?), *not* by flux magnitude. E-Flux throttles reaction *capacities* but
+never *shuts* an expressed reaction, and the salvage workarounds are themselves expressed — so they stay
+topologically usable however you down-weight them. **The malaria wall is a property of network *content/
+boundary* (which reactions and exchanges exist), not of the *regulatory state* (which genes are on).**
+
+**Consequence — the mechanistically-indicated next attack (HOSTCTX2, not yet run):** a genuine rescue requires
+changing network *content*, not expression — i.e. **restricting the model's exchange/import reactions to what
+the host RBC actually provides** (host-exchange / medium curation, or explicit host–parasite compartment
+modeling), forcing reliance on the parasite's own essential pathways. Whether *that* rescues the signal is the
+open question; expression context is now falsified as the lever.
+
 ## Honest limits of this fusion
 Each class is **n=1** (one virus, one yeast, one parasite) — these are *frontier probes*, not population claims.
 All are in-silico enrichment / prioritization; none is wet-lab. The eukaryote is a model organism, not a

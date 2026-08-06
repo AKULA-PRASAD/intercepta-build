@@ -59,6 +59,12 @@ drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.
   fails, but **blind structural homology recovers both approved targets** (PASS). Governing principle:
   FBA's reach ∝ how self-contained the metabolism is; where metabolism can't carry the signal, structure can.
   **Boundary: host-dependent organisms need host-context-aware modeling, not plain FBA.**
+- **Host-context wall, attack #1 (HOSTCTX1, E-Flux) — NEGATIVE, verified:** adding expression context to the
+  malaria GEM does NOT rescue the signal (essential set byte-identical, OR unchanged 2.47, robust ×6 variants).
+  Mechanism: single-gene essentiality = GPR **bypass topology**, not flux magnitude; expressed salvage routes
+  stay usable however throttled. **Refined boundary: the wall is network *content/boundary* (which reactions/
+  exchanges exist), not regulatory *state* — so the indicated fix is host-exchange/medium curation (HOSTCTX2),
+  not transcriptomics.** Directly relevant to the whole host-embedded class (intracellular pathogens, cancer).
 
 ### Layer 4 — Target discovery
 **VERIFIED (bacterial essential-target enrichment) / COMPUTED (multi-axis).** DiscoveryEngine composes 7 signals
