@@ -114,7 +114,10 @@ transfer-condition gate: it fires the right validated signal per class and ABSTA
 Verified on 3 classes (bacterium→FBA shortlist == committed ENGINE; virus→structural, FBA not fired;
 host-dependent parasite→ABSTENTION). This is the composite "spine" that turns many validated models into one
 system delivering **honest decision coverage** (a real answer where a signal transfers, an explicit abstention
-where none does) — not a universal model. See `COMPOSITE_ARCHITECTURE.md`.
+where none does) — not a universal model. **COMPOSITE2 (58f9e5d) wired in the DEPEND1 dependency layer:** the
+router now FIRES functional-dependency for the human/cancer class (skin→SOX10, KRAS→KRAS rank #1) while the
+novel parasite STILL ABSTAINS (transfer-condition-precise) — the host-embedded half now has a live validated
+signal in the composite, not just an abstention. See `COMPOSITE_ARCHITECTURE.md`.
 
 ### Layer 9 — Autonomous scientist
 **EMERGING (this is what today's parallel waves are).** Hypothesis generation, prereg, self-critique, honest

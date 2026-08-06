@@ -108,10 +108,11 @@ Each validated model is a standalone contribution (paper); the book is the integ
 2. ~~**Wave 3 — functional-dependency layer**~~ **✅ BUILT + VERIFIED (DEPEND1, 5b3cb7a): G1/G2/G3 PASS** —
    selective dependency recovers known cancer targets (0.80), **generalizes to held-out disjoint lines** (the
    F3 gap), and a **label-free expr→dependency** arm beats baseline (the zero-data case). The signal
-   host-embedded biology needs now exists and generalizes. **Next wiring step (router v2 / COMPOSITE2):** fire
-   functional-dependency for the human/cancer class in the router (un-gate its "NOT BUILT" slot); keep the
-   novel-parasite case abstaining until the label-free arm is transferred to a true zero-screen organism.
-   Remaining honest gap: cell-line, not patient/clinical.
+   host-embedded biology needs now exists and generalizes. **✅ WIRED (router v2 / COMPOSITE2, 58f9e5d):** the
+   router now FIRES functional-dependency for the human/cancer class (skin→SOX10, KRAS-hotspot→KRAS, both rank
+   #1; FBA gated out), while the novel parasite STILL ABSTAINS (transfer-condition-precise: no parasite screen;
+   label-free not organism-transferred). 16/16 unit tests, reproduced ×2 (sha aebe8543). Remaining honest gaps:
+   cell-line not clinical; parasite un-gating awaits label-free organism-transfer.
 3. **STRUCTREPURPOSE1** — DONE, NEGATIVE: structural repurposing validates known pharmacology (11/11) but does
    NOT expand novel coverage (promiscuity; null matched more than drug targets). Consequence: the intervention
    module honestly covers only the drugged-homolog fraction; novel-target intervention is de-novo-gated (F4),
