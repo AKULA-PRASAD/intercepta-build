@@ -1,0 +1,852 @@
+{
+  "provenance": {
+    "git_sha": "37944af19ea34d31cfe67b528bcfb1cb0f0d026d",
+    "utc": "2026-08-06T02:48:10Z"
+  },
+  "runtime_sec": 2.6,
+  "summary": {
+    "GATE": "PASS",
+    "confounds": "qtmscore query-length-normalized -> very large multidomain queries (HSV_POL ~1035 res) can score <0.40 despite a real domain match (same effect as SARS-CoV-2 spike in G3). In-silico structural class-ID on experimental structures; not wet-lab. Coarse functional classes.",
+    "method": "reuse GENERALIZE3 cleaning (longest target chain, MSE->MET, drop ligands/ions/waters/NA) + Foldseek --alignment-type 1; per-virus family leakage exclusion applied at scoring.",
+    "n_recover": 7,
+    "n_targets": 9,
+    "n_targets_correct_class_wins_offclass": 8,
+    "n_viruses": 4,
+    "n_viruses_with_recovery": 4,
+    "per_target": {
+      "FLU_NA": {
+        "RECOVER": true,
+        "best_alntm": 0.702,
+        "best_correct_class_tm": 0.653,
+        "best_hit": "bacterial-sialidase",
+        "best_offclass_tm": 0.313,
+        "best_seq_ident": 0.063,
+        "best_tm": 0.653,
+        "correct_class": "glycosidase",
+        "leakage_excluded_refs": [],
+        "offclass_win_margin": 0.34,
+        "predicted_class": "glycosidase",
+        "query_pdb": "2hu4",
+        "top3": [
+          {
+            "alntm": 0.702,
+            "class": "glycosidase",
+            "label": "bacterial-sialidase",
+            "ref": "2sil",
+            "seq_ident": 0.063,
+            "tm": 0.653
+          },
+          {
+            "alntm": 0.336,
+            "class": "kinase",
+            "label": "Src-kinase",
+            "ref": "2src",
+            "seq_ident": 0.016,
+            "tm": 0.313
+          },
+          {
+            "alntm": 0.328,
+            "class": "esterase",
+            "label": "acetylcholinesterase",
+            "ref": "1acj",
+            "seq_ident": 0.021,
+            "tm": 0.308
+          }
+        ],
+        "virus": "InfluenzaA"
+      },
+      "FLU_PA": {
+        "RECOVER": false,
+        "best_alntm": 0.432,
+        "best_correct_class_tm": 0.403,
+        "best_hit": "androgen-receptor",
+        "best_offclass_tm": 0.418,
+        "best_seq_ident": 0.022,
+        "best_tm": 0.418,
+        "correct_class": "nuclease",
+        "leakage_excluded_refs": [],
+        "offclass_win_margin": -0.015,
+        "predicted_class": "nuclear_receptor",
+        "query_pdb": "4awm",
+        "top3": [
+          {
+            "alntm": 0.432,
+            "class": "nuclear_receptor",
+            "label": "androgen-receptor",
+            "ref": "1e3g",
+            "seq_ident": 0.022,
+            "tm": 0.418
+          },
+          {
+            "alntm": 0.413,
+            "class": "helicase",
+            "label": "PcrA-helicase-DNA",
+            "ref": "3pjr",
+            "seq_ident": 0.028,
+            "tm": 0.411
+          },
+          {
+            "alntm": 0.418,
+            "class": "gpcr",
+            "label": "rhodopsin-GPCR",
+            "ref": "1f88",
+            "seq_ident": 0.015,
+            "tm": 0.409
+          }
+        ],
+        "virus": "InfluenzaA"
+      },
+      "HCV_NS3": {
+        "RECOVER": true,
+        "best_alntm": 0.707,
+        "best_correct_class_tm": 0.697,
+        "best_hit": "thrombin",
+        "best_offclass_tm": 0.392,
+        "best_seq_ident": 0.074,
+        "best_tm": 0.697,
+        "correct_class": "protease",
+        "leakage_excluded_refs": [
+          "4wtg"
+        ],
+        "offclass_win_margin": 0.305,
+        "predicted_class": "protease",
+        "query_pdb": "1a1r",
+        "top3": [
+          {
+            "alntm": 0.707,
+            "class": "protease",
+            "label": "thrombin",
+            "ref": "1ppb",
+            "seq_ident": 0.074,
+            "tm": 0.697
+          },
+          {
+            "alntm": 0.66,
+            "class": "protease",
+            "label": "rhinovirus-3C-protease",
+            "ref": "1cqq",
+            "seq_ident": 0.088,
+            "tm": 0.657
+          },
+          {
+            "alntm": 0.392,
+            "class": "esterase",
+            "label": "acetylcholinesterase",
+            "ref": "1acj",
+            "seq_ident": 0.027,
+            "tm": 0.392
+          }
+        ],
+        "virus": "HCV"
+      },
+      "HCV_NS5B": {
+        "RECOVER": true,
+        "best_alntm": 0.592,
+        "best_correct_class_tm": 0.416,
+        "best_hit": "HIV-RT",
+        "best_offclass_tm": 0.286,
+        "best_seq_ident": 0.04,
+        "best_tm": 0.416,
+        "correct_class": "polymerase",
+        "leakage_excluded_refs": [
+          "4wtg"
+        ],
+        "offclass_win_margin": 0.13,
+        "predicted_class": "polymerase",
+        "query_pdb": "4wtg",
+        "top3": [
+          {
+            "alntm": 0.592,
+            "class": "polymerase",
+            "label": "HIV-RT",
+            "ref": "3hvt",
+            "seq_ident": 0.04,
+            "tm": 0.416
+          },
+          {
+            "alntm": 0.323,
+            "class": "helicase",
+            "label": "PcrA-helicase-DNA",
+            "ref": "3pjr",
+            "seq_ident": 0.015,
+            "tm": 0.286
+          },
+          {
+            "alntm": 0.276,
+            "class": "helicase",
+            "label": "PcrA-helicase",
+            "ref": "1pjr",
+            "seq_ident": 0.017,
+            "tm": 0.261
+          }
+        ],
+        "virus": "HCV"
+      },
+      "HIV_IN": {
+        "RECOVER": true,
+        "best_alntm": 0.615,
+        "best_correct_class_tm": 0.49,
+        "best_hit": "E.coli-RNaseH",
+        "best_offclass_tm": 0.41,
+        "best_seq_ident": 0.064,
+        "best_tm": 0.49,
+        "correct_class": "nuclease",
+        "leakage_excluded_refs": [
+          "1hxw",
+          "3hvt"
+        ],
+        "offclass_win_margin": 0.08,
+        "predicted_class": "nuclease",
+        "query_pdb": "1itg",
+        "top3": [
+          {
+            "alntm": 0.615,
+            "class": "nuclease",
+            "label": "E.coli-RNaseH",
+            "ref": "2rn2",
+            "seq_ident": 0.064,
+            "tm": 0.49
+          },
+          {
+            "alntm": 0.435,
+            "class": "polymerase",
+            "label": "DNApol-Klenow",
+            "ref": "1kln",
+            "seq_ident": 0.046,
+            "tm": 0.41
+          },
+          {
+            "alntm": 0.475,
+            "class": "methyltransferase",
+            "label": "COMT-MTase",
+            "ref": "1vid",
+            "seq_ident": 0.014,
+            "tm": 0.386
+          }
+        ],
+        "virus": "HIV-1"
+      },
+      "HIV_PR": {
+        "RECOVER": true,
+        "best_alntm": 0.799,
+        "best_correct_class_tm": 0.792,
+        "best_hit": "pepsin-aspartic",
+        "best_offclass_tm": 0.422,
+        "best_seq_ident": 0.043,
+        "best_tm": 0.792,
+        "correct_class": "protease",
+        "leakage_excluded_refs": [
+          "1hxw",
+          "3hvt"
+        ],
+        "offclass_win_margin": 0.37,
+        "predicted_class": "protease",
+        "query_pdb": "1hxw",
+        "top3": [
+          {
+            "alntm": 0.799,
+            "class": "protease",
+            "label": "pepsin-aspartic",
+            "ref": "4pep",
+            "seq_ident": 0.043,
+            "tm": 0.792
+          },
+          {
+            "alntm": 0.789,
+            "class": "protease",
+            "label": "renin-aspartic",
+            "ref": "2ren",
+            "seq_ident": 0.044,
+            "tm": 0.783
+          },
+          {
+            "alntm": 0.502,
+            "class": "protease",
+            "label": "thrombin",
+            "ref": "1ppb",
+            "seq_ident": 0.006,
+            "tm": 0.482
+          }
+        ],
+        "virus": "HIV-1"
+      },
+      "HIV_RT": {
+        "RECOVER": true,
+        "best_alntm": 0.592,
+        "best_correct_class_tm": 0.413,
+        "best_hit": "HCV-NS5B-RdRp",
+        "best_offclass_tm": 0.265,
+        "best_seq_ident": 0.035,
+        "best_tm": 0.413,
+        "correct_class": "polymerase",
+        "leakage_excluded_refs": [
+          "1hxw",
+          "3hvt"
+        ],
+        "offclass_win_margin": 0.148,
+        "predicted_class": "polymerase",
+        "query_pdb": "1rt1",
+        "top3": [
+          {
+            "alntm": 0.592,
+            "class": "polymerase",
+            "label": "HCV-NS5B-RdRp",
+            "ref": "4wtg",
+            "seq_ident": 0.035,
+            "tm": 0.413
+          },
+          {
+            "alntm": 0.328,
+            "class": "helicase",
+            "label": "PcrA-helicase",
+            "ref": "1pjr",
+            "seq_ident": 0.017,
+            "tm": 0.265
+          },
+          {
+            "alntm": 0.256,
+            "class": "polymerase",
+            "label": "DNApol-Klenow",
+            "ref": "1kln",
+            "seq_ident": 0.013,
+            "tm": 0.246
+          }
+        ],
+        "virus": "HIV-1"
+      },
+      "HSV_POL": {
+        "RECOVER": false,
+        "best_alntm": 0.373,
+        "best_correct_class_tm": 0.211,
+        "best_hit": "HCV-NS5B-RdRp",
+        "best_offclass_tm": 0.199,
+        "best_seq_ident": 0.023,
+        "best_tm": 0.211,
+        "correct_class": "polymerase",
+        "leakage_excluded_refs": [],
+        "offclass_win_margin": 0.012,
+        "predicted_class": "polymerase",
+        "query_pdb": "2gv9",
+        "top3": [
+          {
+            "alntm": 0.373,
+            "class": "polymerase",
+            "label": "HCV-NS5B-RdRp",
+            "ref": "4wtg",
+            "seq_ident": 0.023,
+            "tm": 0.211
+          },
+          {
+            "alntm": 0.33,
+            "class": "helicase",
+            "label": "PcrA-helicase",
+            "ref": "1pjr",
+            "seq_ident": 0.016,
+            "tm": 0.199
+          },
+          {
+            "alntm": 0.323,
+            "class": "polymerase",
+            "label": "DNApol-Klenow",
+            "ref": "1kln",
+            "seq_ident": 0.021,
+            "tm": 0.195
+          }
+        ],
+        "virus": "HSV-1"
+      },
+      "HSV_TK": {
+        "RECOVER": true,
+        "best_alntm": 0.578,
+        "best_correct_class_tm": 0.426,
+        "best_hit": "adenylate-kinase",
+        "best_offclass_tm": 0.41,
+        "best_seq_ident": 0.064,
+        "best_tm": 0.426,
+        "correct_class": "kinase",
+        "leakage_excluded_refs": [],
+        "offclass_win_margin": 0.016,
+        "predicted_class": "kinase",
+        "query_pdb": "2ki5",
+        "top3": [
+          {
+            "alntm": 0.578,
+            "class": "kinase",
+            "label": "adenylate-kinase",
+            "ref": "4ake",
+            "seq_ident": 0.064,
+            "tm": 0.426
+          },
+          {
+            "alntm": 0.434,
+            "class": "esterase",
+            "label": "acetylcholinesterase",
+            "ref": "1acj",
+            "seq_ident": 0.038,
+            "tm": 0.41
+          },
+          {
+            "alntm": 0.432,
+            "class": "methyltransferase",
+            "label": "DNA-adenine-MTase",
+            "ref": "2adm",
+            "seq_ident": 0.016,
+            "tm": 0.351
+          }
+        ],
+        "virus": "HSV-1"
+      }
+    },
+    "per_virus": {
+      "HCV": {
+        "n_recover": 2,
+        "n_targets": 2,
+        "recovered": [
+          "HCV_NS3",
+          "HCV_NS5B"
+        ],
+        "targets": [
+          "HCV_NS3",
+          "HCV_NS5B"
+        ]
+      },
+      "HIV-1": {
+        "n_recover": 3,
+        "n_targets": 3,
+        "recovered": [
+          "HIV_IN",
+          "HIV_PR",
+          "HIV_RT"
+        ],
+        "targets": [
+          "HIV_IN",
+          "HIV_PR",
+          "HIV_RT"
+        ]
+      },
+      "HSV-1": {
+        "n_recover": 1,
+        "n_targets": 2,
+        "recovered": [
+          "HSV_TK"
+        ],
+        "targets": [
+          "HSV_POL",
+          "HSV_TK"
+        ]
+      },
+      "InfluenzaA": {
+        "n_recover": 1,
+        "n_targets": 2,
+        "recovered": [
+          "FLU_NA"
+        ],
+        "targets": [
+          "FLU_NA",
+          "FLU_PA"
+        ]
+      }
+    },
+    "query_clean_report": {
+      "FLU_NA": {
+        "chain_residues": 385,
+        "chosen_chain": "A",
+        "correct_class": "glycosidase",
+        "n_chains_in_file": 8,
+        "pdb": "2hu4",
+        "virus_family": "orthomyxovirus"
+      },
+      "FLU_PA": {
+        "chain_residues": 178,
+        "chosen_chain": "A",
+        "correct_class": "nuclease",
+        "n_chains_in_file": 1,
+        "pdb": "4awm",
+        "virus_family": "orthomyxovirus"
+      },
+      "HCV_NS3": {
+        "chain_residues": 179,
+        "chosen_chain": "B",
+        "correct_class": "protease",
+        "n_chains_in_file": 4,
+        "pdb": "1a1r",
+        "virus_family": "flavivirus"
+      },
+      "HCV_NS5B": {
+        "chain_residues": 535,
+        "chosen_chain": "A",
+        "correct_class": "polymerase",
+        "n_chains_in_file": 1,
+        "pdb": "4wtg",
+        "virus_family": "flavivirus"
+      },
+      "HIV_IN": {
+        "chain_residues": 142,
+        "chosen_chain": "A",
+        "correct_class": "nuclease",
+        "n_chains_in_file": 1,
+        "pdb": "1itg",
+        "virus_family": "retrovirus"
+      },
+      "HIV_PR": {
+        "chain_residues": 99,
+        "chosen_chain": "A",
+        "correct_class": "protease",
+        "n_chains_in_file": 2,
+        "pdb": "1hxw",
+        "virus_family": "retrovirus"
+      },
+      "HIV_RT": {
+        "chain_residues": 538,
+        "chosen_chain": "A",
+        "correct_class": "polymerase",
+        "n_chains_in_file": 2,
+        "pdb": "1rt1",
+        "virus_family": "retrovirus"
+      },
+      "HSV_POL": {
+        "chain_residues": 1035,
+        "chosen_chain": "B",
+        "correct_class": "polymerase",
+        "n_chains_in_file": 2,
+        "pdb": "2gv9",
+        "virus_family": "herpesvirus"
+      },
+      "HSV_TK": {
+        "chain_residues": 308,
+        "chosen_chain": "B",
+        "correct_class": "kinase",
+        "n_chains_in_file": 2,
+        "pdb": "2ki5",
+        "virus_family": "herpesvirus"
+      }
+    },
+    "random_baseline_recovery_prob": 0.071,
+    "recovery_fraction": 0.778,
+    "ref_clean_report": {
+      "1acj": {
+        "chain_residues": 528,
+        "chosen_chain": "A",
+        "class": "esterase",
+        "family": "nonviral",
+        "label": "acetylcholinesterase",
+        "n_chains_in_file": 1
+      },
+      "1atp": {
+        "chain_residues": 334,
+        "chosen_chain": "E",
+        "class": "kinase",
+        "family": "nonviral",
+        "label": "PKA-kinase",
+        "n_chains_in_file": 2
+      },
+      "1bl8": {
+        "chain_residues": 97,
+        "chosen_chain": "A",
+        "class": "ion_channel",
+        "family": "nonviral",
+        "label": "KcsA-Kchannel",
+        "n_chains_in_file": 4
+      },
+      "1cqq": {
+        "chain_residues": 180,
+        "chosen_chain": "A",
+        "class": "protease",
+        "family": "picornavirus",
+        "label": "rhinovirus-3C-protease",
+        "n_chains_in_file": 1
+      },
+      "1e3g": {
+        "chain_residues": 250,
+        "chosen_chain": "A",
+        "class": "nuclear_receptor",
+        "family": "nonviral",
+        "label": "androgen-receptor",
+        "n_chains_in_file": 1
+      },
+      "1err": {
+        "chain_residues": 224,
+        "chosen_chain": "A",
+        "class": "nuclear_receptor",
+        "family": "nonviral",
+        "label": "estrogen-receptor",
+        "n_chains_in_file": 2
+      },
+      "1f88": {
+        "chain_residues": 338,
+        "chosen_chain": "A",
+        "class": "gpcr",
+        "family": "nonviral",
+        "label": "rhodopsin-GPCR",
+        "n_chains_in_file": 2
+      },
+      "1hck": {
+        "chain_residues": 294,
+        "chosen_chain": "A",
+        "class": "kinase",
+        "family": "nonviral",
+        "label": "CDK2-kinase",
+        "n_chains_in_file": 1
+      },
+      "1hw9": {
+        "chain_residues": 408,
+        "chosen_chain": "A",
+        "class": "reductase",
+        "family": "nonviral",
+        "label": "HMG-CoA-reductase",
+        "n_chains_in_file": 4
+      },
+      "1hxw": {
+        "chain_residues": 99,
+        "chosen_chain": "A",
+        "class": "protease",
+        "family": "retrovirus",
+        "label": "HIV-protease",
+        "n_chains_in_file": 2
+      },
+      "1kln": {
+        "chain_residues": 595,
+        "chosen_chain": "A",
+        "class": "polymerase",
+        "family": "nonviral",
+        "label": "DNApol-Klenow",
+        "n_chains_in_file": 1
+      },
+      "1m17": {
+        "chain_residues": 312,
+        "chosen_chain": "A",
+        "class": "kinase",
+        "family": "nonviral",
+        "label": "EGFR-kinase",
+        "n_chains_in_file": 1
+      },
+      "1pjr": {
+        "chain_residues": 623,
+        "chosen_chain": "A",
+        "class": "helicase",
+        "family": "nonviral",
+        "label": "PcrA-helicase",
+        "n_chains_in_file": 1
+      },
+      "1ppb": {
+        "chain_residues": 259,
+        "chosen_chain": "H",
+        "class": "protease",
+        "family": "nonviral",
+        "label": "thrombin",
+        "n_chains_in_file": 2
+      },
+      "1rnb": {
+        "chain_residues": 109,
+        "chosen_chain": "A",
+        "class": "nuclease",
+        "family": "nonviral",
+        "label": "barnase",
+        "n_chains_in_file": 1
+      },
+      "1rve": {
+        "chain_residues": 244,
+        "chosen_chain": "A",
+        "class": "nuclease",
+        "family": "nonviral",
+        "label": "EcoRV-endonuclease",
+        "n_chains_in_file": 2
+      },
+      "1rx2": {
+        "chain_residues": 159,
+        "chosen_chain": "A",
+        "class": "reductase",
+        "family": "nonviral",
+        "label": "DHFR",
+        "n_chains_in_file": 1
+      },
+      "1tlp": {
+        "chain_residues": 316,
+        "chosen_chain": "E",
+        "class": "protease",
+        "family": "nonviral",
+        "label": "thermolysin",
+        "n_chains_in_file": 1
+      },
+      "1vid": {
+        "chain_residues": 213,
+        "chosen_chain": "A",
+        "class": "methyltransferase",
+        "family": "nonviral",
+        "label": "COMT-MTase",
+        "n_chains_in_file": 1
+      },
+      "2adm": {
+        "chain_residues": 385,
+        "chosen_chain": "A",
+        "class": "methyltransferase",
+        "family": "nonviral",
+        "label": "DNA-adenine-MTase",
+        "n_chains_in_file": 2
+      },
+      "2cba": {
+        "chain_residues": 258,
+        "chosen_chain": "A",
+        "class": "lyase",
+        "family": "nonviral",
+        "label": "carbonic-anhydrase-II",
+        "n_chains_in_file": 1
+      },
+      "2hnp": {
+        "chain_residues": 278,
+        "chosen_chain": "A",
+        "class": "phosphatase",
+        "family": "nonviral",
+        "label": "PTP1B-phosphatase",
+        "n_chains_in_file": 1
+      },
+      "2prg": {
+        "chain_residues": 271,
+        "chosen_chain": "A",
+        "class": "nuclear_receptor",
+        "family": "nonviral",
+        "label": "PPARg",
+        "n_chains_in_file": 3
+      },
+      "2ren": {
+        "chain_residues": 320,
+        "chosen_chain": "A",
+        "class": "protease",
+        "family": "nonviral",
+        "label": "renin-aspartic",
+        "n_chains_in_file": 1
+      },
+      "2rh1": {
+        "chain_residues": 442,
+        "chosen_chain": "A",
+        "class": "gpcr",
+        "family": "nonviral",
+        "label": "beta2-GPCR",
+        "n_chains_in_file": 1
+      },
+      "2rn2": {
+        "chain_residues": 155,
+        "chosen_chain": "A",
+        "class": "nuclease",
+        "family": "nonviral",
+        "label": "E.coli-RNaseH",
+        "n_chains_in_file": 1
+      },
+      "2sil": {
+        "chain_residues": 381,
+        "chosen_chain": "A",
+        "class": "glycosidase",
+        "family": "nonviral",
+        "label": "bacterial-sialidase",
+        "n_chains_in_file": 1
+      },
+      "2src": {
+        "chain_residues": 449,
+        "chosen_chain": "A",
+        "class": "kinase",
+        "family": "nonviral",
+        "label": "Src-kinase",
+        "n_chains_in_file": 1
+      },
+      "3eml": {
+        "chain_residues": 448,
+        "chosen_chain": "A",
+        "class": "gpcr",
+        "family": "nonviral",
+        "label": "A2A-GPCR",
+        "n_chains_in_file": 1
+      },
+      "3hvt": {
+        "chain_residues": 555,
+        "chosen_chain": "A",
+        "class": "polymerase",
+        "family": "retrovirus",
+        "label": "HIV-RT",
+        "n_chains_in_file": 2
+      },
+      "3pjr": {
+        "chain_residues": 646,
+        "chosen_chain": "A",
+        "class": "helicase",
+        "family": "nonviral",
+        "label": "PcrA-helicase-DNA",
+        "n_chains_in_file": 1
+      },
+      "4ake": {
+        "chain_residues": 214,
+        "chosen_chain": "A",
+        "class": "kinase",
+        "family": "nonviral",
+        "label": "adenylate-kinase",
+        "n_chains_in_file": 2
+      },
+      "4cha": {
+        "chain_residues": 131,
+        "chosen_chain": "B",
+        "class": "protease",
+        "family": "nonviral",
+        "label": "chymotrypsin",
+        "n_chains_in_file": 6
+      },
+      "4pep": {
+        "chain_residues": 325,
+        "chosen_chain": "A",
+        "class": "protease",
+        "family": "nonviral",
+        "label": "pepsin-aspartic",
+        "n_chains_in_file": 1
+      },
+      "4wtg": {
+        "chain_residues": 535,
+        "chosen_chain": "A",
+        "class": "polymerase",
+        "family": "flavivirus",
+        "label": "HCV-NS5B-RdRp",
+        "n_chains_in_file": 1
+      },
+      "7rsa": {
+        "chain_residues": 124,
+        "chosen_chain": "A",
+        "class": "nuclease",
+        "family": "nonviral",
+        "label": "RNaseA",
+        "n_chains_in_file": 1
+      },
+      "9pap": {
+        "chain_residues": 211,
+        "chosen_chain": "A",
+        "class": "protease",
+        "family": "nonviral",
+        "label": "papain",
+        "n_chains_in_file": 1
+      }
+    },
+    "reference_classes": [
+      "esterase",
+      "glycosidase",
+      "gpcr",
+      "helicase",
+      "ion_channel",
+      "kinase",
+      "lyase",
+      "methyltransferase",
+      "nuclear_receptor",
+      "nuclease",
+      "phosphatase",
+      "polymerase",
+      "protease",
+      "reductase"
+    ],
+    "reference_n_classes": 14,
+    "reference_panel_size": 37,
+    "test": "HARDENV1 cross-virus blind structural target-class recovery (Foldseek TMalign, query-normalized qtmscore)",
+    "tm_bar": 0.4,
+    "verdict": "CROSS-VIRUS STRUCTURAL RECOVERY (PASS). Across 9 clinically drugged targets on 4 viruses (HIV-1, Influenza A, HCV, HSV-1), blind Foldseek-TM vs a FROZEN 37-structure 14-class panel (per-virus same-family refs leakage-excluded) recovered the CORRECT drugged-enzyme class for 7/9 targets (fraction 0.778) across 4 viruses, vs a ~0.071 random-class baseline. A MAJORITY of known viral drug targets across >=3 additional viruses recover their correct class by structure alone, above a broad multi-class off-class baseline, with same-family analogs excluded -> GENERALIZE3's SARS-CoV-2 result is NOT a one-off; the structural bridge is a cross-virus property (n>1 established). SCOPE: in-silico structural class-ID on experimental PDB structures; not wet-lab; establishes (or bounds) cross-virus generality of the structural signal, not a deployed pipeline.",
+    "viruses_with_recovery": [
+      "HCV",
+      "HIV-1",
+      "HSV-1",
+      "InfluenzaA"
+    ]
+  }
+}

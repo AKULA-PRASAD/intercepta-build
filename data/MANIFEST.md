@@ -276,3 +276,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/transfer1/ — S. cerevisiae proteome + P.falciparum<->human and <->yeast mmseqs RBH ortholog
   TSVs. Reuses DepMap (kaalcura/data), Zhang 2018 + P.falciparum proteome (generalize5/tid1), yeast essentials
   (generalize4) read-only. Open; regenerable; never committed.
+
+## HARDENV1 virus structural n>1 (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/hardenv1/ — experimental RCSB PDB structures for 9 drugged viral targets (HIV/Flu/HCV/HSV)
+  + a frozen 37-structure/14-class drugged-enzyme reference panel (GENERALIZE3's 31 + 6 cross-family analogs).
+  Open (RCSB); regenerable; never committed.
