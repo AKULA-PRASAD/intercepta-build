@@ -71,6 +71,14 @@ drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.
   signal for host-embedded systems (parasite→intracellular→cancer). Evidence-based redirection: pivot to a
   functional-DEPENDENCY layer (CRISPR fitness) — exactly what the human/oncology line's best result (V15–18)
   already uses. For host-embedded target-ID, dependency > metabolic essentiality.**
+- **DEPEND1 (Wave 3, VERIFIED G1/G2/G3 PASS, 5b3cb7a) — the redirection realized:** the functional-dependency
+  target-ID layer (DepMap CRISPR) recovers known cancer targets (0.80, p 5.6e-21), **generalizes to held-out
+  disjoint cell lines** (0.80, p 9e-21 — closing the F3 single-cohort gap for the target-ID layer), and a
+  **label-free expr→dependency** arm beats baseline (ρ 0.36 vs 0.20) — the zero-data case a novel host-embedded
+  organism represents. So where metabolic FBA failed host-embedded biology ×3, functional dependency
+  **succeeds and generalizes**. Honest bounds: cancer cell-line (not clinical); label-free validated on
+  held-out DepMap lines, not yet on a true zero-screen organism; lineage-level misses mutation-subset
+  dependencies (FLT3).
 
 ### Layer 4 — Target discovery
 **VERIFIED (bacterial essential-target enrichment) / COMPUTED (multi-axis).** DiscoveryEngine composes 7 signals

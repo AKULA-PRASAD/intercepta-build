@@ -44,13 +44,15 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
 - **Compute-solvable? TESTED — NO, not with FBA.** Three verified negatives now: plain FBA (GENERALIZE5),
   expression-context E-Flux (HOSTCTX1), and host-exchange/medium curation (HOSTCTX2). Boundary curation was
   *directionally* correct (recall 0.20→0.30) but OR stayed flat (2.43<3) — enrichment never improved.
-- **Real solution (RESOLVED DIRECTION):** metabolic-essentiality FBA is the **wrong signal for host-embedded
-  biology** — it assumes a self-contained metabolism host-dependent organisms lack. Do NOT keep patching the
-  GEM (diminishing returns; would need host–parasite compartment modeling + a de-novo-lipid GEM). **Pivot to a
-  functional-DEPENDENCY reasoning layer** (context-specific CRISPR/knockout fitness), which is exactly what the
-  human/oncology line's most promising result already uses (V15–V18). **This unifies F2 with F3: for the whole
-  host-embedded class (parasite → intracellular → human/cancer), dependency > metabolic essentiality.** That is
-  the evidence-based Wave-3 direction, not more FBA.
+- **Real solution — REALIZED (DEPEND1, Wave 3, VERIFIED G1/G2/G3 PASS):** metabolic FBA is the wrong signal
+  for host-embedded biology; the **functional-DEPENDENCY layer** is the right one and now clears the bar —
+  selective dependency recovers known cancer targets (0.80), **generalizes to held-out disjoint lines** (0.80,
+  the F3 gap), and a **label-free expr→dependency** arm beats baseline (the zero-data case). So the F2↔F3
+  redirection is not just a direction — it is validated: for the host-embedded class, dependency > metabolic
+  essentiality. **Remaining honest gaps:** DEPEND1 is cancer cell-line (not patient/clinical); the label-free
+  arm is validated on held-out DepMap lines, **not yet transferred to a true zero-screen novel pathogen**
+  (parasite/intracellular) — that organism-transfer is the next real test. Do NOT claim clinical or
+  novel-pathogen success.
 
 ## Tier 2 — real weaknesses needing an honest fix or an honest downgrade
 **F3 — The human-disease / oncology line (V1–V18+) is WEAK, and one claim was already downgraded.**
@@ -60,11 +62,15 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
   prediction where direct transcriptomics fails) — but cell-line / ex-vivo, single cohort.
 - Root cause: patient data is scarce/one-cohort; drug-response signal is mostly generic proliferation.
 - **Compute-solvable? PARTIALLY.**
-- **Real solution:** (1) **Honesty first — VISION_MAP must state human-disease is the WEAKEST layer, not
-  imply parity with the bacterial result.** (2) The functional-inference layer is the real human lead and is
-  the SAME "context-specific dependency" idea F2 points to — the highest-value human experiment is an
-  *external replication on a 2nd independent patient cohort* (if openly available). (3) Until then, human
-  claims stay tier HYPOTHESIS, not VALIDATED.
+- **Real solution — PARTIALLY ADVANCED (DEPEND1):** (1) **Honesty first — VISION_MAP still states human-disease
+  is weaker than the bacterial result** (the *drug-response* line remains single-cohort). (2) BUT the
+  functional-dependency *target-ID* layer — the real human lead — is now **validated with held-out
+  generalization** (DEPEND1 G2: recovery holds on disjoint cell lines, closing the single-cohort criticism
+  *for the target-ID layer specifically*) plus a label-free arm (G3). So the human **target-ID** claim rises
+  from HYPOTHESIS toward COMPUTED-validated (cell-line). (3) **Still GATED:** the *patient/clinical* endpoint
+  and the *drug-response* transfer line (V-series) remain single-cohort/weak — DEPEND1 is cell-line dependency,
+  not clinical outcome. The next real human experiment is external replication on an independent patient/tumor
+  cohort; until then no clinical claim.
 
 **F4 — Molecule half is a demonstrated ceiling (novel-target potency ≈ chance).**
 - Evidence: HIT1/HIT2/B48/B65 — docking heuristic (not ΔG); within-series potency ~chance without target

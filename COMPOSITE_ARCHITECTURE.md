@@ -37,7 +37,7 @@ those signals. This is the rigorous answer to the transfer question:
 | **Structural homology** (Foldseek) — for target CLASS-ID | B's protein **fold is conserved** with a known target/drug + a structure exists | GENERALIZE2/3 recovers Mpro/RdRp at <10% seq id | no structure available (AF-DB viral gap) |
 | **Structural REPURPOSING** (coverage) — ⚠ FALSIFIED as a coverage-expander | (does NOT transfer for coverage) | STRUCTREPURPOSE1 NEGATIVE: validates 11/11 but a random-protein null matched *more* targets than drug targets — "expanded coverage" was fold-census promiscuity | at "same-fold" TM almost any large structure set matches almost any enzyme → use structure to CONFIRM a known drug's class, NOT to widen the drugged-target set |
 | **Conservation breadth** | the essential is part of a **broadly conserved core** | REACH1 AUROC 0.86 for non-metabolic essentials | lineage-specific essentials |
-| **Functional dependency** (CRISPR) | a **context-specific dependency signal** exists or an expr→dependency map is learnable | V13/V16–18 (FLT3/BCL2 rescue) | no dependency data / no learnable map |
+| **Functional dependency** (CRISPR) — ✅ VALIDATED (DEPEND1) | a **context-specific dependency signal** exists or an expr→dependency map is learnable | **DEPEND1 G1/G2/G3 PASS**: selective dependencies recover known targets (0.80), generalize to held-out lines (0.80), label-free expr→dep beats baseline (ρ 0.36); + V13/V16–18 | no dependency data AND no learnable expr→dep map; label-free not yet shown on a true zero-screen organism |
 | **Host-safety filter** | B's targets can be compared to the **host proteome** | ENGINE hard filter (Hart CEG2 + human homology) | host unknown |
 
 **The unifying law:** a signal transfers exactly as far as the *biological invariant it rides on* is conserved
@@ -79,8 +79,8 @@ answer for a parasite (which GENERALIZE5 shows would be wrong).
 | Bacterium (free-living) | FBA + chokepoint + breadth + structure + safety + resistance + condition | **VERIFIED** | shipped (ENGINE, ENGINE-AB, SAUREUS, CROSSVAL, BLIND1) |
 | Free-living eukaryote/fungus | FBA(weaker) + breadth | COMPUTED/VERIFIED | validated enrichment (GENERALIZE4) |
 | Virus | structural-homology (+ structural-repurposing) | COMPUTED | PASS, structure-gated (GENERALIZE3; STRUCTREPURPOSE1 pending) |
-| Host-dependent parasite | **none validated yet** → ABSTAIN | GATED | FBA falsified ×3; needs dependency layer (Wave 3) |
-| Human / cancer | functional-dependency (weak, single-cohort) | HYPOTHESIS | V15–18; needs external replication (F3) |
+| Human / cancer | **functional-dependency (DEPEND1)** | **COMPUTED (validated + held-out generalization)** | selective dependency recovers known targets, generalizes to disjoint lines, + label-free arm (DEPEND1 G1/G2/G3); cell-line, not clinical |
+| Host-dependent parasite | functional-dependency **in principle** (label-free expr→dep); no parasite screen yet → ABSTAIN until transferred | GATED (signal validated in human cancer; not yet organism-transferred) | FBA falsified ×3; DEPEND1 validated the signal + label-free inference, but not yet on a zero-screen parasite |
 | Unknown organism | detector + whatever conditions hold | ENGINEERING | the honest general case: apply-what-transfers, abstain otherwise |
 
 ## 5. "Papers → book" — the publication/deliverable structure
@@ -105,8 +105,13 @@ Each validated model is a standalone contribution (paper); the book is the integ
    **host-dependent parasite→ABSTENTION** (the decisive integrity test — refuses the wrong FBA answer). The
    spine exists. Next: as DEPEND1 (Wave 3) validates a functional-dependency signal, the router's currently
    "NOT BUILT → never fires" gate for host-embedded biology gets un-gated to that signal.
-2. **Wave 3 — functional-dependency layer for host-embedded biology** (the F2↔F3 unification): the validated
-   signal parasites/cancer need. Hardest, highest-leverage.
+2. ~~**Wave 3 — functional-dependency layer**~~ **✅ BUILT + VERIFIED (DEPEND1, 5b3cb7a): G1/G2/G3 PASS** —
+   selective dependency recovers known cancer targets (0.80), **generalizes to held-out disjoint lines** (the
+   F3 gap), and a **label-free expr→dependency** arm beats baseline (the zero-data case). The signal
+   host-embedded biology needs now exists and generalizes. **Next wiring step (router v2 / COMPOSITE2):** fire
+   functional-dependency for the human/cancer class in the router (un-gate its "NOT BUILT" slot); keep the
+   novel-parasite case abstaining until the label-free arm is transferred to a true zero-screen organism.
+   Remaining honest gap: cell-line, not patient/clinical.
 3. **STRUCTREPURPOSE1** — DONE, NEGATIVE: structural repurposing validates known pharmacology (11/11) but does
    NOT expand novel coverage (promiscuity; null matched more than drug targets). Consequence: the intervention
    module honestly covers only the drugged-homolog fraction; novel-target intervention is de-novo-gated (F4),
