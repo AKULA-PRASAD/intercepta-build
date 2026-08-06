@@ -247,3 +247,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/generalize5/ — iPfal19.xml (curated P. falciparum GEM, PARADIGM/GitHub maureencarey/paradigm),
   Zhang 2018 piggyBac essentiality via PlasmoDB (zhang2018_essentiality.csv + Pf3D7 annotations/aliases). Open;
   regenerable; never committed.
+
+## GENERALIZE4 eukaryote FBA (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/generalize4/ — iMM904.xml (curated S. cerevisiae GEM, BiGG), deg_euk/deg_annotation_e.csv
+  (DEG2001 Giaever 2002 essential set), SGD_features.tab (SGD R64 ID map). Open; regenerable; never committed.
