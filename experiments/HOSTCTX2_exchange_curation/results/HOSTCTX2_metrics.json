@@ -1,0 +1,342 @@
+{
+  "payload": {
+    "baseline_reproduced_vs_GENERALIZE5": true,
+    "gate_verdicts_primary_definition": {
+      "curated_permissive": {
+        "baseline_n_fba_essential_mapped": 69,
+        "essential_set_balloon_artifact": false,
+        "n_fba_essential_mapped": 101,
+        "or_improves_over_baseline": false,
+        "precision_ok(>=0.5)": true,
+        "verdict": "NEGATIVE"
+      },
+      "curated_primary": {
+        "baseline_n_fba_essential_mapped": 69,
+        "essential_set_balloon_artifact": false,
+        "n_fba_essential_mapped": 106,
+        "or_improves_over_baseline": false,
+        "precision_ok(>=0.5)": true,
+        "verdict": "NEGATIVE"
+      },
+      "curated_strict": {
+        "baseline_n_fba_essential_mapped": 69,
+        "essential_set_balloon_artifact": false,
+        "n_fba_essential_mapped": 108,
+        "or_improves_over_baseline": false,
+        "precision_ok(>=0.5)": true,
+        "verdict": "NEGATIVE"
+      }
+    },
+    "host_available_sets": {
+      "curated_permissive": [
+        "EX_4abz_e",
+        "EX_ade_e",
+        "EX_adn_e",
+        "EX_arg__L_e",
+        "EX_asn__L_e",
+        "EX_asp__L_e",
+        "EX_chol_e",
+        "EX_co2_e",
+        "EX_cysi__L_e",
+        "EX_dad_2_e",
+        "EX_dgsn_e",
+        "EX_din_e",
+        "EX_etha_e",
+        "EX_fe2_e",
+        "EX_fol_e",
+        "EX_glc__D_e",
+        "EX_gln__L_e",
+        "EX_glu__L_e",
+        "EX_gly_e",
+        "EX_glyc_e",
+        "EX_gsn_e",
+        "EX_gthrd_e",
+        "EX_gua_e",
+        "EX_h2o_e",
+        "EX_h_e",
+        "EX_hb_e",
+        "EX_hco3_e",
+        "EX_his__L_e",
+        "EX_hxan_e",
+        "EX_ile__L_e",
+        "EX_inost_e",
+        "EX_ins_e",
+        "EX_leu__L_e",
+        "EX_lipid_c",
+        "EX_lys__L_e",
+        "EX_met__L_e",
+        "EX_ncam_e",
+        "EX_no3_e",
+        "EX_o2_e",
+        "EX_phe__L_e",
+        "EX_pi_e",
+        "EX_pnto_R_e",
+        "EX_pnto__R_e",
+        "EX_pro__L_e",
+        "EX_pydxn_e",
+        "EX_ribflv_e",
+        "EX_ser__L_e",
+        "EX_so4_e",
+        "EX_thm_e",
+        "EX_thr__L_e",
+        "EX_trp__L_e",
+        "EX_tyr__L_e",
+        "EX_val__L_e",
+        "EX_xan_e"
+      ],
+      "curated_primary": [
+        "EX_4abz_e",
+        "EX_arg__L_e",
+        "EX_asn__L_e",
+        "EX_asp__L_e",
+        "EX_chol_e",
+        "EX_co2_e",
+        "EX_cysi__L_e",
+        "EX_fe2_e",
+        "EX_fol_e",
+        "EX_glc__D_e",
+        "EX_gln__L_e",
+        "EX_glu__L_e",
+        "EX_gly_e",
+        "EX_gthrd_e",
+        "EX_h2o_e",
+        "EX_h_e",
+        "EX_hb_e",
+        "EX_hco3_e",
+        "EX_his__L_e",
+        "EX_hxan_e",
+        "EX_ile__L_e",
+        "EX_inost_e",
+        "EX_leu__L_e",
+        "EX_lipid_c",
+        "EX_lys__L_e",
+        "EX_met__L_e",
+        "EX_ncam_e",
+        "EX_no3_e",
+        "EX_o2_e",
+        "EX_phe__L_e",
+        "EX_pi_e",
+        "EX_pnto_R_e",
+        "EX_pnto__R_e",
+        "EX_pro__L_e",
+        "EX_pydxn_e",
+        "EX_ribflv_e",
+        "EX_ser__L_e",
+        "EX_so4_e",
+        "EX_thm_e",
+        "EX_thr__L_e",
+        "EX_trp__L_e",
+        "EX_tyr__L_e",
+        "EX_val__L_e"
+      ],
+      "curated_strict": [
+        "EX_chol_e",
+        "EX_co2_e",
+        "EX_fe2_e",
+        "EX_fol_e",
+        "EX_glc__D_e",
+        "EX_h2o_e",
+        "EX_h_e",
+        "EX_hb_e",
+        "EX_hco3_e",
+        "EX_hxan_e",
+        "EX_ile__L_e",
+        "EX_inost_e",
+        "EX_lipid_c",
+        "EX_ncam_e",
+        "EX_o2_e",
+        "EX_pi_e",
+        "EX_pnto_R_e",
+        "EX_pnto__R_e",
+        "EX_pydxn_e",
+        "EX_ribflv_e",
+        "EX_so4_e",
+        "EX_thm_e"
+      ]
+    },
+    "manipulated_variable": "exchange/import (uptake) bounds only \u2014 host-RBC-available nutrient set",
+    "model": "iPfal19",
+    "n_genes_mapped_to_zhang": 424,
+    "n_genes_unmapped": 51,
+    "n_model_genes": 475,
+    "organism": "Plasmodium falciparum 3D7 (malaria)",
+    "results_by_medium": {
+      "baseline_default_open": {
+        "feasible": true,
+        "n_fba_essential_total": 80,
+        "n_host_available_set": null,
+        "n_open_uptake_exchanges": 195,
+        "primary": {
+          "auroc": 0.559,
+          "contingency": {
+            "FBA_only": 14,
+            "both": 55,
+            "exp_only": 218,
+            "neither": 137
+          },
+          "definition": "phenotype:Non-Mutable-in-CDS",
+          "fisher_p_greater": 0.002166,
+          "gate_pass": false,
+          "n_exp_essential_mapped": 273,
+          "n_fba_essential_mapped": 69,
+          "odds_ratio": 2.469,
+          "precision": 0.797,
+          "recall": 0.201
+        },
+        "sensitivity_MIS": {
+          "auroc": 0.5363,
+          "contingency": {
+            "FBA_only": 30,
+            "both": 39,
+            "exp_only": 162,
+            "neither": 193
+          },
+          "definition": "MIS<=0.2",
+          "fisher_p_greater": 0.06359,
+          "gate_pass": false,
+          "n_exp_essential_mapped": 201,
+          "n_fba_essential_mapped": 69,
+          "odds_ratio": 1.549,
+          "precision": 0.565,
+          "recall": 0.194
+        },
+        "wt_growth": 31.3953
+      },
+      "curated_permissive": {
+        "feasible": true,
+        "n_fba_essential_total": 112,
+        "n_host_available_set": 54,
+        "n_open_uptake_exchanges": 54,
+        "primary": {
+          "auroc": 0.575,
+          "contingency": {
+            "FBA_only": 23,
+            "both": 78,
+            "exp_only": 195,
+            "neither": 128
+          },
+          "definition": "phenotype:Non-Mutable-in-CDS",
+          "fisher_p_greater": 0.001208,
+          "gate_pass": false,
+          "n_exp_essential_mapped": 273,
+          "n_fba_essential_mapped": 101,
+          "odds_ratio": 2.226,
+          "precision": 0.772,
+          "recall": 0.286
+        },
+        "sensitivity_MIS": {
+          "auroc": 0.5559,
+          "contingency": {
+            "FBA_only": 43,
+            "both": 58,
+            "exp_only": 143,
+            "neither": 180
+          },
+          "definition": "MIS<=0.2",
+          "fisher_p_greater": 0.01402,
+          "gate_pass": false,
+          "n_exp_essential_mapped": 201,
+          "n_fba_essential_mapped": 101,
+          "odds_ratio": 1.698,
+          "precision": 0.574,
+          "recall": 0.289
+        },
+        "wt_growth": 31.286
+      },
+      "curated_primary": {
+        "feasible": true,
+        "n_fba_essential_total": 117,
+        "n_host_available_set": 43,
+        "n_open_uptake_exchanges": 43,
+        "primary": {
+          "auroc": 0.5884,
+          "contingency": {
+            "FBA_only": 23,
+            "both": 83,
+            "exp_only": 190,
+            "neither": 128
+          },
+          "definition": "phenotype:Non-Mutable-in-CDS",
+          "fisher_p_greater": 0.0003135,
+          "gate_pass": false,
+          "n_exp_essential_mapped": 273,
+          "n_fba_essential_mapped": 106,
+          "odds_ratio": 2.431,
+          "precision": 0.783,
+          "recall": 0.304
+        },
+        "sensitivity_MIS": {
+          "auroc": 0.564,
+          "contingency": {
+            "FBA_only": 44,
+            "both": 62,
+            "exp_only": 139,
+            "neither": 179
+          },
+          "definition": "MIS<=0.2",
+          "fisher_p_greater": 0.005738,
+          "gate_pass": false,
+          "n_exp_essential_mapped": 201,
+          "n_fba_essential_mapped": 106,
+          "odds_ratio": 1.815,
+          "precision": 0.585,
+          "recall": 0.308
+        },
+        "wt_growth": 15.5655
+      },
+      "curated_strict": {
+        "feasible": true,
+        "n_fba_essential_total": 119,
+        "n_host_available_set": 22,
+        "n_open_uptake_exchanges": 22,
+        "primary": {
+          "auroc": 0.583,
+          "contingency": {
+            "FBA_only": 25,
+            "both": 83,
+            "exp_only": 190,
+            "neither": 126
+          },
+          "definition": "phenotype:Non-Mutable-in-CDS",
+          "fisher_p_greater": 0.001039,
+          "gate_pass": false,
+          "n_exp_essential_mapped": 273,
+          "n_fba_essential_mapped": 108,
+          "odds_ratio": 2.202,
+          "precision": 0.769,
+          "recall": 0.304
+        },
+        "sensitivity_MIS": {
+          "auroc": 0.5613,
+          "contingency": {
+            "FBA_only": 46,
+            "both": 62,
+            "exp_only": 139,
+            "neither": 177
+          },
+          "definition": "MIS<=0.2",
+          "fisher_p_greater": 0.01073,
+          "gate_pass": false,
+          "n_exp_essential_mapped": 201,
+          "n_fba_essential_mapped": 108,
+          "odds_ratio": 1.716,
+          "precision": 0.574,
+          "recall": 0.308
+        },
+        "wt_growth": 15.5649
+      }
+    }
+  },
+  "provenance": {
+    "cobra_version": "0.31.1",
+    "file_hashes": {
+      "alias_sha256": "a2d3ea592d5f4b9efdd3b9a123d0a6c1804721d3b073a11c4b465fb741f4fc06",
+      "model_sha256": "7a19f5b77aa0b1d4dc0106b9d81df8b1f623b4310191807e0dc34b360c190d24",
+      "zhang_sha256": "b8790819987171f29036b741b0fa3c68bcf8ae688dc31d0e05277c1370bc7ec5"
+    },
+    "git_sha": "d1f89b68172ddf38cc3163f03b32ba61c14d1cb5",
+    "runtime_sec": 14.0,
+    "utc": "2026-08-06T01:07:08Z"
+  },
+  "verdict": "baseline_reproduced_vs_GENERALIZE5 = True\nbaseline_default_open  feasible=True WT= 31.3953 n_open=195 OR= 2.469 p=2.17e-03 prec=0.797 rec=0.201 auroc=0.559 cont={'both': 55, 'FBA_only': 14, 'exp_only': 218, 'neither': 137} n_ess_map=69 gate=False\ncurated_primary        feasible=True WT= 15.5655 n_open= 43 OR= 2.431 p=3.13e-04 prec=0.783 rec=0.304 auroc=0.5884 cont={'both': 83, 'FBA_only': 23, 'exp_only': 190, 'neither': 128} n_ess_map=106 gate=False\ncurated_strict         feasible=True WT= 15.5649 n_open= 22 OR= 2.202 p=1.04e-03 prec=0.769 rec=0.304 auroc=0.583 cont={'both': 83, 'FBA_only': 25, 'exp_only': 190, 'neither': 126} n_ess_map=108 gate=False\ncurated_permissive     feasible=True WT=  31.286 n_open= 54 OR= 2.226 p=1.21e-03 prec=0.772 rec=0.286 auroc=0.575 cont={'both': 78, 'FBA_only': 23, 'exp_only': 195, 'neither': 128} n_ess_map=101 gate=False\nVERDICT curated_primary      -> NEGATIVE (OR_up=False prec_ok=True balloon=False)\nVERDICT curated_strict       -> NEGATIVE (OR_up=False prec_ok=True balloon=False)\nVERDICT curated_permissive   -> NEGATIVE (OR_up=False prec_ok=True balloon=False)"
+}

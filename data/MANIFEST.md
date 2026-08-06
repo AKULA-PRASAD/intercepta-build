@@ -256,3 +256,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/hostctx1/malariacellatlas_bloodstage_expression.csv — P. falciparum asexual blood-stage
   mean expression per PF3D7_ gene (Malaria Cell Atlas, Howick 2019; via PlasmoDB annotation table). Reuses
   GENERALIZE5's iPfal19 GEM + Zhang 2018 truth read-only. Open; regenerable; never committed.
+
+## HOSTCTX2 exchange curation malaria (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/hostctx2/ — reuses GENERALIZE5's iPfal19 GEM + Zhang 2018 truth read-only; host-available
+  nutrient sets derived from published RPMI 1640 (Moore 1967) + P. falciparum salvage biology citations (no
+  new bulk data). Regenerable; never committed.
