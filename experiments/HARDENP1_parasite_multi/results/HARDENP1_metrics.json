@@ -1,0 +1,84 @@
+{
+  "payload": {
+    "comparison_plasmodium_OR": 2.469,
+    "essential_definition_experimental": "Sidik mean phenotype score < -2.0 (field-standard cutoff; validated on Sidik's own controls: 40/40 dispensable score>=-2, 36/40 essential score<-2)",
+    "essential_threshold_frac_WT": 0.01,
+    "experimental_source": "Sidik et al. 2016 Cell 167:1423 (DOI 10.1016/j.cell.2016.08.019) genome-wide CRISPR fitness screen; mean phenotype score, Suppl. mmc3.xlsx sheet 'Phenotype'; open Elsevier CDN 1-s2.0-S0092867416310704-mmc3.xlsx",
+    "id_mapping": "GEM TGME49_NNNNNN <-> screen TGGT1_NNNNNN by shared ToxoDB numeric locus suffix",
+    "model": "iTgo2020 (Krishnan et al. 2020)",
+    "model_source": "Krishnan et al. 2020 Cell Host & Microbe 27:290 (DOI 10.1016/j.chom.2020.01.002); via PARADIGM github.com/maureencarey/paradigm models/published/iTgo2020_krishnan.mat",
+    "n_fba_essential": 141,
+    "n_genes_mapped_to_sidik": 550,
+    "n_genes_unmapped": 6,
+    "n_model_genes": 556,
+    "organism": "Toxoplasma gondii (ME49 model gene IDs; screen in type I RH/GT1)",
+    "primary": {
+      "auroc": 0.725,
+      "contingency": {
+        "FBA_only": 22,
+        "both": 118,
+        "exp_only": 113,
+        "neither": 297
+      },
+      "definition": "Sidik_mean_phenotype<-2.0",
+      "fisher_p_greater": 7.672e-33,
+      "gate_pass": true,
+      "n_exp_essential_mapped": 231,
+      "odds_ratio": 14.097,
+      "precision": 0.843,
+      "recall": 0.511
+    },
+    "sensitivity_loose_minus1p5": {
+      "auroc": 0.715,
+      "contingency": {
+        "FBA_only": 17,
+        "both": 123,
+        "exp_only": 133,
+        "neither": 277
+      },
+      "definition": "Sidik_mean_phenotype<-1.5",
+      "fisher_p_greater": 6.613e-32,
+      "gate_pass": true,
+      "n_exp_essential_mapped": 256,
+      "odds_ratio": 15.069,
+      "precision": 0.879,
+      "recall": 0.48
+    },
+    "sensitivity_strict_minus3": {
+      "auroc": 0.7203,
+      "contingency": {
+        "FBA_only": 40,
+        "both": 100,
+        "exp_only": 85,
+        "neither": 325
+      },
+      "definition": "Sidik_mean_phenotype<-3.0",
+      "fisher_p_greater": 5.854e-27,
+      "gate_pass": true,
+      "n_exp_essential_mapped": 185,
+      "odds_ratio": 9.559,
+      "precision": 0.714,
+      "recall": 0.541
+    },
+    "unmapped_gene_ids": [
+      "TGME49_200320",
+      "TGME49_212710",
+      "TGME49_249180",
+      "TGME49_287510",
+      "TGME49_321900",
+      "TGME49_326800"
+    ],
+    "wt_growth": 2.8847
+  },
+  "provenance": {
+    "cobra_version": "0.31.1",
+    "file_hashes": {
+      "model_sha256": "071b5055b427c36b6a5e8bbc4fcdf2828b66f32aba0821177a8117df075c3423",
+      "sidik_sha256": "f327bfc60789140e1b43915e05a7390c89204bf5b7efc084faa518507571c012"
+    },
+    "git_sha": "dd8a0c99857f87c1970a7dd2345165e523805f86",
+    "runtime_sec": 3.3,
+    "utc": "2026-08-06T03:01:00Z"
+  },
+  "verdict": "FBA gene-essentiality (iTgo2020, curated T. gondii GEM) vs EXPERIMENTAL essentiality (Sidik 2016 genome-wide CRISPR screen, mean phenotype < -2.0): over 550 mapped metabolic genes, OR 14.097 (one-sided hypergeometric p 7.672e-33), precision 0.843, recall 0.511, AUROC 0.725. Pre-registered gate (OR>3 AND p<0.01): PASS. Contingency {'both': 118, 'FBA_only': 22, 'exp_only': 113, 'neither': 297}. vs Plasmodium OR 2.469 (GENERALIZE5, FAIL): COMPLICATES the parasite conclusion (this parasite PASSES where Plasmodium failed). SCOPE: essentiality-enrichment only; in-silico vs published screen; curated model still a model; T. gondii is host-embedded so the default-medium GEM may be over-permissive (honest deployment risk)."
+}

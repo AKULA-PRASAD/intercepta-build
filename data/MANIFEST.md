@@ -281,3 +281,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/hardenv1/ — experimental RCSB PDB structures for 9 drugged viral targets (HIV/Flu/HCV/HSV)
   + a frozen 37-structure/14-class drugged-enzyme reference panel (GENERALIZE3's 31 + 6 cross-family analogs).
   Open (RCSB); regenerable; never committed.
+
+## HARDENP1 parasite FBA n>1 Toxoplasma (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/hardenp1/ — iTgo2020 curated T. gondii GEM (Krishnan 2020, PARADIGM models/published) +
+  Sidik 2016 genome-wide CRISPR phenotype table (Cell, open Elsevier suppl mmc3.xlsx). Open; regenerable; never committed.
