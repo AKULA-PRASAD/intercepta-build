@@ -1,0 +1,267 @@
+{
+  "K": 10000,
+  "dep_thresh": -0.5,
+  "fisher_2x2": {
+    "OR": 2.5478,
+    "a_sel_drv": 240,
+    "b_sel_nondrv": 3424,
+    "c_nonsel_drv": 382,
+    "d_nonsel_nondrv": 13885,
+    "nonsel_driver_rate": 0.02678,
+    "p": 3.3934354989669236e-26,
+    "sel_driver_rate": 0.0655
+  },
+  "gate": {
+    "above_null": true,
+    "survives_study_bias": true,
+    "verdict": "PASS"
+  },
+  "git_sha": "73f91dacd5bd54f5944c7623b42e5c171afd3093",
+  "guard_a_random_null": {
+    "emp_p": 9.999000099990002e-05,
+    "expected_overlap": 126.866,
+    "null_or_mean": 0.9999,
+    "observed_overlap": 240,
+    "overlap_p95": 143.0
+  },
+  "guard_b_publication_matched_null": {
+    "emp_p": 9.999000099990002e-05,
+    "matched_null_mean": 133.161,
+    "matched_null_p95": 149.0,
+    "n_pb_genes": 7339,
+    "observed_overlap_pb": 240
+  },
+  "guard_c_mantel_haenszel": {
+    "cmh_chi2": 125.5941,
+    "cmh_p": 3.7726507727071407e-29,
+    "mh_or": 2.7176,
+    "strata": [
+      {
+        "a_sel_drv": 6,
+        "decile": 0,
+        "drv": 16,
+        "n": 734,
+        "sel": 124
+      },
+      {
+        "a_sel_drv": 24,
+        "decile": 1,
+        "drv": 80,
+        "n": 734,
+        "sel": 137
+      },
+      {
+        "a_sel_drv": 10,
+        "decile": 2,
+        "drv": 31,
+        "n": 734,
+        "sel": 132
+      },
+      {
+        "a_sel_drv": 30,
+        "decile": 3,
+        "drv": 56,
+        "n": 734,
+        "sel": 148
+      },
+      {
+        "a_sel_drv": 68,
+        "decile": 4,
+        "drv": 153,
+        "n": 734,
+        "sel": 179
+      },
+      {
+        "a_sel_drv": 2,
+        "decile": 5,
+        "drv": 22,
+        "n": 734,
+        "sel": 123
+      },
+      {
+        "a_sel_drv": 2,
+        "decile": 6,
+        "drv": 10,
+        "n": 734,
+        "sel": 130
+      },
+      {
+        "a_sel_drv": 25,
+        "decile": 7,
+        "drv": 60,
+        "n": 734,
+        "sel": 143
+      },
+      {
+        "a_sel_drv": 44,
+        "decile": 8,
+        "drv": 118,
+        "n": 734,
+        "sel": 187
+      },
+      {
+        "a_sel_drv": 29,
+        "decile": 9,
+        "drv": 76,
+        "n": 733,
+        "sel": 135
+      }
+    ]
+  },
+  "input_sha256": {
+    "Compendium_Cancer_Genes.tsv": "7c1982aa1fae1ff8200f4c2811cdb1707ea3f778b5e95782798d09e792ddb5e8",
+    "depmap_crispr_gene_effect.csv": "d1633bfa0bf4719e72e564f15d9bcda7fddbbd3dac2a8a3aebf4898ac9f56f00"
+  },
+  "intogen_release": "2024-06-18 (IntOGen-Drivers-20240920.zip, CC0)",
+  "n_deciles": 10,
+  "n_drivers_in_universe": 622,
+  "n_drivers_not_screened": 11,
+  "n_drivers_total": 633,
+  "n_focal_drivers": 406,
+  "n_genes_universe": 17931,
+  "n_lines": 1095,
+  "n_pan_essential": 1020,
+  "n_recurrent_drivers": 216,
+  "n_selective": 3664,
+  "pan_frac": 0.9,
+  "pandas": "2.3.3",
+  "payload_sha256": "a7d00ee7392d1904ab58e4a08289f7ee9fbf012f526b3a4cdaa9dbec62a79060",
+  "python": "3.11.14",
+  "recur_min_cohorts": 5,
+  "recurrence_dose_response": {
+    "focal": {
+      "OR": 1.9984,
+      "n_set": 406,
+      "p": 4.813420265339638e-10,
+      "sel_hits": 136
+    },
+    "recurrent": {
+      "OR": 3.6921,
+      "n_set": 216,
+      "p": 6.718198898038933e-20,
+      "sel_hits": 104
+    }
+  },
+  "reverse_sanity": {
+    "top15_examples": [
+      {
+        "dep_frac": 0.4164,
+        "gene": "KRAS",
+        "is_driver": true,
+        "strength": 1.866
+      },
+      {
+        "dep_frac": 0.4941,
+        "gene": "TYMS",
+        "is_driver": false,
+        "strength": 1.686
+      },
+      {
+        "dep_frac": 0.4877,
+        "gene": "CFLAR",
+        "is_driver": false,
+        "strength": 1.514
+      },
+      {
+        "dep_frac": 0.1251,
+        "gene": "HNF1B",
+        "is_driver": false,
+        "strength": 1.487
+      },
+      {
+        "dep_frac": 0.3973,
+        "gene": "NXT1",
+        "is_driver": false,
+        "strength": 1.48
+      },
+      {
+        "dep_frac": 0.0648,
+        "gene": "IRF4",
+        "is_driver": true,
+        "strength": 1.444
+      },
+      {
+        "dep_frac": 0.0995,
+        "gene": "SOX10",
+        "is_driver": false,
+        "strength": 1.432
+      },
+      {
+        "dep_frac": 0.4694,
+        "gene": "SEPHS2",
+        "is_driver": false,
+        "strength": 1.326
+      },
+      {
+        "dep_frac": 0.3288,
+        "gene": "MDM2",
+        "is_driver": true,
+        "strength": 1.308
+      },
+      {
+        "dep_frac": 0.1105,
+        "gene": "CTNNB1",
+        "is_driver": true,
+        "strength": 1.307
+      },
+      {
+        "dep_frac": 0.1854,
+        "gene": "NMNAT1",
+        "is_driver": false,
+        "strength": 1.297
+      },
+      {
+        "dep_frac": 0.4594,
+        "gene": "FERMT2",
+        "is_driver": false,
+        "strength": 1.267
+      },
+      {
+        "dep_frac": 0.1516,
+        "gene": "CBFB",
+        "is_driver": true,
+        "strength": 1.233
+      },
+      {
+        "dep_frac": 0.3982,
+        "gene": "UMPS",
+        "is_driver": false,
+        "strength": 1.23
+      },
+      {
+        "dep_frac": 0.0731,
+        "gene": "NRAS",
+        "is_driver": true,
+        "strength": 1.227
+      }
+    ],
+    "top_n_driver_frac": {
+      "50": {
+        "driver_frac": 0.32,
+        "n_driver": 16
+      },
+      "100": {
+        "driver_frac": 0.3,
+        "n_driver": 30
+      },
+      "200": {
+        "driver_frac": 0.21,
+        "n_driver": 42
+      }
+    },
+    "universe_driver_base_rate": 0.03469
+  },
+  "scipy": "1.16.3",
+  "seed": 42,
+  "sel_band": [
+    0.01,
+    0.5
+  ],
+  "timestamp_utc": "2026-08-06T03:49:09Z",
+  "top_n": [
+    50,
+    100,
+    200
+  ],
+  "verdict": "F3CLIN1 dependency->patient-driver relevance = PASS. SELECTIVE cell-line dependencies (n=3664) vs IntOGen patient drivers (n=622 in universe): Fisher OR=2.55 p=3.4e-26, above random-gene null (emp p=0.0001); study-bias controls: publication-matched null p=0.0001, Mantel-Haenszel OR=2.72 (CMH p=3.77e-29). Recurrence dose-response: recurrent-driver OR=3.6921 > focal-driver OR=1.9984. SCOPE: cell-line->patient TARGET-RELEVANCE only. Does NOT rescue drug-RESPONSE prediction (B20/B10/B17 negative), is NOT clinical outcome, and carries a study/annotation-bias caveat."
+}

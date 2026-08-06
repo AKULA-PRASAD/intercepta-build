@@ -290,3 +290,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/hardenf1/ — C. albicans curated GEM (Mirhakkak & Schäuble 2021, BioModels MODEL2110210002)
   + CGD curated inviable/loss-of-function essentiality (Roemer 2003 GRACE + later) + CGD A22 ID map. Open;
   regenerable; never committed.
+
+## F3CLIN1 dependency->patient-driver relevance (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/f3clin1/ — IntOGen Compendium of Cancer Genes (2024-06-18, CC0) driver set + CancerMine
+  citation counts (study-bias proxy). Reuses DepMap (kaalcura/data) read-only. Open; regenerable; never committed.
