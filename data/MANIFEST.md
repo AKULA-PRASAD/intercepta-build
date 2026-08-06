@@ -251,3 +251,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## GENERALIZE4 eukaryote FBA (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/generalize4/ — iMM904.xml (curated S. cerevisiae GEM, BiGG), deg_euk/deg_annotation_e.csv
   (DEG2001 Giaever 2002 essential set), SGD_features.tab (SGD R64 ID map). Open; regenerable; never committed.
+
+## HOSTCTX1 E-Flux malaria (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/hostctx1/malariacellatlas_bloodstage_expression.csv — P. falciparum asexual blood-stage
+  mean expression per PF3D7_ gene (Malaria Cell Atlas, Howick 2019; via PlasmoDB annotation table). Reuses
+  GENERALIZE5's iPfal19 GEM + Zhang 2018 truth read-only. Open; regenerable; never committed.

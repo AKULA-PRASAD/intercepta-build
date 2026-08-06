@@ -1,0 +1,256 @@
+{
+  "gate": "NEGATIVE",
+  "payload": {
+    "baseline_reproduced_vs_GENERALIZE5": true,
+    "deltas_primary": {
+      "d_auroc": 0.0133,
+      "d_odds_ratio": 0.0,
+      "d_precision": 0.0,
+      "d_recall": 0.0
+    },
+    "eflux_primary": {
+      "auroc": 0.5723,
+      "config": {
+        "cap_at_default": false,
+        "eps_bound": 0.001,
+        "normalization": "median",
+        "stage_col": "MalariaCellAtlas Trophozoite Mean Expression"
+      },
+      "contingency": {
+        "FBA_only": 14,
+        "both": 55,
+        "exp_only": 218,
+        "neither": 137
+      },
+      "definition": "EFLUX_TROPH:phenotype:Non-Mutable-in-CDS",
+      "eflux_diag": {
+        "n_scored_reactions": 662,
+        "n_zero_score_reactions": 0,
+        "reference_score": 0.494,
+        "scale": 2024.2646
+      },
+      "expr_coverage": {
+        "alias": 1,
+        "default_expr_value": 0.364424,
+        "default_median": 62,
+        "direct": 412
+      },
+      "fisher_p_greater": 0.002166,
+      "gate_pass": false,
+      "n_exp_essential_mapped": 273,
+      "n_fba_essential": 80,
+      "odds_ratio": 2.469,
+      "precision": 0.797,
+      "recall": 0.201,
+      "wt_growth": 47.445915
+    },
+    "essential_threshold_frac_WT": 0.01,
+    "experimental_source": "Zhang et al. 2018 Science (piggyBac saturation mutagenesis), phenotype 'Non - Mutable in CDS'",
+    "expression_source": "Malaria Cell Atlas (Howick et al. 2019 Science 365:eaaw2619), asexual blood-stage mean expression per PF3D7_ gene, via PlasmoDB/Pf Target Browser Figshare 27190545",
+    "model": "iPfal19",
+    "n_genes_mapped_to_zhang": 424,
+    "n_genes_unmapped": 51,
+    "n_model_genes": 475,
+    "organism": "Plasmodium falciparum 3D7 (malaria)",
+    "plain_FBA": {
+      "auroc": 0.559,
+      "contingency": {
+        "FBA_only": 14,
+        "both": 55,
+        "exp_only": 218,
+        "neither": 137
+      },
+      "definition": "PLAIN_FBA:phenotype:Non-Mutable-in-CDS",
+      "fisher_p_greater": 0.002166,
+      "gate_pass": false,
+      "n_exp_essential_mapped": 273,
+      "n_fba_essential": 80,
+      "odds_ratio": 2.469,
+      "precision": 0.797,
+      "recall": 0.201,
+      "wt_growth": 31.395301
+    },
+    "sensitivity": {
+      "idc_average": {
+        "auroc": 0.5612,
+        "config": {
+          "cap_at_default": false,
+          "eps_bound": 0.001,
+          "normalization": "median",
+          "stage_col": "IDC_average(Ring,Troph,Schizont)"
+        },
+        "contingency": {
+          "FBA_only": 14,
+          "both": 55,
+          "exp_only": 218,
+          "neither": 137
+        },
+        "deltas": {
+          "d_auroc": 0.0022,
+          "d_odds_ratio": 0.0,
+          "d_precision": 0.0,
+          "d_recall": 0.0
+        },
+        "fisher_p_greater": 0.002166,
+        "gate_pass": false,
+        "n_fba_essential": 80,
+        "odds_ratio": 2.469,
+        "precision": 0.797,
+        "recall": 0.201,
+        "wt_growth": 42.52422
+      },
+      "ring": {
+        "auroc": 0.5684,
+        "config": {
+          "cap_at_default": false,
+          "eps_bound": 0.001,
+          "normalization": "median",
+          "stage_col": "MalariaCellAtlas Ring Mean Expression"
+        },
+        "contingency": {
+          "FBA_only": 14,
+          "both": 55,
+          "exp_only": 218,
+          "neither": 137
+        },
+        "deltas": {
+          "d_auroc": 0.0094,
+          "d_odds_ratio": 0.0,
+          "d_precision": 0.0,
+          "d_recall": 0.0
+        },
+        "fisher_p_greater": 0.002166,
+        "gate_pass": false,
+        "n_fba_essential": 80,
+        "odds_ratio": 2.469,
+        "precision": 0.797,
+        "recall": 0.201,
+        "wt_growth": 38.6632
+      },
+      "schizont": {
+        "auroc": 0.5619,
+        "config": {
+          "cap_at_default": false,
+          "eps_bound": 0.001,
+          "normalization": "median",
+          "stage_col": "MalariaCellAtlas Schizont Mean Expression"
+        },
+        "contingency": {
+          "FBA_only": 14,
+          "both": 55,
+          "exp_only": 218,
+          "neither": 137
+        },
+        "deltas": {
+          "d_auroc": 0.0029,
+          "d_odds_ratio": 0.0,
+          "d_precision": 0.0,
+          "d_recall": 0.0
+        },
+        "fisher_p_greater": 0.002166,
+        "gate_pass": false,
+        "n_fba_essential": 80,
+        "odds_ratio": 2.469,
+        "precision": 0.797,
+        "recall": 0.201,
+        "wt_growth": 21.642017
+      },
+      "troph_capped": {
+        "auroc": 0.565,
+        "config": {
+          "cap_at_default": true,
+          "eps_bound": 0.001,
+          "normalization": "median",
+          "stage_col": "MalariaCellAtlas Trophozoite Mean Expression"
+        },
+        "contingency": {
+          "FBA_only": 14,
+          "both": 55,
+          "exp_only": 218,
+          "neither": 137
+        },
+        "deltas": {
+          "d_auroc": 0.006,
+          "d_odds_ratio": 0.0,
+          "d_precision": 0.0,
+          "d_recall": 0.0
+        },
+        "fisher_p_greater": 0.002166,
+        "gate_pass": false,
+        "n_fba_essential": 80,
+        "odds_ratio": 2.469,
+        "precision": 0.797,
+        "recall": 0.201,
+        "wt_growth": 29.597983
+      },
+      "troph_eps0": {
+        "auroc": 0.5723,
+        "config": {
+          "cap_at_default": false,
+          "eps_bound": 0.0,
+          "normalization": "median",
+          "stage_col": "MalariaCellAtlas Trophozoite Mean Expression"
+        },
+        "contingency": {
+          "FBA_only": 14,
+          "both": 55,
+          "exp_only": 218,
+          "neither": 137
+        },
+        "deltas": {
+          "d_auroc": 0.0133,
+          "d_odds_ratio": 0.0,
+          "d_precision": 0.0,
+          "d_recall": 0.0
+        },
+        "fisher_p_greater": 0.002166,
+        "gate_pass": false,
+        "n_fba_essential": 80,
+        "odds_ratio": 2.469,
+        "precision": 0.797,
+        "recall": 0.201,
+        "wt_growth": 47.445915
+      },
+      "troph_maxnorm": {
+        "auroc": 0.5619,
+        "config": {
+          "cap_at_default": false,
+          "eps_bound": 0.001,
+          "normalization": "max",
+          "stage_col": "MalariaCellAtlas Trophozoite Mean Expression"
+        },
+        "contingency": {
+          "FBA_only": 14,
+          "both": 55,
+          "exp_only": 218,
+          "neither": 137
+        },
+        "deltas": {
+          "d_auroc": 0.0029,
+          "d_odds_ratio": 0.0,
+          "d_precision": 0.0,
+          "d_recall": 0.0
+        },
+        "fisher_p_greater": 0.002166,
+        "gate_pass": false,
+        "n_fba_essential": 80,
+        "odds_ratio": 2.469,
+        "precision": 0.797,
+        "recall": 0.201,
+        "wt_growth": 3.627195
+      }
+    }
+  },
+  "provenance": {
+    "cobra_version": "0.31.1",
+    "file_hashes": {
+      "expr_sha256": "936a0f4af14fdbe965042c91a2cbbb077645d8eff1fde822edf457406513a206",
+      "model_sha256": "7a19f5b77aa0b1d4dc0106b9d81df8b1f623b4310191807e0dc34b360c190d24",
+      "zhang_sha256": "b8790819987171f29036b741b0fa3c68bcf8ae688dc31d0e05277c1370bc7ec5"
+    },
+    "git_sha": "cd9c6a9c84afdf2338f93f390fdd4870b787a9c6",
+    "runtime_sec": 19.3,
+    "utc": "2026-08-06T00:43:23Z"
+  },
+  "verdict": "E-Flux context-specific FBA (Malaria Cell Atlas trophozoite expression) vs plain default-medium FBA on iPfal19, essentiality-enrichment vs Zhang 2018. Baseline reproduced vs GENERALIZE5: True. PLAIN: OR 2.469 p 0.002166 prec 0.797 rec 0.201 AUROC 0.559 contingency {'both': 55, 'FBA_only': 14, 'exp_only': 218, 'neither': 137}. E-FLUX: OR 2.469 p 0.002166 prec 0.797 rec 0.201 AUROC 0.5723 contingency {'both': 55, 'FBA_only': 14, 'exp_only': 218, 'neither': 137}. Deltas {'d_odds_ratio': 0.0, 'd_precision': 0.0, 'd_recall': 0.0, 'd_auroc': 0.0133}. GATE (RESCUE iff OR>3 AND p<0.01 AND OR>baseline): NEGATIVE. Robustness: any variant clears gate = False; any variant improves OR over baseline = False. SCOPE: enrichment only; in-silico; one stage/atlas/model; n=1 parasite; E-Flux scaling somewhat arbitrary (sensitivity swept)."
+}
