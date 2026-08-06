@@ -1,0 +1,200 @@
+{
+  "payload": {
+    "all_assertions_pass": true,
+    "case_A_bacterium": {
+      "assertions": {
+        "all_cores_present": true,
+        "consistent_with_committed_engine_top20": true,
+        "fba_fired": true,
+        "not_abstained": true,
+        "output_is_shortlist": true
+      },
+      "cores_present": {
+        "dxs": true,
+        "mraY": true,
+        "murA": true,
+        "murG": true
+      },
+      "engine_active_signals": [
+        "essentiality[VALIDATED:MET1-3+VAL-ESS]",
+        "chokepoint[FRONT1]",
+        "conservation_breadth[REACH1]",
+        "conservation[TID1]",
+        "host_safety_filter[FRONT1/E2E2]",
+        "resistance_robustness[SYNLETH]",
+        "condition_robustness[CONDROB1]"
+      ],
+      "n_confident_safe_targets": 5049,
+      "routing": {
+        "abstention": null,
+        "biology_class": "bacterium",
+        "class_source": "declared",
+        "organism": "kpneumoniae",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "conservation_breadth",
+          "fba_essentiality",
+          "structural_homology"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "module not built (functional-dependency layer NOT YET BUILT); evidence: V15-18 (hypothesis-tier, single cohort); Wave-3 gap (FAILURE_AUDIT F2<->F3)",
+            "signal": "functional_dependency"
+          }
+        ],
+        "supporting_signals": [
+          "host_safety",
+          "sequence_repurposing"
+        ]
+      },
+      "top_genes": [
+        "dxs",
+        "dnaE",
+        "murA",
+        "murF",
+        "mraY",
+        "folC",
+        "murG",
+        "ispB",
+        "ispC",
+        "ispA",
+        "folP",
+        "ileS",
+        "recB",
+        "coaA",
+        "ispE",
+        "murB",
+        "leuS",
+        "polA",
+        "secA",
+        "topA",
+        "mrcB",
+        "ispF",
+        "relA",
+        "mrcA",
+        "coaD",
+        "folK",
+        "dfp",
+        "recC",
+        "lacZ2",
+        "acrB"
+      ]
+    },
+    "case_B_virus": {
+      "assertions": {
+        "Mpro_is_protease": true,
+        "RdRp_is_polymerase": true,
+        "autodetected_virus": true,
+        "fba_NOT_fired": true,
+        "output_is_structural_class_id": true,
+        "sequence_repurposing_NOT_fired": true,
+        "structural_fired": true
+      },
+      "proteome_size": 30,
+      "routing": {
+        "abstention": null,
+        "biology_class": "virus",
+        "class_source": "autodetected",
+        "organism": "SARS-CoV-2",
+        "output_type": "structural_class_id",
+        "signals_fired": [
+          "structural_homology"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for virus: host-embedded metabolism -> FALSIFIED by GENERALIZE5 (OR 2.47) + HOSTCTX1 (E-Flux) + HOSTCTX2 (boundary curation); not applicable to viruses (no metabolism)",
+            "signal": "fba_essentiality"
+          },
+          {
+            "reason": "module not built (functional-dependency layer NOT YET BUILT); evidence: V15-18 (hypothesis-tier, single cohort); Wave-3 gap (FAILURE_AUDIT F2<->F3)",
+            "signal": "functional_dependency"
+          },
+          {
+            "reason": "out of transfer domain for virus: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          }
+        ],
+        "supporting_signals": [
+          "host_safety",
+          "sequence_repurposing"
+        ]
+      },
+      "structural_gate": "PASS",
+      "structural_hypotheses": [
+        {
+          "best_drugged_analog": "thrombin",
+          "protein": "nsp5_Mpro",
+          "rank": 6,
+          "target_class": "protease",
+          "tm": 0.462
+        },
+        {
+          "best_drugged_analog": "HCV-NS5B-RdRp",
+          "protein": "nsp12_RdRp",
+          "rank": 5,
+          "target_class": "polymerase",
+          "tm": 0.473
+        }
+      ]
+    },
+    "case_C_parasite": {
+      "abstention_reason": "host-embedded biology: metabolic essentiality falsified (GENERALIZE5/HOSTCTX1/2); functional-dependency layer not yet built",
+      "assertions": {
+        "abstention_reason_matches_prereg": true,
+        "did_NOT_emit_shortlist": true,
+        "fba_NOT_fired": true,
+        "fba_gated_out": true,
+        "functional_dependency_gated_out": true,
+        "no_discovery_signal_fired": true,
+        "output_is_abstention": true
+      },
+      "gated_signals": {
+        "conservation_breadth": "out of transfer domain for host_dependent_parasite: rides the conserved-core invariant of self-contained genomes",
+        "fba_essentiality": "out of transfer domain for host_dependent_parasite: host-embedded metabolism -> FALSIFIED by GENERALIZE5 (OR 2.47) + HOSTCTX1 (E-Flux) + HOSTCTX2 (boundary curation); not applicable to viruses (no metabolism)",
+        "functional_dependency": "module not built (functional-dependency layer NOT YET BUILT); evidence: V15-18 (hypothesis-tier, single cohort); Wave-3 gap (FAILURE_AUDIT F2<->F3)",
+        "host_safety": "out of transfer domain for host_dependent_parasite: needs a known host proteome to compare against",
+        "structural_homology": "out of transfer domain for host_dependent_parasite: requires an existing 3D structure with a conserved drugged fold"
+      },
+      "routing": {
+        "abstention": "host-embedded biology: metabolic essentiality falsified (GENERALIZE5/HOSTCTX1/2); functional-dependency layer not yet built",
+        "biology_class": "host_dependent_parasite",
+        "class_source": "declared",
+        "organism": "Plasmodium falciparum",
+        "output_type": "abstention",
+        "signals_fired": [],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: host-embedded metabolism -> FALSIFIED by GENERALIZE5 (OR 2.47) + HOSTCTX1 (E-Flux) + HOSTCTX2 (boundary curation); not applicable to viruses (no metabolism)",
+            "signal": "fba_essentiality"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: requires an existing 3D structure with a conserved drugged fold",
+            "signal": "structural_homology"
+          },
+          {
+            "reason": "module not built (functional-dependency layer NOT YET BUILT); evidence: V15-18 (hypothesis-tier, single cohort); Wave-3 gap (FAILURE_AUDIT F2<->F3)",
+            "signal": "functional_dependency"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: needs a known host proteome to compare against",
+            "signal": "host_safety"
+          }
+        ],
+        "supporting_signals": [
+          "sequence_repurposing"
+        ]
+      }
+    },
+    "test": "COMPOSITE1 explicit biology-class-aware router (transfer-gate + abstention)"
+  },
+  "provenance": {
+    "git_sha": "4893cd9fb1ece301b2a49438dce422058af290c2",
+    "runtime_sec": 25.7,
+    "utc": "2026-08-06T01:39:46Z"
+  },
+  "verdict": "ROUTER: (A) BACTERIUM K.pneumoniae -> shortlist (FBA fired=True, cores present=True); (B) VIRUS SARS-CoV-2 -> structural_class_id (FBA fired=False, Mpro->protease & RdRp->polymerase); (C) PARASITE P.falciparum -> abstention (FBA fired=False, abstained correctly). ALL ASSERTIONS PASS: True. The decisive integrity test HOLDS: the parasite ABSTAINED and the virus did NOT fire FBA."
+}
