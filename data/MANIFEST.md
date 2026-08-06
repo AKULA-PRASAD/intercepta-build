@@ -294,3 +294,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## F3CLIN1 dependency->patient-driver relevance (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/f3clin1/ — IntOGen Compendium of Cancer Genes (2024-06-18, CC0) driver set + CancerMine
   citation counts (study-bias proxy). Reuses DepMap (kaalcura/data) read-only. Open; regenerable; never committed.
+
+## PARARESOLVE1 parasite GEM-vs-biology confound (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/pararesolve1/ — independent P. falciparum GEMs (Chiappino-Pepe 2017; Abdel-Haleem 2018
+  iAM-Pf480) via PARADIGM redistribution + same-lineage gf_ variants. Reuses Zhang 2018 (generalize5) +
+  iTgo2020 (hardenp1) read-only. Open; regenerable; never committed.

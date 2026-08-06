@@ -1,0 +1,210 @@
+{
+  "payload": {
+    "anchors": {
+      "iPfal19_GENERALIZE5_OR": 2.469,
+      "iTgo2020_HARDENP1_OR": 14.1
+    },
+    "design": "controlled swap: organism (P. falciparum), screen (Zhang 2018 piggyBac), gate (OR>3 & p<0.01), ID-map FIXED; vary ONLY the genome-scale reconstruction",
+    "estimator": "sample OR (a*d)/(b*c) + one-sided hypergeometric via math.comb (FROZEN to GENERALIZE5)",
+    "experiment": "PARARESOLVE1",
+    "experimental_source": "Zhang et al. 2018 Science piggyBac saturation mutagenesis; essential = phenotype 'Non - Mutable in CDS'",
+    "independent_gems_all_fail": false,
+    "independent_gems_any_pass": true,
+    "question": "Is the P. falciparum FBA-essentiality FAILURE iPfal19-GEM-specific, or robust across independent Pf GEMs? (isolate the GEM axis of the GENERALIZE5-vs-HARDENP1 confound)",
+    "residual_confounds_unresolved": [
+      "screen technology (Zhang piggyBac vs Sidik CRISPR): NOT controllable here \u2014 no genome-wide Plasmodium CRISPR essentiality screen was obtainable CPU-only; the P. falciparum CRISPR-KO literature is gene-by-gene, not genome-scale saturating. This axis remains a standing limitation.",
+      "organism biology (Plasmodium vs Toxoplasma): the swap controls it WITHIN Plasmodium but the Plasmodium-vs-Toxoplasma comparison still crosses organisms.",
+      "base rate differs by organism (Pf ~0.64 vs Tg ~0.42) \u2014 reported per model, not eliminated.",
+      "knowledgebase non-independence: all Pf GEMs share upstream biochemistry (KEGG/PlasmoDB) and earlier reconstructions (Plata 2010); 'independent' = independent team/reconstruction only."
+    ],
+    "salvage_bypass_test": {
+      "definition": "FN=exp-essential & FBA-dispensable; per FN gene: GPR_redundant (no rxn disabled by g alone) / salvage_import (a blocked-rxn metabolite is importable, lower_bound<0) / internal_reroute (blocked but no import). salvage_explained_frac over non-redundant FN.",
+      "iPfal19_FAIL": {
+        "categories": {
+          "GPR_redundant": 100,
+          "internal_reroute": 11,
+          "salvage_import": 107
+        },
+        "model": "iPfal19",
+        "n_false_negatives": 218,
+        "n_importable_species": 221,
+        "salvage_explained_frac_of_all_FN": 0.491,
+        "salvage_explained_frac_of_nonredundant": 0.907,
+        "screen": "Zhang2018_piggyBac"
+      },
+      "iTgo2020_PASS": {
+        "categories": {
+          "GPR_redundant": 30,
+          "internal_reroute": 11,
+          "salvage_import": 72
+        },
+        "model": "iTgo2020",
+        "n_false_negatives": 113,
+        "n_importable_species": 240,
+        "salvage_explained_frac_of_all_FN": 0.637,
+        "salvage_explained_frac_of_nonredundant": 0.867,
+        "screen": "Sidik2016_CRISPR"
+      }
+    },
+    "swap_results": [
+      {
+        "auroc": 0.559,
+        "base_rate_exp_essential": 0.644,
+        "contingency": {
+          "FBA_only": 14,
+          "both": 55,
+          "exp_only": 218,
+          "neither": 137
+        },
+        "fisher_p_greater": 0.002166,
+        "gate_pass": false,
+        "kind": "reference",
+        "label": "iPfal19",
+        "map_frac": 0.893,
+        "model_sha256": "7a19f5b77aa0b1d4dc0106b9d81df8b1f623b4310191807e0dc34b360c190d24",
+        "n_exp_essential_mapped": 273,
+        "n_fba_essential": 80,
+        "n_genes_mapped_to_zhang": 424,
+        "n_model_genes": 475,
+        "odds_ratio": 2.469,
+        "precision": 0.797,
+        "recall": 0.201,
+        "source": "PARADIGM (Carey/Untaroiu/Papin, U.Virginia); anchor to reproduce GENERALIZE5",
+        "wt_growth": 31.3953
+      },
+      {
+        "auroc": 0.5023,
+        "base_rate_exp_essential": 0.651,
+        "contingency": {
+          "FBA_only": 18,
+          "both": 37,
+          "exp_only": 179,
+          "neither": 90
+        },
+        "fisher_p_greater": 0.5255,
+        "gate_pass": false,
+        "kind": "independent",
+        "label": "Chiappino-Pepe_2017",
+        "map_frac": 0.997,
+        "model_sha256": "1dba71ff42b588a4d593a90cccf08695d2f1750bd958591afad1a60dba203670",
+        "n_exp_essential_mapped": 211,
+        "n_fba_essential": 55,
+        "n_genes_mapped_to_zhang": 324,
+        "n_model_genes": 325,
+        "odds_ratio": 1.034,
+        "precision": 0.673,
+        "recall": 0.171,
+        "source": "Chiappino-Pepe et al. 2017 PLoS Comput Biol 13(4):e1005397 (Hatzimanikatis lab, EPFL)",
+        "wt_growth": 0.1602
+      },
+      {
+        "auroc": 0.5959,
+        "base_rate_exp_essential": 0.63,
+        "contingency": {
+          "FBA_only": 12,
+          "both": 55,
+          "exp_only": 243,
+          "neither": 163
+        },
+        "fisher_p_greater": 0.0002361,
+        "gate_pass": true,
+        "kind": "independent",
+        "label": "AbdelHaleem_2018_iAM-Pf480",
+        "map_frac": 0.985,
+        "model_sha256": "2d047a34e383d89b27a2264d79c2bfc22990cba2197299ab6206fee58a8966f2",
+        "n_exp_essential_mapped": 298,
+        "n_fba_essential": 68,
+        "n_genes_mapped_to_zhang": 473,
+        "n_model_genes": 480,
+        "odds_ratio": 3.074,
+        "precision": 0.821,
+        "recall": 0.185,
+        "source": "Abdel-Haleem et al. 2018 Cell Reports 24(9):2337, iAM-Pf480 (Palsson lab, UCSD)",
+        "wt_growth": 0.6872
+      },
+      {
+        "auroc": 0.5648,
+        "base_rate_exp_essential": 0.645,
+        "contingency": {
+          "FBA_only": 17,
+          "both": 64,
+          "exp_only": 179,
+          "neither": 117
+        },
+        "fisher_p_greater": 0.00119,
+        "gate_pass": false,
+        "kind": "same_lineage",
+        "label": "iPfal17_precursor",
+        "map_frac": 0.787,
+        "model_sha256": "614fe67a4158fa3bc10c77610afe623d0c9c970b4069ea9949c4dfa0ad4b3181",
+        "n_exp_essential_mapped": 243,
+        "n_fba_essential": 108,
+        "n_genes_mapped_to_zhang": 377,
+        "n_model_genes": 479,
+        "odds_ratio": 2.461,
+        "precision": 0.79,
+        "recall": 0.263,
+        "source": "PARADIGM precursor to iPfal19 (SBML model id 'plata_orig_xml')",
+        "wt_growth": 29.8668
+      },
+      {
+        "auroc": 0.4953,
+        "base_rate_exp_essential": 0.646,
+        "contingency": {
+          "FBA_only": 12,
+          "both": 26,
+          "exp_only": 286,
+          "neither": 136
+        },
+        "fisher_p_greater": 0.5466,
+        "gate_pass": false,
+        "kind": "same_lineage",
+        "label": "gf_Pfalciparum3D7",
+        "map_frac": 0.989,
+        "model_sha256": "9c8b5c5aa37bf1b22f4b87d38aa6eecaac303c7cb73f2a3b0fd1e4af6d571593",
+        "n_exp_essential_mapped": 297,
+        "n_fba_essential": 38,
+        "n_genes_mapped_to_zhang": 460,
+        "n_model_genes": 465,
+        "odds_ratio": 1.03,
+        "precision": 0.684,
+        "recall": 0.083,
+        "source": "PARADIGM gap-filled variant",
+        "wt_growth": 69.7138
+      },
+      {
+        "auroc": 0.4938,
+        "base_rate_exp_essential": 0.689,
+        "contingency": {
+          "FBA_only": 13,
+          "both": 26,
+          "exp_only": 256,
+          "neither": 110
+        },
+        "fisher_p_greater": 0.7318,
+        "gate_pass": false,
+        "kind": "same_lineage",
+        "label": "gf_no_ortho_Pfalciparum3D7",
+        "map_frac": 0.988,
+        "model_sha256": "ca5092500413ead059efaf214bfa8126b4849b44be7c4e8b2e312702b1435528",
+        "n_exp_essential_mapped": 279,
+        "n_fba_essential": 39,
+        "n_genes_mapped_to_zhang": 405,
+        "n_model_genes": 410,
+        "odds_ratio": 0.859,
+        "precision": 0.667,
+        "recall": 0.092,
+        "source": "PARADIGM gap-filled (no-ortholog) variant",
+        "wt_growth": 65.794
+      }
+    ]
+  },
+  "provenance": {
+    "cobra_version": "0.31.1",
+    "git_sha": "eaf1e3f379ec4c4db6b6cd5710d6ef94a03e530c",
+    "runtime_sec": 18.6,
+    "utc": "2026-08-06T04:18:34Z",
+    "zhang_sha256": "b8790819987171f29036b741b0fa3c68bcf8ae688dc31d0e05277c1370bc7ec5"
+  },
+  "verdict": "Chiappino-Pepe_2017 OR 1.034 p 0.5255 (rec 0.171, prec 0.673, base 0.651) -> FAIL | AbdelHaleem_2018_iAM-Pf480 OR 3.074 p 0.0002361 (rec 0.185, prec 0.821, base 0.63) -> PASS || At least one INDEPENDENT Pf GEM PASSES (OR>3) on the same Zhang screen => the failure was iPfal19-GEM-SPECIFIC, not Plasmodium biology. Confound resolves TOWARD the GEM axis. || Salvage-explained FN fraction (of non-redundant FN): iPfal19 0.907 (FN=218, cats={'GPR_redundant': 100, 'salvage_import': 107, 'internal_reroute': 11}) vs iTgo2020 0.867 (FN=113, cats={'GPR_redundant': 30, 'salvage_import': 72, 'internal_reroute': 11})."
+}
