@@ -261,3 +261,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/hostctx2/ — reuses GENERALIZE5's iPfal19 GEM + Zhang 2018 truth read-only; host-available
   nutrient sets derived from published RPMI 1640 (Moore 1967) + P. falciparum salvage biology citations (no
   new bulk data). Regenerable; never committed.
+
+## STRUCTREPURPOSE1 structural repurposing (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/structrepurpose1/ — AlphaFold v6 structures for 2009 ChEMBL drug-target accessions +
+  2009 organism-matched random NON-drug proteins (null reference) + query target structures. ~1.3 GB. Open
+  (AlphaFold DB / UniProt); regenerable; never committed.

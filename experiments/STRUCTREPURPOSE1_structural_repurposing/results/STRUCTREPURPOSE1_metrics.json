@@ -1,0 +1,880 @@
+{
+  "provenance": {
+    "git_sha": "1e5187f4d1d646fefdfbf082ce8ffa2cf9403757",
+    "utc": "2026-08-06T01:21:28Z"
+  },
+  "runtime_sec": 448.3,
+  "summary": {
+    "G1_validation_ecoli": {
+      "G1_pass": true,
+      "canonical_targets_with_structure": 11,
+      "correct_moa_recovered": 11,
+      "detail": [
+        {
+          "acc": "P0A6B4",
+          "best_struct_homolog": "P9WQA9",
+          "best_tm": 0.943,
+          "correct": true,
+          "expected_moa_kw": "alanine racemase",
+          "gene": "alr",
+          "homolog_desc": "Alanine racemase",
+          "n_drugs": 1,
+          "retrieved_moa": "Alanine racemase inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P07862",
+          "best_struct_homolog": "P9WP31",
+          "best_tm": 0.938,
+          "correct": true,
+          "expected_moa_kw": "d-ala",
+          "gene": "ddlB",
+          "homolog_desc": "D-alanine--D-alanine ligase",
+          "n_drugs": 1,
+          "retrieved_moa": "D-alanylalanine synthetase inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P45568",
+          "best_struct_homolog": "Q8IKG4",
+          "best_tm": 0.957,
+          "correct": true,
+          "expected_moa_kw": "reductoisomerase",
+          "gene": "dxr",
+          "homolog_desc": "1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic",
+          "n_drugs": 1,
+          "retrieved_moa": "1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P0ABQ4",
+          "best_struct_homolog": "P0ABQ4",
+          "best_tm": 1.0,
+          "correct": true,
+          "expected_moa_kw": "dihydrofolate",
+          "gene": "folA",
+          "homolog_desc": "Dihydrofolate reductase",
+          "n_drugs": 5,
+          "retrieved_moa": "Bacterial dihydrofolate reductase inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P0AC13",
+          "best_struct_homolog": "P0AC13",
+          "best_tm": 1.0,
+          "correct": true,
+          "expected_moa_kw": "dihydropteroate",
+          "gene": "folP",
+          "homolog_desc": "Dihydropteroate synthase",
+          "n_drugs": 23,
+          "retrieved_moa": "Bacterial dihydropteroate synthase inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P0AES4",
+          "best_struct_homolog": "P0AES4",
+          "best_tm": 1.0,
+          "correct": true,
+          "expected_moa_kw": "gyrase",
+          "gene": "gyrA",
+          "homolog_desc": "DNA gyrase subunit A",
+          "n_drugs": 29,
+          "retrieved_moa": "Bacterial DNA gyrase inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P0AES6",
+          "best_struct_homolog": "P0AES6",
+          "best_tm": 1.0,
+          "correct": true,
+          "expected_moa_kw": "gyrase",
+          "gene": "gyrB",
+          "homolog_desc": "DNA gyrase subunit B",
+          "n_drugs": 29,
+          "retrieved_moa": "Bacterial DNA gyrase inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P0A749",
+          "best_struct_homolog": "P0A749",
+          "best_tm": 1.0,
+          "correct": true,
+          "expected_moa_kw": "carboxyvinyltransferase",
+          "gene": "murA",
+          "homolog_desc": "UDP-N-acetylglucosamine 1-carboxyvinyltransferase",
+          "n_drugs": 1,
+          "retrieved_moa": "UDP-N-acetylglucosamine 1-carboxyvinyltransferase inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P0AFI2",
+          "best_struct_homolog": "P0AFI2",
+          "best_tm": 1.0,
+          "correct": true,
+          "expected_moa_kw": "topoisomerase",
+          "gene": "parC",
+          "homolog_desc": "DNA topoisomerase 4 subunit A",
+          "n_drugs": 21,
+          "retrieved_moa": "Topoisomerase IV inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P20083",
+          "best_struct_homolog": "P20083",
+          "best_tm": 1.0,
+          "correct": true,
+          "expected_moa_kw": "topoisomerase",
+          "gene": "parE",
+          "homolog_desc": "DNA topoisomerase 4 subunit B",
+          "n_drugs": 21,
+          "retrieved_moa": "Topoisomerase IV inhibitor",
+          "structure": true
+        },
+        {
+          "acc": "P0A8V2",
+          "best_struct_homolog": "P0A8V2",
+          "best_tm": 1.0,
+          "correct": true,
+          "expected_moa_kw": "rna polymerase",
+          "gene": "rpoB",
+          "homolog_desc": "DNA-directed RNA polymerase subunit beta",
+          "n_drugs": 7,
+          "retrieved_moa": "Bacterial DNA-directed RNA polymerase inhibitor | DNA-directed RNA polymerase inhibitor",
+          "structure": true
+        }
+      ],
+      "intervene1_sequence_baseline": "9/9 correct MoA",
+      "recovery_rate": 1.0,
+      "tested_at_TM>=0.50": 11
+    },
+    "G2_coverage_ngonorrhoeae": {
+      "G2_pass": false,
+      "G2a_beats_sequence_baseline": true,
+      "G2b_survives_null_guard": false,
+      "coverage_by_threshold": {
+        "0.40": {
+          "n_dt": 30,
+          "n_rand": 31
+        },
+        "0.50": {
+          "n_dt": 18,
+          "n_rand": 25
+        },
+        "0.60": {
+          "n_dt": 14,
+          "n_rand": 19
+        }
+      },
+      "detail": [
+        {
+          "acc": "Q5F5X0",
+          "best_dt_homolog": "Q8IKG4",
+          "best_dt_tm": 0.959,
+          "best_random_tm": 0.458,
+          "covered_dt": true,
+          "dt_homolog_desc": "1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic",
+          "dt_homolog_organisms": [
+            "Plasmodium falciparum (isolate 3D7)"
+          ],
+          "dt_minus_rand": 0.501,
+          "family_plausible": true,
+          "gene": "ispC",
+          "moa": "1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F5P0",
+          "query_desc": "1-deoxy-D-xylulose 5-phosphate reductoisomerase",
+          "shared_family_tokens": [
+            "deoxy",
+            "phosphate",
+            "reductoisomerase",
+            "xylulose"
+          ],
+          "specific_vs_null": true,
+          "structure": true
+        },
+        {
+          "acc": "Q5F687",
+          "best_dt_homolog": "P14324",
+          "best_dt_tm": 0.884,
+          "best_random_tm": 0.9,
+          "covered_dt": true,
+          "dt_homolog_desc": "Farnesyl pyrophosphate synthase",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.016,
+          "family_plausible": true,
+          "gene": "ND436_009395",
+          "moa": "Farnesyl diphosphate synthase inhibitor",
+          "n_existing_drugs": 6,
+          "orig_acc": "A0ACH0F5H5",
+          "query_desc": "Octaprenyl diphosphate synthase",
+          "shared_family_tokens": [
+            "synthase"
+          ],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F631",
+          "best_dt_homolog": "P14324",
+          "best_dt_tm": 0.87,
+          "best_random_tm": 0.866,
+          "covered_dt": true,
+          "dt_homolog_desc": "Farnesyl pyrophosphate synthase",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": 0.004,
+          "family_plausible": false,
+          "gene": "ND436_009725",
+          "moa": "Farnesyl diphosphate synthase inhibitor",
+          "n_existing_drugs": 6,
+          "orig_acc": "A0ACH0F5H4",
+          "query_desc": "Geranyl transferase",
+          "shared_family_tokens": [],
+          "specific_vs_null": true,
+          "structure": true
+        },
+        {
+          "acc": "Q5F6I3",
+          "best_dt_homolog": "P22102",
+          "best_dt_tm": 0.813,
+          "best_random_tm": 0.74,
+          "covered_dt": true,
+          "dt_homolog_desc": "Trifunctional purine biosynthetic protein adenosine-3",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": 0.073,
+          "family_plausible": false,
+          "gene": "thiL",
+          "moa": "GAR transformylase inhibitor",
+          "n_existing_drugs": 6,
+          "orig_acc": "A0ACH0F4Z9",
+          "query_desc": "Thiamine-monophosphate kinase",
+          "shared_family_tokens": [],
+          "specific_vs_null": true,
+          "structure": true
+        },
+        {
+          "acc": "Q5F9Z5",
+          "best_dt_homolog": "O95299",
+          "best_dt_tm": 0.801,
+          "best_random_tm": 0.706,
+          "covered_dt": true,
+          "dt_homolog_desc": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 10, mitochondrial",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": 0.095,
+          "family_plausible": false,
+          "gene": "tmk",
+          "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+          "n_existing_drugs": 3,
+          "orig_acc": "A0ACH0F6N5",
+          "query_desc": "Thymidylate kinase",
+          "shared_family_tokens": [],
+          "specific_vs_null": true,
+          "structure": true
+        },
+        {
+          "acc": "Q5F9J9",
+          "best_dt_homolog": "P9WJF1",
+          "best_dt_tm": 0.693,
+          "best_random_tm": 0.685,
+          "covered_dt": true,
+          "dt_homolog_desc": "Decaprenylphosphoryl-beta-D-ribose oxidase",
+          "dt_homolog_organisms": [
+            "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)"
+          ],
+          "dt_minus_rand": 0.008,
+          "family_plausible": false,
+          "gene": "murB",
+          "moa": "FAD-dependent decaprenylphosphoryl-beta-D-ribofuranose 2-oxidase inhibitor",
+          "n_existing_drugs": 2,
+          "orig_acc": "A0ACH0F7F3",
+          "query_desc": "UDP-N-acetylenolpyruvoylglucosamine reductase",
+          "shared_family_tokens": [],
+          "specific_vs_null": true,
+          "structure": true
+        },
+        {
+          "acc": "Q5F775",
+          "best_dt_homolog": "Q962H3",
+          "best_dt_tm": 0.673,
+          "best_random_tm": 0.754,
+          "covered_dt": true,
+          "dt_homolog_desc": "High voltage-activated calcium channel beta subunit CavB2",
+          "dt_homolog_organisms": [
+            "Schistosoma mansoni"
+          ],
+          "dt_minus_rand": -0.081,
+          "family_plausible": false,
+          "gene": "gmk",
+          "moa": "Voltage-activated calcium channel beta 2 subunit blocker",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F4N4",
+          "query_desc": "Guanylate kinase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F9K3",
+          "best_dt_homolog": "Q9NRA0",
+          "best_dt_tm": 0.663,
+          "best_random_tm": 0.948,
+          "covered_dt": true,
+          "dt_homolog_desc": "Sphingosine kinase 2",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.285,
+          "family_plausible": true,
+          "gene": "ND436_002005",
+          "moa": "Sphingosine kinase 2 inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F726",
+          "query_desc": "NAD kinase",
+          "shared_family_tokens": [
+            "kinase"
+          ],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F551",
+          "best_dt_homolog": "Q181D9",
+          "best_dt_tm": 0.662,
+          "best_random_tm": 0.668,
+          "covered_dt": true,
+          "dt_homolog_desc": "Methionine--tRNA ligase",
+          "dt_homolog_organisms": [
+            "Clostridioides difficile (strain 630) (Peptoclostridium difficile)"
+          ],
+          "dt_minus_rand": -0.006,
+          "family_plausible": false,
+          "gene": "coaD",
+          "moa": "Methionine--tRNA ligase inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F8J8",
+          "query_desc": "Phosphopantetheine adenylyltransferase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F691",
+          "best_dt_homolog": "O95299",
+          "best_dt_tm": 0.661,
+          "best_random_tm": 0.902,
+          "covered_dt": true,
+          "dt_homolog_desc": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 10, mitochondrial",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.241,
+          "family_plausible": false,
+          "gene": "coaE",
+          "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+          "n_existing_drugs": 3,
+          "orig_acc": "A0ACH0F9M9",
+          "query_desc": "Dephospho-CoA kinase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F829",
+          "best_dt_homolog": "Q16739",
+          "best_dt_tm": 0.648,
+          "best_random_tm": 0.82,
+          "covered_dt": true,
+          "dt_homolog_desc": "Ceramide glucosyltransferase",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.172,
+          "family_plausible": false,
+          "gene": "ispD",
+          "moa": "Ceramide glucosyltransferase inhibitor",
+          "n_existing_drugs": 4,
+          "orig_acc": "A0ACH0FAA2",
+          "query_desc": "2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F9X9",
+          "best_dt_homolog": "P12109",
+          "best_dt_tm": 0.642,
+          "best_random_tm": 0.648,
+          "covered_dt": true,
+          "dt_homolog_desc": "Collagen alpha-1(VI) chain",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.006,
+          "family_plausible": false,
+          "gene": "ribH",
+          "moa": "Collagen hydrolytic enzyme",
+          "n_existing_drugs": 2,
+          "orig_acc": "A0ACH0F9C1",
+          "query_desc": "6,7-dimethyl-8-ribityllumazine synthase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F9F9",
+          "best_dt_homolog": "P04062",
+          "best_dt_tm": 0.641,
+          "best_random_tm": 0.966,
+          "covered_dt": true,
+          "dt_homolog_desc": "Lysosomal acid glucosylceramidase",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.325,
+          "family_plausible": false,
+          "gene": "panB",
+          "moa": "Beta-glucocerebrosidase stabiliser",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F9S4",
+          "query_desc": "3-methyl-2-oxobutanoate hydroxymethyltransferase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F9R9",
+          "best_dt_homolog": "P21964",
+          "best_dt_tm": 0.61,
+          "best_random_tm": 0.773,
+          "covered_dt": true,
+          "dt_homolog_desc": "Catechol O-methyltransferase",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.163,
+          "family_plausible": true,
+          "gene": "ubiE",
+          "moa": "Catechol O-methyltransferase inhibitor",
+          "n_existing_drugs": 4,
+          "orig_acc": "A0ACH0F6U1",
+          "query_desc": "Ubiquinone/menaquinone biosynthesis C-methyltransferase UbiE",
+          "shared_family_tokens": [
+            "methyltransferase"
+          ],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F556",
+          "best_dt_homolog": "Q181D9",
+          "best_dt_tm": 0.582,
+          "best_random_tm": 0.646,
+          "covered_dt": true,
+          "dt_homolog_desc": "Methionine--tRNA ligase",
+          "dt_homolog_organisms": [
+            "Clostridioides difficile (strain 630) (Peptoclostridium difficile)"
+          ],
+          "dt_minus_rand": -0.064,
+          "family_plausible": false,
+          "gene": "nadD",
+          "moa": "Methionine--tRNA ligase inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F695",
+          "query_desc": "Probable nicotinate-nucleotide adenylyltransferase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F913",
+          "best_dt_homolog": "Q86Z14",
+          "best_dt_tm": 0.571,
+          "best_random_tm": 0.522,
+          "covered_dt": true,
+          "dt_homolog_desc": "Beta-klotho",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": 0.049,
+          "family_plausible": false,
+          "gene": "ispG",
+          "moa": "FGF1/KLB activator",
+          "n_existing_drugs": 3,
+          "orig_acc": "A0ACH0F948",
+          "query_desc": "4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (flavodoxin)",
+          "shared_family_tokens": [],
+          "specific_vs_null": true,
+          "structure": true
+        },
+        {
+          "acc": "Q5F5X2",
+          "best_dt_homolog": "Q86Z14",
+          "best_dt_tm": 0.54,
+          "best_random_tm": 0.789,
+          "covered_dt": true,
+          "dt_homolog_desc": "Beta-klotho",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.249,
+          "family_plausible": false,
+          "gene": "ND436_010090",
+          "moa": "FGF1/KLB activator",
+          "n_existing_drugs": 3,
+          "orig_acc": "A0ACH0F5C3",
+          "query_desc": "Isoprenyl transferase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F830",
+          "best_dt_homolog": "P22102",
+          "best_dt_tm": 0.53,
+          "best_random_tm": 0.502,
+          "covered_dt": true,
+          "dt_homolog_desc": "Trifunctional purine biosynthetic protein adenosine-3",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": 0.028,
+          "family_plausible": false,
+          "gene": "ispF",
+          "moa": "GAR transformylase inhibitor",
+          "n_existing_drugs": 6,
+          "orig_acc": "A0ACH0F9K8",
+          "query_desc": "2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase",
+          "shared_family_tokens": [],
+          "specific_vs_null": true,
+          "structure": true
+        },
+        {
+          "acc": "Q5F6J5",
+          "best_dt_homolog": "Q07864",
+          "best_dt_tm": 0.483,
+          "best_random_tm": 0.511,
+          "covered_dt": false,
+          "dt_homolog_desc": "DNA polymerase epsilon catalytic subunit A",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.028,
+          "family_plausible": false,
+          "gene": "ND436_008775",
+          "moa": "DNA polymerase (alpha/delta/epsilon) inhibitor",
+          "n_existing_drugs": 6,
+          "orig_acc": "A0ACH0F527",
+          "query_desc": "Membrane protein",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F9F8",
+          "best_dt_homolog": "Q99YW3",
+          "best_dt_tm": 0.483,
+          "best_random_tm": 0.511,
+          "covered_dt": false,
+          "dt_homolog_desc": "Isoleucine--tRNA ligase",
+          "dt_homolog_organisms": [
+            "Streptococcus pyogenes"
+          ],
+          "dt_minus_rand": -0.028,
+          "family_plausible": false,
+          "gene": "panC",
+          "moa": "Isoleucyl-tRNA synthetase inhibitor",
+          "n_existing_drugs": 2,
+          "orig_acc": "A0ACH0F7J4",
+          "query_desc": "Pantothenate synthetase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F6L2",
+          "best_dt_homolog": "Q24982",
+          "best_dt_tm": 0.478,
+          "best_random_tm": 0.817,
+          "covered_dt": false,
+          "dt_homolog_desc": "pyruvate dehydrogenase (NADP(+))",
+          "dt_homolog_organisms": [
+            "Giardia intestinalis"
+          ],
+          "dt_minus_rand": -0.339,
+          "family_plausible": false,
+          "gene": "ND436_008660",
+          "moa": "Pyruvate:ferredoxin oxidoreductase inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F4X4",
+          "query_desc": "UDP-N-acetylmuramoyl-tripeptide--D-alanyl-D-alanine ligase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F7E5",
+          "best_dt_homolog": "Q8IKG4",
+          "best_dt_tm": 0.466,
+          "best_random_tm": 0.594,
+          "covered_dt": false,
+          "dt_homolog_desc": "1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic",
+          "dt_homolog_organisms": [
+            "Plasmodium falciparum (isolate 3D7)"
+          ],
+          "dt_minus_rand": -0.128,
+          "family_plausible": true,
+          "gene": "ilvC",
+          "moa": "1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F6D9",
+          "query_desc": "Ketol-acid reductoisomerase (NADP(+))",
+          "shared_family_tokens": [
+            "reductoisomerase"
+          ],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F778",
+          "best_dt_homolog": "Q13224",
+          "best_dt_tm": 0.46,
+          "best_random_tm": 0.443,
+          "covered_dt": false,
+          "dt_homolog_desc": "Glutamate receptor ionotropic, NMDA 2B",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": 0.017,
+          "family_plausible": false,
+          "gene": "coaBC",
+          "moa": "Glutamate NMDA receptor; GRIN1/GRIN2B antagonist",
+          "n_existing_drugs": 26,
+          "orig_acc": "A0ACH0F4Q2",
+          "query_desc": "Coenzyme A biosynthesis bifunctional protein CoaBC",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5FAD7",
+          "best_dt_homolog": "P51649",
+          "best_dt_tm": 0.444,
+          "best_random_tm": 0.436,
+          "covered_dt": false,
+          "dt_homolog_desc": "Succinate-semialdehyde dehydrogenase, mitochondrial",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": 0.008,
+          "family_plausible": false,
+          "gene": "ribD",
+          "moa": "Succinate semialdehyde dehydrogenase inhibitor",
+          "n_existing_drugs": 3,
+          "orig_acc": "A0ACH0F6U6",
+          "query_desc": "Riboflavin biosynthesis protein RibD",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F6L8",
+          "best_dt_homolog": "P26358",
+          "best_dt_tm": 0.443,
+          "best_random_tm": 0.826,
+          "covered_dt": false,
+          "dt_homolog_desc": "DNA (cytosine-5)-methyltransferase 1",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.383,
+          "family_plausible": false,
+          "gene": "murG",
+          "moa": "DNA (cytosine-5)-methyltransferase 1 inhibitor",
+          "n_existing_drugs": 2,
+          "orig_acc": "A0ACH0F524",
+          "query_desc": "UDP-N-acetylglucosamine--N-acetylmuramyl-(pentapeptide) pyrophosphoryl-undecapre",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F6K4",
+          "best_dt_homolog": "Q96S37",
+          "best_dt_tm": 0.441,
+          "best_random_tm": 0.51,
+          "covered_dt": false,
+          "dt_homolog_desc": "Solute carrier family 22 member 12",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.069,
+          "family_plausible": false,
+          "gene": "ND436_008710",
+          "moa": "Solute carrier family 22 member 12 inhibitor",
+          "n_existing_drugs": 8,
+          "orig_acc": "A0ACH0F4M9",
+          "query_desc": "Undecaprenyl-diphosphatase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5FAF6",
+          "best_dt_homolog": "Q181D9",
+          "best_dt_tm": 0.422,
+          "best_random_tm": 0.493,
+          "covered_dt": false,
+          "dt_homolog_desc": "Methionine--tRNA ligase",
+          "dt_homolog_organisms": [
+            "Clostridioides difficile (strain 630) (Peptoclostridium difficile)"
+          ],
+          "dt_minus_rand": -0.071,
+          "family_plausible": false,
+          "gene": "ribF",
+          "moa": "Methionine--tRNA ligase inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F8X1",
+          "query_desc": "Riboflavin biosynthesis protein",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F577",
+          "best_dt_homolog": "Q7Z2W7",
+          "best_dt_tm": 0.409,
+          "best_random_tm": 0.979,
+          "covered_dt": false,
+          "dt_homolog_desc": "Transient receptor potential cation channel subfamily M member 8",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.57,
+          "family_plausible": false,
+          "gene": "glmU",
+          "moa": "Transient receptor potential cation channel subfamily M member 8 agonist",
+          "n_existing_drugs": 3,
+          "orig_acc": "A0ACH0F9Q5",
+          "query_desc": "Bifunctional protein GlmU",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F6L4",
+          "best_dt_homolog": "P51788",
+          "best_dt_tm": 0.409,
+          "best_random_tm": 0.443,
+          "covered_dt": false,
+          "dt_homolog_desc": "Chloride channel protein 2",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": -0.034,
+          "family_plausible": false,
+          "gene": "mraY",
+          "moa": "Chloride channel protein 2 activator",
+          "n_existing_drugs": 2,
+          "orig_acc": "A0ACH0F564",
+          "query_desc": "Phospho-N-acetylmuramoyl-pentapeptide-transferase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5F9F6",
+          "best_dt_homolog": "Q13546",
+          "best_dt_tm": 0.408,
+          "best_random_tm": 0.393,
+          "covered_dt": false,
+          "dt_homolog_desc": "Receptor-interacting serine/threonine-protein kinase 1",
+          "dt_homolog_organisms": [
+            "Homo sapiens"
+          ],
+          "dt_minus_rand": 0.015,
+          "family_plausible": true,
+          "gene": "ispE",
+          "moa": "Receptor-interacting serine/threonine-protein kinase 1 inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F746",
+          "query_desc": "4-diphosphocytidyl-2-C-methyl-D-erythritol kinase",
+          "shared_family_tokens": [
+            "kinase"
+          ],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5FAI2",
+          "best_dt_homolog": "Q24982",
+          "best_dt_tm": 0.396,
+          "best_random_tm": 0.452,
+          "covered_dt": false,
+          "dt_homolog_desc": "pyruvate dehydrogenase (NADP(+))",
+          "dt_homolog_organisms": [
+            "Giardia intestinalis"
+          ],
+          "dt_minus_rand": -0.056,
+          "family_plausible": false,
+          "gene": "dxs",
+          "moa": "Pyruvate:ferredoxin oxidoreductase inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F658",
+          "query_desc": "1-deoxy-D-xylulose-5-phosphate synthase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        },
+        {
+          "acc": "Q5FAC0",
+          "best_dt_homolog": "Q24982",
+          "best_dt_tm": 0.362,
+          "best_random_tm": 0.976,
+          "covered_dt": false,
+          "dt_homolog_desc": "pyruvate dehydrogenase (NADP(+))",
+          "dt_homolog_organisms": [
+            "Giardia intestinalis"
+          ],
+          "dt_minus_rand": -0.614,
+          "family_plausible": false,
+          "gene": "metK",
+          "moa": "Pyruvate:ferredoxin oxidoreductase inhibitor",
+          "n_existing_drugs": 1,
+          "orig_acc": "A0ACH0F6S7",
+          "query_desc": "S-adenosylmethionine synthase",
+          "shared_family_tokens": [],
+          "specific_vs_null": false,
+          "structure": true
+        }
+      ],
+      "intervene1_sequence_coverage": 1,
+      "n_covered_and_family_plausible": 4,
+      "n_essential_targets": 32,
+      "n_query_structures_available": 32,
+      "n_specific_vs_null_paired": 7,
+      "null_random_coverage_at_TM>=0.50": 25,
+      "query_structure_source": "BLIND1 essential accs (UP001163151, not in AF-DB) mapped by mmseqs (pident>=90,qcov>=0.8; 98.7-100%) to AF-covered FA1090 orthologs (UP000000535)",
+      "structural_coverage_at_TM>=0.50": 18
+    },
+    "GATE": "NEGATIVE",
+    "knowledge_base": {
+      "drug_target_accessions_requested": 2118,
+      "drug_target_af_404": 109,
+      "drug_target_structures_fetched": 2009,
+      "source": "ChEMBL drug-mechanism -> AlphaFold DB v6 structures"
+    },
+    "null_reference": {
+      "design": "organism-composition-matched random NON-drug-target AF proteins (per-taxid same successful-count as drug targets); seeded RNG=1234; cached accession list",
+      "n_random_structures": 2009
+    },
+    "tm_threshold_primary": 0.5,
+    "verdict": "STRUCTURAL REPURPOSING vs INTERVENE1 sequence baseline (NEGATIVE). Drug-target STRUCTURE reference: 2009/2118 AlphaFold(v6) structures fetched (109 404). G1 VALIDATION (E. coli canonical antibacterial targets): structural best-homolog recovered the correct drug-class MoA in 11/11 (rate 1.0) at TM>=0.5 [PASS] vs INTERVENE1 sequence 9/9. G2 EXPANSION (novel N. gonorrhoeae, 32 FBA-essential): STRUCTURAL coverage = 18/32 vs INTERVENE1 SEQUENCE 1/32. NULL/promiscuity guard: organism-matched RANDOM non-drug reference (n=2009) gives 25/32 at the same TM>=0.5; per-query paired, 7/32 queries score strictly higher vs drug targets than vs random. COVERAGE GAIN IS PROMISCUITY: random non-drug structures are matched at TM>=0.5 nearly as often (25/32) as drug targets (18/32) -> the apparent expansion is generic fold-matching, NOT drug-target signal. Honest negative. SCOPE: in-silico repurposing HYPOTHESES via drug-target fold homology; does NOT establish whole-cell activity, penetration, or selectivity (experiment-gated); AF-DB coverage bounds the reference; not wet-lab."
+  }
+}
