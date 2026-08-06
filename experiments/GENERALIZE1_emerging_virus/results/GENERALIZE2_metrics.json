@@ -1,0 +1,132 @@
+{
+  "provenance": {
+    "git_sha": "f4b35fef7ba1b2290594654e76ac7d1c02c11830",
+    "utc": "2026-08-06T00:06:59Z"
+  },
+  "runtime_sec": 1.5,
+  "summary": {
+    "GATE": "PASS",
+    "Mpro_ranking": [
+      {
+        "class": "protease",
+        "evalue": 0.5431,
+        "label": "rhinovirus-3C-protease",
+        "ref": "1cqq",
+        "seq_ident": 0.099,
+        "tm": 0.43
+      },
+      {
+        "class": "kinase(NEGCTRL)",
+        "evalue": 0.2824,
+        "label": "EGFR-kinase",
+        "ref": "1m17",
+        "seq_ident": 0.017,
+        "tm": 0.308
+      },
+      {
+        "class": "polymerase",
+        "evalue": 0.2155,
+        "label": "HIV-RT-polymerase",
+        "ref": "3hvt",
+        "seq_ident": 0.021,
+        "tm": 0.282
+      },
+      {
+        "class": "protease",
+        "evalue": 0.4044,
+        "label": "chymotrypsin",
+        "ref": "4cha",
+        "seq_ident": 0.079,
+        "tm": 0.271
+      },
+      {
+        "class": "protease(aspartic-diff-fold)",
+        "evalue": 0.3147,
+        "label": "HIV-protease(aspartic)",
+        "ref": "1hxw",
+        "seq_ident": 0.053,
+        "tm": 0.191
+      }
+    ],
+    "Mpro_top": {
+      "class": "protease",
+      "evalue": 0.5431,
+      "label": "rhinovirus-3C-protease",
+      "ref": "1cqq",
+      "seq_ident": 0.099,
+      "tm": 0.43
+    },
+    "P1_Mpro_matches_protease_clan_TM>=0.4": true,
+    "P2_RdRp_matches_polymerase_TM>=0.4": true,
+    "RdRp_ranking": [
+      {
+        "class": "polymerase",
+        "evalue": 0.5802,
+        "label": "HCV-NS5B-polymerase",
+        "ref": "4wtg",
+        "seq_ident": 0.068,
+        "tm": 0.473
+      },
+      {
+        "class": "polymerase",
+        "evalue": 0.2562,
+        "label": "HIV-RT-polymerase",
+        "ref": "3hvt",
+        "seq_ident": 0.01,
+        "tm": 0.226
+      },
+      {
+        "class": "GPCR(NEGCTRL)",
+        "evalue": 0.2014,
+        "label": "beta2-GPCR",
+        "ref": "2rh1",
+        "seq_ident": 0.019,
+        "tm": 0.16
+      },
+      {
+        "class": "kinase(NEGCTRL)",
+        "evalue": 0.2035,
+        "label": "EGFR-kinase",
+        "ref": "1m17",
+        "seq_ident": 0.009,
+        "tm": 0.141
+      },
+      {
+        "class": "protease",
+        "evalue": 0.1965,
+        "label": "rhinovirus-3C-protease",
+        "ref": "1cqq",
+        "seq_ident": 0.012,
+        "tm": 0.1
+      },
+      {
+        "class": "protease",
+        "evalue": 0.1968,
+        "label": "chymotrypsin",
+        "ref": "4cha",
+        "seq_ident": 0.016,
+        "tm": 0.079
+      },
+      {
+        "class": "protease(aspartic-diff-fold)",
+        "evalue": 0.1769,
+        "label": "HIV-protease(aspartic)",
+        "ref": "1hxw",
+        "seq_ident": 0.01,
+        "tm": 0.061
+      }
+    ],
+    "RdRp_top": {
+      "class": "polymerase",
+      "evalue": 0.5802,
+      "label": "HCV-NS5B-polymerase",
+      "ref": "4wtg",
+      "seq_ident": 0.068,
+      "tm": 0.473
+    },
+    "resource_boundary": "AlphaFold DB excludes viral proteins (query + HCV/HIV/rhinovirus refs all 404) -> full unbiased blind structural screen needs a hand-built viral PDB reference; documented.",
+    "sequence_baseline": "GENERALIZE1: 0 sequence hits at e<=1e-5 vs a 2145-seq reference that INCLUDED rhinovirus 3C / HCV / HIV -> any structural match here is recovered where sequence gave nothing.",
+    "test": "GENERALIZE2 confirmatory structural-bridge (Foldseek TM) \u2014 CAPABILITY not blind screen",
+    "verdict": "STRUCTURAL-BRIDGE CONFIRMATORY TEST (PASS). Foldseek TM of the two SARS-CoV-2 drug targets vs a non-coronaviral drugged-enzyme reference + negative controls. Mpro top hit: rhinovirus-3C-protease (class protease, TM 0.43, seq_ident 0.099). RdRp top hit: HCV-NS5B-polymerase (class polymerase, TM 0.473, seq_ident 0.068). BOTH viral drug-target folds are correctly recovered by STRUCTURE (protease->protease-clan, polymerase->polymerase) with meaningful TM despite ~0 sequence homology -> structure bridges exactly the gap sequence could not (GENERALIZE1). CONCLUSION: the viral-generalization failure is a SEQUENCE-TOOL limitation, not fundamental; the structural path is viable and is blocked only by AlphaFold DB's exclusion of viral structures (a fetch/tooling boundary, solvable by a PDB-based reference), NOT by the method. SCOPE: confirmatory capability test on 2 targets w/ chosen controls (NOT a blind discovery ranking); TM on experimental PDB structures; establishes the PRINCIPLE, not a deployed viral pipeline; not wet-lab; n=1 virus."
+  }
+}

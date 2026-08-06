@@ -72,3 +72,23 @@ not re-run to a better number.
 (chymotrypsin-like protease fold; right-hand RdRp fold) are conserved even when sequence is not, so a
 STRUCTURAL-homology bridge (Foldseek) is the correct tool for cross-family viral target prioritization.
 This negative is precisely what motivates the structural follow-up.
+
+---
+## GENERALIZE2 — structural-bridge confirmatory follow-up (appended; `generalize2_structural.py`)
+**Result: PASS (confirmatory, reproduced ×2, payload sha f8f7d1be).** Foldseek TM of the two SARS-CoV-2 drug
+targets vs a non-coronaviral drugged-enzyme reference + negative controls:
+- **Mpro** (6lu7) → **rhinovirus 3C protease** (1cqq) #1, **TM 0.43**, seq-ident **0.10** (protease clan; chymotrypsin
+  0.27; HIV aspartic protease 0.19; kinase 0.31; GPCR n/a).
+- **RdRp** (7bv2 chain A) → **HCV NS5B polymerase** (4wtg) #1, **TM 0.47**, seq-ident **0.07** (HIV-RT polymerase
+  0.23; all proteases ≤0.10; kinase 0.14; GPCR 0.16 — clean discrimination).
+
+**Meaning:** STRUCTURE recovers the correct drugged fold for both viral targets at <10% sequence identity —
+exactly where sequence homology (GENERALIZE1) gave *zero*. So the viral-generalization failure is a
+**sequence-tool limitation, not fundamental**; the structural path is viable in principle.
+
+**Honest caveats:** (1) confirmatory *capability* test with hypothesis-chosen controls, NOT a blind discovery
+ranking; (2) TM ≈ 0.43–0.47 is **moderate** (below the 0.5 "same-fold" convention) — a genuine but not
+overwhelming signal; (3) Mpro's margin over an off-class control (EGFR kinase 0.31) is modest; RdRp's is clean;
+(4) n=1 virus, 2 targets. (5) A full *unbiased blind* structural screen is currently **gated by a real resource
+boundary**: AlphaFold DB excludes viral proteins (query + HCV/HIV/rhinovirus references all 404), so it would
+require hand-building a viral PDB reference — documented, not faked.
