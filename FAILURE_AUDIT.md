@@ -25,12 +25,17 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
 - Evidence: INTERVENE1 — 9/9 known-pharmacology recovery (real) but N. gonorrhoeae coverage 1/32 (sequence
   homology only reaches targets with a *close* drugged homolog).
 - Root cause: sequence homology is blind to remote/structural analogues.
-- **Compute-solvable? PARTIALLY YES — and the evidence says how.** GENERALIZE2/3 proved structure recovers
-  drugged folds sequence misses.
-- **Real solution (LAUNCHED — STRUCTREPURPOSE1):** structural repurposing (Foldseek target↔drug-target
-  structures) to expand coverage — with a mandatory **null/promiscuity guard** (structure finds *some*
-  neighbor for almost anything; the gain must beat a random-structure baseline at the TM threshold, else it's
-  noise). Honest either way.
+- **Compute-solvable? TESTED — NO.** The proposed fix (STRUCTREPURPOSE1: structural repurposing) was run with
+  a mandatory null guard and came back **NEGATIVE**. Structure *validates* known pharmacology (G1 11/11) but
+  does **not** expand novel-pathogen coverage: raw structural coverage 18/32 looked like a jump from 1/32, but
+  a random-protein null matched **25/32** (more than drug targets) — the "gain" was a fold-census artifact
+  (FOLD2 quantified). After null+plausibility, honest coverage **stays 1/32**. The mandatory guard caught
+  exactly the false claim this audit named.
+- **Real solution (REVISED, honest):** intervention narrowness is **not repurposing-fixable** — sequence *or*
+  structure. Repurposing is fundamentally bounded to targets with a *genuine* drugged homolog; for a novel
+  pathogen most essential targets have none, so novel-target intervention is **de-novo-chemistry-GATED (see
+  F4)**, not a coverage bug. The honest deliverable: repurposing covers the small drugged-homolog fraction
+  (validated); the rest is experiment/chemistry-gated and must be labelled so — no false "expanded coverage".
 
 **F2 — FBA-essentiality FAILS on host-dependent organisms (parasites; and by extension human/cancer).**
 - Evidence: GENERALIZE5 malaria OR 2.47 (sub-threshold). HOSTCTX1: expression context (E-Flux) does NOT fix

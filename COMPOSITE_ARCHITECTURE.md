@@ -34,7 +34,8 @@ those signals. This is the rigorous answer to the transfer question:
 |---|---|---|---|
 | **FBA gene-essentiality** | B has a **self-contained metabolism** captured by a quality GEM | bacteria OR 5–64; yeast OR 4.65; parasite FAILS | metabolism is host-embedded (salvage bypass) — GENERALIZE5/HOSTCTX1/2 |
 | **Sequence homology** (target/drug) | B shares **detectable sequence identity** with A's known targets/drugs | INTERVENE1 9/9 canonical; bacteria panels | cross-family distance (virus: 0 hits) — GENERALIZE1 |
-| **Structural homology** (Foldseek) | B's protein **fold is conserved** with a known target/drug + a structure exists | GENERALIZE2/3 recovers Mpro/RdRp at <10% seq id | no structure available (AF-DB viral gap); fold promiscuity (guarded in STRUCTREPURPOSE1) |
+| **Structural homology** (Foldseek) — for target CLASS-ID | B's protein **fold is conserved** with a known target/drug + a structure exists | GENERALIZE2/3 recovers Mpro/RdRp at <10% seq id | no structure available (AF-DB viral gap) |
+| **Structural REPURPOSING** (coverage) — ⚠ FALSIFIED as a coverage-expander | (does NOT transfer for coverage) | STRUCTREPURPOSE1 NEGATIVE: validates 11/11 but a random-protein null matched *more* targets than drug targets — "expanded coverage" was fold-census promiscuity | at "same-fold" TM almost any large structure set matches almost any enzyme → use structure to CONFIRM a known drug's class, NOT to widen the drugged-target set |
 | **Conservation breadth** | the essential is part of a **broadly conserved core** | REACH1 AUROC 0.86 for non-metabolic essentials | lineage-specific essentials |
 | **Functional dependency** (CRISPR) | a **context-specific dependency signal** exists or an expr→dependency map is learnable | V13/V16–18 (FLT3/BCL2 rescue) | no dependency data / no learnable map |
 | **Host-safety filter** | B's targets can be compared to the **host proteome** | ENGINE hard filter (Hart CEG2 + human homology) | host unknown |
@@ -103,7 +104,10 @@ Each validated model is a standalone contribution (paper); the book is the integ
    risk. *(the book's spine)*
 2. **Wave 3 — functional-dependency layer for host-embedded biology** (the F2↔F3 unification): the validated
    signal parasites/cancer need. Hardest, highest-leverage.
-3. **STRUCTREPURPOSE1** (running) → fold into the virus/intervention module.
+3. **STRUCTREPURPOSE1** — DONE, NEGATIVE: structural repurposing validates known pharmacology (11/11) but does
+   NOT expand novel coverage (promiscuity; null matched more than drug targets). Consequence: the intervention
+   module honestly covers only the drugged-homolog fraction; novel-target intervention is de-novo-gated (F4),
+   not repurposing-fixable — do not claim expanded coverage.
 4. **Harden the frontier n>1 per class** (more viruses/fungi/parasites) so the routing table's entries are
    population-grade, not n=1 probes.
 5. **Confront F3 honestly** — external replication of the human dependency layer, or downgrade the human claim.
