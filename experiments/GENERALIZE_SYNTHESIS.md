@@ -80,11 +80,14 @@ a *second* host-dependent parasite, *Toxoplasma gondii* (curated iTgo2020 GEM vs
   cancer; TRANSFER1 still shows that signal does NOT transfer label-free to a zero-screen organism. So
   functional dependency is *a* valid host-embedded signal (where a screen exists), **and** FBA can *also* work
   on host-embedded organisms given a good-topology GEM — they are complementary, not one-replaces-the-other.
-- **Router implication (COMPOSITE3, flagged not yet built):** the router's blanket host-dependent→FBA-gate is
-  now too coarse (it would wrongly abstain on Toxoplasma). FBA's transfer condition is *GEM-topology quality*,
-  which is not knowable a-priori for a novel organism (Plasmodium and Toxoplasma are both host-dependent, one
-  fails one passes) → the honest behavior is to *attempt* FBA when a quality GEM exists but flag **elevated
-  uncertainty** for host-embedded organisms, not blanket-abstain and not blanket-fire.
+- **Router implication — ✅ BUILT (COMPOSITE3, router v3, b1021ae):** the blanket host-dependent→FBA abstention
+  was too coarse (wrongly refused Toxoplasma). v3 fires FBA for a host-dependent organism *with a curated GEM*
+  at **capped confidence (0.5) + an explicit uncertainty flag** (GEM-topology-dependent, n=2 Toxo-PASS/
+  Plasmodium-FAIL), abstains only when no signal (no GEM), and leaves functional-dependency parasite behavior
+  unchanged (TRANSFER1). Verified 17/17 tests, reproduced ×2. Honesty kept: an advisory GEM-topology descriptor
+  was included but *demonstrated not to separate pass from fail a-priori* (the failing organism has the lower
+  essential fraction) → labeled non-predictive, never gates. The router now ADMITS it cannot predict FBA
+  reliability a-priori on a novel host-dependent organism — it flags uncertainty rather than pretending.
 
 ## Honest limits of this fusion
 *[Updated after Wave 4 — see below.]* The original GENERALIZE1–5 fusion was **n=1 per class** (frontier probes,

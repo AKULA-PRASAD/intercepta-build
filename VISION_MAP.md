@@ -127,9 +127,12 @@ Verified on 3 classes (bacterium→FBA shortlist == committed ENGINE; virus→st
 host-dependent parasite→ABSTENTION). This is the composite "spine" that turns many validated models into one
 system delivering **honest decision coverage** (a real answer where a signal transfers, an explicit abstention
 where none does) — not a universal model. **COMPOSITE2 (58f9e5d) wired in the DEPEND1 dependency layer:** the
-router now FIRES functional-dependency for the human/cancer class (skin→SOX10, KRAS→KRAS rank #1) while the
-novel parasite STILL ABSTAINS (transfer-condition-precise) — the host-embedded half now has a live validated
-signal in the composite, not just an abstention. See `COMPOSITE_ARCHITECTURE.md`.
+router now FIRES functional-dependency for the human/cancer class (skin→SOX10, KRAS→KRAS rank #1). **COMPOSITE3
+(b1021ae, router v3) refined host-dependent handling** per the HARDENP1 correction: a host-dependent organism
+*with a curated GEM* now fires FBA at **capped confidence + an explicit uncertainty flag** (rather than
+blanket-abstaining — which would have wrongly refused Toxoplasma), abstains only when no signal exists, and the
+advisory GEM-topology descriptor is honestly labeled non-predictive (it doesn't separate pass/fail a-priori).
+The router thus admits what it cannot know rather than overclaiming. See `COMPOSITE_ARCHITECTURE.md`.
 
 ### Layer 9 — Autonomous scientist
 **EMERGING (this is what today's parallel waves are).** Hypothesis generation, prereg, self-critique, honest
