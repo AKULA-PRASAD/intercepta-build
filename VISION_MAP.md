@@ -65,6 +65,12 @@ drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.
   stay usable however throttled. **Refined boundary: the wall is network *content/boundary* (which reactions/
   exchanges exist), not regulatory *state* — so the indicated fix is host-exchange/medium curation (HOSTCTX2),
   not transcriptomics.** Directly relevant to the whole host-embedded class (intracellular pathogens, cancer).
+- **HOSTCTX2 (exchange/medium curation) — also NEGATIVE, verified:** moves the set (recall 0.20→0.30) but OR
+  stays flat 2.43 (<3), robust ×3 a-priori media, no precision collapse. **UNIFIED CONCLUSION (3 negatives —
+  plain + expression + boundary FBA all fail on host-dependent biology): metabolic essentiality is the WRONG
+  signal for host-embedded systems (parasite→intracellular→cancer). Evidence-based redirection: pivot to a
+  functional-DEPENDENCY layer (CRISPR fitness) — exactly what the human/oncology line's best result (V15–18)
+  already uses. For host-embedded target-ID, dependency > metabolic essentiality.**
 
 ### Layer 4 — Target discovery
 **VERIFIED (bacterial essential-target enrichment) / COMPUTED (multi-axis).** DiscoveryEngine composes 7 signals

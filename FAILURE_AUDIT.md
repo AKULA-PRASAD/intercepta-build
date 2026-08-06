@@ -36,12 +36,16 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
 - Evidence: GENERALIZE5 malaria OR 2.47 (sub-threshold). HOSTCTX1: expression context (E-Flux) does NOT fix
   it — the wall is *structural* (GPR bypass topology, not flux magnitude).
 - Root cause: host-salvage "workaround" reactions in the network keep true essentials looking dispensable.
-- **Compute-solvable? UNKNOWN — under test.**
-- **Real solution (LAUNCHED — HOSTCTX2):** restrict the model's import/exchange reactions to what the host
-  RBC actually provides (network *content/boundary* curation), with hard **anti-circularity** (host-nutrient
-  set frozen from independent published biology, never tuned to the answer) and a **precision-collapse guard**
-  (a rescue must not be "call everything essential"). If HOSTCTX2 is also NEGATIVE → the honest conclusion is
-  that host-embedded target-ID needs *context-specific dependency data*, not metabolic essentiality (see F3).
+- **Compute-solvable? TESTED — NO, not with FBA.** Three verified negatives now: plain FBA (GENERALIZE5),
+  expression-context E-Flux (HOSTCTX1), and host-exchange/medium curation (HOSTCTX2). Boundary curation was
+  *directionally* correct (recall 0.20→0.30) but OR stayed flat (2.43<3) — enrichment never improved.
+- **Real solution (RESOLVED DIRECTION):** metabolic-essentiality FBA is the **wrong signal for host-embedded
+  biology** — it assumes a self-contained metabolism host-dependent organisms lack. Do NOT keep patching the
+  GEM (diminishing returns; would need host–parasite compartment modeling + a de-novo-lipid GEM). **Pivot to a
+  functional-DEPENDENCY reasoning layer** (context-specific CRISPR/knockout fitness), which is exactly what the
+  human/oncology line's most promising result already uses (V15–V18). **This unifies F2 with F3: for the whole
+  host-embedded class (parasite → intracellular → human/cancer), dependency > metabolic essentiality.** That is
+  the evidence-based Wave-3 direction, not more FBA.
 
 ## Tier 2 — real weaknesses needing an honest fix or an honest downgrade
 **F3 — The human-disease / oncology line (V1–V18+) is WEAK, and one claim was already downgraded.**

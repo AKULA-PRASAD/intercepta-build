@@ -55,11 +55,27 @@ never *shuts* an expressed reaction, and the salvage workarounds are themselves 
 topologically usable however you down-weight them. **The malaria wall is a property of network *content/
 boundary* (which reactions and exchanges exist), not of the *regulatory state* (which genes are on).**
 
-**Consequence — the mechanistically-indicated next attack (HOSTCTX2, not yet run):** a genuine rescue requires
-changing network *content*, not expression — i.e. **restricting the model's exchange/import reactions to what
-the host RBC actually provides** (host-exchange / medium curation, or explicit host–parasite compartment
-modeling), forcing reliance on the parasite's own essential pathways. Whether *that* rescues the signal is the
-open question; expression context is now falsified as the lever.
+## Host-context wall — attack #2 (HOSTCTX2, exchange/medium curation): partial, still NEGATIVE
+Restricting imports to a host-RBC-available set (frozen from published RPMI-1640 + salvage-biology citations;
+anti-circularity enforced; precision-collapse guard) **does move the essential set — recall 0.20→0.30 (+28 true
+essentials)** — unlike E-Flux. But it adds proportional false positives, so **OR stays flat (~2.43, still <3,
+not even above baseline): NEGATIVE, robust across 3 a-priori media, verified reproduced ×2 (sha e1fa792d).**
+190 experimentally-essential genes remain FBA-dispensable (residual topology bypass), and iPfal19 lacks
+de-novo lipid biosynthesis (a GEM-content ceiling). Boundary curation is *directionally correct but
+insufficient*.
+
+## THE UNIFIED HOST-CONTEXT CONCLUSION (three negatives: GENERALIZE5 + HOSTCTX1 + HOSTCTX2)
+Plain FBA, expression-context FBA, and boundary-curated FBA **all** fail to clear the bar on the host-dependent
+parasite. The wall is not a tuning problem — it is **the wrong signal for host-embedded biology**:
+metabolic-essentiality assumes a self-contained metabolism, which host-dependent organisms (parasites →
+intracellular pathogens → human cells/cancer) do not have. Patching the GEM (medium, expression, even
+compartment modeling + a de-novo-lipid model) has sharply diminishing returns.
+**Real redirection (not more FBA patching):** host-embedded target discovery should pivot to a
+**functional-dependency reasoning layer** — context-specific dependency signals (CRISPR/knockout fitness),
+which is exactly what the human/oncology line's most promising result already uses (V15–V18: expr→CRISPR
+dependency rescues FLT3/BCL2 where metabolic/transcriptomic signals fail). **This unifies the parasite wall
+with the human-disease route: for host-embedded systems, dependency > metabolic essentiality.** That is the
+evidence-based direction for the host-embedded half of the North Star (see FAILURE_AUDIT F2↔F3).
 
 ## Honest limits of this fusion
 Each class is **n=1** (one virus, one yeast, one parasite) — these are *frontier probes*, not population claims.
