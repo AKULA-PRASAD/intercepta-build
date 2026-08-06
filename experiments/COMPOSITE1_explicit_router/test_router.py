@@ -51,19 +51,41 @@ def test_parasite_abstains_fba_gated():
     assert Signal.FUNCTIONAL_DEPENDENCY.value in gated
 
 
-# ---- human/cancer: functional-dependency not built -> ABSTAIN -------------------------------------
-def test_human_cancer_abstains():
-    d = decide(BiologyClass.HUMAN_CANCER, organism="aml")
-    assert d.output_type == "abstention"
-    assert d.signals_fired == []
-    assert d.abstention == HOST_EMBEDDED_ABSTENTION
+# ---- human/cancer: COMPOSITE2 — functional-dependency NOW FIRES -> shortlist (the NEW capability) --
+def test_human_cancer_fires_functional_dependency():
+    d = decide(BiologyClass.HUMAN_CANCER, organism="melanoma")
+    assert d.output_type == "shortlist"                       # was "abstention" in COMPOSITE1
+    assert Signal.FUNCTIONAL_DEPENDENCY.value in d.signals_fired
+    assert d.abstention is None
+    # FBA must STILL be gated out for human/cancer (host-embedded metabolism; not un-gated by COMPOSITE2)
+    gated = {g.signal for g in d.signals_gated_out}
+    assert Signal.FBA_ESSENTIALITY.value in gated
 
 
-# ---- functional-dependency is never fired anywhere (module not built) -----------------------------
-def test_functional_dependency_never_fires():
+# ---- COMPOSITE2 — functional-dependency fires ONLY for HUMAN_CANCER (data-dependent transfer) ------
+def test_functional_dependency_fires_only_for_human_cancer():
     for cls in BiologyClass:
         d = decide(cls)
-        assert Signal.FUNCTIONAL_DEPENDENCY.value not in d.signals_fired
+        if cls == BiologyClass.HUMAN_CANCER:
+            assert Signal.FUNCTIONAL_DEPENDENCY.value in d.signals_fired
+        else:
+            assert Signal.FUNCTIONAL_DEPENDENCY.value not in d.signals_fired
+
+
+# ---- COMPOSITE2 — the DECISIVE integrity test: parasite does NOT fire functional-dependency --------
+def test_parasite_functional_dependency_gated_not_transferred():
+    d = decide(BiologyClass.HOST_DEPENDENT_PARASITE, organism="pfalciparum")
+    assert d.output_type == "abstention"
+    assert Signal.FUNCTIONAL_DEPENDENCY.value not in d.signals_fired   # does NOT transfer to a parasite
+    gated = {g.signal: g.reason for g in d.signals_gated_out}
+    assert Signal.FUNCTIONAL_DEPENDENCY.value in gated
+    # the gate reason must cite the DATA-DEPENDENT non-transfer (no parasite screen / label-free not moved)
+    fd_reason = gated[Signal.FUNCTIONAL_DEPENDENCY.value]
+    assert "HUMAN_CANCER" in fd_reason
+    assert "not organism-transfer" in fd_reason.lower() or "organism-transfer" in fd_reason.lower()
+    # and the class-level abstention reason cites the scope bound explicitly
+    for cite in ("no dependency data", "label-free", "organism-transferred"):
+        assert cite in d.abstention
 
 
 # ---- sequence-repurposing is never a discovery signal (validation-grade only) ---------------------
@@ -82,6 +104,19 @@ def test_gate_table_fba_domain():
     assert BiologyClass.HOST_DEPENDENT_PARASITE not in dom   # GENERALIZE5/HOSTCTX1/2
     assert BiologyClass.HUMAN_CANCER not in dom
     assert BiologyClass.VIRUS not in dom                     # no metabolism
+
+
+# ---- COMPOSITE2 — the gate table encodes functional-dependency's HUMAN_CANCER-ONLY validated domain ---
+def test_gate_table_functional_dependency_domain():
+    spec = TRANSFER_GATE[Signal.FUNCTIONAL_DEPENDENCY]
+    assert spec.built is True                                          # NOW built (DEPEND1)
+    assert spec.discovery_grade is True
+    dom = spec.domain
+    assert BiologyClass.HUMAN_CANCER in dom                            # VALIDATED (DEPEND1 on DepMap)
+    assert BiologyClass.HOST_DEPENDENT_PARASITE not in dom             # NOT organism-transferred -> excluded
+    assert BiologyClass.BACTERIUM not in dom
+    assert BiologyClass.VIRUS not in dom
+    assert "DEPEND1" in spec.evidence
 
 
 # ---- class detector: tiny proteome -> virus; declared wins; host-dependence declared --------------

@@ -29,8 +29,13 @@ Transfer-condition table AS IMPLEMENTED (each cell cites the committed experimen
         discovery signal, in any class. No "expanded coverage" claim.
   * FUNCTIONAL-DEPENDENCY layer (context-specific CRISPR/knockout fitness) — the validated signal that
         host-embedded biology (parasite -> intracellular -> human/cancer) actually needs (FAILURE_AUDIT F2<->F3).
-        **NOT BUILT YET** (V15-18 are hypothesis-tier, single-cohort). Therefore for a host-dependent parasite or
-        human/cancer the router has NO usable discovery signal -> it must ABSTAIN with an explicit reason.
+        **COMPOSITE2: NOW BUILT + VALIDATED for HUMAN_CANCER** (DEPEND1 G1/G2/G3 PASS on DepMap: selective
+        dependency recovers known cancer targets 0.80, generalizes to held-out disjoint cell lines 0.80, and a
+        label-free expr->dep arm beats baseline rho 0.36; reproduced x2). Its transfer condition is
+        DATA-DEPENDENT: it fires for HUMAN_CANCER (dependency data / same-domain label-free map exists) and
+        returns a selective-dependency shortlist. It does NOT fire for a HOST_DEPENDENT_PARASITE (no parasite
+        screen; label-free arm validated on held-out DepMap HUMAN lines, NOT organism-transferred) -> the
+        parasite STILL ABSTAINS. Honest bound: cancer CELL-LINE dependency, not patient/clinical.
   * CONSERVATION-BREADTH (REACH1) and HOST-SAFETY hard filter (FRONT1/E2E2) are supporting signals that ride the
         same metabolism/conservation invariants; they compose alongside FBA for the bacterial/eukaryote classes.
 
@@ -112,10 +117,21 @@ TRANSFER_GATE: dict[Signal, SignalSpec] = {
     ),
     Signal.FUNCTIONAL_DEPENDENCY: SignalSpec(
         signal=Signal.FUNCTIONAL_DEPENDENCY,
-        domain=frozenset({BiologyClass.HOST_DEPENDENT_PARASITE, BiologyClass.HUMAN_CANCER}),
-        built=False, discovery_grade=True,   # the RIGHT signal for host-embedded biology, but NOT built
-        evidence="V15-18 (hypothesis-tier, single cohort); Wave-3 gap (FAILURE_AUDIT F2<->F3)",
-        out_of_domain_note="functional-dependency layer NOT YET BUILT",
+        # COMPOSITE2: VALIDATED domain is HUMAN_CANCER ONLY (DEPEND1 on DepMap). The transfer condition is
+        # DATA-DEPENDENT, not class-blanket: it fires for HUMAN_CANCER because dependency data (DepMap CRISPR)
+        # OR a validated SAME-DOMAIN label-free expr->dep map exists. A HOST_DEPENDENT_PARASITE is DELIBERATELY
+        # EXCLUDED from the domain: there is no parasite dependency screen, and DEPEND1's label-free arm was
+        # validated on held-out DepMap HUMAN lines, NOT organism-transferred to a zero-screen parasite -> the
+        # parasite MUST still ABSTAIN. This exclusion IS the router's integrity (see out_of_domain_note).
+        domain=frozenset({BiologyClass.HUMAN_CANCER}),
+        built=True, discovery_grade=True,    # NOW BUILT + VALIDATED (DEPEND1 G1/G2/G3 PASS)
+        evidence=("DEPEND1 G1/G2/G3 PASS on DepMap: selective CRISPR dependency recovers known cancer targets "
+                  "(recovery@top10=0.80), GENERALIZES to held-out disjoint cell lines (0.80), and a LABEL-FREE "
+                  "expr->dep model beats the own-expression baseline (median CV rho=0.36); reproduced x2"),
+        out_of_domain_note=("VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. "
+                            "For a host-dependent parasite it does NOT fire: no parasite dependency data and "
+                            "DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen "
+                            "organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains"),
     ),
     Signal.CONSERVATION_BREADTH: SignalSpec(
         signal=Signal.CONSERVATION_BREADTH,
@@ -161,9 +177,20 @@ class RoutingDecision:
         return d
 
 
-# The explicit host-embedded abstention reason (frozen; asserted verbatim by the parasite integrity test).
-HOST_EMBEDDED_ABSTENTION = ("host-embedded biology: metabolic essentiality falsified "
-                            "(GENERALIZE5/HOSTCTX1/2); functional-dependency layer not yet built")
+# The explicit host-dependent-parasite abstention reason (frozen; asserted verbatim by the parasite integrity
+# test). COMPOSITE2 update: the functional-dependency layer IS now built + validated (DEPEND1) but ONLY for
+# HUMAN_CANCER; it does NOT transfer to a zero-screen parasite. The reason states BOTH gated signals precisely:
+# (1) metabolic FBA falsified for host-embedded biology; (2) functional-dependency validated-but-not-transferred.
+HOST_DEPENDENT_PARASITE_ABSTENTION = (
+    "host-dependent parasite: metabolic essentiality falsified (GENERALIZE5/HOSTCTX1/2); the "
+    "functional-dependency layer is BUILT and VALIDATED for HUMAN_CANCER only (DEPEND1 G1/G2/G3 on DepMap) "
+    "but does NOT transfer to this parasite -- no dependency data for the organism and DEPEND1's label-free "
+    "expr->dep arm was NOT organism-transferred (validated on held-out DepMap human lines only); the router "
+    "ABSTAINS rather than fire an untransferred signal")
+
+# Backward-compatible alias: parasite is the sole host-embedded class that still abstains (HUMAN_CANCER now
+# FIRES functional-dependency). COMPOSITE1's committed tests import this name.
+HOST_EMBEDDED_ABSTENTION = HOST_DEPENDENT_PARASITE_ABSTENTION
 
 
 # ======================================================================================================
@@ -216,9 +243,12 @@ def decide(biology_class: BiologyClass, organism: str = "", class_source: str = 
 
     # ---- determine output type from the fired DISCOVERY signals -----------------------------------
     if not fired:
-        # no validated discovery signal transfers -> CLASS-LEVEL ABSTENTION (the integrity core)
-        if biology_class in (BiologyClass.HOST_DEPENDENT_PARASITE, BiologyClass.HUMAN_CANCER):
-            reason = HOST_EMBEDDED_ABSTENTION
+        # no validated discovery signal transfers -> CLASS-LEVEL ABSTENTION (the integrity core).
+        # COMPOSITE2: HUMAN_CANCER no longer reaches here (functional-dependency now fires for it). The
+        # host-dependent parasite is the decisive integrity case: it STILL abstains because the validated
+        # functional-dependency signal does NOT transfer to a zero-screen organism (see the constant).
+        if biology_class == BiologyClass.HOST_DEPENDENT_PARASITE:
+            reason = HOST_DEPENDENT_PARASITE_ABSTENTION
         else:
             reason = (f"no validated discovery signal transfers to class '{biology_class.value}'; "
                       f"the system refuses to emit a confident answer rather than force an ill-fitting model")
@@ -261,6 +291,49 @@ class CompositeRouter:
         from .discovery_engine import DiscoveryEngine
         eng = DiscoveryEngine.for_pathogen(organism, **engine_kwargs)
         return eng.report(top=top)
+
+    @staticmethod
+    def functional_dependency_shortlist_from_depend1(metrics_path: str, context: str) -> dict:
+        """HUMAN_CANCER SHORTLIST path (COMPOSITE2 firing path): surface the committed DEPEND1 VALIDATED
+        selective-dependency target(s) for a lineage/mutation `context`. REUSES DEPEND1's committed results
+        (results/DEPEND1_metrics.json) — it does NOT recompute or re-derive selectivity a different way, per
+        the reuse-don't-re-derive rule. DEPEND1's own gates (G1/G2/G3) must be PASS for the router to trust it.
+
+        `context` is a DEPEND1 context key (e.g. 'skin' for melanoma, 'KRAS-hotspot' for KRAS-mutant lines).
+        Returns the context-selective dependency target(s) DEPEND1 validated for that context, each with its
+        genome-wide selectivity rank, selectivity score, dependent-fraction, pan-essential flag and
+        permutation p — plus the honest CELL-LINE (not clinical) scope bound.
+        """
+        import json
+        m = json.load(open(metrics_path))
+        gates = m.get("gates", {})
+        depend1_validated = all(gates.get(g) == "PASS" for g in ("G1", "G2", "G3"))
+        pairs = m.get("G1", {}).get("pairs", [])
+        matched = [p for p in pairs if p.get("context") == context and "rank" in p]
+        # rank ascending = most context-selective first
+        matched = sorted(matched, key=lambda p: p["rank"])
+        shortlist = [{
+            "target": p["target"],
+            "context": p["context"],
+            "selectivity_rank_genomewide": p["rank"],
+            "sel_score": p["sel_score"],
+            "in_top10": p["in_top10"],
+            "in_top1pct": p["in_top1pct"],
+            "dependent_fraction": p["target_dep_frac"],
+            "is_pan_essential": p["is_pan_essential"],
+            "perm_p": p["perm_p"],
+        } for p in matched]
+        return {
+            "signal": "functional_dependency (DEPEND1 G1/G2/G3 PASS, reproduced x2)",
+            "context": context,
+            "depend1_validated": depend1_validated,
+            "depend1_gates": gates,
+            "shortlist": shortlist,
+            "known_contexts": sorted({p["context"] for p in pairs if "context" in p}),
+            "scope": ("cancer CELL-LINE Chronos selective dependency (DepMap); a differential-dependency "
+                      "statistic validated with held-out generalization + a label-free arm; NOT patient/"
+                      "clinical, NOT wet-lab. Fires here because HUMAN_CANCER dependency data exists."),
+        }
 
     @staticmethod
     def structural_class_id_from_generalize3(metrics_path: str) -> dict:

@@ -1,0 +1,245 @@
+{
+  "payload": {
+    "all_assertions_pass": true,
+    "case_A_human_cancer": {
+      "assertions": {
+        "depend1_gates_all_pass": true,
+        "fba_still_gated_out": true,
+        "functional_dependency_FIRED": true,
+        "kras_hotspot_recovers_KRAS_rank1": true,
+        "not_abstained": true,
+        "output_is_shortlist": true,
+        "skin_recovers_SOX10_rank1": true
+      },
+      "contexts": {
+        "KRAS-hotspot": {
+          "scope": "cancer CELL-LINE Chronos selective dependency (DepMap); a differential-dependency statistic validated with held-out generalization + a label-free arm; NOT patient/clinical, NOT wet-lab. Fires here because HUMAN_CANCER dependency data exists.",
+          "shortlist": [
+            {
+              "context": "KRAS-hotspot",
+              "dependent_fraction": 0.4164,
+              "in_top10": true,
+              "in_top1pct": true,
+              "is_pan_essential": false,
+              "perm_p": 0.0005,
+              "sel_score": 1.2206,
+              "selectivity_rank_genomewide": 1,
+              "target": "KRAS"
+            }
+          ]
+        },
+        "skin": {
+          "scope": "cancer CELL-LINE Chronos selective dependency (DepMap); a differential-dependency statistic validated with held-out generalization + a label-free arm; NOT patient/clinical, NOT wet-lab. Fires here because HUMAN_CANCER dependency data exists.",
+          "shortlist": [
+            {
+              "context": "skin",
+              "dependent_fraction": 0.0995,
+              "in_top10": true,
+              "in_top1pct": true,
+              "is_pan_essential": false,
+              "perm_p": 0.0005,
+              "sel_score": 1.0349,
+              "selectivity_rank_genomewide": 1,
+              "target": "SOX10"
+            }
+          ]
+        }
+      },
+      "known_target_recovered": {
+        "KRAS-hotspot": {
+          "expected_target": "KRAS",
+          "present": true,
+          "rank1_and_in_top10": true
+        },
+        "skin": {
+          "expected_target": "SOX10",
+          "present": true,
+          "rank1_and_in_top10": true
+        }
+      },
+      "routing": {
+        "abstention": null,
+        "biology_class": "human_cancer",
+        "class_source": "declared",
+        "organism": "human cancer (DepMap context)",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "functional_dependency"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for human_cancer: host-embedded metabolism -> FALSIFIED by GENERALIZE5 (OR 2.47) + HOSTCTX1 (E-Flux) + HOSTCTX2 (boundary curation); not applicable to viruses (no metabolism)",
+            "signal": "fba_essentiality"
+          },
+          {
+            "reason": "out of transfer domain for human_cancer: requires an existing 3D structure with a conserved drugged fold",
+            "signal": "structural_homology"
+          },
+          {
+            "reason": "out of transfer domain for human_cancer: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          },
+          {
+            "reason": "out of transfer domain for human_cancer: needs a known host proteome to compare against",
+            "signal": "host_safety"
+          }
+        ],
+        "supporting_signals": [
+          "sequence_repurposing"
+        ]
+      }
+    },
+    "case_B_parasite": {
+      "abstention_reason": "host-dependent parasite: metabolic essentiality falsified (GENERALIZE5/HOSTCTX1/2); the functional-dependency layer is BUILT and VALIDATED for HUMAN_CANCER only (DEPEND1 G1/G2/G3 on DepMap) but does NOT transfer to this parasite -- no dependency data for the organism and DEPEND1's label-free expr->dep arm was NOT organism-transferred (validated on held-out DepMap human lines only); the router ABSTAINS rather than fire an untransferred signal",
+      "assertions": {
+        "abstention_cites_label_free": true,
+        "abstention_cites_no_dependency_data": true,
+        "abstention_cites_organism_transfer": true,
+        "abstention_matches_prereg_constant": true,
+        "did_NOT_emit_shortlist": true,
+        "fba_NOT_fired": true,
+        "fba_gated_out": true,
+        "fd_gate_reason_cites_human_cancer_scope": true,
+        "fd_gate_reason_cites_no_organism_transfer": true,
+        "functional_dependency_did_NOT_fire": true,
+        "functional_dependency_gated_out": true,
+        "no_discovery_signal_fired": true,
+        "output_is_abstention": true
+      },
+      "functional_dependency_gate_reason": "out of transfer domain for host_dependent_parasite: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+      "routing": {
+        "abstention": "host-dependent parasite: metabolic essentiality falsified (GENERALIZE5/HOSTCTX1/2); the functional-dependency layer is BUILT and VALIDATED for HUMAN_CANCER only (DEPEND1 G1/G2/G3 on DepMap) but does NOT transfer to this parasite -- no dependency data for the organism and DEPEND1's label-free expr->dep arm was NOT organism-transferred (validated on held-out DepMap human lines only); the router ABSTAINS rather than fire an untransferred signal",
+        "biology_class": "host_dependent_parasite",
+        "class_source": "declared",
+        "organism": "Plasmodium falciparum",
+        "output_type": "abstention",
+        "signals_fired": [],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: host-embedded metabolism -> FALSIFIED by GENERALIZE5 (OR 2.47) + HOSTCTX1 (E-Flux) + HOSTCTX2 (boundary curation); not applicable to viruses (no metabolism)",
+            "signal": "fba_essentiality"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: requires an existing 3D structure with a conserved drugged fold",
+            "signal": "structural_homology"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+            "signal": "functional_dependency"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          },
+          {
+            "reason": "out of transfer domain for host_dependent_parasite: needs a known host proteome to compare against",
+            "signal": "host_safety"
+          }
+        ],
+        "supporting_signals": [
+          "sequence_repurposing"
+        ]
+      }
+    },
+    "case_C_bacterium": {
+      "assertions": {
+        "all_cores_present_in_committed_engine": true,
+        "conservation_breadth_fired": true,
+        "fba_fired": true,
+        "functional_dependency_NOT_fired": true,
+        "not_abstained": true,
+        "output_is_shortlist": true
+      },
+      "cores_present": {
+        "dxs": true,
+        "mraY": true,
+        "murA": true,
+        "murG": true
+      },
+      "routing": {
+        "abstention": null,
+        "biology_class": "bacterium",
+        "class_source": "declared",
+        "organism": "kpneumoniae",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "conservation_breadth",
+          "fba_essentiality",
+          "structural_homology"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for bacterium: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+            "signal": "functional_dependency"
+          }
+        ],
+        "supporting_signals": [
+          "host_safety",
+          "sequence_repurposing"
+        ]
+      }
+    },
+    "case_D_virus": {
+      "assertions": {
+        "Mpro_is_protease": true,
+        "RdRp_is_polymerase": true,
+        "autodetected_virus": true,
+        "fba_NOT_fired": true,
+        "functional_dependency_NOT_fired": true,
+        "output_is_structural_class_id": true,
+        "structural_fired": true
+      },
+      "routing": {
+        "abstention": null,
+        "biology_class": "virus",
+        "class_source": "autodetected",
+        "organism": "SARS-CoV-2",
+        "output_type": "structural_class_id",
+        "signals_fired": [
+          "structural_homology"
+        ],
+        "signals_gated_out": [
+          {
+            "reason": "out of transfer domain for virus: host-embedded metabolism -> FALSIFIED by GENERALIZE5 (OR 2.47) + HOSTCTX1 (E-Flux) + HOSTCTX2 (boundary curation); not applicable to viruses (no metabolism)",
+            "signal": "fba_essentiality"
+          },
+          {
+            "reason": "out of transfer domain for virus: VALIDATED for HUMAN_CANCER only and CELL-LINE (Chronos), NOT patient/clinical. For a host-dependent parasite it does NOT fire: no parasite dependency data and DEPEND1's label-free expr->dep arm was NOT organism-transferred to a zero-screen organism (validated on held-out DepMap HUMAN lines only) -> parasite abstains",
+            "signal": "functional_dependency"
+          },
+          {
+            "reason": "out of transfer domain for virus: rides the conserved-core invariant of self-contained genomes",
+            "signal": "conservation_breadth"
+          }
+        ],
+        "supporting_signals": [
+          "host_safety",
+          "sequence_repurposing"
+        ]
+      },
+      "structural_hypotheses": [
+        {
+          "best_drugged_analog": "thrombin",
+          "protein": "nsp5_Mpro",
+          "rank": 6,
+          "target_class": "protease",
+          "tm": 0.462
+        },
+        {
+          "best_drugged_analog": "HCV-NS5B-RdRp",
+          "protein": "nsp12_RdRp",
+          "rank": 5,
+          "target_class": "polymerase",
+          "tm": 0.473
+        }
+      ]
+    },
+    "test": "COMPOSITE2 wire DEPEND1 functional-dependency into the router (transfer-condition-precise)"
+  },
+  "provenance": {
+    "git_sha": "0836f2f2b157813ea8f1d495c895285812fc0251",
+    "runtime_sec": 0.02,
+    "utc": "2026-08-06T02:13:26Z"
+  },
+  "verdict": "ROUTER v2: (A) HUMAN_CANCER -> shortlist (functional_dependency FIRED=True; skin->SOX10 & KRAS-hotspot->KRAS recovered at rank 1); (B) PARASITE P.falciparum -> abstention (functional_dependency did NOT fire=True; STILL ABSTAINS -- no dependency data / label-free not organism-transferred); (C) BACTERIUM K.pneumoniae -> shortlist (FBA unchanged, cores present); (D) VIRUS SARS-CoV-2 -> structural_class_id (structural unchanged, FBA not fired). ALL ASSERTIONS PASS: True. INTEGRITY HOLDS: functional-dependency un-gated ONLY for human/cancer (data exists); the novel parasite STILL ABSTAINS by design. Scope: cancer CELL-LINE dependency, NOT patient/clinical."
+}
