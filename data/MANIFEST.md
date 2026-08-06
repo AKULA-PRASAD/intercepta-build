@@ -242,3 +242,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/generalize3/ — experimental RCSB PDB structures for 21/30 SARS-CoV-2 mature proteins
   (query_clean/) + a frozen corona-free 31-structure drug-target panel across 13 classes (ref_clean/) +
   Foldseek aln.m8. Open (RCSB PDB); regenerable; never committed.
+
+## GENERALIZE5 parasite FBA (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/generalize5/ — iPfal19.xml (curated P. falciparum GEM, PARADIGM/GitHub maureencarey/paradigm),
+  Zhang 2018 piggyBac essentiality via PlasmoDB (zhang2018_essentiality.csv + Pf3D7 annotations/aliases). Open;
+  regenerable; never committed.
