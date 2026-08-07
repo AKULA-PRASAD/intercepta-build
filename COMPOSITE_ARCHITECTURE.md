@@ -98,6 +98,9 @@ Each validated model is a standalone contribution (paper); the book is the integ
   direction — high-value, rare)*
 - **Paper E** — The governed composite: calibrated confidence, abstention, provenance (ENGINE, CALIB1,
   BESTINT1) — the book's binding.
+- **Paper F** — The target→intervention loop and its honest ceiling: repurposing recovers known pharmacology in
+  both validated arms (INTERVENE1 bacteria 9/9; INTERVENE2 cancer 10/10) but existing-drug coverage is narrow
+  (bacteria 1/32 novel; cancer 6.8% drugged / 93.2% undrugged) — the F4 de-novo-chemistry ceiling, quantified.
 
 ## 6. Connected plan — what building the book requires next (ranked, evidence-based)
 1. ~~**Make the router explicit (COMPOSITE1)**~~ **✅ BUILT + VERIFIED (759c8b7).** `src/intercepta/

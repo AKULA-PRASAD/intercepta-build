@@ -118,10 +118,17 @@ best-intervention score (BESTINT1 Spearman 0.69 vs #organisms-essential). Per-ta
 axes weaker than "essential"; confidence saturates at genome scale (use rank_score).
 
 ### Layer 5 — Intervention discovery
-**HYPOTHESIS / GATED — the first hard wall.** INTERVENE1: repurposing mapping is real (**9/9** canonical
-antibacterial MoA recovered) but **narrow — only 1/32** of a novel pathogen's essential targets has an
-existing-drug candidate. Biologics/RNA/CRISPR/vaccine/phage/host-directed interventions: **ABSENT.** The
-majority of targets need de-novo chemistry (ceiling) or new experiments.
+**HYPOTHESIS / GATED — the first hard wall, now mapped for BOTH validated arms.** The target→intervention loop
+(does a validated target have an *existing drug*?) is closed and validated for two disease classes, with the
+same shape: mapping recovers known pharmacology, but the undrugged fraction is a hard ceiling.
+- **Bacteria (INTERVENE1):** 9/9 canonical antibacterial MoA recovered; but only **1/32** of a novel pathogen's
+  essential targets has an existing-drug candidate.
+- **Human/cancer (INTERVENE2, verified):** 10/10 canonical cancer drug-targets recovered (BRAF→vemurafenib class,
+  MDM2→nutlin, KRAS→sotorasib, BCL2→venetoclax…); but only **6.8%** of validated selective dependencies are
+  drugged (4.6% approved), **93.2% undrugged** (20% for the patient-driver subset — still 80% undrugged).
+Biologics/RNA/CRISPR/vaccine/phage/host-directed interventions: **ABSENT.** The large undrugged majority in both
+arms needs de-novo chemistry (the F4 ceiling) or new experiments — the vision's "intervene" half is validated
+as a *mapping* but is fundamentally bounded by existing-drug coverage.
 
 ### Layer 6 — Molecule discovery
 **ENGINEERING (pipeline) / GATED (real potency) — a demonstrated ceiling.** End-to-end shape exists (ENGINE-MOL:

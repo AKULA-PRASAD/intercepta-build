@@ -109,6 +109,12 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
 - **Real solution (honest boundary):** keep molecule outputs labelled "pose-plausible developable
   hypotheses" (already enforced); offer real potency ranking ONLY where bioactivity data exists, and say so.
   The novel-target molecule problem is data-gated — not a bug to fix, a limit to state.
+- **Quantified across both validated arms (INTERVENE1 + INTERVENE2):** the existing-drug (repurposing) escape
+  hatch — which side-steps de-novo chemistry — covers only a small minority of validated targets: **1/32** of a
+  novel bacterial pathogen's essential targets, and **6.8%** (93.2% undrugged) of validated cancer selective
+  dependencies. So even the "just repurpose an existing drug" path is fundamentally narrow; the large majority
+  of validated targets in *both* arms hit exactly this F4 de-novo-chemistry ceiling. The mapping to known drugs
+  is validated (INTERVENE1 9/9, INTERVENE2 10/10) — the *coverage* is the ceiling, and it is data-gated.
 
 ## Tier 3 — real but managed limitations (documented, not hidden)
 - **F5 — FBA fine-ranking doesn't generalize; binary-enrichment only; low recall** (AUROC ~0.6; chance in
