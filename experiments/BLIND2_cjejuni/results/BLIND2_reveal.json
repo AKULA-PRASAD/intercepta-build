@@ -1,0 +1,29 @@
+{
+  "provenance": {
+    "git_sha": "435350e9caee24693524e61fdc32b418e1ec32b6",
+    "utc": "2026-08-07T04:56:55Z"
+  },
+  "runtime_sec": 1.4,
+  "summary": {
+    "PREREG_GATE_OR_gt3_p_lt0.01": true,
+    "adjudication": "sequence-homology bridge (mmseqs pident>=90)",
+    "clade": "epsilon-proteobacteria",
+    "contingency": {
+      "FBA_only": 33,
+      "both": 12,
+      "exp_only": 43,
+      "neither": 464
+    },
+    "deg_accession": "DEG1049",
+    "fisher_p": 0.0006524,
+    "locked_sha_verified": true,
+    "n_deg_essential_proteins": 166,
+    "n_experimental_essential_in_our_space": 166,
+    "n_locked_genes": 552,
+    "odds_ratio": 3.92,
+    "organism": "C_jejuni_NCTC11168",
+    "precision": 0.267,
+    "recall": 0.218,
+    "verdict": "PROSPECTIVE-BLIND RESULT (PASS), sequence-bridge adjudication of the pre-registered LOCKED predictions (sha dc42f715e4d88aa0... verified intact; predictions unchanged): on the genuinely novel, never-seen WHO priority pathogen C. jejuni NCTC 11168 (NEW clade: epsilon-proteobacteria), de-novo CarveMe FBA-essential genes are ENRICHED for EXPERIMENTAL essentiality (DEG DEG1049, Mandal 2017 Tn-seq, 166 essential proteins mapped by mmseqs to 166 of our genes): odds ratio 3.92 (Fisher p=0.0006524), precision 0.267, recall 0.218 (12 both / 33 FBA-only / 43 exp-only / 464 neither). This is a SECOND independent prospective-blind confirmation (n=2 with BLIND1) that the FBA-essentiality mechanism signal predicts experimental essentiality on a pre-registered, never-seen pathogen \u2014 now extended to a new phylogenetic clade. SCOPE: essentiality-enrichment only; sparse de-novo GEM; in-silico FBA vs published Tn-seq; hypotheses; not wet-lab."
+  }
+}

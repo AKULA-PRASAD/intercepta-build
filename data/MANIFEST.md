@@ -313,3 +313,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## INTERVENE3 synthetic-lethal (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/intervene3/ — human paralog pairs + curated known-SL set (Ryan/De Kegel cancergenetics
   paralog_seq_similarity, Ensembl-111). Reuses DepMap (kaalcura) + INTERVENE2 ChEMBL mapper read-only. Open; regenerable; never committed.
+
+## BLIND2 C. jejuni prospective-blind #2 (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/blind2/ — C. jejuni NCTC 11168 proteome (UniProt UP000000799) + de-novo CarveMe GEM +
+  DEG1049 Tn-seq essentiality (Mandal 2017). Open; regenerable; never committed.
