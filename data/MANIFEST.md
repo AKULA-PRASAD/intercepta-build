@@ -309,3 +309,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/intervene2/chembl_max_phase.json — ChEMBL max_phase for 4450 human drug ids (ChEMBL REST,
   frozen cache for deterministic scoring). Reuses DepMap (kaalcura) + intervene/drug_targets.tsv + IntOGen
   (f3clin1) read-only. Open; regenerable; never committed.
+
+## INTERVENE3 synthetic-lethal (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/intervene3/ — human paralog pairs + curated known-SL set (Ryan/De Kegel cancergenetics
+  paralog_seq_similarity, Ensembl-111). Reuses DepMap (kaalcura) + INTERVENE2 ChEMBL mapper read-only. Open; regenerable; never committed.
