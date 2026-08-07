@@ -136,3 +136,12 @@ The composite's integrity IS its abstention: it must say "no validated signal fo
 rather than emit a confident-looking answer. "Any disease" is delivered as **universal honest decision
 coverage** — a real answer where a signal transfers, an explicit abstention where none does — never as a
 universal model that pretends to fit biology it has been shown (GENERALIZE5/HOSTCTX1/2) not to fit.
+
+**This abstention is now empirically stress-tested at the extreme (DARK1).** At the dark-proteome boundary —
+proteins with no sequence homolog, no usable structure, no reference ligand (the vision's own named deepest
+frontier) — the composite **abstained on 22/22 dark proteins with zero false-confident calls**, while still
+firing on 20/20 analyzable controls (fail-safe *and* discriminating). Crucially, 7/22 dark proteins had an
+*ungated* structural TM ≥ 0.5 to a real drugged fold — would-be false-confident calls suppressed **only** by the
+pLDDT confidence gate: the abstention machinery is not decorative, it is load-bearing and it held. This is the
+strongest evidence that the composite fails *safe* — it is honest at exactly the edge where a naive system would
+hallucinate a target.

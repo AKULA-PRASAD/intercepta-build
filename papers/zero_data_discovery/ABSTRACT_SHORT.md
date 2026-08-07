@@ -10,9 +10,10 @@ break? We built a series of pre-registered, reproduced-twice, open-data experime
 bacteria, we establish a well-controlled negative (homology-based target-ID does not beat a conservation null and can fail
 silently) and the one signal that breaks the ceiling: mechanistic **flux-balance gene-essentiality**, which — tested against
 independent published gene-knockout data — is enriched for experimentally essential genes across six curated metabolic models
-spanning three phyla, and clears a pre-registered gate in **two** genuinely prospective-blind tests on never-seen WHO-priority pathogens
-(*Neisseria gonorrhoeae*, OR 6.1; *Campylobacter jejuni*, a new phylogenetic clade, OR 3.9; predictions locked before
-the answer was consulted).
+spanning three phyla, and, in a **prospective-blind suite of four never-seen pathogens across multiple phyla** (predictions locked before the
+answer was consulted), clears the gate in three — *N. gonorrhoeae* (OR 6.1), *C. jejuni* (OR 3.9), *Bacteroides
+thetaiotaomicron* (a new phylum, OR 8.0) — and honestly fails the fourth (*S. pneumoniae*, OR 3.0, a sparse de-novo
+model), giving a real deployment envelope rather than a suspiciously-perfect sweep.
 
 We then ask whether this extends to *any* disease class, and formalize the answer as a **transfer-condition law**: each
 label-free signal transfers only as far as the biological invariant it rides on is conserved. Viruses: sequence homology to
