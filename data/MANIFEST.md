@@ -321,3 +321,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## BLIND4 S. pneumoniae prospective-blind #4 (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/blind4/ — S. pneumoniae TIGR4 proteome (UniProt UP000000585) + de-novo CarveMe GEM +
   DEG1007 essentiality (fallback; intended van Opijnen 2009 Tn-seq not fetchable CPU-only). Open; never committed.
+
+## DARK1 dark-proteome boundary (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/dark1/ — UniProt disordered/dark proteins + control drug targets + AlphaFold structures +
+  mmseqs/foldseek tables. Open (UniProt/AlphaFold/ChEMBL); regenerable; never committed.
