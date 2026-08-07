@@ -1,0 +1,28 @@
+{
+  "VERDICT": "FAIL",
+  "adjudication": "direct GS115 systematic locus-tag match (exact same-strain namespace; no homology bridge needed)",
+  "contingency": {
+    "both": 43,
+    "exp_only": 131,
+    "fba_only": 104,
+    "neither": 748
+  },
+  "deg2027_loci": 752,
+  "deg2027_no_locus": 0,
+  "deg2027_rows": 753,
+  "deg_aa_sha256": "a9e7612dd38b9243b14fc71a9db81b651cbfce694cd731a524338c62f868413f",
+  "deg_accession": "DEG2027",
+  "deg_ann_sha256": "f06af79c700ded52f7ad8c944de372babfd5c22a85199c67db72dd06abe8f457",
+  "exp_essential_in_gem": 174,
+  "experimental_source": "DEG2027 \u2014 Zhu et al. 2018 Sci Rep (PMID 29976927), genome-wide Tn-seq, K. phaffii GS115, 753 essential; DEG20.aa.gz + deg_annotation_e.csv",
+  "fba_essential": 147,
+  "fisher_p_greater": "3.997769e-05",
+  "gate": "OR>3 AND p<0.01",
+  "gem_universe": 1026,
+  "lock_intact": true,
+  "locked_sha_verified": "8d0822054d41ae86174305982106a355b800208f83048a445309be2de8dfe521",
+  "odds_ratio": 2.360834,
+  "precision": 0.292517,
+  "recall": 0.247126,
+  "reveal_payload_sha256": "138a6b17eb2155135b5be684568f7a26420d4292753452e1dbf0cd78d287683a"
+}

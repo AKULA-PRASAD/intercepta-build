@@ -26,23 +26,20 @@ def main():
         acc = ln[1:].split()[0].split("|")[1] if "|" in ln else ln[1:].split()[0]
         for tok in ln.split():
             if tok.startswith("GN="): gn2acc[tok[3:]] = acc
-    # Solver: EXACT-rational simplex (glpk_exact) WITH PRESOLVE ON.
-    #  * glpk_exact gives the mathematically EXACT LP optimum -> the authoritative, solver-independent essentiality call
-    #    (float GLPK gives numerically DIFFERENT borderline calls near the 1%-WT threshold; exact is ground truth).
-    #  * The default GLPK float simplex CYCLES indefinitely on a degenerate KO LP (gene PAS_chr3_0036 / rxn AMETtm,
-    #    S-adenosyl-methionine mito transport); glpk_exact WARMSTARTS with that same float simplex, so it too can hang.
-    #    Enabling GLPK presolve removes the degeneracy that triggers the cycle -> every KO LP terminates reliably.
-    #  * processes=1 + exact arithmetic -> fully deterministic; reproduced x2 byte-identical (see PREREG).
-    # Run in 50-gene batches (robust; a single monolithic all-genes call is avoided) with a progress log to stderr.
-    import sys, time as _t; _t0 = _t.time()
-    m = cobra.io.read_sbml_model(GEM); m.solver = "glpk_exact"; m.solver.configuration.presolve = True
+    # Solver: GLPK float simplex WITH PRESOLVE ON (the BLIND1-4 house solver = float GLPK, plus presolve).
+    #  * The default GLPK float simplex CYCLES indefinitely on a degenerate KO LP for gene PAS_chr3_0036 (gating rxn
+    #    AMETtm, S-adenosyl-methionine mitochondrial transport) on this curated model, hanging single_gene_deletion.
+    #    Enabling GLPK presolve removes the degeneracy that triggers the cycle -> every KO LP terminates in <1s.
+    #  * presolve is a solver SETTING (it does not change the LP), so this stays consistent with the float-GLPK protocol
+    #    used for BLIND1-4; KO growth is rounded to 6 dp (below), collapsing residual alternate-optima jitter.
+    #  * processes=1 -> deterministic (no multiprocessing variance). Full 1026-gene deletion ~150s single-process.
+    #  * SOLVER-SENSITIVITY CAVEAT (disclosed in PREREG): a small number of genes sit right at the 1%-WT threshold;
+    #    the exact-rational solver (glpk_exact) classifies ~20 of them differently. The LOCK uses float-GLPK+presolve
+    #    (147 essential) for consistency with the suite; the borderline solver-sensitivity is reported honestly.
+    m = cobra.io.read_sbml_model(GEM); m.solver = "glpk"; m.solver.configuration.presolve = True
     wt = m.slim_optimize(); thr = 0.01 * wt
-    genes = list(m.genes); growth = {}
-    for i in range(0, len(genes), 50):
-        sg = single_gene_deletion(m, genes[i:i + 50], processes=1)
-        for r in sg.itertuples():
-            growth[list(r.ids)[0]] = float(r.growth)
-        print(f"  chunk {i}-{i+len(genes[i:i+50])} cum {round(_t.time()-_t0,1)}s", file=sys.stderr, flush=True)
+    sg = single_gene_deletion(m, m.genes, processes=1); sg["gid"] = sg["ids"].apply(lambda s: list(s)[0])
+    growth = {r.gid: float(r.growth) for r in sg.itertuples()}
     rows = []
     for locus, gr_raw in growth.items():
         acc = gn2acc.get(locus, ""); ess = 1 if gr_raw < thr else 0

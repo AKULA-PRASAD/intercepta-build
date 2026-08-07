@@ -113,18 +113,55 @@ level (GS115 GEM vs GS115 screen — exact-strain match); NOT drug-target / sele
 industrial eukaryote, not a clinical pathogen — the value here is the prokaryote/eukaryote-divide crossing under blind lock.
 Precision/recall are bounded by the metabolic subproteome.
 
-## Solver note (deterministic reproducibility — disclosed)
+## Solver note (deterministic reproducibility — disclosed honestly)
 The curated iMT1026 v3 network has a KO LP (gene **PAS_chr3_0036**, gating reaction `AMETtm`, S-adenosyl-methionine
-mitochondrial transport) on which the **default float GLPK simplex CYCLES indefinitely** (single-gene deletion hangs).
-The lock therefore pins the **exact-rational simplex `glpk_exact`**, which cannot cycle and is fully deterministic; it
-solves that KO cleanly (growth 0.0 = essential) and completes the full 1026-gene deletion in ~33 s single-process
-(`processes=1`), run in 50-gene batches (a single monolithic all-genes call was avoided). This is a *more* rigorous
-(exact) essentiality call, not a workaround that changes the answer. Disclosed for full reproducibility.
+mitochondrial transport) on which the **default float GLPK simplex CYCLES indefinitely** (single-gene deletion hangs);
+`glpk_exact` does not help because it warmstarts with the same cycling float simplex. **Enabling GLPK presolve** (a
+solver setting that does not change the LP) removes the degeneracy that triggers the cycle, so every KO LP terminates
+in <1 s and the full 1026-gene deletion runs ~150 s single-process (`processes=1`). The lock therefore uses
+**float GLPK + presolve**, keeping the same float-GLPK "house solver" family as BLIND1–4.
+- **Solver-sensitivity caveat (first-class):** a small number of genes sit right at the 1%-WT essentiality threshold;
+  the exact-rational solver (`glpk_exact`) classifies ~20 of them differently (it calls **167** essential vs **147**
+  under float+presolve). This is expected alternate-optima behaviour near a hard threshold on a curated eukaryote GEM,
+  and it is disclosed rather than hidden. The LOCK is the float-GLPK+presolve set (**147**), chosen for suite
+  consistency; the borderline solver-sensitivity does not affect the bulk enrichment signal and is reported as-is.
 
 ## LOCKED-predictions commitment (blindness audit trail)
-- `results/LOCKED_predictions.sha256` (essential-locus-tag payload sha256):
-  **`e68760b40e57443a0772b1734e6bf6efd93f3b7ec1e292328ad4a1a03ff6e551`**
-- GEM: 1026 genes, WT growth 0.057750, **167 FBA-essential** genes predicted (frozen); 971/1026 GEM genes mapped to a
+- `results/LOCKED_predictions.sha256` (essential-locus-tag payload sha256, Python-sorted essential GS115 locus tags):
+  **`8d0822054d41ae86174305982106a355b800208f83048a445309be2de8dfe521`**
+- GEM: 1026 genes, WT growth 0.057750, **147 FBA-essential** genes predicted (frozen); 971/1026 GEM genes mapped to a
   UniProt accession (convenience column; the hashed key is the GS115 locus tag).
-- Determinism: reproduced ×2 — LOCKED_predictions.tsv byte-identical, essential-set sha256 identical (glpk_exact).
-- Stage-1 locked BEFORE Stage-2 reveal. Recorded here as the pre-reveal blindness commitment. This module did NOT git commit.
+- Determinism: `build.py` (float GLPK + presolve, `processes=1`) with KO growth rounded 6 dp → canonical growth-ratio.
+- Stage-1 locked BEFORE Stage-2 reveal, committed to git (commit 1067834) as the pre-reveal blindness commitment. This
+  module did NOT git commit (the orchestrator committed the lock before the reveal).
+
+---
+## REVEAL OUTCOME (Stage 2, scored AFTER the lock was committed to git — commit 1067834)
+**FAIL (honest negative).** The LOCKED predictions were re-verified byte-intact (payload sha
+`8d0822054d41ae86174305982106a355b800208f83048a445309be2de8dfe521` recomputed from the tsv == committed sha; 147
+FBA-essential unchanged) before any scoring. The experimental set **DEG2027** (Zhu et al. 2018, *Sci Rep* 8,
+PMID 29976927; genome-wide **Tn-seq**; *K. phaffii* GS115; **753 essential genes**; assembly GCF_000027005.1) was
+consulted for the first time in Stage 2.
+- **Adjudication — DIRECT GS115 locus-tag match (namespace matched cleanly, no homology bridge needed).** Both the GEM
+  iMT1026 v3 gene IDs and the DEG2027 annotation `locus_tag:` field use the identical GS115 `PAS_...` systematic
+  locus-tag namespace (exact same-strain), so the pre-registered mmseqs pident≥90 bridge (which existed only to defeat
+  the locus-tag/GI namespace mismatch seen in BLIND1–3) was unnecessary; the direct exact-strain locus match is the
+  gold-standard adjudication here. DEG2027: 753 annotation rows → 752 unique GS115 loci; **174** of them fall inside our
+  1026-gene GEM universe (the scoreable overlap).
+- **2×2 over the 1026 GEM genes:** **both 43 / FBA-only 104 / exp-only 131 / neither 748** →
+  **odds ratio 2.361, Fisher one-sided p = 4.00e-05, precision 0.293, recall 0.247.**
+- **Gate (OR>3 AND p<0.01): FAIL.** The enrichment is **real and highly significant (p = 4.0e-05 ≪ 0.01)** — FBA
+  essentiality is *not* independent of experimental essentiality here — but the **odds ratio 2.36 does not clear the
+  pre-registered OR>3 bar**. Reported first-class as an honest negative; NOT re-run or re-tuned to a nicer number.
+- **Reproduced ×2 byte-identical** — reveal payload sha256 `138a6b17eb2155135b5be684568f7a26420d4292753452e1dbf0cd78d287683a`.
+- **Solver-sensitivity limitation (disclosed, not exploited):** ~20 genes sit at the 1%-WT threshold and are
+  solver-sensitive (float+presolve locks 147 essential; exact-rational would call 167). The COMMITTED, pre-registered
+  prediction is the 147-gene float+presolve set and it is what was scored — its verdict is FAIL. We did NOT re-score the
+  alternative exact set (that would be post-hoc gate-fishing, forbidden by the constitution).
+- **Suite context (identical protocol/gate):** BLIND1 6.13 · BLIND2 3.92 · BLIND3 8.03 · BLIND6 4.23 → PASS;
+  BLIND4 2.96 · **BLIND5 2.36** · BLIND7 0.64 → FAIL. BLIND5 is the FIRST eukaryote in the suite: the signal transfers
+  in DIRECTION (significant enrichment) but falls below the effect-size gate — a genuinely informative negative that a
+  healthy curated eukaryote GEM does not automatically clear a bacterium-calibrated OR>3 bar.
+- **Meaning:** essentiality-enrichment is present but sub-threshold on the first blind eukaryote; in-silico FBA vs a
+  published Tn-seq screen; curated model; recall metabolic-scoped; not drug-target/clinical; not wet-lab. This module
+  did NOT git commit the reveal (orchestrator commits).

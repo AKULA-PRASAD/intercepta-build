@@ -337,3 +337,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## BLIND7 T. brucei prospective-blind #7 kinetoplastid (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/blind7/ — T. brucei TREU927 proteome (UP000008524) + de-novo CarveMe GEM + Alsford/Horn
   RIT-seq loss-of-fitness via TriTrypDB/VEuPathDB open mirror (fold-change re-quantitation). Open; never committed.
+
+## BLIND5 K. phaffii prospective-blind #5 eukaryote/fungus (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/blind5/ — K. phaffii GS115 proteome (UP000000314) + curated GEM iMT1026v3 + DEG2027 Tn-seq
+  essentiality (Zhu 2018). Open; regenerable; never committed.
