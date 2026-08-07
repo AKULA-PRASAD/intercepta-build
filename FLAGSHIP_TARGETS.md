@@ -44,6 +44,11 @@ line's selective dependency predict its response to that target's drug? — note
 distinct from the tested-negative transcriptomic *response-prediction* line). The undrugged driver dependencies are the
 flagship novel-oncology targets.
 
+**Synthetic-lethal supplement (INTERVENE3) — a narrow set of drugged combination hypotheses for otherwise-undruggable
+targets:** ~0.5–1% of undruggable dependencies have a validated *drugged* SL partner (PARP/BRCA-style). Most credible
+existing-drug combination *hypotheses* (in-silico, need a wet-lab combination test): **CCND2→CCND1** (CDK4/6–cyclinD),
+**PIK3R2→PIK3R1**, **RPL22L1→RPL22**, **CUL4B→CUL4A**. High-value where they exist, but not a scalable route.
+
 ---
 
 ## The single honest prioritization the whole programme yields

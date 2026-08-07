@@ -115,6 +115,12 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
   dependencies. So even the "just repurpose an existing drug" path is fundamentally narrow; the large majority
   of validated targets in *both* arms hit exactly this F4 de-novo-chemistry ceiling. The mapping to known drugs
   is validated (INTERVENE1 9/9, INTERVENE2 10/10) — the *coverage* is the ceiling, and it is data-gated.
+- **The synthetic-lethality route around undruggability was tested (INTERVENE3) and CONFIRMS the ceiling.** The
+  one clinically-proven non-chemistry route (drug an undruggable target's SL partner, à la PARP/BRCA) was
+  validated as a signal (recovers 9/12 known paralog-SL pairs, ~10× over null) but opens a *drugged* route to
+  only **~0.5–1%** of the 93% undruggable set (25/3416; 3/192 drivers). So SL is a **narrow high-value
+  supplement** (a handful of credible existing-drug combination hypotheses), **not** a scalable escape from F4.
+  Net: the undruggability ceiling stands; closing it needs de-novo chemistry with real bioactivity — experimental.
 
 ## Tier 3 — real but managed limitations (documented, not hidden)
 - **F5 — FBA fine-ranking doesn't generalize; binary-enrichment only; low recall** (AUROC ~0.6; chance in
