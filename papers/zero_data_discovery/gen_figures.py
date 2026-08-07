@@ -91,3 +91,116 @@ axs.set_title(f"Fig 4b. Score vs experimental essentiality\nSpearman ρ={val['sp
 save(fig, "fig4_best_intervention_scorecard")
 
 print("all figures ->", FIG)
+
+
+# ==================== PART II FIGURES (generalization frontier + composite) ====================
+# Every value below is read from a committed reproduced-x2 experiment JSON via P(). No hand-typed numbers.
+def P(path):
+    d = json.load(open(os.path.join(ROOT, "experiments", path)))
+    return d.get("payload", d.get("summary", d))
+
+GREEN, RED, GREY, BLUE, GOLD = "#2e8b57", "#c1442e", "#8a8a8a", "#3b6ea5", "#c98a17"
+
+# ---- Figure 5: FBA-essentiality across disease classes + the Plasmodium GEM swap (transfer + noise floor) ----
+g4 = P("GENERALIZE4_fungal_fba/results/GENERALIZE4_metrics.json")
+hf = P("HARDENF1_fungal_multi/results/HARDENF1_metrics.json")
+g5 = P("GENERALIZE5_parasite_fba/results/GENERALIZE5_metrics.json")["primary"]
+hp = P("HARDENP1_parasite_multi/results/HARDENP1_metrics.json")["primary"]
+swap = P("PARARESOLVE1_parasite_confound/results/PARARESOLVE1_metrics.json")["swap_results"]
+fig, (axA, axB) = plt.subplots(1, 2, figsize=(12.2, 4.5), gridspec_kw={"width_ratios": [1, 1], "wspace": 0.42})
+# Panel A: OR by organism/class (bacteria anchor from CROSSVAL best = E.coli iML1515, read from cv)
+ecoli_or = cv["E. coli"]["odds_ratio"]
+barsA = [("E. coli\n(bacterium, iML1515)", ecoli_or, BLUE),
+         ("S. cerevisiae\n(eukaryote)", g4["odds_ratio"], GREEN),
+         ("C. albicans\n(fungal pathogen)", hf["odds_ratio"], GREEN),
+         ("P. falciparum\n(parasite, iPfal19)", g5["odds_ratio"], RED),
+         ("T. gondii\n(parasite, iTgo2020)", hp["odds_ratio"], GOLD)]
+y = np.arange(len(barsA))
+axA.barh(y, [b[1] for b in barsA], color=[b[2] for b in barsA], height=0.66)
+axA.axvline(3, ls="--", color="grey", lw=1); axA.text(3, -0.45, "gate OR>3", color="grey", fontsize=8, ha="center")
+for i, b in enumerate(barsA): axA.text(b[1]*1.05, i, f"{b[1]:.1f}", va="center", fontsize=8.5)
+axA.set_yticks(y); axA.set_yticklabels([b[0] for b in barsA], fontsize=8.2)
+axA.set_xscale("log"); axA.set_xlim(0.7, 90)
+axA.set_xlabel("Odds ratio (FBA-essential vs experimentally-essential, log)")
+axA.set_title("Fig 5A. FBA-essentiality transfers across classes —\nbut is GEM/organism-specific for parasites", fontsize=8.8, loc="left")
+axA.invert_yaxis()
+# Panel B: Plasmodium GEM swap — OR spans the gate; one independent GEM passes; base rate ~invariant
+order = [s for s in swap]
+order.sort(key=lambda s: s["odds_ratio"])
+kcol = {"reference": BLUE, "independent": RED, "same_lineage": GREY}
+yy = np.arange(len(order))
+axB.barh(yy, [s["odds_ratio"] for s in order], color=[kcol[s["kind"]] for s in order], height=0.66,
+         edgecolor=["black" if s["gate_pass"] else "none" for s in order],
+         linewidth=[1.8 if s["gate_pass"] else 0 for s in order])
+axB.axvline(3, ls="--", color="grey", lw=1); axB.text(3, len(order)-0.4, " gate OR>3", color="grey", fontsize=8, va="top")
+toxo_or = hp["odds_ratio"]; axB.axvline(toxo_or, ls=":", color=GOLD, lw=1.4); axB.text(toxo_or, -0.4, f"T. gondii {toxo_or:.0f}", color=GOLD, fontsize=7.5, ha="center")
+for i, s in enumerate(order): axB.text(s["odds_ratio"]*1.04, i, f"{s['odds_ratio']:.2f}", va="center", fontsize=7.8)
+axB.set_yticks(yy); axB.set_yticklabels([s["label"].replace("_", " ")[:22] for s in order], fontsize=7.6)
+axB.set_xscale("log"); axB.set_xlim(0.7, 22)
+axB.set_xlabel("Odds ratio (log)")
+axB.set_title("Fig 5B. Six P. falciparum GEMs (same organism+screen)\nspan the gate: it sits at Plasmodium's noise floor", fontsize=8.8, loc="left")
+from matplotlib.patches import Patch
+axB.legend(handles=[Patch(color=BLUE, label="reference iPfal19"), Patch(color=RED, label="independent team"),
+                    Patch(color=GREY, label="same-lineage variant"), Patch(fc="white", ec="black", label="passes gate")],
+           fontsize=7, loc="lower right", frameon=False)
+save(fig, "fig5_fba_generalization_and_parasite_swap")
+
+# ---- Figure 6: Viral structural target-class recovery across 5 viruses (leakage-controlled) ----
+hv = P("HARDENV1_virus_multi/results/HARDENV1_metrics.json")
+pt = hv["per_target"]; tm_bar = hv["tm_bar"]
+items = sorted(pt.items(), key=lambda kv: (kv[1]["virus"], kv[0]))
+labels = [f"{r['virus']}: {k.split('_',1)[1]}" for k, r in items]
+corr_tm = [r["best_correct_class_tm"] for _, r in items]
+off_tm = [r["best_offclass_tm"] for _, r in items]
+recov = [r["RECOVER"] for _, r in items]
+fig, ax = plt.subplots(figsize=(9.2, 4.6))
+x = np.arange(len(items)); w = 0.38
+ax.bar(x - w/2, corr_tm, w, color=[GREEN if r else GREY for r in recov], label="best CORRECT-class hit (TM)")
+ax.bar(x + w/2, off_tm, w, color="#d9b38c", label="best off-class hit (TM)")
+ax.axhline(tm_bar, ls="--", color="grey", lw=1); ax.text(len(items)-0.5, tm_bar+0.01, f"gate TM≥{tm_bar}", color="grey", fontsize=8, ha="right")
+for i, r in enumerate(recov):
+    if not r: ax.text(i - w/2, corr_tm[i] + 0.015, "✗", color=RED, ha="center", fontsize=10)
+ax.set_xticks(x); ax.set_xticklabels(labels, rotation=40, ha="right", fontsize=7.6)
+ax.set_ylabel("Foldseek TM-score to reference"); ax.set_ylim(0, 0.85)
+nrec = hv["n_recover"]; nt = hv["n_targets"]; nv = hv["n_viruses"]
+ax.set_title(f"Fig 6. STRUCTURE recovers viral drug-target class where sequence gives 0 — {nrec}/{nt} targets across {nv} viruses\n(own-family excluded from reference; correct class > off-class where green exceeds tan)", fontsize=8.6, loc="left")
+ax.legend(fontsize=8, loc="upper right", frameon=False)
+save(fig, "fig6_viral_structural_recovery")
+
+# ---- Figure 7: Human-cancer dependency — validated target-ID + patient relevance + the two negatives ----
+dep = P("DEPEND1_functional_dependency/results/DEPEND1_metrics.json")
+f3 = P("F3CLIN1_dependency_patient_relevance/results/F3CLIN1_metrics.json")
+tr = P("TRANSFER1_labelfree_zeroscreen/results/TRANSFER1_metrics.json")
+fig, (axL, axR) = plt.subplots(1, 2, figsize=(11.8, 4.4), gridspec_kw={"width_ratios": [1, 1], "wspace": 0.42})
+# Left: DEPEND1 recovery (train/held-out) + null; and label-free rho vs baseline
+g1 = dep["G1"]["recovery_top10"]; g2 = dep["G2_test"]["recovery_top10"]; nullr = dep["null_recovery_top10"]
+rho_m = dep["G3"]["median_abs_rho_model"]; rho_b = dep["G3"]["median_abs_rho_own_expr"]
+barsL = [("known-target\nrecovery@10", g1, GREEN), ("HELD-OUT lines\nrecovery@10", g2, GREEN),
+         ("random\nnull", nullr, GREY), ("label-free\nexpr→dep |ρ|", rho_m, BLUE), ("own-expr\nbaseline |ρ|", rho_b, GREY)]
+xx = np.arange(len(barsL))
+axL.bar(xx, [b[1] for b in barsL], color=[b[2] for b in barsL], width=0.66)
+for i, b in enumerate(barsL): axL.text(i, b[1]+0.015, f"{b[1]:.2f}" if b[1] >= 0.01 else f"{b[1]:.4f}", ha="center", fontsize=8)
+axL.set_xticks(xx); axL.set_xticklabels([b[0] for b in barsL], fontsize=7.6)
+axL.set_ylabel("recovery fraction / |Spearman ρ|"); axL.set_ylim(0, 1.0)
+axL.set_title("Fig 7A. Functional-dependency target-ID (DepMap):\nrecovers known targets, generalizes held-out, learnable label-free", fontsize=8.6, loc="left")
+# Right: patient-driver enrichment (F3CLIN1) surviving study-bias, vs the two negatives
+f_or = f3["fisher_2x2"]["OR"]; mh_or = f3["guard_c_mantel_haenszel"]["mh_or"]
+# DECISIVE TRANSFER1 negative: SELECTIVE signal AMONG ortholog-havers (i.e. BEYOND mere conservation) = chance.
+# (Not scoring_over_U.b_selective=1.96, which is inflated by unconditioned conservation — using that would
+#  misrepresent a first-class negative as a near-miss.)
+tr_sel = tr["decisive_beyond_conservation_among_ortholog_havers"]["selective_only"]["odds_ratio"]  # 0.90
+tr_cons = tr["scoring_over_U"]["NULL_A_conservation"]["odds_ratio"]  # conservation-only null over universe
+barsR = [("patient-driver\nenrichment (raw)", f_or, GREEN),
+         ("...study-bias\ncorrected (M-H)", mh_or, GREEN),
+         ("label-free transfer,\nSELECTIVE beyond\nconservation (zero-screen)", tr_sel, RED),
+         ("conservation-only\n(what DOES transfer,\nbut redundant)", tr_cons, GREY)]
+xr = np.arange(len(barsR))
+axR.bar(xr, [b[1] for b in barsR], color=[b[2] for b in barsR], width=0.66)
+axR.axhline(1.0, ls="-", color="black", lw=0.8); axR.axhline(2.0, ls="--", color="grey", lw=1); axR.text(len(barsR)-0.5, 2.03, "OR=2", color="grey", fontsize=8, ha="right")
+for i, b in enumerate(barsR): axR.text(i, b[1]+0.05, f"{b[1]:.2f}", ha="center", fontsize=8.5)
+axR.set_xticks(xr); axR.set_xticklabels([b[0] for b in barsR], fontsize=7.3)
+axR.set_ylabel("Odds ratio"); axR.set_ylim(0, 3.2)
+axR.set_title("Fig 7B. Patient relevance is REAL (survives study-bias),\nbut label-free transfer to a novel organism is NOT (a first-class negative)", fontsize=8.4, loc="left")
+save(fig, "fig7_human_dependency_and_negatives")
+
+print("Part II figures done.")

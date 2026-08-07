@@ -429,8 +429,33 @@ Mantel–Haenszel stratified OR 2.72), with a recurrence dose-response. This is 
 response prediction, and not clinical validation.
 
 ### Part II results at a glance
-*(Figures 1–4 cover the Part I bacterial arc; the Part II results below are tabulated here — each traces to a committed,
-reproduced-×2 experiment in `LEDGER.md`; figure generation for Part II is future work, not yet drawn.)*
+*(Figures 1–4 cover the Part I bacterial arc; Figures 5–7 below cover Part II — all generated directly from committed
+reproduced-×2 metrics by `gen_figures.py`, no hand-typed values.)*
+
+![Figure 5](figures/fig5_fba_generalization_and_parasite_swap.png)
+**Fig 5. FBA-essentiality across disease classes, and the *Plasmodium* GEM swap.** (A) FBA-essentiality clears the OR>3 gate on
+a bacterium (E. coli 44.9), a model eukaryote (S. cerevisiae 4.7) and a fungal pathogen (C. albicans 13.9), and — despite host
+dependence — on *Toxoplasma* (14.1), but fails on *Plasmodium* (iPfal19, 2.5). (B) Six *P. falciparum* reconstructions scored on
+the *same* organism and *same* screen span OR 0.86–3.07 (one independent GEM, iAM-Pf480, passes; bold outline), while *Toxoplasma*
+(dotted) sits far above at 14.1 — showing the gate lies at *Plasmodium's* statistical noise floor, i.e. its verdict is
+GEM/base-rate-specific, not a clean host-embeddedness rule.
+
+![Figure 6](figures/fig6_viral_structural_recovery.png)
+**Fig 6. Structure recovers viral drug-target class where sequence gives zero.** Blind Foldseek TM of each clinically-drugged
+viral target against a frozen multi-class reference with the target's *own viral family excluded* (leakage control); best
+correct-class hit (green) vs best off-class hit (tan), gate TM≥0.4. **7 of 9** targets across the four hardening viruses recover
+the correct enzyme class (green clears the gate and exceeds off-class); the two misses (HSV POL, a query-size artifact; influenza
+PA, a near-tie) are shown greyed with ✗. Together with the SARS-CoV-2 blind result (Part II text), the structural bridge holds
+across **five viruses**.
+
+![Figure 7](figures/fig7_human_dependency_and_negatives.png)
+**Fig 7. Human-cancer functional dependency: a validated target-ID signal, bounded by two honest negatives.** (A) Selective
+DepMap dependencies recover known cancer targets (recovery@10 = 0.80 vs a 6×10⁻⁴ null), the recovery holds on **held-out** cell
+lines (0.80), and it is learnable label-free (expr→dependency |ρ| 0.36 > own-expression baseline 0.20). (B) The signal's patient
+relevance is real — selective dependencies are enriched for patient-tumour driver genes (OR 2.55) and this **survives study-bias
+correction** (Mantel–Haenszel 2.72) — but the *label-free transfer to a novel zero-screen organism* is a **first-class negative**:
+the selective signal beyond mere conservation is at chance (OR 0.90, below the OR=1 line), and only the conservation-redundant
+core transfers (2.13). Patient drug-*response* prediction (not shown) is separately tested-and-negative.
 
 | Class | Signal | Result (gate: OR>3 & p<0.01 for FBA) | Experiment |
 |---|---|---|---|
@@ -533,7 +558,8 @@ iML1515; some resistance/condition classes are **ortholog-transferred**; FBA syn
 best-intervention score uses **equal (unfitted) weights** and its validation is only partly independent. (6) All target and
 molecule outputs are **computational hypotheses with provenance, not validated targets or drugs; no result is clinical.**
 **Part II limitations.** (7) Each generalization class is a small n (viruses n=5, one fungal pathogen, two parasites, cancer
-cell-lines) — frontier evidence, not population estimates. (8) The viral structural signal is *class-ID* at moderate TM
+cell-lines) — frontier evidence, not population estimates. (Note: Fig 6 shows the 4 hardening viruses / 9 targets from HARDENV1;
+the 5th virus, SARS-CoV-2, is the separate blind GENERALIZE3 result.) (8) The viral structural signal is *class-ID* at moderate TM
 (0.41–0.49) on the subset of proteins with an experimental structure, and AlphaFold DB excludes viral structures (a coverage
 gate). (9) The parasite confound is only partly resolved: the clean same-species-CRISPR test is **data-gated** (no genome-wide
 *P. falciparum* CRISPR screen exists), and a *P. berghei*/base-rate residual survives. (10) The human dependency result is
