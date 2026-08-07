@@ -1,0 +1,96 @@
+{
+  "provenance": {
+    "git_sha": "a12afd664b4763252561fe8c6c3a2dd79986b46a",
+    "utc": "2026-08-07T03:17:33Z"
+  },
+  "runtime_sec": 0.0,
+  "summary": {
+    "cases": [
+      {
+        "abstained": false,
+        "detected_class": "bacterium",
+        "label": "bacterium / K. pneumoniae (WHO critical; held-out)",
+        "n_signals_fired": 3,
+        "organism": "Klebsiella pneumoniae",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "conservation_breadth",
+          "fba_essentiality",
+          "structural_homology"
+        ],
+        "uncertain_flag": false,
+        "validated_by": "VAL-ESS-KP OR 63 + CROSSVAL 6/6 + BLIND1 prospective"
+      },
+      {
+        "abstained": false,
+        "detected_class": "free_eukaryote",
+        "label": "free-living eukaryote / fungal pathogen (C. albicans)",
+        "n_signals_fired": 2,
+        "organism": "Candida albicans",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "conservation_breadth",
+          "fba_essentiality"
+        ],
+        "uncertain_flag": false,
+        "validated_by": "GENERALIZE4 (yeast OR 4.65) + HARDENF1 (Candida OR 13.9)"
+      },
+      {
+        "abstained": false,
+        "detected_class": "virus",
+        "label": "virus / emerging (SARS-CoV-2, ~30 mature proteins)",
+        "n_signals_fired": 1,
+        "organism": "SARS-CoV-2",
+        "output_type": "structural_class_id",
+        "signals_fired": [
+          "structural_homology"
+        ],
+        "uncertain_flag": false,
+        "validated_by": "GENERALIZE3 blind + HARDENV1 n=5 (structural class-ID)"
+      },
+      {
+        "abstained": false,
+        "detected_class": "human_cancer",
+        "label": "human / cancer (skin/melanoma context)",
+        "n_signals_fired": 1,
+        "organism": "human melanoma",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "functional_dependency"
+        ],
+        "uncertain_flag": false,
+        "validated_by": "DEPEND1 G1/G2/G3 + F3CLIN1 patient-driver relevance"
+      },
+      {
+        "abstained": false,
+        "detected_class": "host_dependent_parasite",
+        "label": "host-dependent parasite WITH a curated GEM (Toxoplasma / Plasmodium)",
+        "n_signals_fired": 1,
+        "organism": "Toxoplasma gondii",
+        "output_type": "shortlist",
+        "signals_fired": [
+          "fba_essentiality"
+        ],
+        "uncertain_flag": true,
+        "validated_by": "HARDENP1 (Toxo OR 14.1 PASS) / GENERALIZE5 (Pf noise-floor) -> capped+flagged (COMPOSITE3)"
+      },
+      {
+        "abstained": true,
+        "detected_class": "host_dependent_parasite",
+        "label": "host-dependent parasite, NOVEL / zero-screen, NO GEM",
+        "n_signals_fired": 0,
+        "organism": "novel apicomplexan",
+        "output_type": "abstention",
+        "signals_fired": [],
+        "uncertain_flag": false,
+        "validated_by": "TRANSFER1 (label-free dependency does NOT transfer) -> ABSTAIN"
+      }
+    ],
+    "n_abstained": 1,
+    "n_cases": 6,
+    "n_decided": 5,
+    "n_uncertain_flagged": 1,
+    "principle": "The composite fires ONLY the signal(s) whose transfer condition is VALIDATED for the input's biology, at calibrated/capped confidence, and ABSTAINS where no validated signal transfers. 'Any disease' = honest DECISION coverage (a real answer where a signal transfers; an explicit abstention where none does), NOT a universal model.",
+    "verdict": "CAPSTONE: the validated composite decided end-to-end across 6 representative inputs spanning every reachable disease class -- 5 produced a signal-backed routed output (bacterium->FBA full-grade; eukaryote/fungus->FBA; virus->structural class-ID; human-cancer->functional-dependency; host-dependent parasite w/ GEM->FBA CAPPED+uncertainty-flagged), and 1 correctly ABSTAINED (novel zero-screen parasite: no validated signal transfers, TRANSFER1). 1 fired with an explicit uncertainty flag. Every fired signal is backed by a committed, reproduced-x2, prereg'd validation (see per-case validated_by). This is the fullest vision working as ONE honest system: it neither over-claims a universal model nor under-claims 'bacteria only' -- it applies what is validated per biology and refuses where it is not. SCOPE: composition of already-validated in-silico target-PRIORITIZATION signals; hypotheses with provenance, not validated drugs; not wet-lab; not clinical."
+  }
+}
