@@ -15,7 +15,7 @@ targets need chemistry/funding (the F4 ceiling). Prepared 2026-08-07. Honest tie
 ---
 
 ## Arm A — Broad-spectrum antibacterial targets (WHO priority pathogens)
-*Validated across 6 curated + 2 held-out organisms (CROSSVAL, VAL-ESS, prospective-blind SUITE BLIND1-4 [3/4 pass across 4 clades]); multi-axis ranked
+*Validated across 6 curated + 2 held-out organisms (CROSSVAL, VAL-ESS, prospective-blind SUITE BLIND1-7 [across all 3 domains of life; ~4-5 pass / 2 fail with a mapped transfer boundary]); multi-axis ranked
 (BESTINT1); resistance- and condition-robust; host-safety-filtered. All are experimentally essential in ≥2 organisms.*
 
 | Target | Validation (committed) | Intervention readiness |
