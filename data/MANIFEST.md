@@ -333,3 +333,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## BLIND6 M. maripaludis prospective-blind #6 archaeon (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/blind6/ — iMR539 curated GEM (Richards 2016, BioModels BIOMD0000001099) + M. maripaludis S2
   proteome (UP000000590) + DEG3001 Tn-seq essentiality (Sarmiento 2013, via DEG). Open; regenerable; never committed.
+
+## BLIND7 T. brucei prospective-blind #7 kinetoplastid (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/blind7/ — T. brucei TREU927 proteome (UP000008524) + de-novo CarveMe GEM + Alsford/Horn
+  RIT-seq loss-of-fitness via TriTrypDB/VEuPathDB open mirror (fold-change re-quantitation). Open; never committed.

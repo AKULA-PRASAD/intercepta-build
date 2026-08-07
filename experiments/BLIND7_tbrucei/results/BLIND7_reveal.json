@@ -1,0 +1,48 @@
+{
+  "adjudication": "mmseqs easy-search homology bridge, pident>=90 (BLIND1-3 method)",
+  "experimental_source": "Alsford et al. 2011 Genome Research RIT-seq (PMID 21363968), bloodstream-form loss-of-fitness, via TriTrypDB/VEuPathDB GenesByHighThroughputPhenotyping (Horn profile), release 68; comparison BFD6 vs No_Tet, down-regulated, fold-change threshold; protein-coding. PRIMARY=fc>=2 (Z>3.3 SI file paywalled).",
+  "gate": "OR>3 AND Fisher p<0.01 (identical to BLIND1-6)",
+  "lock_sha_verified": "31e8cc0047ba7643e40a82ab1b78a18cc92c0af0149f7a5a44bb404e6e6e6b0f",
+  "metrics": {
+    "fc1p5": {
+      "both": 5,
+      "exp_only": 129,
+      "fba_only": 16,
+      "fisher_p": 0.9657268,
+      "n_exp_essential_gem": 134,
+      "neither": 187,
+      "odds_ratio": 0.453004,
+      "precision": 0.238095,
+      "recall": 0.037313
+    },
+    "fc2": {
+      "both": 5,
+      "exp_only": 104,
+      "fba_only": 16,
+      "fisher_p": 0.8668308,
+      "n_exp_essential_gem": 109,
+      "neither": 212,
+      "odds_ratio": 0.637019,
+      "precision": 0.238095,
+      "recall": 0.045872
+    },
+    "fc3": {
+      "both": 3,
+      "exp_only": 70,
+      "fba_only": 18,
+      "fisher_p": 0.8724459,
+      "n_exp_essential_gem": 73,
+      "neither": 246,
+      "odds_ratio": 0.585714,
+      "precision": 0.142857,
+      "recall": 0.041096
+    }
+  },
+  "n_fba_essential": 21,
+  "n_gem_genes": 337,
+  "organism": "Trypanosoma brucei brucei TREU927 (927/4 GUTat10.1), taxon 185431",
+  "pident_cutoff": 90.0,
+  "primary_threshold": "fc2",
+  "reveal_payload_sha256": "b112943e8163bb0166474eca0a0ceed22bb4a65acd197385ca203a571bc6b014",
+  "verdict": "FAIL"
+}

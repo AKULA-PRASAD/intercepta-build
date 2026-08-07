@@ -118,3 +118,50 @@ authors report) is fixed at reveal to the authors' own categorical/threshold cal
   `3d59ead633d260c209e2d61f1cdfee8a1fce971f853c1b2c883504c60c808a2f`
 - GEM: 337 genes, WT growth 53.43, **21 FBA-essential** genes predicted (frozen).
 - Stage-1 locked BEFORE any Stage-2 reveal. Recorded as the pre-reveal blindness commitment. This module did NOT git commit.
+
+---
+## REVEAL OUTCOME (Stage 2, filled AFTER the lock was committed to git — commit 1e77a7d, pushed)
+**FAIL — a first-class, honest reach-limit NEGATIVE (exactly the outcome pre-named for the sparse-carve / domain-mismatch case).**
+Lock verified intact FIRST: the sorted essential-UniProt payload of `results/LOCKED_predictions.tsv` re-hashes to
+`31e8cc00…` (equal to the committed lock); predictions were NOT modified.
+
+**Experimental essentiality actually used (Stage 2 fetch).** The paper's own call (Z-score > 3.3, Supplemental File 1A)
+is behind the *Genome Research* paywall (genome.cshlp.org OIDC-gated; PMC not open-access; EuropePMC "not open access";
+DEG has **no** *T. brucei* entry — only *Plasmodium* among parasites). So I used the **pre-registered open TriTrypDB /
+VEuPathDB mirror** of the same Alsford/Horn RIT-seq reads: `GenesByHighThroughputPhenotyping` (Horn profile, release 68),
+**bloodstream-form BFD6** (6 d / 20 doublings) vs uninduced `No_Tet`, **down-regulated** coverage (= loss of fitness),
+protein-coding. VEuPathDB re-quantitates the reads as htseq/tpm **fold-change**, not the paper's DEGseq Z-score — a
+documented DEVIATION; the verdict is shown robust across three fold-change thresholds. Old→new gene IDs bridged via the
+release-68 GeneAliases crosswalk; essential PROTEIN sequences (TREU927 release-68) mapped onto our locked CarveMe proteome
+by the pre-registered **mmseqs pident ≥ 90** homology bridge (same-strain orthologs hit at ~100 % identity).
+
+**Result over the 337 locked GEM genes** (2×2 = both / FBA-only / exp-only / neither):
+- **PRIMARY (fc ≥ 2): 5 / 16 / 104 / 212 → odds ratio 0.637, Fisher p = 0.867, precision 0.238, recall 0.046** — gate NOT met.
+- Sensitivity fc ≥ 1.5 (VEuPathDB default): 5 / 16 / 129 / 187 → OR 0.453, p 0.966.
+- Sensitivity fc ≥ 3: 3 / 18 / 70 / 246 → OR 0.586, p 0.872.
+
+**All three ORs are < 1** (FBA-essentiality is, if anything, slightly *anti*-correlated with RIT-seq loss-of-fitness) —
+nowhere near the pre-registered gate (OR > 3 AND p < 0.01). The FAIL is **robust to threshold choice**, so it is not a
+cutoff artifact. This is the honest **reach-limit** result: a bacterial-universe de-novo carve of a divergent kinetoplastid
+yields only 337/8588 genes (3.9 %), and over that small, biased metabolic subproteome the FBA-essentiality mechanism signal
+that transferred to bacteria (BLIND1 6.13 / BLIND2 3.92 / BLIND3 8.03 PASS) and failed once before (BLIND4 2.96 FAIL) does
+**not** transfer to *T. brucei*. Plausible, non-exclusive drivers (reported, not used to explain away): (a) the RIT-seq
+loss-of-fitness set is very large (~⅓ of the GEM genes, 109/337, are experimentally essential), diluting enrichment;
+(b) default-complete-medium FBA under-calls essentiality for a host-adapted bloodstream parasite; (c) RNAi-knockdown
+fitness ≠ knockout essentiality (modality gap); (d) sparse/mismatched bacterial-universe carve.
+
+**Honest caveat on the 2×2 denominator:** RIT-seq assayed ~7,435 of ~9,660 genes; GEM genes whose ortholog was not
+assayed are counted here as non-essential (unknown→negative). This cannot rescue the verdict — OR is 0.45–0.64 vs a
+required > 3 — but is disclosed. **Reproduced ×2 byte-identical**; reveal payload sha256
+`b112943e8163bb0166474eca0a0ceed22bb4a65acd197385ca203a571bc6b014`.
+
+**Provenance (Stage-2 fetches, $INTERCEPTA_DATA/blind7):** `ritseq_bfd6_fc2.ids` sha256
+`a9578380b053186f030b457f56aa0cf2bb15ab3c963f27395ecf5dca8f92c279` (3542 old-ID bloodstream loss-of-fitness genes at
+fc≥2); `ritseq_bfd6_fc1p5.ids` `7bda4325…`; `ritseq_bfd6_fc3.ids` `bb4de50b…`; GeneAliases r68
+`3f5ddf2e…`; essential-protein superset FASTA `44776281…`. Source: TriTrypDB `https://tritrypdb.org/` (Alsford et al.
+2011, *Genome Res* 21:915–924, PMID 21363968). This module did NOT git commit the reveal (orchestrator commits).
+
+**Meaning:** a genuine prospective-blind NEGATIVE on a new pathogen class — recorded first-class, not hidden or re-run to a
+nicer number. The blind suite now stands at n = 3 PASS (bacteria, across 3 phyla) + FAILs on *S. pneumoniae* (BLIND4) and
+*T. brucei* (BLIND7); the transfer of FBA-essentiality signal is real but bounded — it does not reach a divergent,
+host-adapted kinetoplastid via a bacterial-universe carve.
