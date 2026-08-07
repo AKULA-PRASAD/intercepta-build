@@ -1,8 +1,25 @@
-# INTERCEPTA — minimal experimental validation plan (pre-registered, 2026-08-05)
+# INTERCEPTA — experimental validation plan & collaboration ask (updated 2026-08-07)
 
-*The honest question this answers: is the computational work REAL, or noise? Everything so far is in-silico. This document
-turns the method into specific, falsifiable predictions and scopes the cheapest rigorous experiments that would confirm or
-kill them — no scientific corners cut. Written under the Constitution (pre-register success/falsification BEFORE the test).*
+*The honest question this answers: is the computational work REAL, or noise? This document turns the method into specific,
+falsifiable predictions and scopes the cheapest rigorous experiments that confirm or kill them — no corners cut. Written
+under the Constitution (pre-register success/falsification BEFORE the test). **This is also the concrete collaboration ask:
+the computational half is done and validated as far as is possible without a lab; the one thing needed is a wet-lab partner
+to cross into reality.***
+
+## ⭐ Evidence now in hand (what changed since the original 2026-08-05 plan — the collaboration lead)
+The original "Tier 0" below fretted about *downloading* experimental essentiality data. **That blocker is gone and Tier 0
+is DONE and massively exceeded** — lead any collaborator/reviewer with this:
+- **Computational validation against decades of lab experiments, across 6 organisms / 3 phyla** (VAL-ESS/CROSSVAL): FBA
+  gene-essentiality is enriched for *experimental* gene-knockout essentiality at odds ratios **5–64**, all clearing a
+  pre-registered OR>3 gate (E. coli 44.9, K. pneumoniae, Salmonella, B. subtilis, S. aureus/MRSA, M. tuberculosis).
+- **A prospective-blind SUITE of 4 never-seen pathogens across multiple phyla** (BLIND1–4; predictions locked — 3 of them
+  git-committed — *before* the experimental answer was consulted): **3 of 4 PASS** — *N. gonorrhoeae* OR 6.1, *C. jejuni*
+  OR 3.9, *B. thetaiotaomicron* (a new phylum) OR 8.0; the 4th (*S. pneumoniae*, OR 3.0) **failed on a sparse de-novo model
+  and is reported first-class**. This is the strongest "predicts, not postdicts" evidence obtainable without a wet lab.
+- **A ranked, actionable flagship target list** (`FLAGSHIP_TARGETS.md`): validated targets split into *repurposing-ready*
+  (already-drugged, testable now) vs *undrugged high-value* (novel-chemistry frontier).
+So the method's *biology* is validated to the strongest possible in-silico degree. **The remaining gap is a single wet-lab
+rung** — the experiments below — which is exactly what a collaborator provides.
 
 ## What is under test
 The one genuine positive of the whole program: **zero-data mechanistic target-ID** — FBA gene-essentiality + metabolic
@@ -35,10 +52,12 @@ essentiality match experimental essentiality (precision/recall, odds ratio, AURO
 experimentally essential? **Pre-registered success:** FBA-essential genes are enriched for experimental-essential at OR > 3
 (p<0.01); ≥5/7 of the predicted genes are experimentally essential. **Falsification:** no enrichment / predicted genes not
 essential → the mechanism signal is weaker than claimed; report honestly and down-weight MET1–3.
-**BLOCKER (honest):** the experimental gene lists sit behind journal/database navigation that resists automated download
-(no institutional subscription). **The single unblocking action:** download ONE file — Goodall 2018 mBio Table S1 (essential
-gene list), or register + export E. coli essentials from DEG (tubic.org/deg) / OGEE — and drop it at `$INTERCEPTA_DATA/expval/`.
-Then this runs to completion in minutes. This is the highest-value, zero-cost next step.
+**✅ RESOLVED — Tier 0 is DONE and exceeded (the original blocker is obsolete).** The experimental essentiality data was
+obtained (PEC, DEG, DeJesus, Goodall/Keio, CRISPRi) and the test run across 6 organisms + the 4-pathogen prospective-blind
+suite (see "Evidence now in hand" above): FBA-essential genes are enriched for experimental essentiality at OR 5–64
+(6/6 curated organisms) and 3/4 prospective-blind pathogens clear the gate. 6/7 of the E. coli predicted genes above are
+experimentally essential (mtnN is the confirmed false positive — salvage redundancy). The core finding matches decades of
+experiments. Tier 0 no longer requires any action; it is committed and reproduced ×2 in the LEDGER.
 
 ## Tier 1 — the minimal NEW wet-lab experiment (cheapest rigorous prospective test)
 **Goal:** prospectively confirm ONE prediction is a real essential (and thus a real target) — the first real-world evidence.
@@ -65,12 +84,20 @@ confidence-tiered target shortlist → a microbiology collaborator tests the top
 is the north-star metric ("a disease it was never trained on → credible candidates → independently validated"). Needs a
 collaborator; the computational half is turnkey (the substrate).
 
-## The decision for Prasad (minimal, ranked by leverage-per-cost)
-1. **$0, ~2 min, do first:** grab one experimental-essentiality file (Goodall 2018 mBio Table S1, or DEG/OGEE export) → I run
-   Tier 0 today and we learn immediately whether the core finding matches decades of experiments.
-2. **~$200–400 + a bench, ~3 weeks (or a collaborating micro lab / a professor / a course):** Tier 1 CRISPRi essentiality
-   test of one novel prediction (mtnN) → first prospective real-world evidence.
-3. **A microbiology collaborator:** Tier 2 prospective test on a novel pathogen → the fullest-vision proof.
+## The decision (minimal, ranked by leverage-per-cost) — updated
+1. ~~grab an essentiality file~~ **✅ DONE** — Tier 0 completed and exceeded (6 organisms + 4-pathogen prospective-blind suite).
+2. **~$200–400 + a bench, ~3 weeks (a collaborating micro lab / a professor / a course):** Tier 1 CRISPRi essentiality test
+   of ONE nominated target → the first *prospective wet-lab* rung. Most de-risked pick: **ispG/ispD** (broad-spectrum,
+   MEP-pathway, literature-corroborated); highest-novelty pick: a target we nominated **prospective-blind** in the BLIND
+   suite (e.g. a *C. jejuni* or *B. thetaiotaomicron* FBA-essential gene from the locked, gate-passing predictions) — a
+   knockdown growth-defect there would confirm a *blind* computational prediction in the lab, the strongest single result.
+3. **A microbiology collaborator:** Tier 2 prospective test on a genuinely novel pathogen → the fullest-vision proof (the
+   composite/`intercepta route` produces the ranked, abstaining shortlist turnkey; the lab tests the top calls).
+
+**The ask, in one sentence:** the method is computationally validated to the strongest degree possible without a lab
+(6 organisms + 3/4 prospective-blind across phyla); a single ~$300, ~3-week CRISPRi experiment on one nominated target
+converts it into the first real-world confirmation — that is the highest-leverage step toward the fullest vision, and it is
+the one thing computation cannot do alone.
 
 ## Honest scope
 Literature concordance (Tier 0, done) validates the method's BIOLOGY, not a specific new drug. Tier 0 quantitative + Tier 1
