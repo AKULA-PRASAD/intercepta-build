@@ -1,0 +1,869 @@
+{
+ "payload": {
+  "committed_fails_reclassified": [
+   {
+    "OR": 2.360834,
+    "RR": 1.724842,
+    "RR_ci95_boot": [
+     1.344582,
+     2.124857
+    ],
+    "classification": "REAL-signal-under-OR-compression",
+    "fisher_p_greater": 4e-05,
+    "organism": "K. phaffii"
+   },
+   {
+    "OR": 2.468873,
+    "RR": 1.237989,
+    "RR_ci95_boot": [
+     1.095605,
+     1.383459
+    ],
+    "classification": "REAL-signal-under-OR-compression",
+    "fisher_p_greater": 0.002166,
+    "organism": "P. falciparum"
+   },
+   {
+    "OR": 2.959184,
+    "RR": 2.198336,
+    "RR_ci95_boot": [
+     0.733796,
+     3.885598
+    ],
+    "classification": "genuine null (not significantly enriched above chance)",
+    "fisher_p_greater": 0.060728,
+    "organism": "S. pneumoniae"
+   },
+   {
+    "OR": 0.637019,
+    "RR": 0.736129,
+    "RR_ci95_boot": [
+     0.218038,
+     1.331537
+    ],
+    "classification": "genuine null (not significantly enriched above chance)",
+    "fisher_p_greater": 0.866831,
+    "organism": "T. brucei"
+   }
+  ],
+  "decisive_3a_base_rate_invariance": {
+   "FAIRGATE_consistent_across_pair": true,
+   "OR_gate_flipped_across_pair": true,
+   "PASS": true,
+   "pair": {
+    "iPfal19_vs_Bushell_barseq": {
+     "FAIRGATE_verdict": "PASS",
+     "OR_gate_verdict": "PASS",
+     "RR": 1.55814,
+     "RR_ci95_boot": [
+      1.277515,
+      1.876761
+     ],
+     "base_rate": 0.462687,
+     "contingency_both_fbaonly_exponly_neither": [
+      31,
+      12,
+      93,
+      132
+     ],
+     "fisher_p_greater": 0.000182,
+     "odds_ratio": 3.666667,
+     "precision": 0.72093,
+     "source": "PARARESOLVE2_screentech_probe/results/PARARESOLVE2_metrics.json results_primary[0]"
+    },
+    "iPfal19_vs_Zhang_piggyBac": {
+     "FAIRGATE_verdict": "PASS",
+     "OR_gate_verdict": "FAIL",
+     "RR": 1.237989,
+     "RR_ci95_boot": [
+      1.093383,
+      1.384328
+     ],
+     "base_rate": 0.643868,
+     "contingency_both_fbaonly_exponly_neither": [
+      55,
+      14,
+      218,
+      137
+     ],
+     "fisher_p_greater": 0.002166,
+     "odds_ratio": 2.468873,
+     "precision": 0.797101,
+     "source": "PARARESOLVE1_parasite_confound/results/PARARESOLVE1_metrics.json swap[0]"
+    }
+   }
+  },
+  "decisive_3b_simulation": {
+   "PASS": true,
+   "prediction": "RR stays at true L (CV~0) while OR swings with base rate",
+   "results": {
+    "L=1.5": {
+     "N": 1000,
+     "OR_cv": 1.346057,
+     "OR_max": 26.806452,
+     "OR_max_over_min": 15.239485,
+     "OR_min": 1.759013,
+     "RR_cv": 0.0,
+     "RR_max": 1.5,
+     "RR_min": 1.5,
+     "fba_essential_fraction": 0.15,
+     "sweep": [
+      {
+       "OR": 1.759013,
+       "RR": 1.5,
+       "base_rate": 0.1
+      },
+      {
+       "OR": 1.832466,
+       "RR": 1.5,
+       "base_rate": 0.15
+      },
+      {
+       "OR": 1.921659,
+       "RR": 1.5,
+       "base_rate": 0.2
+      },
+      {
+       "OR": 2.032258,
+       "RR": 1.5,
+       "base_rate": 0.25
+      },
+      {
+       "OR": 2.173021,
+       "RR": 1.5,
+       "base_rate": 0.3
+      },
+      {
+       "OR": 2.358234,
+       "RR": 1.5,
+       "base_rate": 0.35
+      },
+      {
+       "OR": 2.612903,
+       "RR": 1.5,
+       "base_rate": 0.4
+      },
+      {
+       "OR": 2.985112,
+       "RR": 1.5,
+       "base_rate": 0.45
+      },
+      {
+       "OR": 3.580645,
+       "RR": 1.5,
+       "base_rate": 0.5
+      },
+      {
+       "OR": 4.686636,
+       "RR": 1.5,
+       "base_rate": 0.55
+      },
+      {
+       "OR": 7.451613,
+       "RR": 1.5,
+       "base_rate": 0.6
+      },
+      {
+       "OR": 26.806452,
+       "RR": 1.5,
+       "base_rate": 0.65
+      }
+     ],
+     "true_RR": 1.5
+    },
+    "L=2.0": {
+     "N": 1000,
+     "OR_cv": 0.670659,
+     "OR_max": 15.285714,
+     "OR_max_over_min": 5.48718,
+     "OR_min": 2.785714,
+     "RR_cv": 0.0,
+     "RR_max": 2.0,
+     "RR_min": 2.0,
+     "fba_essential_fraction": 0.15,
+     "sweep": [
+      {
+       "OR": 2.785714,
+       "RR": 2.0,
+       "base_rate": 0.1
+      },
+      {
+       "OR": 3.040816,
+       "RR": 2.0,
+       "base_rate": 0.15
+      },
+      {
+       "OR": 3.380952,
+       "RR": 2.0,
+       "base_rate": 0.2
+      },
+      {
+       "OR": 3.857143,
+       "RR": 2.0,
+       "base_rate": 0.25
+      },
+      {
+       "OR": 4.571429,
+       "RR": 2.0,
+       "base_rate": 0.3
+      },
+      {
+       "OR": 5.761905,
+       "RR": 2.0,
+       "base_rate": 0.35
+      },
+      {
+       "OR": 8.142857,
+       "RR": 2.0,
+       "base_rate": 0.4
+      },
+      {
+       "OR": 15.285714,
+       "RR": 2.0,
+       "base_rate": 0.45
+      }
+     ],
+     "true_RR": 2.0
+    }
+   }
+  },
+  "frozen_gate": {
+   "T": 1.0,
+   "T_justification": "T=1 (no-enrichment null) is the only base-rate-invariant, non-arbitrary effect-size floor; significance (lower CI>1 & p<0.01) guards against trivial enrichments; a larger fixed T re-imports base-rate sensitivity (compresses high-base-rate RR).",
+   "boot_seed0": 20260807,
+   "n_boot": 20000,
+   "rule": "RR_lower_95CI > 1 AND RR_point >= T AND fisher_p_greater < 0.01"
+  },
+  "input_verification": {
+   "all_19_match_META1": true,
+   "per_organism_ok": {
+    "A. baumannii": true,
+    "B. subtilis": true,
+    "B. thetaiotaomicron": true,
+    "C. albicans": true,
+    "C. jejuni": true,
+    "E. coli": true,
+    "K. phaffii": true,
+    "K. pneumoniae": true,
+    "M. maripaludis": true,
+    "M. tuberculosis": true,
+    "N. gonorrhoeae": true,
+    "P. aeruginosa": true,
+    "P. falciparum": true,
+    "S. aureus": true,
+    "S. cerevisiae": true,
+    "S. pneumoniae": true,
+    "Salmonella Tm": true,
+    "T. brucei": true,
+    "T. gondii": true
+   }
+  },
+  "invention_success": true,
+  "metric": {
+   "definition": "RR = precision / base_rate = P(exp-ess | FBA-ess) / P(exp-ess)",
+   "name": "risk_ratio_fold_enrichment",
+   "principle": "OR = RR*(1-p0)/(1-p1); OR ~ RR only for rare outcomes. Base rates here 0.03-0.64 (common) -> OR distorts effect size and is base-rate-sensitive. RR divides out the base rate."
+  },
+  "rescored_table_19": [
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 7.868512,
+    "RR_ci95_boot": [
+     3.609524,
+     12.861991
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     4.205448,
+     14.72221
+    ],
+    "base_rate": 0.029903,
+    "contingency_both_fbaonly_exponly_neither": [
+     8,
+     26,
+     26,
+     1077
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 3e-06,
+    "odds_ratio": 12.745562,
+    "organism": "A. baumannii",
+    "precision": 0.235294
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 3.417004,
+    "RR_ci95_boot": [
+     2.902646,
+     4.021138
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     2.905027,
+     4.01921
+    ],
+    "base_rate": 0.092417,
+    "contingency_both_fbaonly_exponly_neither": [
+     54,
+     117,
+     24,
+     649
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 12.480769,
+    "organism": "B. subtilis",
+    "precision": 0.315789
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 4.193684,
+    "RR_ci95_boot": [
+     2.539336,
+     6.020369
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     2.708851,
+     6.492416
+    ],
+    "base_rate": 0.114458,
+    "contingency_both_fbaonly_exponly_neither": [
+     12,
+     13,
+     83,
+     722
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 4e-06,
+    "odds_ratio": 8.029657,
+    "organism": "B. thetaiotaomicron",
+    "precision": 0.48
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 2.800242,
+    "RR_ci95_boot": [
+     1.690789,
+     3.552995
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     1.917535,
+     4.08929
+    ],
+    "base_rate": 0.306096,
+    "contingency_both_fbaonly_exponly_neither": [
+     6,
+     1,
+     230,
+     534
+    ],
+    "domain": "eukaryote",
+    "fisher_p_greater": 0.004088,
+    "odds_ratio": 13.930435,
+    "organism": "C. albicans",
+    "precision": 0.857143
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 2.676364,
+    "RR_ci95_boot": [
+     1.510234,
+     3.986667
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     1.646665,
+     4.349956
+    ],
+    "base_rate": 0.099638,
+    "contingency_both_fbaonly_exponly_neither": [
+     12,
+     33,
+     43,
+     464
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.000652,
+    "odds_ratio": 3.92389,
+    "organism": "C. jejuni",
+    "precision": 0.266667
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 6.044761,
+    "RR_ci95_boot": [
+     5.326307,
+     6.934224
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     5.29508,
+     6.900582
+    ],
+    "base_rate": 0.078496,
+    "contingency_both_fbaonly_exponly_neither": [
+     93,
+     103,
+     26,
+     1294
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 44.937267,
+    "organism": "E. coli",
+    "precision": 0.47449
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": false
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "FAIL",
+    "RR": 1.724842,
+    "RR_ci95_boot": [
+     1.344582,
+     2.124857
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     1.370959,
+     2.170072
+    ],
+    "base_rate": 0.169591,
+    "contingency_both_fbaonly_exponly_neither": [
+     43,
+     104,
+     131,
+     748
+    ],
+    "domain": "eukaryote",
+    "fisher_p_greater": 4e-05,
+    "odds_ratio": 2.360834,
+    "organism": "K. phaffii",
+    "precision": 0.292517
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 3.34695,
+    "RR_ci95_boot": [
+     2.563265,
+     4.223745
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     2.607779,
+     4.295637
+    ],
+    "base_rate": 0.087876,
+    "contingency_both_fbaonly_exponly_neither": [
+     35,
+     84,
+     73,
+     1037
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 5.91895,
+    "organism": "K. pneumoniae",
+    "precision": 0.294118
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": false,
+     "2.0": false
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 1.389706,
+    "RR_ci95_boot": [
+     1.289348,
+     1.498323
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     1.289173,
+     1.498079
+    ],
+    "base_rate": 0.504638,
+    "contingency_both_fbaonly_exponly_neither": [
+     162,
+     69,
+     110,
+     198
+    ],
+    "domain": "archaea",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 4.226087,
+    "organism": "M. maripaludis",
+    "precision": 0.701299
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 2.9266,
+    "RR_ci95_boot": [
+     2.667788,
+     3.229014
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     2.659646,
+     3.220349
+    ],
+    "base_rate": 0.232143,
+    "contingency_both_fbaonly_exponly_neither": [
+     178,
+     84,
+     56,
+     690
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 26.109694,
+    "organism": "M. tuberculosis",
+    "precision": 0.679389
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 2.006613,
+    "RR_ci95_boot": [
+     1.61389,
+     2.401293
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     1.646063,
+     2.446137
+    ],
+    "base_rate": 0.389338,
+    "contingency_both_fbaonly_exponly_neither": [
+     25,
+     7,
+     216,
+     371
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 4e-06,
+    "odds_ratio": 6.134259,
+    "organism": "N. gonorrhoeae",
+    "precision": 0.78125
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 8.028825,
+    "RR_ci95_boot": [
+     6.162514,
+     10.157301
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     6.256566,
+     10.303101
+    ],
+    "base_rate": 0.070823,
+    "contingency_both_fbaonly_exponly_neither": [
+     29,
+     22,
+     88,
+     1513
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 22.66374,
+    "organism": "P. aeruginosa",
+    "precision": 0.568627
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": false,
+     "1.5": false,
+     "2.0": false
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "FAIL",
+    "RR": 1.237989,
+    "RR_ci95_boot": [
+     1.095605,
+     1.383459
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     1.101495,
+     1.391397
+    ],
+    "base_rate": 0.643868,
+    "contingency_both_fbaonly_exponly_neither": [
+     55,
+     14,
+     218,
+     137
+    ],
+    "domain": "eukaryote",
+    "fisher_p_greater": 0.002166,
+    "odds_ratio": 2.468873,
+    "organism": "P. falciparum",
+    "precision": 0.797101
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 2.654866,
+    "RR_ci95_boot": [
+     2.397561,
+     2.952518
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     2.393061,
+     2.945312
+    ],
+    "base_rate": 0.182448,
+    "contingency_both_fbaonly_exponly_neither": [
+     124,
+     132,
+     34,
+     576
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 15.914439,
+    "organism": "S. aureus",
+    "precision": 0.484375
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 2.591267,
+    "RR_ci95_boot": [
+     2.033852,
+     3.200156
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     2.070542,
+     3.24295
+    ],
+    "base_rate": 0.140331,
+    "contingency_both_fbaonly_exponly_neither": [
+     40,
+     70,
+     87,
+     708
+    ],
+    "domain": "eukaryote",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 4.650246,
+    "organism": "S. cerevisiae",
+    "precision": 0.363636
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": false,
+     "1.25": false,
+     "1.5": false,
+     "2.0": false
+    },
+    "FAIRGATE_verdict": "FAIL",
+    "OR_gate_committed_verdict": "FAIL",
+    "RR": 2.198336,
+    "RR_ci95_boot": [
+     0.733796,
+     3.885598
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     0.980054,
+     4.931033
+    ],
+    "base_rate": 0.162461,
+    "contingency_both_fbaonly_exponly_neither": [
+     5,
+     9,
+     98,
+     522
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.060728,
+    "odds_ratio": 2.959184,
+    "organism": "S. pneumoniae",
+    "precision": 0.357143
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 2.635871,
+    "RR_ci95_boot": [
+     1.960616,
+     3.337997
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     2.019915,
+     3.439657
+    ],
+    "base_rate": 0.058222,
+    "contingency_both_fbaonly_exponly_neither": [
+     31,
+     171,
+     43,
+     1026
+    ],
+    "domain": "bacteria",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 4.325581,
+    "organism": "Salmonella Tm",
+    "precision": 0.153465
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": false,
+     "1.25": false,
+     "1.5": false,
+     "2.0": false
+    },
+    "FAIRGATE_verdict": "FAIL",
+    "OR_gate_committed_verdict": "FAIL",
+    "RR": 0.736129,
+    "RR_ci95_boot": [
+     0.218038,
+     1.331537
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     0.310348,
+     1.746058
+    ],
+    "base_rate": 0.323442,
+    "contingency_both_fbaonly_exponly_neither": [
+     5,
+     16,
+     104,
+     212
+    ],
+    "domain": "eukaryote",
+    "fisher_p_greater": 0.866831,
+    "odds_ratio": 0.637019,
+    "organism": "T. brucei",
+    "precision": 0.238095
+   },
+   {
+    "FAIRGATE_T_sensitivity": {
+     "1.0": true,
+     "1.25": true,
+     "1.5": true,
+     "2.0": true
+    },
+    "FAIRGATE_verdict": "PASS",
+    "OR_gate_committed_verdict": "PASS",
+    "RR": 2.006803,
+    "RR_ci95_boot": [
+     1.824416,
+     2.220505
+    ],
+    "RR_ci95_lognormal_xcheck": [
+     1.819422,
+     2.213482
+    ],
+    "base_rate": 0.42,
+    "contingency_both_fbaonly_exponly_neither": [
+     118,
+     22,
+     113,
+     297
+    ],
+    "domain": "eukaryote",
+    "fisher_p_greater": 0.0,
+    "odds_ratio": 14.097345,
+    "organism": "T. gondii",
+    "precision": 0.842857
+   }
+  ]
+ },
+ "provenance": {
+  "env": "~/miniconda3/envs/intercepta-build (numpy/scipy, CPU-only)",
+  "inputs": "committed META1 + per-experiment reveal/metrics JSONs (contingency counts read, not fabricated)",
+  "prereg": "PREREG.md (metric+gate+decisive test frozen before scoring)"
+ },
+ "verdict": {
+  "honest_scope": "Statistical-metric invention validated on committed in-silico results by base-rate-invariance + simulation. Not wet-lab evidence; changes no organism biology; SECONDARY LENS - does NOT flip committed OR>3 verdicts.",
+  "invention_delivered": true,
+  "statement": "RR is a VALIDATED base-rate-fair gate: consistent where OR flipped, invariant in simulation while OR swings."
+ }
+}
