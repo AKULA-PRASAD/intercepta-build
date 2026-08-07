@@ -392,3 +392,23 @@ def test_screen_deterministic():
     a = VirtualScreener(name="t", conformal=False).fit(pos * 8, neg * 8).score(["c1ccc(F)cc1", "CCCCCCO"])
     b = VirtualScreener(name="t", conformal=False).fit(pos * 8, neg * 8).score(["c1ccc(F)cc1", "CCCCCCO"])
     assert list(a["p_active"].round(8)) == list(b["p_active"].round(8))
+
+
+# ---- composite router CLI (`intercepta route`) — the deployable face of COMPOSITE1/2/3 ----
+def test_cli_route_virus_autodetect_and_abstention():
+    """The `route` CLI must: autodetect virus from a tiny proteome (structural, FBA gated out),
+    fire full shortlist for bacteria, and ABSTAIN for a novel host-dependent parasite with no GEM."""
+    from intercepta.cli import main
+    # virus autodetect (30 proteins < VIRUS_MAX_PROTEOME): structural fires, no crash, exit 0
+    assert main(["route", "--organism", "SARS-CoV-2", "--proteome-size", "30"]) == 0
+    # bacterium: shortlist path
+    assert main(["route", "--organism", "Kpneu", "--class", "bacterium"]) == 0
+    # host-dependent parasite, NO gem -> abstains (exit 0, decision = abstention)
+    from intercepta.composite_router import CompositeRouter, BiologyClass
+    d = CompositeRouter().decide(organism="novel", declared_class=BiologyClass.HOST_DEPENDENT_PARASITE,
+                                 has_curated_gem=False).to_dict()
+    assert d["output_type"] == "abstention"
+    # with a GEM -> capped/flagged FBA fires (no longer abstains)
+    d2 = CompositeRouter().decide(organism="Toxoplasma", declared_class=BiologyClass.HOST_DEPENDENT_PARASITE,
+                                  has_curated_gem=True).to_dict()
+    assert d2["output_type"] != "abstention" and d2["uncertain"] is True

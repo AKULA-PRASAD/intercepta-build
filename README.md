@@ -115,7 +115,14 @@ intercepta discover   --out discover.csv                                        
 intercepta discover   --target-hts hiv --out discover_hiv.csv                                   # target-conditioned discovery: steer candidates toward a target (B40)
 intercepta substrate  --evidence evidence.csv --out shortlist.csv                                # extensible "any disease -> a query" engine: compose evidence -> safe, provenance-tiered, abstaining shortlist (docs/SUBSTRATE.md)
 intercepta discover-targets --pathogen X --proteome p.fasta --essentiality e.tsv ... --out t.json # UNIFIED end-to-end: pathogen genome -> safe, confidence-tiered target shortlist (all validated signals; docs/SUBSTRATE.md)
+intercepta route      --organism X --proteome p.fasta [--class ... --has-curated-gem] --out r.json # COMPOSITE router (COMPOSITE1/2/3): decide which VALIDATED signal(s) apply per biology class, at full/capped confidence, or ABSTAIN where none is validated (COMPOSITE_ARCHITECTURE.md)
 ```
+`intercepta route` is the deployable face of the disease-class-aware composite: it auto-detects the biology class
+(tiny proteome -> virus; else declare `--class`), fires only the signals whose transfer condition is validated —
+bacterium/eukaryote -> FBA-essentiality shortlist; virus -> structural class-ID; human-cancer -> functional
+dependency; host-dependent parasite *with a curated GEM* -> FBA at **capped, uncertainty-flagged** confidence —
+and **abstains with an explicit reason** where none is validated (e.g. a novel zero-screen parasite). It reports
+the routing decision + honest scope; running the actual shortlist needs the per-class inputs (`discover-targets`).
 `intercepta rank` outputs, per (sample, drug): transfer_z, marker, combined_score, ood_distance, confidence.
 `intercepta admet` predicts ADMET/safety properties from SMILES (structure-only screening filter, B30 — beats
 trivial on all 22 TDC tasks, mid-leaderboard; scaffold-split only, NOT a safety guarantee). Each row carries an

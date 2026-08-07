@@ -267,6 +267,57 @@ def _cmd_discover_targets(args):
     return 0
 
 
+def _cmd_route(args):
+    """COMPOSITE router (COMPOSITE1/2/3): for a pathogen/disease input, decide which VALIDATED target-ID signal(s)
+    to apply per biology class — at full or capped confidence — or ABSTAIN where none is validated. The honest
+    'what will the system do, and does it refuse?' face of the composite. Pure decision logic; no heavy deps."""
+    from .composite_router import CompositeRouter, BiologyClass
+    import json
+    proteome_size = args.proteome_size
+    if args.proteome and proteome_size is None:
+        # count sequences (FASTA headers) to let the detector auto-classify (tiny proteome -> virus)
+        try:
+            with open(args.proteome) as fh:
+                proteome_size = sum(1 for ln in fh if ln.startswith(">"))
+        except OSError as e:
+            print(f"could not read --proteome: {e}"); return 2
+    declared = BiologyClass(args.biology_class) if args.biology_class else None
+    router = CompositeRouter()
+    dec = router.decide(organism=args.organism, proteome_size=proteome_size,
+                        declared_class=declared, host_dependent=(args.host_dependent or None),
+                        has_curated_gem=args.has_curated_gem)
+    d = dec.to_dict()
+    if args.out:
+        json.dump(d, open(args.out, "w"), indent=2, sort_keys=True)
+    # human-readable honest summary
+    print(f"organism: {d['organism']}   detected class: {d['biology_class']} ({d['class_source']})")
+    print(f"OUTPUT: {d['output_type'].upper()}")
+    if d["output_type"] == "abstention":
+        print("  ABSTAINED — no validated signal transfers to this input:")
+        print("  reason:", d["abstention"])
+    else:
+        fired = d.get("signals_fired", [])
+        print("  signals FIRED (validated for this class):", ", ".join(fired) or "(none)")
+        if d.get("supporting_signals"):
+            print("  supporting (filter/validation-only):", ", ".join(d["supporting_signals"]))
+        if d.get("uncertain"):
+            cap = d.get("confidence_cap")
+            print(f"  ⚠ CAPPED/UNCERTAIN firing (confidence_cap={cap}):")
+            for f in d.get("uncertainty_flags", []):
+                print(f"    - {f.get('signal')}: {f.get('note')}")
+    if d.get("signals_gated_out"):
+        print("  gated OUT (transfer condition not met):")
+        for g in d["signals_gated_out"]:
+            print(f"    - {g.get('signal')}: {g.get('reason')}")
+    print("\nHONEST SCOPE: routed target-PRIORITIZATION decision (which validated signal applies, or abstain). "
+          "Shortlist signals output confidence-tiered candidate HYPOTHESES with provenance, NOT validated targets, "
+          "drugs, or clinical claims. Running the actual shortlist (bacteria/eukaryote FBA; human-cancer dependency) "
+          "requires the per-class inputs (see `discover-targets`); this command reports the honest routing + abstention.")
+    if args.out:
+        print(f"\nrouting decision JSON -> {args.out}")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -360,6 +411,21 @@ def main(argv=None):
     dt.add_argument("--top", type=int, default=30)
     dt.add_argument("--out", default="targets.json")
     dt.set_defaults(func=_cmd_discover_targets)
+    rt = sub.add_parser("route", help="COMPOSITE router (COMPOSITE1/2/3): decide which VALIDATED signal(s) apply to a "
+                        "pathogen/disease input — at full or capped confidence — or ABSTAIN where none is validated. "
+                        "The honest 'what will the system do, and does it refuse?' face of the composite.")
+    rt.add_argument("--organism", default="query", help="organism/input label (for the report)")
+    rt.add_argument("--proteome", help="proteome FASTA; sequence count auto-classifies (tiny -> virus, else bacterium/unknown)")
+    rt.add_argument("--proteome-size", dest="proteome_size", type=int, help="override: number of proteins (instead of --proteome)")
+    rt.add_argument("--class", dest="biology_class",
+                    choices=["bacterium", "free_eukaryote", "host_dependent_parasite", "virus", "human_cancer", "unknown"],
+                    help="declare the biology class (overrides autodetection; host-dependence is not sequence-derivable)")
+    rt.add_argument("--host-dependent", dest="host_dependent", action="store_true",
+                    help="flag the input as a host-dependent parasite (if no --class given)")
+    rt.add_argument("--has-curated-gem", dest="has_curated_gem", action="store_true",
+                    help="a curated genome-scale metabolic model exists (enables capped/flagged FBA for host-dependent parasites)")
+    rt.add_argument("--out", default=None, help="optional path to write the routing decision JSON")
+    rt.set_defaults(func=_cmd_route)
     args = p.parse_args(argv)
     return args.func(args)
 
