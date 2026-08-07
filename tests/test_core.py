@@ -412,3 +412,19 @@ def test_cli_route_virus_autodetect_and_abstention():
     d2 = CompositeRouter().decide(organism="Toxoplasma", declared_class=BiologyClass.HOST_DEPENDENT_PARASITE,
                                   has_curated_gem=True).to_dict()
     assert d2["output_type"] != "abstention" and d2["uncertain"] is True
+
+
+# ---- base-rate-fair transfer gate (FAIRGATE1 invention): base-rate INVARIANCE property ----
+def test_fair_gate_base_rate_invariance():
+    """The fair gate must give a CONSISTENT verdict where the OR>3 gate flipped purely on base rate
+    (the committed iPfal19 P. falciparum pair: Zhang base~0.64 -> OR 2.47 [OR-FAIL]; Bushell base~0.46 ->
+    OR 3.67 [OR-PASS]). Under the risk-ratio fair gate both are real enrichment -> both PASS (consistency)."""
+    from intercepta.metrics import fair_gate
+    # committed contingencies (both, fba_only, exp_only, neither)
+    zhang = fair_gate(55, 14, 218, 137)      # iPfal19 vs Zhang: OR 2.47 (OR-gate FAIL)
+    bushell = fair_gate(31, 16, 104, 212)    # iPfal19 vs Bushell: OR 3.67 (OR-gate PASS)
+    assert zhang["odds_ratio"] < 3 < bushell["odds_ratio"]          # OR gate flips across the pair
+    assert zhang["PASS"] == bushell["PASS"] == True                 # fair gate is CONSISTENT (both PASS)
+    # and it still rejects a genuine null (T. brucei: OR<1, no enrichment)
+    tbrucei = fair_gate(5, 16, 104, 212)
+    assert tbrucei["PASS"] is False

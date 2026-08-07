@@ -13,7 +13,15 @@ never claim solved) · DATA/EXPERIMENT-GATED (no computation substitutes). No fr
 - **Prospective-blind FBA-essentiality target-ID across all three domains of life** (BLIND1–7, 4 pass / 3 fail): the rare,
   gold-standard evidence that the mechanism *predicts, not postdicts* — with a mechanistically-explained transfer boundary.
 
-## Frontier 1 — Eukaryote-robust essentiality transfer  ·  **INVENTABLE-NOW**
+## Frontier 1 — Eukaryote-robust essentiality transfer  ·  ✅ **BUILT + VALIDATED (2026-08-07)**
+*Delivered: META1 diagnosed the OR>3 gate as base-rate-confounded (a fixed model flips PASS↔FAIL purely on screen base rate;
+driver of transfer strength is GEM quality, ρ=+0.55). FAIRGATE1 then invented + validated the fix — a base-rate-fair gate on the
+**risk ratio** (RR=precision/base_rate), proven base-rate-invariant (the flipping pair now gives a consistent verdict; simulation:
+OR swings 15× across base rate, RR CV≈0). Shipped as `intercepta.metrics.fair_gate()` with a data-free invariance unit test.
+Recommended gate for future prospective essentiality-transfer tests; supersedes raw OR>3. Honestly, the eukaryote signal is real
+(K. phaffii fair-PASS, p 4×10⁻⁵) — the earlier "eukaryotes fail" reading was partly a gate artifact, now corrected.*
+
+### (original problem statement, retained)
 - *Problem (our own result):* strict-blind eukaryotes came sub-gate (fungus OR 2.4 but p≈4×10⁻⁵ real; kinetoplastid null) while
   prokaryotes + retrospective eukaryotes pass — an unexplained boundary.
 - *Deep-analysis step (in progress):* **META1** quantifies whether the OR>3 gate is base-rate-confounded / driven by GEM coverage

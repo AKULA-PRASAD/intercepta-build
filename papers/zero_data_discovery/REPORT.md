@@ -562,6 +562,16 @@ in parentheses. (b) The composite score orders targets by real experimental esse
 decision-support ranking, not a clinical predictor.
 
 ## Methods (summary)
+**Essentiality-transfer gate (base-rate-fair).** Enrichment of FBA-essential among experimentally-essential genes was
+originally gated on the odds ratio (OR>3, p<0.01). Because essentiality is often a *common* outcome (base rates 0.03–0.64) and
+the odds ratio distorts effect size for common outcomes, we validated and now recommend a **base-rate-fair gate on the risk
+ratio** RR = precision/base-rate (fold-enrichment over chance): PASS ⇔ RR lower-95%-CI > 1 AND RR ≥ 1 AND Fisher p < 0.01. It is
+proven base-rate-invariant (a fixed metabolic model that flips PASS↔FAIL under the OR gate across two screens of different base
+rate gives a *consistent* RR verdict; in simulation the OR swings ~15× across base rate while RR is invariant). Committed
+pre-registered OR-gate verdicts are retained as recorded; the RR gate is the recommended metric for future prospective tests
+and is shipped as `intercepta.metrics.fair_gate()`. Full derivation + validation: `experiments/META1_transfer_law`,
+`experiments/FAIRGATE1_baserate_fair_gate`.
+
 **Rigor protocol.** Every claim was pre-registered (hypotheses and pass/fail thresholds fixed before data), reproduced
 **×2 byte-identical** (SHA-256 over a deterministic metrics payload excluding the verdict), and controlled against the
 trivial/null baselines the field often omits (conservation nulls, study-bias controls, decoy/analogue controls, shuffled and
