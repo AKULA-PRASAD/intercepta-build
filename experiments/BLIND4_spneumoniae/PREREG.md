@@ -100,5 +100,30 @@ are bounded by the metabolic subproteome (a sparse de-novo GEM predicts few, cor
 - Stage-1 locked BEFORE Stage-2 reveal. Recorded here as the pre-reveal blindness commitment.
 
 ---
-## REVEAL OUTCOME (Stage 2, filled after the lock was recorded)
-_(empty — no reveal performed in Stage 1; to be filled only after the orchestrator commits this lock)_
+## REVEAL OUTCOME (Stage 2, filled after the lock was committed — git b89fd42)
+**FAIL (honest negative, reported first-class).** Lock verified intact BEFORE scoring: the sorted-essential-accession
+payload of `results/LOCKED_predictions.tsv` hashes to `f86a02a4…`, equal to the committed lock; predictions unchanged.
+
+- **Experimental source actually used:** the pre-registered PRIMARY van Opijnen 2009 Tn-seq (TIGR4) was **not cleanly
+  fetchable CPU-only** here (Nature article behind `idp.nature.com` auth wall; OGEE v3 unreachable / legacy host blocked by a
+  safe-browse redirect; web-search budget exhausted). Per the pre-registered decision rule this invoked the STRAIN-MATCHED
+  FALLBACK **DEG1007** (S. pneumoniae TIGR4, genome NC_003028 — same strain van Opijnen assayed), local
+  `$INTERCEPTA_DATA/expval_deg/DEG10.aa.gz` (sha256 `5b906f5fae0f002406b5aa490fb620c9b396ae20166b80bf77cb6e4a7f58d34d`),
+  244 essential proteins. HONEST CAVEAT: DEG1007 is insertion-duplication/allelic-replacement (Thanassi 2002 / Song 2005),
+  NOT Tn-seq — a weaker, older, smaller experimental truth than the intended van Opijnen gold standard.
+- **Adjudication:** mmseqs easy-search homology bridge, pident≥90 (BLIND1/BLIND2 method). DEG1007's 244 essential proteins
+  mapped cleanly (same strain) to **239** of our accession space. SP_ locus-tag cross-check is only partial (81/244 DEG1007
+  rows carry an SP_ tag in the annotation column) and corroborates nothing beyond the bridge.
+- **2×2 over the 634 GEM (metabolic-subproteome) genes:** **5 both / 9 FBA-only / 98 exp-only / 522 neither** →
+  **odds ratio 2.96, Fisher p = 0.0607, precision 0.357, recall 0.049**. **Does NOT clear the pre-registered gate
+  (OR>3 AND p<0.01).**
+- **Verdict:** honest NEGATIVE, as pre-registered — NOT hidden, NOT re-run to a better number. OR 2.96 sits just below the
+  3.0 threshold and p (0.061) above 0.01; the direction is positive (enrichment ~3×) but sub-threshold.
+- **Comparison:** BLIND1 *N. gonorrhoeae* OR 6.13 (PASS), BLIND2 *C. jejuni* OR 3.92 (PASS), **BLIND4 *S. pneumoniae* OR 2.96
+  (FAIL)**. Likely drivers: a very sparse de-novo GEM (only 13 real FBA-essential genes of 634) for this fastidious,
+  fermentative Gram-positive Firmicute, and a weaker fallback truth set (DEG1007 allelic-replacement, not the intended
+  van Opijnen Tn-seq). The suite is now n=2 PASS / 1 FAIL — the FAIL is a genuine, first-class negative that keeps the
+  panel honest.
+- **Reproduced x2 byte-identical** — Stage-2 payload sha256 `f5b818ee0269bc511884edacd9f6175a6c4089b60b2b73ee8efcedb16224cefd`.
+- **Scope:** essentiality-enrichment only; sparse de-novo GEM; in-silico FBA vs a published experimental set (fallback, not
+  the intended Tn-seq); not drug-target/clinical; not wet-lab.

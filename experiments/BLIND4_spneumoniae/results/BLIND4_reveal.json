@@ -1,0 +1,40 @@
+{
+  "provenance": {
+    "deg_aa_sha256": "5b906f5fae0f002406b5aa490fb620c9b396ae20166b80bf77cb6e4a7f58d34d",
+    "experimental_source_decision": "van Opijnen 2009 Tn-seq (primary) UNFETCHABLE CPU-only -> DEG1007 fallback",
+    "git_sha": "b89fd4205c468aba17753a51191e43c21673ce52",
+    "utc": "2026-08-07T05:19:46Z"
+  },
+  "runtime_sec": 1.4,
+  "summary": {
+    "PREREG_GATE_OR_gt3_p_lt0.01": false,
+    "SP_locus_tag_cross_check": {
+      "FBA_essential_SP_in_DEG1007": [],
+      "FBA_essential_with_SP_symbol": 5,
+      "deg1007_SP_tags": 81,
+      "locked_genes_with_SP_symbol": 297,
+      "note": "partial coverage: only locked genes whose UniProt gene name IS the SP_ ordered-locus tag are checkable this way; the mmseqs homology bridge is the complete pre-registered adjudication."
+    },
+    "adjudication": "sequence-homology bridge (mmseqs pident>=90)",
+    "clade": "Firmicutes (Bacilli, Gram-positive)",
+    "contingency": {
+      "FBA_only": 9,
+      "both": 5,
+      "exp_only": 98,
+      "neither": 522
+    },
+    "experimental_source": "DEG1007",
+    "experimental_source_detail": "DEG1007 S. pneumoniae TIGR4 (NC_003028), insertion-duplication/allelic-replacement (Thanassi 2002 / Song 2005); STRAIN-MATCHED FALLBACK invoked per PREREG decision rule because van Opijnen 2009 Tn-seq (primary) was not cleanly fetchable CPU-only (Nature auth wall; OGEE unreachable).",
+    "fisher_p": 0.06073,
+    "locked_sha": "f86a02a4e7107ec2c12e3a231942449a01dc24f1be78fbbae42b6db1b8b5651d",
+    "locked_sha_verified": true,
+    "n_deg_essential_proteins": 244,
+    "n_experimental_essential_in_our_space": 239,
+    "n_locked_genes": 634,
+    "odds_ratio": 2.96,
+    "organism": "S_pneumoniae_TIGR4",
+    "precision": 0.357,
+    "recall": 0.049,
+    "verdict": "PROSPECTIVE-BLIND RESULT (FAIL), sequence-bridge adjudication of the pre-registered LOCKED predictions (sha f86a02a4e7107ec2... verified intact and equal to committed lock; predictions unchanged): on the genuinely novel, never-seen WHO priority pathogen S. pneumoniae TIGR4 (NEW clade: Gram-positive Firmicute), de-novo CarveMe FBA-essential genes are NOT enriched for EXPERIMENTAL essentiality (DEG1007, 244 essential proteins mapped by mmseqs to 239 of our genes): odds ratio 2.96 (Fisher p=0.06073), precision 0.357, recall 0.049 (5 both / 9 FBA-only / 98 exp-only / 522 neither). Honest NEGATIVE as pre-registered \u2014 the locked predictions did not clear the gate; reported, not re-run to a better number. HONEST CAVEAT: experimental truth is the strain-matched DEG1007 (allelic-replacement), NOT the pre-registered van Opijnen Tn-seq (unfetchable CPU-only here). SCOPE: essentiality-enrichment only; sparse de-novo GEM; in-silico FBA vs a published experimental set; hypotheses; not wet-lab."
+  }
+}

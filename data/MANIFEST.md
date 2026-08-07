@@ -317,3 +317,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## BLIND2 C. jejuni prospective-blind #2 (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/blind2/ — C. jejuni NCTC 11168 proteome (UniProt UP000000799) + de-novo CarveMe GEM +
   DEG1049 Tn-seq essentiality (Mandal 2017). Open; regenerable; never committed.
+
+## BLIND4 S. pneumoniae prospective-blind #4 (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/blind4/ — S. pneumoniae TIGR4 proteome (UniProt UP000000585) + de-novo CarveMe GEM +
+  DEG1007 essentiality (fallback; intended van Opijnen 2009 Tn-seq not fetchable CPU-only). Open; never committed.
