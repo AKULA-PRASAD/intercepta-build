@@ -85,10 +85,14 @@ drug-target maps. Dynamic/causal/temporal/patient models: ABSENT.
   reach is GEM/organism-specific — NOT determined by host-embeddedness.** **PARARESOLVE1 (3487e6c) partially
   resolved the confound:** the GEM axis is a major driver (independent Pf GEMs span OR 0.86→3.07; iAM-Pf480
   *passes* at 3.07), but GEM choice does NOT close the Pf↔Toxo gap (base-rate/biology residual survives), and
-  the specific salvage-topology mechanism is **FALSIFIED** (salvage-FN fraction iPfal19 0.907 ≈ Toxo 0.867);
-  screen technology (piggyBac vs CRISPR) is not controllable CPU-only — a standing residual. Functional
-  dependency (DEPEND1) remains a valid host-embedded signal *where a screen exists*, and FBA *also* works on
-  host-embedded organisms with a good GEM — complementary,
+  the specific salvage-topology mechanism is **FALSIFIED** (salvage-FN fraction iPfal19 0.907 ≈ Toxo 0.867).
+  **PARARESOLVE2 (ebd2771) probed the screen-tech axis** (Bushell barseq-KO, since no Pf CRISPR screen exists):
+  the pass/fail verdict flips across GEM×screen (not tech-robust) but the failure *mechanism* is (recall ~0.2
+  everywhere). **Sharpened: the OR>3 gate is knife-edge at Plasmodium's noise floor** — verdict flips are
+  largely a base-rate artifact, so "Plasmodium passes/fails" is not a stable fact; what IS stable is that
+  Plasmodium sits at the noise floor (recall ~0.2) while Toxoplasma is robustly strong (0.51), and the Pf↔Toxo
+  gap never closes. Functional dependency (DEPEND1) remains a valid host-embedded signal *where a screen
+  exists*, and FBA *also* works on host-embedded organisms with a good GEM — complementary,
   not one-replaces-the-other.
 - **DEPEND1 (Wave 3, VERIFIED G1/G2/G3 PASS, 5b3cb7a) — the redirection realized:** the functional-dependency
   target-ID layer (DepMap CRISPR) recovers known cancer targets (0.80, p 5.6e-21), **generalizes to held-out

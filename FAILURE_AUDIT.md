@@ -46,9 +46,15 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
   swapping in independent Pf GEMs spans OR 0.86→3.07 and one (iAM-Pf480) *passes* → not uniquely iPfal19. **But
   GEM choice does NOT close the Pf↔Toxo gap** (base rate is GEM-invariant ~0.65 vs 0.42; a base-rate/biology
   residual survives), and the specific **"salvage-bypass topology" mechanism is FALSIFIED** (salvage-FN
-  fraction iPfal19 0.907 ≈ Toxo 0.867). **Screen technology (piggyBac vs CRISPR) is not controllable CPU-only**
-  (no genome-wide Pf CRISPR screen) — a standing residual. So the honest root cause is "GEM-dependent + a
-  base-rate/biology residual + an uncontrollable screen-tech confound," not a clean salvage-topology story.
+  fraction iPfal19 0.907 ≈ Toxo 0.867). **Screen-tech axis PROBED (PARARESOLVE2)**: the clean Pf-CRISPR test is
+  data-gated (no genome-wide Pf CRISPR screen), so probed via a 3rd technology (Bushell barseq-KO) — the
+  pass/fail verdict is NOT screen-tech-robust (iPfal19↔iAM-Pf480 swap pass/fail across screens), so the tech
+  axis is not exonerated, but the *failure mechanism* IS (recall ~0.2 everywhere). **Sharpened honest reading:
+  the OR>3 gate is knife-edge at Plasmodium's noise floor and verdict flips are largely a base-rate artifact —
+  so "Plasmodium FBA passes/fails" is NOT a stable single fact.** What is stable: Plasmodium sits near the noise
+  floor (recall ~0.2) regardless of GEM/screen, while Toxoplasma is robustly strong (recall 0.51) — the Pf↔Toxo
+  gap never closes. Root cause is multi-causal (GEM topology × truth base-rate × screen sampling), not a clean
+  single mechanism.
 - **Compute-solvable? Organism/GEM-dependent, incompletely.** A good GEM can flip it (iAM-Pf480 passes), but
   we cannot a-priori predict which GEM will work (COMPOSITE3 flags uncertainty), and the residual is unresolved.
   Honest

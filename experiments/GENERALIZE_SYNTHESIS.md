@@ -81,9 +81,21 @@ a *second* host-dependent parasite, *Toxoplasma gondii* (curated iTgo2020 GEM vs
   salvage-explained false-negative fraction is iPfal19 0.907 ≈ iTgo2020 0.867 (Toxoplasma's false-negatives are
   *also* salvageable); the PASS/FAIL difference is recall/FN-count, not a qualitatively different salvage
   topology (caveat: fully-open media saturates the salvage category, limiting its discriminating power).
-- **Residual confounds still UNRESOLVED:** screen technology (piggyBac vs CRISPR) is **not controllable
-  CPU-only** — no genome-wide *Plasmodium* CRISPR essentiality screen exists; plus organism biology, base rate,
-  and knowledgebase non-independence of Pf GEMs. So n=2 still cannot be pinned on organism biology alone.
+- **Screen-technology axis — PROBED (PARARESOLVE2, ebd2771), no closure:** the clean same-species-CRISPR test
+  is data-gated (no genome-wide *Plasmodium* CRISPR screen exists), so it was probed with a 3rd technology
+  (Bushell 2017 *P. berghei* barseq-knockout). Result: the **pass/fail VERDICT is NOT screen-tech-robust** —
+  iPfal19 flips to PASS (3.67) and iAM-Pf480 flips to FAIL (2.26) vs Bushell, opposite to their Zhang verdicts
+  → the tech axis is **not exonerated**. **BUT the FAILURE MECHANISM IS screen-tech-robust:** recall stays
+  ~0.19–0.25 across every GEM×screen cell (FBA misses ~75–80% of essentials — the invariant signature).
+- **The sharpened conclusion (this reframes the whole parasite story):** the OR>3 gate is **knife-edge at
+  Plasmodium's noise floor** — the verdict flips are largely a **base-rate artifact** (Bushell essential base
+  rate ~0.46 vs Zhang 0.64 mechanically decompresses the OR, lifting a GEM over the line *without the model
+  improving*). So "Plasmodium FBA passes/fails" is **not a stable single-fact**; it is multi-causal (GEM
+  topology × truth base-rate × screen sampling). What *is* stable and honest: **Plasmodium FBA is near the
+  noise floor (recall ~0.2) regardless of GEM/screen, whereas Toxoplasma is robustly strong (recall 0.51, OR
+  14.10) — the Pf↔Toxo gap never closes** (best Pf 3.67 vs 14.10).
+- **Residual confounds still UNRESOLVED:** CRISPR-*specific* axis (data-gated); *P. berghei*→Pf species
+  confound; partial-genome coverage; base-rate/biology residual; Pf-GEM knowledgebase non-independence.
 - **What still stands (not overturned):** DEPEND1 remains a validated functional-dependency signal for human
   cancer; TRANSFER1 still shows that signal does NOT transfer label-free to a zero-screen organism. So
   functional dependency is *a* valid host-embedded signal (where a screen exists), **and** FBA can *also* work
