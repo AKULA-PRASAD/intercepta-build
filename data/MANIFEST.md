@@ -304,3 +304,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/pararesolve2/ — Bushell et al. 2017 (Cell, PMC5509546 open-access) P. berghei PlasmoGEM
   barseq knockout essentiality (Table S1/mmc1.xlsx, authors' Phenotype label) via Europe PMC. Reuses iPfal19 +
   iAM-Pf480 (pararesolve1) read-only. Open; regenerable; never committed.
+
+## INTERVENE2 cancer repurposing (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/intervene2/chembl_max_phase.json — ChEMBL max_phase for 4450 human drug ids (ChEMBL REST,
+  frozen cache for deterministic scoring). Reuses DepMap (kaalcura) + intervene/drug_targets.tsv + IntOGen
+  (f3clin1) read-only. Open; regenerable; never committed.

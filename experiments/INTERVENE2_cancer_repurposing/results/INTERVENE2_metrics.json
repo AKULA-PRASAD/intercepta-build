@@ -1,0 +1,638 @@
+{
+  "K": 2000,
+  "ceiling": {
+    "by_phase": {
+      "approved": 167,
+      "investigational": 81,
+      "preclinical_or_unknown": 0
+    },
+    "by_phase_fraction_of_selective": {
+      "approved": 0.0456,
+      "investigational": 0.0221,
+      "preclinical_or_unknown": 0.0
+    },
+    "drugged_fraction": 0.0677,
+    "n_drugged": 248,
+    "n_selective": 3664,
+    "n_undrugged": 3416
+  },
+  "dep_thresh": -0.5,
+  "driver_subset": {
+    "drugged_fraction": 0.2,
+    "n_drugged": 48,
+    "n_selective_drivers": 240,
+    "n_selective_nondriver": 3424,
+    "nondriver_drugged": 200,
+    "nondriver_drugged_fraction": 0.0584
+  },
+  "drugged_detail_top50": [
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.495,
+      "gene": "NDUFA11",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "ANTAGONIST|INHIBITOR",
+      "dep_frac": 0.4941,
+      "gene": "TYMS",
+      "max_phase": 4.0,
+      "moa": "Thymidylate synthase antagonist",
+      "n_drugs": 11,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4758,
+      "gene": "CDK6",
+      "max_phase": 4.0,
+      "moa": "CDK6/cyclin D1 inhibitor",
+      "n_drugs": 12,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4694,
+      "gene": "PTK2",
+      "max_phase": 3.0,
+      "moa": "Focal adhesion kinase 1 inhibitor",
+      "n_drugs": 7,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4639,
+      "gene": "IMPDH2",
+      "max_phase": 4.0,
+      "moa": "Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor",
+      "n_drugs": 7,
+      "phase_class": "approved"
+    },
+    {
+      "action": "ANTAGONIST|BINDING AGENT|INHIBITOR",
+      "dep_frac": 0.4411,
+      "gene": "ITGAV",
+      "max_phase": 4.0,
+      "moa": "Integrin alpha-V/beta-1 binding agent",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4274,
+      "gene": "HAMP",
+      "max_phase": 1.0,
+      "moa": "Hepcidin inhibitor",
+      "n_drugs": 1,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4247,
+      "gene": "NDUFB4",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4219,
+      "gene": "NDUFA13",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4201,
+      "gene": "TXNRD1",
+      "max_phase": 4.0,
+      "moa": "Thioredoxin reductase 1 inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4164,
+      "gene": "KRAS",
+      "max_phase": 4.0,
+      "moa": "GTPase KRas inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4146,
+      "gene": "NDUFS2",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.41,
+      "gene": "NDUFA6",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4082,
+      "gene": "RELA",
+      "max_phase": 3.0,
+      "moa": "Nuclear factor NF-kappa-B complex inhibitor",
+      "n_drugs": 1,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4037,
+      "gene": "NDUFA8",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.4,
+      "gene": "NDUFA2",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3982,
+      "gene": "UMPS",
+      "max_phase": 4.0,
+      "moa": "Uridine 5'-monophosphate synthase inhibitor",
+      "n_drugs": 1,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3699,
+      "gene": "NAMPT",
+      "max_phase": 2.0,
+      "moa": "Nicotinamide phosphoribosyltransferase inhibitor",
+      "n_drugs": 2,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3461,
+      "gene": "PIK3CA",
+      "max_phase": 4.0,
+      "moa": "PI3-kinase class I inhibitor",
+      "n_drugs": 35,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3425,
+      "gene": "CA5A",
+      "max_phase": 4.0,
+      "moa": "Carbonic anhydrase inhibitor",
+      "n_drugs": 2,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3288,
+      "gene": "MDM2",
+      "max_phase": 3.0,
+      "moa": "Tumour suppressor p53/oncoprotein Mdm2 inhibitor",
+      "n_drugs": 4,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3288,
+      "gene": "NDUFB8",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "BLOCKER|MODULATOR",
+      "dep_frac": 0.3279,
+      "gene": "CACNB3",
+      "max_phase": 4.0,
+      "moa": "Voltage-gated calcium channel blocker",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "ANTAGONIST|INHIBITOR",
+      "dep_frac": 0.3269,
+      "gene": "ITGB5",
+      "max_phase": 3.0,
+      "moa": "Integrin alpha-V/beta-5 antagonist",
+      "n_drugs": 3,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3215,
+      "gene": "BRD2",
+      "max_phase": 3.0,
+      "moa": "Bromodomain and extra-terminal motif (BET) inhibitor",
+      "n_drugs": 6,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3169,
+      "gene": "GART",
+      "max_phase": 4.0,
+      "moa": "GAR transformylase inhibitor",
+      "n_drugs": 6,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.3132,
+      "gene": "NDUFS1",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "DISRUPTING AGENT|INHIBITOR|STABILISER",
+      "dep_frac": 0.2995,
+      "gene": "TUBB4B",
+      "max_phase": 4.0,
+      "moa": "Tubulin beta inhibitor",
+      "n_drugs": 84,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2968,
+      "gene": "NDUFB6",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2932,
+      "gene": "NDUFV1",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2895,
+      "gene": "RPL13A",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2895,
+      "gene": "RPL15",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2895,
+      "gene": "RPL23A",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2895,
+      "gene": "RPL35A",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2895,
+      "gene": "RPL6",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2895,
+      "gene": "RPS10",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2895,
+      "gene": "RPS2",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2895,
+      "gene": "RPSA",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2886,
+      "gene": "RPL21",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR|MODULATOR",
+      "dep_frac": 0.2868,
+      "gene": "RPL36A",
+      "max_phase": 4.0,
+      "moa": "80S Ribosome inhibitor",
+      "n_drugs": 9,
+      "phase_class": "approved"
+    },
+    {
+      "action": "AGONIST",
+      "dep_frac": 0.2785,
+      "gene": "NISCH",
+      "max_phase": 4.0,
+      "moa": "Nischarin agonist",
+      "n_drugs": 2,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2767,
+      "gene": "AMY2A",
+      "max_phase": 4.0,
+      "moa": "Pancreatic alpha-amylase inhibitor",
+      "n_drugs": 1,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2758,
+      "gene": "NDUFAF3",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2749,
+      "gene": "NPEPPS",
+      "max_phase": 2.0,
+      "moa": "Aminopeptidase inhibitor",
+      "n_drugs": 1,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "CROSS-LINKING AGENT",
+      "dep_frac": 0.274,
+      "gene": "FCGR1A",
+      "max_phase": 2.0,
+      "moa": "High affinity immunoglobulin gamma Fc receptor I cross-linking agent",
+      "n_drugs": 2,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2603,
+      "gene": "CLK2",
+      "max_phase": 3.0,
+      "moa": "Dual specificity protein kinase CLK2 inhibitor",
+      "n_drugs": 1,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2539,
+      "gene": "DHODH",
+      "max_phase": 4.0,
+      "moa": "Dihydroorotate dehydrogenase inhibitor",
+      "n_drugs": 6,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2274,
+      "gene": "NPM1",
+      "max_phase": 4.0,
+      "moa": "NPM/ALK (Nucleophosmin/ALK tyrosine kinase receptor) inhibitor",
+      "n_drugs": 2,
+      "phase_class": "approved"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2192,
+      "gene": "CHKA",
+      "max_phase": 1.0,
+      "moa": "Choline kinase alpha inhibitor",
+      "n_drugs": 1,
+      "phase_class": "investigational"
+    },
+    {
+      "action": "INHIBITOR",
+      "dep_frac": 0.2192,
+      "gene": "NDUFB1",
+      "max_phase": 4.0,
+      "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+      "n_drugs": 3,
+      "phase_class": "approved"
+    }
+  ],
+  "gates": {
+    "G1": "PASS"
+  },
+  "git_sha": "0de58d109a05c85e51a5fdd06a656981d4e0cb59",
+  "input_sha256": {
+    "Compendium_Cancer_Genes.tsv": "7c1982aa1fae1ff8200f4c2811cdb1707ea3f778b5e95782798d09e792ddb5e8",
+    "depmap_crispr_gene_effect.csv": "d1633bfa0bf4719e72e564f15d9bcda7fddbbd3dac2a8a3aebf4898ac9f56f00"
+  },
+  "mapper": {
+    "n_human_drug_target_symbols": 1502,
+    "n_human_drug_target_uniprot": 1579
+  },
+  "n_pan_essential": 1020,
+  "n_selective": 3664,
+  "n_universe_genes": 17931,
+  "payload_sha256": "8f3ac2d639270af3a3ebee52c8597727bcfab0ab2010bb02fc5a73b1ffeb73eb",
+  "python": "3.11.14",
+  "seed": 42,
+  "sel_band": [
+    0.01,
+    0.5
+  ],
+  "specificity_null_B": {
+    "base_rate_drugged_noncanon_selective": 0.06539,
+    "n_noncanon_selective": 3655,
+    "n_selective_matching_any_canonical_moa_kw": 16
+  },
+  "timestamp_utc": "2026-08-07T03:54:42Z",
+  "validation_canonical": {
+    "detail": [
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "raf",
+        "gene": "BRAF",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 17,
+        "retrieved_moa": "B-raf/RAF proto-oncogene serine/threonine-protein kinase inhibitor | RAF serine/threonine protein kinase inhibitor | Serine/threonine-protein kinase B-raf inhib"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "kras",
+        "gene": "KRAS",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 3,
+        "retrieved_moa": "GTPase KRas inhibitor | RAS inhibitor"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "epidermal growth factor receptor",
+        "gene": "EGFR",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 80,
+        "retrieved_moa": "Epidermal growth factor receptor binding agent | Epidermal growth factor receptor erbB1 antagonist | Epidermal growth factor receptor erbB1 binding agent | Epid"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "erbb-2",
+        "gene": "ERBB2",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 46,
+        "retrieved_moa": "Epidermal growth factor receptor inhibitor | ErbB-2/ErbB-3 heterodimer inhibitor | Receptor protein-tyrosine kinase erbB-2 binding agent | Receptor protein-tyro"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "pi3-kinase",
+        "gene": "PIK3CA",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 35,
+        "retrieved_moa": "PI3-kinase class I inhibitor | PI3-kinase p110-alpha subunit inhibitor"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "cyclin-dependent kinase 4",
+        "gene": "CDK4",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 18,
+        "retrieved_moa": "Cyclin-dependent kinase 4 inhibitor | Cyclin-dependent kinase 4/cyclin D1 inhibitor | Cyclin-dependent kinase inhibitor"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "cyclin-dependent kinase 6",
+        "gene": "CDK6",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 12,
+        "retrieved_moa": "CDK6/cyclin D1 inhibitor | Cyclin-dependent kinase 6 inhibitor | Cyclin-dependent kinase inhibitor"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "mdm2",
+        "gene": "MDM2",
+        "max_phase": 3.0,
+        "moa_kw_found": true,
+        "n_drugs": 4,
+        "retrieved_moa": "Tumour suppressor p53/oncoprotein Mdm2 inhibitor"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "bcl-2",
+        "gene": "BCL2",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 4,
+        "retrieved_moa": "Apoptosis regulator Bcl-2 inhibitor"
+      },
+      {
+        "action_found": true,
+        "correct": true,
+        "drugged": true,
+        "expected_action": "INHIBITOR",
+        "expected_moa_kw": "mitogen-activated protein kinase kinase",
+        "gene": "MAP2K1",
+        "max_phase": 4.0,
+        "moa_kw_found": true,
+        "n_drugs": 19,
+        "retrieved_moa": "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor | Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
+      }
+    ],
+    "n_canonical": 10,
+    "n_correct": 10,
+    "null_A_mislabel_mean_recovery": 0.0018,
+    "null_A_p": 0.0005,
+    "recovery": 1.0
+  },
+  "verdict": "INTERVENE2 \u2014 cancer target->intervention (repurposing/druggability), the HUMAN analog of INTERVENE1. DEPEND1 selective set REPRODUCED (n=3664, exact). MAPPING VALIDATION (G1=PASS): the target->drug mapper independently recovered a correct-mechanism drug (MoA keyword + action, no hardcoded drug answers) for 10/10 canonical cancer drug-targets (recovery=100%); mislabel-permutation null recovery=0.2% (p=0.0005) and only 16 of 3664 selective genes match ANY canonical MoA keyword => the mapping is SPECIFIC, not promiscuous. So cancer target->drug MAPPING is validated, like INTERVENE1's antibacterial 9/9. **HONEST CEILING (G2, descriptive): only 248/3664 (6.8%) of validated selective dependencies have ANY existing ChEMBL-annotated ligand (repurposing-addressable); 3416 (93.2%) are UNDRUGGED \u2014 de-novo-chemistry-gated (the F4 ceiling).** Of the drugged genes: 167 have an APPROVED drug (max_phase 4), 81 investigational (phase I-III) only, 0 preclinical/unknown. Patient-driver subset is MORE druggable (48/240=20.0%) than non-driver selective (5.8%), but a large majority of driver dependencies are still undrugged. This is the cancer analog of INTERVENE1's narrow repurposing ceiling: mapping recovers known cancer pharmacology well, but most novel selective dependencies have no existing drug. **SCOPE: MAPPING validation ONLY \u2014 'drugged'=has a ChEMBL ligand, NOT efficacious/selective/safe in a patient; NOT drug-response prediction (tested-NEGATIVE: B20/B10/B17); undrugged targets remain de-novo-chemistry-gated; symbol-exact matching can only UNDERcount druggability. Not wet-lab, not clinical.**"
+}
