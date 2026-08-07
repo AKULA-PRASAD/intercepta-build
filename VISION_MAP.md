@@ -17,7 +17,7 @@ wave attacks a real gap, not a checkbox. Updated 2026-08-05.*
 ## The one-paragraph truth
 The **front half for bacterial pathogens is genuinely VERIFIED**: label-free FBA gene-essentiality predicts
 *experimental* essentiality across **6 curated organisms spanning 3 phyla** and — the strongest evidence — a
-**prospective-blind, pre-registered** test on a never-seen WHO pathogen (*N. gonorrhoeae*), plus two held-out
+**prospective-blind, pre-registered** SUITE across 4 never-seen pathogens spanning multiple phyla (BLIND1-4: N. gonorrhoeae OR 6.1, C. jejuni 3.9, B. thetaiotaomicron/new-phylum 8.0 PASS; S. pneumoniae 3.0 FAIL on a sparse model = 3/4, honest envelope), plus two held-out
 pathogens. That is a real, rare, honest result. **Everything downstream of "which target" degrades sharply in
 evidence:** the intervention half works only as *repurposing* and only for the narrow slice of targets with an
 already-drugged homolog; de-novo chemistry is a demonstrated ceiling; and the "any disease" claim beyond
@@ -139,7 +139,7 @@ cannot be closed by compute alone.
 
 ### Layer 7 — Validation
 **COMPUTED-tier is STRONG; experimental/clinical is GATED.** Computational: cross-validation, **held-out species,
-a genuine prospective-blind test** (BLIND1), external experimental datasets (PEC/DEG/DeJesus/CRISPRi) — this is
+a genuine prospective-blind SUITE** (BLIND1-4, 3/4 pass across 4 clades; BLIND3/4 git-committed-before-reveal), external experimental datasets (PEC/DEG/DeJesus/CRISPRi) — this is
 our strongest layer and it's honest. **Experimental (KO/CRISPRi/assays) and Clinical (cohorts/outcomes): ABSENT
 and un-fundable zero-budget.** This is the true gate on "real therapeutic discovery."
 
