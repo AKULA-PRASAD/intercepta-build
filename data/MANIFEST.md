@@ -325,3 +325,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## DARK1 dark-proteome boundary (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/dark1/ — UniProt disordered/dark proteins + control drug targets + AlphaFold structures +
   mmseqs/foldseek tables. Open (UniProt/AlphaFold/ChEMBL); regenerable; never committed.
+
+## BLIND3 B. thetaiotaomicron prospective-blind #3 (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/blind3/ — B. theta VPI-5482 proteome (UniProt UP000001414) + de-novo CarveMe GEM +
+  DEG1023 INSeq essentiality (Goodman 2009). Open; regenerable; never committed.

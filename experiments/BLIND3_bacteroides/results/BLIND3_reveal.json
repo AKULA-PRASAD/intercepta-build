@@ -1,0 +1,32 @@
+{
+  "provenance": {
+    "deg_source": "DEG10.aa.gz sha256=5b906f5fae0f002406b5aa490fb620c9b396ae20166b80bf77cb6e4a7f58d34d",
+    "git_sha": "24e409aba4c3c8e62d58b6d43f6957ddaa250767",
+    "utc": "2026-08-07T12:01:16Z"
+  },
+  "runtime_sec": 1.5,
+  "summary": {
+    "PREREG_GATE_OR_gt3_p_lt0.01": true,
+    "adjudication": "sequence-homology bridge (mmseqs pident>=90)",
+    "contingency": {
+      "FBA_only": 13,
+      "both": 12,
+      "exp_only": 83,
+      "neither": 722
+    },
+    "deg_accession": "DEG1023",
+    "fisher_p": 3.827e-06,
+    "locked_sha": "e743e599ad7e08701f3fd95396cb302e9e4df1f6d44b1e247eb994b415176442",
+    "locked_sha_verified": true,
+    "n_deg_essential_proteins": 325,
+    "n_experimental_essential_in_our_space": 327,
+    "n_locked_genes": 830,
+    "odds_ratio": 8.03,
+    "organism": "B_thetaiotaomicron_VPI-5482",
+    "phylum": "Bacteroidetes",
+    "pident_cutoff": 90.0,
+    "precision": 0.48,
+    "recall": 0.126,
+    "verdict": "PROSPECTIVE-BLIND RESULT (PASS), sequence-bridge adjudication of the pre-registered LOCKED predictions (sha e743e599ad7e0870... verified intact; predictions unchanged): on the genuinely novel, never-seen gut-symbiont/pathobiont B. thetaiotaomicron VPI-5482 (NEW phylum: Bacteroidetes), de-novo CarveMe FBA-essential genes are ENRICHED for EXPERIMENTAL essentiality (DEG DEG1023, Goodman 2009 INSeq, 325 essential proteins mapped by mmseqs to 327 of our genes): odds ratio 8.03 (Fisher p=3.827e-06), precision 0.48, recall 0.126 (12 both / 13 FBA-only / 83 exp-only / 722 neither). This is a THIRD independent prospective-blind confirmation (with BLIND1/BLIND2) that the FBA-essentiality mechanism signal predicts experimental essentiality on a pre-registered, never-seen organism \u2014 now extended to a new PHYLUM (Bacteroidetes). SCOPE: essentiality-enrichment only; de-novo GEM; in-silico FBA vs published INSeq screen; hypotheses; not wet-lab."
+  }
+}

@@ -92,5 +92,22 @@ clinical. Precision/recall are bounded by the metabolic subproteome.
 - Stage-1 locked BEFORE Stage-2 reveal. Recorded here as the pre-reveal blindness commitment. This module did NOT git commit.
 
 ---
-## REVEAL OUTCOME (Stage 2, to be filled after the lock is committed)
-*(empty — Stage 2 not run. No score.py, no reveal, no experimental essential-gene set consulted in Stage 1.)*
+## REVEAL OUTCOME (Stage 2, filled after the lock was committed to git — commit 24e409a, pushed)
+**PASS.** Sequence-homology bridge (mmseqs, pident≥90) adjudication of the LOCKED predictions (lock sha
+`e743e599…` verified intact — predictions unchanged, and equal to the committed lock). DEG1023's 325 essential proteins
+(Goodman 2009 INSeq, exact strain VPI-5482) mapped by mmseqs into our accession space (327 of our genes are
+experimental-essential orthologs); over the 830 locked GEM genes the 2×2 contingency is
+**12 both / 13 FBA-only / 83 exp-only / 722 neither** → **odds ratio 8.03, Fisher p = 3.83e-06, precision 0.48,
+recall 0.126** → clears the pre-registered gate (OR>3, p<0.01).
+- **n = 3 across THREE phyla:** a THIRD independent prospective-blind confirmation, on a genuinely novel pre-registered
+  organism from a NEW PHYLUM (Bacteroidetes), that FBA-essentiality predicts experimental essentiality.
+- **Suite comparison (all under identical protocol/gate):** BLIND1 (N. gonorrhoeae) OR 6.13 PASS; BLIND2 (C. jejuni)
+  OR 3.92 PASS; **BLIND3 (B. thetaiotaomicron) OR 8.03 PASS** — the strongest OR in the suite so far; BLIND4 OR 2.96 FAIL
+  (honest negative). BLIND3's precision 0.48 sits between BLIND1 (0.78) and BLIND2 (0.27); recall 0.126 is metabolic-scoped
+  as expected.
+- **Reproduced x2 byte-identical** — Stage-2 payload sha256 `1437a830691bdb6dabe52e66bb204c15aaa24f2d3631c64bbf7c18bb1eb9e98d`.
+- **Provenance:** experimental set = DEG `DEG1023`, sequences from `$INTERCEPTA_DATA/expval_deg/DEG10.aa.gz`
+  sha256 `5b906f5fae0f002406b5aa490fb620c9b396ae20166b80bf77cb6e4a7f58d34d` (325 DEG1023 protein entries, matching the DEG
+  index count). This module did NOT git commit the reveal (orchestrator commits).
+- **Meaning:** genuine prospective-blind evidence, replicated to a new phylum. Essentiality-enrichment only; de-novo GEM;
+  in-silico vs a published INSeq screen; not drug-target/clinical; not wet-lab.
