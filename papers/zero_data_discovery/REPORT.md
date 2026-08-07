@@ -1,4 +1,4 @@
-# Zero-data drug discovery: an honest map of what transfers, what doesn't, a mechanistic signal validated against experimental gene-knockouts, and a self-improving loop that knows its limits
+# Zero-data drug discovery, and a disease-class-aware composite: an honest map of which target-ID signal transfers to which biology — validated against experimental gene-knockouts across bacteria, a fungus, viruses, and human cancer, with first-class negatives and an abstaining router that knows its limits
 
 *A consolidation of the INTERCEPTA "zero-data disease" research arc (2026-07/08). Written to be understandable without
 reference to INTERCEPTA: it is a set of falsifiable claims about the behaviour of computational drug-discovery
@@ -31,6 +31,28 @@ experimental validation is scoped to *essentiality enrichment* (high precision, 
 an information ceiling (candidates are pose-plausible hypotheses, not validated actives), and no claim is clinical. The
 contribution is a rigorous, reproducible map of how far zero-data discovery reaches, an experimentally-anchored mechanistic
 core, and an engine that reports what it cannot know.
+
+**Part II — generalization beyond bacteria, and the composite (2026-08).** We then asked the North Star question directly:
+does this extend to *any* disease class? We find it does — **but not uniformly, and the correct signal differs by biology**,
+a result we formalize as a **transfer-condition law**: each label-free signal transfers from one genome to another exactly as
+far as the biological invariant it rides on is conserved. **(a) Viruses:** cross-family *sequence* homology to drugged proteins
+is below detection (0/30 SARS-CoV-2 proteins), but blind *structural* homology recovers the correct drugged-enzyme class for the
+approved targets where sequence gives nothing — hardened across **five viruses** (SARS-CoV-2, HIV, influenza, HCV, HSV; 7/9
+drug targets recover correct class). **(b) A eukaryote/fungus:** FBA-essentiality transfers across the prokaryote/eukaryote
+divide (*S. cerevisiae* OR 4.65; the fungal pathogen *Candida albicans* OR 13.9). **(c) Host-dependent parasites:** the story is
+GEM- and base-rate-specific, *not* a clean "host-embedded fails" rule — a first attempt (*Plasmodium*, OR 2.5) failed and two
+patch attempts (expression-context and host-medium curation) were controlled negatives, but a second parasite (*Toxoplasma*,
+OR 14.1) passes, and a controlled six-model swap shows the odds-ratio gate sits at *Plasmodium's* statistical noise floor. **(d)
+Human cancer:** where metabolic essentiality is not the right signal, a **functional-dependency** signal (CRISPR fitness)
+recovers known targets, generalizes to held-out cell lines, and — the honest reframe of a *tested-and-negative* patient
+drug-response line — is enriched for patient-tumour driver genes even after study-bias correction (target-relevance, not
+response prediction). Two central **negatives** anchor the honesty: (i) that same dependency signal does **not** transfer
+label-free to a zero-screen novel organism (only the conserved core does, which conservation already covers), and (ii) patient
+drug-response prediction fails external replication. Finally, these validated per-class signals compose into an explicit
+**biology-class-aware router** that fires only the signal(s) whose transfer condition is met — at calibrated or capped
+confidence — and **abstains** where none is validated, demonstrated end-to-end across all six input classes. "Any disease" is
+thus delivered as **honest decision coverage — a real answer where a signal transfers, an explicit abstention where none does —
+not a universal model.**
 
 **Keywords:** zero-data drug discovery, antibacterial target identification, flux balance analysis, gene essentiality,
 metabolic modeling, WHO priority pathogens, honest machine learning, applicability domain, resistance robustness, pre-registered prospective validation.
@@ -201,6 +223,18 @@ front-half selectivity (FRONT1 danger of conservation-ranking → E2E2 safety/re
 Molecule half: weak-but-real docking for binder-vs-nonbinder (C1), analog-bound ligand hit-finding (HIT1), no physics
 signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-improving loop (SIL1–2).
 
+**Part II — generalization frontier + composite:** virus sequence-homology fails (GENERALIZE1) but structural homology
+recovers viral drug-target class, blind (GENERALIZE2/3) and hardened to n=5 viruses (HARDENV1); structural *repurposing*
+coverage-gain is a promiscuity artifact caught by a null (STRUCTREPURPOSE1, negative). FBA-essentiality generalizes to a
+eukaryote (GENERALIZE4) and a fungal pathogen (HARDENF1). Host-dependent parasite: *Plasmodium* fails (GENERALIZE5) and two
+rescues are controlled negatives (HOSTCTX1 expression, HOSTCTX2 medium), but *Toxoplasma* passes (HARDENP1) — falsifying the
+"host-embedded fails" rule; a GEM-swap (PARARESOLVE1) and a third-technology screen (PARARESOLVE2) localize the cause to GEM
+topology × base-rate noise floor, and falsify a salvage-mechanism sub-claim. Human cancer: functional-dependency target-ID is
+validated with held-out generalization (DEPEND1) and patient-tumour-driver relevance surviving study-bias (F3CLIN1); but it does
+NOT transfer label-free to a zero-screen organism (TRANSFER1, negative) and patient drug-response prediction is
+tested-and-negative (B20/B10/B17, downgraded). The validated signals compose into an explicit abstaining router
+(COMPOSITE1→2→3) demonstrated end-to-end across all six disease classes (CAPSTONE1).
+
 ## What is genuinely contributed
 - **The one thing that breaks the ceiling — and it is EXPERIMENTALLY VALIDATED.** FBA gene-essentiality, computed from a
   pathogen's own metabolic model (mechanism, not homology), is the single signal that adds target-ID information *beyond* the
@@ -216,6 +250,15 @@ signal for within-series potency (HIT2). Composition (E2E1) and a guarded self-i
 - **A well-controlled negative-boundary on zero-data target-ID:** conservation is the ceiling; more homology (sequence,
   structural, or learned) mostly re-encodes it — a result the field's positive-publication bias rarely produces,
   established against degree/conservation nulls with calibrated abstention.
+- **A transfer-condition law + a disease-class-aware composite (Part II).** The central conceptual contribution: each
+  label-free target-ID signal transfers to a novel genome only as far as the biological invariant it rides on is conserved
+  (metabolic self-containment for FBA, sequence identity for homology, fold conservation for structure, core-genome membership
+  for conservation, an existing screen for functional dependency). This makes "any disease" a *composition of validated models
+  routed by biology*, not a universal model — and it is realized as an explicit router that fires validated signals per class
+  and **abstains** where none is validated (bacteria/eukaryote/fungus/virus/human-cancer covered; novel zero-screen parasite
+  abstained), demonstrated end-to-end. Generalization is shown to be real but non-uniform, with two load-bearing negatives
+  (label-free dependency does not transfer to a zero-screen organism; patient drug-response prediction fails external
+  replication) and one self-correction (the "host-embedded FBA fails" rule, retracted when *Toxoplasma* passed).
 - **A therapeutic-validity finding the field's target-list papers miss:** ranking targets by conservation is *dangerous*
   (the most-conserved proteins are the host-toxic ones), the sequence-level safety fix over-excludes 35–52% of real
   targets, and neither sequence nor apo structure can reason about true selectivity from zero data (FRONT1→E2E2→FRONT2) —
@@ -306,6 +349,113 @@ substrate is built so each new experimental result enters as high-tier evidence 
 computational arc is complete as far as open data on CPU can honestly carry it; the essentiality signal is now experimentally
 anchored, and the remaining distance to a drug is experimental.
 
+## Part II — From one pathogen class to a disease-class-aware composite (the generalization frontier)
+
+Part I established a validated, experimentally-anchored target-ID capability for **bacteria**. The governing question of the
+programme, however, is broader: *can a computational system, from minimal prior knowledge, discover credible intervention
+targets for **any** disease — including unseen or emerging ones?* Part II confronts that directly, with the same rigor
+protocol (pre-registration, reproduce-×2, controlled nulls, negatives first-class). The answer is a qualified, honest **yes**,
+and its shape is the central conceptual contribution.
+
+### The transfer-condition law
+Naively, "any disease" invites a single universal model. Our evidence shows that would be *dishonest*: **the signal that carries
+target-discovery information is different for different biology.** We formalize this as a **transfer-condition law** — each
+label-free signal transfers from a studied genome A to a novel genome B *exactly as far as the biological invariant it rides on
+is conserved*:
+
+| Signal | Transfers when… | Validated reach | Breaks when… |
+|---|---|---|---|
+| FBA gene-essentiality | B's genome-scale metabolic model encodes genuine biosynthetic dependence | bacteria (OR 4–45), yeast (4.6), *Candida* (13.9), *Toxoplasma* (14.1) | the specific GEM is salvage-permissive / near the base-rate noise floor (*Plasmodium*) |
+| Sequence homology (to drug targets) | detectable sequence identity to a known target | within-family | cross-family (viruses: 0 hits) |
+| Structural homology (Foldseek) | the enzyme *fold* is conserved and a structure exists | viruses (5/5), remote homologs | no structure available; fold promiscuity (guarded by a null) |
+| Conservation breadth | membership in the conserved core genome | recall extension for non-metabolic essentials | lineage-specific genes |
+| Functional dependency (CRISPR) | a context-specific dependency screen exists for the organism/domain | human cancer | novel organism with no screen (does not transfer label-free) |
+
+A system that respects this law applies each signal only inside its validated domain and **abstains** elsewhere — the opposite
+of one model forced onto biology it does not fit.
+
+### Viruses: sequence fails, structure bridges (n=5)
+Given only an emerging virus's proteome and a drug-target reference with **all coronaviral entries removed** (a leakage-controlled
+"nothing drugged yet" scenario), *sequence* homology finds **zero** non-coronaviral drugged homologs for any of the 30 SARS-CoV-2
+mature proteins (relaxed probes confirm only noise) — a clean negative. **Structure** rescues it: in a blind screen against a
+frozen 31-structure, 13-class reference, the two clinically approved targets land on their correct drugged class (Mpro→protease,
+RdRp→polymerase; TM ≈ 0.46–0.47) despite <10% sequence identity. Hardening to **five viruses** (adding HIV, influenza, HCV, HSV,
+each with its own family excluded from the reference), **7 of 9** clinically drugged targets recover the correct enzyme class
+(e.g. HIV protease→pepsin, influenza neuraminidase→bacterial sialidase, HCV NS3→thrombin); HIV RT and HCV NS5B even recover via
+*each other* once their own families are removed. The honest caveats: TM values are moderate (0.41–0.49, below the 0.5 same-fold
+convention), coverage is limited to proteins with an experimental structure, and short all-α proteins can produce fold-promiscuity
+artifacts (disclosed, and excluded from the gated claim). *Structural repurposing does **not**, however, expand the addressable
+target set beyond sequence once a random-structure null is applied — a false "coverage gain" the mandatory null correctly caught.*
+
+### A eukaryote and a fungal pathogen: FBA-essentiality crosses the divide
+FBA-essentiality, validated across bacteria in Part I, **transfers across the prokaryote/eukaryote divide**: on the model
+eukaryote *S. cerevisiae* (vs the Giaever deletion collection) it clears the same OR>3 gate (OR 4.65, p≈1.6×10⁻¹⁰), and on the
+genuine human fungal pathogen *Candida albicans* (vs curated CGD essentiality) it passes with high precision (OR 13.9, p≈0.004,
+precision 0.86) — though narrowly, as the rich default medium rescues most biosynthetic essentials, capping recall.
+
+### Host-dependent parasites: a correction, and a lesson about statistical noise floors
+The most instructive part of the arc is a claim we made and then **retracted on our own evidence**. On the malaria parasite
+*Plasmodium falciparum*, FBA-essentiality **fails** the gate (OR 2.5), and two mechanistic rescue attempts — expression-constrained
+context-specific FBA (E-Flux) and host-medium exchange curation, each a controlled A/B with anti-circularity and precision-collapse
+guards — are **honest negatives** (expression leaves the essential set byte-identical; medium curation lifts recall 0.20→0.30 but
+leaves the odds ratio flat). At n=1 this looked like a clean rule: "metabolic essentiality is the wrong signal for host-embedded
+biology." A second host-dependent parasite **falsified that rule**: *Toxoplasma gondii* (curated GEM vs the Sidik genome-wide CRISPR
+screen) **passes strongly** (OR 14.1, recall 0.51). A controlled six-model swap (same organism, same screen, independent
+reconstructions) then showed the *Plasmodium* result spans OR 0.86–3.07 across GEMs — one independent model passes — while a
+mechanistic salvage-bypass hypothesis we had proposed was **also falsified** (salvageable false-negative fractions are
+indistinguishable between the passing and failing organisms). A third screen technology (a *P. berghei* barcoded-knockout screen)
+flips the pass/fail verdict again while the *failure signature* (recall ≈ 0.2) stays invariant. The disciplined conclusion:
+FBA-essentiality's reach is **GEM- and base-rate-specific, not decided by host-embeddedness as a category**; the OR>3 gate sits at
+*Plasmodium's* statistical noise floor, so "passes/fails" there is not a stable single fact — whereas *Toxoplasma* is robustly
+strong. The clean same-species-CRISPR test that would fully resolve the residual is **data-gated** (no genome-wide *P. falciparum*
+CRISPR essentiality screen exists), and we say so rather than manufacture a substitute.
+
+### Human cancer: a validated dependency signal, and two honest negatives that bound it
+Where metabolic essentiality is not the right signal (host-embedded human cells), a **functional-dependency** signal is. From
+genome-scale CRISPR fitness (DepMap), **selective** dependencies (separated from trivially pan-essential genes) recover known
+actionable cancer targets (recovery@top-10 = 0.80 vs a ~6×10⁻⁴ null; BRAF/KRAS/PIK3CA/MDM2 rank #1 in their contexts),
+**generalize to held-out cell lines** (0.80 on disjoint lines — closing the single-cohort criticism for the target-ID layer), and
+are learnable label-free from expression alone (expr→dependency beats baseline out-of-fold). Two negatives bound the claim
+precisely and are as important as the positive. **First**, this dependency signal does **not** transfer label-free to a *novel
+zero-screen organism*: transferring it by orthology to *Plasmodium* (validated against the held-out screen, with a mandatory
+conservation null) recovers only the broadly-conserved core — which conservation already provides — while the *selective* signal
+is at chance (OR 0.90); so for a genuinely novel host-embedded pathogen with no screen, honest coverage is the conserved core
+only, never selective targets. **Second**, the patient drug-**response**-prediction line is **tested-and-largely-negative**:
+external replication on an independent patient cohort fails, a patient-outcome test is cancer-type-confounded, and a survival test
+is null. We therefore **downgrade** the response-prediction claim and reframe the human deliverable as dependency **target-ID** —
+whose *patient relevance* we then validate honestly: selective cell-line dependencies are enriched for **patient-tumour driver
+genes** (IntOGen; OR 2.55, p≈3×10⁻²⁶) and the enrichment **survives study-bias correction** (publication-matched null and a
+Mantel–Haenszel stratified OR 2.72), with a recurrence dose-response. This is a cell-line→patient *target-relevance* bridge — **not**
+response prediction, and not clinical validation.
+
+### Part II results at a glance
+*(Figures 1–4 cover the Part I bacterial arc; the Part II results below are tabulated here — each traces to a committed,
+reproduced-×2 experiment in `LEDGER.md`; figure generation for Part II is future work, not yet drawn.)*
+
+| Class | Signal | Result (gate: OR>3 & p<0.01 for FBA) | Experiment |
+|---|---|---|---|
+| Virus (SARS-CoV-2) | sequence→drug | **FAIL** (0/30 homologs) — a clean negative | GENERALIZE1 |
+| Virus ×5 (+HIV/Flu/HCV/HSV) | structure (Foldseek) | **PASS** — 7/9 targets recover correct class | GENERALIZE2/3, HARDENV1 |
+| Eukaryote (*S. cerevisiae*) | FBA-essentiality | **PASS** OR 4.65 | GENERALIZE4 |
+| Fungal pathogen (*C. albicans*) | FBA-essentiality | **PASS** OR 13.9 (precise, low recall) | HARDENF1 |
+| Parasite (*P. falciparum*) | FBA-essentiality | **FAIL** OR 2.5 (at noise floor) | GENERALIZE5, HOSTCTX1/2, PARARESOLVE1/2 |
+| Parasite (*T. gondii*) | FBA-essentiality | **PASS** OR 14.1 (corrects the "host-embedded fails" rule) | HARDENP1 |
+| Human cancer | functional dependency | **PASS** — recovery 0.80, held-out 0.80, patient-driver OR 2.55 | DEPEND1, F3CLIN1 |
+| Novel zero-screen organism | dependency (label-free) | **NEGATIVE** — does not transfer (selective OR 0.90) | TRANSFER1 |
+| Patient drug-*response* | transfer/ML | **NEGATIVE** — fails external replication (downgraded) | B20/B10/B17 |
+| All six classes | router composition | **end-to-end** — 5 routed + 1 abstention | COMPOSITE1–3, CAPSTONE1 |
+
+### The composite: an explicit, abstaining router
+These per-class results are not a scatter of findings; they are the **routing table** of one system. We implement a
+**biology-class-aware router** that wraps the validated engine, encodes each signal's transfer condition from the law above, and
+for a given input fires only the signals whose condition is met — at full confidence (bacteria/eukaryote FBA; human-cancer
+dependency; virus structure), at **capped confidence with an explicit uncertainty flag** (host-dependent parasite *with* a curated
+GEM, since a-priori GEM quality is unknowable), or **abstains** entirely (novel zero-screen parasite; input with no validated
+signal). The router's integrity *is* its abstention: it refuses to emit a confident bacterial-style answer for an organism where
+that signal is falsified. Driven end-to-end across six representative inputs spanning every reachable disease class, it produces
+five signal-backed routed shortlists and one correct abstention — every fired signal traceable to a committed, reproduced-×2,
+pre-registered validation. This is the North Star's "any disease" delivered as **honest decision coverage, not a universal model.**
+
 ## Figures
 *All figures are generated directly from the committed experiment metrics by `gen_figures.py` — every value traces to a reproduced-×2 experiment.*
 
@@ -362,9 +512,14 @@ subproteome; identifiers mapped by accession, gene symbol, or locus tag.
 
 ## Data & code availability
 All source code, the append-only results ledger (`LEDGER.md`), per-experiment code and reproduced metrics
-(`experiments/*/`), the engine (`src/intercepta/`), and documentation (`docs/SUBSTRATE.md`) are in the INTERCEPTA
-repository. Input datasets are open and referenced (with checksums) in `data/MANIFEST.md`; per project policy, data files
-themselves are never committed and are regenerable from the cited public sources.
+(`experiments/*/`), the engine and composite router (`src/intercepta/`, incl. `composite_router.py`), and documentation
+(`docs/SUBSTRATE.md`, `VISION_MAP.md`, `FAILURE_AUDIT.md`, `COMPOSITE_ARCHITECTURE.md`) are in the INTERCEPTA repository.
+Part II experiments are committed under `experiments/`: `GENERALIZE1–5` (virus/eukaryote/parasite generalization),
+`HOSTCTX1–2` (host-context negatives), `STRUCTREPURPOSE1` (repurposing null), `DEPEND1` (functional dependency),
+`TRANSFER1` (zero-screen transfer negative), `HARDENV1/HARDENF1/HARDENP1` (n>1 hardening), `F3CLIN1` (patient-driver
+relevance), `PARARESOLVE1–2` (confound isolation), `COMPOSITE1–3` (the router), and `CAPSTONE1` (end-to-end demonstration).
+Input datasets are open and referenced (with checksums) in `data/MANIFEST.md`; per project policy, data files themselves are
+never committed and are regenerable from the cited public sources.
 
 ## Limitations (explicit)
 (1) The **experimental verification is against existing published data**, not experiments we performed, and is **prospective
@@ -377,6 +532,15 @@ but answer quality is disease-class-specific. (5) De-novo (CarveMe, default-medi
 iML1515; some resistance/condition classes are **ortholog-transferred**; FBA synthetic-lethality has modest accuracy; the
 best-intervention score uses **equal (unfitted) weights** and its validation is only partly independent. (6) All target and
 molecule outputs are **computational hypotheses with provenance, not validated targets or drugs; no result is clinical.**
+**Part II limitations.** (7) Each generalization class is a small n (viruses n=5, one fungal pathogen, two parasites, cancer
+cell-lines) — frontier evidence, not population estimates. (8) The viral structural signal is *class-ID* at moderate TM
+(0.41–0.49) on the subset of proteins with an experimental structure, and AlphaFold DB excludes viral structures (a coverage
+gate). (9) The parasite confound is only partly resolved: the clean same-species-CRISPR test is **data-gated** (no genome-wide
+*P. falciparum* CRISPR screen exists), and a *P. berghei*/base-rate residual survives. (10) The human dependency result is
+**cancer cell-line** dependency and **target-relevance** only; patient drug-**response** prediction is tested-and-negative and
+patient/clinical outcome remains gated on prospective data. (11) The functional-dependency signal does **not** transfer
+label-free to a novel zero-screen organism (only the conserved core does). (12) The composite router's class detector is
+minimal and its host-dependent-FBA confidence cap (0.5) is a coarse honesty marker, not a calibrated probability.
 
 ## Conclusion
 For pathogens with zero activity data, the honest reachable frontier is now mapped and, at its core, **experimentally
@@ -387,6 +551,15 @@ abstaining where it lacks signal. The remaining distance to a drug — a validat
 target, selectivity, and clinical efficacy — is gated by **new experimental information, not more computation**. The value of
 this work is a reproducible method, an honest negative map, and an experimentally-anchored core that any future experimental
 result can enter as high-tier evidence.
+
+Part II extends this from bacteria to a general principle. "Any disease" is achievable not as a single universal model but as a
+**composition of validated signals routed by biology** — a transfer-condition law that says which signal is trustworthy for
+which organism, realized as a router that applies what is validated and **abstains** where it is not. We demonstrate honest
+decision coverage across bacteria, a fungal pathogen, five viruses, and human cancer, with the boundaries drawn by first-class
+negatives (dependency does not transfer label-free to a zero-screen organism; patient response prediction fails replication) and
+by a self-correction we made against our own prior claim. The system's defining property is that it **knows, and states, what it
+cannot know** — which is precisely what makes its positive claims trustworthy, and what any downstream experimental or clinical
+programme requires of a computational starting point.
 
 ## References
 1. Baba T, et al. Construction of *Escherichia coli* K-12 in-frame, single-gene knockout mutants: the Keio collection. *Mol Syst Biol* 2006.
@@ -410,3 +583,18 @@ result can enter as high-tier evidence.
 18. Ochoa D, et al. The Open Targets Platform. *Nucleic Acids Res* 2021/2023.
 19. Nelson MR, et al. The support of human genetic evidence for approved drug indications. *Nat Genet* 2015.
 20. Vigouroux A, Bikard D. Mobile-CRISPRi / CRISPR interference for essential-gene knockdown in diverse bacteria (K. pneumoniae, A. baumannii applications, 2020–2023).
+21. Giaever G, et al. Functional profiling of the *Saccharomyces cerevisiae* genome. *Nature* 2002 (systematic deletion collection / DEG2001).
+22. Roemer T, et al. Large-scale essential gene identification in *Candida albicans* and applications to antifungal drug discovery (GRACE). *Mol Microbiol* 2003; Candida Genome Database (CGD).
+23. Zhang M, et al. Uncovering the essential genes of the human malaria parasite *Plasmodium falciparum* by saturation mutagenesis. *Science* 2018 (piggyBac).
+24. Sidik SM, et al. A genome-wide CRISPR screen in *Toxoplasma* identifies essential apicomplexan genes. *Cell* 2016.
+25. Bushell E, et al. Functional profiling of a *Plasmodium* genome reveals an abundance of essential genes. *Cell* 2017 (*P. berghei* PlasmoGEM barseq).
+26. Carey MA, Untaroiu AM, Guler JL, Papin JA, et al. iPfal19 / PARADIGM curated *Plasmodium* and apicomplexan genome-scale models.
+27. Abdel-Haleem AM, et al. Functional interrogation of *Plasmodium* genus metabolism identifies species- and stage-specific differences (iAM-Pf480). *Cell Rep* 2018.
+28. Chiappino-Pepe A, et al. Bioenergetics-based modeling of *Plasmodium falciparum* metabolism reveals its essential genes. *PLoS Comput Biol* 2017.
+29. Mirhakkak MH, Schäuble S, et al. Genome-scale metabolic models of *Candida albicans*. *ISME J* 2021.
+30. Krishnan A, et al. Functional and computational genomics reveal unprecedented flexibility in stage-specific *Toxoplasma* metabolism (iTgo2020). *Cell Host Microbe* 2020.
+31. Tsherniak A, et al. Defining a cancer dependency map (DepMap). *Cell* 2017; Dempster JM, et al. Chronos. *Genome Biol* 2021.
+32. Martínez-Jiménez F, et al. A compendium of mutational cancer driver genes (IntOGen). *Nat Rev Cancer* 2020.
+33. Malani D, et al. Implementing a functional precision medicine tumor board for acute myeloid leukemia (FIMM ex-vivo cohort). *Cancer Discov* 2022.
+34. Xu J, Zhang Y. How significant is a protein structure similarity with TM-score = 0.5? *Bioinformatics* 2010.
+35. Colijn C, et al. Interpreting expression data with metabolic flux models: predicting *Mycobacterium tuberculosis* mycolic acid production (E-Flux). *PLoS Comput Biol* 2009.
