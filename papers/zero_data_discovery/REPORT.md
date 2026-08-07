@@ -160,6 +160,22 @@ generalization, not memorization (an overfit would neither predict on a never-se
 **prospective-blind validation across all three domains of life, 4 pass / 3 fail, with a
 mechanistically-explained transfer boundary** — a stronger and more honest claim than any perfect sweep.
 
+**A meta-analysis across all 19 committed FBA-essentiality-vs-experiment organisms (META1) refines what the boundary *is* — and
+it is not a hard prokaryote/eukaryote wall.** Two findings. **(1) The single robust driver of transfer strength is metabolic-model
+size/quality** (Spearman between log-odds-ratio and GEM gene count ρ=+0.55, p=0.014; curated > de-novo); domain and
+host-dependence are only directional and, at n=19, statistically inseparable (the multivariable model is underpowered — stated
+plainly). The two coverage-failures (a 337-gene *T. brucei* carve; a fastidious sparse model) are exactly what driver #1 predicts.
+**(2) The OR>3 gate is itself base-rate-confounded** — proven *within a single organism*: the identical *P. falciparum* model
+(iPfal19) flips PASS↔FAIL purely on the experimental screen's essential base rate (a lower-base-rate screen gives OR 3.7 PASS, a
+higher one OR 2.5 FAIL). Under a base-rate-fair lens (significance + a precision-lift over base rate; applied only as a secondary
+diagnostic, *no committed verdict is flipped*), the fungal "fail" (*K. phaffii*) is **real signal compressed below an
+odds-ratio bar calibrated on bacteria** (p≈4×10⁻⁵, precision-lift 1.7), while *T. brucei* remains a genuine null. The disciplined
+statement of the transfer law is therefore: **FBA-essentiality transfers as far as (model quality) × (a base-rate-fair effect
+size) permits — reaching all three domains of life where the metabolic reconstruction is adequate — and the apparent
+domain boundary is largely a model-coverage and gate-calibration effect, not an intrinsic prokaryote/eukaryote wall.** (Scope:
+retrospective, small-n, correlational, with heterogeneous truth-sets/GEM-sources as confounds; it explains the observed boundary,
+it is not new wet-lab evidence.)
+
 **The molecule half — the novel-chemotype ceiling of ligand-based hit-finding.**
 Target identification is only half of discovery; the other half is producing candidate molecules for a target with no
 activity data. This half has the same information-ceiling spine, and the field hides it: a 2025 audit of the standard
