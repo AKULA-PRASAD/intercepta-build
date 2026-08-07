@@ -299,3 +299,8 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 - $INTERCEPTA_DATA/pararesolve1/ — independent P. falciparum GEMs (Chiappino-Pepe 2017; Abdel-Haleem 2018
   iAM-Pf480) via PARADIGM redistribution + same-lineage gf_ variants. Reuses Zhang 2018 (generalize5) +
   iTgo2020 (hardenp1) read-only. Open; regenerable; never committed.
+
+## PARARESOLVE2 screen-tech probe Bushell (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/pararesolve2/ — Bushell et al. 2017 (Cell, PMC5509546 open-access) P. berghei PlasmoGEM
+  barseq knockout essentiality (Table S1/mmc1.xlsx, authors' Phenotype label) via Europe PMC. Reuses iPfal19 +
+  iAM-Pf480 (pararesolve1) read-only. Open; regenerable; never committed.
