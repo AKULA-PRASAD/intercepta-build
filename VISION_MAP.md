@@ -139,7 +139,7 @@ cannot be closed by compute alone.
 
 ### Layer 7 — Validation
 **COMPUTED-tier is STRONG; experimental/clinical is GATED.** Computational: cross-validation, **held-out species,
-a genuine prospective-blind SUITE** (BLIND1-7 across all 3 domains of life; ~4-5 pass / 2 fail with a mechanistically-explained transfer boundary; BLIND3-7 git-committed-before-reveal), external experimental datasets (PEC/DEG/DeJesus/CRISPRi) — this is
+a genuine prospective-blind SUITE** (BLIND1-7 across all 3 domains of life; 4 pass / 3 fail (prokaryotes pass, both blind eukaryotes sub-gate) with a mechanistically-explained transfer boundary; BLIND3-7 git-committed-before-reveal), external experimental datasets (PEC/DEG/DeJesus/CRISPRi) — this is
 our strongest layer and it's honest. **Experimental (KO/CRISPRi/assays) and Clinical (cohorts/outcomes): ABSENT
 and un-fundable zero-budget.** This is the true gate on "real therapeutic discovery."
 

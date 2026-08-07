@@ -12,7 +12,7 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
 - **Root cause:** zero budget, no laboratory. Structural, not fixable by code.
 - **Compute-solvable? NO.**
 - **Real solution (honest):** (1) The defensible SUCCESS we can own is *validated computational target
-  PRIORITIZATION*, not "drug discovery" — and we have earned that (prospective-blind SUITE BLIND1-7 [across all 3 domains of life; ~4-5 pass / 2 fail, transfer boundary mapped], 6-organism
+  PRIORITIZATION*, not "drug discovery" — and we have earned that (prospective-blind SUITE BLIND1-7 [across all 3 domains of life; 4 pass / 3 fail (prokaryotes pass, both blind eukaryotes sub-gate), transfer boundary mapped], 6-organism
   panel). (2) The strongest experimental proxy available zero-budget is validation against *published*
   experimental screens (essentiality: PEC/DEG/DeJesus/CRISPRi/Giaever/Zhang) — done, real. (3) True
   therapeutic success requires an experimental partner or a public wet-lab campaign. That is a **strategic
@@ -136,7 +136,7 @@ concrete next experiment) or an honest GATE. Ordered by how much it blocks the f
 ---
 
 ## CSO bottom line — the real path to TRUE success (not a false claim)
-1. **What we can honestly claim as success today:** a rigorously validated, prospective-blind (BLIND1-7 across all 3 domains of life; ~4-5 pass / 2 fail, boundary mapped), reproducible
+1. **What we can honestly claim as success today:** a rigorously validated, prospective-blind (BLIND1-7 across all 3 domains of life; 4 pass / 3 fail (prokaryotes pass, both blind eukaryotes sub-gate), boundary mapped), reproducible
    computational **target-prioritization** engine for bacterial (and, with caveats, eukaryotic) pathogens,
    with a mapped generalization frontier and every boundary stated. Real and rare. This is fundable/publishable
    *as what it is*.

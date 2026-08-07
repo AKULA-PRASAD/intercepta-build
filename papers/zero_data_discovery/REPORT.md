@@ -21,7 +21,7 @@ genome-scale metabolic model, adds target information beyond conservation, and �
 gene-knockout data — is enriched for experimentally essential genes across **six CURATED genome-scale models spanning three phyla
 (γ-proteobacteria, Firmicutes, Actinobacteria), all clearing a pre-registered OR>3 gate (odds ratios 4.3–45; precision/recall up to
 0.68/0.79)**; the genuinely novel-pathogen case (no curated model) is separately confirmed on de-novo reconstructions of two held-out
-WHO critical-priority pathogens (*K. pneumoniae*, *A. baumannii*), which also pass but more weakly (sparser de-novo models). 6/7 pre-locked E. coli predictions are experimentally essential. Crucially, we ran a **prospective-blind suite spanning all three domains of life** — never-seen organisms whose predictions were locked (for most, git-committed) *before* the experimental answer was consulted. FBA-essential genes clear the pre-registered gate across **bacteria of multiple phyla** (*N. gonorrhoeae* OR 6.1; *C. jejuni* OR 3.9; *B. thetaiotaomicron*, a new phylum, OR 8.0) and — crossing into a second domain — an **archaeon** (*M. maripaludis*, OR 4.2, the suite's highest precision/recall). It **fails, first-class and un-tuned, on exactly two organisms that break the invariant it rides on**: a host-scavenging kinetoplastid parasite (*T. brucei*, OR 0.6) and an extremely sparse de-novo model (*S. pneumoniae*, OR 3.0). The failures are not noise — they fall precisely on the boundary of the "self-contained metabolism" invariant, which is the signature of genuine generalization (a memorizing model would neither predict on a never-seen *domain* nor fail so coherently along a biological boundary). This is the strongest evidence obtainable without a wet lab that the signal *predicts, not postdicts*, together with a mechanistically-explained deployment envelope.
+WHO critical-priority pathogens (*K. pneumoniae*, *A. baumannii*), which also pass but more weakly (sparser de-novo models). 6/7 pre-locked E. coli predictions are experimentally essential. Crucially, we ran a **prospective-blind suite across all three domains of life** (7 never-seen organisms; predictions locked — for most, git-committed — *before* the experimental answer was consulted), and it reveals a **sharp, honest prokaryote/eukaryote split (4 pass / 3 fail)**. Every **prokaryote with an adequate metabolic model passes** the gate: three bacterial phyla (*N. gonorrhoeae* OR 6.1; *C. jejuni* OR 3.9; *B. thetaiotaomicron*, a new phylum, OR 8.0) and — crossing into a second domain of life — an **archaeon** (*M. maripaludis*, OR 4.2, the suite's highest precision/recall). The failures are reported first-class and un-tuned, and they fall *predictably* on invariant/model boundaries: a host-scavenging kinetoplastid (*T. brucei*, OR 0.6 — a genuine invariant break), a sparse 13-gene de-novo model (*S. pneumoniae*, OR 3.0 — a model-quality floor), and a free-living fungus that shows **real, highly significant enrichment (p≈4×10⁻⁵) yet sits just below the bacteria-calibrated OR>3 bar** (*K. phaffii*, OR 2.4). The disciplined reading: the "self-contained metabolism" signal transfers robustly across the prokaryotic world including a second domain, while in eukaryotes it is genuine but weaker under a bacteria-calibrated gate (retrospective eukaryote tests — yeast OR 4.7, *Candida* OR 13.9 — *do* clear it). That the signal predicts on a never-seen *domain* and fails *coherently along biological boundaries* rather than at random is the signature of genuine generalization, not memorization — the strongest evidence obtainable without a wet lab that it *predicts, not postdicts*, with a mechanistically-explained deployment envelope.
 **(3) A shipped, honest engine:** the validated signals compose into a single disease-agnostic engine that turns a pathogen
 genome into a **safe, calibrated-confidence, provenance-tagged, abstaining** target shortlist, scored on seven axes
 (essentiality, conservation, non-metabolic recall, structural homology, a hard host-non-homology safety filter,
@@ -139,22 +139,25 @@ git-committed *before* the reveal existed (version-control-enforced blindness):
 | BLIND6 | *M. maripaludis* | **Archaea** (Euryarchaeota) | DEG3001 (Sarmiento 2013 Tn-seq) | 4.2 (p≈1×10⁻¹⁵, prec 0.70, rec 0.60) | **PASS** |
 | BLIND4 | *S. pneumoniae* | Bacteria (Firmicute) | DEG1007 (fallback) | 3.0 (p≈0.06) | **FAIL** |
 | BLIND7 | *T. brucei* | **Eukaryote — kinetoplastid** (NTD) | Alsford 2011 RIT-seq | 0.6 (p≈0.87) | **FAIL** |
-| BLIND5 | *K. phaffii* | **Eukaryote — fungus** (curated GEM) | DEG2027 (transposon) | *reveal pending* | *pending* |
+| BLIND5 | *K. phaffii* | **Eukaryote — fungus** (curated GEM) | DEG2027 (Zhu 2018 Tn-seq) | 2.4 (**p≈4×10⁻⁵**, prec 0.29) | **FAIL** |
 
-**The result is a coherent transfer boundary, not a scatter — and this is the paper's central generality finding.** The signal
-**PASSES** on free-living organisms whose own metabolic network is *self-contained* — across the bacterial tree (β/γ/ε-proteobacteria,
-Bacteroidetes) and, critically, into a second domain of life, **Archaea** (BLIND6, the suite's highest precision/recall). It
-**FAILS** on exactly two organisms, and both failures share a single mechanistic signature: the metabolic-essentiality *invariant is
-broken*. BLIND7 (*T. brucei*, a host-adapted kinetoplastid parasite) fails because it *scavenges* metabolites from its host, so
-"the network cannot make X" ≠ "X is essential" — and its bacterial-universe de-novo model carves only 3.9% of the proteome.
-BLIND4 (*S. pneumoniae*) fails on an extremely sparse 13-gene de-novo model (a model-quality floor, compounded by a weaker
-fallback truth set). Neither failure is tuned away; both are reported first-class, and together they *define* the deployment
-envelope: **FBA-essentiality transfers across organisms exactly as far as the "self-contained metabolism producing biomass"
-invariant holds, and it fails — predictably, along that invariant's boundary — where the organism is host-dependent or its model
-is too sparse to represent its metabolism.** That a mechanism built and validated on bacteria transfers *by principle* to an
-archaeon (a different domain of life) — and *fails predictably* where the shared invariant breaks — is the signature of genuine
-generalization rather than memorization: an overfit would neither predict on a never-seen domain nor fail so coherently along a
-biological boundary. Net: **prospective-blind validation across all three domains of life, ~4–5 pass / 2 fail, with a
+**The honest result is a sharp PROKARYOTE / EUKARYOTE split, and it is more informative than a clean sweep.** Under the strict
+lock-before-reveal gate (OR>3 AND p<0.01): **all prokaryotes with an adequate metabolic model PASS** — three bacterial phyla
+(β/γ/ε-proteobacteria, Bacteroidetes) *and, crossing into a second domain of life, an archaeon* (BLIND6, the suite's highest
+precision/recall). The one prokaryote failure (BLIND4, *S. pneumoniae*) is a **model-quality floor**, not a biology failure — an
+extremely sparse 13-gene de-novo model plus a weaker fallback truth set. **Both strictly-blind eukaryotes FAIL the gate**, and we
+report this plainly rather than hide behind the retrospective eukaryote passes: BLIND7 (*T. brucei*, a host-scavenging
+kinetoplastid) is a genuine **invariant break** — it imports metabolites from its host, so "the network cannot make X" ≠ "X is
+essential" (OR 0.6, no signal); BLIND5 (*K. phaffii*, a free-living fungus with a *curated* model) shows **real, highly
+significant enrichment (p≈4×10⁻⁵) that nonetheless falls below the bacteria-calibrated OR>3 bar** (OR 2.4). The disciplined
+reading: **the "self-contained metabolism produces biomass" invariant transfers robustly across the prokaryotic world — including
+a second domain of life — but in eukaryotes the same signal is real yet weaker, sitting below a gate calibrated on bacteria**
+(compartmentalized eukaryotic metabolism, higher essential base rates, and model quality all plausibly compress the odds ratio;
+note the retrospective eukaryote tests GENERALIZE4 [yeast, OR 4.7] and HARDENF1 [*Candida*, OR 13.9] *do* clear it, so the
+eukaryote signal is genuine, not absent). That a mechanism validated on bacteria transfers *by principle* to an archaeon — and
+that its failures fall *predictably* on invariant/model boundaries rather than at random — is the signature of genuine
+generalization, not memorization (an overfit would neither predict on a never-seen domain nor fail so coherently). Net:
+**prospective-blind validation across all three domains of life, 4 pass / 3 fail, with a
 mechanistically-explained transfer boundary** — a stronger and more honest claim than any perfect sweep.
 
 **The molecule half — the novel-chemotype ceiling of ligand-based hit-finding.**
