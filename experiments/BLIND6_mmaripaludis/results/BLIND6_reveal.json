@@ -1,0 +1,31 @@
+{
+  "contingency_both_fbaonly_exponly_neither": [
+    162,
+    69,
+    110,
+    198
+  ],
+  "fba_essential_base_rate": 0.4286,
+  "fisher_p_greater": 1.318677e-15,
+  "gate": "OR>3 AND p<0.01",
+  "n_exp_essential_in_gem": 272,
+  "n_fba_essential": 231,
+  "n_gem_genes": 539,
+  "odds_ratio": 4.2261,
+  "pident_cutoff": 90.0,
+  "precision": 0.7013,
+  "provenance": {
+    "adjudication": "pre-registered sequence-homology bridge: mmseqs easy-search DEG3001 essential proteins -> UniProt proteome relabeled by MMP locus tag, pident>=90.0",
+    "deg30_aa_gz_sha256": "93b7fe2108265d2dcb059faa47f4dba0cf17af97cf53df56b6975b72e1fd10e6",
+    "deg_annotation_a_csv_sha256": "89f53cb50040c61a600a2f6d41c184a540e5192ec901ee211ed7e7872b7716ab",
+    "domain": "Archaea (third domain of life)",
+    "experimental_source_prereg_primary": "Sarmiento, Mrazek & Whitman 2013 PNAS 110:4726-4731 (PMID 23487778), Dataset S4 (MMP locus tags) -- PAYWALLED/Cloudflare, not CPU-fetchable",
+    "experimental_source_used": "DEG3001 (Database of Essential Genes; SAME Sarmiento 2013 source, strain S2, Tn-seq, 519 essential genes, genome NC_005791)",
+    "gem": "curated iMR539 (Richards et al. 2016, BioModels BIOMD0000001099)",
+    "lock_sha256_verified": "e41877bfb22556c3032c69165c4254c3f0a90d9d05b707b1ac002f1ae7f5d111",
+    "organism": "Methanococcus maripaludis S2 (taxon 267377, Archaea/Euryarchaeota)"
+  },
+  "recall": 0.5956,
+  "reveal_payload_sha256": "e0d521215bfd1cf34b47895d7cc3153df5023ffc51a1fc3c9b749d488879074f",
+  "verdict": "PASS"
+}

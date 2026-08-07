@@ -329,3 +329,7 @@ DECISIONS.md D7/D8). All PUBLIC rows are freely downloadable and are the basis o
 ## BLIND3 B. thetaiotaomicron prospective-blind #3 (PUBLIC/OPEN, never committed)
 - $INTERCEPTA_DATA/blind3/ — B. theta VPI-5482 proteome (UniProt UP000001414) + de-novo CarveMe GEM +
   DEG1023 INSeq essentiality (Goodman 2009). Open; regenerable; never committed.
+
+## BLIND6 M. maripaludis prospective-blind #6 archaeon (PUBLIC/OPEN, never committed)
+- $INTERCEPTA_DATA/blind6/ — iMR539 curated GEM (Richards 2016, BioModels BIOMD0000001099) + M. maripaludis S2
+  proteome (UP000000590) + DEG3001 Tn-seq essentiality (Sarmiento 2013, via DEG). Open; regenerable; never committed.

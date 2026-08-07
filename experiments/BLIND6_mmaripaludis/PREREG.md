@@ -110,5 +110,39 @@ are bounded by the metabolic subproteome (~539 of 1,722 genes).
 - Stage-1 locked BEFORE Stage-2 reveal. Recorded here as the pre-reveal blindness commitment. This module did NOT git commit.
 
 ---
-## REVEAL OUTCOME (Stage 2, to be filled after the lock is committed to git)
-*(empty — Stage 2 not run; no score.py written; no essentiality membership read.)*
+## REVEAL OUTCOME (Stage 2, filled AFTER the lock was committed to git — commit 81ac078, pushed)
+**PASS.** The LOCKED predictions were scored unchanged (lock sha `e41877bf…` re-verified intact before scoring).
+
+**Experimental source actually used (pre-registered fallback):** the pre-registered PRIMARY was PNAS Dataset S4 (direct
+MMP-locus match). That SI file sits behind a **Cloudflare bot-challenge on PNAS and on the PMC/EuropePMC mirrors (flagged
+"not open access")** and is not fetchable CPU-only. I therefore used the **pre-registered fallback, DEG accession
+`DEG3001`** — the Database of Essential Genes entry for the **IDENTICAL source** (same paper, PMID 23487778; same strain
+*M. maripaludis* S2; same Tn-seq screen; **519 essential genes**; genome NC_005791). DEG3001 stores NCBI GI numbers +
+symbols (not MMP tags), so adjudication used the **pre-registered namespace-independent sequence-homology bridge**
+(mmseqs easy-search of DEG3001's 519 essential proteins → our UniProt proteome relabeled by MMP locus tag, **pident ≥ 90**,
+same-species cutoff set once) — the identical method that adjudicated BLIND1/2/3. (Spot-check: DEG30010001 → MMP0003 at
+100% identity, and DEG annotates that gene `korA` = MMP0003 — mapping validated.)
+
+**Result over the 539 GEM (metabolic-subproteome) genes:**
+contingency **both 162 / FBA-only 69 / exp-only 110 / neither 198** →
+**odds ratio 4.23, Fisher p = 1.32e-15, precision 0.701, recall 0.596** → clears the pre-registered gate (OR>3, p<0.01).
+- **Base-rate caveat (reported plainly, no tuning):** both classes are unusually dense in this system — FBA-essential base
+  rate 231/539 = **0.429** and experimental-essential 272/539 = **0.505** within the metabolic subproteome of a minimal
+  hydrogenotrophic methanogen. High base rates **compress the odds ratio**, so BLIND6's OR (4.23) is lower than BLIND3's
+  (8.03) despite a much smaller p-value and far higher precision/recall — the signal is strong, the OR is simply squeezed
+  by the dense base rate. This is stated as an honest interpretive caveat, not a defect.
+- **Suite comparison (identical protocol/gate):** BLIND1 (bacterium) OR 6.13 PASS; BLIND2 OR 3.92 PASS; BLIND3 OR 8.03
+  PASS; BLIND4 OR 2.96 FAIL (honest negative); **BLIND6 (archaeon) OR 4.23 PASS** — with the suite's highest precision
+  (0.70) and recall (0.60), reflecting the curated GEM + exact-strain homology.
+- **Three domains of life reached:** with BLIND1–4 (Bacteria) + BLIND5 (Eukaryote) + **BLIND6 (Archaea)**, the
+  prospective-blind essentiality signal is now confirmed across **all three domains of life.**
+- **Reproduced x2 byte-identical** — Stage-2 scored-payload sha256
+  `e0d521215bfd1cf34b47895d7cc3153df5023ffc51a1fc3c9b749d488879074f`.
+- **Provenance/hashes:** DEG30.aa.gz sha256 `93b7fe2108265d2dcb059faa47f4dba0cf17af97cf53df56b6975b72e1fd10e6`;
+  deg_annotation_a.csv sha256 `89f53cb50040c61a600a2f6d41c184a540e5192ec901ee211ed7e7872b7716ab`;
+  deg_archaea.csv sha256 `3823848cd489beccdd6bb5a8adc283d3f410f53fe93bf1d4ffa543e47512f3e9`. This module did NOT git
+  commit the reveal (orchestrator commits).
+- **Meaning & honest scope:** genuine prospective-blind evidence that FBA-essentiality predicts experimental essentiality
+  on a pre-registered, never-seen ARCHAEON — extending the method to the third domain of life. Essentiality-enrichment
+  only; curated GEM (with the disclosed circularity caveat); in-silico vs a published Tn-seq screen (via DEG mirror of the
+  pre-registered PNAS source); NOT drug-target/clinical (archaea are not human pathogens — this is a generality result).
