@@ -1,3 +1,7 @@
+> **[SUPERSEDED 2026-08-07 for the North Star]** This is the CANCER drug-response era roadmap (Phase C: new-data
+> generation for the patient-prediction line). It remains the honest record of that branch. The current, governing
+> invention plan for the zero-data any-disease North Star is **`docs/INVENTION_ROADMAP.md`**.
+
 # INTERCEPTA — the real path to the breakthrough (Phase C: new-data generation)
 
 The honest premise (earned, not assumed). The in-silico search on **existing public data is now exhausted across
