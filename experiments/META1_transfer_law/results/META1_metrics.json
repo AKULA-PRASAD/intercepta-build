@@ -1,0 +1,886 @@
+{
+ "payload": {
+  "H1_gem_coverage": {
+   "curated_vs_denovo_logOR_mwu": {
+    "U": 61.0,
+    "median0": 1.5731,
+    "median1": 2.3074,
+    "n1": 11,
+    "n2": 8,
+    "p": 0.17737,
+    "rank_biserial": -0.3864
+   },
+   "curated_vs_denovo_pass_mwu": {
+    "U": 56.5,
+    "median0": 1.0,
+    "median1": 1.0,
+    "n1": 11,
+    "n2": 8,
+    "p": 0.16112,
+    "rank_biserial": -0.2841
+   },
+   "spearman_logOR_vs_fba_ess_frac": [
+    0.1246,
+    0.6114,
+    19
+   ],
+   "spearman_logOR_vs_n_fba_essential_adjudicable": [
+    0.3526,
+    0.13866,
+    19
+   ],
+   "spearman_logOR_vs_n_gem_genes": [
+    0.5526,
+    0.01413,
+    19
+   ]
+  },
+  "H2_base_rate": {
+   "pararesolve_within_Pf": {
+    "iPfal19_vs_Bushell_barseq": {
+     "base_rate": 0.463,
+     "fisher_p": 0.0001819,
+     "gate_pass": true,
+     "odds_ratio": 3.667,
+     "precision": 0.721
+    },
+    "iPfal19_vs_Zhang_piggyBac": {
+     "base_rate": 0.644,
+     "fisher_p": 0.002166,
+     "gate_pass": false,
+     "odds_ratio": 2.469,
+     "precision": 0.797
+    },
+    "note": "SAME organism (P. falciparum) + SAME GEM (iPfal19); only the experimental screen (base rate) differs -> gate FLIPS. Within-organism evidence of base-rate confounding."
+   },
+   "spearman_lift_vs_base_rate": [
+    -0.7754,
+    0.0001,
+    19
+   ],
+   "spearman_logOR_vs_base_rate": [
+    -0.3281,
+    0.1703,
+    19
+   ],
+   "spearman_precision_vs_base_rate": [
+    0.6649,
+    0.0019,
+    19
+   ]
+  },
+  "H3_host_dependence": {
+   "host_dep_pass_rate": {
+    "free_n": 16,
+    "free_pass": 14,
+    "host_dep_n": 3,
+    "host_dep_pass": 1
+   },
+   "host_dep_vs_logOR_mwu": {
+    "U": 13.0,
+    "median0": 1.9305,
+    "median1": 0.8791,
+    "n1": 3,
+    "n2": 16,
+    "p": 0.25387,
+    "rank_biserial": 0.4583
+   }
+  },
+  "H4_domain": {
+   "euk_vs_prok_logOR_mwu": {
+    "U": 20.0,
+    "median0": 2.0809,
+    "median1": 1.2081,
+    "n1": 6,
+    "n2": 13,
+    "p": 0.10607,
+    "rank_biserial": 0.4872
+   },
+   "spearman_logOR_vs_domain_euk": [
+    -0.3928,
+    0.09622,
+    19
+   ]
+  },
+  "base_rate_confound": {
+   "committed_fails_reclassified": [
+    {
+     "OR": 2.96,
+     "base_rate": 0.162,
+     "fair_gate_pass": false,
+     "fisher_p": 0.06073,
+     "interpretation": "genuine null (lift<=1.5 or p>=0.01)",
+     "lift": 2.198,
+     "organism": "S. pneumoniae"
+    },
+    {
+     "OR": 2.361,
+     "base_rate": 0.17,
+     "fair_gate_pass": true,
+     "fisher_p": 3.997769e-05,
+     "interpretation": "REAL-signal-under-OR-compression",
+     "lift": 1.725,
+     "organism": "K. phaffii"
+    },
+    {
+     "OR": 0.637,
+     "base_rate": 0.323,
+     "fair_gate_pass": false,
+     "fisher_p": 0.8668308,
+     "interpretation": "genuine null (lift<=1.5 or p>=0.01)",
+     "lift": 0.736,
+     "organism": "T. brucei"
+    },
+    {
+     "OR": 2.469,
+     "base_rate": 0.644,
+     "fair_gate_pass": false,
+     "fisher_p": 0.002166,
+     "interpretation": "genuine null (lift<=1.5 or p>=0.01)",
+     "lift": 1.238,
+     "organism": "P. falciparum"
+    }
+   ],
+   "note": "SECONDARY LENS ONLY. Does NOT flip any committed verdict.",
+   "pararesolve_within_Pf_flip": {
+    "iPfal19_vs_Bushell_barseq": {
+     "base_rate": 0.463,
+     "fisher_p": 0.0001819,
+     "gate_pass": true,
+     "odds_ratio": 3.667,
+     "precision": 0.721
+    },
+    "iPfal19_vs_Zhang_piggyBac": {
+     "base_rate": 0.644,
+     "fisher_p": 0.002166,
+     "gate_pass": false,
+     "odds_ratio": 2.469,
+     "precision": 0.797
+    },
+    "note": "SAME organism (P. falciparum) + SAME GEM (iPfal19); only the experimental screen (base rate) differs -> gate FLIPS. Within-organism evidence of base-rate confounding."
+   },
+   "proposed_fair_gate": "Fisher p<0.01 AND precision-lift(precision/base_rate)>=1.5",
+   "spearman_OR_vs_base_rate": [
+    -0.2719,
+    0.26007,
+    19
+   ],
+   "spearman_logOR_vs_base_rate": [
+    -0.3281,
+    0.1703,
+    19
+   ]
+  },
+  "dataset_primary": [
+   {
+    "GEM_type": "curated",
+    "OR_reported": 44.94,
+    "base_rate": 0.07849604221635884,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 2.44e-68,
+    "host_dependent": false,
+    "lift": 6.044760761447437,
+    "n_fba_essential": 196,
+    "n_gem_genes": 1516,
+    "organism": "E. coli",
+    "precision": 0.4744897959183674,
+    "recall": 0.7815126050420168,
+    "source": "CROSSVAL_curated/results/CROSSVAL_metrics.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 5.92,
+    "base_rate": 0.08787632221318145,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 2.82e-12,
+    "host_dependent": false,
+    "lift": 3.346949891067538,
+    "n_fba_essential": 119,
+    "n_gem_genes": 1229,
+    "organism": "K. pneumoniae",
+    "precision": 0.29411764705882354,
+    "recall": 0.32407407407407407,
+    "source": "CROSSVAL_curated/results/CROSSVAL_metrics.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 4.33,
+    "base_rate": 0.058221872541306056,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 2.83e-08,
+    "host_dependent": false,
+    "lift": 2.635871019534386,
+    "n_fba_essential": 202,
+    "n_gem_genes": 1271,
+    "organism": "Salmonella Tm",
+    "precision": 0.15346534653465346,
+    "recall": 0.4189189189189189,
+    "source": "CROSSVAL_curated/results/CROSSVAL_metrics.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 12.48,
+    "base_rate": 0.0924170616113744,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 2.89e-23,
+    "host_dependent": false,
+    "lift": 3.417004048582996,
+    "n_fba_essential": 171,
+    "n_gem_genes": 844,
+    "organism": "B. subtilis",
+    "precision": 0.3157894736842105,
+    "recall": 0.6923076923076923,
+    "source": "CROSSVAL_curated/results/CROSSVAL_metrics.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 15.91,
+    "base_rate": 0.18244803695150116,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 2.16e-46,
+    "host_dependent": false,
+    "lift": 2.6548655063291138,
+    "n_fba_essential": 256,
+    "n_gem_genes": 866,
+    "organism": "S. aureus",
+    "precision": 0.484375,
+    "recall": 0.7848101265822784,
+    "source": "CROSSVAL_curated/results/CROSSVAL_metrics.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 26.11,
+    "base_rate": 0.23214285714285715,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 3.48e-81,
+    "host_dependent": false,
+    "lift": 2.926600117439812,
+    "n_fba_essential": 262,
+    "n_gem_genes": 1008,
+    "organism": "M. tuberculosis",
+    "precision": 0.6793893129770993,
+    "recall": 0.7606837606837606,
+    "source": "CROSSVAL_curated/results/CROSSVAL_metrics.json"
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "OR_reported": 12.75,
+    "base_rate": 0.02990325417766051,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 2.84e-06,
+    "host_dependent": false,
+    "lift": 7.868512110726644,
+    "n_fba_essential": 1138,
+    "n_gem_genes": 1138,
+    "organism": "A. baumannii",
+    "precision": 0.23529411764705882,
+    "recall": 0.23529411764705882,
+    "source": "VALIDATE_essentiality/results/VALIDATE_essentiality_deg.json"
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "OR_reported": 22.66,
+    "base_rate": 0.07082324455205811,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 0.0,
+    "host_dependent": false,
+    "lift": 8.028825205295792,
+    "n_fba_essential": 1653,
+    "n_gem_genes": 1653,
+    "organism": "P. aeruginosa",
+    "precision": 0.5686274509803921,
+    "recall": 0.24786324786324787,
+    "source": "VALIDATE_essentiality/results/VALIDATE_essentiality_deg.json"
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "OR_reported": 6.13,
+    "base_rate": 0.3893376413570275,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 4.237e-06,
+    "host_dependent": false,
+    "lift": 2.006613070539419,
+    "n_fba_essential": null,
+    "n_gem_genes": 619,
+    "organism": "N. gonorrhoeae",
+    "precision": 0.78125,
+    "recall": 0.1037344398340249,
+    "source": "BLIND1_ngonorrhoeae/results/BLIND1_reveal_seqbridge.json"
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "OR_reported": 3.92,
+    "base_rate": 0.09963768115942029,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 0.0006524,
+    "host_dependent": false,
+    "lift": 2.6763636363636363,
+    "n_fba_essential": null,
+    "n_gem_genes": 552,
+    "organism": "C. jejuni",
+    "precision": 0.26666666666666666,
+    "recall": 0.21818181818181817,
+    "source": "BLIND2_cjejuni/results/BLIND2_reveal.json"
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "OR_reported": 8.03,
+    "base_rate": 0.1144578313253012,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fisher_p": 3.827e-06,
+    "host_dependent": false,
+    "lift": 4.193684210526316,
+    "n_fba_essential": null,
+    "n_gem_genes": 830,
+    "organism": "B. thetaiotaomicron",
+    "precision": 0.48,
+    "recall": 0.12631578947368421,
+    "source": "BLIND3_bacteroides/results/BLIND3_reveal.json"
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "OR_reported": 2.96,
+    "base_rate": 0.16246056782334384,
+    "committed_pass": false,
+    "domain": "bacteria",
+    "fisher_p": 0.06073,
+    "host_dependent": false,
+    "lift": 2.198335644937587,
+    "n_fba_essential": null,
+    "n_gem_genes": 634,
+    "organism": "S. pneumoniae",
+    "precision": 0.35714285714285715,
+    "recall": 0.04854368932038835,
+    "source": "BLIND4_spneumoniae/results/BLIND4_reveal.json"
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "OR_reported": 2.360834,
+    "base_rate": 0.1695906432748538,
+    "committed_pass": false,
+    "domain": "eukaryote",
+    "fisher_p": 3.997769e-05,
+    "host_dependent": false,
+    "lift": 1.7248416608022519,
+    "n_fba_essential": 147,
+    "n_gem_genes": 1026,
+    "organism": "K. phaffii",
+    "precision": 0.2925170068027211,
+    "recall": 0.2471264367816092,
+    "source": "BLIND5_kphaffii/results/BLIND5_reveal.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 4.2261,
+    "base_rate": 0.5046382189239332,
+    "committed_pass": true,
+    "domain": "archaea",
+    "fisher_p": 1.318677e-15,
+    "host_dependent": false,
+    "lift": 1.3897058823529411,
+    "n_fba_essential": 231,
+    "n_gem_genes": 539,
+    "organism": "M. maripaludis",
+    "precision": 0.7012987012987013,
+    "recall": 0.5955882352941176,
+    "source": "BLIND6_mmaripaludis/results/BLIND6_reveal.json"
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "OR_reported": 0.637019,
+    "base_rate": 0.32344213649851633,
+    "committed_pass": false,
+    "domain": "eukaryote",
+    "fisher_p": 0.8668308,
+    "host_dependent": true,
+    "lift": 0.7361293141109654,
+    "n_fba_essential": 21,
+    "n_gem_genes": 337,
+    "organism": "T. brucei",
+    "precision": 0.23809523809523808,
+    "recall": 0.045871559633027525,
+    "source": "BLIND7_tbrucei/results/BLIND7_reveal.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 4.65,
+    "base_rate": 0.14033149171270717,
+    "committed_pass": true,
+    "domain": "eukaryote",
+    "fisher_p": 1.64e-10,
+    "host_dependent": false,
+    "lift": 2.59126700071582,
+    "n_fba_essential": 110,
+    "n_gem_genes": 905,
+    "organism": "S. cerevisiae",
+    "precision": 0.36363636363636365,
+    "recall": 0.31496062992125984,
+    "source": "GENERALIZE4_fungal_fba/results/GENERALIZE4_metrics.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 13.93,
+    "base_rate": 0.30609597924773024,
+    "committed_pass": true,
+    "domain": "eukaryote",
+    "fisher_p": 0.00409,
+    "host_dependent": false,
+    "lift": 2.800242130750605,
+    "n_fba_essential": 7,
+    "n_gem_genes": 771,
+    "organism": "C. albicans",
+    "precision": 0.8571428571428571,
+    "recall": 0.025423728813559324,
+    "source": "HARDENF1_fungal_multi/results/HARDENF1_metrics.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 2.469,
+    "base_rate": 0.6438679245283019,
+    "committed_pass": false,
+    "domain": "eukaryote",
+    "fisher_p": 0.002166,
+    "host_dependent": true,
+    "lift": 1.2379890640760205,
+    "n_fba_essential": 80,
+    "n_gem_genes": 475,
+    "organism": "P. falciparum",
+    "precision": 0.7971014492753623,
+    "recall": 0.20146520146520147,
+    "source": "GENERALIZE5_parasite_fba/results/GENERALIZE5_metrics.json"
+   },
+   {
+    "GEM_type": "curated",
+    "OR_reported": 14.097,
+    "base_rate": 0.42,
+    "committed_pass": true,
+    "domain": "eukaryote",
+    "fisher_p": 7.672e-33,
+    "host_dependent": true,
+    "lift": 2.0068027210884356,
+    "n_fba_essential": 141,
+    "n_gem_genes": 556,
+    "organism": "T. gondii",
+    "precision": 0.8428571428571429,
+    "recall": 0.5108225108225108,
+    "source": "HARDENP1_parasite_multi/results/HARDENP1_metrics.json"
+   }
+  ],
+  "domain_counts": {
+   "archaea": 1,
+   "bacteria": 12,
+   "eukaryote": 6
+  },
+  "logistic_pass": {
+   "coefs": {
+    "base_rate": 0.34,
+    "const": -0.1296,
+    "domain_euk": -1.5352,
+    "host_dep": -1.7291,
+    "log_n_fba": 0.6134
+   },
+   "pseudo_r2": 0.2966,
+   "status": "converged",
+   "warning": "n=19, 5 fails, collinear predictors -> treat as DIRECTIONAL ONLY"
+  },
+  "multivariable_OLS_logOR": {
+   "VIF": {
+    "base_rate": 1.729,
+    "domain_euk": 1.776,
+    "host_dep": 2.235,
+    "log_n_fba": 1.047
+   },
+   "adj_r2": 0.0854,
+   "coefs": {
+    "base_rate": {
+     "beta": -0.7164,
+     "ci95": [
+      -4.4279,
+      2.995
+     ],
+     "p": 0.68513
+    },
+    "const": {
+     "beta": 1.32,
+     "ci95": [
+      -0.838,
+      3.4779
+     ],
+     "p": 0.21066
+    },
+    "domain_euk": {
+     "beta": -0.5025,
+     "ci95": [
+      -1.8475,
+      0.8426
+     ],
+     "p": 0.43639
+    },
+    "host_dep": {
+     "beta": -0.3915,
+     "ci95": [
+      -2.315,
+      1.5319
+     ],
+     "p": 0.66905
+    },
+    "log_n_fba": {
+     "beta": 0.2317,
+     "ci95": [
+      -0.2234,
+      0.6868
+     ],
+     "p": 0.2933
+    }
+   },
+   "n": 19,
+   "n_predictors": 4,
+   "r2": 0.2887
+  },
+  "n_fail_committed": 4,
+  "n_organisms_assembled": 19,
+  "n_pass_committed": 15,
+  "per_organism_table": [
+   {
+    "GEM_type": "curated",
+    "LR_plus": 10.6,
+    "OR": 44.94,
+    "base_rate": 0.078,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 2.44e-68,
+    "host_dep": false,
+    "lift": 6.045,
+    "organism": "E. coli",
+    "precision": 0.474,
+    "recall": 0.782
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 4.325,
+    "OR": 5.92,
+    "base_rate": 0.088,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 2.82e-12,
+    "host_dep": false,
+    "lift": 3.347,
+    "organism": "K. pneumoniae",
+    "precision": 0.294,
+    "recall": 0.324
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 2.932,
+    "OR": 4.33,
+    "base_rate": 0.058,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 2.83e-08,
+    "host_dep": false,
+    "lift": 2.636,
+    "organism": "Salmonella Tm",
+    "precision": 0.153,
+    "recall": 0.419
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 4.533,
+    "OR": 12.48,
+    "base_rate": 0.092,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 2.89e-23,
+    "host_dep": false,
+    "lift": 3.417,
+    "organism": "B. subtilis",
+    "precision": 0.316,
+    "recall": 0.692
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 4.209,
+    "OR": 15.91,
+    "base_rate": 0.182,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 2.16e-46,
+    "host_dep": false,
+    "lift": 2.655,
+    "organism": "S. aureus",
+    "precision": 0.484,
+    "recall": 0.785
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 7.009,
+    "OR": 26.11,
+    "base_rate": 0.232,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 3.48e-81,
+    "host_dep": false,
+    "lift": 2.927,
+    "organism": "M. tuberculosis",
+    "precision": 0.679,
+    "recall": 0.761
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "LR_plus": 9.982,
+    "OR": 12.75,
+    "base_rate": 0.03,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 2.84e-06,
+    "host_dep": false,
+    "lift": 7.869,
+    "organism": "A. baumannii",
+    "precision": 0.235,
+    "recall": 0.235
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "LR_plus": 17.294,
+    "OR": 22.66,
+    "base_rate": 0.071,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 0.0,
+    "host_dep": false,
+    "lift": 8.029,
+    "organism": "P. aeruginosa",
+    "precision": 0.569,
+    "recall": 0.248
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "LR_plus": 5.602,
+    "OR": 6.13,
+    "base_rate": 0.389,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 4.237e-06,
+    "host_dep": false,
+    "lift": 2.007,
+    "organism": "N. gonorrhoeae",
+    "precision": 0.781,
+    "recall": 0.104
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "LR_plus": 3.286,
+    "OR": 3.92,
+    "base_rate": 0.1,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 0.0006524,
+    "host_dep": false,
+    "lift": 2.676,
+    "organism": "C. jejuni",
+    "precision": 0.267,
+    "recall": 0.218
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "LR_plus": 7.142,
+    "OR": 8.03,
+    "base_rate": 0.114,
+    "committed_pass": true,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 3.827e-06,
+    "host_dep": false,
+    "lift": 4.194,
+    "organism": "B. thetaiotaomicron",
+    "precision": 0.48,
+    "recall": 0.126
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "LR_plus": 2.864,
+    "OR": 2.96,
+    "base_rate": 0.162,
+    "committed_pass": false,
+    "domain": "bacteria",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": false,
+    "fisher_p": 0.06073,
+    "host_dep": false,
+    "lift": 2.198,
+    "organism": "S. pneumoniae",
+    "precision": 0.357,
+    "recall": 0.049
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "LR_plus": 2.025,
+    "OR": 2.361,
+    "base_rate": 0.17,
+    "committed_pass": false,
+    "domain": "eukaryote",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 3.997769e-05,
+    "host_dep": false,
+    "lift": 1.725,
+    "organism": "K. phaffii",
+    "precision": 0.293,
+    "recall": 0.247
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 2.305,
+    "OR": 4.226,
+    "base_rate": 0.505,
+    "committed_pass": true,
+    "domain": "archaea",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": false,
+    "fisher_p": 1.318677e-15,
+    "host_dep": false,
+    "lift": 1.39,
+    "organism": "M. maripaludis",
+    "precision": 0.701,
+    "recall": 0.596
+   },
+   {
+    "GEM_type": "denovo_CarveMe",
+    "LR_plus": 0.654,
+    "OR": 0.637,
+    "base_rate": 0.323,
+    "committed_pass": false,
+    "domain": "eukaryote",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": false,
+    "fisher_p": 0.8668308,
+    "host_dep": true,
+    "lift": 0.736,
+    "organism": "T. brucei",
+    "precision": 0.238,
+    "recall": 0.046
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 3.501,
+    "OR": 4.65,
+    "base_rate": 0.14,
+    "committed_pass": true,
+    "domain": "eukaryote",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 1.64e-10,
+    "host_dep": false,
+    "lift": 2.591,
+    "organism": "S. cerevisiae",
+    "precision": 0.364,
+    "recall": 0.315
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 13.602,
+    "OR": 13.93,
+    "base_rate": 0.306,
+    "committed_pass": true,
+    "domain": "eukaryote",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 0.00409,
+    "host_dep": false,
+    "lift": 2.8,
+    "organism": "C. albicans",
+    "precision": 0.857,
+    "recall": 0.025
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 2.173,
+    "OR": 2.469,
+    "base_rate": 0.644,
+    "committed_pass": false,
+    "domain": "eukaryote",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": false,
+    "fisher_p": 0.002166,
+    "host_dep": true,
+    "lift": 1.238,
+    "organism": "P. falciparum",
+    "precision": 0.797,
+    "recall": 0.201
+   },
+   {
+    "GEM_type": "curated",
+    "LR_plus": 7.407,
+    "OR": 14.097,
+    "base_rate": 0.42,
+    "committed_pass": true,
+    "domain": "eukaryote",
+    "fair_gate_pass(p<0.01 & lift>=1.5)": true,
+    "fisher_p": 7.672e-33,
+    "host_dep": true,
+    "lift": 2.007,
+    "organism": "T. gondii",
+    "precision": 0.843,
+    "recall": 0.511
+   }
+  ],
+  "unparseable": [],
+  "within_organism_alt_GEM_sensitivity": [
+   {
+    "OR_reported": 64.28,
+    "base_rate": 0.06407185628742515,
+    "committed_pass": true,
+    "fisher_p": 3.1e-24,
+    "lift": 12.083207717817304,
+    "note": "PEC truth, MET2 subproteome",
+    "organism": "E. coli (alt: CarveMe/PEC)",
+    "precision": 0.7741935483870968,
+    "recall": 0.22429906542056074,
+    "source": "VALIDATE_essentiality/results/VALIDATE_essentiality.json"
+   },
+   {
+    "OR_reported": 63.12,
+    "base_rate": 0.20082815734989648,
+    "committed_pass": true,
+    "fisher_p": 3.5e-16,
+    "lift": 4.596352101506741,
+    "note": "held-out; CRISPRi/Tn-seq",
+    "organism": "K. pneumoniae (alt: held-out CarveMe)",
+    "precision": 0.9230769230769231,
+    "recall": 0.24742268041237114,
+    "source": "VALIDATE_essentiality/results/VALIDATE_essentiality_kp.json"
+   },
+   {
+    "OR_reported": 7.93,
+    "base_rate": 0.2236976506639428,
+    "committed_pass": true,
+    "fisher_p": 2.2e-07,
+    "lift": 3.033431180691455,
+    "note": "DeJesus Tn-seq; de-novo GEM",
+    "organism": "M. tuberculosis (alt: CarveMe)",
+    "precision": 0.6785714285714286,
+    "recall": 0.0867579908675799,
+    "source": "VALIDATE_essentiality/results/VALIDATE_essentiality_mtb.json"
+   }
+  ]
+ },
+ "payload_sha256": "7514a746de248f39a29e44a75aad22cf01fe6a4bb375d84ef4681eddb4aa63b0",
+ "provenance": {
+  "inputs": "committed experiments/*/results/*.json",
+  "module": "META1_transfer_law"
+ }
+}
