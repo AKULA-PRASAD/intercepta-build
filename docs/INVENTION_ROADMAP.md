@@ -121,3 +121,34 @@ pre-registered validation; a rigorous NEGATIVE is a first-class result, not a fa
 structural module would largely re-derive that negative; deprioritized); binding-site-level true selectivity (FRONT2: resource-gated).
 
 **GATED (not computational — deferred, already staged):** wet-lab validation (CRISPRIDESIGN1 turnkey), clinical.
+
+## DEFINITION OF DONE — "total computational build of the fullest vision" (the finish line)
+*Per the compute-complete-before-external-channels directive, this makes the goal MEASURABLE — we move to publication/collaboration
+when the computational build meets these criteria, not before, and not endlessly. A criterion is met when it is BUILT+validated,
+or its wall is HONESTLY CHARACTERIZED (an open frontier precisely bounded, never silently missing). GATED/OPEN-by-nature items
+(novel-molecule affinity, wet-lab, clinical) are explicitly NOT part of "compute complete" — they require GPU/lab/patients.*
+
+**A. Disease-class coverage (target-ID validated, or honest abstention):**
+- [x] Bacteria (multi-phyla) · [x] Archaea (BLIND6) · [x] Fungi/free eukaryotes (bounded) · [x] Viruses (structural class-ID)
+- [~] Host-dependent parasites (GEM/base-rate-bounded, characterized) · [x] Human somatic cancer (dependency)
+- [x] Human germline monogenic (MENDEL1) · [⧗] Human complex/polygenic (GENETICS1 — in flight)
+- [ ] Helminths (low-priority coverage) · [○] Non-genetic / phenotype-only disease (OPEN — only the lookup sub-piece is honest)
+
+**B. Intervention half (target → therapy):**
+- [x] Repurposing target→existing drug (INTERVENE1/2, honest narrow ceiling) · [x] ADMET + synthesizability (B30/B31)
+- [x] Combinations/synergy, calibrated (B24–29) · [~] Intervention-mode (MENDEL1) + [⧗] modality recommender (MODALITY1 — in flight)
+- [○] Novel-molecule affinity for a novel target — OPEN/GPU-gated (AFFINITY1 characterized + GPU spec) — NOT required for compute-complete
+
+**C. Integration & governance:**
+- [x] Composite router + transfer-condition gating + abstention · [x] Autonomous class detection (ROUTERAUTO1)
+- [ ] End-to-end integration of the EXPANDED arm set on a held-out novel case (CAPSTONE2 — gated on GENETICS1+MODALITY1)
+
+**D. Honest bounds characterized (not faked):**
+- [x] Conservation ceiling (TID1–4) · [x] Non-metabolic mechanism door closed (MET4, NONMET1) · [x] Affinity wall (HIT2/B49/B65/AFFINITY1)
+- [x] Selectivity resource-gated (FRONT2) · [x] Clinical/response tested-negative (B10/B20) · [x] Dependency non-transfer (TRANSFER1)
+
+**COMPUTE-COMPLETE when:** A (all reachable classes covered-or-abstaining; OPEN ones characterized), B (built-or-bounded; affinity
+GPU-specced), C (router autonomous + CAPSTONE2 done), D (every wall characterized). **Remaining to finish line:** GENETICS1 +
+MODALITY1 (in flight) → CAPSTONE2 integration → optional helminth/AMR/GEM-lift coverage → then, and only then, external channels.
+Honest estimate: the finish line is CLOSE (the two in-flight arms + one integration capstone are the critical path); the OPEN/GATED
+items (affinity, phenotype-only, wet-lab, clinical) are correctly OUT of scope for "computational build complete."
