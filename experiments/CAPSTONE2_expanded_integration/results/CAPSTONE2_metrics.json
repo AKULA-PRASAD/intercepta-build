@@ -1,0 +1,305 @@
+{
+  "cases": [
+    {
+      "abstain": false,
+      "abstain_ok": true,
+      "capped": false,
+      "capped_ok": true,
+      "case": "bacterium",
+      "class_ok": true,
+      "detected_class": "bacterium",
+      "expected_abstain": false,
+      "expected_capped": false,
+      "expected_class": "bacterium",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [],
+      "organism": "Klebsiella pneumoniae (held-out)",
+      "recommended_modality_class": "ABSTAIN",
+      "signals_fired": [
+        "conservation_breadth",
+        "fba_essentiality",
+        "structural_homology"
+      ],
+      "verdict_skeleton": {
+        "abstain": false,
+        "biology_class": "bacterium",
+        "capped": false,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": [
+          "conservation_breadth",
+          "fba_essentiality",
+          "structural_homology"
+        ]
+      }
+    },
+    {
+      "abstain": false,
+      "abstain_ok": true,
+      "capped": false,
+      "capped_ok": true,
+      "case": "archaeon",
+      "class_ok": true,
+      "detected_class": "archaeon",
+      "expected_abstain": false,
+      "expected_capped": false,
+      "expected_class": "archaeon",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [],
+      "organism": "Methanococcus maripaludis (BLIND6)",
+      "recommended_modality_class": "ABSTAIN",
+      "signals_fired": [
+        "conservation_breadth",
+        "fba_essentiality"
+      ],
+      "verdict_skeleton": {
+        "abstain": false,
+        "biology_class": "archaeon",
+        "capped": false,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": [
+          "conservation_breadth",
+          "fba_essentiality"
+        ]
+      }
+    },
+    {
+      "abstain": false,
+      "abstain_ok": true,
+      "capped": false,
+      "capped_ok": true,
+      "case": "free_eukaryote",
+      "class_ok": true,
+      "detected_class": "free_eukaryote",
+      "expected_abstain": false,
+      "expected_capped": null,
+      "expected_class": "free_eukaryote",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [],
+      "organism": "Komagataella phaffii (fungus)",
+      "recommended_modality_class": "ABSTAIN",
+      "signals_fired": [
+        "conservation_breadth",
+        "fba_essentiality"
+      ],
+      "verdict_skeleton": {
+        "abstain": false,
+        "biology_class": "free_eukaryote",
+        "capped": false,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": [
+          "conservation_breadth",
+          "fba_essentiality"
+        ]
+      }
+    },
+    {
+      "abstain": false,
+      "abstain_ok": true,
+      "capped": false,
+      "capped_ok": true,
+      "case": "virus",
+      "class_ok": true,
+      "detected_class": "virus",
+      "expected_abstain": false,
+      "expected_capped": null,
+      "expected_class": "virus",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [],
+      "organism": "SARS-CoV-2 (emerging)",
+      "recommended_modality_class": "ABSTAIN",
+      "signals_fired": [
+        "structural_homology"
+      ],
+      "verdict_skeleton": {
+        "abstain": false,
+        "biology_class": "virus",
+        "capped": false,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": [
+          "structural_homology"
+        ]
+      }
+    },
+    {
+      "abstain": false,
+      "abstain_ok": true,
+      "capped": true,
+      "capped_ok": true,
+      "case": "host_dep_parasite_gem",
+      "class_ok": true,
+      "detected_class": "host_dependent_parasite",
+      "expected_abstain": false,
+      "expected_capped": true,
+      "expected_class": "host_dependent_parasite",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [],
+      "organism": "Toxoplasma gondii (curated GEM)",
+      "recommended_modality_class": "ABSTAIN",
+      "signals_fired": [
+        "fba_essentiality"
+      ],
+      "verdict_skeleton": {
+        "abstain": false,
+        "biology_class": "host_dependent_parasite",
+        "capped": true,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": [
+          "fba_essentiality"
+        ]
+      }
+    },
+    {
+      "abstain": false,
+      "abstain_ok": true,
+      "capped": false,
+      "capped_ok": true,
+      "case": "human_cancer",
+      "class_ok": true,
+      "detected_class": "human_cancer",
+      "expected_abstain": false,
+      "expected_capped": null,
+      "expected_class": "human_cancer",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "ASO_siRNA"
+      ],
+      "organism": "melanoma (DepMap dependency)",
+      "recommended_modality_class": "SMALL_MOLECULE_INHIBITOR",
+      "signals_fired": [
+        "functional_dependency"
+      ],
+      "verdict_skeleton": {
+        "abstain": false,
+        "biology_class": "human_cancer",
+        "capped": false,
+        "recommended_modality_class": "SMALL_MOLECULE_INHIBITOR",
+        "signals_fired": [
+          "functional_dependency"
+        ]
+      }
+    },
+    {
+      "abstain": false,
+      "abstain_ok": true,
+      "capped": false,
+      "capped_ok": true,
+      "case": "human_monogenic",
+      "class_ok": true,
+      "detected_class": "human_monogenic",
+      "expected_abstain": false,
+      "expected_capped": null,
+      "expected_class": "human_monogenic",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "organism": "Pompe disease / GAA (germline)",
+      "recommended_modality_class": "ENZYME_PROTEIN_REPLACEMENT",
+      "signals_fired": [
+        "causal_gene"
+      ],
+      "verdict_skeleton": {
+        "abstain": false,
+        "biology_class": "human_monogenic",
+        "capped": false,
+        "recommended_modality_class": "ENZYME_PROTEIN_REPLACEMENT",
+        "signals_fired": [
+          "causal_gene"
+        ]
+      }
+    },
+    {
+      "abstain": false,
+      "abstain_ok": true,
+      "capped": true,
+      "capped_ok": true,
+      "case": "human_complex",
+      "class_ok": true,
+      "detected_class": "human_complex_disease",
+      "expected_abstain": false,
+      "expected_capped": true,
+      "expected_class": "human_complex_disease",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "ASO_siRNA"
+      ],
+      "organism": "type-2 diabetes (GWAS/L2G)",
+      "recommended_modality_class": "SMALL_MOLECULE_INHIBITOR",
+      "signals_fired": [
+        "genetic_association"
+      ],
+      "verdict_skeleton": {
+        "abstain": false,
+        "biology_class": "human_complex_disease",
+        "capped": true,
+        "recommended_modality_class": "SMALL_MOLECULE_INHIBITOR",
+        "signals_fired": [
+          "genetic_association"
+        ]
+      }
+    },
+    {
+      "abstain": true,
+      "abstain_ok": true,
+      "capped": false,
+      "capped_ok": true,
+      "case": "failsafe_dark",
+      "class_ok": true,
+      "detected_class": "unknown",
+      "expected_abstain": true,
+      "expected_capped": null,
+      "expected_class": "unknown",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [],
+      "organism": "dark proteome (DARK1)",
+      "recommended_modality_class": "ABSTAIN",
+      "signals_fired": [],
+      "verdict_skeleton": {
+        "abstain": true,
+        "biology_class": "unknown",
+        "capped": false,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": []
+      }
+    },
+    {
+      "abstain": true,
+      "abstain_ok": true,
+      "capped": false,
+      "capped_ok": true,
+      "case": "failsafe_novel_parasite",
+      "class_ok": true,
+      "detected_class": "host_dependent_parasite",
+      "expected_abstain": true,
+      "expected_capped": null,
+      "expected_class": "host_dependent_parasite",
+      "intervention_failsafe_violation": false,
+      "modality_feasible_set": [],
+      "organism": "novel zero-screen parasite, no GEM (TRANSFER1)",
+      "recommended_modality_class": "ABSTAIN",
+      "signals_fired": [],
+      "verdict_skeleton": {
+        "abstain": true,
+        "biology_class": "host_dependent_parasite",
+        "capped": false,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": []
+      }
+    }
+  ],
+  "experiment": "CAPSTONE2_expanded_integration",
+  "gates": {
+    "G1_routing_correct": true,
+    "G2_failsafe_abstain": true,
+    "G3_intervention_failsafe_zero_infeasible": true,
+    "G5_honesty_capped_flags": true
+  },
+  "intervention_infeasible_count": 0,
+  "n_cases": 10,
+  "overall_PASS": true,
+  "payload_sha256": "d091582373d0e68c27b2f54ca439f056d5c5a2aae6ba3ebb145cf83546721708",
+  "scope": "integration proof: composition of committed reproduced-x2 validated arms; target-PRIORITIZATION + feasibility-triage HYPOTHESES with provenance, NOT drugs/clinical/wet-lab. 'Any disease' = honest DECISION coverage (answer where a signal transfers, abstain where none), NOT a universal model. Human-COMPLEX + host-dep-parasite fire CAPPED (attenuated/GEM-contingent). Novel-target affinity (AFFINITY1 GPU-gated), wet-lab (CRISPRIDESIGN1), clinical remain OUT of scope."
+}

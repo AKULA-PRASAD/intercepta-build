@@ -1,0 +1,109 @@
+{
+  "G1_retrieval_lift": {
+    "MRR_freq_prior": 0.01433,
+    "MRR_ranker": 0.357337,
+    "margin_required": 0.1,
+    "pass": true,
+    "perm_null_p": 9.999000099990002e-05,
+    "recall10_freq_prior": 0.02615,
+    "recall10_margin": 0.502705,
+    "recall10_ranker": 0.528855,
+    "wilcoxon_p": 0.0,
+    "wilcoxon_stat": 9360185.5
+  },
+  "G2_abstention_integrity": {
+    "abstention_rate": 0.514767,
+    "abstention_targets_harder_cases": true,
+    "pass": true,
+    "recall10_abstained_if_scored": 0.330004,
+    "recall10_scored": 0.528855
+  },
+  "G3_mendelian_robustness": {
+    "MRR_freq_prior": 0.011205,
+    "MRR_ranker": 0.265785,
+    "n_scored_mendelian": 3034,
+    "pass": true,
+    "recall10_freq_prior_mend": 0.019776,
+    "recall1_lift": 0.266231,
+    "recall_at_ranker": {
+      "1": 0.186223,
+      "10": 0.431444,
+      "5": 0.351022
+    }
+  },
+  "K_perm": 10000,
+  "cohort": {
+    "abstention_rate": 0.514767,
+    "n_abstained": 4706,
+    "n_scored": 4436,
+    "n_singleton_unrecoverable_scored": 729,
+    "singleton_unrecoverable_rate": 0.164337
+  },
+  "corpus": {
+    "IC_median": 7.675933,
+    "n_candidate_genes": 5524,
+    "n_diseases_profile_and_gene": 9142,
+    "n_diseases_with_profile": 12935,
+    "n_ontology_terms_used": 12729
+  },
+  "freq_prior": {
+    "MRR": 0.01433,
+    "recall_at": {
+      "1": 0.005861,
+      "10": 0.02615,
+      "5": 0.018485
+    }
+  },
+  "g1_pass": true,
+  "g2_pass": true,
+  "g3_pass": true,
+  "gates": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "overall_PASS": true
+  },
+  "hpo_version": "hp/releases/2026-06-23",
+  "input_sha256": {
+    "genes_to_disease.txt": "a247027ae9944e34545e0a91060243ff6c118681c06379b9721af1ee4f39286a",
+    "hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "phenotype.hpoa": "89004f85b253f980ffe84218d2c080665cbf67a57bbb322111d6a2db5eb31dff"
+  },
+  "ks": [
+    1,
+    5,
+    10
+  ],
+  "n_min_terms": 3,
+  "payload_sha256": "c34ddeeed9e8037c4e2ec8c3af61d115c0ab02b8a85f41fe59140b3c25ea7d1d",
+  "provenance": {
+    "data": "Human Phenotype Ontology release 2026-06-23 (phenotype.hpoa, genes_to_disease.txt, hp.obo)",
+    "determinism": "seed=42; deterministic sparse linear algebra; symbol tie-breaks; permutation via numpy default_rng; payload sha over sorted-key JSON excluding verdict/provenance",
+    "experiment": "PHENO1_phenotype_to_gene",
+    "git_sha": "9e6a063e076505d717ab859349f360769223d93f",
+    "method": "IC-weighted cosine over ancestor-propagated HPO term vectors; gene profiles built leave-one-disease-out (test disease's own annotation removed from its causal genes); frequency-prior = LODO pleiotropy degree; random = analytic + permutation null",
+    "numpy": "1.26.4",
+    "python": "3.11.14",
+    "scipy": "1.16.3",
+    "timestamp_utc": "2026-08-08T02:31:33Z"
+  },
+  "random": {
+    "perm_null_MRR_mean": 0.002194,
+    "perm_null_MRR_p95": 0.002751,
+    "recall_at": {
+      "1": 0.000268,
+      "10": 0.00267,
+      "5": 0.001338
+    }
+  },
+  "ranker": {
+    "MRR": 0.357337,
+    "recall_at": {
+      "1": 0.272092,
+      "10": 0.528855,
+      "5": 0.447475
+    }
+  },
+  "seed": 42,
+  "verdict": "PASS \u2014 a validated phenotype-INPUT retrieval front door extending the 'any disease' input modality into the genetic arms. Over 4436 held-out diseases (LODO, leakage-controlled), IC-weighted HPO phenotype overlap recovers the true causal gene in the top-10 at recall@10=0.529 (MRR=0.357) vs a frequency-prior popularity null of recall@10=0.026 (MRR=0.014) \u2014 a +0.503 margin, paired Wilcoxon p=0.0e+00, and above the random-permutation null (p=1.0e-04). The pre-registered abstention rule (51.5% abstained) is well-targeted: abstained profiles would score only recall@10=0.330 vs 0.529 on scored. Holds on the MENDELIAN subset (recall@10=0.431). SCOPE: RETRIEVAL over KNOWN HPO\u2192gene associations (validated lookup+ranking), NOT de-novo mechanism inference for a never-seen phenotype (OPEN, explicitly not attempted). Identifies CANDIDATE genes to hand off to MENDEL1/GENETICS1; does not validate them or produce therapy (affinity wall stands). HONEST BOUND: 729/4436 scored diseases have a causal gene seen in NO other disease (empty LODO profile) \u2192 unrecoverable in principle, counted as misses."
+}
