@@ -1,0 +1,43 @@
+{
+  "a_enrichment": {
+    "contingency_regulator": {
+      "both": 5,
+      "neither": 2244,
+      "nonreg_ess": 174,
+      "reg_noness": 124
+    },
+    "fisher_p": 0.9569059989230494,
+    "odds_ratio": 0.52,
+    "pass": false
+  },
+  "b_delta_auroc": {
+    "auroc_conservation": 0.9078,
+    "auroc_conservation_plus_regulatory": 0.9022,
+    "delta_auroc": -0.0056,
+    "gate": 0.03,
+    "pass": false
+  },
+  "c_studybias_control": {
+    "auroc_own_pmid": 0.9288,
+    "auroc_own_pmid_regulatory": 0.9244,
+    "delta_beyond_pmid": -0.0043,
+    "outdeg_vs_pmid_pearson": 0.077,
+    "survives": false
+  },
+  "experiment": "REGNET1_regulatory_nonmetabolic",
+  "grn": {
+    "n_edges": 3148,
+    "n_nodes": 1202,
+    "sha16": "c1f625e5",
+    "source": "Abasy Atlas 511145_v2005_sRDB04 (RegulonDB-derived, curated)"
+  },
+  "overall_PASS": false,
+  "pool": {
+    "base_rate": 0.0703,
+    "mapped_to_grn": 412,
+    "n_essential": 179,
+    "n_nonmetabolic": 2547
+  },
+  "scope": "E. coli only, NON-METABOLIC subproteome, enrichment-only, in-silico; Abasy 2005 curated GRN (smaller than current RegulonDB -- coverage limit, curation preserved); a POSITIVE could be residual study bias, hence the mandatory publication-count control (c).",
+  "verdict": "FAIL (first-class NEGATIVE) \u2014 curated regulatory-network master-regulator influence does NOT crack the non-metabolic half: enrichment OR 0.52 p 9.6e-01; \u0394AUROC beyond conservation only -0.006 (<0.03); does not survive study-bias control (\u0394AUROC-beyond-pubcount -0.004). THIRD principled closure of the door (after MET4 PPI/study-bias and NONMET1 synteny/conservation-collinear); conservation breadth (AUROC 0.908) remains the unbeaten baseline. Honest bound: no homology-independent mechanistic signal for the non-metabolic essential half has survived three independent principled attempts."
+}
