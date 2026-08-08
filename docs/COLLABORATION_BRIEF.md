@@ -1,100 +1,70 @@
-# INTERCEPTA — collaboration & funding brief
-### A rigor-first program to break the baseline-transcriptomic ceiling in cancer drug-response prediction
+# INTERCEPTA — Collaboration & Compute Brief (current, 2026-08-08)
 
-**One line.** We have built and openly released a fully pre-registered, leakage- and confound-controlled engine
-for transcriptomic drug-response prediction; it delivered an honest, decisive result — *baseline* transcriptomics
-predicts cancer type and proliferation, **not** drug-specific clinical response — and we now seek a
-functional-precision-oncology partner to generate the perturbation-based data that can actually break that
-ceiling, with the analysis layer already validated and ready.
+*A rigor-first, falsify-first computational program. Every claim below is pre-registered, reproduced ×2 byte-identical, and
+first-class-negative-honest (evidence: `LEDGER.md`, `experiments/*`, `github.com/AKULA-PRASAD/intercepta-build`). We do NOT
+overclaim: the program's honest real-world contribution today is a validated, reproducible **target-identification method +
+a decisive negative map + a fail-safe engine** — not a drug, not a clinical tool. This brief names the three partnerships
+that would convert that validated computation into real-world impact, ranked by leverage-per-cost. Supersedes the earlier
+cancer-only version (that ask is retained as Arm 3).*
 
 ---
 
-## 1. The problem, and the gap we proved
-Transcriptomic prediction of drug response is a crowded field dominated by positive reports, but reproducibility
-and honest scope are inconsistent: cross-dataset leakage inflates estimates, parameter-free baselines are rarely
-beaten, and the leap from cell lines to patients is asserted more than demonstrated. Under a fixed protocol
-(pre-registration; permutation nulls; leakage-corrected splits; BH-FDR; **within-cancer confound control**;
-external and cross-system replication; every result reproduced twice), we quantified exactly where the approach
-works and where it fails:
+## Arm 1 — ⭐ the cheapest, highest-leverage ask: one wet-lab CRISPRi test (microbiology partner)
+**One line.** We built a validated, analyst-blind, zero-data antibacterial **target-identification** method; **one ~$300,
+~3-week CRISPRi experiment** on a target we nominate would be its **first real-world confirmation** — and the experiment is
+already fully designed.
 
-- **Cell lines:** a leakage-free cross-dataset map transfers (mean per-drug ρ = +0.212) — but this is a **ceiling**:
-  adding a proliferation axis or 50 driver-mutation features does not beat it.
-- **A second modality doesn't help:** matched mass-spec **proteomics** (CCLE, 291 lines, 271 drugs) does **not**
-  beat or add to RNA (protein ρ=0.33 vs RNA 0.42) — the ceiling is a property of *baseline profiling itself*, not
-  of one assay.
-- **Human clinical (TCGA, 12 drugs, 1,079 patients):** the apparent association with response is **entirely
-  cancer-type confounding** — within-cancer AUROC = 0.504 (p=0.43): a **well-powered null.**
-- **Even an *inferred* functional layer fails to generalize:** inferring CRISPR gene-dependency from expression
-  beat the standard FLT3-ITD biomarker *within* one AML cohort (BeatAML) — proliferation-, mutation-, and
-  lineage-independent — but **did not replicate** in an independent cohort (FIMM/Malani); the known biology
-  replicated, our inferred refinement did not.
+- **What's validated (honest, committed):** flux-balance gene-essentiality identifies real, host-safe, essential antibacterial
+  targets from a genome alone (no drug data), enriched for *experimental* knockout essentiality across **6 curated organisms
+  (odds ratios 4–45)** and — in an **analyst-blind, lock-before-reveal** suite across all three domains of life — **4 of 7
+  never-seen organisms pass** (with the 3 failures reported first-class on mapped boundaries). The method composes into a
+  fail-safe engine that abstains where no signal transfers.
+- **The ask:** run a pre-registered **CRISPRi essentiality knockdown** of one nominated broad-spectrum target (top picks:
+  **dxr/ispC** or **murA** — MEP/cell-wall cores) in *E. coli* K-12, vs a non-targeting control + known-essential (ftsZ) and
+  dispensable (lacZ) controls. **The design is turnkey and ready** — real, specificity-checked sgRNA sequences, controls, and
+  a pre-registered readout are in `experiments/CRISPRIDESIGN1_wetlab_ready/PROTOCOL.md` (est. **$200–400, ~2–3 weeks**,
+  standard bench).
+- **Pre-registered outcome:** targeting guide reduces growth ≥5× vs control (p<0.01, n≥3) → **first prospective wet-lab
+  confirmation** of a computational nomination. If not → the prediction is wrong, reported as a first-class negative and the
+  nominating signal is recalibrated. **The experiment cannot produce an uninformative answer.**
+- **Honest scope:** this validates the *biology/method* (essentiality → a real target), **not** a drug, selectivity, or
+  clinical efficacy. In return: co-authorship, the turnkey protocol, and a rigorous, reproducible analysis layer.
 
-**The decisive insight (now proven from five directions):** what transfers is proliferation and cancer type, not
-drug-specific vulnerability; no *baseline* molecular profile (RNA or protein) closes the gap; and a functional
-layer *inferred from cell lines* does not transfer between patient cohorts. The way forward is therefore not a
-better model or another omic — it is **measuring functional/perturbation response in the patients themselves.**
-This is the result the field needs and rarely publishes, and it defines the study below.
+## Arm 2 — a GPU / compute partner (unlocks the target→drug frontier)
+**One line.** The single biggest *computational* gap — ranking binding affinity for a **novel** target with zero activity
+data — is not solvable on our CPU-only budget, but the definitive test is fully specified and one GPU-run away.
 
-## 2. The way forward — and why it needs new data, not new code
-If baseline expression mostly encodes lineage and growth, then drug-specific signal must come from **functional
-/ perturbation** readouts — how a tumor's cells actually respond when challenged. Our only real drug-specific
-signals (ex-vivo BeatAML, and the within-cohort dependency layer) both came from *functional* data — and the one
-time we tried to *infer* that functional layer from baseline cell-line data, it did not transfer between cohorts.
-The lesson is precise: **functional response must be measured in the patient, not inferred.** We therefore propose
-to generate and analyze a **prospective functional-precision cohort**, with our validated, reproducible engine as
-the ready analysis layer.
+- **What's established (honest negatives):** standard tools fail this on our controlled setups — docking ≈ chance for potency
+  (HIT2), ligand/QSAR analog-bound (HIT1), proteochemometric null (B49), active-learning null (B65). The one credible untried
+  approach — AlphaFold3-class **co-folding** (Boltz-2) — installs and runs on CPU but is **too slow** for a real benchmark
+  (~10 min/complex; a 553-compound head-to-head ≈ 64–138 CPU-hours).
+- **The ask:** modest **GPU time** to run the pre-registered benchmark in `experiments/AFFINITY1_cofolding_zeroshot/GPU_BENCHMARK_SPEC.md`
+  (same target/compounds/metric as our docking baseline; pre-registered pass gate AUROC ≥0.60 AND > docking's 0.4285). A pass
+  would be the first genuine crack in the zero-shot-affinity wall; a fail bounds it rigorously. Either is publishable.
 
-## 3. Proposed study (Track 1)
-- **Design.** ≥300 patients, one or two tumor types (AML first — the assay ecosystem exists; then a solid tumor
-  via patient-derived organoids/PDX). For each: **ex-vivo per-drug response (AUC)** on the patient's own tumor
-  cells across a panel overlapping public cell-line screens; matched **tumor RNA-seq + WES**; and, where feasible,
-  ≥12-month clinical follow-up.
-- **Pre-registered analyses (protocols frozen before data; `prereg/` templates ready).**
-  (a) Replicate the ex-vivo drug-specific transfer at powered n (target: ρ and drug-specificity that clear
-  permutation + within-cancer control — the tests our public data was underpowered for).
-  (b) The novel step: test whether **measured ex-vivo response predicts clinical outcome**, closing the
-  ex-vivo→clinic gap that observational data cannot — with **treatment-timed** analysis (avoiding the immortal-time
-  bias that made retrospective survival tests uninterpretable).
-  (c) A built-in discriminating test: confirm that the **measured** functional readout outperforms the
-  **inferred-from-baseline** layer that failed to transfer between cohorts — turning our sharpest negative into a
-  design principle.
-- **Success / falsification (set in advance).** Success = drug-specific transfer replicates *and* ex-vivo→clinical
-  concordance is significant under confound control. Falsification = if, at n≥300, drug-specificity is again
-  ρ≈0.07 and does not beat proliferation, the transcriptomic-transfer thesis is formally bounded and we pivot to
-  perturbation-screen mechanism discovery (Track 2). **Either outcome is a publishable, field-moving result** —
-  the design cannot produce an uninformative answer.
+## Arm 3 — a functional-precision-oncology partner (the earlier ask, retained)
+**One line.** We proved, across five fronts, that *baseline* transcriptomics (and proteomics) predict cancer type and
+proliferation, **not** drug-specific clinical response (within-cancer AUROC 0.504, p=0.43; external replication failed) — so
+the way forward is **measured functional/perturbation response in patients**, with our validated engine as the ready analysis
+layer.
+- **The ask:** a functional-precision (ex-vivo/organoid/PDX) + molecular-profiling partner (or funding) for a **prospective
+  ≥300-patient functional cohort** (AML first) testing whether *measured* ex-vivo response predicts clinical outcome under
+  pre-registered confound control (`docs/TRACK1_PROTOCOL.md`, `prereg/TRACK1_SAP.md`). Success or falsification are both
+  field-moving. Full design, negatives, and reusable falsification battery are committed and open.
 
-## 4. What is already built and de-risked (open, reproducible)
-- A validated, **pip-installable engine** (`intercepta`) + CLI + a passing unit-test suite; trains on public
-  GDSC/PRISM/DepMap and applies to any query cohort with one loader.
-- The **full falsification battery as reusable code** (permutation, leakage, BH-FDR, within-cancer confound
-  control, cross-system + external-cohort replication) — a new cohort's analysis runs unchanged and reproducibly.
-- A **functional-inference layer** (expression→CRISPR-dependency) already built and tested — including the
-  external-replication protocol that produced our sharpest negative, now reusable to validate the measured
-  functional readouts prospectively.
-- A **transparent evidence ledger** (verified results *and* first-class negatives) and an integrity record; all
-  public at `github.com/AKULA-PRASAD/intercepta-build` (v0.1.0), MIT-licensed, no patient data committed.
-- A **secondary deliverable of independent value:** the pre-registered, leakage/confound-controlled protocols
-  constitute a **reproducible benchmark** the field currently lacks.
+---
 
-## 5. Why this partnership
-The bottleneck is **data, not analysis** — and the analysis layer that most groups still have to build is done,
-validated, and open. A functional-precision or clinical partner contributes the one irreplaceable asset (samples,
-ex-vivo screening capacity, clinical linkage); we contribute a uniquely rigorous, ready, reproducible analytical
-engine and an integrity-first culture that makes any result — positive or null — trustworthy and publishable.
+## What is de-risked and open (all three arms)
+A pip-installable engine (`intercepta`) + CLI + passing test suite; a full pre-registration + reproduce-×2 + null/leakage/
+study-bias control battery as reusable code; an append-only evidence ledger with verified results **and** first-class
+negatives; MIT-licensed, no controlled data committed. The bottleneck in every arm is a **resource we lack (a bench, a GPU,
+a patient cohort)** — the rigorous, reproducible analysis is done.
 
-## 6. What we are asking for
-Either (a) a **collaboration** with a lab/clinic that has functional-precision (ex-vivo/organoid/PDX) capacity and
-tumor-molecular profiling, or (b) **funding** to commission it. In return: co-development of the frozen protocols,
-open analysis, shared authorship, and an honest, high-integrity result.
+## Honest risk statement (binds all arms)
+We make **no** claim of a validated drug, a validated novel target, or a clinical predictor today — we have proven method
+validity (target-ID) and mapped, honestly, where computation stops. Our contribution is rigor + a decisive, pre-registered
+answer, not a promised miracle. That integrity — every positive survived falsification; the headline negatives are reported
+openly — is what makes any genuine advance here believable.
 
-## 7. Honest risk statement
-Our best *inferred* signals are weak or cohort-specific (baseline transfer ρ≈0.07; the functional-inference layer
-did not externally replicate); the prospective cohort — measuring function directly, in patients — is powered to
-determine whether the *measured* functional readout is real-and-usable at the clinical endpoint or intrinsically
-bounded. We make **no** claim of a validated clinical predictor today (we proved the opposite across five fronts),
-and we will not overclaim tomorrow. The value proposition is rigor and a decisive, pre-registered answer — not a
-promised miracle. That integrity — a platform whose every positive survived falsification and whose two headline
-negatives are reported openly — is precisely what makes a genuine breakthrough, if it exists here, believable.
-
-*Contact: Prasad Akula. Full methods, code, pre-registrations, and evidence ledger: github.com/AKULA-PRASAD/intercepta-build (v0.1.0).*
+*Contact: Prasad Akula — akula.pra@northeastern.edu. Code, methods, pre-registrations, evidence ledger, and the turnkey
+wet-lab protocol: github.com/AKULA-PRASAD/intercepta-build.*
