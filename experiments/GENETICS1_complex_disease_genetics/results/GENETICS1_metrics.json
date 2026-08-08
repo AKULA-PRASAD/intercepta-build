@@ -1,0 +1,546 @@
+{
+  "G1_nelson_replication": {
+    "dose_response": [
+      {
+        "OR": 2.2579,
+        "a_sel_drug": 594,
+        "gen_gt": 0.0,
+        "p": 1.2429921578308713e-63,
+        "sel_drug_rate": 0.02365
+      },
+      {
+        "OR": 2.4255,
+        "a_sel_drug": 523,
+        "gen_gt": 0.05,
+        "p": 1.9951511862387017e-65,
+        "sel_drug_rate": 0.02546
+      },
+      {
+        "OR": 2.7262,
+        "a_sel_drug": 459,
+        "gen_gt": 0.1,
+        "p": 1.0106180314922885e-71,
+        "sel_drug_rate": 0.0286
+      },
+      {
+        "OR": 3.0257,
+        "a_sel_drug": 396,
+        "gen_gt": 0.2,
+        "p": 9.297157180912692e-74,
+        "sel_drug_rate": 0.03177
+      },
+      {
+        "OR": 3.2645,
+        "a_sel_drug": 353,
+        "gen_gt": 0.3,
+        "p": 7.61141439022556e-74,
+        "sel_drug_rate": 0.03431
+      },
+      {
+        "OR": 5.1838,
+        "a_sel_drug": 230,
+        "gen_gt": 0.5,
+        "p": 6.324836511910219e-83,
+        "sel_drug_rate": 0.0539
+      }
+    ],
+    "fisher": {
+      "OR": 2.2579,
+      "a_sel_drug": 594,
+      "b_sel_nondrug": 24526,
+      "c_nonsel_drug": 5635,
+      "d_nonsel_nondrug": 525337,
+      "nonsel_drug_rate": 0.010613,
+      "p": 1.2429921578308713e-63,
+      "sel_drug_rate": 0.023646
+    },
+    "mantel_haenszel_by_disease": {
+      "cmh_p": 6.43181595981871e-62,
+      "mh_or": 2.058
+    },
+    "pass": true,
+    "random_null_emp_p": 9.999000099990002e-05,
+    "random_null_mean": 281.43
+  },
+  "G2_popularity_null": {
+    "a_fame_matched_perm": {
+      "emp_p": 9.999000099990002e-05,
+      "matched_null_mean": 376.96,
+      "matched_null_p95": 407.0,
+      "observed_overlap": 594,
+      "pass": true
+    },
+    "attenuation_crude_to_fame_adjusted": {
+      "crude_OR": 2.2579,
+      "fame_adj_MH_OR": 1.672
+    },
+    "b_mantel_haenszel_fame": {
+      "cmh_p": 1.6154397584916982e-31,
+      "dose_response": [
+        {
+          "cmh_p": 1.6154397584916982e-31,
+          "gen_gt": 0.0,
+          "mh_or": 1.672
+        },
+        {
+          "cmh_p": 7.518089450495056e-33,
+          "gen_gt": 0.05,
+          "mh_or": 1.7444
+        },
+        {
+          "cmh_p": 1.805013643666561e-37,
+          "gen_gt": 0.1,
+          "mh_or": 1.8839
+        },
+        {
+          "cmh_p": 6.261910998148122e-40,
+          "gen_gt": 0.2,
+          "mh_or": 2.0142
+        },
+        {
+          "cmh_p": 1.027017122484169e-40,
+          "gen_gt": 0.3,
+          "mh_or": 2.1078
+        },
+        {
+          "cmh_p": 2.5896102684618408e-56,
+          "gen_gt": 0.5,
+          "mh_or": 2.9198
+        }
+      ],
+      "mh_or_gen_gt0": 1.672,
+      "or_exceeds_2_at_gen_gt": 0.2,
+      "pass": true,
+      "retains_enrichment": true
+    },
+    "c_logistic": {
+      "pass": true,
+      "vs_fame": {
+        "confounder_coef": {
+          "logpub_z": 1.113585
+        },
+        "confounder_p": {
+          "logpub_z": 0.0
+        },
+        "gen_coef": 0.089739,
+        "gen_p": 3.2200813454563413e-37
+      },
+      "vs_fame_plus_literature": {
+        "confounder_coef": {
+          "lit_z": 0.167635,
+          "logpub_z": 0.922574
+        },
+        "confounder_p": {
+          "lit_z": 1.3077048131350826e-119,
+          "logpub_z": 0.0
+        },
+        "gen_coef": 0.058332,
+        "gen_p": 5.905943536526741e-16
+      }
+    },
+    "pass": true,
+    "primary_confounder": "gene_publication_count_log1p (NCBI gene2pubmed)",
+    "secondary_literature": {
+      "cmh_p": 8.589242597682524e-10,
+      "mh_or_gen_gt0": 1.3191,
+      "note": "literature is partly a collider on drug-status -> over-controls"
+    }
+  },
+  "G3_generalization": {
+    "lodo": [
+      {
+        "gen_coef": 0.091921,
+        "gen_p": 6.324213550813084e-38,
+        "held": "EFO_0000768"
+      },
+      {
+        "gen_coef": 0.091053,
+        "gen_p": 7.118813335302078e-37,
+        "held": "HP_0000822"
+      },
+      {
+        "gen_coef": 0.089669,
+        "gen_p": 1.467043931809804e-35,
+        "held": "HP_0001513"
+      },
+      {
+        "gen_coef": 0.089393,
+        "gen_p": 4.405195664602458e-36,
+        "held": "MONDO_0002009"
+      },
+      {
+        "gen_coef": 0.091921,
+        "gen_p": 5.007169034917372e-38,
+        "held": "MONDO_0004975"
+      },
+      {
+        "gen_coef": 0.091051,
+        "gen_p": 1.0246570891607742e-36,
+        "held": "MONDO_0004976"
+      },
+      {
+        "gen_coef": 0.086837,
+        "gen_p": 2.3085914592781122e-33,
+        "held": "MONDO_0004979"
+      },
+      {
+        "gen_coef": 0.089277,
+        "gen_p": 1.4514106619188164e-35,
+        "held": "MONDO_0004980"
+      },
+      {
+        "gen_coef": 0.085284,
+        "gen_p": 7.93257284579577e-32,
+        "held": "MONDO_0005002"
+      },
+      {
+        "gen_coef": 0.089096,
+        "gen_p": 2.8515309166239016e-35,
+        "held": "MONDO_0005010"
+      },
+      {
+        "gen_coef": 0.076806,
+        "gen_p": 5.036155259961963e-25,
+        "held": "MONDO_0005027"
+      },
+      {
+        "gen_coef": 0.088008,
+        "gen_p": 4.508523630436148e-34,
+        "held": "MONDO_0005083"
+      },
+      {
+        "gen_coef": 0.086745,
+        "gen_p": 1.0872931284072347e-33,
+        "held": "MONDO_0005090"
+      },
+      {
+        "gen_coef": 0.092683,
+        "gen_p": 1.5827211560752665e-38,
+        "held": "MONDO_0005147"
+      },
+      {
+        "gen_coef": 0.092142,
+        "gen_p": 1.1528202488989784e-39,
+        "held": "MONDO_0005148"
+      },
+      {
+        "gen_coef": 0.092687,
+        "gen_p": 2.132156023065535e-39,
+        "held": "MONDO_0005178"
+      },
+      {
+        "gen_coef": 0.092126,
+        "gen_p": 6.1181928218792e-38,
+        "held": "MONDO_0005180"
+      },
+      {
+        "gen_coef": 0.089695,
+        "gen_p": 1.4949006056223247e-35,
+        "held": "MONDO_0005252"
+      },
+      {
+        "gen_coef": 0.089508,
+        "gen_p": 1.6515121662878318e-35,
+        "held": "MONDO_0005265"
+      },
+      {
+        "gen_coef": 0.089707,
+        "gen_p": 7.830124547505221e-36,
+        "held": "MONDO_0005298"
+      },
+      {
+        "gen_coef": 0.092996,
+        "gen_p": 1.3199302091477812e-38,
+        "held": "MONDO_0005300"
+      },
+      {
+        "gen_coef": 0.091296,
+        "gen_p": 4.233464798103672e-37,
+        "held": "MONDO_0005301"
+      },
+      {
+        "gen_coef": 0.089519,
+        "gen_p": 3.1995690078039153e-36,
+        "held": "MONDO_0005306"
+      },
+      {
+        "gen_coef": 0.090176,
+        "gen_p": 1.941942798774083e-36,
+        "held": "MONDO_0007915"
+      },
+      {
+        "gen_coef": 0.091114,
+        "gen_p": 7.899140756396204e-37,
+        "held": "MONDO_0008383"
+      },
+      {
+        "gen_coef": 0.090514,
+        "gen_p": 1.318311389343164e-36,
+        "held": "MONDO_0011849"
+      },
+      {
+        "gen_coef": 0.090985,
+        "gen_p": 6.073096097529737e-37,
+        "held": "MONDO_0013209"
+      }
+    ],
+    "lodo_folds": 27,
+    "lodo_pass_folds": 27,
+    "n_disease_OR_gt1": 27,
+    "pass": true,
+    "per_disease": [
+      {
+        "OR": 1.6105,
+        "disease": "EFO_0000768",
+        "name": "idiopathic pulmonary fibrosis",
+        "p": 0.3234437453240333,
+        "sel_drug": 4
+      },
+      {
+        "OR": 35.2519,
+        "disease": "HP_0000822",
+        "name": "Hypertension",
+        "p": 0.0025777993868808476,
+        "sel_drug": 2
+      },
+      {
+        "OR": 6.569,
+        "disease": "HP_0001513",
+        "name": "Obesity",
+        "p": 0.0004921788889630716,
+        "sel_drug": 6
+      },
+      {
+        "OR": 1.485,
+        "disease": "MONDO_0002009",
+        "name": "major depressive disorder",
+        "p": 0.12974529109612554,
+        "sel_drug": 17
+      },
+      {
+        "OR": 1.2124,
+        "disease": "MONDO_0004975",
+        "name": "Alzheimer disease",
+        "p": 0.3298197004700778,
+        "sel_drug": 28
+      },
+      {
+        "OR": 1.8608,
+        "disease": "MONDO_0004976",
+        "name": "amyotrophic lateral sclerosis",
+        "p": 0.14934385752389617,
+        "sel_drug": 6
+      },
+      {
+        "OR": 2.2029,
+        "disease": "MONDO_0004979",
+        "name": "asthma",
+        "p": 0.00018692377565865658,
+        "sel_drug": 32
+      },
+      {
+        "OR": 3.9947,
+        "disease": "MONDO_0004980",
+        "name": "atopic eczema",
+        "p": 0.00021422882100054582,
+        "sel_drug": 11
+      },
+      {
+        "OR": 3.6568,
+        "disease": "MONDO_0005002",
+        "name": "chronic obstructive pulmonary disease",
+        "p": 5.922314820979871e-09,
+        "sel_drug": 32
+      },
+      {
+        "OR": 2.0158,
+        "disease": "MONDO_0005010",
+        "name": "coronary artery disorder",
+        "p": 0.0001482276878905754,
+        "sel_drug": 42
+      },
+      {
+        "OR": 6.2389,
+        "disease": "MONDO_0005027",
+        "name": "epilepsy",
+        "p": 8.06233642530832e-17,
+        "sel_drug": 38
+      },
+      {
+        "OR": 3.2759,
+        "disease": "MONDO_0005083",
+        "name": "psoriasis",
+        "p": 8.728738484395155e-07,
+        "sel_drug": 26
+      },
+      {
+        "OR": 2.7806,
+        "disease": "MONDO_0005090",
+        "name": "schizophrenia",
+        "p": 5.730924040452309e-09,
+        "sel_drug": 50
+      },
+      {
+        "OR": 1.7917,
+        "disease": "MONDO_0005147",
+        "name": "type 1 diabetes mellitus",
+        "p": 0.040259880266250575,
+        "sel_drug": 16
+      },
+      {
+        "OR": 1.4619,
+        "disease": "MONDO_0005148",
+        "name": "type 2 diabetes mellitus",
+        "p": 0.006176308127516743,
+        "sel_drug": 71
+      },
+      {
+        "OR": 1.1166,
+        "disease": "MONDO_0005178",
+        "name": "osteoarthritis",
+        "p": 0.6370640892151123,
+        "sel_drug": 22
+      },
+      {
+        "OR": 1.3266,
+        "disease": "MONDO_0005180",
+        "name": "Parkinson disease",
+        "p": 0.43109459995972554,
+        "sel_drug": 9
+      },
+      {
+        "OR": 3.3471,
+        "disease": "MONDO_0005252",
+        "name": "heart failure",
+        "p": 9.140664966179149e-08,
+        "sel_drug": 30
+      },
+      {
+        "OR": 2.0058,
+        "disease": "MONDO_0005265",
+        "name": "inflammatory bowel disease",
+        "p": 7.185293981386691e-05,
+        "sel_drug": 45
+      },
+      {
+        "OR": 19.2001,
+        "disease": "MONDO_0005298",
+        "name": "osteoporosis",
+        "p": 1.3484935875036813e-05,
+        "sel_drug": 5
+      },
+      {
+        "OR": 1.1947,
+        "disease": "MONDO_0005300",
+        "name": "chronic kidney disease",
+        "p": 0.5755708844420445,
+        "sel_drug": 9
+      },
+      {
+        "OR": 1.3451,
+        "disease": "MONDO_0005301",
+        "name": "multiple sclerosis",
+        "p": 0.32294334256446605,
+        "sel_drug": 13
+      },
+      {
+        "OR": 5.2918,
+        "disease": "MONDO_0005306",
+        "name": "ankylosing spondylitis",
+        "p": 0.0003565908603841274,
+        "sel_drug": 8
+      },
+      {
+        "OR": 2.4149,
+        "disease": "MONDO_0007915",
+        "name": "systemic lupus erythematosus",
+        "p": 0.001028848604529388,
+        "sel_drug": 19
+      },
+      {
+        "OR": 1.7822,
+        "disease": "MONDO_0008383",
+        "name": "rheumatoid arthritis",
+        "p": 0.0007809145702435398,
+        "sel_drug": 45
+      },
+      {
+        "OR": 1.6297,
+        "disease": "MONDO_0011849",
+        "name": "psoriatic arthritis",
+        "p": 0.3528127237015029,
+        "sel_drug": 2
+      },
+      {
+        "OR": 2.234,
+        "disease": "MONDO_0013209",
+        "name": "metabolic dysfunction-associated steatotic liver disease",
+        "p": 0.05971852239603209,
+        "sel_drug": 6
+      }
+    ]
+  },
+  "K": 10000,
+  "g1_pass": true,
+  "g2_pass": true,
+  "g3_pass": true,
+  "gates": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "overall_PASS": true
+  },
+  "gen_thresholds": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "input_sha256": {
+    "Homo_sapiens.gene_info.gz": "5b445ebd98d80be05fc49ec5c128fb294c20cc19088ae3d4cbd061901673b66f",
+    "gene_pubcounts.json": "1e5316968b1268e8a21b9d3650644e0e692b31c24b05580c67923d3775a1e3fe",
+    "genetics1_dataset.parquet": "fc292ef88fc6dc55bd66a6f66611cedd96e7b70ab8c5e7d9fc59dd000807af27"
+  },
+  "marginals": {
+    "drug_target_rate": 0.011201,
+    "genetic_support_rate": 0.045172,
+    "n_drug_target": 6229,
+    "n_genetically_supported": 25120
+  },
+  "n_deciles": 10,
+  "n_diseases": 27,
+  "n_pairs": 556092,
+  "ot_data_version": {
+    "apiVersion": {
+      "x": "26",
+      "y": "6",
+      "z": "3"
+    },
+    "dataVersion": {
+      "month": "06",
+      "year": "26"
+    }
+  },
+  "payload_sha256": "9e73d1c82b681cbc8b32766da5abc94a151da214b2fd15332dde2de05e2aba25",
+  "provenance": {
+    "datasets": {
+      "associations": "Open Targets Platform 26.06 GraphQL (frozen parquet)",
+      "publication_counts": "NCBI gene2pubmed + gene_info (frozen)",
+      "universe": "20596 NCBI protein-coding genes"
+    },
+    "determinism": "seed=42; permutation nulls via numpy default_rng; logistic via statsmodels newton; payload sha over sorted-key JSON excluding verdict/provenance",
+    "experiment": "GENETICS1_complex_disease_genetics (v2 genome-wide)",
+    "git_sha": "e266f18bcf2ca5f64e609aab8bc5227478467c92",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "python": "3.11.14",
+    "scipy": "1.16.3",
+    "statsmodels": "0.14.6",
+    "timestamp_utc": "2026-08-08T01:57:00Z"
+  },
+  "seed": 42,
+  "universe_protein_coding": 20596,
+  "verdict": "PASS \u2014 the THIRD human-disease arm (common/complex/polygenic), popularity-CONTROLLED. Genetically-supported genes are enriched for approved/clinical drug targets genome-wide: Fisher OR=2.26 (p=1.2e-63; MH-by-disease OR=2.06), dose-responsive to OR=5.1838 at genetic_association>0.5. The enrichment SURVIVES the study-attention null: controlling for gene publication count, fame-adjusted Mantel-Haenszel OR=1.67 (p=1.6e-31; crosses OR>2 at genetic>0.2), fame-matched permutation p=1.0e-04, logistic genetic coef=0.090 (p=3.2e-37) beyond fame and =0.058 (p=5.9e-16) beyond fame+literature. Generalizes: 27/27 leave-one-disease-out folds, 27/27 per-disease OR>1. HONEST ATTENUATION: popularity explains a substantial share of the crude effect (OR 2.26 -> fame-adjusted 1.67); the popularity-free effect is bounded between these (adjustment partly over-controls a collider), and only strong genetic support clears OR>2 after adjustment. SCOPE: in-silico target-RELEVANCE via genetics (Open Targets 26.06, cross-sectional); NOT drug-response, NOT a molecule, NOT clinical efficacy. Contribution = popularity-controlled complex-disease arm + honest abstention where genetic evidence is absent. Intervention still hits the affinity wall (HIT2/B49/B65). A fully clean causal test of Nelson-2015 needs a temporal/prospective design not runnable on this snapshot."
+}
