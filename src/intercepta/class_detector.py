@@ -90,6 +90,14 @@ class ProteomeFeatures:
     has_dependency_screen: bool = False
     #   does a functional-dependency screen (DepMap-style CRISPR) or a validated same-domain label-free
     #   expr->dep map exist? (COMPOSITE2/DEPEND1 transfer condition for HUMAN_CANCER.)
+    has_gwas_evidence: bool = False
+    #   COMPOSITE4: is there declared GWAS/genetic-association evidence for a common/complex disease
+    #   (Open Targets genetic_association / L2G)? Routes a human proteome to HUMAN_COMPLEX_DISEASE
+    #   (GENETICS1; capped/attenuated genetic_association signal). A DECLARED disease-context descriptor.
+    causal_gene_known: bool = False
+    #   COMPOSITE4: is the causal gene of a germline MONOGENIC disease genetically established (the target
+    #   is GIVEN)? Routes a human proteome to HUMAN_MONOGENIC (MENDEL1; intervention-MODE reasoning). A
+    #   DECLARED disease-context descriptor.
 
 
 @dataclass
@@ -133,20 +141,47 @@ def detect_biology_class(features: Optional[ProteomeFeatures] = None,
                                         "no translation machinery (not self-translating)",
                                         "positive viral hallmark (polyprotein/capsid/conserved drugged fold)"])
 
-    # ---- R2: HUMAN_CANCER — human proteome AND a dependency screen ------------------------------------
+    # ---- R2: HUMAN proteome — branch among the THREE validated human classes by DECLARED descriptor ----
+    # COMPOSITE4: a human proteome can route to HUMAN_CANCER (dependency screen; DEPEND1/COMPOSITE2),
+    # HUMAN_MONOGENIC (causal gene known; MENDEL1) or HUMAN_COMPLEX_DISEASE (GWAS evidence; GENETICS1).
+    # Each is gated by an OBJECTIVE/DECLARED descriptor. INTEGRITY: with >1 descriptor the class is AMBIGUOUS
+    # -> ABSTAIN (never guess among the three); with 0 descriptors -> ABSTAIN (require one).
     if f.is_human_proteome is True:
-        if f.has_dependency_screen is True:
-            return DetectionResult(biology_class=BiologyClass.HUMAN_CANCER.value, source="autodetected",
-                                   rule="R2 human-cancer (human proteome + dependency screen)",
-                                   reasons=["human reference proteome",
-                                            "functional-dependency screen available (DEPEND1/COMPOSITE2 condition)"])
-        # human but NO screen -> functional-dependency is DATA-dependent -> no signal -> abstain (require it)
+        human_flags = [
+            ("has_dependency_screen", f.has_dependency_screen, BiologyClass.HUMAN_CANCER.value,
+             "R2a human-cancer (human proteome + dependency screen; DEPEND1/COMPOSITE2)",
+             "functional-dependency screen available (DEPEND1/COMPOSITE2 condition)"),
+            ("causal_gene_known", f.causal_gene_known, BiologyClass.HUMAN_MONOGENIC.value,
+             "R2c human-monogenic (human proteome + causal gene known; MENDEL1)",
+             "germline monogenic causal gene genetically established -> target GIVEN (MENDEL1)"),
+            ("has_gwas_evidence", f.has_gwas_evidence, BiologyClass.HUMAN_COMPLEX_DISEASE.value,
+             "R2d human-complex (human proteome + GWAS/genetic-association evidence; GENETICS1)",
+             "GWAS/genetic-association evidence declared -> capped/attenuated genetic_association (GENETICS1)"),
+        ]
+        present = [x for x in human_flags if x[1] is True]
+        if len(present) == 1:
+            key, _, cls, rule, why = present[0]
+            return DetectionResult(biology_class=cls, source="autodetected", rule=rule,
+                                   reasons=["human reference proteome", why])
+        if len(present) == 0:
+            # human but NO human descriptor -> every validated human signal is DATA/descriptor-dependent ->
+            # no signal transfers -> abstain (require one). requires_descriptor kept as the historical
+            # "has_dependency_screen" for backward-compat; reasons enumerate all three human routes.
+            return DetectionResult(biology_class=BiologyClass.UNKNOWN.value, source="autodetected",
+                                   rule="R2b human-no-descriptor -> abstain (require a human class descriptor)",
+                                   reasons=["human reference proteome BUT no human-class descriptor",
+                                            "the validated human signals are descriptor/data-dependent -> declare "
+                                            "one of: has_dependency_screen (cancer/DEPEND1), causal_gene_known "
+                                            "(monogenic/MENDEL1), has_gwas_evidence (complex/GENETICS1); without "
+                                            "one, no signal transfers -> abstain rather than guess"],
+                                   requires_descriptor="has_dependency_screen")
+        # >1 descriptor -> AMBIGUOUS among the three human classes -> abstain, never guess
         return DetectionResult(biology_class=BiologyClass.UNKNOWN.value, source="autodetected",
-                               rule="R2b human-no-screen -> abstain (require dependency screen)",
-                               reasons=["human reference proteome BUT no functional-dependency screen",
-                                        "the validated human signal (DEPEND1) is data-dependent; without a "
-                                        "screen no signal transfers -> abstain rather than guess"],
-                               requires_descriptor="has_dependency_screen")
+                               rule="R2e human-AMBIGUOUS (multiple human-class descriptors) -> abstain",
+                               reasons=["human reference proteome with >1 human-class descriptor declared "
+                                        f"({sorted(x[0] for x in present)})",
+                                        "cannot cleanly separate cancer/monogenic/complex -> ABSTAIN rather than "
+                                        "guess among the three (integrity over coverage)"])
 
     # ---- R3: CELLULAR organism (self-translating) — branch by domain of life --------------------------
     if f.has_translation_machinery is True:

@@ -1,0 +1,342 @@
+{
+  "payload": {
+    "drift_fix_skeleton_stable": true,
+    "failsafe_abstentions": {
+      "dark_abstains_no_misfire": true,
+      "dark_skeleton": {
+        "abstain": true,
+        "biology_class": "unknown",
+        "capped": false,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": []
+      },
+      "novel_parasite_abstains": true,
+      "novel_parasite_skeleton": {
+        "abstain": true,
+        "biology_class": "host_dependent_parasite",
+        "capped": false,
+        "recommended_modality_class": "ABSTAIN",
+        "signals_fired": []
+      }
+    },
+    "intervention_stage": {
+      "abstains_when_features_absent": true,
+      "fail_safe_holds": true,
+      "n_cases": 11,
+      "n_infeasible_recs": 0,
+      "recs": [
+        {
+          "feasible_set": [
+            "SMALL_MOLECULE_INHIBITOR",
+            "ASO_siRNA"
+          ],
+          "features": [
+            "GoF",
+            "intracellular",
+            "kinase",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "SMALL_MOLECULE_INHIBITOR"
+        },
+        {
+          "feasible_set": [
+            "SMALL_MOLECULE_INHIBITOR",
+            "MONOCLONAL_ANTIBODY",
+            "ASO_siRNA"
+          ],
+          "features": [
+            "GoF",
+            "membrane",
+            "kinase",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "SMALL_MOLECULE_INHIBITOR"
+        },
+        {
+          "feasible_set": [
+            "SMALL_MOLECULE_INHIBITOR",
+            "MONOCLONAL_ANTIBODY",
+            "ASO_siRNA"
+          ],
+          "features": [
+            "overactivity",
+            "secreted",
+            "enzyme",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "MONOCLONAL_ANTIBODY"
+        },
+        {
+          "feasible_set": [
+            "ASO_siRNA"
+          ],
+          "features": [
+            "dominant_negative",
+            "intracellular",
+            "transcription_factor",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "ASO_siRNA"
+        },
+        {
+          "feasible_set": [
+            "SMALL_MOLECULE_ACTIVATOR",
+            "MONOCLONAL_ANTIBODY",
+            "ASO_siRNA"
+          ],
+          "features": [
+            "toxic_aggregation",
+            "secreted",
+            "globin",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "SMALL_MOLECULE_ACTIVATOR"
+        },
+        {
+          "feasible_set": [
+            "SMALL_MOLECULE_ACTIVATOR",
+            "GENE_THERAPY"
+          ],
+          "features": [
+            "LoF_misfold",
+            "lysosomal",
+            "enzyme",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "SMALL_MOLECULE_ACTIVATOR"
+        },
+        {
+          "feasible_set": [
+            "MONOCLONAL_ANTIBODY",
+            "ENZYME_PROTEIN_REPLACEMENT",
+            "GENE_THERAPY"
+          ],
+          "features": [
+            "LoF_null",
+            "secreted",
+            "enzyme",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "ENZYME_PROTEIN_REPLACEMENT"
+        },
+        {
+          "feasible_set": [
+            "GENE_THERAPY"
+          ],
+          "features": [
+            "LoF_null",
+            "lysosomal",
+            "enzyme",
+            true,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "ABSTAIN"
+        },
+        {
+          "feasible_set": [
+            "GENE_THERAPY"
+          ],
+          "features": [
+            "LoF_null",
+            "intracellular",
+            "enzyme",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "GENE_THERAPY"
+        },
+        {
+          "feasible_set": [
+            "MONOCLONAL_ANTIBODY",
+            "GENE_THERAPY"
+          ],
+          "features": [
+            "LoF",
+            "membrane",
+            "transporter",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "GENE_THERAPY"
+        },
+        {
+          "feasible_set": [
+            "MONOCLONAL_ANTIBODY",
+            "ASO_siRNA"
+          ],
+          "features": [
+            "GoF",
+            "unknown_loc",
+            "unclassified",
+            false,
+            false
+          ],
+          "is_feasible": true,
+          "recommended": "ABSTAIN"
+        }
+      ]
+    },
+    "new_classes": {
+      "complex_with_gwas": {
+        "confidence_cap": 0.5,
+        "skeleton": {
+          "abstain": false,
+          "biology_class": "human_complex_disease",
+          "capped": true,
+          "recommended_modality_class": "ABSTAIN",
+          "signals_fired": [
+            "genetic_association"
+          ]
+        },
+        "uncertain": true
+      },
+      "complex_without_gwas": {
+        "skeleton": {
+          "abstain": true,
+          "biology_class": "human_complex_disease",
+          "capped": false,
+          "recommended_modality_class": "ABSTAIN",
+          "signals_fired": []
+        }
+      },
+      "monogenic_with_causal_gene": {
+        "capped": false,
+        "output_type": "mode",
+        "skeleton": {
+          "abstain": false,
+          "biology_class": "human_monogenic",
+          "capped": false,
+          "recommended_modality_class": "ABSTAIN",
+          "signals_fired": [
+            "causal_gene"
+          ]
+        }
+      },
+      "monogenic_without_causal_gene": {
+        "skeleton": {
+          "abstain": true,
+          "biology_class": "human_monogenic",
+          "capped": false,
+          "recommended_modality_class": "ABSTAIN",
+          "signals_fired": []
+        }
+      }
+    },
+    "regression_committed_skeletons": {
+      "all_skeletons_identical": true,
+      "cases": [
+        {
+          "case": "bacterium",
+          "matches_committed": true,
+          "skeleton": {
+            "abstain": false,
+            "biology_class": "bacterium",
+            "capped": false,
+            "recommended_modality_class": "ABSTAIN",
+            "signals_fired": [
+              "conservation_breadth",
+              "fba_essentiality",
+              "structural_homology"
+            ]
+          }
+        },
+        {
+          "case": "free_eukaryote",
+          "matches_committed": true,
+          "skeleton": {
+            "abstain": false,
+            "biology_class": "free_eukaryote",
+            "capped": false,
+            "recommended_modality_class": "ABSTAIN",
+            "signals_fired": [
+              "conservation_breadth",
+              "fba_essentiality"
+            ]
+          }
+        },
+        {
+          "case": "virus",
+          "matches_committed": true,
+          "skeleton": {
+            "abstain": false,
+            "biology_class": "virus",
+            "capped": false,
+            "recommended_modality_class": "ABSTAIN",
+            "signals_fired": [
+              "structural_homology"
+            ]
+          }
+        },
+        {
+          "case": "human_cancer",
+          "matches_committed": true,
+          "skeleton": {
+            "abstain": false,
+            "biology_class": "human_cancer",
+            "capped": false,
+            "recommended_modality_class": "ABSTAIN",
+            "signals_fired": [
+              "functional_dependency"
+            ]
+          }
+        },
+        {
+          "case": "parasite_gem",
+          "matches_committed": true,
+          "skeleton": {
+            "abstain": false,
+            "biology_class": "host_dependent_parasite",
+            "capped": true,
+            "recommended_modality_class": "ABSTAIN",
+            "signals_fired": [
+              "fba_essentiality"
+            ]
+          }
+        },
+        {
+          "case": "parasite_no_gem",
+          "matches_committed": true,
+          "skeleton": {
+            "abstain": true,
+            "biology_class": "host_dependent_parasite",
+            "capped": false,
+            "recommended_modality_class": "ABSTAIN",
+            "signals_fired": []
+          }
+        }
+      ],
+      "n_cases": 6
+    }
+  },
+  "payload_sha256": "7911ba05c1e9bb966167ed99f10702e7ec5061324adbfbb1d1444058d3b6312a",
+  "provenance": {
+    "arms_integrated": [
+      "GENETICS1 (sha 9e73d1c8)",
+      "MENDEL1 (sha cb1be243)",
+      "MODALITY1 (sha 57b85479)"
+    ],
+    "determinism": "no RNG; payload sha over sorted-key JSON excluding verdict/provenance",
+    "experiment": "COMPOSITE4_expanded_integration",
+    "git_sha": "75cc263e427474fa8bc931941e9a3d63ca5a1205",
+    "regression_anchor": "CAPSTONE1 committed sha 19a72135",
+    "utc": "2026-08-08T02:22:51Z"
+  },
+  "verdict": "PASS - additive expanded-arm integration: all committed verdict skeletons UNCHANGED, the verdict_skeleton drift-fix is stable under prose mutation, the two new human classes route correctly (complex->genetic_association CAPPED/attenuated; monogenic->intervention-MODE), the MODALITY1-ported intervention stage is fail-safe (0 infeasible recs; abstains sans features), and DARK1/TRANSFER1 fail-safe abstentions are preserved. Integration only, no new science; new classes fire at the confidence their arm earned (target-relevance not therapy); intervention stage is feasibility triage not a molecule (SM branch still hits the affinity wall)."
+}

@@ -71,7 +71,9 @@ class BiologyClass(str, Enum):
     FREE_EUKARYOTE = "free_eukaryote"                # free-living eukaryote / fungus (e.g. yeast)
     VIRUS = "virus"                                  # no metabolism
     HOST_DEPENDENT_PARASITE = "host_dependent_parasite"  # e.g. Plasmodium (host-embedded metabolism)
-    HUMAN_CANCER = "human_cancer"                    # host cell / oncology
+    HUMAN_CANCER = "human_cancer"                    # host cell / oncology (somatic; functional dependency)
+    HUMAN_MONOGENIC = "human_monogenic"              # COMPOSITE4: germline monogenic; causal gene GIVEN (MENDEL1)
+    HUMAN_COMPLEX_DISEASE = "human_complex_disease"  # COMPOSITE4: common/polygenic; GWAS->target (GENETICS1)
     UNKNOWN = "unknown"
 
 
@@ -79,9 +81,12 @@ class Signal(str, Enum):
     FBA_ESSENTIALITY = "fba_essentiality"
     STRUCTURAL_HOMOLOGY = "structural_homology"      # Foldseek TM -> target CLASS-ID
     SEQUENCE_REPURPOSING = "sequence_repurposing"    # validation-grade ONLY (never a discovery signal)
-    FUNCTIONAL_DEPENDENCY = "functional_dependency"  # NOT BUILT YET
+    FUNCTIONAL_DEPENDENCY = "functional_dependency"  # host-embedded target-ID (DEPEND1; HUMAN_CANCER)
     CONSERVATION_BREADTH = "conservation_breadth"    # supporting
     HOST_SAFETY = "host_safety"                      # supporting (hard filter)
+    # ---- COMPOSITE4: the expanded, now-validated human arms -------------------------------------------
+    GENETIC_ASSOCIATION = "genetic_association"      # GWAS->target (GENETICS1); CAPPED/attenuated, target-relevance
+    CAUSAL_GENE = "causal_gene"                      # germline monogenic causal gene GIVEN (MENDEL1) -> mode-triage
 
 
 @dataclass(frozen=True)
@@ -93,6 +98,11 @@ class SignalSpec:
     discovery_grade: bool        # can it drive NOVEL target discovery (vs validation-only)?
     evidence: str                # committed experiments establishing the condition
     out_of_domain_note: str = ""  # why it is gated for classes outside `domain`
+    # ---- COMPOSITE4: a FULL-DOMAIN signal that additionally needs a DECLARED descriptor to fire ---------
+    # (distinct from the CAPPED uncertain_requires below: this fires at FULL grade when the descriptor is
+    # present, and GATES OUT — requiring the descriptor — when it is absent; it is NOT capped/flagged.)
+    requires_descriptor: str = ""  # runtime descriptor key the full-grade firing needs (e.g. "causal_gene_known")
+    output_mode: str = ""          # optional override of the decision's output_type when this signal fires alone
     # ---- COMPOSITE3: the CAPPED/UNCERTAIN (GEM-topology-contingent) transfer domain --------------------
     # Classes where the signal DOES fire (not abstain) but ONLY at reduced/capped confidence with an explicit
     # uncertainty flag, AND ONLY if a required runtime resource is available. This encodes the honest HARDENP1
@@ -179,6 +189,47 @@ TRANSFER_GATE: dict[Signal, SignalSpec] = {
         evidence="ENGINE FRONT1/E2E2 host non-homology hard filter",
         out_of_domain_note="needs a known host proteome to compare against",
     ),
+    # ---- COMPOSITE4: HUMAN_COMPLEX_DISEASE -> GENETIC_ASSOCIATION (GENETICS1) ---------------------------
+    # Reuses the COMPOSITE3 CAPPED/UNCERTAIN machinery: it FIRES (not abstains) but ONLY at reduced/capped
+    # confidence with an explicit attenuation flag, and ONLY when a `gwas_evidence` descriptor is declared.
+    # This encodes GENETICS1's HONEST bound: the popularity-controlled GWAS->target signal is REAL, dose-
+    # responsive, survives the fame null -- but ATTENUATED (crude OR 2.26 -> fame-adjusted MH OR 1.672), and
+    # it is TARGET-RELEVANCE ONLY (cross-sectional Open Targets 26.06), never response/molecule/clinical.
+    Signal.GENETIC_ASSOCIATION: SignalSpec(
+        signal=Signal.GENETIC_ASSOCIATION,
+        domain=frozenset(),                      # never a FULL-grade signal for any class
+        built=True, discovery_grade=True,        # drives target-RELEVANCE ranking (capped), not therapy
+        evidence=("GENETICS1 (Open Targets 26.06 genetic_association, 27 complex diseases, popularity-"
+                  "controlled): crude Fisher OR 2.26 (p 1.2e-63), dose-responsive, 27/27 leave-one-disease-out"),
+        out_of_domain_note="fires ONLY for HUMAN_COMPLEX_DISEASE and ONLY as a CAPPED/attenuated signal",
+        uncertain_domain=frozenset({BiologyClass.HUMAN_COMPLEX_DISEASE}),
+        uncertain_requires="gwas_evidence",
+        confidence_cap=0.5,
+        uncertainty_note=("popularity-adjusted effect bounded [1.67,2.26]; target-relevance only, "
+                          "cross-sectional"),
+        uncertain_evidence=("GENETICS1 popularity null: fame-matched permutation p 1e-4; fame-adjusted "
+                            "Mantel-Haenszel OR 1.672 (p 1.6e-31); popularity proxies are partly colliders on "
+                            "drug-status so adjustment over-controls -> the true popularity-free effect is "
+                            "BOUNDED [1.67, 2.26]; real, significant, dose-responsive, but attenuated; a fully "
+                            "clean test needs a temporal/prospective design. Reproduced x2 sha 9e73d1c8."),
+    ),
+    # ---- COMPOSITE4: HUMAN_MONOGENIC -> CAUSAL_GENE (MENDEL1) ------------------------------------------
+    # The causal gene is GENETICALLY GIVEN, so target-ID is trivial; the signal fires at FULL grade (NOT
+    # capped) but requires the `causal_gene_known` descriptor, and routes to intervention-MODE reasoning
+    # (output_mode="mode") rather than a discovery shortlist. Honest bound: target given, deliverable is
+    # intervention-MODE triage (MENDEL1: mechanism-first 3-class mode accuracy 0.857, hard fail-safe 0/10),
+    # NOT a therapy/molecule (the SM branch still hits the affinity wall).
+    Signal.CAUSAL_GENE: SignalSpec(
+        signal=Signal.CAUSAL_GENE,
+        domain=frozenset({BiologyClass.HUMAN_MONOGENIC}),
+        built=True, discovery_grade=True,
+        evidence=("MENDEL1 (n=28 cited germline-monogenic triples): mechanism-first intervention-MODE "
+                  "3-class accuracy 0.857 (24/28) vs majority 0.393; hard fail-safe 0/10 not-small-molecule "
+                  "genes mis-promised an SM call; reproduced x2 sha cb1be243"),
+        out_of_domain_note="fires ONLY for HUMAN_MONOGENIC (a genetically-established causal gene)",
+        requires_descriptor="causal_gene_known",
+        output_mode="mode",
+    ),
 }
 
 
@@ -208,11 +259,28 @@ class RoutingDecision:
     confidence_cap: Optional[float] = None    # min cap over uncertain fired signals (None = full-grade)
     # ---- ROUTERAUTO1: the auto class-detection trace (None when the class was hand-declared via decide) --
     detection: Optional[dict] = None          # {biology_class, source, rule, reasons, requires_descriptor}
+    # ---- COMPOSITE4: the post-target INTERVENTION STAGE result (orthogonal to class->target-ID routing) --
+    intervention: Optional[dict] = None       # {recommended_modality_class, feasible_set, fail_safe, note}
 
     def to_dict(self):
         d = asdict(self)
         d["signals_gated_out"] = [asdict(g) if not isinstance(g, dict) else g for g in self.signals_gated_out]
         return d
+
+    # ---- COMPOSITE4: the STABLE verdict skeleton (the reproducibility drift FIX) -----------------------
+    def verdict_skeleton(self) -> dict:
+        """Emit ONLY the stable decision essentials — NO volatile reason-prose, NO evidence strings, NO
+        gated-signal reasons. The COMPOSITE4 payload (and any future capstone) hashes THIS, so the decision
+        reproduces byte-identical even as reason/evidence prose and additive metadata evolve. Keys are the
+        fire/abstain VERDICT: class, sorted fired-signal names, abstain bool, capped bool, and the
+        recommended intervention-modality class (or None if the intervention stage was not run)."""
+        return {
+            "biology_class": self.biology_class,
+            "signals_fired": sorted(self.signals_fired),
+            "abstain": self.output_type == "abstention",
+            "capped": self.confidence_cap is not None,
+            "recommended_modality_class": (self.intervention or {}).get("recommended_modality_class"),
+        }
 
 
 # COMPOSITE3 update: the host-dependent parasite NO LONGER blanket-abstains. When it HAS a curated GEM, FBA
@@ -264,26 +332,146 @@ def detect_class(proteome_size: Optional[int] = None,
 # ======================================================================================================
 # The PURE gating decision — the heart of the router (data-free)
 # ======================================================================================================
-def _uncertain_resource_available(spec: SignalSpec, has_curated_gem: bool) -> bool:
-    """Is the runtime resource that a CAPPED (uncertain-domain) firing requires actually available?
-    Explicit per-resource mapping (no magic): currently only 'curated_gem' is defined."""
-    if spec.uncertain_requires == "curated_gem":
-        return bool(has_curated_gem)
-    # an uncertain domain with no declared resource requirement always fires capped
-    return spec.uncertain_requires == ""
+def _resource_available(key: str, resources: dict) -> bool:
+    """Is the runtime resource `key` (declared descriptor / data availability) present?
+    Explicit dict lookup (no magic). An empty key means 'no requirement' -> always available.
+    COMPOSITE4 generalizes the old COMPOSITE3 single-flag helper to N declared resources
+    (curated_gem, gwas_evidence, causal_gene_known, ...)."""
+    if key == "":
+        return True
+    return bool(resources.get(key, False))
+
+
+# ======================================================================================================
+# COMPOSITE4 — the INTERVENTION STAGE: a port of MODALITY1's VALIDATED fail-safe modality recommender.
+# ======================================================================================================
+# Faithful port of MODALITY1 (run.py, reproduced x2 sha 57b85479): mechanism x localization x protein-class
+# druggability -> a credible intervention MODALITY, plus the FROZEN feasibility matrix. HARD FAIL-SAFE: the
+# recommended modality is ALWAYS a member of the computed feasible_set (or ABSTAIN); an infeasible modality is
+# NEVER recommended. Honest bound: this is FEASIBILITY TRIAGE (a modality CLASS), NOT a molecule — the
+# small-molecule branch still hits the affinity wall (AFFINITY1/HIT2). Pure logic; data-free unit-testable.
+_MOD_DRUGGABLE_CLASSES = frozenset({"enzyme", "kinase", "receptor", "ion_channel", "transporter",
+                                    "nuclear_receptor", "transport_carrier", "globin"})
+_MOD_STABILIZABLE = frozenset({"transport_carrier", "globin"})
+_MOD_ALL = ("SMALL_MOLECULE_INHIBITOR", "SMALL_MOLECULE_ACTIVATOR", "MONOCLONAL_ANTIBODY",
+            "ASO_siRNA", "ENZYME_PROTEIN_REPLACEMENT", "GENE_THERAPY")
+
+
+def _mod_druggable(pc):
+    return pc in _MOD_DRUGGABLE_CLASSES
+
+
+def _mod_recommend(mech, loc, pc):
+    """MODALITY1 primary recommender (pre-BBB gate)."""
+    d = _mod_druggable(pc)
+    if mech in ("GoF", "overactivity"):
+        if loc in ("secreted", "cell_surface"):
+            return "MONOCLONAL_ANTIBODY"
+        if loc in ("membrane", "intracellular"):
+            return "SMALL_MOLECULE_INHIBITOR" if d else "ASO_siRNA"
+        return "ABSTAIN"
+    if mech in ("dominant_negative", "toxic_aggregation"):
+        if pc in _MOD_STABILIZABLE:
+            return "SMALL_MOLECULE_ACTIVATOR"
+        if loc == "intracellular":
+            return "ASO_siRNA"
+        return "ABSTAIN"
+    if mech == "LoF_misfold":
+        if d and loc in ("membrane", "intracellular", "lysosomal"):
+            return "SMALL_MOLECULE_ACTIVATOR"
+        return "ABSTAIN"
+    if mech in ("LoF_null", "LoF"):
+        if pc == "enzyme" and loc == "lysosomal":
+            return "ENZYME_PROTEIN_REPLACEMENT"
+        if loc == "secreted":
+            return "ENZYME_PROTEIN_REPLACEMENT"
+        if loc in ("intracellular", "membrane"):
+            return "GENE_THERAPY"
+        return "ABSTAIN"
+    return "ABSTAIN"
+
+
+def _mod_is_feasible(modality, mech, loc, pc, bbb_cns, splice_addressable):
+    """MODALITY1 frozen feasibility matrix. ABSTAIN is never a violation."""
+    d = _mod_druggable(pc)
+    if modality == "ABSTAIN":
+        return True
+    if modality == "MONOCLONAL_ANTIBODY":
+        return loc not in ("intracellular", "lysosomal")
+    if modality == "SMALL_MOLECULE_INHIBITOR":
+        return mech in ("GoF", "overactivity") and d
+    if modality == "SMALL_MOLECULE_ACTIVATOR":
+        return d and (mech == "LoF_misfold" or (mech == "toxic_aggregation" and pc in _MOD_STABILIZABLE))
+    if modality == "ENZYME_PROTEIN_REPLACEMENT":
+        return mech in ("LoF_null", "LoF") and (loc == "secreted" or (loc == "lysosomal" and not bbb_cns))
+    if modality == "GENE_THERAPY":
+        return mech not in ("GoF", "overactivity", "dominant_negative", "toxic_aggregation")
+    if modality == "ASO_siRNA":
+        if mech in ("LoF_null", "LoF", "LoF_misfold"):
+            return bool(splice_addressable)
+        return True
+    return True
+
+
+def recommend_intervention(mechanism: Optional[str] = None, localization: Optional[str] = None,
+                           protein_class: Optional[str] = None, bbb_cns: bool = False,
+                           splice_addressable: bool = False) -> dict:
+    """COMPOSITE4 INTERVENTION STAGE (MODALITY1 port). Returns
+    {recommended_modality_class, feasible_set, fail_safe: True, note}.
+
+    ABSTAINS (recommended_modality_class='ABSTAIN', empty feasible_set) when the objective features required
+    for a credible feasibility call (mechanism + localization) are absent. HARD FAIL-SAFE: the returned
+    recommendation is ALWAYS in feasible_set (or ABSTAIN) — an infeasible modality is never emitted."""
+    if not mechanism or not localization:
+        return {
+            "recommended_modality_class": "ABSTAIN",
+            "feasible_set": [],
+            "fail_safe": True,
+            "note": ("no objective features (mechanism + localization) provided -> ABSTAIN; the intervention "
+                     "stage is feasibility TRIAGE and refuses to recommend a modality without them"),
+        }
+    rec = _mod_recommend(mechanism, localization, protein_class)
+    # localization-aware BBB gate on lysosomal enzyme replacement (ERT cannot cross the BBB) -> abstain
+    if rec == "ENZYME_PROTEIN_REPLACEMENT" and localization == "lysosomal" and bbb_cns:
+        rec = "ABSTAIN"
+    feasible = [m for m in _MOD_ALL if _mod_is_feasible(m, mechanism, localization, protein_class,
+                                                        bbb_cns, splice_addressable)]
+    # HARD FAIL-SAFE enforcement: never emit an infeasible recommendation.
+    if rec != "ABSTAIN" and not _mod_is_feasible(rec, mechanism, localization, protein_class,
+                                                 bbb_cns, splice_addressable):
+        rec = "ABSTAIN"
+    return {
+        "recommended_modality_class": rec,
+        "feasible_set": feasible,
+        "fail_safe": True,
+        "note": ("MODALITY1-validated mechanism x localization x druggability feasibility triage (a modality "
+                 "CLASS, not a molecule; the SM branch still hits the affinity wall); recommendation is "
+                 "guaranteed a member of feasible_set or ABSTAIN"),
+    }
 
 
 def decide(biology_class: BiologyClass, organism: str = "", class_source: str = "declared",
-           has_curated_gem: bool = False) -> RoutingDecision:
+           has_curated_gem: bool = False, has_gwas_evidence: bool = False,
+           causal_gene_known: bool = False, intervention_features: Optional[dict] = None) -> RoutingDecision:
     """Apply the transfer-gate table to a class and return the routing decision. NO I/O — pure logic.
 
     COMPOSITE3: `has_curated_gem` is the runtime resource flag consulted for the CAPPED/UNCERTAIN transfer
     domain (host-dependent parasite + FBA). It is FALSE by default -> a bare host-dependent parasite (no GEM
     declared) still ABSTAINS (no signal). When True, FBA fires at capped confidence with the uncertainty flag.
-    The flag does nothing for classes whose signals are all in the FULL domain (bacterium/virus/etc.)."""
+    The flag does nothing for classes whose signals are all in the FULL domain (bacterium/virus/etc.).
+
+    COMPOSITE4: `has_gwas_evidence` gates the CAPPED GENETIC_ASSOCIATION firing for HUMAN_COMPLEX_DISEASE
+    (GENETICS1); `causal_gene_known` gates the FULL-grade CAUSAL_GENE firing for HUMAN_MONOGENIC (MENDEL1,
+    output_type 'mode'). Both default FALSE -> the class ABSTAINS pending the declared descriptor.
+    `intervention_features` (optional {mechanism, localization, protein_class, bbb_cns, splice_addressable})
+    drives the orthogonal, fail-safe INTERVENTION STAGE populated on any non-abstaining decision (else it
+    ABSTAINS). It NEVER changes the class->target-ID fire/abstain routing above."""
     biology_class = BiologyClass(biology_class)
+    resources = {"curated_gem": has_curated_gem, "gwas_evidence": has_gwas_evidence,
+                 "causal_gene_known": causal_gene_known}
     fired, supporting, gated = [], [], []
     uncertainty_flags = []
+    output_mode_override = ""
 
     for sig, spec in TRANSFER_GATE.items():
         in_domain = biology_class in spec.domain
@@ -293,16 +481,24 @@ def decide(biology_class: BiologyClass, organism: str = "", class_source: str = 
                          f"module not built ({spec.out_of_domain_note}); evidence: {spec.evidence}"))
             continue
         if in_domain:
-            # FULL-GRADE transfer.
+            # FULL-GRADE transfer — but a signal may additionally require a DECLARED descriptor (COMPOSITE4).
+            if spec.requires_descriptor and not _resource_available(spec.requires_descriptor, resources):
+                gated.append(GatedSignal(sig.value,
+                             f"full-grade transfer domain for {biology_class.value}, but required declared "
+                             f"descriptor '{spec.requires_descriptor}' absent -> cannot fire "
+                             f"(would fire full-grade IF declared): {spec.out_of_domain_note}"))
+                continue
             if not spec.discovery_grade:
                 # applies, but only as a validation/filter signal — never drives novel discovery
                 supporting.append(sig.value)
             else:
                 fired.append(sig.value)
+                if spec.output_mode:
+                    output_mode_override = spec.output_mode
             continue
         if in_uncertain:
-            # CAPPED/UNCERTAIN, resource-contingent transfer (the COMPOSITE3 host-dependent-parasite path).
-            if _uncertain_resource_available(spec, has_curated_gem):
+            # CAPPED/UNCERTAIN, resource-contingent transfer (COMPOSITE3 parasite path; COMPOSITE4 GWAS path).
+            if _resource_available(spec.uncertain_requires, resources):
                 # FIRE, but flagged + capped -- NEITHER a blanket abstention NOR full-grade confidence.
                 fired.append(sig.value)
                 uncertainty_flags.append({
@@ -312,15 +508,18 @@ def decide(biology_class: BiologyClass, organism: str = "", class_source: str = 
                     "evidence": spec.uncertain_evidence,
                 })
             else:
-                # resource unavailable (e.g. no GEM) -> cannot even attempt the capped firing -> gate it.
+                # resource/descriptor unavailable -> cannot even attempt the capped firing -> gate it.
                 gated.append(GatedSignal(sig.value,
-                             f"capped/uncertain (GEM-contingent) transfer domain for {biology_class.value}, "
+                             f"capped/uncertain (resource-contingent) transfer domain for {biology_class.value}, "
                              f"but required resource '{spec.uncertain_requires}' unavailable -> cannot attempt "
                              f"(would fire capped-and-flagged IF present): {spec.uncertainty_note}"))
             continue
         # out of every transfer domain:
         gated.append(GatedSignal(sig.value,
                      f"out of transfer domain for {biology_class.value}: {spec.out_of_domain_note}"))
+
+    # ---- COMPOSITE4: the orthogonal, fail-safe INTERVENTION STAGE (never changes fire/abstain routing) --
+    interv = recommend_intervention(**(intervention_features or {}))
 
     # ---- determine output type from the fired DISCOVERY signals -----------------------------------
     if not fired:
@@ -330,21 +529,33 @@ def decide(biology_class: BiologyClass, organism: str = "", class_source: str = 
         # the correction to the old blanket abstention, which would have wrongly refused Toxoplasma.
         if biology_class == BiologyClass.HOST_DEPENDENT_PARASITE:
             reason = HOST_DEPENDENT_PARASITE_NO_GEM_ABSTENTION
+        elif biology_class == BiologyClass.HUMAN_MONOGENIC:
+            reason = (f"class '{biology_class.value}' (germline monogenic) requires a declared causal_gene_known "
+                      f"descriptor: the causal gene is the target, so target-ID is trivial ONLY when the gene is "
+                      f"genetically established (MENDEL1). Without it there is no target -> the router ABSTAINS.")
+        elif biology_class == BiologyClass.HUMAN_COMPLEX_DISEASE:
+            reason = (f"class '{biology_class.value}' (common/polygenic) requires a declared has_gwas_evidence "
+                      f"descriptor: the validated signal is popularity-controlled GWAS->target (GENETICS1), a "
+                      f"DATA-dependent capped/attenuated signal. Without GWAS evidence there is no signal -> the "
+                      f"router ABSTAINS rather than emit a fame-confounded human target guess.")
         else:
             reason = (f"no validated discovery signal transfers to class '{biology_class.value}'; "
                       f"the system refuses to emit a confident answer rather than force an ill-fitting model")
         return RoutingDecision(organism=organism, biology_class=biology_class.value, class_source=class_source,
                                output_type="abstention", signals_fired=sorted(fired),
-                               supporting_signals=sorted(supporting), signals_gated_out=gated, abstention=reason)
+                               supporting_signals=sorted(supporting), signals_gated_out=gated, abstention=reason,
+                               intervention=interv)
 
     # structural-only route (virus): the fired discovery signal is structural class-ID, FBA/repurposing gated
-    if fired == [Signal.STRUCTURAL_HOMOLOGY.value]:
+    if output_mode_override:
+        out = output_mode_override                       # COMPOSITE4: monogenic -> intervention-MODE reasoning
+    elif fired == [Signal.STRUCTURAL_HOMOLOGY.value]:
         out = "structural_class_id"
     else:
         out = "shortlist"
     caps = [f["confidence_cap"] for f in uncertainty_flags if f["confidence_cap"] is not None]
     return RoutingDecision(organism=organism, biology_class=biology_class.value, class_source=class_source,
-                           output_type=out, signals_fired=sorted(fired),
+                           output_type=out, signals_fired=sorted(fired), intervention=interv,
                            supporting_signals=sorted(supporting), signals_gated_out=gated, abstention=None,
                            uncertain=bool(uncertainty_flags),
                            uncertainty_flags=sorted(uncertainty_flags, key=lambda f: f["signal"]),
@@ -364,14 +575,18 @@ class CompositeRouter:
     def decide(self, organism: str, proteome_size: Optional[int] = None,
                declared_class: Optional[BiologyClass] = None,
                host_dependent: Optional[bool] = None,
-               has_curated_gem: bool = False) -> RoutingDecision:
+               has_curated_gem: bool = False, has_gwas_evidence: bool = False,
+               causal_gene_known: bool = False, intervention_features: Optional[dict] = None) -> RoutingDecision:
         cls, src = detect_class(proteome_size=proteome_size, declared_class=declared_class,
                                 host_dependent=host_dependent)
-        return decide(cls, organism=organism, class_source=src, has_curated_gem=has_curated_gem)
+        return decide(cls, organism=organism, class_source=src, has_curated_gem=has_curated_gem,
+                      has_gwas_evidence=has_gwas_evidence, causal_gene_known=causal_gene_known,
+                      intervention_features=intervention_features)
 
     # ---- ROUTERAUTO1: AUTONOMOUS class detection from objective features, then the UNCHANGED gate -----
     def decide_auto(self, organism: str, features=None,
-                    declared_class: Optional[BiologyClass] = None) -> RoutingDecision:
+                    declared_class: Optional[BiologyClass] = None,
+                    intervention_features: Optional[dict] = None) -> RoutingDecision:
         """Front-end for `decide`: AUTO-detect the biology class from objective `ProteomeFeatures`
         (intercepta.class_detector) and then apply the UNCHANGED COMPOSITE1/2/3 transfer-gate logic. This is
         the automation that completes limitation 12 — the class no longer has to be hand-specified. The data
@@ -384,7 +599,8 @@ class CompositeRouter:
         f = features if features is not None else ProteomeFeatures()
         det = detect_biology_class(features=f, declared_class=declared_class)
         dec = decide(BiologyClass(det.biology_class), organism=organism, class_source=det.source,
-                     has_curated_gem=f.has_curated_gem)
+                     has_curated_gem=f.has_curated_gem, has_gwas_evidence=f.has_gwas_evidence,
+                     causal_gene_known=f.causal_gene_known, intervention_features=intervention_features)
         # surface the detection trace on the decision so callers can audit WHY this class was chosen
         dec.detection = det.to_dict()
         return dec
