@@ -121,12 +121,13 @@ signal fires — never on a hunch.*
 - **B:** PPI-network centrality (MET4). *[detection: lift collapses under a study-bias control (+0.128→−0.004) → FAILED.]*
 - **C:** conserved genomic context / synteny (NONMET1). *[detection: ΔAUROC-beyond-conservation +0.016 < +0.03 gate → FAILED.]*
 - **D:** curated regulatory master-regulator influence (REGNET1). *[detection: OR 0.52, ΔAUROC −0.006 → FAILED, clean null.]*
-- **E:** learned PLM (ESM-2) embeddings (PLMESS1, RUNNING). *[detection: ΔAUROC-beyond-conservation <+0.03 OR fails
-  study-bias/leakage checks.]*
-- **Terminal honest fallback (if E fails):** **STOP attacking the non-metabolic mechanism on CPU** (four independent
-  principled closures = a real scientific bound). Accept **conservation-breadth (AUROC 0.91) as the ceiling** for the
-  non-metabolic half; route deeper mechanism to Wave-2 GPU foundation-models OR to experimental data. **Do NOT run a random
-  5th attempt** — that would be the trial-and-error we forbid.
+- **E:** learned PLM (ESM-2) embeddings (PLMESS1). *[detection: ΔAUROC-beyond-conservation +0.008 <+0.03; study-bias-ctrl
+  −0.0006 → **FAILED** 2026-08-08, reproduced, baseline consistency-checked vs NONMET1.]*
+- **Terminal honest fallback — NOW ACTIVE (E failed):** **STOPPED attacking the non-metabolic mechanism on CPU.** Four
+  independent principled closures (network / synteny / regulatory / learned-PLM) = a real scientific bound. **Conservation
+  breadth (AUROC 0.908) is accepted as the ceiling** for the non-metabolic half. The one untested lever is a
+  larger/structure-aware PLM (GPU-gated, Wave-2) or experimental data. **No random 5th CPU attempt** (per this rule). This
+  is a completed objective — closed, not open.
 
 ### O3 — Identify a TARGET for a novel organism/disease
 - **A:** the class-matched validated signal (FBA/dependency/genetics/structure) at earned confidence. *[detection: the signal's
@@ -307,10 +308,13 @@ collaborator) run in PARALLEL in every scenario** — they block nothing and del
 detection signal fires, transition to the matching S-row; keep O9 + acquisition-outreach running in parallel throughout.
 
 ## 13. Current-state decision table (given the state RIGHT NOW → exact next action)
-- **State now:** PLMESS1 running; no GPU; no wet-lab; WebSearch budget exhausted (fetch-by-known-endpoint still works);
-  Phase-1 ~20–25%; publication honesty-pass done; MASTER_PLAN + contingency tree in place.
-- **Immediate next (autonomous):** await PLMESS1 → branch on §4-O2 (bank if positive [verify leakage first]; if negative,
-  enter **S-A**: stop CPU non-metabolic, consolidate).
+- **State now (updated 2026-08-08):** PLMESS1 **DONE → 4th closure** (non-metabolic door now closed across 4 signal
+  classes); **Scenario S-A is ACTIVE**; no GPU; no wet-lab; Phase-1 ~20–25%; publication honesty-pass done; MASTER_PLAN +
+  contingency tree in place.
+- **Immediate next (autonomous, per S-A):** the non-metabolic CPU line is CLOSED (no 5th attempt). Consolidate + advance the
+  parallel publication channel (validated core + negatives); prepare the acquisition instruments (GPU-run bundle exists as
+  AFFINITY1 spec; wet-lab collaboration package). The CPU-experiment frontier is honestly at its end — the needle-movers now
+  require acquisitions (GPU, collaborator) that need the human.
 - **Parallel-available-now (CPU, autonomous, modest):** remaining publication prep — a ≤25-word title; the off-class-TM and
   study-matched-cancer nulls (small re-analyses); these are ENGINEERING finishing touches, not needle-movers.
 - **Blocked-pending-acquisition (the needle-movers — need the human):** GPU (→ intervention half), wet-lab collaborator

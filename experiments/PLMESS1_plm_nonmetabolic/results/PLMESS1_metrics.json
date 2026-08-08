@@ -1,0 +1,73 @@
+{
+  "experiment": "PLMESS1_plm_nonmetabolic",
+  "gate": {
+    "require_delta_auroc_beyond_own_ge": 0.03,
+    "require_studybias_delta_ge": 0.02
+  },
+  "gate_eval": {
+    "PASS": false,
+    "passA_delta_beyond_own": false,
+    "passB_survives_studybias": false
+  },
+  "hypothesis": "a learned ESM-2 protein-language-model embedding predicts non-metabolic essentiality AND adds BEYOND conservation breadth (own) on the E. coli non-metabolic subproteome",
+  "params": {
+    "cv": "StratifiedKFold_5_shuffleFalse",
+    "embedding": "mean_pooled_last_hidden_dim640",
+    "esm_model": "facebook/esm2_t30_150M_UR50D",
+    "leakage_guard": "PCA+StandardScaler fit on train folds only",
+    "logreg_C_primary": 1.0,
+    "pca_k_primary": 50,
+    "truncation_residues": 1022
+  },
+  "pool": {
+    "n_experimental_essential": 179,
+    "n_nonmetabolic_tested": 2547,
+    "organism": "E_coli",
+    "prevalence": 0.070279,
+    "subproteome": "non_metabolic (uniprot NOT in MET2 GEM)",
+    "truth_source": "PEC_class1"
+  },
+  "provenance": {
+    "emb_dir": "/Users/kalki/intercepta_data/plmess1",
+    "generated": "2026-08-08T08:29:33",
+    "python": "3.11.15",
+    "runtime_s": 6.5
+  },
+  "results": {
+    "auroc_M1_own_only": 0.907832,
+    "auroc_M2_own_plus_embed": 0.916067,
+    "auroc_embed_standalone_pca50": 0.878397,
+    "delta_auroc_embed_beyond_own": 0.008235,
+    "delta_auroc_embed_beyond_own_study": -0.00057,
+    "enrichment_contingency": {
+      "both": 165,
+      "hi_noness": 1109,
+      "lo_ess": 14,
+      "neither": 1259
+    },
+    "enrichment_embed_median_thr": 0.010799,
+    "enrichment_fisher_p": 0.0,
+    "enrichment_odds_ratio": 13.379815,
+    "sensitivity": {
+      "pca_k10": {
+        "auroc_embed_standalone": 0.81769,
+        "auroc_own_plus_embed": 0.91245,
+        "delta_embed_beyond_own": 0.004618
+      },
+      "pca_k100": {
+        "auroc_embed_standalone": 0.872185,
+        "auroc_own_plus_embed": 0.904566,
+        "delta_embed_beyond_own": -0.003266
+      },
+      "raw640_L2_C0.1": {
+        "auroc_embed_standalone": 0.881167,
+        "auroc_own_plus_embed": 0.903742,
+        "delta_embed_beyond_own": -0.00409
+      }
+    },
+    "study_proxy_pearson_with_embed_oof": 0.241248,
+    "studybias_auroc_M3_own_plus_study": 0.928937,
+    "studybias_auroc_M4_own_study_embed": 0.928368
+  },
+  "verdict": "FAIL (first-class NEGATIVE) \u2014 a learned ESM-2 PLM embedding does NOT add a decisive signal beyond conservation breadth on the E. coli non-metabolic subproteome (\u0394AUROC +0.008 vs gate +0.03; standalone embed AUROC 0.878 < conservation 0.908). FOURTH principled closure of the non-metabolic-mechanism door \u2014 now spanning LEARNED representations, not just network/conservation. Conservation breadth (AUROC 0.908) remains the unbeaten baseline."
+}
