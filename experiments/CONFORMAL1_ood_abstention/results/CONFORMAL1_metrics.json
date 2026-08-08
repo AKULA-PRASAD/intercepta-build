@@ -1,0 +1,49 @@
+{
+  "G1_in_distribution": {
+    "coverage_essential_class": 0.0,
+    "coverage_heldout_ecoli": 0.901,
+    "coverage_nonessential_class": 0.9753,
+    "mean_set_size": 0.9438,
+    "pass_sanity": true
+  },
+  "G2_out_of_distribution": {
+    "coverage_essential_class": 0.0,
+    "coverage_mtb": 0.8685,
+    "coverage_nonessential_class": 0.9851,
+    "holds_at_0.85": true,
+    "mean_set_size": 0.9642,
+    "note": "characterization not pass/fail: does the coverage guarantee transfer to a NEVER-SEEN organism?"
+  },
+  "MONDRIAN_class_conditional_fix": {
+    "essential_coverage_gap_in_minus_ood": 0.3918,
+    "in_dist": {
+      "essential_coverage": 0.9375,
+      "marginal_coverage": 0.9114,
+      "mean_set_size": 1.24,
+      "nonessential_coverage": 0.9093
+    },
+    "note": "per-class threshold so the ESSENTIAL target class is covered at 1-alpha in-dist; OOD essential coverage = does the class-conditional guarantee TRANSFER to a novel organism?",
+    "ood_mtb": {
+      "essential_coverage": 0.5457,
+      "marginal_coverage": 0.9004,
+      "mean_set_size": 1.0615,
+      "nonessential_coverage": 0.948
+    },
+    "q_essential": 0.971,
+    "q_nonessential": 0.1118
+  },
+  "alpha": 0.1,
+  "conformal_q": 0.3117,
+  "coverage_gap_in_minus_ood": 0.0325,
+  "essential_class_coverage_gap_in_minus_ood": 0.0,
+  "experiment": "CONFORMAL1_ood_abstention",
+  "pools": {
+    "ecoli_essential": 287,
+    "ecoli_n": 4195,
+    "mtb_essential": 460,
+    "mtb_n": 3885
+  },
+  "scope": "n=2 organisms (demonstration/bound, not a population estimate); conservation features; essentiality prediction; in-silico; characterizes the ABSTENTION guarantee under organism shift, not a target",
+  "target_coverage": 0.9,
+  "verdict": "G1 PASS (marginal conformal calibrated: in-dist marginal coverage 0.901 ~ target 0.90). FINDING 1 (the caution): MARGINAL conformal is VACUOUS for the targets \u2014 its 90% coverage is entirely the ~93% non-essential majority (non-ess coverage 0.9753/0.9851); the ESSENTIAL class is covered 0.0 in-dist / 0.0 OOD (essentially never). A marginal coverage guarantee does NOT make abstention trustworthy for the actual targets. FINDING 2 (the fix + its transfer): MONDRIAN class-conditional conformal restores essential-class coverage to 0.9375 in-dist (by construction) at a mean set size 1.24; the honest OOD result \u2014 does the class-conditional guarantee TRANSFER to a never-seen organism \u2014 is M. tb essential coverage 0.5457 (DEGRADES <0.85, gap +0.392; set size 1.0615). Honest bound: trustworthy target-class abstention needs class-conditional conformal, and even then its guarantee on a novel organism is not fully preserved."
+}
