@@ -1,0 +1,89 @@
+{
+  "G1_validation_efficiency": {
+    "B": 30,
+    "enrichment_over_random": 7.796,
+    "essentials_greedy": 16,
+    "essentials_random_expected": 2.05,
+    "experiments_saved_factor": 8.06,
+    "greedy_experiments_for_16_targets": 29,
+    "hypergeom_p": 9.324881539751695e-12,
+    "pass": true,
+    "random_experiments_for_16_targets": 233.9
+  },
+  "G2_validate_vs_learn": {
+    "curves": {
+      "greedy": [
+        0.9037,
+        0.8908,
+        0.8754,
+        0.8621,
+        0.8777,
+        0.8649,
+        0.87,
+        0.8768
+      ],
+      "random": [
+        0.9041,
+        0.9061,
+        0.9077,
+        0.908,
+        0.9075,
+        0.9075,
+        0.9064,
+        0.9045
+      ],
+      "uncertainty": [
+        0.9037,
+        0.8989,
+        0.9022,
+        0.8989,
+        0.9017,
+        0.8977,
+        0.8966,
+        0.8885
+      ]
+    },
+    "greedy_final_auroc": 0.8768,
+    "note": "characterization not pass/fail: greedy prioritizes validation recovery; uncertainty targets model learning",
+    "random_final_auroc": 0.9045,
+    "uncertainty_final_auroc": 0.8885
+  },
+  "experiment": "EXPDESIGN1_experiment_prioritization",
+  "pool": {
+    "base_rate": 0.0684,
+    "n_essential": 287,
+    "n_genes": 4195
+  },
+  "recovery_curve": {
+    "greedy": {
+      "10": 4,
+      "100": 50,
+      "20": 12,
+      "30": 16,
+      "50": 25
+    },
+    "random": {
+      "10": 0.68,
+      "100": 6.84,
+      "20": 1.37,
+      "30": 2.05,
+      "50": 3.42
+    }
+  },
+  "scope": "retrospective simulation on cached E. coli/PEC pool; 'experiment outcome' = existing PEC label, not new wet-lab; validates the PRIORITIZATION POLICY not a target; decision-support over the validated engine, in-silico",
+  "verdict": "PASS \u2014 the zero-data conservation ranking is a VALIDATED experiment prioritizer: greedy finds essentials at 7.80x random in the first 30 experiments (hypergeom p=9.3e-12), saving ~8.1x wet-lab experiments to validate the same 16 targets; validate-vs-learn tradeoff characterized (uncertainty final AUROC 0.8885 vs greedy 0.8768).",
+  "voi_hybrid_combined": {
+    "greedy": {
+      "learn_final": 0.8768,
+      "val": 16
+    },
+    "uncertainty": {
+      "learn_final": 0.8885,
+      "val": 0
+    },
+    "voi_hybrid": {
+      "learn_final": 0.8885,
+      "val": 16
+    }
+  }
+}
