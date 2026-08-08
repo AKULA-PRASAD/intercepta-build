@@ -335,3 +335,143 @@ and last CPU try; then stop). Every objective has a pre-registered failure signa
 is **acquisitions (GPU, collaborator) + publication of the validated core+negatives** — not more CPU experiments, which are
 near their honest end. Truth over vision: we are 100% ready to *execute* what is buildable/known, honest that the rest needs
 resources or genuine open-science inventions we name explicitly and do not fake.
+
+---
+
+# PART III — the ULTIMATE connective layer (every dot connected: data-flow contracts · full traceability of 160 experiments · the closed feedback loop · the composition law · cross-cutting threads · failure-cascade · the logical spine)
+
+*This part closes the gaps Parts I–II left implicit: it makes every logical connection EXPLICIT — how each stage's output
+becomes the next stage's input, how all 160 committed experiments map onto the pipeline, how results FEED BACK to improve the
+engine, how per-class models COMPOSE into "any disease," how uncertainty/safety/bias thread THROUGH every stage, and how a
+failure at any node CASCADES. Every connection is grounded in a committed experiment; none is invented.*
+
+## 15. The pipeline as a connected data-flow graph (stage I/O contracts — no orphan dots)
+*Each stage: `INPUT ⇒ OUTPUT ⇒ CONSUMER`. Read top-to-bottom = the forward pass; §17 adds the backward (feedback) edges.*
+
+- **S0 Input+detect:** `{genome | causal-gene | GWAS | CRISPR-screen | HPO-phenotype}` ⇒ `{biology_class + data-descriptors}`
+  ⇒ **S1/S2** (via ROUTERAUTO1/class_detector). *Orphan closed:* raw-phenotype enters only via PHENO1 retrieval → candidate
+  gene → re-enters as a "causal-gene" input; de-novo-from-phenotype is OPEN and routes to ABSTAIN.
+- **S1 Mechanism:** `{genome, GEM}` ⇒ `{FBA-essential set + confidence}` (metabolic); the non-metabolic branch emits **only
+  conservation-breadth** (4 closures: MET4/NONMET1/REGNET1/PLMESS1) ⇒ **S2**. *Connection:* S1's transfer-condition (GEM
+  encodes real biosynthetic dependence; META1/FAIRGATE) decides whether its output is trusted or capped.
+- **S2 Target-ID:** `{class, S1 outputs, proteome, reference targets}` ⇒ `{ranked targets + per-target signal-provenance +
+  confidence-tier}` ⇒ **S3**. *Connection:* the class picks the signal (FBA/dependency/genetics/structure/conservation) per
+  the transfer table (§18); silent-failure risk (TID4) is carried as a confidence caveat.
+- **S3 Prioritize/Safety/ExpDesign:** `{S2 targets}` ⇒ `{host-safe, multi-axis-ranked (BESTINT1), VOI-ordered (EXPDESIGN1)
+  shortlist + calibrated confidence (CALIB1) + explicit abstentions}` ⇒ **S4** *and* **S5** (which targets to test first).
+  *Connection:* the hard host-non-homology filter (FRONT1/E2E2) is a GATE — nothing unsafe passes to S4.
+- **S4 Intervention:** `{target + mechanism + localization}` ⇒ `{modality-class (MODALITY1) + repurposing-candidate
+  (INTERVENE1/2) OR an explicit "novel-affinity = OPEN/GPU-gated" flag}` ⇒ **S5**. *Connection:* the SM-inhibitor branch is
+  gated by the affinity wall (HIT2/AFFINITY1) — it emits a *feasibility class*, never a validated potent molecule.
+- **S5 Validation:** `{shortlist + intervention}` ⇒ `{in-silico confidence (reproduced ×2); a turnkey wet-lab design
+  (CRISPRIDESIGN1); and — once run — an experimental result}` ⇒ **S6** *and* **feedback to S1/S2** (§17). *Connection:* this
+  is the Phase-1→Phase-2 boundary; everything above is in-silico hypothesis, everything at/after the experimental result is
+  real-world.
+- **S6 Governance (wraps all):** routes (class detector), **abstains** where no signal transfers, propagates confidence,
+  enforces provenance/reproducibility, composes (§18). *Connection:* S6 is the only stage that can emit a *final* answer or a
+  *final abstention* — it is the integrity gate on the whole graph.
+
+## 16. Full traceability — all 160 experiments mapped onto the pipeline (every dot → its objective + status)
+*Grouped by pipeline node (representative IDs; status in caps). This connects the entire experimental corpus to the plan.*
+
+- **S2 Target-ID core (metabolic) — VALIDATED:** MET1/MET2/MET3 (mechanism breaks the conservation ceiling), VAL-ESS/CROSSVAL
+  (6 curated GEMs, OR 4–45), PREDVAL (per-target scorecard), REACH1 (conservation-breadth recovers non-metabolic essentials),
+  BESTINT1 (multi-axis). Blind: BLIND1/2/3/6 PASS, BLIND4/5/7 FAIL (analyst-blind, 4/3 split).
+- **S1 Mechanism non-metabolic — CLOSED ×4:** MET4 (PPI/study-bias), NONMET1 (synteny/collinear), REGNET1 (regulatory/clean
+  null), PLMESS1 (PLM/re-encodes conservation). ⇒ conservation-breadth is the accepted ceiling.
+- **S2 Target-ID other classes:** viruses → FOLD1/2, GENERALIZE1/3, HARDENV1 (structural class-ID, PASS n=5); fungi/eukaryote
+  → GENERALIZE4, HARDENF1 (PASS); parasites → GENERALIZE5, HARDENP1, HOSTCTX1/2, PARARESOLVE1/2 (GEM/base-rate-bounded);
+  cancer → DEPEND1, F3CLIN1 (dependency + patient-driver); monogenic → MENDEL1; complex → GENETICS1; phenotype-input → PHENO1.
+- **S2 Target-ID negatives/bounds:** TID1/2 (conservation ceiling), TID3 (kingdom degradation), TID4 (silent failure),
+  TRANSFER1 (dependency doesn't transfer label-free).
+- **S3 Prioritize/Safety/ExpDesign:** FRONT1/FRONT2/E2E2 (selectivity/safety), CONDROB1 + SYNLETH1/2 (robustness), CALIB1
+  (calibration), EXPDESIGN1 (VOI ~8× efficiency), AMR1 (durability — CLOSED for static biology), CONFORMAL1 (OOD abstention
+  bound).
+- **S4 Intervention:** MODALITY1 (modality triage), INTERVENE1/2/3 (repurposing, narrow), B30/B30b (ADMET), B31
+  (synthesizability), B33/B40/B52 (generation). **Affinity wall (CLOSED/GPU-gated):** HIT1/HIT2, C1, B46/B47/B48/B49,
+  B55/B56/B63, B65, AFFINITY1 (co-folding, GPU-gated), STRUCTREPURPOSE1 (promiscuity).
+- **S5 Validation + Feedback:** CRISPRIDESIGN1 (turnkey wet-lab design), EXPVAL/BROADSPEC/DRUGGABLE/PANBACT/PREDVAL
+  (deployment predictions), NEWBUG/SAUREUS (held-out); **feedback:** SIL1 (self-improving loop works in-domain), SIL2 (washes
+  under shift), B45/B51/B65 (active-learning bounds).
+- **S6 Governance/Integration:** SUBSTRATE1–5, ENGINE/engine_v1, discovery_engine, COMPOSITE1–4, ROUTERAUTO1, DARK1
+  (abstention-integrity), CAPSTONE1/2 (end-to-end proofs); method inventions META1 (transfer principle), FAIRGATE1 (base-rate
+  gate).
+- **Era-1 cancer (bounds that shaped the plan):** B1–B23 — drug-response intrinsic ceiling (B1/B2), clinical null (B10/B17),
+  external-replication failure (B20/B21) ⇒ the "clinical response prediction = tested-negative" bound; synergy B24–B29 (PARTIAL).
+
+## 17. The CLOSED FEEDBACK LOOP (the biggest missing connection — forward↔backward)
+*Parts I–II were a forward pass. The fullest vision is a LOOP: an experimental result must flow BACK to improve the engine.
+That edge exists in evidence but was never wired into the plan. Here it is, with its honest bound.*
+- **Forward:** S0→…→S5 nominates a target/intervention + a turnkey experiment (CRISPRIDESIGN1).
+- **Backward (S5 ⇒ S1/S2):** a wet-lab result (or any new labeled data) re-enters via the substrate's **continuous-absorption
+  guardrail** (SUBSTRATE3) as high-tier evidence, and **recalibrates the nominating signal** (a confirmed essential raises
+  that signal's weight; a refuted one lowers it). Mechanism proven in-silico: **SIL1** (conformally-gated self-improving loop
+  improves in-domain, 6/6 tasks) — *but* **SIL2** (the loop washes out under distribution shift) and **CONFORMAL1** (OOD
+  confidence degrades 94%→55%) together impose the HARD RULE: **the feedback loop may only trust self-/near-domain labels;
+  on a novel organism it must widen uncertainty and defer to real experimental labels — never bootstrap confident labels
+  out-of-distribution.** This connects the negatives (SIL2, CONFORMAL1) to the loop's safe design.
+- **Consequence for the vision:** true closed-loop autonomy is **gated on real experimental labels** (Phase 2). Until then the
+  loop safely improves only within validated domains. This is why O7 (wet-lab) is the master unlock — it is the ONLY input
+  that closes the loop honestly.
+
+## 18. The COMPOSITION LAW ("book of validated models" → "any disease")
+*How the pieces become the whole — the meta-level connection.* "Any disease" is NOT one model; it is the **union of per-class
+validated signal-models, each fired only inside its transfer domain, composed by the router, with abstention everywhere else**
+(composite-architecture reframe). The **transfer-condition principle IS the composition operator:**
+`answer(disease) = ⊕_class [ signal_class if transfer-condition(class) holds, at earned confidence ] ; else ABSTAIN`.
+- Coverage today = the union of validated domains: bacteria/archaea (FBA full), fungi (FBA capped), viruses (structure),
+  cancer (dependency), monogenic (mode), complex (genetics capped), + conservation-breadth everywhere as the workhorse.
+- The frontier = the complement (where no model transfers) → **honest abstention** (DARK1/TRANSFER1). Growth of "any disease"
+  = adding validated domains (each a new "chapter"), never forcing one model onto biology it doesn't fit. CAPSTONE2 is the
+  proof the composition operates end-to-end and fails safe.
+
+## 19. CROSS-CUTTING THREADS (wired through EVERY stage — not per-stage afterthoughts)
+- **Uncertainty thread (S2→S6):** CALIB1 (ordinal confidence) → CONFORMAL1 (marginal is vacuous for the target class; even
+  class-conditional degrades OOD) → **RULE propagated to every stage: every output carries a confidence; on a novel
+  organism/class, widen/cap it (COMPOSITE3 cap) and never claim nominal coverage OOD.**
+- **Base-rate / study-bias thread:** FAIRGATE1 (risk-ratio gate) + META1 + the study-bias controls (F3CLIN1/GENETICS1/MET4) →
+  **RULE: every enrichment/relevance claim uses base-rate-fair + study-bias-controlled statistics** (this is why several
+  positives survived and several tempting ones were killed).
+- **Safety thread (gate before S4):** hard host-non-homology filter (FRONT1/E2E2) → **RULE: no target reaches intervention
+  design without passing it** (conservation-ranking-as-safety is CLOSED — most-conserved = host-toxic).
+- **Provenance/reproducibility thread (all stages):** pre-registration + reproduce-×2 + first-class negatives + LEDGER →
+  **RULE: every output tagged with evidence-tier + reproduce-sha; a result that fails to reproduce or a confound found is
+  retracted immediately** (V14/N1, host-embedded rule, EXPDESIGN1-G2, CONFORMAL1-marginal all retracted/down-tiered).
+
+## 20. FAILURE-CASCADE map (if a node fails, what downstream is affected → the systemic response)
+- **S1 mechanism fails for a class** (non-metabolic; host-scavenger GEM) → S2 falls back to conservation-breadth or **abstains**
+  → S3/S4 run only on what S2 emits; if S2 abstains, the **whole pipeline abstains** (never fabricates). *Terminal: honest "no
+  trustworthy target from computation; needs experimental data."*
+- **S4 affinity is OPEN/GPU-gated** → S5 cannot validate a *novel* molecule → route to **repurposing** (if a drug exists) or
+  **experimental screening**; never emit a fake potent lead.
+- **S5 wet-lab unavailable** → the loop (§17) cannot close → the engine stays bounded to in-silico hypotheses + validated
+  domains; **publish the validated core + negatives** (the value that does NOT need the loop closed).
+- **S6 mis-fire risk** → caught by CAPSTONE2 fail-safe + 93 unit tests + DARK1; a detected mis-fire → abstain + fix before any
+  claim. **Every cascade terminates in ABSTENTION or EXPERIMENT-ROUTING — never in fabrication.** This is the integrity
+  invariant of the whole graph.
+
+## 21. Phase-1→Phase-2 trigger, resource ROI, and per-stage KPIs (so progress is measurable, not vibes)
+- **Phase-1-complete trigger (computational):** all reachable classes covered-or-abstaining ∧ both halves built-or-honestly-
+  bounded ∧ integration proven (CAPSTONE2 ✓) ∧ every wall characterized ∧ GPU/data-gated items specced. *Status: the
+  un-gated CPU portion is essentially done; ~20–25% of the fullest vision because the gated/open majority remains.*
+- **Phase-2 trigger (real-world):** a collaborator + a nominated target ⇒ run CRISPRIDESIGN1 (O7). This is the ONLY trigger
+  that starts the closed loop (§17).
+- **Acquisition ROI ordering (highest first):** **GPU** (unlocks the 14-weight intervention half) ≈ **wet-lab bench**
+  (unlocks real-world + the loop) ≫ curated eukaryote GEMs / Pf screen (unlock specific bounded gaps) ≫ **more CPU
+  experiments (~0 marginal — the frontier is mapped).**
+- **Per-stage KPIs (measurable):** S2 = odds/risk-ratio + analyst-blind pass-rate (now 4/7) ; S3 = precision@k + abstention-
+  integrity (0 mis-fire — held) ; S4 = modality accuracy (0.814) + repurposing coverage (~1–7%) ; S5 = reproduce-×2 (held
+  throughout) + [future] wet-lab confirm-rate ; S6 = fail-safe pass (CAPSTONE2 ✓) + test suite (93/93).
+
+## 22. THE LOGICAL SPINE (the single "why" chain — every link justified by evidence)
+Vision = best intervention for any disease **⇒** needs mechanism→target→intervention→validation (S1–S5) **⇒** but label-free
+transfer is bounded by biological invariants (**transfer-condition principle**, META1) **⇒** so build per-class validated
+signals + compose + abstain (COMPOSITE/CAPSTONE) **⇒** the one signal that breaks the conservation ceiling is mechanistic
+FBA-essentiality, and it is **metabolic-scoped** (MET1–3; non-metabolic CLOSED ×4) **⇒** target-ID is therefore validated but
+*narrow*, strongest for pathogens (VAL-ESS/BLIND) **⇒** the intervention half needs zero-shot affinity, which is **OPEN/GPU-
+gated** (HIT2/AFFINITY1) **⇒** so no validated novel molecule is producible on CPU **⇒** real-world truth needs a **wet-lab**
+result to close the loop (§17), which is **experiment-gated** (CRISPRIDESIGN1 ready) **⇒** therefore the honest reachable end
+on CPU+open-data is a **validated, reproducible target-ID method + an honest negative map + a fail-safe composing engine**
+(≈3/10 real contribution, ~20–25% of the computational vision) **⇒** and the needle-movers are exactly two acquisitions (a
+**GPU**, a **bench**) + **publication** — each named, none faked. *Every arrow above is a committed experiment or audit; this
+is the connected chain from the vision to the next concrete action, with no missing dot.*
