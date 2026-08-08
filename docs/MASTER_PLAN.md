@@ -475,3 +475,103 @@ on CPU+open-data is a **validated, reproducible target-ID method + an honest neg
 (≈3/10 real contribution, ~20–25% of the computational vision) **⇒** and the needle-movers are exactly two acquisitions (a
 **GPU**, a **bench**) + **publication** — each named, none faked. *Every arrow above is a committed experiment or audit; this
 is the connected chain from the vision to the next concrete action, with no missing dot.*
+
+---
+
+# PART IV — THE FULLEST-VISION ARCHITECTURE (the complete component tree, honestly status-tagged)
+
+*Honest correction: the S0–S6 pipeline in Parts I–III is INTERCEPTA's CURRENT THIN SLICE — a target-ID-centric, mostly-pathogen,
+mostly-metabolic spine. The FULLEST vision ("best therapeutic intervention for ANY disease, from minimal data, all the way to
+the clinic") is a far larger platform. This Part enumerates the ENTIRE architecture it must contain — 7 layers, ~70
+components — so nothing is missing, each tagged: **BUILT · PARTIAL · SEED(toy) · MISSING · OPEN(unsolved science) · GPU-gated ·
+DATA-gated · EXPERIMENT-gated · CLINICAL-gated.** The current slice is a small highlighted subset; most of the vision is
+MISSING/gated, and this Part says exactly what and why.*
+
+**Honest recomputation of completeness against THIS fullest architecture:** the ~20–25% figure was of the narrower "fullest
+*computational* platform buildable without experiments." Against the fullest **end-to-end vision** below (which includes all
+disease classes, all scales, all modalities, preclinical, and clinical), INTERCEPTA is **~5–8%** — deep in one sliver (Layer
+C metabolic target-ID + Layer F methodology), essentially empty in Layers A(breadth), D(most modalities), E(translation),
+and much of B and F. This is the honest denominator the earlier % understated.
+
+## Layer A — Disease universe & multimodal representation (accept ANY disease)
+- **A1 Disease taxonomy across ALL classes:** infectious (bacterial ✅/viral PARTIAL/fungal PARTIAL/parasitic PARTIAL/prion
+  MISSING), cancer (PARTIAL: dependency), genetic (monogenic PARTIAL/complex PARTIAL), **immune/autoimmune/inflammatory
+  MISSING**, **metabolic-disease MISSING**, **cardiovascular MISSING**, **neurodegenerative/psychiatric MISSING**,
+  **developmental/rare beyond-gene MISSING**, **aging MISSING**, environmental/toxic MISSING, idiopathic/**never-seen** (the
+  north-star case: PARTIAL via abstention only).
+- **A2 Multimodal disease input:** genome ✅ · transcriptome SEED · proteome SEED · phenotype/HPO PARTIAL(PHENO1) · GWAS
+  PARTIAL(GENETICS1) · CRISPR-screen PARTIAL(DEPEND1) · **epigenome / metabolome / microbiome / single-cell / spatial /
+  imaging / EHR-clinical / epidemiology / patient-trajectory = MISSING.**
+- **A3 Disease-state & context representation** (tissue, stage, comorbidity, patient sub-population): **MISSING.**
+
+## Layer B — Multi-scale biological understanding (mechanism at every scale)
+- **B1 Molecular:** sequence ✅ · static structure PARTIAL(off-the-shelf AF/fpocket) · **dynamics/MD OPEN/GPU-gated** ·
+  **complexes/co-folding GPU-gated** · biophysics MISSING.
+- **B2 Networks:** metabolism ✅(FBA) · transcriptional regulation CLOSED-as-target-signal(REGNET1) but as a MODEL MISSING ·
+  **signaling MISSING** · **epigenetic regulation MISSING** · PPI/interactome PARTIAL-negative(MET4) · **immune networks
+  MISSING** · host–pathogen PARTIAL-negative(HOSTCTX).
+- **B3 Cell:** **whole-cell models MISSING** · cell-state/single-cell MISSING · cell–cell communication MISSING.
+- **B4 Tissue/organ/organism:** physiology/spatial MISSING · **PK/PD MISSING** · multi-organ MISSING.
+- **B5 Population/evolution:** GWAS PARTIAL(GENETICS1) · **resistance/evolution dynamics OPEN**(AMR1 showed static-biology
+  fails) · epidemiology MISSING.
+- **B6 Causal:** association PARTIAL(GENETICS1) · **causal graphs / counterfactuals / Mendelian-randomization / perturbation
+  modeling = OPEN/MISSING** (a whole domain, ~untouched).
+
+## Layer C — Target / intervention-point identification (the current strength — but narrow)
+- **C1 Essentiality:** metabolic ✅(validated); **non-metabolic CLOSED ×4** (conservation-breadth is the ceiling).
+- **C2 Functional dependency:** ✅(cancer, DEPEND1); does not transfer label-free (TRANSFER1).
+- **C3 Genetics/causal-gene:** PARTIAL(GENETICS1/MENDEL1). **C4 Structural class-ID:** PARTIAL(viruses).
+- **C5 Systems/network targets** (master regulators, network controllability, **combination/multi-target**): MISSING/negative.
+- **C6 Non-protein & hard targets** (RNA, DNA, PPI interfaces, **allosteric**, **degradation-tractable**): MISSING.
+- **C7 Synthetic lethality / collateral vulnerability:** SEED(INTERVENE3/SYNLETH) · context-specific targets MISSING.
+
+## Layer D — Intervention design (the fullest MODALITY space — mostly MISSING)
+- **D1 Small molecules:** de-novo generation SEED(B33/B40) · **novel-target binding affinity OPEN/GPU-gated** (the wall:
+  HIT2/AFFINITY1) · ADMET ✅-standalone · synthesizability ✅-standalone · developability PARTIAL.
+- **D2 Repurposing:** PARTIAL-narrow(INTERVENE1/2). **D3 Modality selection:** PARTIAL(MODALITY1, triage-only).
+- **D4 Biologics** (antibodies/proteins): MISSING. **D5 Nucleic-acid** (ASO/siRNA/mRNA/gene-therapy/**gene-editing**): MISSING
+  (only named in MODALITY1's taxonomy). **D6 Targeted degradation** (PROTAC/molecular-glue): MISSING. **D7 Peptides/macrocycles:**
+  MISSING. **D8 Cell therapies** (CAR-T): MISSING. **D9 Combinations:** SEED(synergy B24–29). **D10 Delivery/formulation:** MISSING.
+
+## Layer E — Validation & translation (in-silico → clinic → real-world)
+- **E1 In-silico validation:** ✅(reproduced ×2, analyst-blind). **E2 Experiment design/active-learning:** PARTIAL(EXPDESIGN1),
+  loop bounded(SIL2). **E3 Wet-lab:** EXPERIMENT-gated (CRISPRIDESIGN1 turnkey design ready). **E4 Preclinical** (organoid/
+  animal/tox): MISSING/EXPERIMENT-gated. **E5 Clinical-trial design & simulation, biomarkers, patient stratification:**
+  MISSING/CLINICAL-gated (response-prediction tested-NEGATIVE, B10/B20). **E6 Regulatory / real-world-evidence / pharmacovigilance:**
+  MISSING.
+
+## Layer F — Meta / AI capabilities (cross-cutting engines)
+- **F1 Foundation models** (sequence/structure/chem/multimodal): SEED(ESM embeddings used; PLMESS1) · **training/large models
+  GPU-gated.** **F2 Reasoning / agentic orchestration:** MISSING. **F3 Causal inference engine:** OPEN/MISSING.
+- **F4 Simulation** (MD, systems-dynamics, PK/PD, evolutionary): OPEN/GPU-gated. **F5 Active/continual/closed-loop learning:**
+  SEED(SIL1/2) bounded to in-domain. **F6 Uncertainty/calibration:** PARTIAL✅(CALIB1/CONFORMAL1 — OOD bound known).
+  **F7 Explainability/provenance:** ✅. **F8 Multi-objective optimization:** SEED(BESTINT1). **F9 Knowledge integration/graphs:**
+  PARTIAL. **F10 Reproducibility/governance:** ✅(the genuine strength). **F11 Safety/ethics/bias governance:** PARTIAL(host-safety
+  filter; abstention) · broader ethics MISSING.
+
+## Layer G — Deployment & real-world operation
+- **G1 Any-disease routing + abstention:** PARTIAL✅(router, CAPSTONE2 — narrow coverage). **G2 Clinician/researcher interface:**
+  MISSING(CLI only). **G3 Continuous update from new data (the closed loop):** SEED, EXPERIMENT-gated (§17). **G4 Collaboration/
+  data-sharing infrastructure:** PARTIAL(docs). **G5 Equity/access/cost, global-health deployment:** MISSING.
+
+## How Part IV connects back to the S0–S6 slice (the honest mapping)
+The S0–S6 pipeline = {A1-partial, A2-partial} → {B2-metabolism, B6-association} → {C1–C4} → {C-safety + F6/F8} →
+{D1-affinity-gated, D2/D3} → {E1, E2-seed, E3-gated} → {F/G governance}. **Everything in Layers A(breadth), B(scales beyond
+metabolism), C5–C7, D4–D10, E4–E6, F1–F5(most), G2/G5 is MISSING or gated** — that is the "lots and lots missing" you named,
+now enumerated so it is not a vague gap but a concrete, prioritized backlog.
+
+## What this reveals for "what to do / what's next" (honest, non-random)
+1. **The vision is ~5–8% built end-to-end** — most of it is MISSING (whole modalities, scales, disease classes, translation)
+   or OPEN/gated (affinity, causal, simulation, foundation-model training, wet-lab, clinical). The earlier ~20–25% was of a
+   narrower denominator; against the fullest architecture it is smaller, and I state that plainly.
+2. **The MISSING items split the same 3 ways (§11):** most are **ACQUISITION** (data modalities A2, GPU for D1/F1/F4,
+   wet-lab/clinical for E3–E6) or **genuine OPEN inventions** (causal B6/F3, novel-target affinity D1, dynamics F4) — only a
+   thin engineering layer is pure CPU-buildable now (e.g., broaden A1 disease-class arms where open data exists; F9 knowledge
+   graph; F5 loop hardening). **This confirms: more CPU experiments cannot build the fullest vision — data, GPU, wet-lab, and
+   a few field-level open inventions are the real content.**
+3. **Highest-leverage additions to the CURRENT slice, in order (each honestly tiered):** (a) GPU → D1 affinity + F1/F4 (the
+   biggest computational chunk); (b) wet-lab → E3 → closes the loop (§17); (c) open-data CPU arms for uncovered A1 classes
+   where a validated signal plausibly exists (immune/metabolic-disease via genetics — extends GENETICS1) — modest but genuine;
+   (d) causal engine (F3/B6) — a genuine open-science build, attempt only with a study-bias-robust design.
+4. **What we will NOT pretend:** we will not claim Layers D4–D10 / E4–E6 / B3–B4 exist or are near — they are MISSING and most
+   need biology, data, or experiments we do not have. Naming them completes the map; building them is gated, not imminent.
