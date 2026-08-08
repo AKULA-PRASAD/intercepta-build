@@ -240,3 +240,94 @@ a door and redirects resource), not a failure to hide.
 - The honest end state we can reach on CPU + open data alone is a **rigorous, validated, honest ~one-fifth computational
   platform + a decisive negative map** — everything beyond needs GPU, data, or a bench. This plan names exactly which, and
   what to do when each is unblocked or each Plan-A fails.
+
+---
+
+# PART II — the deeper connective layers (dependency DAG · invention/engineering/acquisition · combination matrix · state machine)
+
+## 10. The dependency DAG (what unlocks what — the true connected critical path)
+*Objectives/builds as nodes; "→" = enables/unlocks. This is the connective tissue: it shows the LONGEST POLES, not just a list.*
+
+```
+S0 input+autodetect ─┬─> S2 target-ID ─> S3 prioritize/safety ─> S5(in-silico confidence) ─┐
+ (BUILT)             │      (BUILT)           (BUILT)                                        │
+ S1 mechanism ───────┘                                                                       │
+  ├ metabolic FBA (BUILT) ─────────────────────────────────────────────────> feeds S2       │
+  └ non-metabolic (CLOSED×3; PLMESS1=4th) ──X (conservation-breadth is the ceiling)          │
+                                                                                             v
+S4 intervention:  modality (BUILT) ─> repurpose (narrow) ──X coverage ceiling            S6 governance
+                                       └> NOVEL-TARGET AFFINITY  ==[GPU-GATE]==> co-folding  (BUILT: router,
+                                          (OPEN on CPU; the 14-weight half)     /physics       abstain, CAPSTONE2)
+                                                                                   │
+S7 VALIDATION: in-silico ─────────────────────────────==[WET-LAB GATE]==> CRISPRi test ─> prospective ─> clinical
+O9 DISSEMINATION: publish validated core+negatives  (PARALLEL — blocks nothing, delivers the real ~3/10 now)
+```
+**Longest poles (the two gates that gate everything downstream):**
+1. **GPU gate** → unlocks novel-target affinity (O6-D) → the entire **intervention half** (14 weight) → real molecule
+   outputs → meaningful molecule-side Phase-2. *Nothing on the molecule side moves without it.*
+2. **Wet-lab gate** → unlocks O7 → converts the whole in-silico edifice to **confirmed** → the ~3/10→higher real-world jump
+   → prospective → clinical. *Nothing real-world moves without it.*
+**Everything else is either already BUILT (left of the gates) or a modest CPU deepening that does not cross a gate.** So the
+connected truth: **two acquisitions (a GPU, a bench) are the critical path to the fullest vision — not more CPU experiments.**
+
+## 11. Invention vs Engineering vs Acquisition (honest tagging — "every step an invention" is NOT literally true)
+*The directive says "every step a genuine invention." Truth-over-vision requires I disagree precisely: the remaining steps
+split three ways, and the biggest %-movers are ACQUISITIONS, not inventions. Pretending otherwise would be a false claim.*
+
+- **GENUINE INVENTIONS still required (open science — nobody has solved these; do NOT fake):** (a) zero-shot novel-target
+  binding-affinity ranking (O6 — the field's open wall); (b) a homology-independent non-metabolic MECHANISM signal (OPEN if
+  PLMESS1 fails — 4 closures); (c) de-novo mechanism inference from a raw phenotype (O1 deep case); (d) causal disease
+  modeling; (e) resistance-evolvability dynamics (the AMR1 follow-on). These are where "invention/novelty" genuinely lives —
+  and most are GPU- or data-gated, or genuinely unsolved.
+- **ENGINEERING (known method, just build/run — NOT inventions; call them what they are):** class-conditional-conformal
+  productionization; knowledge-graph integration; autonomous-detector refinement; modality-recommender generalization;
+  **running** co-folding/MD (the methods exist — the block is GPU compute, not invention).
+- **ACQUISITION (get a resource/data — zero invention, highest leverage):** a **GPU**; a **wet-lab collaborator**; curated
+  eukaryote GEMs; a genome-wide *P. falciparum* CRISPR screen; larger curated networks.
+**Honest breakdown of the remaining ~75–80%:** it is dominated by **acquisitions + a few genuinely-open inventions**, with a
+thin layer of engineering. This is why "keep spawning CPU experiments" cannot close it — and why the plan's top actions are
+acquisitions + publication, not an infinite CPU experiment stream.
+
+## 12. The COMBINATION / SCENARIO matrix (the explicit "other combination plans" — parallel & cross-objective)
+*Beyond the per-objective A→Z chains (§4), the real world presents COMBINATIONS of outcomes. Here is the pre-planned response
+to each combination, so we "go without pause" but never randomly. Rule: **publication (O9) + acquisition outreach (GPU +
+collaborator) run in PARALLEL in every scenario** — they block nothing and deliver/unlock the most.*
+
+| Scenario (combination of states) | Detection | Pre-planned combined response |
+|---|---|---|
+| **S-A: PLMESS1 fails + no GPU + no bench** (most-likely near-term) | PLMESS1 ΔAUROC<0.03/leakage; no resources | **Consolidate + publish** the validated core+negatives (O9); pursue GPU + collaborator acquisitions in parallel; **STOP CPU experiment spawning** (compute frontier mapped). Honest default. |
+| **S-B: PLMESS1 succeeds** | ΔAUROC≥0.03, survives leakage+study-bias | Bank the foundation-model non-metabolic signal; extend to more organisms (data-permitting, ENGINEERING); integrate into the engine; update manuscript. Then S-A for the rest. |
+| **S-C: GPU acquired** | resource available | Run AFFINITY1 GPU benchmark (O6-D). Pass→intervention half opens (biggest %-jump); Fail→physics/MD (O6-E); Fail→route target to experimental screening (O6-terminal). In parallel: foundation-model mechanism (O2-E'/causal). |
+| **S-D: wet-lab collaborator secured** | partner + bench | Run CRISPRi (O7-A) on the top broad-spectrum nominated target. ≥5× defect→**first real-world confirmation** (the ~3/10→higher jump); <5×→prediction wrong→recalibrate the nominating signal (first-class negative). |
+| **S-E: GPU AND bench both absent long-term** | time passes, no resources | Terminal honest state: the vision is **bounded at the validated compute-only platform + negative map** until resources arrive; publish, keep the ask open, **do not fake progress**. This is an acceptable, honest end for the autonomous phase. |
+| **S-F: publication rejected as "insufficient novelty"** | editor/reviewer verdict | Reframe as a negative-results/reproducibility paper (its genuine strength, per ANTICIPATED_REVIEWS); bioRxiv preprint stands regardless; the contribution is unchanged. |
+| **S-G: a committed result fails to reproduce / a confound found** | reproduce-×2 mismatch / null control | Retract/down-tier in the LEDGER immediately (as done for V14/N1, the "host-embedded" rule, EXPDESIGN1-G2, CONFORMAL1 marginal); integrity over preservation. |
+
+**Combined-fallback logic (no pause, not random):** at any moment, execute the S-row matching the current state; when a
+detection signal fires, transition to the matching S-row; keep O9 + acquisition-outreach running in parallel throughout.
+
+## 13. Current-state decision table (given the state RIGHT NOW → exact next action)
+- **State now:** PLMESS1 running; no GPU; no wet-lab; WebSearch budget exhausted (fetch-by-known-endpoint still works);
+  Phase-1 ~20–25%; publication honesty-pass done; MASTER_PLAN + contingency tree in place.
+- **Immediate next (autonomous):** await PLMESS1 → branch on §4-O2 (bank if positive [verify leakage first]; if negative,
+  enter **S-A**: stop CPU non-metabolic, consolidate).
+- **Parallel-available-now (CPU, autonomous, modest):** remaining publication prep — a ≤25-word title; the off-class-TM and
+  study-matched-cancer nulls (small re-analyses); these are ENGINEERING finishing touches, not needle-movers.
+- **Blocked-pending-acquisition (the needle-movers — need the human):** GPU (→ intervention half), wet-lab collaborator
+  (→ real-world jump). **These are the honest top of the backlog and I cannot self-acquire them.**
+- **Honest statement of the autonomous frontier:** the CPU-only, open-data, zero-budget invention space is **near its honest
+  end**. After PLMESS1 (and the modest publication finishing touches), the genuinely value-adding moves are **acquisitions**
+  (GPU, bench) and **dissemination** — not more autonomous CPU experiments. I will say this plainly rather than manufacture
+  motion.
+
+## 14. Executive synthesis (one screen — nothing missed)
+The vision = best intervention for any disease, computationally. We are ~20–25% of the fullest *computational* platform and
+~3/10 real-world: **deep in metabolic target-ID + validation methodology, empty in the molecule half / systems-biology
+breadth / simulation / foundation-model reasoning / causal.** The pipeline (S0→S6) is BUILT through target-ID +
+prioritization + governance; the **two gates** that gate everything downstream are a **GPU** (→ the intervention/affinity
+half) and a **wet-lab bench** (→ real-world confirmation). The non-metabolic-mechanism door is closed ×3 (PLMESS1 = the 4th
+and last CPU try; then stop). Every objective has a pre-registered failure signal and a pre-planned fallback (§4), and every
+*combination* of outcomes has a pre-planned response (§12). What NOT to do is enumerated (§5). The honest top of the backlog
+is **acquisitions (GPU, collaborator) + publication of the validated core+negatives** — not more CPU experiments, which are
+near their honest end. Truth over vision: we are 100% ready to *execute* what is buildable/known, honest that the rest needs
+resources or genuine open-science inventions we name explicitly and do not fake.
