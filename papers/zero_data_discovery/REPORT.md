@@ -626,7 +626,15 @@ gate). (9) The parasite confound is only partly resolved: the clean same-species
 **cancer cell-line** dependency and **target-relevance** only; patient drug-**response** prediction is tested-and-negative and
 patient/clinical outcome remains gated on prospective data. (11) The functional-dependency signal does **not** transfer
 label-free to a novel zero-screen organism (only the conserved core does). (12) The composite router's class detector is
-minimal and its host-dependent-FBA confidence cap (0.5) is a coarse honesty marker, not a calibrated probability.
+minimal and its host-dependent-FBA confidence cap (0.5) is a coarse honesty marker, not a calibrated probability. (13) The
+meta-analysis (META1) and the base-rate-fair gate (FAIRGATE1) are **post-hoc, exploratory analyses of the same committed suite
+that motivated them** — the fair gate was *not* pre-registered before the blind tests. We mitigate the circularity honestly: it
+is validated by a *data-independent* base-rate-invariance argument (a within-organism flip + a simulation, not by improving the
+suite's pass rate), it does **not** flip any committed pre-registered OR-gate verdict, and it is recommended only for *future*
+prospective tests — but a reader should treat it as a proposed, invariance-validated methodological improvement, not a
+pre-registered confirmatory result. (14) The "transfer-condition law" is a synthesis/operational framework over
+largely-known biology (conserved genes tend to be essential; folds outlast sequence); its contribution is the *operational*
+rule (when to fire vs abstain), the empirical transfer boundary, and the abstention-integrity test — not new molecular biology.
 
 ## Conclusion
 For pathogens with zero activity data, the honest reachable frontier is now mapped and, at its core, **experimentally
