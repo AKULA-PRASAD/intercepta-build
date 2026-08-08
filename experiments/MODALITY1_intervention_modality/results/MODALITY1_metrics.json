@@ -1,0 +1,808 @@
+{
+  "_coherence_check": "PASS - no approved true_modality flagged infeasible by the matrix",
+  "_g3_verdict": "PASS - localization is load-bearing: it eliminates the fail-safe violations the mechanism-only ablation commits",
+  "_payload_sha256": "57b85479e2e72bf1e6c1020242a278b378f32aa5c878c8556c37a7228f492eac",
+  "_provenance": {
+    "determinism": "no RNG; payload sha over sorted-key JSON excluding verdict/provenance",
+    "experiment": "MODALITY1_intervention_modality",
+    "features": "UniProt localization + mechanism (OMIM/ClinVar/lit) + protein-class druggability; causal_node uniform",
+    "fpocket_reuse": "MENDEL1 AlphaFold-v6 fpocket cache for 21 overlapping targets (supplementary, non-gate)",
+    "ground_truth": "experiments/MODALITY1_intervention_modality/ground_truth.json (n=43, cited)"
+  },
+  "_unsafe_misses": [],
+  "_verdict": "PASS - validated cross-class intervention-modality recommender (beats baseline AND fail-safe holds)",
+  "class_counts": {
+    "ABSTAIN": 2,
+    "ASO_siRNA": 7,
+    "ENZYME_PROTEIN_REPLACEMENT": 7,
+    "GENE_THERAPY": 6,
+    "MONOCLONAL_ANTIBODY": 7,
+    "SMALL_MOLECULE_ACTIVATOR": 6,
+    "SMALL_MOLECULE_INHIBITOR": 8
+  },
+  "fpocket_supplementary": {
+    "auroc_sm_vs_not": 0.5787,
+    "n_not": 12,
+    "n_sm": 9,
+    "note": "reused MENDEL1 cache; expected WEAK per MENDEL1 G3 (mechanism+localization determine modality, not pocket score)"
+  },
+  "gates": {
+    "G1_accuracy": true,
+    "G2_fail_safe": true,
+    "G3_localization_load_bearing": true
+  },
+  "majority_baseline": 0.186,
+  "mechonly_ablation": {
+    "accuracy": 0.5581,
+    "fail_safe_infeasible_recs": [
+      "ARSA",
+      "DDC",
+      "HBB_betathal",
+      "HEXA",
+      "RPE65"
+    ],
+    "n_infeasible": 5
+  },
+  "n": 43,
+  "per_row": [
+    {
+      "disease_class": "cancer",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "ASO_siRNA"
+      ],
+      "gene": "ABL1",
+      "id": "ABL1",
+      "localization": "intracellular",
+      "mechanism": "GoF",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "kinase",
+      "true_modality": "SMALL_MOLECULE_INHIBITOR"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "gene": "ADA",
+      "id": "ADA",
+      "localization": "secreted",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "ENZYME_PROTEIN_REPLACEMENT",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ENZYME_PROTEIN_REPLACEMENT"
+    },
+    {
+      "disease_class": "monogenic_metabolic",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "ASO_siRNA"
+      ],
+      "gene": "ALAS1",
+      "id": "ALAS1",
+      "localization": "intracellular",
+      "mechanism": "overactivity",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ASO_siRNA"
+    },
+    {
+      "disease_class": "cardiometabolic",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "APOB",
+      "id": "APOB",
+      "localization": "secreted",
+      "mechanism": "overactivity",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "MONOCLONAL_ANTIBODY",
+      "primary_feasible": true,
+      "protein_class": "other",
+      "true_modality": "ASO_siRNA"
+    },
+    {
+      "disease_class": "cardiometabolic",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "APOC3",
+      "id": "APOC3",
+      "localization": "secreted",
+      "mechanism": "overactivity",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "MONOCLONAL_ANTIBODY",
+      "primary_feasible": true,
+      "protein_class": "other",
+      "true_modality": "ASO_siRNA"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "GENE_THERAPY"
+      ],
+      "gene": "ARSA",
+      "id": "ARSA",
+      "localization": "lysosomal",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "ABSTAIN",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "GENE_THERAPY"
+    },
+    {
+      "disease_class": "cancer",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "ASO_siRNA"
+      ],
+      "gene": "BRAF",
+      "id": "BRAF",
+      "localization": "intracellular",
+      "mechanism": "GoF",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "kinase",
+      "true_modality": "SMALL_MOLECULE_INHIBITOR"
+    },
+    {
+      "disease_class": "neuro",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "CALCA",
+      "id": "CALCA",
+      "localization": "secreted",
+      "mechanism": "overactivity",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "MONOCLONAL_ANTIBODY",
+      "primary_feasible": true,
+      "protein_class": "neuropeptide",
+      "true_modality": "MONOCLONAL_ANTIBODY"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "SMALL_MOLECULE_ACTIVATOR",
+        "GENE_THERAPY"
+      ],
+      "gene": "CBS",
+      "id": "CBS",
+      "localization": "intracellular",
+      "mechanism": "LoF_misfold",
+      "pred_mechonly": "SMALL_MOLECULE_ACTIVATOR",
+      "pred_primary": "SMALL_MOLECULE_ACTIVATOR",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "SMALL_MOLECULE_ACTIVATOR"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "SMALL_MOLECULE_ACTIVATOR",
+        "MONOCLONAL_ANTIBODY",
+        "GENE_THERAPY"
+      ],
+      "gene": "CFTR",
+      "id": "CFTR",
+      "localization": "membrane",
+      "mechanism": "LoF_misfold",
+      "pred_mechonly": "SMALL_MOLECULE_ACTIVATOR",
+      "pred_primary": "SMALL_MOLECULE_ACTIVATOR",
+      "primary_feasible": true,
+      "protein_class": "ion_channel",
+      "true_modality": "SMALL_MOLECULE_ACTIVATOR"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "COL1A1",
+      "id": "COL1A1",
+      "localization": "secreted",
+      "mechanism": "dominant_negative",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "ABSTAIN",
+      "primary_feasible": true,
+      "protein_class": "structural",
+      "true_modality": "ABSTAIN"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "GENE_THERAPY"
+      ],
+      "gene": "DDC",
+      "id": "DDC",
+      "localization": "intracellular",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "GENE_THERAPY",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "GENE_THERAPY"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "ASO_siRNA",
+        "GENE_THERAPY"
+      ],
+      "gene": "DMD",
+      "id": "DMD",
+      "localization": "intracellular",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "GENE_THERAPY",
+      "pred_primary": "GENE_THERAPY",
+      "primary_feasible": true,
+      "protein_class": "structural",
+      "true_modality": "ASO_siRNA"
+    },
+    {
+      "disease_class": "cancer",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "EGFR",
+      "id": "EGFR",
+      "localization": "membrane",
+      "mechanism": "GoF",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "kinase",
+      "true_modality": "SMALL_MOLECULE_INHIBITOR"
+    },
+    {
+      "disease_class": "cancer",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "ERBB2",
+      "id": "ERBB2",
+      "localization": "membrane",
+      "mechanism": "GoF",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "receptor",
+      "true_modality": "MONOCLONAL_ANTIBODY"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "gene": "F8",
+      "id": "F8",
+      "localization": "secreted",
+      "mechanism": "LoF",
+      "pred_mechonly": "GENE_THERAPY",
+      "pred_primary": "ENZYME_PROTEIN_REPLACEMENT",
+      "primary_feasible": true,
+      "protein_class": "secreted_factor",
+      "true_modality": "ENZYME_PROTEIN_REPLACEMENT"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "gene": "F9",
+      "id": "F9",
+      "localization": "secreted",
+      "mechanism": "LoF",
+      "pred_mechonly": "GENE_THERAPY",
+      "pred_primary": "ENZYME_PROTEIN_REPLACEMENT",
+      "primary_feasible": true,
+      "protein_class": "secreted_factor",
+      "true_modality": "GENE_THERAPY"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "gene": "GAA",
+      "id": "GAA",
+      "localization": "lysosomal",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "ENZYME_PROTEIN_REPLACEMENT",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ENZYME_PROTEIN_REPLACEMENT"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "gene": "GBA",
+      "id": "GBA",
+      "localization": "lysosomal",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "ENZYME_PROTEIN_REPLACEMENT",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ENZYME_PROTEIN_REPLACEMENT"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "SMALL_MOLECULE_ACTIVATOR",
+        "GENE_THERAPY"
+      ],
+      "gene": "GLA",
+      "id": "GLA",
+      "localization": "lysosomal",
+      "mechanism": "LoF_misfold",
+      "pred_mechonly": "SMALL_MOLECULE_ACTIVATOR",
+      "pred_primary": "SMALL_MOLECULE_ACTIVATOR",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "SMALL_MOLECULE_ACTIVATOR"
+    },
+    {
+      "disease_class": "monogenic_metabolic",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "ASO_siRNA"
+      ],
+      "gene": "HAO1",
+      "id": "HAO1",
+      "localization": "intracellular",
+      "mechanism": "overactivity",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ASO_siRNA"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "GENE_THERAPY"
+      ],
+      "gene": "HBB",
+      "id": "HBB_betathal",
+      "localization": "intracellular",
+      "mechanism": "LoF",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "GENE_THERAPY",
+      "primary_feasible": true,
+      "protein_class": "globin",
+      "true_modality": "GENE_THERAPY"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "SMALL_MOLECULE_ACTIVATOR",
+        "ASO_siRNA"
+      ],
+      "gene": "HBB",
+      "id": "HBB_sickle",
+      "localization": "intracellular",
+      "mechanism": "toxic_aggregation",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "SMALL_MOLECULE_ACTIVATOR",
+      "primary_feasible": true,
+      "protein_class": "globin",
+      "true_modality": "SMALL_MOLECULE_ACTIVATOR"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "GENE_THERAPY"
+      ],
+      "gene": "HEXA",
+      "id": "HEXA",
+      "localization": "lysosomal",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "ABSTAIN",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ABSTAIN"
+    },
+    {
+      "disease_class": "cardiometabolic",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "HMGCR",
+      "id": "HMGCR",
+      "localization": "membrane",
+      "mechanism": "overactivity",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "SMALL_MOLECULE_INHIBITOR"
+    },
+    {
+      "disease_class": "neuro",
+      "feasible_set": [
+        "ASO_siRNA"
+      ],
+      "gene": "HTT",
+      "id": "HTT",
+      "localization": "intracellular",
+      "mechanism": "toxic_aggregation",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "ASO_siRNA",
+      "primary_feasible": true,
+      "protein_class": "other",
+      "true_modality": "ASO_siRNA"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "gene": "IDS",
+      "id": "IDS",
+      "localization": "lysosomal",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "ENZYME_PROTEIN_REPLACEMENT",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ENZYME_PROTEIN_REPLACEMENT"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "gene": "IDUA",
+      "id": "IDUA",
+      "localization": "lysosomal",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "ENZYME_PROTEIN_REPLACEMENT",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ENZYME_PROTEIN_REPLACEMENT"
+    },
+    {
+      "disease_class": "autoimmune",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "IL6R",
+      "id": "IL6R",
+      "localization": "cell_surface",
+      "mechanism": "overactivity",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "MONOCLONAL_ANTIBODY",
+      "primary_feasible": true,
+      "protein_class": "receptor",
+      "true_modality": "MONOCLONAL_ANTIBODY"
+    },
+    {
+      "disease_class": "cancer",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "ASO_siRNA"
+      ],
+      "gene": "JAK2",
+      "id": "JAK2",
+      "localization": "intracellular",
+      "mechanism": "GoF",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "kinase",
+      "true_modality": "SMALL_MOLECULE_INHIBITOR"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "KCNJ11",
+      "id": "KCNJ11",
+      "localization": "membrane",
+      "mechanism": "GoF",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "ion_channel",
+      "true_modality": "SMALL_MOLECULE_INHIBITOR"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY"
+      ],
+      "gene": "LIPA",
+      "id": "LIPA",
+      "localization": "lysosomal",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "ENZYME_PROTEIN_REPLACEMENT",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ENZYME_PROTEIN_REPLACEMENT"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "SMALL_MOLECULE_ACTIVATOR",
+        "GENE_THERAPY"
+      ],
+      "gene": "PAH",
+      "id": "PAH",
+      "localization": "intracellular",
+      "mechanism": "LoF_misfold",
+      "pred_mechonly": "SMALL_MOLECULE_ACTIVATOR",
+      "pred_primary": "SMALL_MOLECULE_ACTIVATOR",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "SMALL_MOLECULE_ACTIVATOR"
+    },
+    {
+      "disease_class": "cardiometabolic",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "PCSK9",
+      "id": "PCSK9",
+      "localization": "secreted",
+      "mechanism": "overactivity",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "MONOCLONAL_ANTIBODY",
+      "primary_feasible": true,
+      "protein_class": "proprotein_convertase",
+      "true_modality": "MONOCLONAL_ANTIBODY"
+    },
+    {
+      "disease_class": "cancer",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "PDCD1",
+      "id": "PDCD1",
+      "localization": "cell_surface",
+      "mechanism": "overactivity",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "MONOCLONAL_ANTIBODY",
+      "primary_feasible": true,
+      "protein_class": "receptor",
+      "true_modality": "MONOCLONAL_ANTIBODY"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "ASO_siRNA"
+      ],
+      "gene": "PIK3CA",
+      "id": "PIK3CA",
+      "localization": "intracellular",
+      "mechanism": "GoF",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "kinase",
+      "true_modality": "SMALL_MOLECULE_INHIBITOR"
+    },
+    {
+      "disease_class": "monogenic_cancer",
+      "feasible_set": [
+        "SMALL_MOLECULE_INHIBITOR",
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "RET",
+      "id": "RET",
+      "localization": "membrane",
+      "mechanism": "GoF",
+      "pred_mechonly": "SMALL_MOLECULE_INHIBITOR",
+      "pred_primary": "SMALL_MOLECULE_INHIBITOR",
+      "primary_feasible": true,
+      "protein_class": "kinase",
+      "true_modality": "SMALL_MOLECULE_INHIBITOR"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "GENE_THERAPY"
+      ],
+      "gene": "RPE65",
+      "id": "RPE65",
+      "localization": "intracellular",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "ENZYME_PROTEIN_REPLACEMENT",
+      "pred_primary": "GENE_THERAPY",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "GENE_THERAPY"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "ASO_siRNA",
+        "GENE_THERAPY"
+      ],
+      "gene": "SMN1",
+      "id": "SMN1",
+      "localization": "intracellular",
+      "mechanism": "LoF_null",
+      "pred_mechonly": "GENE_THERAPY",
+      "pred_primary": "GENE_THERAPY",
+      "primary_feasible": true,
+      "protein_class": "other",
+      "true_modality": "GENE_THERAPY"
+    },
+    {
+      "disease_class": "neuro",
+      "feasible_set": [
+        "ASO_siRNA"
+      ],
+      "gene": "SOD1",
+      "id": "SOD1",
+      "localization": "intracellular",
+      "mechanism": "toxic_aggregation",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "ASO_siRNA",
+      "primary_feasible": true,
+      "protein_class": "enzyme",
+      "true_modality": "ASO_siRNA"
+    },
+    {
+      "disease_class": "autoimmune",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "TNF",
+      "id": "TNF",
+      "localization": "secreted",
+      "mechanism": "overactivity",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "MONOCLONAL_ANTIBODY",
+      "primary_feasible": true,
+      "protein_class": "cytokine",
+      "true_modality": "MONOCLONAL_ANTIBODY"
+    },
+    {
+      "disease_class": "monogenic",
+      "feasible_set": [
+        "SMALL_MOLECULE_ACTIVATOR",
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "TTR",
+      "id": "TTR",
+      "localization": "secreted",
+      "mechanism": "toxic_aggregation",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "SMALL_MOLECULE_ACTIVATOR",
+      "primary_feasible": true,
+      "protein_class": "transport_carrier",
+      "true_modality": "SMALL_MOLECULE_ACTIVATOR"
+    },
+    {
+      "disease_class": "ophthalmic_cancer",
+      "feasible_set": [
+        "MONOCLONAL_ANTIBODY",
+        "ASO_siRNA"
+      ],
+      "gene": "VEGFA",
+      "id": "VEGFA",
+      "localization": "secreted",
+      "mechanism": "overactivity",
+      "pred_mechonly": "ASO_siRNA",
+      "pred_primary": "MONOCLONAL_ANTIBODY",
+      "primary_feasible": true,
+      "protein_class": "growth_factor",
+      "true_modality": "MONOCLONAL_ANTIBODY"
+    }
+  ],
+  "primary": {
+    "accuracy": 0.814,
+    "balanced_accuracy": 0.8299,
+    "fail_safe_infeasible_recs": [],
+    "misses": [
+      [
+        "ALAS1",
+        "ASO_siRNA",
+        "SMALL_MOLECULE_INHIBITOR",
+        true
+      ],
+      [
+        "APOB",
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        true
+      ],
+      [
+        "APOC3",
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        true
+      ],
+      [
+        "ARSA",
+        "GENE_THERAPY",
+        "ABSTAIN",
+        true
+      ],
+      [
+        "DMD",
+        "ASO_siRNA",
+        "GENE_THERAPY",
+        true
+      ],
+      [
+        "ERBB2",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_INHIBITOR",
+        true
+      ],
+      [
+        "F9",
+        "GENE_THERAPY",
+        "ENZYME_PROTEIN_REPLACEMENT",
+        true
+      ],
+      [
+        "HAO1",
+        "ASO_siRNA",
+        "SMALL_MOLECULE_INHIBITOR",
+        true
+      ]
+    ],
+    "n_correct": 35,
+    "n_unsafe_misses": 0,
+    "per_class_recall": {
+      "ABSTAIN": 1.0,
+      "ASO_siRNA": 0.2857,
+      "ENZYME_PROTEIN_REPLACEMENT": 1.0,
+      "GENE_THERAPY": 0.6667,
+      "MONOCLONAL_ANTIBODY": 0.8571,
+      "SMALL_MOLECULE_ACTIVATOR": 1.0,
+      "SMALL_MOLECULE_INHIBITOR": 1.0
+    }
+  }
+}
