@@ -21,7 +21,7 @@ genome-scale metabolic model, adds target information beyond conservation, and �
 gene-knockout data — is enriched for experimentally essential genes across **six CURATED genome-scale models spanning three phyla
 (γ-proteobacteria, Firmicutes, Actinobacteria), all clearing a pre-registered OR>3 gate (odds ratios 4.3–45; precision/recall up to
 0.68/0.79)**; the genuinely novel-pathogen case (no curated model) is separately confirmed on de-novo reconstructions of two held-out
-WHO critical-priority pathogens (*K. pneumoniae*, *A. baumannii*), which also pass but more weakly (sparser de-novo models). 6/7 pre-locked E. coli predictions are experimentally essential. Crucially, we ran a **prospective-blind suite across all three domains of life** (7 never-seen organisms; predictions locked — for most, git-committed — *before* the experimental answer was consulted), and it reveals a **sharp, honest prokaryote/eukaryote split (4 pass / 3 fail)**. Every **prokaryote with an adequate metabolic model passes** the gate: three bacterial phyla (*N. gonorrhoeae* OR 6.1; *C. jejuni* OR 3.9; *B. thetaiotaomicron*, a new phylum, OR 8.0) and — crossing into a second domain of life — an **archaeon** (*M. maripaludis*, OR 4.2, the suite's highest precision/recall). The failures are reported first-class and un-tuned, and they fall *predictably* on invariant/model boundaries: a host-scavenging kinetoplastid (*T. brucei*, OR 0.6 — a genuine invariant break), a sparse 13-gene de-novo model (*S. pneumoniae*, OR 3.0 — a model-quality floor), and a free-living fungus that shows **real, highly significant enrichment (p≈4×10⁻⁵) yet sits just below the bacteria-calibrated OR>3 bar** (*K. phaffii*, OR 2.4). The disciplined reading: the "self-contained metabolism" signal transfers robustly across the prokaryotic world including a second domain, while in eukaryotes it is genuine but weaker under a bacteria-calibrated gate (retrospective eukaryote tests — yeast OR 4.7, *Candida* OR 13.9 — *do* clear it). That the signal predicts on a never-seen *domain* and fails *coherently along biological boundaries* rather than at random is the signature of genuine generalization, not memorization — the strongest evidence obtainable without a wet lab that it *predicts, not postdicts*, with a mechanistically-explained deployment envelope.
+WHO critical-priority pathogens (*K. pneumoniae*, *A. baumannii*), which also pass but more weakly (sparser de-novo models). 6/7 pre-locked E. coli predictions are experimentally essential. Crucially, we ran an **analyst-blind suite across all three domains of life** (7 never-seen organisms; predictions locked — for most, git-committed — *before* the experimental answer was consulted; this is *analyst*-blindness against **existing public** knockout data — version-control-enforced ordering — **not** a wet-lab prospective test), and it reveals a **sharp, honest prokaryote/eukaryote split (4 pass / 3 fail)**. Every **prokaryote with an adequate metabolic model passes** the gate: three bacterial phyla (*N. gonorrhoeae* OR 6.1; *C. jejuni* OR 3.9; *B. thetaiotaomicron*, a new phylum, OR 8.0) and — crossing into a second domain of life — an **archaeon** (*M. maripaludis*, OR 4.2, the suite's highest precision/recall). The failures are reported first-class and un-tuned, and they fall *predictably* on invariant/model boundaries: a host-scavenging kinetoplastid (*T. brucei*, OR 0.6 — a genuine invariant break), a sparse 13-gene de-novo model (*S. pneumoniae*, OR 3.0 — a model-quality floor), and a free-living fungus that shows **real, highly significant enrichment (p≈4×10⁻⁵) yet sits just below the bacteria-calibrated OR>3 bar** (*K. phaffii*, OR 2.4). The disciplined reading: the "self-contained metabolism" signal transfers robustly across the prokaryotic world including a second domain, while in eukaryotes it is genuine but weaker under a bacteria-calibrated gate (retrospective eukaryote tests — yeast OR 4.7, *Candida* OR 13.9 — *do* clear it). That the signal predicts on a never-seen *domain* and fails *coherently along biological boundaries* rather than at random is the signature of genuine generalization, not memorization — the strongest evidence obtainable without a wet lab that it *predicts, not postdicts*, with a mechanistically-explained deployment envelope.
 **(3) A shipped, honest engine:** the validated signals compose into a single disease-agnostic engine that turns a pathogen
 genome into a **safe, calibrated-confidence, provenance-tagged, abstaining** target shortlist, scored on seven axes
 (essentiality, conservation, non-metabolic recall, structural homology, a hard host-non-homology safety filter,
@@ -34,7 +34,7 @@ core, and an engine that reports what it cannot know.
 
 **Part II — generalization beyond bacteria, and the composite (2026-08).** We then asked the North Star question directly:
 does this extend to *any* disease class? We find it does — **but not uniformly, and the correct signal differs by biology**,
-a result we formalize as a **transfer-condition law**: each label-free signal transfers from one genome to another exactly as
+a result we formalize as a **transfer-condition principle**: each label-free signal transfers from one genome to another exactly as
 far as the biological invariant it rides on is conserved. **(a) Viruses:** cross-family *sequence* homology to drugged proteins
 is below detection (0/30 SARS-CoV-2 proteins), but blind *structural* homology recovers the correct drugged-enzyme class for the
 approved targets where sequence gives nothing — hardened across **five viruses** (SARS-CoV-2, HIV, influenza, HCV, HSV; 7/9
@@ -55,7 +55,7 @@ thus delivered as **honest decision coverage — a real answer where a signal tr
 not a universal model.**
 
 **Keywords:** zero-data drug discovery, antibacterial target identification, flux balance analysis, gene essentiality,
-metabolic modeling, WHO priority pathogens, honest machine learning, applicability domain, resistance robustness, pre-registered prospective validation.
+metabolic modeling, WHO priority pathogens, honest machine learning, applicability domain, resistance robustness, pre-registered analyst-blind (lock-before-reveal) validation.
 
 ## The question
 When a new pathogen appears with **zero activity data** — no known inhibitors, no assays, no training labels — how far
@@ -123,8 +123,9 @@ precision 0.78, recall 0.10** — clearing the same pre-registered gate. *Honest
 match) was inconclusive because the experimental set uses locus tags absent from UniProt (1/613 mapped); we corrected the
 experimental-set mapping via sequence homology (an objective namespace fix) while the **predictions stayed locked and hash-verified
 unchanged** — disclosed because the adjudication was finalized after an inconclusive first attempt. This is the strongest
-prospective evidence obtainable without a wet lab: the mechanism signal *predicts* experimental essentiality on a pre-registered,
-genuinely novel pathogen. (Scope unchanged: essentiality-enrichment only; sparse de-novo GEM → low recall; not wet-lab.)
+analyst-blind (lock-before-reveal) evidence obtainable without a wet lab: the mechanism signal *predicts* experimental
+essentiality on a pre-registered, genuinely novel pathogen (predictions locked/committed before the existing experimental
+answer was consulted — not a wet-lab prospective test). (Scope unchanged: essentiality-enrichment only; sparse de-novo GEM → low recall; not wet-lab.)
 
 **Prospective-blind SUITE (BLIND1–7) — across all THREE DOMAINS OF LIFE (honest: passes where the invariant holds, fails where it
 breaks).** We extended the lock-then-reveal protocol to a suite spanning bacteria (multiple phyla), an **archaeon**, and
@@ -157,7 +158,7 @@ note the retrospective eukaryote tests GENERALIZE4 [yeast, OR 4.7] and HARDENF1 
 eukaryote signal is genuine, not absent). That a mechanism validated on bacteria transfers *by principle* to an archaeon — and
 that its failures fall *predictably* on invariant/model boundaries rather than at random — is the signature of genuine
 generalization, not memorization (an overfit would neither predict on a never-seen domain nor fail so coherently). Net:
-**prospective-blind validation across all three domains of life, 4 pass / 3 fail, with a
+**analyst-blind validation across all three domains of life, 4 pass / 3 fail, with a
 mechanistically-explained transfer boundary** — a stronger and more honest claim than any perfect sweep.
 
 **A meta-analysis across all 19 committed FBA-essentiality-vs-experiment organisms (META1) refines what the boundary *is* — and
@@ -300,7 +301,7 @@ tested-and-negative (B20/B10/B17, downgraded). The validated signals compose int
 - **A well-controlled negative-boundary on zero-data target-ID:** conservation is the ceiling; more homology (sequence,
   structural, or learned) mostly re-encodes it — a result the field's positive-publication bias rarely produces,
   established against degree/conservation nulls with calibrated abstention.
-- **A transfer-condition law + a disease-class-aware composite (Part II).** The central conceptual contribution: each
+- **A transfer-condition principle + a disease-class-aware composite (Part II).** The central conceptual contribution: each
   label-free target-ID signal transfers to a novel genome only as far as the biological invariant it rides on is conserved
   (metabolic self-containment for FBA, sequence identity for homology, fold conservation for structure, core-genome membership
   for conservation, an existing screen for functional dependency). This makes "any disease" a *composition of validated models
@@ -407,9 +408,9 @@ targets for **any** disease — including unseen or emerging ones?* Part II conf
 protocol (pre-registration, reproduce-×2, controlled nulls, negatives first-class). The answer is a qualified, honest **yes**,
 and its shape is the central conceptual contribution.
 
-### The transfer-condition law
+### The transfer-condition principle
 Naively, "any disease" invites a single universal model. Our evidence shows that would be *dishonest*: **the signal that carries
-target-discovery information is different for different biology.** We formalize this as a **transfer-condition law** — each
+target-discovery information is different for different biology.** We formalize this as a **transfer-condition principle** — each
 label-free signal transfers from a studied genome A to a novel genome B *exactly as far as the biological invariant it rides on
 is conserved*:
 
@@ -632,7 +633,7 @@ that motivated them** — the fair gate was *not* pre-registered before the blin
 is validated by a *data-independent* base-rate-invariance argument (a within-organism flip + a simulation, not by improving the
 suite's pass rate), it does **not** flip any committed pre-registered OR-gate verdict, and it is recommended only for *future*
 prospective tests — but a reader should treat it as a proposed, invariance-validated methodological improvement, not a
-pre-registered confirmatory result. (14) The "transfer-condition law" is a synthesis/operational framework over
+pre-registered confirmatory result. (14) The "transfer-condition principle" is a synthesis/operational framework over
 largely-known biology (conserved genes tend to be essential; folds outlast sequence); its contribution is the *operational*
 rule (when to fire vs abstain), the empirical transfer boundary, and the abstention-integrity test — not new molecular biology.
 
@@ -647,7 +648,7 @@ this work is a reproducible method, an honest negative map, and an experimentall
 result can enter as high-tier evidence.
 
 Part II extends this from bacteria to a general principle. "Any disease" is achievable not as a single universal model but as a
-**composition of validated signals routed by biology** — a transfer-condition law that says which signal is trustworthy for
+**composition of validated signals routed by biology** — a transfer-condition principle that says which signal is trustworthy for
 which organism, realized as a router that applies what is validated and **abstains** where it is not. We demonstrate honest
 decision coverage across bacteria, a fungal pathogen, five viruses, and human cancer, with the boundaries drawn by first-class
 negatives (dependency does not transfer label-free to a zero-screen organism; patient response prediction fails replication) and

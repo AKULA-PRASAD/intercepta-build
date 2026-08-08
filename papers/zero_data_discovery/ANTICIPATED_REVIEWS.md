@@ -169,8 +169,12 @@ never lean on it for a robustness claim in the response to reviewers.
    is specified and cheap, even though unrun.)
 
 ## The revisions we should make BEFORE submitting (all cheap, all honest)
-1. Downgrade **"prospective-blind" → "analyst-blind / lock-before-reveal"** and **"law" → "principle/heuristic"** throughout
-   (R2, R4). Removes the two most quotable overclaims at zero cost to substance.
+1. ✅ **APPLIED 2026-08-08.** Downgraded **"prospective-blind" → "analyst-blind (lock-before-reveal)"** and
+   **"transfer-condition law" → "transfer-condition principle"** throughout the manuscript, + an explicit abstract clause
+   ("*analyst*-blindness against existing public knockout data — version-control-enforced ordering — NOT a wet-lab
+   prospective test"). Removes the two most quotable overclaims at zero cost to substance. (Remaining R2/R4-adjacent uses of
+   "prospective" in REPORT.md are the honest caveats — "prospective assays/wet-lab/data", "prospective only in the held-out
+   sense … not a prospective wet-lab test" — and are left as-is.)
 2. Wall off **META1/FAIRGATE into an explicitly-labeled "Exploratory (post-hoc)" subsection** (R3).
 3. Add an **off-class TM null** for the viral result (R6) and a **study-intensity-matched null** next to the cancer
    recovery@10 headline (R7).
