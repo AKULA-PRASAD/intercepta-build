@@ -67,6 +67,7 @@ from typing import Optional
 # ======================================================================================================
 class BiologyClass(str, Enum):
     BACTERIUM = "bacterium"                          # free-living bacterium
+    ARCHAEON = "archaeon"                             # free-living archaeon (3rd domain of life; BLIND6)
     FREE_EUKARYOTE = "free_eukaryote"                # free-living eukaryote / fungus (e.g. yeast)
     VIRUS = "virus"                                  # no metabolism
     HOST_DEPENDENT_PARASITE = "host_dependent_parasite"  # e.g. Plasmodium (host-embedded metabolism)
@@ -112,10 +113,12 @@ _ALL = frozenset(BiologyClass)
 TRANSFER_GATE: dict[Signal, SignalSpec] = {
     Signal.FBA_ESSENTIALITY: SignalSpec(
         signal=Signal.FBA_ESSENTIALITY,
-        # FULL-GRADE domain (unchanged): free-living self-contained metabolism.
-        domain=frozenset({BiologyClass.BACTERIUM, BiologyClass.FREE_EUKARYOTE}),
+        # FULL-GRADE domain: free-living self-contained metabolism. ARCHAEON added (BLIND6, curated iMR539
+        # GEM, prospective-blind git-committed-before-reveal FBA PASS OR 4.23) -- a 3rd-domain-of-life
+        # self-contained genome, NOT host-embedded; additive, changes no prior committed router verdict.
+        domain=frozenset({BiologyClass.BACTERIUM, BiologyClass.ARCHAEON, BiologyClass.FREE_EUKARYOTE}),
         built=True, discovery_grade=True,
-        evidence="MET1-3, VAL-ESS, CROSSVAL, BLIND1 (bacteria OR 5-64); GENERALIZE4 (yeast OR 4.65); HARDENF1 (Candida OR 13.93)",
+        evidence="MET1-3, VAL-ESS, CROSSVAL, BLIND1 (bacteria OR 5-64); BLIND6 (archaeon M. maripaludis OR 4.23, prospective-blind); GENERALIZE4 (yeast OR 4.65); HARDENF1 (Candida OR 13.93)",
         out_of_domain_note=("full-grade transfer needs a self-contained metabolism; not applicable to viruses "
                             "(no metabolism); host-dependent organisms are NOT out-of-domain but CAPPED/UNCERTAIN "
                             "(see uncertain_domain) -- GEM-topology-contingent, not knowable a-priori"),
@@ -164,9 +167,9 @@ TRANSFER_GATE: dict[Signal, SignalSpec] = {
     ),
     Signal.CONSERVATION_BREADTH: SignalSpec(
         signal=Signal.CONSERVATION_BREADTH,
-        domain=frozenset({BiologyClass.BACTERIUM, BiologyClass.FREE_EUKARYOTE}),
+        domain=frozenset({BiologyClass.BACTERIUM, BiologyClass.ARCHAEON, BiologyClass.FREE_EUKARYOTE}),
         built=True, discovery_grade=True,
-        evidence="REACH1 (AUROC 0.86 for the FBA-blind non-metabolic essential half)",
+        evidence="REACH1 (AUROC 0.86 for the FBA-blind non-metabolic essential half); archaeon rides the same conserved-core invariant (BLIND6 self-contained genome)",
         out_of_domain_note="rides the conserved-core invariant of self-contained genomes",
     ),
     Signal.HOST_SAFETY: SignalSpec(
@@ -203,6 +206,8 @@ class RoutingDecision:
     uncertain: bool = False                   # True iff >=1 fired signal is a CAPPED (GEM-contingent) transfer
     uncertainty_flags: list = field(default_factory=list)  # list[dict]: {signal, confidence_cap, note, evidence}
     confidence_cap: Optional[float] = None    # min cap over uncertain fired signals (None = full-grade)
+    # ---- ROUTERAUTO1: the auto class-detection trace (None when the class was hand-declared via decide) --
+    detection: Optional[dict] = None          # {biology_class, source, rule, reasons, requires_descriptor}
 
     def to_dict(self):
         d = asdict(self)
@@ -363,6 +368,26 @@ class CompositeRouter:
         cls, src = detect_class(proteome_size=proteome_size, declared_class=declared_class,
                                 host_dependent=host_dependent)
         return decide(cls, organism=organism, class_source=src, has_curated_gem=has_curated_gem)
+
+    # ---- ROUTERAUTO1: AUTONOMOUS class detection from objective features, then the UNCHANGED gate -----
+    def decide_auto(self, organism: str, features=None,
+                    declared_class: Optional[BiologyClass] = None) -> RoutingDecision:
+        """Front-end for `decide`: AUTO-detect the biology class from objective `ProteomeFeatures`
+        (intercepta.class_detector) and then apply the UNCHANGED COMPOSITE1/2/3 transfer-gate logic. This is
+        the automation that completes limitation 12 — the class no longer has to be hand-specified. The data
+        descriptors carried on the features (has_curated_gem) are passed through to `decide` verbatim, so the
+        capped/flagged COMPOSITE3 behaviour is preserved exactly. Pure logic; no I/O.
+
+        `features` is a `class_detector.ProteomeFeatures`. `declared_class` (optional) still wins if supplied,
+        keeping full backward compatibility with the hand-specified path."""
+        from .class_detector import detect_biology_class, ProteomeFeatures
+        f = features if features is not None else ProteomeFeatures()
+        det = detect_biology_class(features=f, declared_class=declared_class)
+        dec = decide(BiologyClass(det.biology_class), organism=organism, class_source=det.source,
+                     has_curated_gem=f.has_curated_gem)
+        # surface the detection trace on the decision so callers can audit WHY this class was chosen
+        dec.detection = det.to_dict()
+        return dec
 
     # ---- execution ---------------------------------------------------------
     def run_fba_composite(self, organism: str, engine_kwargs: dict, top: int = 30) -> dict:

@@ -64,3 +64,60 @@ honestly** — build where INVENTABLE-NOW, characterize where OPEN-PROBLEM, name
 ever** — a hypothesis is labeled a hypothesis; an open problem is not dressed as solved. This is how "100% ready" and "always real
 and scientific" hold together: ready to invent where invention is genuinely possible, honest where it requires new technology or
 new data we do not yet have.
+
+## REMAINING COMPUTATIONAL BUILD — execution backlog (2026-08-07; per the "compute-complete before external channels" directive)
+*The full remaining computational surface toward the North Star, ordered by leverage × buildability, honestly tiered. External
+channels (publication/collaboration) are deferred until this is built out. Each BUILDABLE item is a genuine invention with a
+pre-registered validation; a rigorous NEGATIVE is a first-class result, not a failure.*
+
+**Wave A — in flight (launched 2026-08-07):**
+- **NONMET1 · BUILDABLE-NOW · the single biggest gap on the validated spine.** FBA covers only ~half of drug targets; the
+  **non-metabolic essential half** (proteases, polymerases, ribosomal/structural — exactly what a novel pandemic presents) has
+  **no honest mechanistic signal** since MET4 (PPI-centrality) died of study bias and the coexpression control collapsed the lift.
+  New, study-bias-*resistant* hypothesis to test: **essentiality is encoded in conserved genomic context** (synteny / conserved
+  gene-neighborhoods with known essentials) — homology-adjacent but neighborhood-based, so immune to literature study-bias.
+  Pre-registered gate: does it add beyond the conservation null on the *non-metabolic* subproteome vs experimental essentiality?
+  PASS → a genuine ceiling-break for the FBA-blind half; FAIL → a first-class negative closing another door (as MET4 did).
+- **ROUTERAUTO1 · BUILDABLE-NOW · completes limitation (12).** The router's class detector is currently minimal/hand-specified.
+  Build + validate an **autonomous biology-class detector** (raw proteome + data descriptors → class → the empirically-correct
+  signal), leave-one-out over all committed organisms, with fail-safe abstention preserved (must NOT confidently route the
+  dark-proteome / novel-zero-screen cases). Honest scope: automates the routing + abstention that is currently hand-set; it does
+  **not** claim to solve a-priori transfer prediction (COMPOSITE3 showed that is not a-priori decidable at n=2 — inherited as the
+  capped/flagged uncertainty). Makes "any disease in → routed answer out" actually autonomous.
+
+**Wave A+ — also in flight (launched 2026-08-07, alongside NONMET1/ROUTERAUTO1):**
+- **MENDEL1 · BUILDABLE-NOW · new disease paradigm.** Human **monogenic/Mendelian** disease: the causal gene is genetically
+  established, so the task is intervention-MODE reasoning (LoF→restore/potentiate vs GoF→inhibit/silence) + druggability triage +
+  honest abstention where the answer is "not a small-molecule target." A *different* zero-data shape than cancer's
+  popularity-confounded dependency.
+- **AFFINITY1 · OPEN-PROBLEM, honest attempt · the intervention half.** Feasibility-first co-folding (Boltz/Chai) test of
+  zero-shot novel-target affinity ranking, head-to-head vs the docking baseline. Three honest outcomes: crack / bound-negative /
+  CPU-infeasible-with-GPU-spec. Not faking — attempting the wall, reporting evidence.
+
+**Wave B — next (BUILDABLE, queued behind the current wave's quality gate):**
+- **GENETICS1 · the missing human-disease arm (found by the 2026-08-07 first-principles re-derivation).** The three human
+  disease paradigms are somatic **cancer** (DEPEND1, built), germline **monogenic** (MENDEL1, in flight) — and the largest,
+  **common/complex/polygenic** disease, which we do NOT cover. Human **genetics** (GWAS→gene via L2G/colocalization, Open
+  Targets Genetics) is a real target-ID signal that **sidesteps the popularity-confound** that sank generic human target-ID
+  (DEPEND1/F3CLIN1), because genetic causality is not research-attention-inferred. Pre-registered validation: are
+  genetically-supported targets enriched for approved-drug targets (the Nelson-2015 ~2× effect), and does it beat a
+  study-bias/popularity null? PASS = the third human arm; NEGATIVE = an honest bound. Completes human-disease coverage
+  (cancer + Mendelian + complex).
+- **Other new-class COVERAGE:** **helminths**, **antimicrobial-resistance genes as targets** — each a new validated router arm
+  vs known drugged targets in that class.
+- **GEM-quality lift for eukaryotes** — META1's driver #1 is model quality; a curated-GEM ingestion path could move the blind
+  eukaryote fails (K. phaffii) above a fair gate. BUILDABLE (data-integration), incremental.
+
+**Deeper frontiers surfaced by the re-derivation (honestly tiered — do not fake):**
+- **Disease-mechanism inference from PHENOTYPE alone** (no causal gene given — the deepest "any disease" case): largely
+  OPEN/SEMI-OPEN. Tractable sub-piece = phenotype/HPO → candidate-gene via known gene-phenotype maps (a lookup+ranking, honest);
+  true de-novo mechanism inference from a phenotype with no prior is OPEN — characterize, don't fake.
+- **Modality selection** (small molecule vs biologic vs ASO vs gene therapy vs enzyme replacement): MENDEL1 builds the
+  intervention-mode seed; generalizing it into a validated modality-recommender is a real BUILDABLE Wave-C capability
+  (validatable against approved-drug modalities per target class).
+
+**OPEN-PROBLEM (attempt only what is rigorously validatable CPU-only; never fake):** Frontier 2 novel-target affinity ranking
+(HIT2/B49/B65 nulls stand); Frontier 3 dark-fold *function* (apo-pocket druggability already ≈ random per FRONT2 — so a dark
+structural module would largely re-derive that negative; deprioritized); binding-site-level true selectivity (FRONT2: resource-gated).
+
+**GATED (not computational — deferred, already staged):** wet-lab validation (CRISPRIDESIGN1 turnkey), clinical.

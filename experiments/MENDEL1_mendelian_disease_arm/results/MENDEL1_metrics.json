@@ -1,0 +1,378 @@
+{
+  "_g3_verdict": "NEGATIVE \u2014 fpocket druggability does not add / harms the triage",
+  "_payload_sha256": "cb1be2437b386ed839129b3dadf7af7836ae3ca319b14f17b449af7e4b78d1ae",
+  "_provenance": {
+    "determinism": "no RNG; payload sha over sorted-key JSON excluding verdict/provenance",
+    "experiment": "MENDEL1_mendelian_disease_arm",
+    "ground_truth": "experiments/MENDEL1_mendelian_disease_arm/ground_truth.json (n=28, cited)",
+    "note": "HTT (P42858) absent from AlphaFold DB (>size limit) -> fpocket None; PRIMARY triage unaffected.",
+    "structures": "AlphaFold DB v6 models; fpocket (bioinfo env) best-pocket Druggability Score"
+  },
+  "_unsafe_misses": [],
+  "_verdict": "PASS \u2014 new validated Mendelian coverage arm (mode triage beats baseline AND fail-safe holds)",
+  "fpocket_arm": {
+    "auroc_sm_feasible_vs_not": 0.6358,
+    "delta_balanced_accuracy_vs_primary": -0.0333,
+    "n_scored": 27,
+    "variantA_balanced_accuracy": 0.7935,
+    "variantA_fail_safe_unsafe_calls": [
+      "F8"
+    ],
+    "variantA_per_class_recall": {
+      "INHIBIT_SM": 0.5714,
+      "NOT_SM": 0.9,
+      "RESTORE_SM": 0.9091
+    }
+  },
+  "gates": {
+    "G1_accuracy": true,
+    "G2_fail_safe": true,
+    "G3_fpocket_adds_value": false
+  },
+  "majority_baseline": 0.3929,
+  "n": 28,
+  "naive_direction_baseline_accuracy": 0.4643,
+  "naive_direction_fail_safe_violations": 10,
+  "per_gene": [
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.918,
+      "gene": "ADA",
+      "mut_class": "null",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.724,
+      "gene": "ATP7B",
+      "mut_class": "mixed",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "transporter",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.675,
+      "gene": "CBS",
+      "mut_class": "missense_misfold",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.898,
+      "gene": "CFTR",
+      "mut_class": "missense_misfold",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "ion_channel",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "DN",
+      "fpocket_drug_score": 0.224,
+      "gene": "COL1A1",
+      "mut_class": "missense_glycine",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "structural",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.32,
+      "gene": "CTNS",
+      "mut_class": "mixed",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "transporter",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.113,
+      "gene": "DMD",
+      "mut_class": "null",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "structural",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.654,
+      "gene": "F8",
+      "mut_class": "mixed",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "secreted",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.109,
+      "gene": "F9",
+      "mut_class": "mixed",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "secreted",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.74,
+      "gene": "GAA",
+      "mut_class": "null",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.248,
+      "gene": "GBA",
+      "mut_class": "missense_misfold",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.215,
+      "gene": "GLA",
+      "mut_class": "missense_misfold",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "TOXIC_AGG",
+      "fpocket_drug_score": 0.939,
+      "gene": "HBB",
+      "mut_class": "missense_point",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "globin",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.705,
+      "gene": "HEXA",
+      "mut_class": "null",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "TOXIC_AGG",
+      "fpocket_drug_score": null,
+      "gene": "HTT",
+      "mut_class": "expansion",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "other",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.143,
+      "gene": "IDUA",
+      "mut_class": "null",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "GoF",
+      "fpocket_drug_score": 0.648,
+      "gene": "KCNJ11",
+      "mut_class": "missense_activating",
+      "pred_primary": "INHIBIT_SM",
+      "pred_variantA": "INHIBIT_SM",
+      "protein_class": "ion_channel",
+      "sm_feasible": true,
+      "true_mode": "INHIBIT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.663,
+      "gene": "NF1",
+      "mut_class": "mixed",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "other",
+      "sm_feasible": true,
+      "true_mode": "INHIBIT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.799,
+      "gene": "OTC",
+      "mut_class": "mixed",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.884,
+      "gene": "PAH",
+      "mut_class": "missense_misfold",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "GoF",
+      "fpocket_drug_score": 0.261,
+      "gene": "PIK3CA",
+      "mut_class": "missense_activating",
+      "pred_primary": "INHIBIT_SM",
+      "pred_variantA": "INHIBIT_SM",
+      "protein_class": "kinase",
+      "sm_feasible": true,
+      "true_mode": "INHIBIT_SM"
+    },
+    {
+      "consequence": "GoF",
+      "fpocket_drug_score": 0.023,
+      "gene": "RET",
+      "mut_class": "missense_activating",
+      "pred_primary": "INHIBIT_SM",
+      "pred_variantA": "INHIBIT_SM",
+      "protein_class": "kinase",
+      "sm_feasible": true,
+      "true_mode": "INHIBIT_SM"
+    },
+    {
+      "consequence": "GoF",
+      "fpocket_drug_score": 0.988,
+      "gene": "SCN4A",
+      "mut_class": "missense_activating",
+      "pred_primary": "INHIBIT_SM",
+      "pred_variantA": "INHIBIT_SM",
+      "protein_class": "ion_channel",
+      "sm_feasible": true,
+      "true_mode": "INHIBIT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.422,
+      "gene": "SMN1",
+      "mut_class": "null",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "other",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "TOXIC_AGG",
+      "fpocket_drug_score": 0.249,
+      "gene": "SOD1",
+      "mut_class": "missense_misfold",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "enzyme",
+      "sm_feasible": false,
+      "true_mode": "NOT_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.41,
+      "gene": "TSC2",
+      "mut_class": "mixed",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "other",
+      "sm_feasible": true,
+      "true_mode": "INHIBIT_SM"
+    },
+    {
+      "consequence": "TOXIC_AGG",
+      "fpocket_drug_score": 0.551,
+      "gene": "TTR",
+      "mut_class": "missense_misfold",
+      "pred_primary": "RESTORE_SM",
+      "pred_variantA": "RESTORE_SM",
+      "protein_class": "transport_carrier",
+      "sm_feasible": true,
+      "true_mode": "RESTORE_SM"
+    },
+    {
+      "consequence": "LoF",
+      "fpocket_drug_score": 0.495,
+      "gene": "VHL",
+      "mut_class": "mixed",
+      "pred_primary": "NOT_SM",
+      "pred_variantA": "NOT_SM",
+      "protein_class": "other",
+      "sm_feasible": true,
+      "true_mode": "INHIBIT_SM"
+    }
+  ],
+  "primary": {
+    "accuracy": 0.8571,
+    "balanced_accuracy": 0.8268,
+    "fail_safe_unsafe_calls": [],
+    "misses": [
+      [
+        "NF1",
+        "INHIBIT_SM",
+        "NOT_SM"
+      ],
+      [
+        "SMN1",
+        "RESTORE_SM",
+        "NOT_SM"
+      ],
+      [
+        "TSC2",
+        "INHIBIT_SM",
+        "NOT_SM"
+      ],
+      [
+        "VHL",
+        "INHIBIT_SM",
+        "NOT_SM"
+      ]
+    ],
+    "per_class_recall": {
+      "INHIBIT_SM": 0.5714,
+      "NOT_SM": 1.0,
+      "RESTORE_SM": 0.9091
+    }
+  }
+}

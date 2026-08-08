@@ -1,0 +1,51 @@
+{
+  "payload": {
+    "deliverable_pointers": {
+      "feasibility": "FEASIBILITY.md",
+      "gpu_spec": "GPU_BENCHMARK_SPEC.md",
+      "novelty_split_cached": "$INTERCEPTA_DATA/affinity1/test_novelty.csv",
+      "prereg": "PREREG.md",
+      "runner": "run.py"
+    },
+    "docking_baseline_to_beat": {
+      "auroc_overall": 0.4285,
+      "random": 0.5,
+      "source": "HIT2 (thrombin, AutoDock Vina)"
+    },
+    "feasibility_gate": {
+      "G1_install": {
+        "evidence": "pip install boltz -> boltz-2.2.1 installed cleanly into a fresh venv on Python 3.11.14 (arm64). Python 3.13 first FAILED: it forced scipy to build from source (no wheel) and needs a Fortran compiler (flang/gfortran) absent here; downgrading the venv to 3.11 resolved it. torch 2.13.0 CPU, rdkit 2026.3.5.",
+        "pass": true
+      },
+      "G2_single_complex": {
+        "cap_minutes": 20,
+        "evidence": "Actually launched `boltz predict` on ONE thrombin(L+H)+ligand complex, --accelerator cpu --use_msa_server --seed 42. One-time weight download 3.6 GB (boltz2_conf.ckpt 2.3 GB + boltz2_aff.ckpt 1.3 GB) + CCD mols. MSA retrieved from the colabfold mmseqs2 server. Structure diffusion ran at 500-550% CPU. Peak RSS ~2.6 GB (NO OOM; well under the ~15 GB cap). Process ran 10 min 38 s total wall-clock (download+MSA+~7 min pure inference) and had NOT produced the affinity_*.json when it was terminated (SIGTERM) to finalize the run. So G2 is recorded as NOT-completed-in-window (not a clean pass); no OOM.",
+        "oom": false,
+        "pass": false
+      }
+    },
+    "method_under_test": "Boltz-2 (v2.2.1) co-folding + affinity head (affinity_pred_value, affinity_probability_binary)",
+    "preregistered_gate_carried_to_gpu": {
+      "FAIL": "otherwise -> first-class BOUNDED-NEGATIVE",
+      "PASS": "overall AUROC >= 0.60 AND > 0.4285 (docking) AND novel-vs-inactive AUROC >= 0.60"
+    },
+    "problem": "Frontier 2 (OPEN-PROBLEM): zero-shot binding-affinity RANKING for a target with zero activity data",
+    "scope": "in-silico; one target (thrombin, docking's most favourable case); CPU-only arm64, NO GPU/CUDA; a confidence/affinity PROXY not measured affinity; enrichment != proven activity; not wet-lab; no SOTA claim; the co-folding method is UNtested here (compute-gated), not refuted.",
+    "target": "thrombin (CHEMBL204), receptor 1OYT (same target/receptor/compounds as HIT2)",
+    "throughput_infeasibility": {
+      "n_actives": 292,
+      "n_compounds_full_headtohead": 553,
+      "n_novel_actives": 5,
+      "note": "Even at an optimistic ~7-15 min/complex (pure inference, no OOM), 553 complexes ~ 64-138 CPU-hours; the pre-registered <=24h subsample (~40 complexes) was also not completed in-session. Full/subsample head-to-head is therefore compute-gated -> GPU spec."
+    },
+    "verdict": "CPU_INFEASIBLE",
+    "verdict_long": "The co-folding invention is COMPUTE-GATED on this CPU-only Apple-Silicon machine, not refuted. G1 install PASSED; a single-complex CPU inference did NOT complete in the observation window and, decisively, the throughput required for the 553-compound head-to-head (and even the pre-registered subsample) exceeds the feasible in-session CPU budget. The definitive head-to-head is delivered as a ready-to-run GPU spec."
+  },
+  "payload_sha256": "556ba69d4403a75ad90342e21ea8aded2a7b22d9f97906ef42d9b2c72daa7089",
+  "provenance": {
+    "boltz_version": "2.2.1",
+    "git_sha": "587032aefcc90d3daf2d23bb3aad9ad7ff9d06f1",
+    "hardware": "Apple M4, 10 core, 16 GB RAM, arm64, macOS, NO GPU/CUDA",
+    "python": "3.11.14"
+  }
+}

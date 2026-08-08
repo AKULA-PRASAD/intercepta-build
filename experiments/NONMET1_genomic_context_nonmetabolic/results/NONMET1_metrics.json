@@ -1,0 +1,89 @@
+{
+  "experiment": "NONMET1_genomic_context_nonmetabolic",
+  "gate": {
+    "require_delta_auroc_ge": 0.03,
+    "require_enrichment_OR_gt": 2.0,
+    "require_fisher_p_lt": 0.01,
+    "studybias_delta_auroc_ge": 0.02
+  },
+  "gate_eval_ecoli": {
+    "PASS_primary": false,
+    "PASS_studybias_robust": false,
+    "passA_delta_auroc": false,
+    "passB_enrichment": true
+  },
+  "hypothesis": "conserved genomic CONTEXT (synteny breadth) enriches non-metabolic essentiality and adds BEYOND raw sequence-conservation breadth",
+  "params": {
+    "W_synteny_window": 5,
+    "cov_mode": 0,
+    "cv": "StratifiedKFold_5_shuffleFalse",
+    "evalue": 1e-05,
+    "k_neighborhood": 4,
+    "logreg_C": 1.0,
+    "panel_size": 12,
+    "rbh_cov": 0.5,
+    "rbh_min_seq_id": 0.3
+  },
+  "provenance": {
+    "data": "/Users/kalki/intercepta_data/nonmet1",
+    "generated": "2026-08-07T21:17:45",
+    "runtime_s": 0.4
+  },
+  "results": {
+    "ecoli": {
+      "auroc_M1_own_only": 0.907832,
+      "auroc_M2_own_plus_context": 0.923673,
+      "auroc_M2b_own_plus_conditional_synteny": 0.928995,
+      "delta_auroc_conditional_beyond_own": 0.021163,
+      "delta_auroc_context_beyond_own": 0.015841,
+      "enrichment_context_median_thr": 0.181818,
+      "enrichment_contingency": {
+        "both": 178,
+        "hi_noness": 1296,
+        "lo_ess": 1,
+        "neither": 1072
+      },
+      "enrichment_fisher_p": 0.0,
+      "enrichment_odds_ratio": 147.234568,
+      "n_experimental_essential": 179,
+      "n_nonmetabolic_tested": 2547,
+      "organism": "E_coli",
+      "pearson_own_vs_context": 0.839009,
+      "prevalence": 0.070279,
+      "spearman_own_vs_context": 0.882106,
+      "stdcoef_context_in_M2": 0.783756,
+      "stdcoef_own_in_M2": 0.928473,
+      "study_proxy_pearson_with_context": 0.257524,
+      "studybias_auroc_M3_own_plus_study": 0.928937,
+      "studybias_auroc_M4_own_study_context": 0.941327,
+      "studybias_delta_auroc_context_beyond_own_study": 0.012389,
+      "truth_source": "PEC_class1"
+    },
+    "mtb": {
+      "auroc_M1_own_only": 0.699478,
+      "auroc_M2_own_plus_context": 0.700175,
+      "auroc_M2b_own_plus_conditional_synteny": 0.700656,
+      "delta_auroc_conditional_beyond_own": 0.001178,
+      "delta_auroc_context_beyond_own": 0.000697,
+      "enrichment_context_median_thr": 0.0,
+      "enrichment_contingency": {
+        "both": 241,
+        "hi_noness": 2675,
+        "lo_ess": 0,
+        "neither": 0
+      },
+      "enrichment_fisher_p": 1.0,
+      "enrichment_odds_ratio": NaN,
+      "n_experimental_essential": 241,
+      "n_nonmetabolic_tested": 2916,
+      "organism": "M_tuberculosis",
+      "pearson_own_vs_context": 0.674942,
+      "prevalence": 0.082647,
+      "spearman_own_vs_context": 0.562763,
+      "stdcoef_context_in_M2": 0.214473,
+      "stdcoef_own_in_M2": 0.631591,
+      "truth_source": "DeJesus2017_ES"
+    }
+  },
+  "verdict": "FAIL (first-class NEGATIVE) \u2014 genomic-context/synteny conservation does NOT add a decisive signal beyond raw sequence-conservation breadth on the E. coli non-metabolic subproteome (\u0394AUROC=+0.016 vs gate +0.030; enrichment OR=147.23, p=0.0e+00). Own-vs-context Pearson r=0.84 (largely collinear). Closes the 'genomic context cracks the non-metabolic half' door, as MET4 closed PPI."
+}
