@@ -1,0 +1,582 @@
+{
+  "payload": {
+    "axes": {
+      "breadth_frac": "BESTINT1: FBA cross-organism breadth / 7",
+      "condition_robust": "BESTINT1: CONDROB robust=1 / partial=0.5",
+      "druggability": "BESTINT1: fpocket max druggability [0,1]",
+      "durability_norm": "DYNAMICS2 (NEW): 1 - mean_contact_entropy/ln(20); higher = more durable (lower ESM-2 masked-marginal entropy at drug-contact residues)",
+      "exp_essential_orgs": "PREDVAL: # of {E.coli, K.pneumoniae, M.tb} experimentally essential (0-3)",
+      "resistance_robust": "BESTINT1: SYNLETH monotherapy=1 / combination=0.5"
+    },
+    "composite_axes_used_noDur": [
+      "breadth_frac",
+      "druggability"
+    ],
+    "composite_axes_used_withDur": [
+      "breadth_frac",
+      "druggability",
+      "durability_norm"
+    ],
+    "composite_method": "Equal-weight z-score aggregation (population std, ddof=0) computed WITHIN the full-coverage intersection set, over the informative (non-zero-variance) axes. z_composite_noDur = mean z over BESTINT1 axes; z_composite_withDur adds durability. Unfitted equal weights by design (no ground truth of 'best durable target' exists to fit -> fitting would fabricate confidence, per BESTINT1). Delta isolates durability's effect because the method is identical except for the added axis.",
+    "composite_zero_variance_axes_dropped": [
+      "condition_robust",
+      "resistance_robust"
+    ],
+    "coverage": {
+      "n_targets": 19,
+      "with_bestint1_axes": 10,
+      "with_durability": 18,
+      "with_exp_essentiality": 10,
+      "with_full_axes_and_durability": 9
+    },
+    "delta_from_adding_durability": {
+      "fallers_when_durability_added": [
+        "murE",
+        "murF",
+        "murG"
+      ],
+      "risers_when_durability_added": [
+        "dxr",
+        "folP",
+        "mraY"
+      ]
+    },
+    "durability_augmented_composite": [
+      {
+        "bestint1_composite_noDur_raw": 0.9151,
+        "durability_norm": 0.9274,
+        "gene": "murB",
+        "rank_delta": 0,
+        "rank_noDur": 1,
+        "rank_withDur": 1,
+        "resistance_liability_label": "LOW",
+        "z_composite_noDur": 1.0511,
+        "z_composite_withDur": 0.9259
+      },
+      {
+        "bestint1_composite_noDur_raw": 0.8766,
+        "durability_norm": 0.9544,
+        "gene": "dxr",
+        "rank_delta": 1,
+        "rank_noDur": 3,
+        "rank_withDur": 2,
+        "resistance_liability_label": "LOW",
+        "z_composite_noDur": 0.6933,
+        "z_composite_withDur": 0.7808
+      },
+      {
+        "bestint1_composite_noDur_raw": 0.9011,
+        "durability_norm": 0.8937,
+        "gene": "murG",
+        "rank_delta": -1,
+        "rank_noDur": 2,
+        "rank_withDur": 3,
+        "resistance_liability_label": "LOW",
+        "z_composite_noDur": 0.941,
+        "z_composite_withDur": 0.736
+      },
+      {
+        "bestint1_composite_noDur_raw": 0.8036,
+        "durability_norm": 0.8715,
+        "gene": "mraY",
+        "rank_delta": 1,
+        "rank_noDur": 5,
+        "rank_withDur": 4,
+        "resistance_liability_label": "LOW",
+        "z_composite_noDur": 0.0666,
+        "z_composite_withDur": 0.0764
+      },
+      {
+        "bestint1_composite_noDur_raw": 0.8721,
+        "durability_norm": 0.7045,
+        "gene": "murF",
+        "rank_delta": -1,
+        "rank_noDur": 4,
+        "rank_withDur": 5,
+        "resistance_liability_label": "LOW",
+        "z_composite_noDur": 0.658,
+        "z_composite_withDur": -0.1068
+      },
+      {
+        "bestint1_composite_noDur_raw": 0.7944,
+        "durability_norm": 0.8179,
+        "gene": "murD",
+        "rank_delta": 0,
+        "rank_noDur": 6,
+        "rank_withDur": 6,
+        "resistance_liability_label": "LOW",
+        "z_composite_noDur": -0.0611,
+        "z_composite_withDur": -0.1941
+      },
+      {
+        "bestint1_composite_noDur_raw": 0.634,
+        "durability_norm": 0.9874,
+        "gene": "folP",
+        "rank_delta": 1,
+        "rank_noDur": 8,
+        "rank_withDur": 7,
+        "resistance_liability_label": "HIGH",
+        "z_composite_noDur": -1.3784,
+        "z_composite_withDur": -0.4863
+      },
+      {
+        "bestint1_composite_noDur_raw": 0.7764,
+        "durability_norm": 0.7017,
+        "gene": "murE",
+        "rank_delta": -1,
+        "rank_noDur": 7,
+        "rank_withDur": 8,
+        "resistance_liability_label": "LOW",
+        "z_composite_noDur": -0.2027,
+        "z_composite_withDur": -0.6902
+      },
+      {
+        "bestint1_composite_noDur_raw": 0.5845,
+        "durability_norm": 0.9018,
+        "gene": "glmU",
+        "rank_delta": 0,
+        "rank_noDur": 9,
+        "rank_withDur": 9,
+        "resistance_liability_label": "LOW",
+        "z_composite_noDur": -1.7678,
+        "z_composite_withDur": -1.0418
+      }
+    ],
+    "durability_ranking_all_covered": [
+      {
+        "durability_norm": 0.9874,
+        "gene": "folP",
+        "label": "HIGH",
+        "mean_contact_entropy": 0.0378
+      },
+      {
+        "durability_norm": 0.9544,
+        "gene": "dxr",
+        "label": "LOW",
+        "mean_contact_entropy": 0.1366
+      },
+      {
+        "durability_norm": 0.9388,
+        "gene": "murA",
+        "label": "LOW",
+        "mean_contact_entropy": 0.1834
+      },
+      {
+        "durability_norm": 0.9274,
+        "gene": "murB",
+        "label": "LOW",
+        "mean_contact_entropy": 0.2176
+      },
+      {
+        "durability_norm": 0.9091,
+        "gene": "ddlB",
+        "label": "LOW",
+        "mean_contact_entropy": 0.2724
+      },
+      {
+        "durability_norm": 0.9018,
+        "gene": "glmU",
+        "label": "LOW",
+        "mean_contact_entropy": 0.2943
+      },
+      {
+        "durability_norm": 0.8937,
+        "gene": "murG",
+        "label": "LOW",
+        "mean_contact_entropy": 0.3184
+      },
+      {
+        "durability_norm": 0.8715,
+        "gene": "mraY",
+        "label": "LOW",
+        "mean_contact_entropy": 0.3848
+      },
+      {
+        "durability_norm": 0.8493,
+        "gene": "alr",
+        "label": "LOW",
+        "mean_contact_entropy": 0.4514
+      },
+      {
+        "durability_norm": 0.8297,
+        "gene": "gyrA",
+        "label": "HIGH",
+        "mean_contact_entropy": 0.5101
+      },
+      {
+        "durability_norm": 0.8179,
+        "gene": "murD",
+        "label": "LOW",
+        "mean_contact_entropy": 0.5456
+      },
+      {
+        "durability_norm": 0.7045,
+        "gene": "murF",
+        "label": "LOW",
+        "mean_contact_entropy": 0.8853
+      },
+      {
+        "durability_norm": 0.7017,
+        "gene": "murE",
+        "label": "LOW",
+        "mean_contact_entropy": 0.8938
+      },
+      {
+        "durability_norm": 0.6933,
+        "gene": "embB",
+        "label": "HIGH",
+        "mean_contact_entropy": 0.9189
+      },
+      {
+        "durability_norm": 0.6886,
+        "gene": "parC",
+        "label": "HIGH",
+        "mean_contact_entropy": 0.9329
+      },
+      {
+        "durability_norm": 0.3581,
+        "gene": "inhA",
+        "label": "HIGH",
+        "mean_contact_entropy": 1.9229
+      },
+      {
+        "durability_norm": 0.1563,
+        "gene": "rpsL",
+        "label": "HIGH",
+        "mean_contact_entropy": 2.5276
+      },
+      {
+        "durability_norm": 0.0827,
+        "gene": "rpoB",
+        "label": "HIGH",
+        "mean_contact_entropy": 2.748
+      }
+    ],
+    "durability_transform": "durability_norm = 1 - mean_contact_entropy / ln(20)  [monotone, higher=more durable]",
+    "experiment": "DURABLETARGETS1_durability_augmented_scorecard",
+    "kind": "INTEGRATION (composition of committed, reproduced-x2 in-silico axes; NOT new science)",
+    "scope": "Target-QUALITY triage / decision-support scorecard. INTEGRATION of committed in-silico axes -- NOT new validation, NOT a drug, NOT clinical. Durability carries DYNAMICS's bounds: AUROC ~0.83 (n=26, PLM-proxy, STATIC single drug-bound structure, confound-softened strict significance) and applies ONLY to targets with a (crystal/predicted) drug-binding pocket; targets without one get durability=NA (honest, not imputed). exp-essentiality is displayed and used as the independent truth axis; it is NOT folded into the composite (mirrors BESTINT1, avoids circularity). Cross-organism/ortholog-transferred; hypotheses; not wet-lab.",
+    "scorecard": [
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "DCS",
+        "durability_mean_contact_entropy": 0.4514,
+        "durability_norm": 0.8493,
+        "durability_pdb": "1EPV",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "alr",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": null
+      },
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "PHY",
+        "durability_mean_contact_entropy": 0.2724,
+        "durability_norm": 0.9091,
+        "durability_pdb": "2DLN",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "ddlB",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": null
+      },
+      {
+        "bestint1_composite_noDur": 0.8766,
+        "breadth_frac": 0.571,
+        "condition_robust": 1.0,
+        "druggability": 0.935,
+        "durability_ligand": "FOM",
+        "durability_mean_contact_entropy": 0.1366,
+        "durability_norm": 0.9544,
+        "durability_pdb": "1ONP",
+        "exp_essential_norm": 1.0,
+        "exp_essential_orgs": 3,
+        "gene": "dxr",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "95E",
+        "durability_mean_contact_entropy": 0.9189,
+        "durability_norm": 0.6933,
+        "durability_pdb": "7BVF",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "embB",
+        "resistance_liability_label": "HIGH",
+        "resistance_robust": null
+      },
+      {
+        "bestint1_composite_noDur": 0.634,
+        "breadth_frac": 0.143,
+        "condition_robust": 1.0,
+        "druggability": 0.393,
+        "durability_ligand": "SAN",
+        "durability_mean_contact_entropy": 0.0378,
+        "durability_norm": 0.9874,
+        "durability_pdb": "1AJ0",
+        "exp_essential_norm": 0.0,
+        "exp_essential_orgs": 0,
+        "gene": "folP",
+        "resistance_liability_label": "HIGH",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": 0.5845,
+        "breadth_frac": 0.143,
+        "condition_robust": 1.0,
+        "druggability": 0.195,
+        "durability_ligand": "UD1",
+        "durability_mean_contact_entropy": 0.2943,
+        "durability_norm": 0.9018,
+        "durability_pdb": "1HV9",
+        "exp_essential_norm": 1.0,
+        "exp_essential_orgs": 3,
+        "gene": "glmU",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "CPF",
+        "durability_mean_contact_entropy": 0.5101,
+        "durability_norm": 0.8297,
+        "durability_pdb": "2XCT",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "gyrA",
+        "resistance_liability_label": "HIGH",
+        "resistance_robust": null
+      },
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "ZID",
+        "durability_mean_contact_entropy": 1.9229,
+        "durability_norm": 0.3581,
+        "durability_pdb": "1ZID",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "inhA",
+        "resistance_liability_label": "HIGH",
+        "resistance_robust": null
+      },
+      {
+        "bestint1_composite_noDur": 0.8111,
+        "breadth_frac": 0.571,
+        "condition_robust": 1.0,
+        "druggability": 0.673,
+        "durability_ligand": null,
+        "durability_mean_contact_entropy": null,
+        "durability_norm": null,
+        "durability_pdb": null,
+        "exp_essential_norm": 1.0,
+        "exp_essential_orgs": 3,
+        "gene": "ispE",
+        "resistance_liability_label": null,
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": 0.8036,
+        "breadth_frac": 0.429,
+        "condition_robust": 1.0,
+        "druggability": 0.786,
+        "durability_ligand": "57M",
+        "durability_mean_contact_entropy": 0.3848,
+        "durability_norm": 0.8715,
+        "durability_pdb": "5CKR",
+        "exp_essential_norm": 0.6667,
+        "exp_essential_orgs": 2,
+        "gene": "mraY",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "FFQ",
+        "durability_mean_contact_entropy": 0.1834,
+        "durability_norm": 0.9388,
+        "durability_pdb": "1UAE",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "murA",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": null
+      },
+      {
+        "bestint1_composite_noDur": 0.9151,
+        "breadth_frac": 0.714,
+        "condition_robust": 1.0,
+        "druggability": 0.946,
+        "durability_ligand": "EPU",
+        "durability_mean_contact_entropy": 0.2176,
+        "durability_norm": 0.9274,
+        "durability_pdb": "2MBR",
+        "exp_essential_norm": 1.0,
+        "exp_essential_orgs": 3,
+        "gene": "murB",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": 0.7944,
+        "breadth_frac": 0.286,
+        "condition_robust": 1.0,
+        "druggability": 0.892,
+        "durability_ligand": "UMA",
+        "durability_mean_contact_entropy": 0.5456,
+        "durability_norm": 0.8179,
+        "durability_pdb": "3UAG",
+        "exp_essential_norm": 1.0,
+        "exp_essential_orgs": 3,
+        "gene": "murD",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": 0.7764,
+        "breadth_frac": 0.286,
+        "condition_robust": 1.0,
+        "druggability": 0.82,
+        "durability_ligand": "UAG",
+        "durability_mean_contact_entropy": 0.8938,
+        "durability_norm": 0.7017,
+        "durability_pdb": "1E8C",
+        "exp_essential_norm": 1.0,
+        "exp_essential_orgs": 3,
+        "gene": "murE",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": 0.8721,
+        "breadth_frac": 0.571,
+        "condition_robust": 1.0,
+        "druggability": 0.917,
+        "durability_ligand": "1LG",
+        "durability_mean_contact_entropy": 0.8853,
+        "durability_norm": 0.7045,
+        "durability_pdb": "2AM1",
+        "exp_essential_norm": 1.0,
+        "exp_essential_orgs": 3,
+        "gene": "murF",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": 0.9011,
+        "breadth_frac": 0.714,
+        "condition_robust": 1.0,
+        "druggability": 0.89,
+        "durability_ligand": "UD1",
+        "durability_mean_contact_entropy": 0.3184,
+        "durability_norm": 0.8937,
+        "durability_pdb": "1NLM",
+        "exp_essential_norm": 1.0,
+        "exp_essential_orgs": 3,
+        "gene": "murG",
+        "resistance_liability_label": "LOW",
+        "resistance_robust": 1.0
+      },
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "LFX",
+        "durability_mean_contact_entropy": 0.9329,
+        "durability_norm": 0.6886,
+        "durability_pdb": "3RAE",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "parC",
+        "resistance_liability_label": "HIGH",
+        "resistance_robust": null
+      },
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "RFP",
+        "durability_mean_contact_entropy": 2.748,
+        "durability_norm": 0.0827,
+        "durability_pdb": "1I6V",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "rpoB",
+        "resistance_liability_label": "HIGH",
+        "resistance_robust": null
+      },
+      {
+        "bestint1_composite_noDur": null,
+        "breadth_frac": null,
+        "condition_robust": null,
+        "druggability": null,
+        "durability_ligand": "SRY",
+        "durability_mean_contact_entropy": 2.5276,
+        "durability_norm": 0.1563,
+        "durability_pdb": "1FJG",
+        "exp_essential_norm": null,
+        "exp_essential_orgs": null,
+        "gene": "rpsL",
+        "resistance_liability_label": "HIGH",
+        "resistance_robust": null
+      }
+    ],
+    "shortlist_top5_durability_augmented": [
+      "murB",
+      "dxr",
+      "murG",
+      "mraY",
+      "murF"
+    ],
+    "source_metrics": {
+      "BESTINT1_composite": "equal-weight mean(druggability, breadth, resistance, condition); Spearman(score, expEssOrgs)=0.6896",
+      "DYNAMICS2_durability_auroc": 0.827381,
+      "DYNAMICS2_durability_mwu_p": 0.00506,
+      "DYNAMICS2_n": 26,
+      "DYNAMICS2_subset_antibacterial_auroc": 0.818182,
+      "PREDVAL_focus_broadspectrum_druggable": 9
+    },
+    "verdict": "INTEGRATION DELIVERED: a durability-augmented multi-axis antibacterial target-quality scorecard -- the differentiated deliverable's capstone; composition of committed results, not new science."
+  },
+  "payload_sha256": "e3a5ea141f09102175bf599802b300fed88b28dbb7f028768c5021b2756a3993",
+  "provenance": {
+    "note": "provenance excluded from payload_sha256 (deterministic reproduction).",
+    "sources": {
+      "BESTINT1": {
+        "git_sha": "106603f08679b3736e5e3b0c167dfd47157eb26b",
+        "utc": "2026-08-05T22:08:35Z"
+      },
+      "DYNAMICS2": {
+        "env": "intercepta (torch/tf)",
+        "model": "facebook/esm2_t30_150M_UR50D",
+        "runtime_s": 1.5
+      },
+      "PREDVAL": {
+        "git_sha": "3e382458153078c94b317fc113b2fe775db4127a",
+        "utc": "2026-08-05T19:21:36Z"
+      }
+    }
+  }
+}
