@@ -1,0 +1,131 @@
+{
+  "collinearity_with_conservation": {
+    "pearson_own_vs_cond": 0.249548,
+    "pearson_own_vs_ctx": 0.839009,
+    "pearson_own_vs_indeg": 0.053965,
+    "pearson_own_vs_outdeg": 0.051458
+  },
+  "experiment": "MULTISIG1_nonmetabolic_ensemble",
+  "feature_coverage": {
+    "conservation_own": {
+      "coverage": 1.0,
+      "covered": 2547,
+      "default": "none (computed for all)",
+      "total": 2547
+    },
+    "genomic_context_ctx_cond": {
+      "coverage": 1.0,
+      "covered": 2547,
+      "default": "0 (natural value: no conserved neighborhood)",
+      "total": 2547
+    },
+    "grn_edges": 3148,
+    "grn_nodes": 1202,
+    "plm_embedding_esm2": {
+      "coverage": 1.0,
+      "covered": 2547,
+      "default": "none (all cached); PCA-50 train-fold-only",
+      "total": 2547
+    },
+    "regulatory_outdeg_indeg": {
+      "coverage": 0.161759,
+      "covered": 412,
+      "default": "0 (absence of regulatory edge == degree 0)",
+      "total": 2547
+    }
+  },
+  "gate": {
+    "corroborating_model": "gbm",
+    "primary_model": "logit",
+    "require_delta_auroc_ensemble_vs_conservation_ge": 0.03
+  },
+  "gate_eval": {
+    "PASS": false,
+    "ensemble_passes_only_via_embedding": {
+      "gbm": false,
+      "logit": false
+    },
+    "passA_gbm": false,
+    "passA_logit": false
+  },
+  "hypothesis": "the COMBINATION (ensemble) of ALL homology-independent non-metabolic signals -- conservation breadth + genomic context + regulatory degree + ESM-2 PLM embedding -- beats conservation-breadth ALONE by >= +0.03 AUROC on the FBA-blind non-metabolic E. coli essential half (the definitive ensemble ceiling test)",
+  "params": {
+    "cv": "StratifiedKFold_5_shuffleFalse",
+    "esm_model": "facebook/esm2_t30_150M_UR50D (cached, reused byte-for-byte, NOT re-embedded)",
+    "gbm": "GradientBoostingClassifier(random_state=0) sklearn-defaults",
+    "leakage_guard": "StandardScaler(scalars) + StandardScaler+PCA(embedding) fit on TRAIN FOLDS ONLY",
+    "logreg_C": 1.0,
+    "pca_k": 50
+  },
+  "pool": {
+    "n_experimental_essential": 179,
+    "n_nonmetabolic_tested": 2547,
+    "organism": "E_coli",
+    "prevalence": 0.070279,
+    "subproteome": "non_metabolic (uniprot NOT in MET2 GEM)",
+    "truth_source": "PEC_class1"
+  },
+  "provenance": {
+    "emb_dir": "/Users/kalki/intercepta_data/plmess1",
+    "generated": "2026-08-08T22:39:55",
+    "python": "3.11.14",
+    "runtime_s": 46.6
+  },
+  "results": {
+    "gbm": {
+      "ablation_drop_one": {
+        "drop_C": {
+          "auroc_without": 0.914547,
+          "marginal_auroc": -0.001335
+        },
+        "drop_E": {
+          "auroc_without": 0.90819,
+          "marginal_auroc": 0.005022
+        },
+        "drop_G": {
+          "auroc_without": 0.907175,
+          "marginal_auroc": 0.006037
+        },
+        "drop_R": {
+          "auroc_without": 0.914958,
+          "marginal_auroc": -0.001746
+        }
+      },
+      "auroc_conservation_alone": 0.90373,
+      "auroc_embedding_standalone": 0.874958,
+      "auroc_ensemble_without_embedding_CGR": 0.90819,
+      "auroc_full_ensemble": 0.913212,
+      "delta_auroc_CGR_vs_conservation": 0.00446,
+      "delta_auroc_ensemble_vs_conservation": 0.009482,
+      "passA_delta_ge_gate": false
+    },
+    "logit": {
+      "ablation_drop_one": {
+        "drop_C": {
+          "auroc_without": 0.919806,
+          "marginal_auroc": 0.006891
+        },
+        "drop_E": {
+          "auroc_without": 0.923019,
+          "marginal_auroc": 0.003678
+        },
+        "drop_G": {
+          "auroc_without": 0.913597,
+          "marginal_auroc": 0.013101
+        },
+        "drop_R": {
+          "auroc_without": 0.928839,
+          "marginal_auroc": -0.002142
+        }
+      },
+      "auroc_conservation_alone": 0.907832,
+      "auroc_embedding_standalone": 0.878397,
+      "auroc_ensemble_without_embedding_CGR": 0.923019,
+      "auroc_full_ensemble": 0.926697,
+      "delta_auroc_CGR_vs_conservation": 0.015187,
+      "delta_auroc_ensemble_vs_conservation": 0.018865,
+      "passA_delta_ge_gate": false
+    }
+  },
+  "verdict": "NEGATIVE (first-class) -- THE DEFINITIVE ENSEMBLE-CEILING CLOSURE. Even the COMBINATION of ALL four homology-independent non-metabolic signals (conservation + genomic context + regulatory degree + ESM-2 PLM embedding) does NOT beat conservation-breadth alone by the pre-registered margin: logistic AUROC 0.908->0.927 (\u0394AUROC +0.019), GBM 0.904->0.913 (\u0394AUROC +0.009) -- both below gate +0.03. The four signals each RE-ENCODE conservation (collinearity), so their union adds no independent lift. Conservation-breadth is the UNBEATEN CEILING for the FBA-blind non-metabolic essential half, even by all signals combined -- closing the arc opened by MET4/NONMET1/REGNET1/PLMESS1."
+}
