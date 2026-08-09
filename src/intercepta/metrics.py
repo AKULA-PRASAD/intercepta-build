@@ -71,3 +71,54 @@ def fair_gate(both, fba_only, exp_only, neither, alpha=0.01, T=1.0, n_boot=20000
     verdict = bool((lo > 1.0) and (rr >= T) and (float(p) < alpha))
     return {"RR": rr, "RR_ci95": [lo, hi], "fisher_p_greater": float(p), "odds_ratio": odds_ratio,
             "precision": precision, "base_rate": base_rate, "PASS": verdict, "T": T, "alpha": alpha}
+
+
+# ---- CONFORMAL abstention (productionizes CONFORMAL1) ------------------------------------------------------
+# CONFORMAL1 finding, baked in here so the engine's confidence is trustworthy AND honestly OOD-bounded:
+#   (1) MARGINAL split-conformal is VACUOUS for an imbalanced target class -- its coverage collapses onto the
+#       majority (essential-class coverage 0.0). So we calibrate a SEPARATE threshold per class (Mondrian).
+#   (2) Even class-conditional coverage does NOT transfer to a novel organism (essential-class coverage
+#       dropped 0.94 in-distribution -> 0.55 OOD). So a novel-organism call must be flagged coverage-NOT-
+#       guaranteed and made MORE conservative (wider sets = more abstention), never claim nominal coverage.
+# Pure functions; scope = a statistical governance primitive, not a biology claim.
+def conformal_class_thresholds(cal_probs, cal_labels, alpha=0.10):
+    """Mondrian (class-conditional) split-conformal thresholds q_y for target coverage 1-alpha PER CLASS.
+    cal_probs: (n,K) predicted class probabilities on a CALIBRATION set; cal_labels: (n,) true class ids.
+    Nonconformity s_i = 1 - p_i[true]; q_y = the ceil((n_y+1)(1-alpha))/n_y quantile of s over class-y points.
+    Guarantee holds IN-DISTRIBUTION only (exchangeability) -- use ood_adjusted_confidence on novel inputs."""
+    cal_probs = np.asarray(cal_probs, float); cal_labels = np.asarray(cal_labels, int)
+    K = cal_probs.shape[1]; q = {}
+    for y in range(K):
+        m = cal_labels == y
+        if not m.any():
+            q[y] = 1.0; continue
+        s = 1.0 - cal_probs[m, y]; n = int(m.sum())
+        ql = min(1.0, np.ceil((n + 1) * (1 - alpha)) / n)
+        q[y] = float(np.quantile(s, ql, method="higher"))
+    return q
+
+
+def conformal_prediction_set(probs, thresholds):
+    """Prediction set {y : p[y] >= 1 - q_y} for one point (probs: (K,)). size 1 = confident single label;
+    size >=2 = uncertain (abstain); size 0 = confidently-wrong region (also treat as abstain)."""
+    probs = np.asarray(probs, float)
+    st = [int(y) for y in range(len(probs)) if probs[y] >= 1.0 - float(thresholds.get(y, 1.0))]
+    return {"set": st, "size": len(st), "confident_label": (st[0] if len(st) == 1 else None),
+            "abstain": len(st) != 1}
+
+
+def ood_adjusted_confidence(probs, thresholds, ood=False, ood_widen=0.0):
+    """Governance wrapper enforcing CONFORMAL1's OOD honesty rule. In-distribution: returns the class-
+    conditional conformal set with coverage_guaranteed=True. On a NOVEL/OOD organism (ood=True): the nominal
+    1-alpha coverage is NOT guaranteed (measured 0.94->0.55 drop), so it flags coverage_guaranteed=False and,
+    with ood_widen>0, raises each q_y (widening sets => more conservative abstention). It NEVER claims nominal
+    coverage OOD -- the honest deployment rule for a never-seen organism."""
+    thr = ({y: min(1.0, float(q) + float(ood_widen)) for y, q in thresholds.items()}
+           if (ood and ood_widen > 0) else dict(thresholds))
+    r = conformal_prediction_set(probs, thr)
+    r["ood"] = bool(ood)
+    r["coverage_guaranteed"] = (not ood)
+    r["note"] = ("in-distribution class-conditional 1-alpha coverage" if not ood else
+                 "OOD: coverage NOT guaranteed (CONFORMAL1: essential-class coverage 0.94->0.55 on a novel "
+                 "organism); flagged + widened for conservative abstention")
+    return r

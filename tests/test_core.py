@@ -428,3 +428,42 @@ def test_fair_gate_base_rate_invariance():
     # and it still rejects a genuine null (T. brucei: OR<1, no enrichment)
     tbrucei = fair_gate(5, 16, 104, 212)
     assert tbrucei["PASS"] is False
+
+
+def test_conformal_mondrian_class_conditional_coverage_and_ood():
+    """Productionized CONFORMAL1: Mondrian (class-conditional) split-conformal must give ~1-alpha coverage for
+    BOTH classes on an imbalanced problem (where MARGINAL conformal collapses onto the majority), and the OOD
+    governance wrapper must flag coverage-not-guaranteed + widen (never claim nominal coverage OOD)."""
+    from intercepta.metrics import (conformal_class_thresholds, conformal_prediction_set,
+                                     ood_adjusted_confidence)
+    rng = np.random.default_rng(42)
+    # synthetic imbalanced 2-class problem (7% positives, like essential prevalence); a decent-but-imperfect
+    # classifier: p(true) drawn high-ish, p(other)=1-p. Build calibration + test probability matrices.
+    def make(n, pos_rate=0.07):
+        y = (rng.random(n) < pos_rate).astype(int)
+        p_true = np.clip(rng.normal(0.75, 0.15, n), 0.05, 0.99)   # confidence in the TRUE label
+        probs = np.zeros((n, 2))
+        probs[np.arange(n), y] = p_true
+        probs[np.arange(n), 1 - y] = 1 - p_true
+        return probs, y
+    cal_p, cal_y = make(4000)
+    te_p, te_y = make(4000)
+    alpha = 0.10
+    thr = conformal_class_thresholds(cal_p, cal_y, alpha=alpha)
+    # per-class empirical coverage on held-out test
+    cov = {}
+    for cls in (0, 1):
+        m = te_y == cls
+        covered = [cls in conformal_prediction_set(te_p[i], thr)["set"] for i in np.where(m)[0]]
+        cov[cls] = float(np.mean(covered))
+    # BOTH classes (incl. the 7% minority target class) covered at ~1-alpha -> the Mondrian guarantee holds
+    assert cov[0] >= 0.85 and cov[1] >= 0.85, cov
+    # a confident point -> single-label set (not abstain); a 50/50 point -> abstains (size 2)
+    assert conformal_prediction_set(np.array([0.95, 0.05]), thr)["size"] == 1
+    assert conformal_prediction_set(np.array([0.5, 0.5]), thr)["abstain"] is True
+    # OOD governance: flags coverage-not-guaranteed and widening only makes sets larger/more-conservative
+    p = np.array([0.8, 0.2])
+    ind = ood_adjusted_confidence(p, thr, ood=False)
+    ood = ood_adjusted_confidence(p, thr, ood=True, ood_widen=0.2)
+    assert ind["coverage_guaranteed"] is True and ood["coverage_guaranteed"] is False
+    assert ood["size"] >= ind["size"]          # OOD widening never shrinks the set (more conservative)
