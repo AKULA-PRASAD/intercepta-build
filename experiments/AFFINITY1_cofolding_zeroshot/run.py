@@ -18,11 +18,16 @@ import os, sys, json, hashlib, glob
 import numpy as np
 import pandas as pd
 
-DATA = "/Users/kalki/intercepta_data/affinity1"
-HIT2 = "/Users/kalki/intercepta_data/hit2"
-MACE = "/Users/kalki/intercepta_data/moleculeace/CHEMBL204_Ki.csv"
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.join(HERE, "results")
+# Portable paths (HPC-ready; no hard-coded machine paths). Small INPUT fixtures ship in the repo;
+# WORK/output data goes to $INTERCEPTA_DATA (scratch on HPC) or a local _work/ fallback.
+FIXTURES = os.path.join(HERE, "benchmark_data")
+WORK = os.path.join(os.environ.get("INTERCEPTA_DATA", os.path.join(HERE, "_work")), "affinity1")
+os.makedirs(WORK, exist_ok=True)
+DATA = WORK            # outputs: yamls/, compounds_manifest.csv, scored.csv, out/
+HIT2 = FIXTURES        # thrombin_vina.tsv (committed fixture)
+MACE = os.path.join(FIXTURES, "CHEMBL204_Ki.csv")  # public MoleculeACE source (provenance; unused at runtime)
 
 # thrombin 1OYT chains (SEQRES): L light chain, H heavy/catalytic chain
 THROMBIN_L = "TFGSGEADCGLRPLFEKKSLEDKTERELLESYIDGR"
@@ -34,8 +39,8 @@ ACT_CUT = 6.5
 SEED = 42
 
 def load_test():
-    nov = pd.read_csv(os.path.join(DATA, "test_novelty.csv"))
-    v = pd.read_csv(os.path.join(HIT2, "thrombin_vina.tsv"), sep="\t")
+    nov = pd.read_csv(os.path.join(FIXTURES, "test_novelty.csv"))
+    v = pd.read_csv(os.path.join(FIXTURES, "thrombin_vina.tsv"), sep="\t")
     # join on idx (both derive from the same MoleculeACE test order)
     df = nov.merge(v[["idx", "vina"]], on="idx", how="left")
     return df
@@ -168,10 +173,11 @@ def score():
                  "best_overall_auroc": best_overall, "best_novel_auroc": best_novel,
                  "verdict": verdict},
     }
-    payload["pilot_note"] = ("UNDERPOWERED PILOT (n=%d of 20 subsample; n_novel_active=%d). "
-                             "First real co-folding-affinity-vs-docking datapoint on our setup. "
-                             "NOT the definitive benchmark (that remains the GPU spec on all 553). "
-                             "No overclaim from small n." % (n_done, novelty["n_novel_active"]))
+    _full = n_done >= 500
+    payload["run_note"] = ((("FULL GPU head-to-head (n_scored=%d, n_novel_active=%d): the definitive "
+                             "co-folding-affinity-vs-docking benchmark per GPU_BENCHMARK_SPEC.md.") if _full else
+                            ("UNDERPOWERED subsample (n_scored=%d, n_novel_active=%d): NOT definitive; "
+                             "no overclaim from small n.")) % (n_done, novelty["n_novel_active"]))
     payload["n_manifest"] = int(len(man))
     payload = json.loads(json.dumps(payload, sort_keys=True))
     blob = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
@@ -180,8 +186,8 @@ def score():
     with open(os.path.join(RESULTS, "AFFINITY_PILOT_metrics.json"), "w") as f:
         json.dump({"payload": payload, "payload_sha256": sha,
                    "provenance": {"git_sha": os.popen("git -C %s rev-parse HEAD" % HERE).read().strip(),
-                                  "boltz_version": "2.2.1", "python": "3.11.14",
-                                  "hardware": "Apple M4, 10 core, 16 GB RAM, arm64, NO GPU/CUDA",
+                                  "boltz_version": "2.2.1", "python": "3.11.15",
+                                  "hardware": os.environ.get("INTERCEPTA_HW", "see SLURM log (nvidia-smi)"),
                                   "n_scored": int(n_done), "n_manifest": int(len(man))}},
                   f, sort_keys=True, indent=2)
     with open(os.path.join(RESULTS, "pilot_payload.sha256"), "w") as f:
