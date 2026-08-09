@@ -532,6 +532,49 @@ that signal is falsified. Driven end-to-end across six representative inputs spa
 five signal-backed routed shortlists and one correct abstention — every fired signal traceable to a committed, reproduced-×2,
 pre-registered validation. This is the North Star's "any disease" delivered as **honest decision coverage, not a universal model.**
 
+## Part III — completing the honest map (2026-08): decisive negatives, an abstention bound, and an autonomous composite
+Extending the arc with the same protocol (pre-registration, reproduce-×2, first-class negatives) sharpened the map in four
+ways — three of them negatives, which are the point.
+
+**(1) The non-metabolic-mechanism door is now closed across four independent signal classes.** FBA-essentiality is
+metabolic-scoped; the other ~half of drug targets (proteases, polymerases, ribosomal/structural) has no validated
+homology-independent *mechanistic* signal. We attacked this with four principled, distinct approaches, each addressing the
+prior's failure mode: PPI-network centrality (died of **study bias** — a literature-attention artifact, lift +0.128→−0.004
+under a study-intensity control); conserved genomic **synteny** (study-bias-free but merely re-encodes conservation,
+ΔAUROC +0.016); a curated experimentally-derived **transcriptional-regulatory** network (a clean null — master-regulator
+out-degree not enriched for essentiality, OR 0.52); and a learned **protein-language-model embedding** (ESM-2; real but
+weaker signal that again re-encodes conservation, ΔAUROC +0.008). The disciplined conclusion is a strong, decisive negative:
+**conservation-breadth (AUROC 0.91) is the ceiling for the non-metabolic half, and FBA-essentiality remains the only
+confound-honest mechanistic signal — bounded to metabolism.** Four independent closures make this a bound, not a gap.
+
+**(2) An honest bound on the system's defining property (abstention) under organism shift.** The engine's value rests on
+"knowing what it cannot know." We stress-tested that with split-conformal essentiality prediction calibrated on *E. coli* and
+evaluated on never-seen *M. tuberculosis*. Two findings: a *marginal* coverage guarantee is **vacuous for the targets**
+(90% marginal coverage is entirely the ~93% non-essential majority; essential-class coverage 0.0), and even the correct
+*class-conditional* (Mondrian) guarantee **does not transfer** — essential-target coverage drops from 0.94 in-distribution to
+**0.55 out-of-distribution**. The honest consequence, now stated in the deployment scope: **on a genuinely novel organism the
+abstention/confidence cannot be trusted at its nominal rate and must be made substantially more conservative** — precisely the
+North Star's own case.
+
+**(3) Essentiality does not imply durability.** A separate negative: zero-data static biology (conservation/mutational
+tolerance, paralog redundancy, metabolic bypass, prodrug-activator dependence) does **not** predict a target's clinical
+resistance-liability (AUROC 0.556 vs a pre-registered 0.70 gate) — single-step-resistance targets (rpoB, gyrA, rpsL) are
+biologically indistinguishable from durable cell-wall cores on static features. Resistance emergence is a dynamics property
+the static picture does not carry; a durable-target filter needs evolutionary-dynamics or experimental data, not more static
+signals.
+
+**(4) The composite is now autonomous and broader — as honest decision-coverage, not discovery.** An objective-feature class
+detector front-ends the router (so the class is auto-detected, not hand-specified), and the routing table gains three human
+disease paradigms and a post-target intervention stage — all target-*relevance*/feasibility-*triage*, not validated drugs:
+human germline **monogenic** (causal-gene → intervention-mode reasoning, fail-safe), human **complex/polygenic** disease
+(GWAS→target via genetics, popularity-controlled but attenuated — effect bounded [1.67, 2.26]), a fail-safe **modality**
+recommender, and a **phenotype**-input front door (HPO retrieval → candidate genes). These compose end-to-end with the
+existing arms through the autonomous router, firing validated signals at earned (capped where attenuated) confidence and
+abstaining where none transfers, with zero fail-safe mis-fires. A value-of-information layer additionally turns the ranked
+nominations into an experiment-prioritization (~8× fewer wet-lab tests to validate the same targets), the decision-support
+bridge to the one rung computation cannot cross. **Net: the map is more complete and more honest — its new content is mostly
+decisive negatives and bounded, abstaining coverage, not new discovery.**
+
 ## Figures
 *All figures are generated directly from the committed experiment metrics by `gen_figures.py` — every value traces to a reproduced-×2 experiment.*
 
