@@ -8,6 +8,9 @@ set -uo pipefail                      # deliberately NOT -e (tolerate the cleanu
 CHUNK_DIR="$1"; OUT_DIR="$2"
 BOLTZ="${BENV:?set BENV}/bin/boltz"
 mkdir -p "$OUT_DIR"
+# compounds whose ligand exceeds Boltz's 128-atom affinity limit -> expected-absent, NOT failures
+EXCL="$(cd "$(dirname "$0")/.." && pwd)/benchmark_data/exclude_oversized.txt"
+is_excl() { [ -f "$EXCL" ] && grep -qxF "$1" "$EXCL"; }
 
 # node-local scratch for tmp -> avoids NFS .nfs cleanup races on /scratch
 export TMPDIR="${SLURM_TMPDIR:-/tmp}/boltz.${SLURM_ARRAY_TASK_ID:-x}.$$"; mkdir -p "$TMPDIR"
@@ -15,7 +18,7 @@ export TMPDIR="${SLURM_TMPDIR:-/tmp}/boltz.${SLURM_ARRAY_TASK_ID:-x}.$$"; mkdir 
 # restart: if every YAML already has its affinity JSON, skip the GPU entirely
 need=0
 for y in "$CHUNK_DIR"/cmpd_*.yaml; do
-  n="$(basename "$y" .yaml)"
+  n="$(basename "$y" .yaml)"; is_excl "$n" && continue
   find "$OUT_DIR" -path "*/predictions/$n/affinity_$n.json" 2>/dev/null | grep -q . || need=1
 done
 if [ "$need" -eq 0 ]; then echo "SKIP (all outputs present): $CHUNK_DIR"; exit 0; fi
@@ -28,7 +31,7 @@ echo "RUN boltz on $CHUNK_DIR -> $OUT_DIR  ($(date))"
 # verify by OUTPUTS, not exit code
 missing=0
 for y in "$CHUNK_DIR"/cmpd_*.yaml; do
-  n="$(basename "$y" .yaml)"
+  n="$(basename "$y" .yaml)"; is_excl "$n" && { echo "EXCLUDED (ligand>128 atoms): $n"; continue; }
   if find "$OUT_DIR" -path "*/predictions/$n/affinity_$n.json" 2>/dev/null | grep -q .; then :; else
     echo "MISSING affinity json: $n"; missing=$((missing+1)); fi
 done
