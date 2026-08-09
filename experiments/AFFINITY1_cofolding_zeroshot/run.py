@@ -168,18 +168,25 @@ def score():
                  "best_overall_auroc": best_overall, "best_novel_auroc": best_novel,
                  "verdict": verdict},
     }
+    payload["pilot_note"] = ("UNDERPOWERED PILOT (n=%d of 20 subsample; n_novel_active=%d). "
+                             "First real co-folding-affinity-vs-docking datapoint on our setup. "
+                             "NOT the definitive benchmark (that remains the GPU spec on all 553). "
+                             "No overclaim from small n." % (n_done, novelty["n_novel_active"]))
+    payload["n_manifest"] = int(len(man))
     payload = json.loads(json.dumps(payload, sort_keys=True))
     blob = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
     sha = hashlib.sha256(blob).hexdigest()
     os.makedirs(RESULTS, exist_ok=True)
-    with open(os.path.join(RESULTS, "AFFINITY1_metrics.json"), "w") as f:
+    with open(os.path.join(RESULTS, "AFFINITY_PILOT_metrics.json"), "w") as f:
         json.dump({"payload": payload, "payload_sha256": sha,
                    "provenance": {"git_sha": os.popen("git -C %s rev-parse HEAD" % HERE).read().strip(),
-                                  "n_scored": int(n_done)}},
+                                  "boltz_version": "2.2.1", "python": "3.11.14",
+                                  "hardware": "Apple M4, 10 core, 16 GB RAM, arm64, NO GPU/CUDA",
+                                  "n_scored": int(n_done), "n_manifest": int(len(man))}},
                   f, sort_keys=True, indent=2)
-    with open(os.path.join(RESULTS, "payload.sha256"), "w") as f:
+    with open(os.path.join(RESULTS, "pilot_payload.sha256"), "w") as f:
         f.write(sha + "\n")
-    print("score: n_scored=%d verdict=%s sha=%s" % (n_done, verdict, sha))
+    print("score_pilot: n_scored=%d verdict=%s sha=%s" % (n_done, verdict, sha))
     print(json.dumps(payload, indent=2))
 
 def finalize_infeasible():

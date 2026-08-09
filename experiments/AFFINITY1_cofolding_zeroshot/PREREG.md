@@ -67,3 +67,13 @@ PROXY, not measured affinity; enrichment ≠ proven activity; not wet-lab; no SO
 ## Environment
 Apple M4, 10 cores, 16 GB RAM, arm64, macOS; NO GPU/CUDA. Fresh venv at
 $INTERCEPTA_DATA/affinity1/venv_affinity1. Baseline: HIT2 (experiments/HIT2_physics_floor).
+
+---
+
+## STEP-2 CONTINGENCY EXECUTED — pre-registered subsample composition (recorded BEFORE running boltz)
+Realistic use-case reframe: rank a SMALL candidate set for one target (not the 553-library) — CPU-feasible.
+Deterministic (seed=42) via `run.py prep 20`. Composition FIXED before any inference:
+- **20 compounds total** = ALL **5 novel actives** + **7 analog actives** + **8 inactives** (12 active / 8 inactive; 6 novel / 14 analog by nearest-seed Tanimoto).
+- idxs (MoleculeACE CHEMBL204 test order): [21, 67, 167, 173, 217, 248, 256, 329, 340, 347, 367, 384, 399, 409, 428, 467, 472, 529, 535, 549]
+- Boltz-2 defaults (NO tuning): recycling 3, sampling_steps 200, diffusion_samples 1, sampling_steps_affinity 200, diffusion_samples_affinity 5, MSA=colabfold server, seed 42, --accelerator cpu.
+- **Pre-registered pilot read (UNDERPOWERED, n=20):** does co-folding affinity (proxy = -affinity_pred_value and affinity_probability_binary) beat docking (HIT2 AUROC 0.4285) and random (0.5) on active-vs-inactive AUROC, AND show Spearman>0 vs true pKi, ESPECIALLY on the 5 novel actives? This is a PILOT, not the definitive benchmark (that remains the GPU spec on all 553). No overclaim from n=20; n_novel_active=5 is severely underpowered by construction.

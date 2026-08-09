@@ -1,0 +1,35 @@
+{
+  "baseline_docking_auroc": 0.4285,
+  "baseline_random_auroc": 0.5,
+  "complex_plddt_auroc": null,
+  "experiment": "AFFINITY_IPTM1_structure_confidence",
+  "finished_idx": [],
+  "gate": "PROMISING if iptm_auroc>0.60 AND iptm_auroc>0.4285 else NEGATIVE; INFEASIBLE if boltz did not finish",
+  "iptm_auroc": null,
+  "iptm_pact_spearman": null,
+  "missing_idx": [
+    21,
+    67,
+    167,
+    217,
+    340,
+    384,
+    529,
+    535
+  ],
+  "n_finished": 0,
+  "n_prereg": 8,
+  "per_compound": {},
+  "prereg_set_idx": [
+    21,
+    67,
+    167,
+    217,
+    340,
+    384,
+    529,
+    535
+  ],
+  "status": "INFEASIBLE_OR_PARTIAL",
+  "verdict": "INFEASIBLE: structure-only boltz did not emit all confidence JSONs on CPU"
+}
