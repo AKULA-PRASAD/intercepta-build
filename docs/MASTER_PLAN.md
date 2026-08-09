@@ -57,7 +57,8 @@ intervention for **any** disease — including never-seen ones — rigorously an
 **S3 — PRIORITIZATION, SAFETY, EXPERIMENT-DESIGN.** Rank, filter unsafe, decide what to test.
 - Status: **BUILT.** multi-axis best-intervention (BESTINT1), hard host-non-homology safety filter (FRONT1/E2E2),
   resistance/condition-robustness, calibrated confidence (CALIB1), VOI experiment-prioritization (EXPDESIGN1, ~8× wet-lab
-  efficiency). Honest bound: durability/resistance-liability from static biology = CLOSED (AMR1); OOD abstention guarantee
+  efficiency). Honest bound: durability from WHOLE-PROTEIN static biology = CLOSED (AMR1) — but drug-CONTACT-residue DYNAMICS
+  gives a first signal (DYNAMICS1, AUROC 0.84, n-fragile); OOD abstention guarantee
   degrades (CONFORMAL1: 94%→55%).
 
 **S4 — INTERVENTION design.** Target → therapy.
@@ -146,8 +147,10 @@ signal fires — never on a hunch.*
 ### O4 — Prioritize + guarantee SAFETY + spend experiments well
 - **A:** hard host-non-homology safety filter + multi-axis score + VOI experiment-prioritization (EXPDESIGN1). *[detection:
   a host-toxic target reaches the shortlist — caught by the hard filter's construction test.]*
-- **B (durability):** predict resistance-liability from static biology (AMR1). *[detection: AUROC 0.556 < 0.70 → FAILED.]*
-  → fallback: resistance/evolvability **dynamics simulation** (Wave-2, GPU) OR flag durability as UNKNOWN and defer to experiment.
+- **B (durability):** predict resistance-liability. **A** = whole-protein static biology (AMR1) *[detection: AUROC 0.556 →
+  FAILED]* → **B** = drug-CONTACT-residue DYNAMICS (DYNAMICS1, ESM entropy at contact residues) *[AUROC 0.839, MWU p 0.029,
+  beats AMR1; **PARTIAL PASS** 2026-08-08 — but n-FRAGILE (n=15; subset p 0.05–0.12), a demonstration not a validated
+  predictor]* → **C** = larger target set / fitness-scan / experimental confirmation (DATA/EXPERIMENT-gated) to firm up n.
 - **B (abstention trust):** conformal confidence. *[detection: CONFORMAL1 — OOD essential-class coverage 55% ≪ 90%.]*
   → fallback: **make OOD abstention more conservative** / report confidence as not-guaranteed-out-of-distribution (do not
   claim nominal coverage on a novel organism).
@@ -204,7 +207,8 @@ signal fires — never on a hunch.*
 3. **Do NOT predict patient drug-RESPONSE from baseline profiles** (B10/B20 tested-negative).
 4. **Do NOT rank targets by conservation as if safe** (FRONT1: most-conserved = host-toxic); use the hard host-non-homology filter.
 5. **Do NOT use structural repurposing for coverage gain** (STRUCTREPURPOSE1 promiscuity).
-6. **Do NOT predict resistance-liability from static biology** (AMR1 null); it needs dynamics.
+6. **Do NOT predict resistance-liability from WHOLE-PROTEIN static biology** (AMR1 null) — use drug-CONTACT-residue DYNAMICS
+   (DYNAMICS1: AUROC 0.84, beats AMR1; n-fragile, treat as a demonstration pending larger-n/experimental confirmation).
 7. **Do NOT trust a marginal/OOD abstention guarantee at nominal rate on a novel organism** (CONFORMAL1: 94%→55%).
 8. **Do NOT spawn shallow coverage arms or run GPU-work on CPU or overclaim** (audits).
 9. **Do NOT do random trial-and-error** — every step pre-registered with a failure signal (this document).
@@ -286,8 +290,9 @@ split three ways, and the biggest %-movers are ACQUISITIONS, not inventions. Pre
 
 - **GENUINE INVENTIONS still required (open science — nobody has solved these; do NOT fake):** (a) zero-shot novel-target
   binding-affinity ranking (O6 — the field's open wall); (b) de-novo mechanism inference from a raw phenotype (O1 deep case);
-  (c) causal disease modeling; (d) resistance-evolvability dynamics (the AMR1 follow-on). These are where "invention/novelty"
-  genuinely lives — and most are GPU- or data-gated, or genuinely unsolved.
+  (c) causal disease modeling. (Resistance-evolvability dynamics — formerly on this list — is now PARTIALLY BUILT: DYNAMICS1
+  gave a first contact-residue durability signal, AUROC 0.84 n-fragile; firming it up is DATA/EXPERIMENT-gated, not a new
+  CPU invention.) These are where "invention/novelty" genuinely lives — and most are GPU- or data-gated, or genuinely unsolved.
 - **CLOSED — no longer an open invention target:** a homology-independent non-metabolic MECHANISM signal on CPU is
   DEFINITIVELY closed (4 signal classes + the MULTISIG1 ensemble upper-bound all fail to beat conservation-breadth 0.908);
   the only untested lever is a GPU-scale structure-aware PLM or experimental mechanism data — an ACQUISITION, not a CPU invention.
@@ -528,7 +533,8 @@ and much of B and F. This is the honest denominator the earlier % understated.
   MISSING** · host–pathogen PARTIAL-negative(HOSTCTX).
 - **B3 Cell:** **whole-cell models MISSING** · cell-state/single-cell MISSING · cell–cell communication MISSING.
 - **B4 Tissue/organ/organism:** physiology/spatial MISSING · **PK/PD MISSING** · multi-organ MISSING.
-- **B5 Population/evolution:** GWAS PARTIAL(GENETICS1) · **resistance/evolution dynamics OPEN**(AMR1 showed static-biology
+- **B5 Population/evolution:** GWAS PARTIAL(GENETICS1) · **resistance/evolution dynamics PARTIAL** — DYNAMICS1 contact-residue
+  durability signal (AUROC 0.84, n-fragile) works where AMR1 whole-protein static-biology
   fails) · epidemiology MISSING.
 - **B6 Causal:** association PARTIAL(GENETICS1) · **causal graphs / counterfactuals / Mendelian-randomization / perturbation
   modeling = OPEN/MISSING** (a whole domain, ~untouched).
