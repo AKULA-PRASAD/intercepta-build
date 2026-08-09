@@ -34,6 +34,8 @@ def boot_ci(score, y, B=B, seed=SEED):
         a = auroc(s[idx], y[idx])
         if not np.isnan(a): out.append(a)
     out = np.array(out)
+    if out.size == 0:                                   # single-class split -> AUROC undefined
+        return float("nan"), [float("nan"), float("nan")]
     return float(np.nanmean(out)), [float(np.percentile(out,2.5)), float(np.percentile(out,97.5))]
 
 def delta_vs_docking(model_score, dock_score, y, B=B, seed=SEED):
@@ -44,6 +46,9 @@ def delta_vs_docking(model_score, dock_score, y, B=B, seed=SEED):
         a1, a0 = auroc(s1[idx], y[idx]), auroc(s0[idx], y[idx])
         if not (np.isnan(a1) or np.isnan(a0)): d.append(a1 - a0)
     d = np.array(d)
+    if d.size == 0:                                     # single-class split -> delta undefined
+        return {"delta_mean": float("nan"), "delta_ci95": [float("nan"), float("nan")],
+                "p_one_sided_boltz_gt_docking": float("nan")}
     return {"delta_mean": float(np.mean(d)),
             "delta_ci95": [float(np.percentile(d,2.5)), float(np.percentile(d,97.5))],
             "p_one_sided_boltz_gt_docking": float(np.mean(d <= 0))}
