@@ -1,0 +1,1517 @@
+{
+  "experiment": "DYNAMICS4_functional_site_durability",
+  "payload": {
+    "G1_agreement_functional_vs_crystal": {
+      "beats_fpocket": false,
+      "dynamics3_fpocket_rho": 0.714286,
+      "n": 21,
+      "p": 0.000581,
+      "pass": true,
+      "spearman_rho": 0.687013
+    },
+    "G2_discrimination_high_vs_low": {
+      "auroc": 0.75,
+      "mwu_p": 0.059663,
+      "n": 21,
+      "n_high": 9,
+      "n_low": 12,
+      "pass": true
+    },
+    "crystal_site_overlap_vs_fpocket": {
+      "annotated_mean_overlap": 0.297481,
+      "fpocket_mean_overlap": 0.243588,
+      "min_abs": 0.25,
+      "min_delta": 0.1,
+      "n_overlap_targets": 16,
+      "pass": false
+    },
+    "feasibility": {
+      "infeasible": [
+        "HIV1_PR",
+        "embB",
+        "gyrA",
+        "rpoB",
+        "rpsL"
+      ],
+      "n_feasible": 21,
+      "n_total": 26,
+      "pass": true
+    },
+    "frozen_from": "DYNAMICS1/2/3 masked_marginal (verbatim); crystal durability from DYNAMICS2; fpocket baseline from DYNAMICS3",
+    "gates": {
+      "G1_p_max": 0.05,
+      "G1_rho_min": 0.5,
+      "G2_auroc_min": 0.75,
+      "dynamics3_fpocket_rho": 0.714286,
+      "feasibility_min": 15,
+      "min_func_residues": 3,
+      "overlap_min_abs": 0.25,
+      "overlap_min_delta": 0.1
+    },
+    "headtohead_vs_fpocket_intersection": {
+      "annotated_auroc": 0.763636,
+      "annotated_auroc_mwu_p": 0.114927,
+      "annotated_beats_fpocket_overlap": true,
+      "annotated_beats_fpocket_rho": false,
+      "annotated_mean_crystal_overlap": 0.297481,
+      "annotated_rho": 0.464706,
+      "annotated_rho_p": 0.069744,
+      "fpocket_auroc": 0.909091,
+      "fpocket_mean_crystal_overlap": 0.243588,
+      "fpocket_rho": 0.594118,
+      "fpocket_rho_p": 0.015232,
+      "intersection_genes": [
+        "CYP51_Ca",
+        "HSV1_TK",
+        "alr",
+        "ddlB",
+        "dxr",
+        "folP",
+        "glmU",
+        "inhA",
+        "mraY",
+        "murA",
+        "murB",
+        "murD",
+        "murE",
+        "murF",
+        "murG",
+        "parC"
+      ],
+      "n": 16,
+      "n_high": 5,
+      "n_low": 11
+    },
+    "ispE_application": {
+      "acc": "P62615",
+      "feasible": true,
+      "func_entropies": [
+        0.023154,
+        0.15022,
+        2.119795,
+        1.687981,
+        0.850226,
+        0.04671,
+        0.798011,
+        0.135091,
+        0.140866,
+        0.408769,
+        0.159926,
+        0.743921,
+        0.016316
+      ],
+      "func_residues": [
+        10,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        141
+      ],
+      "functional_site_durability": 0.560076,
+      "functional_site_max_entropy": 2.119795,
+      "gene": "ispE",
+      "n_func_residues": 13,
+      "reason": "functional site annotated"
+    },
+    "metric": "mean ESM-2 t30 150M masked-marginal Shannon entropy over UniProt-annotated FUNCTIONAL-SITE residues (Active site + Binding site + catalytic Site) within the crystal domain span [FROZEN metric from DYNAMICS1/2/3; residue set = annotated functional site]",
+    "n_targets": 26,
+    "per_target": [
+      {
+        "acc": "P0AC13",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          282
+        ],
+        "crystal_durability": 0.0378,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.5,
+          "n_crystal_contacts": 8,
+          "n_recovered": 4
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 14,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.00978,
+          0.045041,
+          0.023639,
+          0.112605,
+          0.00611,
+          0.037683,
+          0.016057,
+          0.044701,
+          0.007708,
+          1.214921,
+          1.028588,
+          0.004489,
+          0.594821,
+          0.005297
+        ],
+        "func_residues": [
+          22,
+          28,
+          61,
+          62,
+          96,
+          115,
+          185,
+          190,
+          221,
+          222,
+          223,
+          255,
+          256,
+          257
+        ],
+        "functional_site_durability": 0.225103,
+        "functional_site_max_entropy": 1.214921,
+        "gene": "folP",
+        "label": "HIGH",
+        "n_func_residues": 14,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 14,
+        "reason": "functional site annotated",
+        "seq_len": 282,
+        "y": 1
+      },
+      {
+        "acc": "P9WGR1",
+        "cls": "abx",
+        "crystal_domain_span": [
+          2,
+          269
+        ],
+        "crystal_durability": 1.922885,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.3333,
+          "n_crystal_contacts": 30,
+          "n_recovered": 10
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 9,
+          "catalytic_site": 2
+        },
+        "func_entropies": [
+          1.43859,
+          2.04281,
+          0.726654,
+          2.18506,
+          2.085211,
+          1.399654,
+          2.30452,
+          2.73725,
+          1.735715,
+          1.534465
+        ],
+        "func_residues": [
+          20,
+          21,
+          64,
+          65,
+          95,
+          96,
+          149,
+          158,
+          165,
+          194
+        ],
+        "functional_site_durability": 1.818993,
+        "functional_site_max_entropy": 2.73725,
+        "gene": "inhA",
+        "label": "HIGH",
+        "n_func_residues": 10,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 10,
+        "reason": "functional site annotated",
+        "seq_len": 269,
+        "y": 1
+      },
+      {
+        "acc": "Q59961",
+        "cls": "abx",
+        "crystal_domain_span": [
+          404,
+          647
+        ],
+        "crystal_durability": 0.932916,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.0,
+          "n_crystal_contacts": 4,
+          "n_recovered": 0
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 3,
+          "catalytic_site": 4
+        },
+        "func_entropies": [
+          0.014894,
+          0.55878,
+          0.476437,
+          0.007826,
+          0.019624,
+          1.209248,
+          0.181507
+        ],
+        "func_residues": [
+          433,
+          458,
+          461,
+          506,
+          508,
+          513,
+          629
+        ],
+        "functional_site_durability": 0.352617,
+        "functional_site_max_entropy": 1.209248,
+        "gene": "parC",
+        "label": "HIGH",
+        "n_func_residues": 7,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 7,
+        "reason": "functional site annotated",
+        "seq_len": 647,
+        "y": 1
+      },
+      {
+        "acc": "P10613",
+        "cls": "antifungal",
+        "crystal_domain_span": [
+          49,
+          528
+        ],
+        "crystal_durability": 1.022077,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.1724,
+          "n_crystal_contacts": 29,
+          "n_recovered": 5
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 5,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.780285,
+          0.271522,
+          0.202403,
+          0.844281,
+          0.004698
+        ],
+        "func_residues": [
+          64,
+          118,
+          307,
+          377,
+          470
+        ],
+        "functional_site_durability": 0.420638,
+        "functional_site_max_entropy": 0.844281,
+        "gene": "CYP51_Ca",
+        "label": "HIGH",
+        "n_func_residues": 5,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 5,
+        "reason": "functional site annotated",
+        "seq_len": 528,
+        "y": 1
+      },
+      {
+        "acc": "Q6DPL2",
+        "cls": "antiviral",
+        "crystal_domain_span": [
+          63,
+          449
+        ],
+        "crystal_durability": 2.740996,
+        "crystal_site_overlap": null,
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 2,
+          "binding_site": 11,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          2.702546,
+          2.80148,
+          2.774463,
+          2.636928,
+          1.836019,
+          2.679756,
+          2.685413,
+          2.799441,
+          2.862191,
+          2.862622,
+          2.910897,
+          2.840804,
+          2.886704
+        ],
+        "func_residues": [
+          98,
+          131,
+          132,
+          257,
+          258,
+          273,
+          274,
+          278,
+          304,
+          322,
+          324,
+          348,
+          382
+        ],
+        "functional_site_durability": 2.71379,
+        "functional_site_max_entropy": 2.910897,
+        "gene": "FLU_NA",
+        "label": "HIGH",
+        "n_func_residues": 13,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 13,
+        "reason": "functional site annotated",
+        "seq_len": 449,
+        "y": 1
+      },
+      {
+        "acc": "C3W5S0",
+        "cls": "antiviral",
+        "crystal_domain_span": [
+          1,
+          198
+        ],
+        "crystal_durability": 2.730941,
+        "crystal_site_overlap": null,
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 1,
+          "binding_site": 5,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          2.789826,
+          2.879819,
+          2.854963,
+          2.87924,
+          2.842396,
+          2.556647
+        ],
+        "func_residues": [
+          41,
+          80,
+          108,
+          119,
+          120,
+          134
+        ],
+        "functional_site_durability": 2.800482,
+        "functional_site_max_entropy": 2.879819,
+        "gene": "FLU_PA",
+        "label": "HIGH",
+        "n_func_residues": 6,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 6,
+        "reason": "functional site annotated",
+        "seq_len": 716,
+        "y": 1
+      },
+      {
+        "acc": "A8DG50",
+        "cls": "antiviral",
+        "crystal_domain_span": [
+          1013,
+          1208
+        ],
+        "crystal_durability": 0.198091,
+        "crystal_site_overlap": null,
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 4,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.011261,
+          0.009084,
+          0.069174,
+          0.154616
+        ],
+        "func_residues": [
+          1123,
+          1125,
+          1171,
+          1175
+        ],
+        "functional_site_durability": 0.061034,
+        "functional_site_max_entropy": 0.154616,
+        "gene": "HCV_NS3",
+        "label": "HIGH",
+        "n_func_residues": 4,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 4,
+        "reason": "functional site annotated",
+        "seq_len": 3011,
+        "y": 1
+      },
+      {
+        "acc": "P04585",
+        "cls": "antiviral",
+        "crystal_domain_span": [
+          588,
+          1147
+        ],
+        "crystal_durability": 2.489514,
+        "crystal_site_overlap": null,
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 7,
+          "catalytic_site": 6
+        },
+        "func_entropies": [
+          2.6214,
+          0.044073,
+          0.038865,
+          0.063317,
+          2.863185,
+          2.746855,
+          2.004127,
+          1.360574,
+          0.290528,
+          0.066807,
+          0.128218,
+          0.345493,
+          2.780422
+        ],
+        "func_residues": [
+          588,
+          697,
+          772,
+          773,
+          988,
+          1001,
+          1027,
+          1028,
+          1030,
+          1065,
+          1085,
+          1136,
+          1147
+        ],
+        "functional_site_durability": 1.181066,
+        "functional_site_max_entropy": 2.863185,
+        "gene": "HIV1_RT",
+        "label": "HIGH",
+        "n_func_residues": 13,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 13,
+        "reason": "functional site annotated",
+        "seq_len": 1435,
+        "y": 1
+      },
+      {
+        "acc": "P0DTH5",
+        "cls": "antiviral",
+        "crystal_domain_span": [
+          46,
+          376
+        ],
+        "crystal_durability": 2.108788,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.3571,
+          "n_crystal_contacts": 14,
+          "n_recovered": 5
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 1,
+          "binding_site": 12,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.283673,
+          2.31206,
+          1.741796,
+          0.959651,
+          1.787673,
+          0.107711,
+          0.024884,
+          0.795656,
+          0.587307,
+          2.651299,
+          2.699269,
+          2.499591,
+          2.030397
+        ],
+        "func_residues": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          83,
+          101,
+          125,
+          216,
+          222
+        ],
+        "functional_site_durability": 1.421613,
+        "functional_site_max_entropy": 2.699269,
+        "gene": "HSV1_TK",
+        "label": "HIGH",
+        "n_func_residues": 13,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 13,
+        "reason": "functional site annotated",
+        "seq_len": 376,
+        "y": 1
+      },
+      {
+        "acc": "P10724",
+        "cls": "abx",
+        "crystal_domain_span": [
+          2,
+          388
+        ],
+        "crystal_durability": 0.451399,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.2,
+          "n_crystal_contacts": 20,
+          "n_recovered": 4
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 2,
+          "binding_site": 2,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.005996,
+          0.003339,
+          0.005954,
+          0.005711
+        ],
+        "func_residues": [
+          39,
+          136,
+          265,
+          312
+        ],
+        "functional_site_durability": 0.00525,
+        "functional_site_max_entropy": 0.005996,
+        "gene": "alr",
+        "label": "LOW",
+        "n_func_residues": 4,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 4,
+        "reason": "functional site annotated",
+        "seq_len": 388,
+        "y": 0
+      },
+      {
+        "acc": "P07862",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          306
+        ],
+        "crystal_durability": 0.272383,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.4211,
+          "n_crystal_contacts": 19,
+          "n_recovered": 8
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 3,
+          "binding_site": 59,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.007762,
+          1.922233,
+          2.461036,
+          2.442063,
+          1.430233,
+          0.992196,
+          1.771745,
+          0.068376,
+          1.795392,
+          1.447771,
+          0.412922,
+          0.007136,
+          0.435368,
+          1.973977,
+          1.471864,
+          1.868261,
+          0.005901,
+          0.039491,
+          0.727705,
+          1.262163,
+          0.062525,
+          1.171367,
+          0.762012,
+          1.046041,
+          0.690788,
+          2.718167,
+          2.02083,
+          2.522134,
+          2.257093,
+          1.817545,
+          1.209985,
+          2.558916,
+          2.341864,
+          0.244642,
+          1.351555,
+          2.557614,
+          1.688997,
+          0.265198,
+          1.637615,
+          2.473413,
+          1.284819,
+          1.053572,
+          2.475127,
+          2.460357,
+          0.870721,
+          0.811076,
+          0.804343,
+          0.012363,
+          1.526592,
+          1.432407,
+          1.004023,
+          2.466682,
+          0.837897,
+          1.868169,
+          0.041625,
+          1.845905,
+          0.686038,
+          0.004485,
+          0.070399,
+          0.011477,
+          0.01766
+        ],
+        "func_residues": [
+          15,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          257,
+          270,
+          272,
+          281
+        ],
+        "functional_site_durability": 1.238158,
+        "functional_site_max_entropy": 2.718167,
+        "gene": "ddlB",
+        "label": "LOW",
+        "n_func_residues": 61,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 61,
+        "reason": "functional site annotated",
+        "seq_len": 306,
+        "y": 0
+      },
+      {
+        "acc": "P45568",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          398
+        ],
+        "crystal_durability": 0.136555,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.5714,
+          "n_crystal_contacts": 14,
+          "n_recovered": 8
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 20,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.148987,
+          0.010488,
+          0.146628,
+          0.197336,
+          1.722298,
+          2.159595,
+          0.842038,
+          0.1097,
+          0.007942,
+          0.052259,
+          0.04093,
+          0.080217,
+          0.022715,
+          0.033025,
+          0.014654,
+          0.063186,
+          0.081916,
+          0.06294,
+          0.004894,
+          0.009002
+        ],
+        "func_residues": [
+          10,
+          11,
+          12,
+          13,
+          36,
+          37,
+          38,
+          124,
+          125,
+          126,
+          150,
+          151,
+          152,
+          186,
+          209,
+          215,
+          222,
+          227,
+          228,
+          231
+        ],
+        "functional_site_durability": 0.290538,
+        "functional_site_max_entropy": 2.159595,
+        "gene": "dxr",
+        "label": "LOW",
+        "n_func_residues": 20,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 20,
+        "reason": "functional site annotated",
+        "seq_len": 398,
+        "y": 0
+      },
+      {
+        "acc": "P0ACC7",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          456
+        ],
+        "crystal_durability": 0.294258,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.5,
+          "n_crystal_contacts": 30,
+          "n_recovered": 15
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 1,
+          "binding_site": 25,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.333677,
+          0.102833,
+          0.069187,
+          0.000678,
+          0.002789,
+          0.004945,
+          0.002916,
+          0.201977,
+          0.92932,
+          0.323452,
+          0.000477,
+          0.011552,
+          0.010576,
+          0.169012,
+          0.01674,
+          0.0201,
+          0.071888,
+          0.011686,
+          0.097553,
+          0.049467,
+          0.490446,
+          0.04276,
+          0.442286,
+          0.346637,
+          0.226363,
+          0.030243
+        ],
+        "func_residues": [
+          11,
+          12,
+          13,
+          14,
+          25,
+          76,
+          81,
+          82,
+          103,
+          104,
+          105,
+          140,
+          154,
+          169,
+          227,
+          333,
+          351,
+          363,
+          366,
+          377,
+          380,
+          386,
+          387,
+          405,
+          423,
+          440
+        ],
+        "functional_site_durability": 0.154214,
+        "functional_site_max_entropy": 0.92932,
+        "gene": "glmU",
+        "label": "LOW",
+        "n_func_residues": 26,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 26,
+        "reason": "functional site annotated",
+        "seq_len": 456,
+        "y": 0
+      },
+      {
+        "acc": "O66465",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          359
+        ],
+        "crystal_durability": 0.384811,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.3913,
+          "n_crystal_contacts": 23,
+          "n_recovered": 9
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 9,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.040943,
+          0.624253,
+          0.006754,
+          0.017614,
+          0.007079,
+          0.004422,
+          0.349323,
+          0.049113,
+          1.008296
+        ],
+        "func_residues": [
+          70,
+          75,
+          190,
+          193,
+          196,
+          264,
+          268,
+          305,
+          321
+        ],
+        "functional_site_durability": 0.2342,
+        "functional_site_max_entropy": 1.008296,
+        "gene": "mraY",
+        "label": "LOW",
+        "n_func_residues": 9,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 9,
+        "reason": "functional site annotated",
+        "seq_len": 359,
+        "y": 0
+      },
+      {
+        "acc": "P0A749",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          419
+        ],
+        "crystal_durability": 0.18335,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.4615,
+          "n_crystal_contacts": 13,
+          "n_recovered": 6
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 1,
+          "binding_site": 14,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.005852,
+          0.015854,
+          0.024478,
+          0.670341,
+          0.012549,
+          0.525819,
+          1.06186,
+          0.209186,
+          1.632853,
+          2.449247,
+          0.832619,
+          0.105481,
+          0.328823,
+          0.017308,
+          0.870866
+        ],
+        "func_residues": [
+          22,
+          23,
+          91,
+          115,
+          120,
+          121,
+          122,
+          123,
+          124,
+          160,
+          161,
+          162,
+          163,
+          305,
+          327
+        ],
+        "functional_site_durability": 0.584209,
+        "functional_site_max_entropy": 2.449247,
+        "gene": "murA",
+        "label": "LOW",
+        "n_func_residues": 15,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 15,
+        "reason": "functional site annotated",
+        "seq_len": 419,
+        "y": 0
+      },
+      {
+        "acc": "P08373",
+        "cls": "abx",
+        "crystal_domain_span": [
+          3,
+          342
+        ],
+        "crystal_durability": 0.217556,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.1538,
+          "n_crystal_contacts": 26,
+          "n_recovered": 4
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 3,
+          "binding_site": 1,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.018768,
+          0.107449,
+          0.019745,
+          0.004259
+        ],
+        "func_residues": [
+          159,
+          190,
+          229,
+          325
+        ],
+        "functional_site_durability": 0.037555,
+        "functional_site_max_entropy": 0.107449,
+        "gene": "murB",
+        "label": "LOW",
+        "n_func_residues": 4,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 4,
+        "reason": "functional site annotated",
+        "seq_len": 342,
+        "y": 0
+      },
+      {
+        "acc": "P14900",
+        "cls": "abx",
+        "crystal_domain_span": [
+          2,
+          438
+        ],
+        "crystal_durability": 0.545623,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.0,
+          "n_crystal_contacts": 25,
+          "n_recovered": 0
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 7,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.003225,
+          0.590865,
+          0.03652,
+          0.067059,
+          0.001927,
+          0.656877,
+          0.064415
+        ],
+        "func_residues": [
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118
+        ],
+        "functional_site_durability": 0.202984,
+        "functional_site_max_entropy": 0.656877,
+        "gene": "murD",
+        "label": "LOW",
+        "n_func_residues": 7,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 7,
+        "reason": "functional site annotated",
+        "seq_len": 438,
+        "y": 0
+      },
+      {
+        "acc": "P22188",
+        "cls": "abx",
+        "crystal_domain_span": [
+          2,
+          495
+        ],
+        "crystal_durability": 0.893764,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.3478,
+          "n_crystal_contacts": 23,
+          "n_recovered": 8
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 25,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          2.325565,
+          0.107047,
+          2.477522,
+          2.367018,
+          2.423014,
+          0.02682,
+          0.012245,
+          0.050333,
+          0.027334,
+          0.001078,
+          0.104501,
+          0.270614,
+          1.746643,
+          0.075817,
+          0.136216,
+          0.129547,
+          0.085462,
+          0.015163,
+          0.009848,
+          0.006674,
+          0.023531,
+          0.109103,
+          0.004174,
+          0.004899,
+          0.00567
+        ],
+        "func_residues": [
+          27,
+          29,
+          44,
+          45,
+          46,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          157,
+          158,
+          159,
+          185,
+          191,
+          193,
+          390,
+          414,
+          415,
+          416,
+          417,
+          465,
+          469
+        ],
+        "functional_site_durability": 0.501834,
+        "functional_site_max_entropy": 2.477522,
+        "gene": "murE",
+        "label": "LOW",
+        "n_func_residues": 25,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 25,
+        "reason": "functional site annotated",
+        "seq_len": 495,
+        "y": 0
+      },
+      {
+        "acc": "Q8DNV6",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          454
+        ],
+        "crystal_durability": 0.885258,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.0,
+          "n_crystal_contacts": 22,
+          "n_recovered": 0
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 7,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.006913,
+          0.323633,
+          1.326092,
+          0.030797,
+          0.002142,
+          0.05943,
+          0.636725
+        ],
+        "func_residues": [
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ],
+        "functional_site_durability": 0.340819,
+        "functional_site_max_entropy": 1.326092,
+        "gene": "murF",
+        "label": "LOW",
+        "n_func_residues": 7,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 7,
+        "reason": "functional site annotated",
+        "seq_len": 457,
+        "y": 0
+      },
+      {
+        "acc": "P17443",
+        "cls": "abx",
+        "crystal_domain_span": [
+          2,
+          355
+        ],
+        "crystal_durability": 0.318447,
+        "crystal_site_overlap": {
+          "frac_recovered": 0.35,
+          "n_crystal_contacts": 20,
+          "n_recovered": 7
+        },
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 15,
+          "catalytic_site": 0
+        },
+        "func_entropies": [
+          0.121305,
+          0.075596,
+          0.002685,
+          0.008488,
+          0.068911,
+          0.010618,
+          0.28821,
+          0.056343,
+          0.881145,
+          0.494956,
+          1.094048,
+          0.84391,
+          0.007843,
+          0.452499,
+          0.090849
+        ],
+        "func_residues": [
+          15,
+          16,
+          17,
+          127,
+          163,
+          191,
+          244,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          287,
+          288
+        ],
+        "functional_site_durability": 0.299827,
+        "functional_site_max_entropy": 1.094048,
+        "gene": "murG",
+        "label": "LOW",
+        "n_func_residues": 15,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 15,
+        "reason": "functional site annotated",
+        "seq_len": 355,
+        "y": 0
+      },
+      {
+        "acc": "Q99IB8",
+        "cls": "antiviral",
+        "crystal_domain_span": [
+          2443,
+          3012
+        ],
+        "crystal_durability": 1.048058,
+        "crystal_site_overlap": null,
+        "feasible": true,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 3,
+          "catalytic_site": 1
+        },
+        "func_entropies": [
+          2.767428,
+          0.041917,
+          0.072468,
+          0.210756
+        ],
+        "func_residues": [
+          2443,
+          2662,
+          2760,
+          2761
+        ],
+        "functional_site_durability": 0.773142,
+        "functional_site_max_entropy": 2.767428,
+        "gene": "HCV_NS5B",
+        "label": "LOW",
+        "n_func_residues": 4,
+        "n_func_residues_dropped_outofwindow": 0,
+        "n_func_residues_scored": 4,
+        "reason": "functional site annotated",
+        "seq_len": 3033,
+        "y": 0
+      },
+      {
+        "acc": "P9WNL7",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          1098
+        ],
+        "crystal_durability": 0.918925,
+        "crystal_site_overlap": null,
+        "feasible": false,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 0,
+          "catalytic_site": 0
+        },
+        "func_residues": [],
+        "gene": "embB",
+        "label": "HIGH",
+        "n_func_residues": 0,
+        "reason": "0 functional-site residues (<3)",
+        "seq_len": 1098,
+        "y": 1
+      },
+      {
+        "acc": "Q99XG5",
+        "cls": "abx",
+        "crystal_domain_span": [
+          2,
+          491
+        ],
+        "crystal_durability": 0.510072,
+        "crystal_site_overlap": null,
+        "feasible": false,
+        "func_by_type": {
+          "active_site": 1,
+          "binding_site": 0,
+          "catalytic_site": 0
+        },
+        "func_residues": [
+          123
+        ],
+        "gene": "gyrA",
+        "label": "HIGH",
+        "n_func_residues": 1,
+        "reason": "1 functional-site residues (<3)",
+        "seq_len": 889,
+        "y": 1
+      },
+      {
+        "acc": "Q9KWU7",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          1119
+        ],
+        "crystal_durability": 2.747969,
+        "crystal_site_overlap": null,
+        "feasible": false,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 0,
+          "catalytic_site": 0
+        },
+        "func_residues": [],
+        "gene": "rpoB",
+        "label": "HIGH",
+        "n_func_residues": 0,
+        "reason": "0 functional-site residues (<3)",
+        "seq_len": 1119,
+        "y": 1
+      },
+      {
+        "acc": "Q5SHN3",
+        "cls": "abx",
+        "crystal_domain_span": [
+          1,
+          132
+        ],
+        "crystal_durability": 2.527632,
+        "crystal_site_overlap": null,
+        "feasible": false,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 0,
+          "catalytic_site": 0
+        },
+        "func_residues": [],
+        "gene": "rpsL",
+        "label": "HIGH",
+        "n_func_residues": 0,
+        "reason": "0 functional-site residues (<3)",
+        "seq_len": 132,
+        "y": 1
+      },
+      {
+        "acc": "Q9Q288",
+        "cls": "antiviral",
+        "crystal_domain_span": [
+          1,
+          99
+        ],
+        "crystal_durability": 1.647358,
+        "crystal_site_overlap": null,
+        "feasible": false,
+        "func_by_type": {
+          "active_site": 0,
+          "binding_site": 0,
+          "catalytic_site": 0
+        },
+        "func_residues": [],
+        "gene": "HIV1_PR",
+        "label": "HIGH",
+        "n_func_residues": 0,
+        "reason": "0 functional-site residues (<3)",
+        "seq_len": 99,
+        "y": 1
+      }
+    ],
+    "reference": {
+      "dynamics2_crystal_auroc": 0.827381,
+      "dynamics2_crystal_mwu_p": 0.00506,
+      "dynamics3_fpocket_auroc": 0.89899,
+      "dynamics3_fpocket_rho": 0.714286
+    }
+  },
+  "provenance": {
+    "annotations": "UniProt REST .json (cached, per accession)",
+    "esm_env": "intercepta (torch/transformers)",
+    "model": "facebook/esm2_t30_150M_UR50D",
+    "runtime_s": 0.1
+  },
+  "verdict": "PARTIAL"
+}
