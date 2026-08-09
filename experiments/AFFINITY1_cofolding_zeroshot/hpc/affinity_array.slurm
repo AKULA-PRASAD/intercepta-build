@@ -13,6 +13,7 @@
 #SBATCH --output=hpc/logs/aff1_%A_%a.log
 #SBATCH --error=hpc/logs/aff1_%A_%a.log
 set -uo pipefail
+cd "${SLURM_SUBMIT_DIR:-.}"          # run from the experiment dir regardless of where sbatch was called
 mkdir -p hpc/logs
 export BENV="${BENV:-/scratch/$USER/envs/boltz2}"
 export INTERCEPTA_DATA="${INTERCEPTA_DATA:-/scratch/$USER/intercepta_data}"
@@ -20,7 +21,7 @@ export BOLTZ_CACHE="${BOLTZ_CACHE:-/scratch/$USER/boltz_cache}"
 export INTERCEPTA_HW="$(nvidia-smi --query-gpu=name --format=csv,noheader | head -1)"
 echo "task=$SLURM_ARRAY_TASK_ID node=$(hostname) gpu=$INTERCEPTA_HW start=$(date)"
 C="$(printf '%02d' "$SLURM_ARRAY_TASK_ID")"
-bash hpc/affinity/boltz_chunk.sh \
+bash hpc/boltz_chunk.sh \
   "$INTERCEPTA_DATA/affinity1/yamls/chunk_$C" \
   "$INTERCEPTA_DATA/affinity1/out/chunk_$C"
 rc=$?
