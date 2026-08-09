@@ -43,9 +43,9 @@ intervention for **any** disease — including never-seen ones — rigorously an
 - Feeds → S1/S2 via the autonomous class detector (ROUTERAUTO1).
 
 **S1 — MECHANISM understanding.** Infer the biology that makes a node matter.
-- Status: **metabolic BUILT** (FBA, validated VAL-ESS/CROSSVAL/BLIND1–7); **non-metabolic CLOSED×3** (MET4 PPI, NONMET1
-  synteny, REGNET1 regulatory — all failed; PLMESS1 = 4th attempt via PLM embeddings, running); **regulatory/signaling/
-  dynamic/whole-cell = MISSING/OPEN.**
+- Status: **metabolic BUILT** (FBA, validated VAL-ESS/CROSSVAL/BLIND1–7); **non-metabolic DEFINITIVELY CLOSED** — 4 signal
+  classes each failed (MET4 PPI, NONMET1 synteny, REGNET1 regulatory, PLMESS1 PLM-embedding) AND their ensemble upper-bound
+  failed (MULTISIG1); conservation-breadth (0.908) is the accepted ceiling. **regulatory/signaling/dynamic/whole-cell = MISSING/OPEN.**
 - Transfer-condition: FBA transfers where the GEM encodes genuine biosynthetic dependence (fails on host-scavengers, sparse
   GEMs; META1/FAIRGATE bound it).
 
@@ -79,13 +79,16 @@ intervention for **any** disease — including never-seen ones — rigorously an
 
 ## 3. The master sequence (ordered by leverage; what-to-do / what-NOT / next)
 **WAVE 1 — CPU-feasible Phase-1 inventions (do now, no new resources).** Ordered by leverage:
-1. PLMESS1 (running) — learned-representation attack on the non-metabolic gap + AI-domain probe.
+1. PLMESS1 (DONE → 4th closure) + MULTISIG1 (DONE → the ensemble-ceiling closure). The non-metabolic-mechanism question is
+   now **definitively closed** (individually and combined); conservation-breadth (0.908) is the accepted ceiling.
 2. Uncertainty productionization — ship class-conditional (Mondrian) conformal into the engine (CONFORMAL1 showed marginal
-   is vacuous for targets); genuine, honest, closes a real hole.
-3. Knowledge-integration — a calibrated multi-signal posterior with honest joint uncertainty (careful: not to overlap the
-   substrate's rank-aggregation trivially).
-- **What NOT to do in Wave 1:** a 5th non-metabolic-mechanism attempt if PLMESS1 fails (see §4-O2); more shallow disease-class
-  coverage arms (diminishing-returns, per the audit); anything requiring GPU dressed up as CPU.
+   is vacuous for targets); genuine, honest, closes a real hole (NOTE: CONFORMAL1 also showed it degrades OOD — productionize
+   with the OOD-widening rule, §19).
+3. Knowledge-integration — a calibrated multi-signal posterior with honest joint uncertainty (careful: MULTISIG1 already
+   showed the non-metabolic signal-union is collinear with conservation, so gains here are modest by construction).
+- **What NOT to do in Wave 1:** any further non-metabolic-mechanism attempt — CLOSED individually (4 signals) AND at the
+  ensemble upper-bound (MULTISIG1); more shallow disease-class coverage arms (diminishing-returns); anything requiring GPU
+  dressed up as CPU.
 
 **WAVE 2 — GPU-gated Phase-1 (the biggest % of the remaining vision; needs a GPU — a resource decision).** In priority:
 1. Zero-shot affinity via co-folding (Boltz-2) — the 14-weight intervention half; spec ready (AFFINITY1 GPU_BENCHMARK_SPEC).
@@ -123,11 +126,15 @@ signal fires — never on a hunch.*
 - **D:** curated regulatory master-regulator influence (REGNET1). *[detection: OR 0.52, ΔAUROC −0.006 → FAILED, clean null.]*
 - **E:** learned PLM (ESM-2) embeddings (PLMESS1). *[detection: ΔAUROC-beyond-conservation +0.008 <+0.03; study-bias-ctrl
   −0.0006 → **FAILED** 2026-08-08, reproduced, baseline consistency-checked vs NONMET1.]*
-- **Terminal honest fallback — NOW ACTIVE (E failed):** **STOPPED attacking the non-metabolic mechanism on CPU.** Four
-  independent principled closures (network / synteny / regulatory / learned-PLM) = a real scientific bound. **Conservation
-  breadth (AUROC 0.908) is accepted as the ceiling** for the non-metabolic half. The one untested lever is a
-  larger/structure-aware PLM (GPU-gated, Wave-2) or experimental data. **No random 5th CPU attempt** (per this rule). This
-  is a completed objective — closed, not open.
+- **F (the ENSEMBLE upper-bound, not a new signal):** combine all four signals (MULTISIG1). *[detection: full-ensemble
+  ΔAUROC-beyond-conservation +0.019 logistic / +0.009 GBM <+0.03; drop-one ablation — no signal clears; embedding not the
+  driver → **FAILED** 2026-08-08, reproduced (sha e6badcb7).]* This is the honest way to close the question definitively
+  without a random 5th *new signal*: test the best-case COMBINATION.
+- **Terminal honest fallback — NOW ACTIVE & DEFINITIVE (E and F both failed):** the non-metabolic mechanism is closed
+  **both individually (4 signal classes) AND at the ensemble upper-bound (MULTISIG1)** — a decisive scientific bound.
+  **Conservation breadth (AUROC 0.908) is the accepted, unbeatable ceiling** for the non-metabolic half. The ONLY untested
+  lever is a larger/structure-aware PLM or mechanism data (GPU/DATA-gated, Wave-2/3). **No further CPU attempts** — the
+  objective is completed and closed, not open.
 
 ### O3 — Identify a TARGET for a novel organism/disease
 - **A:** the class-matched validated signal (FBA/dependency/genetics/structure) at earned confidence. *[detection: the signal's
@@ -190,8 +197,9 @@ signal fires — never on a hunch.*
 ---
 
 ## 5. The CLOSED-DOOR / ANTI-PATTERN register (what NOT to do — with evidence)
-1. **Do NOT re-attack the non-metabolic mechanism after PLMESS1** (MET4/NONMET1/REGNET1 + PLMESS1 = 4 closures) — accept the
-   conservation ceiling; the next move there is GPU/experimental, not another CPU signal.
+1. **Do NOT re-attack the non-metabolic mechanism** — CLOSED individually across 4 signal classes (MET4/NONMET1/REGNET1/
+   PLMESS1) AND at the ensemble upper-bound (MULTISIG1) — accept the conservation ceiling (0.908); the next move there is
+   GPU (structure-aware PLM) or experimental data, not another CPU signal or combination.
 2. **Do NOT use docking/QSAR/PCM to claim novel-target potency** (HIT2/HIT1/B49/B65 negatives).
 3. **Do NOT predict patient drug-RESPONSE from baseline profiles** (B10/B20 tested-negative).
 4. **Do NOT rank targets by conservation as if safe** (FRONT1: most-conserved = host-toxic); use the hard host-non-homology filter.
@@ -222,8 +230,9 @@ a door and redirects resource), not a failure to hide.
 ---
 
 ## 8. Critical path & immediate next actions
-- **NOW (CPU, autonomous):** PLMESS1 (running) → verify honestly (leakage guard). Then, per §4-O2 terminal rule, EITHER a
-  genuine positive (foundation-model capability) OR stop the non-metabolic attack and consolidate. Then Wave-1 items 2–3.
+- **NOW (CPU, autonomous):** the non-metabolic mechanism line is DEFINITIVELY CLOSED (PLMESS1 4th closure + MULTISIG1
+  ensemble-ceiling closure, both verified/reproduced). Remaining CPU-buildable = modest ENGINEERING only (uncertainty
+  productionization, knowledge-graph integration); the high-value CPU frontier is exhausted.
 - **THE ONE RESOURCE THAT MOVES THE % MOST:** a **GPU** → unlocks the intervention half (O6-D) — the biggest single chunk of
   the remaining ~75–80%. Name it; do not fake around it.
 - **THE ONE THING THAT MOVES REAL-WORLD CONTRIBUTION MOST (Phase 2):** one **wet-lab CRISPRi test** (O7-A) — converts the
@@ -254,7 +263,7 @@ S0 input+autodetect ─┬─> S2 target-ID ─> S3 prioritize/safety ─> S5(in
  (BUILT)             │      (BUILT)           (BUILT)                                        │
  S1 mechanism ───────┘                                                                       │
   ├ metabolic FBA (BUILT) ─────────────────────────────────────────────────> feeds S2       │
-  └ non-metabolic (CLOSED×3; PLMESS1=4th) ──X (conservation-breadth is the ceiling)          │
+  └ non-metabolic (CLOSED: 4 signals + ensemble MULTISIG1) ──X (conservation-breadth is the ceiling)  │
                                                                                              v
 S4 intervention:  modality (BUILT) ─> repurpose (narrow) ──X coverage ceiling            S6 governance
                                        └> NOVEL-TARGET AFFINITY  ==[GPU-GATE]==> co-folding  (BUILT: router,
@@ -276,10 +285,12 @@ connected truth: **two acquisitions (a GPU, a bench) are the critical path to th
 split three ways, and the biggest %-movers are ACQUISITIONS, not inventions. Pretending otherwise would be a false claim.*
 
 - **GENUINE INVENTIONS still required (open science — nobody has solved these; do NOT fake):** (a) zero-shot novel-target
-  binding-affinity ranking (O6 — the field's open wall); (b) a homology-independent non-metabolic MECHANISM signal (OPEN if
-  PLMESS1 fails — 4 closures); (c) de-novo mechanism inference from a raw phenotype (O1 deep case); (d) causal disease
-  modeling; (e) resistance-evolvability dynamics (the AMR1 follow-on). These are where "invention/novelty" genuinely lives —
-  and most are GPU- or data-gated, or genuinely unsolved.
+  binding-affinity ranking (O6 — the field's open wall); (b) de-novo mechanism inference from a raw phenotype (O1 deep case);
+  (c) causal disease modeling; (d) resistance-evolvability dynamics (the AMR1 follow-on). These are where "invention/novelty"
+  genuinely lives — and most are GPU- or data-gated, or genuinely unsolved.
+- **CLOSED — no longer an open invention target:** a homology-independent non-metabolic MECHANISM signal on CPU is
+  DEFINITIVELY closed (4 signal classes + the MULTISIG1 ensemble upper-bound all fail to beat conservation-breadth 0.908);
+  the only untested lever is a GPU-scale structure-aware PLM or experimental mechanism data — an ACQUISITION, not a CPU invention.
 - **ENGINEERING (known method, just build/run — NOT inventions; call them what they are):** class-conditional-conformal
   productionization; knowledge-graph integration; autonomous-detector refinement; modality-recommender generalization;
   **running** co-folding/MD (the methods exist — the block is GPU compute, not invention).
@@ -308,29 +319,33 @@ collaborator) run in PARALLEL in every scenario** — they block nothing and del
 detection signal fires, transition to the matching S-row; keep O9 + acquisition-outreach running in parallel throughout.
 
 ## 13. Current-state decision table (given the state RIGHT NOW → exact next action)
-- **State now (updated 2026-08-08):** PLMESS1 **DONE → 4th closure** (non-metabolic door now closed across 4 signal
-  classes); **Scenario S-A is ACTIVE**; no GPU; no wet-lab; Phase-1 ~20–25%; publication honesty-pass done; MASTER_PLAN +
-  contingency tree in place.
-- **Immediate next (autonomous, per S-A):** the non-metabolic CPU line is CLOSED (no 5th attempt). Consolidate + advance the
-  parallel publication channel (validated core + negatives); prepare the acquisition instruments (GPU-run bundle exists as
-  AFFINITY1 spec; wet-lab collaboration package). The CPU-experiment frontier is honestly at its end — the needle-movers now
-  require acquisitions (GPU, collaborator) that need the human.
+- **State now (updated 2026-08-08):** PLMESS1 **DONE → 4th closure** AND MULTISIG1 **DONE → ensemble-ceiling closure** — the
+  non-metabolic mechanism is now closed **individually (4 signals) AND at the ensemble upper-bound**; **Scenario S-A is
+  ACTIVE**; no GPU; no wet-lab; Phase-1 ~20–25% (of the fullest COMPUTATIONAL platform; ~5–8% of the fullest END-TO-END
+  vision, Part IV); MASTER_PLAN I–IV + contingency tree in place; publication honesty-pass + manuscript Part-III fold-in +
+  collaboration-brief refresh done.
+- **Immediate next (autonomous, per S-A):** the non-metabolic CPU line is DEFINITIVELY CLOSED (individual + ensemble — no
+  further attempts). The remaining genuinely-CPU-buildable items are modest (uncertainty productionization, knowledge-graph
+  integration) and are honestly ENGINEERING, not needle-movers. The CPU-experiment frontier is at its honest end — the
+  needle-movers now require acquisitions (GPU → intervention half; a bench → real-world + the closed loop) that need the human.
 - **Parallel-available-now (CPU, autonomous, modest):** remaining publication prep — a ≤25-word title; the off-class-TM and
   study-matched-cancer nulls (small re-analyses); these are ENGINEERING finishing touches, not needle-movers.
 - **Blocked-pending-acquisition (the needle-movers — need the human):** GPU (→ intervention half), wet-lab collaborator
   (→ real-world jump). **These are the honest top of the backlog and I cannot self-acquire them.**
-- **Honest statement of the autonomous frontier:** the CPU-only, open-data, zero-budget invention space is **near its honest
-  end**. After PLMESS1 (and the modest publication finishing touches), the genuinely value-adding moves are **acquisitions**
-  (GPU, bench) and **dissemination** — not more autonomous CPU experiments. I will say this plainly rather than manufacture
-  motion.
+- **Honest statement of the autonomous frontier:** the CPU-only, open-data, zero-budget invention space is **at its honest
+  end** for the high-value questions. With the non-metabolic mechanism now closed both individually and at the ensemble
+  upper-bound (MULTISIG1), the genuinely value-adding moves are **acquisitions** (GPU, bench) and **dissemination** — not more
+  autonomous CPU experiments. A handful of modest ENGINEERING items remain (uncertainty productionization, knowledge-graph
+  integration); I will label them as such and not present them as needle-movers.
 
 ## 14. Executive synthesis (one screen — nothing missed)
 The vision = best intervention for any disease, computationally. We are ~20–25% of the fullest *computational* platform and
 ~3/10 real-world: **deep in metabolic target-ID + validation methodology, empty in the molecule half / systems-biology
 breadth / simulation / foundation-model reasoning / causal.** The pipeline (S0→S6) is BUILT through target-ID +
 prioritization + governance; the **two gates** that gate everything downstream are a **GPU** (→ the intervention/affinity
-half) and a **wet-lab bench** (→ real-world confirmation). The non-metabolic-mechanism door is closed ×3 (PLMESS1 = the 4th
-and last CPU try; then stop). Every objective has a pre-registered failure signal and a pre-planned fallback (§4), and every
+half) and a **wet-lab bench** (→ real-world confirmation). The non-metabolic-mechanism door is now DEFINITIVELY closed — 4 signal
+classes individually (MET4/NONMET1/REGNET1/PLMESS1) AND the ensemble upper-bound (MULTISIG1). Every objective has a
+pre-registered failure signal and a pre-planned fallback (§4), and every
 *combination* of outcomes has a pre-planned response (§12). What NOT to do is enumerated (§5). The honest top of the backlog
 is **acquisitions (GPU, collaborator) + publication of the validated core+negatives** — not more CPU experiments, which are
 near their honest end. Truth over vision: we are 100% ready to *execute* what is buildable/known, honest that the rest needs
@@ -352,7 +367,7 @@ failure at any node CASCADES. Every connection is grounded in a committed experi
   ⇒ **S1/S2** (via ROUTERAUTO1/class_detector). *Orphan closed:* raw-phenotype enters only via PHENO1 retrieval → candidate
   gene → re-enters as a "causal-gene" input; de-novo-from-phenotype is OPEN and routes to ABSTAIN.
 - **S1 Mechanism:** `{genome, GEM}` ⇒ `{FBA-essential set + confidence}` (metabolic); the non-metabolic branch emits **only
-  conservation-breadth** (4 closures: MET4/NONMET1/REGNET1/PLMESS1) ⇒ **S2**. *Connection:* S1's transfer-condition (GEM
+  conservation-breadth** (4 closures MET4/NONMET1/REGNET1/PLMESS1 + the MULTISIG1 ensemble ceiling) ⇒ **S2**. *Connection:* S1's transfer-condition (GEM
   encodes real biosynthetic dependence; META1/FAIRGATE) decides whether its output is trusted or capped.
 - **S2 Target-ID:** `{class, S1 outputs, proteome, reference targets}` ⇒ `{ranked targets + per-target signal-provenance +
   confidence-tier}` ⇒ **S3**. *Connection:* the class picks the signal (FBA/dependency/genetics/structure/conservation) per
@@ -377,8 +392,9 @@ failure at any node CASCADES. Every connection is grounded in a committed experi
 - **S2 Target-ID core (metabolic) — VALIDATED:** MET1/MET2/MET3 (mechanism breaks the conservation ceiling), VAL-ESS/CROSSVAL
   (6 curated GEMs, OR 4–45), PREDVAL (per-target scorecard), REACH1 (conservation-breadth recovers non-metabolic essentials),
   BESTINT1 (multi-axis). Blind: BLIND1/2/3/6 PASS, BLIND4/5/7 FAIL (analyst-blind, 4/3 split).
-- **S1 Mechanism non-metabolic — CLOSED ×4:** MET4 (PPI/study-bias), NONMET1 (synteny/collinear), REGNET1 (regulatory/clean
-  null), PLMESS1 (PLM/re-encodes conservation). ⇒ conservation-breadth is the accepted ceiling.
+- **S1 Mechanism non-metabolic — CLOSED (4 signals + ensemble):** MET4 (PPI/study-bias), NONMET1 (synteny/collinear), REGNET1
+  (regulatory/clean null), PLMESS1 (PLM/re-encodes conservation), + MULTISIG1 (the ensemble of all four still doesn't beat
+  conservation). ⇒ conservation-breadth (0.908) is the accepted, definitive ceiling.
 - **S2 Target-ID other classes:** viruses → FOLD1/2, GENERALIZE1/3, HARDENV1 (structural class-ID, PASS n=5); fungi/eukaryote
   → GENERALIZE4, HARDENF1 (PASS); parasites → GENERALIZE5, HARDENP1, HOSTCTX1/2, PARARESOLVE1/2 (GEM/base-rate-bounded);
   cancer → DEPEND1, F3CLIN1 (dependency + patient-driver); monogenic → MENDEL1; complex → GENETICS1; phenotype-input → PHENO1.
@@ -467,7 +483,7 @@ validated signal-models, each fired only inside its transfer domain, composed by
 Vision = best intervention for any disease **⇒** needs mechanism→target→intervention→validation (S1–S5) **⇒** but label-free
 transfer is bounded by biological invariants (**transfer-condition principle**, META1) **⇒** so build per-class validated
 signals + compose + abstain (COMPOSITE/CAPSTONE) **⇒** the one signal that breaks the conservation ceiling is mechanistic
-FBA-essentiality, and it is **metabolic-scoped** (MET1–3; non-metabolic CLOSED ×4) **⇒** target-ID is therefore validated but
+FBA-essentiality, and it is **metabolic-scoped** (MET1–3; non-metabolic CLOSED ×4 + ensemble (MULTISIG1)) **⇒** target-ID is therefore validated but
 *narrow*, strongest for pathogens (VAL-ESS/BLIND) **⇒** the intervention half needs zero-shot affinity, which is **OPEN/GPU-
 gated** (HIT2/AFFINITY1) **⇒** so no validated novel molecule is producible on CPU **⇒** real-world truth needs a **wet-lab**
 result to close the loop (§17), which is **experiment-gated** (CRISPRIDESIGN1 ready) **⇒** therefore the honest reachable end
@@ -518,7 +534,7 @@ and much of B and F. This is the honest denominator the earlier % understated.
   modeling = OPEN/MISSING** (a whole domain, ~untouched).
 
 ## Layer C — Target / intervention-point identification (the current strength — but narrow)
-- **C1 Essentiality:** metabolic ✅(validated); **non-metabolic CLOSED ×4** (conservation-breadth is the ceiling).
+- **C1 Essentiality:** metabolic ✅(validated); **non-metabolic CLOSED ×4 + ensemble (MULTISIG1)** (conservation-breadth is the ceiling).
 - **C2 Functional dependency:** ✅(cancer, DEPEND1); does not transfer label-free (TRANSFER1).
 - **C3 Genetics/causal-gene:** PARTIAL(GENETICS1/MENDEL1). **C4 Structural class-ID:** PARTIAL(viruses).
 - **C5 Systems/network targets** (master regulators, network controllability, **combination/multi-target**): MISSING/negative.
