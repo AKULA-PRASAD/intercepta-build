@@ -65,9 +65,9 @@ intervention for **any** disease — including never-seen ones — rigorously an
 - Status: **PARTIAL/mostly-unbuilt (the weak half).** modality triage ✓ (MODALITY1, fail-safe), repurposing ✓-narrow
   (INTERVENE1/2, ~1–7% coverage), ADMET ✓ (B30), synthesizability ✓ (B31), generation ✓-standalone (B33). **Novel-target
   binding affinity** — standard tools FAIL (docking≈chance HIT2; QSAR analog-bound HIT1; PCM null B49; active-learning null
-  B65); co-folding (Boltz-2) is the credible SOTA and is **CPU-feasible for small-candidate ranking (~20–30 mols/target, the
-  real use case; pilot in progress) but GPU-gated for library-scale** (CORRECTED — AFFINITY1 wrongly framed as fully
-  CPU-infeasible by testing only the 553-compound benchmark). Structural repurposing = CLOSED (promiscuity, STRUCTREPURPOSE1).
+  B65); co-folding (Boltz-2) is the credible SOTA but is **GPU-gated even at small-candidate scale** (empirically confirmed
+  2026-08-09: a CPU pilot on ~20 candidates produced 0/20 in ~48 min and was stopped — the affinity head's diffusion sampling
+  is the expensive part; an earlier "CPU-feasible small-candidate" reframe was tested and RETRACTED). Structural repurposing = CLOSED (promiscuity, STRUCTREPURPOSE1).
 
 **S5 — VALIDATION.** In-silico confidence → wet-lab → clinical.
 - Status: in-silico ✓ (reproduced ×2, blind protocol); **wet-lab = EXPERIMENT-GATED** (CRISPRIDESIGN1 turnkey design ready,
@@ -170,12 +170,13 @@ signal fires — never on a hunch.*
   null → FAILED.]*
 - **C:** zero-shot binding-affinity ranking for a novel target — docking (HIT2), QSAR (HIT1), PCM (B49), active-learning
   (B65). *[detection: each ≈ chance / null on the pre-registered gate → all FAILED on CPU.]*
-- **D:** **co-folding (Boltz-2) affinity.** CORRECTED (2026-08-08 deep re-analysis): this is **CPU-feasible for the REALISTIC
-  small-candidate use case** — ranking ~20–30 candidate molecules for ONE validated target (~10 min/complex → a few hours,
-  background) — which is the actual intervention step; only **LIBRARY-SCALE screening / the 553-compound definitive benchmark
-  is GPU-gated**. A CPU small-n PILOT (AFFINITY1's own pre-registered stratified subsample) is IN PROGRESS. *[detection:
-  pilot — does co-folding affinity beat docking 0.4285 + random on the subsample (esp. the 5 novel actives), honestly
-  underpowered; definitive gate stays the GPU benchmark: AUROC ≥0.60 AND > 0.4285 AND novel-vs-inactive ≥0.60.]*
+- **D:** **co-folding (Boltz-2) affinity — GPU-GATED even at small-candidate scale (EMPIRICALLY CONFIRMED 2026-08-09).**
+  A prior deep-analysis note claimed this was CPU-feasible for ~20-candidate ranking (~3 h); I RAN it and that claim was
+  WRONG — the CPU pilot produced **0/20 predictions in ~48 min wall / ~90 min CPU** and was stopped as impractical. Root
+  cause: my ~10 min/complex figure was AFFINITY1's *structure-only* time; the **affinity head adds many diffusion samples**,
+  pushing per-complex CPU time to tens of minutes–hours → even ~20 complexes don't finish in a session. So the reframe is
+  RETRACTED: affinity co-folding needs a GPU. *[detection stays the GPU benchmark: AUROC ≥0.60 AND > 0.4285 AND
+  novel-vs-inactive ≥0.60. See experiments/AFFINITY1_cofolding_zeroshot/CPU_PILOT_FINDING.md.]*
 - **E:** physics-based (MM-GBSA / FEP-lite) rescoring — GPU/compute-gated.
 - **Terminal honest fallback:** if D/E fail or stay unavailable → **novel-target affinity is OPEN science**; route the
   validated target to **experimental screening** (Phase 2) rather than emit a fake potency-ranked lead. NEVER present a
@@ -554,9 +555,9 @@ and much of B and F. This is the honest denominator the earlier % understated.
 - **C7 Synthetic lethality / collateral vulnerability:** SEED(INTERVENE3/SYNLETH) · context-specific targets MISSING.
 
 ## Layer D — Intervention design (the fullest MODALITY space — mostly MISSING)
-- **D1 Small molecules:** de-novo generation SEED(B33/B40) · **novel-target binding affinity** — co-folding (Boltz-2)
-  CPU-feasible for small-candidate ranking (real use case; pilot in progress), library-scale GPU-gated (corrected from
-  "OPEN/GPU-gated"; HIT2/AFFINITY1) · ADMET ✅-standalone · synthesizability ✅-standalone · developability PARTIAL.
+- **D1 Small molecules:** de-novo generation SEED(B33/B40) · **novel-target binding affinity — GPU-gated even at
+  small-candidate scale** (empirically confirmed: CPU pilot 0/20 in ~48 min, retracted the "CPU-feasible" reframe;
+  HIT2/AFFINITY1/CPU_PILOT_FINDING) · ADMET ✅-standalone · synthesizability ✅-standalone · developability PARTIAL.
 - **D2 Repurposing:** PARTIAL-narrow(INTERVENE1/2). **D3 Modality selection:** PARTIAL(MODALITY1, triage-only).
 - **D4 Biologics** (antibodies/proteins): MISSING. **D5 Nucleic-acid** (ASO/siRNA/mRNA/gene-therapy/**gene-editing**): MISSING
   (only named in MODALITY1's taxonomy). **D6 Targeted degradation** (PROTAC/molecular-glue): MISSING. **D7 Peptides/macrocycles:**
