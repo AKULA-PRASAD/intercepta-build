@@ -1,0 +1,133 @@
+{
+  "arms": {
+    "ARM_A_saprot_650M": {
+      "auroc_M1_own_only": 0.907266,
+      "auroc_M2_own_plus_embed": 0.914868,
+      "auroc_embed_standalone_pca50": 0.892853,
+      "delta_auroc_embed_beyond_own": 0.007603,
+      "delta_auroc_embed_beyond_own_study": 0.002996,
+      "drop_reasons": {
+        "no_structure": 1,
+        "no_uniprot": 26
+      },
+      "embed_dim": 1280,
+      "enrichment_contingency": {
+        "both": 164,
+        "hi_noness": 1096,
+        "lo_ess": 13,
+        "neither": 1247
+      },
+      "enrichment_embed_median_thr": 0.010493,
+      "enrichment_fisher_p": 0.0,
+      "enrichment_odds_ratio": 14.353453,
+      "gate_eval": {
+        "PASS": false,
+        "passA_delta_beyond_own": false,
+        "passB_survives_studybias": false
+      },
+      "n_dropped": 27,
+      "n_essential": 177,
+      "n_tested": 2520,
+      "sensitivity": {
+        "pca_k10": {
+          "auroc_embed_standalone": 0.882574,
+          "auroc_own_plus_embed": 0.91754,
+          "delta_embed_beyond_own": 0.010275
+        },
+        "pca_k100": {
+          "auroc_embed_standalone": 0.906793,
+          "auroc_own_plus_embed": 0.918582,
+          "delta_embed_beyond_own": 0.011316
+        },
+        "raw_dim_L2_C0.1": {
+          "auroc_embed_standalone": 0.912098,
+          "auroc_own_plus_embed": 0.920595,
+          "delta_embed_beyond_own": 0.01333
+        }
+      },
+      "study_proxy_pearson_with_embed_oof": 0.248098,
+      "studybias_auroc_M3_own_plus_study": 0.928604,
+      "studybias_auroc_M4_own_study_embed": 0.931601
+    },
+    "ARM_B_esm2_650M": {
+      "auroc_M1_own_only": 0.907832,
+      "auroc_M2_own_plus_embed": 0.916196,
+      "auroc_embed_standalone_pca50": 0.893541,
+      "delta_auroc_embed_beyond_own": 0.008365,
+      "delta_auroc_embed_beyond_own_study": -0.001525,
+      "embed_dim": 1280,
+      "enrichment_contingency": {
+        "both": 171,
+        "hi_noness": 1103,
+        "lo_ess": 8,
+        "neither": 1265
+      },
+      "enrichment_embed_median_thr": 0.010093,
+      "enrichment_fisher_p": 0.0,
+      "enrichment_odds_ratio": 24.514393,
+      "gate_eval": {
+        "PASS": false,
+        "passA_delta_beyond_own": false,
+        "passB_survives_studybias": false
+      },
+      "n_dropped": 0,
+      "n_essential": 179,
+      "n_tested": 2547,
+      "sensitivity": {
+        "pca_k10": {
+          "auroc_embed_standalone": 0.827311,
+          "auroc_own_plus_embed": 0.904153,
+          "delta_embed_beyond_own": -0.003679
+        },
+        "pca_k100": {
+          "auroc_embed_standalone": 0.883529,
+          "auroc_own_plus_embed": 0.906295,
+          "delta_embed_beyond_own": -0.001537
+        },
+        "raw_dim_L2_C0.1": {
+          "auroc_embed_standalone": 0.894246,
+          "auroc_own_plus_embed": 0.907607,
+          "delta_embed_beyond_own": -0.000225
+        }
+      },
+      "study_proxy_pearson_with_embed_oof": 0.232891,
+      "studybias_auroc_M3_own_plus_study": 0.928937,
+      "studybias_auroc_M4_own_study_embed": 0.927412
+    }
+  },
+  "experiment": "PLMSTRUCT1_structure_aware_plm_nonmetabolic",
+  "gate": {
+    "definition": "PASS=ceiling BROKEN (breakthrough); FAIL=structure-aware class CLOSED",
+    "require_delta_auroc_beyond_own_ge": 0.03,
+    "require_studybias_delta_ge": 0.03
+  },
+  "hypothesis": "a structure-aware PLM (SaProt, real AlphaFold 3Di) [PRIMARY] and/or a 4x-scaled sequence PLM (ESM-2 650M) [CONTROL] embedding predicts non-metabolic essentiality AND adds BEYOND conservation breadth on the E. coli non-metabolic subproteome",
+  "leakage_check": {},
+  "ledger": "CLOSED (structure-aware class also fails) -> non-metabolic mechanism closed across all CPU-feasible modalities; only experimental mechanism data remains.",
+  "params": {
+    "cv": "StratifiedKFold_5_shuffleFalse",
+    "embedding": "mean_pooled_last_hidden",
+    "esm650_model": "facebook/esm2_t33_650M_UR50D",
+    "leakage_guard": "PCA+StandardScaler fit on train folds only",
+    "logreg_C_primary": 1.0,
+    "pca_k_primary": 50,
+    "saprot_model": "westlake-repl/SaProt_650M_AF2",
+    "structure_source": "AlphaFold_DB_UP000000625_v6",
+    "structure_tokens": "foldseek_3Di",
+    "truncation_residues": 1022
+  },
+  "pool": {
+    "n_essential_full": 179,
+    "n_nonmetabolic_full": 2547,
+    "organism": "E_coli",
+    "subproteome": "non_metabolic (uniprot NOT in MET2 GEM)",
+    "truth_source": "PEC_class1"
+  },
+  "provenance": {
+    "cache_dir": "/Users/kalki/intercepta_data/plmstruct1",
+    "generated": "2026-08-09T13:21:46",
+    "python": "3.11.15",
+    "runtime_s": 75.7
+  },
+  "verdict": "FAIL (first-class NEGATIVE) \u2014 neither the structure-aware SaProt embedding nor the 4x-scaled ESM-2 650M embedding adds a decisive signal beyond conservation breadth on the E. coli non-metabolic subproteome: ARM_B_esm2_650M Delta=+0.008 (embed 0.894 vs own 0.908); ARM_A_saprot_650M Delta=+0.008 (embed 0.893 vs own 0.907) (gate +0.03). FIFTH principled closure -> the non-metabolic mechanism is now CLOSED across ALL CPU-feasible modalities: sequence-conservation, synteny, regulation, sequence-PLM, structure-PLM. Conservation breadth remains the unbeaten baseline."
+}
