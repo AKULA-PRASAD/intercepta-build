@@ -1,0 +1,139 @@
+{
+  "analog_actives_vs_inactives": {
+    "UNDERPOWERED": false,
+    "auroc_boltz_affval": {
+      "auroc": 0.6029218562350734,
+      "ci95": [
+        0.5556626773049645,
+        0.6506279948089163
+      ]
+    },
+    "auroc_boltz_probbin": {
+      "auroc": 0.6848859845829461,
+      "ci95": [
+        0.6409036259958726,
+        0.7297743982713341
+      ]
+    },
+    "auroc_docking": {
+      "auroc": 0.45803677487038214,
+      "ci95": [
+        0.40850860488553453,
+        0.507024876231042
+      ]
+    },
+    "delta_affval_vs_docking": {
+      "delta_ci95": [
+        0.08909896207897815,
+        0.20162984330009
+      ],
+      "delta_mean": 0.1448850813646912,
+      "p_one_sided_boltz_gt_docking": 0.0
+    },
+    "delta_probbin_vs_docking": {
+      "delta_ci95": [
+        0.16999132158009447,
+        0.28189055336132635
+      ],
+      "delta_mean": 0.226849209712564,
+      "p_one_sided_boltz_gt_docking": 0.0
+    },
+    "n": 546,
+    "n_neg": 261,
+    "n_pos": 285
+  },
+  "bootstrap": {
+    "B": 10000,
+    "seed": 42
+  },
+  "docking_baseline_of_record": 0.4285,
+  "n_scored": 551,
+  "note": "Decisive number = OVERALL AUROC vs docking (well powered). Novel split is reported with CI but is UNDERPOWERED (n_pos flagged) and must NOT drive the verdict alone.",
+  "novel_actives_vs_inactives": {
+    "UNDERPOWERED": true,
+    "auroc_boltz_affval": {
+      "auroc": 0.4614811418637871,
+      "ci95": [
+        0.10037878787878787,
+        0.8263861587392687
+      ]
+    },
+    "auroc_boltz_probbin": {
+      "auroc": 0.5188374230312283,
+      "ci95": [
+        0.07490019011406844,
+        0.8530121953579272
+      ]
+    },
+    "auroc_docking": {
+      "auroc": 0.5227429982449879,
+      "ci95": [
+        0.038314176245210725,
+        0.9122137404580153
+      ]
+    },
+    "delta_affval_vs_docking": {
+      "delta_ci95": [
+        -0.28780517961126323,
+        0.13134291974555756
+      ],
+      "delta_mean": -0.06126185638120076,
+      "p_one_sided_boltz_gt_docking": 0.7253344061148547
+    },
+    "delta_probbin_vs_docking": {
+      "delta_ci95": [
+        -0.10451021253777906,
+        0.09811320754716982
+      ],
+      "delta_mean": -0.0039055752137596407,
+      "p_one_sided_boltz_gt_docking": 0.532535452076838
+    },
+    "n": 266,
+    "n_neg": 261,
+    "n_pos": 5
+  },
+  "overall": {
+    "UNDERPOWERED": false,
+    "auroc_boltz_affval": {
+      "auroc": 0.6000119969628583,
+      "ci95": [
+        0.5524861966917881,
+        0.6469669696976517
+      ]
+    },
+    "auroc_boltz_probbin": {
+      "auroc": 0.681842613323678,
+      "ci95": [
+        0.6372566170792303,
+        0.7249962368866257
+      ]
+    },
+    "auroc_docking": {
+      "auroc": 0.4589356792403019,
+      "ci95": [
+        0.41075188371841515,
+        0.5090272150198124
+      ]
+    },
+    "delta_affval_vs_docking": {
+      "delta_ci95": [
+        0.0850648707882398,
+        0.1966464973272092
+      ],
+      "delta_mean": 0.1410763177225566,
+      "p_one_sided_boltz_gt_docking": 0.0
+    },
+    "delta_probbin_vs_docking": {
+      "delta_ci95": [
+        0.1668864683359424,
+        0.2786255073502102
+      ],
+      "delta_mean": 0.22290693408337617,
+      "p_one_sided_boltz_gt_docking": 0.0
+    },
+    "n": 551,
+    "n_neg": 261,
+    "n_pos": 290
+  },
+  "sha256": "43ab7e5ff0c896dc72091fe9eaccef47313452835a8065b2591428de9cd9ad09"
+}

@@ -1,0 +1,48 @@
+{
+  "payload": {
+    "act_cut": 6.5,
+    "docking_baseline_fullset": {
+      "auroc_overall": 0.4285,
+      "source": "HIT2_metrics.json"
+    },
+    "gate": {
+      "best_novel_auroc": 0.5157088122605364,
+      "best_overall_auroc": 0.6818337957458053,
+      "gate_novel_ge_0.60": false,
+      "gate_overall_ge_0.60_and_gt_docking": true,
+      "verdict": "BOUNDED-NEGATIVE"
+    },
+    "method": "Boltz-2 co-folding affinity head (affinity_pred_value=predicted log(IC50), lower=stronger; affinity_probability_binary=P(binder))",
+    "n_manifest": 553,
+    "n_scored": 551,
+    "novelty_split": {
+      "analog_vs_inactive_affval": 0.6026080526987968,
+      "analog_vs_inactive_probbin": 0.6847482691402836,
+      "n_analog_active": 285,
+      "n_novel_active": 5,
+      "novel_vs_inactive_affval": 0.4590038314176245,
+      "novel_vs_inactive_probbin": 0.5157088122605364
+    },
+    "overall": {
+      "auroc_affval": 0.6001321178491215,
+      "auroc_docking": 0.458980408980409,
+      "auroc_probbin": 0.6818337957458053,
+      "n": 551,
+      "n_active": 290,
+      "spearman_affval_vs_pact": 0.3027834886506651,
+      "spearman_probbin_vs_pact": 0.3869766433715279
+    },
+    "run_note": "FULL GPU head-to-head (n_scored=551, n_novel_active=5): the definitive co-folding-affinity-vs-docking benchmark per GPU_BENCHMARK_SPEC.md.",
+    "seed": 42,
+    "target": "thrombin (CHEMBL204), receptor 1OYT (same as HIT2)"
+  },
+  "payload_sha256": "bc470db36b34c865d96e608cd3133147452030c5d8797de20a8805d3207627b1",
+  "provenance": {
+    "boltz_version": "2.2.1",
+    "git_sha": "0ec7f82598b70542fe1d61b87db0299967399d81",
+    "hardware": "see SLURM log (nvidia-smi)",
+    "n_manifest": 553,
+    "n_scored": 551,
+    "python": "3.11.15"
+  }
+}
