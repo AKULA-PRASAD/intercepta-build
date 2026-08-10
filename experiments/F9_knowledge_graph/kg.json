@@ -1,0 +1,482 @@
+{
+  "_about": "F9 composite knowledge graph: validated arms + FIRST-CLASS negatives/dead-ends + transfer conditions + abstention boundaries, with per-edge provenance. Integration/provenance only \u2014 makes NO new scientific claim. Built from LEDGER.md, COMPUTATIONAL_DEAD_ENDS.md, composite_router, MR1, INTEGRITY_SWEEP.md by build_kg.py (deterministic).",
+  "arms": [
+    {
+      "applies_to": [
+        {
+          "cls": "bacteria_self_metabolism",
+          "grade": "FULL",
+          "metric": "OR 5-64 (blind 4/7 pass)"
+        },
+        {
+          "cls": "host_dependent_parasite",
+          "grade": "CAPPED",
+          "metric": "GEM-topology-contingent; Plasmodium OR 2.47 (COMPOSITE3)"
+        },
+        {
+          "cls": "fungus",
+          "grade": "CAPPED",
+          "metric": "K.phaffii OR 2.4 (BLIND5, sub-gate)"
+        },
+        {
+          "cls": "virus",
+          "deadend": "D1",
+          "grade": "ABSTAIN",
+          "metric": "no metabolism -> route to structural arm"
+        }
+      ],
+      "bounded_by": [
+        "D1"
+      ],
+      "capability": "target_identification",
+      "evidence": "experiments/VALIDATE_essentiality/ (+CROSSVAL, BLIND1-7)",
+      "headline_metric": "OR 5-64 vs experimental essentiality (K.pneumoniae OR 63/prec 92%)",
+      "id": "FBA_target_id",
+      "name": "FBA metabolic gene-essentiality target-ID",
+      "reproduced": true,
+      "transfer_condition": "requires a self-contained metabolic network (GEM); enrichment not a target list (recall ~0.22)"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "bacteria_self_metabolism",
+          "grade": "FULL",
+          "metric": "AUROC 0.908"
+        }
+      ],
+      "bounded_by": [
+        "D1"
+      ],
+      "capability": "target_identification",
+      "evidence": "LEDGER.md (conservation null); COMPUTATIONAL_DEAD_ENDS.md#D1",
+      "headline_metric": "AUROC 0.9078 (the label-free ceiling)",
+      "id": "conservation_breadth",
+      "name": "Conservation-breadth workhorse",
+      "reproduced": true,
+      "transfer_condition": "the only transferable label-free signal is conservation; no residual for a new CPU signal"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "bacteria_self_metabolism",
+          "grade": "FULL",
+          "metric": "host-homology exclusion"
+        },
+        {
+          "cls": "host_dependent_parasite",
+          "grade": "FULL",
+          "metric": "host-homology exclusion"
+        },
+        {
+          "cls": "fungus",
+          "grade": "FULL",
+          "metric": "host-homology exclusion"
+        },
+        {
+          "cls": "virus",
+          "grade": "FULL",
+          "metric": "host-homology exclusion"
+        }
+      ],
+      "bounded_by": [],
+      "capability": "host_safety_filter",
+      "evidence": "experiments/FRONT1_*, E2E2",
+      "headline_metric": "excludes 35-52% of known targets (safety/recall tension)",
+      "id": "host_nonhomology_safety",
+      "name": "Host-non-homology safety hard-filter",
+      "reproduced": true,
+      "transfer_condition": "applies to any organism with a sequenced proteome vs the human proteome"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "virus",
+          "grade": "CAPPED",
+          "metric": "target-class only"
+        }
+      ],
+      "bounded_by": [
+        "D2"
+      ],
+      "capability": "target_identification",
+      "evidence": "composite_router (virus route)",
+      "headline_metric": "target-CLASS identification (not affinity)",
+      "id": "structural_target_class_id",
+      "name": "Structural target-class ID (viruses)",
+      "reproduced": true,
+      "transfer_condition": "identifies druggable target class from structure; NOT novel-target affinity (D2)"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "cancer",
+          "grade": "CAPPED",
+          "metric": "target-anchored dependency only"
+        }
+      ],
+      "bounded_by": [
+        "D3",
+        "B23_functional_tautology"
+      ],
+      "capability": "target_identification",
+      "evidence": "LEDGER.md#V15,#V22 (B12/B23)",
+      "headline_metric": "target's own dependency rho +0.187 (MDM2 +0.47); NO transferable functional-state beyond target",
+      "id": "cancer_dependency_target_id",
+      "name": "Cancer dependency target-ID",
+      "reproduced": true,
+      "transfer_condition": "signal is a drug's OWN target dependency (target-specific), not a general functional predictor"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "complex_human_disease",
+          "grade": "FULL",
+          "metric": "OR 2.26 (fame-confounded)"
+        }
+      ],
+      "bounded_by": [
+        "D4"
+      ],
+      "capability": "target_identification",
+      "evidence": "experiments/GENETICS1_complex_disease_genetics/",
+      "headline_metric": "genassoc>0 -> clinical precedence OR 2.26 (dose-response to 5.18)",
+      "id": "genetic_support_target_id",
+      "name": "Genetic-support (Open Targets) target-ID",
+      "reproduced": true,
+      "transfer_condition": "requires GWAS/genetic evidence for the disease; confounded by gene 'fame' (adjust)"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "complex_human_disease",
+          "grade": "FULL",
+          "metric": "OR 3.16 (transparent/direction-aware)"
+        }
+      ],
+      "bounded_by": [
+        "MR1_H2"
+      ],
+      "capability": "target_identification",
+      "evidence": "experiments/MR1_causal_target_id/",
+      "headline_metric": "MR-sig genes -> clinical precedence OR 3.16 (CI [2.03,5.19]); direction-aware",
+      "id": "cis_MR_causal_target_id",
+      "name": "Transparent cis-MR causal target-ID",
+      "reproduced": true,
+      "transfer_condition": "requires a cis-eQTL instrument + disease GWAS; predictively REDUNDANT with OT aggregate (H2)"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "monogenic_disease",
+          "grade": "CAPPED",
+          "metric": "mode-of-action routing"
+        }
+      ],
+      "bounded_by": [],
+      "capability": "target_identification",
+      "evidence": "experiments/MENDEL1_mendelian_disease_arm/",
+      "headline_metric": "druggability-class routing for monogenic modes",
+      "id": "monogenic_arm",
+      "name": "Monogenic-disease mechanism arm (MENDEL1)",
+      "reproduced": true,
+      "transfer_condition": "requires a known causal gene + mode-of-action"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "cancer",
+          "grade": "FULL",
+          "metric": "known-library rho +0.39-0.61 (cell-line Loewe)"
+        }
+      ],
+      "bounded_by": [
+        "B25_novel_drug",
+        "B26_mech_synergy"
+      ],
+      "capability": "combination_intervention",
+      "evidence": "experiments/{B24,B25,B28,B29}/; src/intercepta/synergy.py",
+      "headline_metric": "leave-combination-out rho +0.385-0.606 (known library); conformal-calibrated",
+      "id": "synergy_ranker",
+      "name": "SynergyRanker (drug-combination synergy)",
+      "reproduced": true,
+      "transfer_condition": "new pairings of a KNOWN drug library only; NOVEL-drug synergy does NOT generalize"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "bacteria_self_metabolism",
+          "grade": "CAPPED",
+          "metric": "known target->drug only"
+        },
+        {
+          "cls": "cancer",
+          "grade": "CAPPED",
+          "metric": "known target->drug only"
+        },
+        {
+          "cls": "complex_human_disease",
+          "grade": "CAPPED",
+          "metric": "known target->drug only"
+        }
+      ],
+      "bounded_by": [
+        "D6",
+        "STRUCTREPURPOSE1"
+      ],
+      "capability": "intervention_mapping",
+      "evidence": "INTERVENE1 layer",
+      "headline_metric": "validated 9/9 known target->drug; novel-target coverage 1/32",
+      "id": "repurposing_map",
+      "name": "Target->drug repurposing (INTERVENE1)",
+      "reproduced": true,
+      "transfer_condition": "maps KNOWN targets to KNOWN drugs; does NOT expand novel-pathogen coverage (D6)"
+    },
+    {
+      "applies_to": [
+        {
+          "cls": "cancer",
+          "grade": "CAPPED",
+          "metric": "weak drug-specific transfer"
+        }
+      ],
+      "bounded_by": [
+        "D3",
+        "B10_clinical"
+      ],
+      "capability": "drug_response_prediction",
+      "evidence": "LEDGER.md#V1,#V9 (B1/B3b/B3c)",
+      "headline_metric": "drug-specific diag-off +0.040-0.051 (weak; single cohort BeatAML)",
+      "id": "expression_response_transfer",
+      "name": "Expression->response cross-dataset transfer (V1/V9)",
+      "reproduced": true,
+      "transfer_condition": "weak, drug-specific, single-cohort; bounded by the +0.212 baseline ceiling"
+    }
+  ],
+  "deadends": [
+    {
+      "category": "dead-end-closed",
+      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D1",
+      "id": "D1",
+      "name": "Label-free non-metabolic mechanism signal",
+      "negative_outcome": "conservation AUROC 0.9078 unbeaten (NONMET1 +0.021, PLMESS1 +0.008/study-ctrl -0.0006, REGNET1 -0.006, PLMSTRUCT1 +0.0076, MULTISIG1 +0.019, MET4 +0.128->-0.004 after study-bias control)",
+      "reopen_trigger": "curated mechanism LABELS or a fundamentally new data modality appears",
+      "tried": "6 signal classes vs conservation-breadth null"
+    },
+    {
+      "category": "dead-end-closed",
+      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D2",
+      "id": "D2",
+      "name": "Novel-target/novel-chemotype affinity",
+      "negative_outcome": "docking AUROC 0.428 (HIT2); QSAR 0.90->0.67 novel-chemotype (HIT1); PCM adds nothing (B49); Boltz-2 training-leaked, novel-split n=5 ~0.52 (AFFINITY1)",
+      "reopen_trigger": "the R2 OOD testbed shows a method beating the wall on a leakage-controlled novel-target split",
+      "tried": "docking / QSAR / PCM / co-folding on public benchmarks"
+    },
+    {
+      "category": "dead-end-closed",
+      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D3",
+      "id": "D3",
+      "name": "Single-agent human drug-response from baseline profiles",
+      "negative_outcome": "cross-dataset ceiling rho +0.212; within-cancer clinical AUROC 0.504 (p=0.43); inferred functional layer fails external replication (B20/B21)",
+      "reopen_trigger": "MEASURED functional/perturbation response data becomes available (experimental, outside compute scope)",
+      "tried": "cross-dataset + within-cancer clinical"
+    },
+    {
+      "category": "dead-end-closed",
+      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D4",
+      "id": "D4",
+      "name": "More disease-class breadth / router coverage arms",
+      "negative_outcome": "CPU-arm expansion ~= 0 marginal real-world value (independent audit)",
+      "reopen_trigger": "a genuinely new signal type (not the same hypothesis in new clothes)",
+      "tried": "adding arms / re-benchmarking the core"
+    },
+    {
+      "category": "dead-end-closed",
+      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D5",
+      "id": "D5",
+      "name": "De-novo molecule generation without a validated novel-target scorer",
+      "negative_outcome": "generator below SOTA (B52); no validated novel-target scoring function to optimize (D2); prior 'de novo' were relabeled scaffold-hops (INTEGRITY_SWEEP)",
+      "reopen_trigger": "D2's gate opens",
+      "tried": "GuacaMol generator"
+    },
+    {
+      "category": "leakage-artifact-caught",
+      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D6",
+      "id": "D6",
+      "name": "Structural repurposing for novel-pathogen coverage expansion",
+      "negative_outcome": "promiscuity/fold-census artifact: 18/32 vs random null 25/32; honest novel-target coverage stays 1/32 (STRUCTREPURPOSE1)",
+      "reopen_trigger": "a null-guarded method exceeds the random-fold census",
+      "tried": "structure-based target-drug matching"
+    },
+    {
+      "category": "dead-end-closed",
+      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D7",
+      "id": "D7",
+      "name": "ipTM / interface-confidence as an affinity proxy",
+      "negative_outcome": "ipTM saturates ~0.95 for actives AND inactives (AFFINITY_IPTM1)",
+      "reopen_trigger": "a confidence signal separates actives from inactives on a leakage-free split",
+      "tried": "Boltz/AF interface confidence"
+    },
+    {
+      "category": "dead-end-closed",
+      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D8",
+      "id": "D8",
+      "name": "Re-running program-level audits",
+      "negative_outcome": "verdict stable across audits; the missing input is DATA, not compute",
+      "reopen_trigger": "new experimental data changes the evidence base",
+      "tried": "repeated due-diligence audits"
+    },
+    {
+      "category": "falsified-own-claim",
+      "evidence": "experiments/DYNAMICS5_resistance_site_entropy/results/DYNAMICS5_metrics.json",
+      "id": "D9",
+      "name": "Durability via masked-PLM entropy at resistance sites",
+      "negative_outcome": "FALSIFIED at scale: Wilcoxon p=0.99997 (opposite direction), mean dH=-0.22, position AUROC 0.446 (below chance); overturns DYNAMICS1's n=15 AUROC 0.84 small-n artifact",
+      "reopen_trigger": "a different powered observable (FEP/MD ddG or measured DMS fitness)",
+      "tried": "DYNAMICS5 powered re-test (n=198, 1143 sites)"
+    },
+    {
+      "category": "falsified-own-claim",
+      "evidence": "DECISIONS.md#2026-07-29-D8",
+      "id": "N1",
+      "name": "Mechanistic-coherence of cell-line->patient transfer (B3e)",
+      "negative_outcome": "WITHDRAWN pre-registered null: MWU p=0.29, perm p=0.50; transfer strength doesn't track predictability",
+      "reopen_trigger": "a powered multi-cohort test",
+      "tried": "do AML-relevant drugs transfer best"
+    },
+    {
+      "category": "honest-negative-result",
+      "evidence": "experiments/MR1_causal_target_id/SUMMARY.md",
+      "id": "MR1_H2",
+      "name": "cis-MR adds predictive value beyond Open Targets aggregate",
+      "negative_outcome": "honest-negative: small significant coef (0.022) but dAUPRC +0.0001 (CI [-0.0018,0.0010]); redundant with OT",
+      "reopen_trigger": "a colocalization-aware MR or a target class OT under-covers",
+      "tried": "MR1 H2 grouped-CV vs OT"
+    },
+    {
+      "category": "falsified-own-claim",
+      "evidence": "LEDGER.md#V23",
+      "id": "B25_novel_drug",
+      "name": "Drug-synergy generalization to NOVEL drugs",
+      "negative_outcome": "collapses: B24 leave-drug-out rho 0.25 -> 0.025 (CI [0.012,0.038]); the 0.25 was O'Neil chemical redundancy",
+      "reopen_trigger": "a synergy model generalizes out-of-chemistry on a diverse corpus",
+      "tried": "leave-drug-out on DrugComb 124-drug set"
+    },
+    {
+      "category": "honest-negative-result",
+      "evidence": "LEDGER.md#B26",
+      "id": "B26_mech_synergy",
+      "name": "Mechanism-anchored (target-dependency) synergy for novel drugs",
+      "negative_outcome": "does NOT beat fingerprints for novel drugs (MECH 0.076 vs FP 0.162)",
+      "reopen_trigger": "a mechanism encoding beats chemistry on novel drugs",
+      "tried": "CRISPR-dep features"
+    },
+    {
+      "category": "falsified-own-claim",
+      "evidence": "LEDGER.md#V19",
+      "id": "B20_ext_replication",
+      "name": "External replication of inferred-FLT3-dependency layer (V19/V20)",
+      "negative_outcome": "fails: pooled rho +0.05 (p=0.08), adds beta -0.02 (p=0.92), sorafenib flips sign; V19/V20 DOWNGRADED",
+      "reopen_trigger": "replication in a 2nd independent patient cohort",
+      "tried": "FIMM/Malani cohort"
+    },
+    {
+      "category": "leakage-artifact-caught",
+      "evidence": "LEDGER.md#L63",
+      "id": "STRUCTREPURPOSE1",
+      "name": "Structural repurposing coverage jump 1/32->18/32",
+      "negative_outcome": "promiscuity artifact; random-protein null 25/32 > drug targets; honest 1/32",
+      "reopen_trigger": "see D6",
+      "tried": "structure matching"
+    },
+    {
+      "category": "falsified-own-claim",
+      "evidence": "FAILURE_AUDIT.md#F2",
+      "id": "PARARESOLVE1",
+      "name": "Salvage-bypass topology explains Plasmodium FBA failure",
+      "negative_outcome": "mechanism FALSIFIED: salvage-FN iPfal19 0.907 ~= Toxo 0.867; GEM swap doesn't close the gap",
+      "reopen_trigger": "a mechanistic account that predicts which parasites FBA transfers to",
+      "tried": "GEM salvage-FN analysis"
+    },
+    {
+      "category": "honest-negative-result",
+      "evidence": "experiments/AMR1_resistance_liability/results/AMR1_metrics.json",
+      "id": "AMR1",
+      "name": "Zero-data whole-protein resistance-liability",
+      "negative_outcome": "NEGATIVE: composite AUROC 0.556, MWU p=0.74 (gate>=0.70); drugged-only 0.472 (below chance)",
+      "reopen_trigger": "a dynamic/measured resistance observable",
+      "tried": "4 static features, n=17"
+    },
+    {
+      "category": "leakage-artifact-caught",
+      "evidence": "docs/ENG#2.7",
+      "id": "B10_clinical",
+      "name": "Human CLINICAL drug-response (TCGA)",
+      "negative_outcome": "within-cancer AUROC 0.504 (p=0.43); raw 0.539 was a cancer-type confound",
+      "reopen_trigger": "measured functional response data",
+      "tried": "baseline expression -> clinical outcome"
+    },
+    {
+      "category": "honest-negative-result",
+      "evidence": "LEDGER.md#V22",
+      "id": "B23_functional_tautology",
+      "name": "Measured CRISPR-dependency beats baseline transcriptomics generally",
+      "negative_outcome": "NO: dep 0.459 <= RNA 0.487; own-target-excluded 0.504 vs 0.514 (p=0.06) -> functional advantage is target-tautological, not a transferable functional-state signal",
+      "reopen_trigger": "a functional-state predictor that generalizes beyond a drug's own target",
+      "tried": "498 lines"
+    },
+    {
+      "category": "leakage-artifact-caught",
+      "evidence": "experiments/AFFINITY1_cofolding_zeroshot/LEAKAGE_AUDIT.md",
+      "id": "AFFINITY1_leak",
+      "name": "Boltz-2 co-folding 'zero-shot' affinity",
+      "negative_outcome": "'zero-shot' indefensible (affinity head trained on ChEMBL/BindingDB; thrombin in-cutoff); novel-split n=5 ~0.52",
+      "reopen_trigger": "a leakage-controlled novel-target evaluation (R2)",
+      "tried": "CHEMBL204 thrombin benchmark"
+    }
+  ],
+  "disease_classes": [
+    "bacteria_self_metabolism",
+    "host_dependent_parasite",
+    "virus",
+    "fungus",
+    "cancer",
+    "complex_human_disease",
+    "monogenic_disease"
+  ],
+  "fabrications_removed": {
+    "also_retracted": [
+      "6/6 scouts",
+      "79% complete",
+      "universal",
+      "p38 MAPK finding"
+    ],
+    "deleted_result_files": [
+      "results/pharma_deliverable_*.json",
+      "results/INTERCEPTA_{pharma,FINAL}_package.json",
+      "results/INTERCEPTA_explanations.json",
+      "results/pareto_ranking_mcrpc.json",
+      "results/INTERCEPTA_*_candidates.csv (fabricated ranking chain)",
+      "results/round3_gbm/pharma_deliverable_gbm_v0.{json,md}",
+      "8 build-logs with BeatAML sample IDs (PHI safety net)",
+      "unverifiable KAALI PDFs"
+    ],
+    "mislabeled_but_real_retained": [
+      "*denovo*molecules*.csv = scaffold-hopped analogues (NOT de novo)",
+      "phase1_5trial_VALIDATED.* = '5/5' retracted; real 2/6 (Cox PH)",
+      "lead_candidate_INTC002.json = computational hypothesis (novelty 0.266), not a validated drug"
+    ],
+    "nine_fake_claims": [
+      "AI generative de-novo molecules (was R-group/scaffold hopping)",
+      "Stage-5 Pareto scores presented as computed (dimension scores typed by hand)",
+      "Mechanism-of-action explanations (hand-written text)",
+      "Full safety profile (hand-written)",
+      "Synthesis route (hand-written; no retrosynthesis engine)",
+      "Comparison vs standard-of-care (hand-written)",
+      "Clinical-trial design (hand-written)",
+      "'Generates novel molecules' differentiator (no AI model)",
+      "Pareto-ranking technology 'working' (inputs human-assigned)"
+    ],
+    "removal_record": "INTEGRITY_SWEEP.md",
+    "source_of_truth": "docs/audits/VISION_AUDIT.txt (92 requirements: 23 MET / 36 PARTIAL / 24 NOT / 9 FAKE)"
+  }
+}

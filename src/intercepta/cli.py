@@ -318,10 +318,41 @@ def _cmd_route(args):
     return 0
 
 
+def _cmd_kg(args):
+    """F9 composite knowledge graph: query a disease class (applicable arms + abstention w/ cited dead-ends),
+    or dump the first-class negatives ledger. Integration/provenance only — no new scientific claim."""
+    from intercepta.knowledge_graph import KnowledgeGraph
+    kg = KnowledgeGraph.load()
+    errs = kg.integrity_check()
+    if errs:
+        print("KG INTEGRITY VIOLATIONS:"); [print("  -", e) for e in errs]; return 1
+    if args.negatives:
+        print("FIRST-CLASS NEGATIVES (the program's most-cited real contribution):")
+        for d in kg.negatives_ledger():
+            print(f"  [{d['category']}] {d['id']} — {d['name']}\n      {d['negative_outcome']}\n      "
+                  f"reopen iff: {d['reopen_trigger']}  ({d['evidence']})")
+        fr = kg.fabrications_removed
+        print(f"\n  removed fabrications: {len(fr['nine_fake_claims'])} fake claims + deleted artifacts "
+              f"({fr['removal_record']})")
+        return 0
+    if args.disease_class:
+        print(kg.query(args.disease_class).summary()); return 0
+    print("stats:", kg.stats())
+    print("disease classes:", ", ".join(kg.disease_classes))
+    print("use --class <disease_class> to query, or --negatives for the failure ledger")
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="intercepta", description=SCOPE.splitlines()[0])
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("info", help="print version + honest scope").set_defaults(func=_cmd_info)
+    kgp = sub.add_parser("kg", help="F9 composite knowledge graph: validated arms + FIRST-CLASS negatives/"
+                         "dead-ends + transfer-conditions + cited abstention, with per-edge provenance")
+    kgp.add_argument("--class", dest="disease_class", help="query a disease class (e.g. bacteria_self_metabolism, "
+                     "virus, cancer, complex_human_disease)")
+    kgp.add_argument("--negatives", action="store_true", help="dump the first-class negatives/failure ledger")
+    kgp.set_defaults(func=_cmd_kg)
     r = sub.add_parser("rank", help="rank drugs for query tumor expression (genes x samples CSV)")
     r.add_argument("--expr", required=True, help="query expression CSV (genes as rows, samples as columns)")
     r.add_argument("--mutations", help="optional sample x {NRAS,FLT3_ITD,...} 0/1 CSV")
