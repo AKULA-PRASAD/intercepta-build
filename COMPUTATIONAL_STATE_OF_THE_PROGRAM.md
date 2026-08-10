@@ -59,3 +59,16 @@ perturbation atlases, structural genomics, activity databases), **not** with our
 The repo documents (and removed) prior **fabricated artifacts** (`INTEGRITY_SWEEP.md`, `docs/audits/VISION_AUDIT.txt`:
 "9 fake claims", 10% of 92 requirements). Trust only post-Constitution, pre-registered, reproduced-×2 results;
 this document relies only on those + independently re-verified numbers.
+
+---
+## UPDATE 2026-08-10 — a FOURTH code-verified wall: durability falsified at scale
+DYNAMICS5 (reproduced ×2, sha `caea6b90`; `experiments/DYNAMICS5_resistance_site_entropy/results/`) tested the
+DYNAMICS1 durability premise at proper power: n=198 targets, **1,143** CARD-documented resistance positions,
+within-protein paired design (each protein its own control). **Result: masked-PLM entropy does NOT mark
+resistance sites** — one-sided Wilcoxon p=**0.99997** (opposite direction), mean ΔH=**−0.22**, positive-fraction
+**0.41** (<0.5), position-level AUROC **0.446** (below chance), clustered-permutation p=**1.0**; verdict **CEILING**.
+DYNAMICS1's n=15 AUROC 0.84 was a small-n artifact and did not survive powering. **Consequence:** the program's
+one remaining "live positive" is now falsified; the surviving computational positives are ONLY (a) conserved-
+invariant target-ID enrichment and (b) the base-rate-fair gate (FAIRGATE1). This is a fourth instance of the
+same information wall — even the durability axis, properly powered, is chance. It also *vindicates the rigor*:
+a within-protein powered test overturned an underpowered positive, exactly as it should.

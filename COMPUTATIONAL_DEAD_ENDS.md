@@ -52,3 +52,13 @@ is the D3-class loop applied to the review itself. **One audit is enough; the mi
 **Net:** compute belongs ONLY in roadmap R1–R4 (and R5 *iff* R2's alarm fires). Every direction above is either
 information-limited (no signal exists to find) or interpolation-bounded (only novel-split performance matters,
 and it is chance) — additional GPU-hours are, with proof, wasted there.
+
+### D9 — DURABILITY via masked-PLM entropy at drug-contact / resistance sites. **CLOSED (falsified at scale, 2026-08-10).**
+**Proof (code, reproduced ×2, sha `caea6b90`):** DYNAMICS5 tested the DYNAMICS1 premise at power — n=198 targets,
+1,143 CARD-documented resistance positions, within-protein paired design. Resistance sites are **not** higher-
+entropy than matched controls: one-sided Wilcoxon p=**0.99997** (opposite direction), mean ΔH=**−0.22**,
+positive-fraction **0.41**, position-level AUROC **0.446** (below chance), clustered-perm p=**1.0**; verdict
+**CEILING** (`experiments/DYNAMICS5_resistance_site_entropy/results/DYNAMICS5_metrics.json`). **Why:** DYNAMICS1's
+n=15 AUROC 0.84 was a small-n artifact; the signal is absent (or slightly reversed — resistance sites tend to be
+functionally important/conserved, i.e., lower tolerance). **This closes the durability-entropy axis** (previously
+mis-ranked as roadmap R1). Reopen ONLY with a different, powered observable (FEP/MD ΔΔG or measured DMS fitness).

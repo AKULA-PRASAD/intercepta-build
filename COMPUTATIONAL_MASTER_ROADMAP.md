@@ -69,3 +69,16 @@ R2 earns it.**
 - **Therefore the shortest computational path is NOT to attack the vision head-on** (proven futile) — it is to
   (R1) harvest the softest wall, (R2) instrument the hard wall, (R3) auto-absorb the growing data, (R4) bank the
   achievable core — and let P(vision) rise with the world's data while we hold a monitor on the frontier.
+
+---
+## UPDATE 2026-08-10 — R1 FALSIFIED; re-ranking
+DYNAMICS5 came back a preregistered CEILING (durability entropy does not mark resistance sites at n=1,143;
+Wilcoxon p=0.99997 opposite direction, position AUROC 0.446, reproduced ×2). **R1 as written is wrong** — the
+"softest wall" (PLM-entropy durability) does not exist. It moves to dead-end **D9**. What remains of the R1
+idea is only the *established, non-novel* fact that PLMs predict variant effects on ProteinGym-scale DMS — not
+durability, not novel here, and it advances the vision only by folding into R2/R3. **Revised ranking:**
+**R2 (leakage-controlled OOD testbed) is now the single top compute bet**, then R3 (public-data ingestion),
+then R4 (harden the achievable target-ID core); R1 is demoted to ✗ (no privileged soft wall remains);
+R5 (molecule half) stays gated on R2's alarm. Net: with durability falsified, **there is no current
+compute-only direction with a high-probability path to the vision** — only the *instrument* (R2) and the
+*data-absorber* (R3) that let P(vision) rise as public functional data grows.
