@@ -113,7 +113,7 @@ moderate or low across two independent regimes (CALIB1, ordinal-confidence AUROC
 **This moves the arc's central positive from "computational-only" to "experimentally validated in six organisms including three outside the development panel
 held-out pathogens" — the credibility milestone — while everything else in the map below remains retrospective.**
 
-**A pre-registered PROSPECTIVE-BLIND test (not postdiction).** All of the above is retrospective — the experimental answer
+**A pre-registered ANALYST-BLIND (lock-before-reveal) test (not postdiction; not a wet-lab prospective test).** All of the above is retrospective — the experimental answer
 existed when we computed the enrichment. To test *prospective* prediction honestly without a laboratory, we pre-registered a
 blind protocol on a *never-seen* WHO high-priority pathogen, **Neisseria gonorrhoeae** (drug-resistant gonorrhea; never in
 development): the FBA-essentiality predictions were computed from a *de-novo* genome-scale model and **locked and committed to
@@ -127,7 +127,7 @@ analyst-blind (lock-before-reveal) evidence obtainable without a wet lab: the me
 essentiality on a pre-registered, genuinely novel pathogen (predictions locked/committed before the existing experimental
 answer was consulted — not a wet-lab prospective test). (Scope unchanged: essentiality-enrichment only; sparse de-novo GEM → low recall; not wet-lab.)
 
-**Prospective-blind SUITE (BLIND1–7) — across all THREE DOMAINS OF LIFE (honest: passes where the invariant holds, fails where it
+**Analyst-blind (lock-before-reveal) SUITE (BLIND1–7) — across all THREE DOMAINS OF LIFE (honest: passes where the invariant holds, fails where it
 breaks).** We extended the lock-then-reveal protocol to a suite spanning bacteria (multiple phyla), an **archaeon**, and
 **eukaryotic pathogen classes** — each organism genuinely never used in development; for BLIND3–7 the Stage-1 lock was
 git-committed *before* the reveal existed (version-control-enforced blindness):
@@ -171,7 +171,7 @@ plainly). The two coverage-failures (a 337-gene *T. brucei* carve; a fastidious 
 higher one OR 2.5 FAIL). Under a base-rate-fair lens (significance + a precision-lift over base rate; applied only as a secondary
 diagnostic, *no committed verdict is flipped*), the fungal "fail" (*K. phaffii*) is **real signal compressed below an
 odds-ratio bar calibrated on bacteria** (p≈4×10⁻⁵, precision-lift 1.7), while *T. brucei* remains a genuine null. The disciplined
-statement of the transfer law is therefore: **FBA-essentiality transfers as far as (model quality) × (a base-rate-fair effect
+statement of the transfer-condition principle is therefore: **FBA-essentiality transfers as far as (model quality) × (a base-rate-fair effect
 size) permits — reaching all three domains of life where the metabolic reconstruction is adequate — and the apparent
 domain boundary is largely a model-coverage and gate-calibration effect, not an intrinsic prokaryote/eukaryote wall.** (Scope:
 retrospective, small-n, correlational, with heterogeneous truth-sets/GEM-sources as confounds; it explains the observed boundary,

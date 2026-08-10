@@ -64,7 +64,7 @@ pandoc REPORT.md -o MANUSCRIPT.pdf --pdf-engine=xelatex --resource-path=.:figure
 default LaTeX fonts; the transliteration is rendering-only and does not alter `REPORT.md`.)*
 
 ## Honest note on what this preprint is (and is not)
-This is a rigorous, **negatives-first** methods paper: a validated, prospective-blind, reproducible **computational
+This is a rigorous, **negatives-first** methods paper: a validated, analyst-blind (lock-before-reveal), reproducible **computational
 target-PRIORITIZATION** system with a mapped generalization frontier and an abstaining router. It establishes priority,
 method, and an honest evidence map. It is **not** a drug, not a validated novel target, and **not** a clinical result — the
 molecule-potency, novel-target, and patient/clinical claims are explicitly gated on new experimental information (see
