@@ -17,13 +17,24 @@ RES = os.path.join(HERE, "results"); os.makedirs(RES, exist_ok=True)
 DOCK_BASE = 0.4285   # HIT2 full-set docking overall AUROC (fixed baseline of record)
 B, SEED = 10000, 42
 
+def _rank_avg(s):
+    """Tie-aware average ranks, PURE NUMPY (C-level bincount). Replaces the per-call pandas
+    DataFrame+groupby that made the B=10000 bootstrap ~150k pandas ops -> minutes of login-node CPU
+    -> SIGKILL. This is ~100x faster and identical up to float error."""
+    n = len(s); order = np.argsort(s, kind="mergesort"); ss = s[order]
+    pos = np.arange(1, n + 1, dtype=float)
+    newgrp = np.ones(n, dtype=bool); newgrp[1:] = ss[1:] != ss[:-1]
+    grp = np.cumsum(newgrp) - 1
+    mean_rank = np.bincount(grp, weights=pos) / np.bincount(grp)
+    out = np.empty(n, dtype=float); out[order] = mean_rank[grp]
+    return out
+
 def auroc(score, y):
     s = np.asarray(score, float); y = np.asarray(y, int)
     m = ~np.isnan(s); s, y = s[m], y[m]
     npos, nneg = int(y.sum()), int((y == 0).sum())
     if npos == 0 or nneg == 0: return np.nan
-    order = np.argsort(s, kind="mergesort"); ranks = np.empty(len(s)); ranks[order] = np.arange(1, len(s)+1)
-    df = pd.DataFrame({"s": s, "r": ranks}); ranks = df.groupby("s")["r"].transform("mean").values
+    ranks = _rank_avg(s)
     return float((ranks[y == 1].sum() - npos*(npos+1)/2.0) / (npos*nneg))
 
 def boot_ci(score, y, B=B, seed=SEED):
