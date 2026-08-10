@@ -34,3 +34,14 @@ molecule half (roadmap R5).
 On thrombin today, **WALL_HOLDS** (qsar_rf strong on SEEN, ≈ chance on NOVEL) — consistent with HIT1
 (`0.90→0.67`). The point is not this result; it is a permanent, re-runnable monitor for every future
 model/dataset (roadmap R3 feeds it). Reported honestly either way; no tuning to a target outcome.
+
+---
+## CORRECTION 2026-08-10 — artifact-controlled alarm (the original gate was confounded)
+The first full run (LIT-PCBA panel via R3) fired the `>0.60 CI-lower` alarm on 4/7 targets. A control showed
+this was largely the **LIT-PCBA property/decoy artifact** (repo's own `B54`): a PROPERTY-ONLY RandomForest
+(8 bulk descriptors, no ECFP) alone reached novel AUROC up to **0.816** (FEN1). The original gate could not
+tell target-specific novel-chemotype binding from generic property bias. **Corrected gate (now enforced in
+code):** WALL_BREAKING requires `qsar_rf` NOVEL AUROC CI-lower > 0.60 **AND** (`qsar_rf` NOVEL AUROC −
+`property_baseline` NOVEL AUROC) > 0.10. `similarity` and `property_baseline` are controls, excluded from the
+alarm. Honest note: even this residual is imperfect (ECFP encodes property info), so a corrected
+WALL_BREAKING is a *follow-up trigger*, not a claim.

@@ -1,0 +1,44 @@
+[
+  {
+    "target": "FEN1",
+    "ecfp_novel_auroc": 0.9079,
+    "property_only_novel_auroc": 0.8164,
+    "ecfp_minus_property": 0.0915
+  },
+  {
+    "target": "MAPK1",
+    "ecfp_novel_auroc": 0.6461,
+    "property_only_novel_auroc": 0.5787,
+    "ecfp_minus_property": 0.0674
+  },
+  {
+    "target": "PKM2",
+    "ecfp_novel_auroc": 0.7894,
+    "property_only_novel_auroc": 0.6586,
+    "ecfp_minus_property": 0.1308
+  },
+  {
+    "target": "KAT2A",
+    "ecfp_novel_auroc": 0.6392,
+    "property_only_novel_auroc": 0.6225,
+    "ecfp_minus_property": 0.0167
+  },
+  {
+    "target": "GBA",
+    "ecfp_novel_auroc": 0.8215,
+    "property_only_novel_auroc": 0.7885,
+    "ecfp_minus_property": 0.033
+  },
+  {
+    "target": "ESR1_ant",
+    "ecfp_novel_auroc": 0.7001,
+    "property_only_novel_auroc": 0.6666,
+    "ecfp_minus_property": 0.0336
+  },
+  {
+    "target": "ALDH1",
+    "ecfp_novel_auroc": 0.6937,
+    "property_only_novel_auroc": 0.5917,
+    "ecfp_minus_property": 0.102
+  }
+]

@@ -1,12 +1,14 @@
 {
   "payload": {
     "alarm_per_method": {
+      "property_baseline": "EXCLUDED_control",
       "qsar_rf": "WALL_HOLDS",
-      "similarity": "EXCLUDED_interpolation_control"
+      "similarity": "EXCLUDED_control"
     },
     "config": {
       "act_cut": 6.5,
       "alarm_novel_ci_lower_gt": 0.6,
+      "alarm_requires_ecfp_minus_property_baseline_gt": 0.1,
       "bootstrap_B": 2000,
       "ecfp": [
         2,
@@ -33,6 +35,48 @@
       "min": 0.1938
     },
     "results": {
+      "property_baseline": {
+        "ALL": {
+          "auroc": 0.858913,
+          "ci95": [
+            0.827524,
+            0.891206
+          ],
+          "ef10": 1.8594,
+          "n": 553,
+          "n_pos": 292
+        },
+        "NOVEL": {
+          "auroc": 0.674194,
+          "ci95": [
+            0.382047,
+            0.93254
+          ],
+          "ef10": 1.9143,
+          "n": 67,
+          "n_pos": 5
+        },
+        "NOVEL_scaffold": {
+          "auroc": 0.865243,
+          "ci95": [
+            0.812284,
+            0.91221
+          ],
+          "ef10": 1.9898,
+          "n": 195,
+          "n_pos": 98
+        },
+        "SEEN_analog": {
+          "auroc": 0.846515,
+          "ci95": [
+            0.810451,
+            0.881186
+          ],
+          "ef10": 1.6934,
+          "n": 486,
+          "n_pos": 287
+        }
+      },
       "qsar_rf": {
         "ALL": {
           "auroc": 0.938638,
@@ -46,6 +90,7 @@
         },
         "NOVEL": {
           "auroc": 0.795161,
+          "auroc_minus_property_baseline": 0.120967,
           "ci95": [
             0.416532,
             0.994792
@@ -121,5 +166,5 @@
     "target_csv": "CHEMBL204_Ki.csv",
     "verdict": "WALL_HOLDS"
   },
-  "payload_sha256": "dffa5ef60231c661101d52f2ccd067b705a5a63165a9b8d593ba3ea4dc9bdcf6"
+  "payload_sha256": "bbe7829fb8d5e9980127ea791b3dac196182b72f324135d7c9050422d0795346"
 }

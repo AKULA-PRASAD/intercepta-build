@@ -13,13 +13,13 @@ Defaults instantiate on MoleculeACE CHEMBL204 thrombin shipped in AFFINITY1/benc
 import os, sys, json, hashlib
 import numpy as np, pandas as pd
 from rdkit import Chem
-from rdkit.Chem import AllChem, DataStructs
+from rdkit.Chem import AllChem, DataStructs, Descriptors
 from rdkit.Chem.Scaffolds import MurckoScaffold
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
 
 HERE = os.path.dirname(os.path.abspath(__file__)); RES = os.path.join(HERE, "results"); os.makedirs(RES, exist_ok=True)
-ACT_CUT, NN_NOVEL, B, SEED, NBITS, RADIUS, EF_FRAC, ALARM = 6.5, 0.40, 2000, 42, 2048, 2, 0.10, 0.60
+ACT_CUT, NN_NOVEL, B, SEED, NBITS, RADIUS, EF_FRAC, ALARM, PROP_MARGIN = 6.5, 0.40, 2000, 42, 2048, 2, 0.10, 0.60, 0.10
 
 def fp(smi):
     m = Chem.MolFromSmiles(str(smi))
@@ -85,6 +85,14 @@ def main():
     rf = RandomForestClassifier(n_estimators=300, random_state=SEED, n_jobs=1)
     rf.fit(to_np(list(tr.fp)), tr.active.values)
     scores["qsar_rf"] = rf.predict_proba(to_np(list(te.fp)))[:, 1]
+    # PROPERTY-ONLY control: 8 bulk descriptors, no ECFP -> exposes LIT-PCBA/DUD-E property(decoy) bias (B54 artifact).
+    def _props(s):
+        m = Chem.MolFromSmiles(str(s))
+        return [Descriptors.MolWt(m), Descriptors.MolLogP(m), Descriptors.NumHDonors(m), Descriptors.NumHAcceptors(m),
+                Descriptors.TPSA(m), Descriptors.NumRotatableBonds(m), m.GetNumHeavyAtoms(), Descriptors.RingCount(m)]
+    prf = RandomForestClassifier(n_estimators=300, random_state=SEED, n_jobs=1)
+    prf.fit(np.array([_props(s) for s in tr.smiles], float), tr.active.values)
+    scores["property_baseline"] = prf.predict_proba(np.array([_props(s) for s in te.smiles], float))[:, 1]
     if ext_csv and os.path.exists(ext_csv):
         e = pd.read_csv(ext_csv).rename(columns={smi_c: "smiles"})
         emap = dict(zip(e["smiles"].astype(str), e["score"].astype(float)))
@@ -102,18 +110,24 @@ def main():
             report[meth][split] = {**boot_auroc(sc[mk], y[mk]), "ef10": ef(sc[mk], y[mk])}
 
     # ---- pre-registered ALARM gate ----
+    prop_nov = report.get("property_baseline", {}).get("NOVEL", {}).get("auroc")
     alarms = {}
     for meth in scores:
-        if meth == "similarity":  # excluded (interpolation by construction)
-            alarms[meth] = "EXCLUDED_interpolation_control"; continue
-        nov = report[meth]["NOVEL"]; lo = nov["ci95"][0]
-        alarms[meth] = ("WALL_BREAKING" if (lo is not None and lo > ALARM) else "WALL_HOLDS")
+        if meth in ("similarity", "property_baseline"):  # controls, not alarm targets
+            alarms[meth] = "EXCLUDED_control"; continue
+        nov = report[meth]["NOVEL"]; lo = nov["ci95"][0]; au = nov["auroc"]
+        over_prop = (au - prop_nov) if (au is not None and prop_nov is not None) else None
+        # WALL_BREAKING requires NOVEL signal that BEATS chance AND exceeds property/decoy bias by a margin
+        alarms[meth] = ("WALL_BREAKING" if (lo is not None and lo > ALARM and over_prop is not None and over_prop > PROP_MARGIN)
+                        else "WALL_HOLDS")
+        report[meth]["NOVEL"]["auroc_minus_property_baseline"] = (round(over_prop, 6) if over_prop is not None else None)
     verdict = "WALL_BREAKING" if any(v == "WALL_BREAKING" for v in alarms.values()) else "WALL_HOLDS"
 
     payload = {
         "instrument": "R2 OOD-generalization testbed",
         "config": {"act_cut": ACT_CUT, "nn_novel_threshold": NN_NOVEL, "bootstrap_B": B, "seed": SEED,
-                   "ecfp": [RADIUS, NBITS], "ef_frac": EF_FRAC, "alarm_novel_ci_lower_gt": ALARM},
+                   "ecfp": [RADIUS, NBITS], "ef_frac": EF_FRAC, "alarm_novel_ci_lower_gt": ALARM,
+                   "alarm_requires_ecfp_minus_property_baseline_gt": PROP_MARGIN},
         "target_csv": os.path.basename(os.path.abspath(target_csv)),
         "counts": {"train": int(len(tr)), "train_active": int(tr.active.sum()),
                    "test": int(len(te)), "test_active": int(y.sum()),

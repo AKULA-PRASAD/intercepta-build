@@ -1,0 +1,112 @@
+{
+  "any_wall_breaking": true,
+  "config": {
+    "max_act": 2000,
+    "max_inact_ratio": 30,
+    "seed": 42,
+    "test_scaffold_frac": 0.3
+  },
+  "instrument": "R3 ingestion -> R2 OOD testbed",
+  "n_targets_powered": 7,
+  "source": "LIT-PCBA (property-matched)",
+  "targets": [
+    {
+      "alarm": "WALL_HOLDS",
+      "leakage_median_maxTanimoto": 0.2571,
+      "n_test_novel_active": 68,
+      "qsar_rf_NOVEL_auroc": 0.907864,
+      "qsar_rf_NOVEL_ci": [
+        0.869184,
+        0.941811
+      ],
+      "qsar_rf_NOVEL_npos": 68,
+      "qsar_rf_SEEN_auroc": 0.96824,
+      "target": "FEN1",
+      "verdict": "WALL_HOLDS"
+    },
+    {
+      "alarm": "WALL_HOLDS",
+      "leakage_median_maxTanimoto": 0.2857,
+      "n_test_novel_active": 60,
+      "qsar_rf_NOVEL_auroc": 0.646144,
+      "qsar_rf_NOVEL_ci": [
+        0.573382,
+        0.715472
+      ],
+      "qsar_rf_NOVEL_npos": 60,
+      "qsar_rf_SEEN_auroc": 0.731765,
+      "target": "MAPK1",
+      "verdict": "WALL_HOLDS"
+    },
+    {
+      "alarm": "WALL_BREAKING",
+      "leakage_median_maxTanimoto": 0.2985,
+      "n_test_novel_active": 68,
+      "qsar_rf_NOVEL_auroc": 0.789364,
+      "qsar_rf_NOVEL_ci": [
+        0.727943,
+        0.849481
+      ],
+      "qsar_rf_NOVEL_npos": 68,
+      "qsar_rf_SEEN_auroc": 0.823561,
+      "target": "PKM2",
+      "verdict": "WALL_BREAKING"
+    },
+    {
+      "alarm": "WALL_HOLDS",
+      "leakage_median_maxTanimoto": 0.2553,
+      "n_test_novel_active": 48,
+      "qsar_rf_NOVEL_auroc": 0.639224,
+      "qsar_rf_NOVEL_ci": [
+        0.551077,
+        0.723034
+      ],
+      "qsar_rf_NOVEL_npos": 48,
+      "qsar_rf_SEEN_auroc": 0.925676,
+      "target": "KAT2A",
+      "verdict": "WALL_HOLDS"
+    },
+    {
+      "alarm": "WALL_HOLDS",
+      "leakage_median_maxTanimoto": 0.25,
+      "n_test_novel_active": 23,
+      "qsar_rf_NOVEL_auroc": 0.821468,
+      "qsar_rf_NOVEL_ci": [
+        0.705402,
+        0.911809
+      ],
+      "qsar_rf_NOVEL_npos": 23,
+      "qsar_rf_SEEN_auroc": 0.873355,
+      "target": "GBA",
+      "verdict": "WALL_HOLDS"
+    },
+    {
+      "alarm": "WALL_HOLDS",
+      "leakage_median_maxTanimoto": 0.1765,
+      "n_test_novel_active": 23,
+      "qsar_rf_NOVEL_auroc": 0.700149,
+      "qsar_rf_NOVEL_ci": [
+        0.580025,
+        0.81165
+      ],
+      "qsar_rf_NOVEL_npos": 23,
+      "qsar_rf_SEEN_auroc": 0.814286,
+      "target": "ESR1_ant",
+      "verdict": "WALL_HOLDS"
+    },
+    {
+      "alarm": "WALL_BREAKING",
+      "leakage_median_maxTanimoto": 0.3571,
+      "n_test_novel_active": 327,
+      "qsar_rf_NOVEL_auroc": 0.693687,
+      "qsar_rf_NOVEL_ci": [
+        0.661411,
+        0.726999
+      ],
+      "qsar_rf_NOVEL_npos": 327,
+      "qsar_rf_SEEN_auroc": 0.766518,
+      "target": "ALDH1",
+      "verdict": "WALL_BREAKING"
+    }
+  ]
+}

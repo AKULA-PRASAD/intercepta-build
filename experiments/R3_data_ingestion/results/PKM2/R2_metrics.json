@@ -1,0 +1,170 @@
+{
+  "payload": {
+    "alarm_per_method": {
+      "property_baseline": "EXCLUDED_control",
+      "qsar_rf": "WALL_BREAKING",
+      "similarity": "EXCLUDED_control"
+    },
+    "config": {
+      "act_cut": 6.5,
+      "alarm_novel_ci_lower_gt": 0.6,
+      "alarm_requires_ecfp_minus_property_baseline_gt": 0.1,
+      "bootstrap_B": 2000,
+      "ecfp": [
+        2,
+        2048
+      ],
+      "ef_frac": 0.1,
+      "nn_novel_threshold": 0.4,
+      "seed": 42
+    },
+    "counts": {
+      "test": 1841,
+      "test_active": 132,
+      "test_novel": 1587,
+      "test_novel_active": 68,
+      "test_scaffold_novel": 1841,
+      "train": 4705,
+      "train_active": 414
+    },
+    "instrument": "R2 OOD-generalization testbed",
+    "leakage_audit_test_to_train_maxTanimoto": {
+      "frac_ge_0.8": 0.0005,
+      "frac_lt_0.4": 0.862,
+      "median": 0.2985,
+      "min": 0.1129
+    },
+    "results": {
+      "property_baseline": {
+        "ALL": {
+          "auroc": 0.686224,
+          "ci95": [
+            0.639822,
+            0.730505
+          ],
+          "ef10": 1.8192,
+          "n": 1841,
+          "n_pos": 132
+        },
+        "NOVEL": {
+          "auroc": 0.658565,
+          "ci95": [
+            0.592946,
+            0.721846
+          ],
+          "ef10": 1.6146,
+          "n": 1587,
+          "n_pos": 68
+        },
+        "NOVEL_scaffold": {
+          "auroc": 0.686224,
+          "ci95": [
+            0.639822,
+            0.730505
+          ],
+          "ef10": 1.8192,
+          "n": 1841,
+          "n_pos": 132
+        },
+        "SEEN_analog": {
+          "auroc": 0.63273,
+          "ci95": [
+            0.555527,
+            0.706351
+          ],
+          "ef10": 1.27,
+          "n": 254,
+          "n_pos": 64
+        }
+      },
+      "qsar_rf": {
+        "ALL": {
+          "auroc": 0.854126,
+          "ci95": [
+            0.815271,
+            0.889526
+          ],
+          "ef10": 5.6091,
+          "n": 1841,
+          "n_pos": 132
+        },
+        "NOVEL": {
+          "auroc": 0.789364,
+          "auroc_minus_property_baseline": 0.130799,
+          "ci95": [
+            0.727943,
+            0.849481
+          ],
+          "ef10": 5.4309,
+          "n": 1587,
+          "n_pos": 68
+        },
+        "NOVEL_scaffold": {
+          "auroc": 0.854126,
+          "ci95": [
+            0.815271,
+            0.889526
+          ],
+          "ef10": 5.6091,
+          "n": 1841,
+          "n_pos": 132
+        },
+        "SEEN_analog": {
+          "auroc": 0.823561,
+          "ci95": [
+            0.769652,
+            0.876248
+          ],
+          "ef10": 2.8575,
+          "n": 254,
+          "n_pos": 64
+        }
+      },
+      "similarity": {
+        "ALL": {
+          "auroc": 0.765808,
+          "ci95": [
+            0.720682,
+            0.808766
+          ],
+          "ef10": 4.3205,
+          "n": 1841,
+          "n_pos": 132
+        },
+        "NOVEL": {
+          "auroc": 0.645674,
+          "ci95": [
+            0.583826,
+            0.708546
+          ],
+          "ef10": 2.0549,
+          "n": 1587,
+          "n_pos": 68
+        },
+        "NOVEL_scaffold": {
+          "auroc": 0.765808,
+          "ci95": [
+            0.720682,
+            0.808766
+          ],
+          "ef10": 4.3205,
+          "n": 1841,
+          "n_pos": 132
+        },
+        "SEEN_analog": {
+          "auroc": 0.727632,
+          "ci95": [
+            0.653576,
+            0.797959
+          ],
+          "ef10": 2.2225,
+          "n": 254,
+          "n_pos": 64
+        }
+      }
+    },
+    "target_csv": "r2input.csv",
+    "verdict": "WALL_BREAKING"
+  },
+  "payload_sha256": "c60ab574691269dbaf25bfc8c7254dcf459997f880d413b7c93f649f40586827"
+}
