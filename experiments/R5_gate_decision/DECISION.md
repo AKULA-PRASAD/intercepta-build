@@ -31,3 +31,15 @@ control** — train an ECFP classifier on *other* targets' actives-vs-inactives 
 PKM2's novel actives. If yes → the residual is generic ECFP separability, not binding → PKM2 CLOSED too. If
 no → a genuine, if tiny, target-specific novel-chemotype signal worth a deeper look. Either way it is a cheap
 instrument refinement, **not** authorization to build the molecule half.
+
+---
+## FINAL (target-agnostic control) — PKM2 CLOSED → R5 DEFINITIVELY CLOSED
+The clean control (`r5_gate_adjudication` follow-up): a **generic-activeness** ECFP model trained on **6 OTHER**
+LIT-PCBA targets (never saw PKM2) scores PKM2's novel-split actives (nn<0.3, n_act=30) at AUROC **0.731**;
+the PKM2-trained model scores **0.806** → **target-specific advantage only +0.076 (<0.10)**. PKM2's residual
+is therefore **generic ECFP separability, not target-specific binding**.
+
+**Both marginal candidates CLOSED. R5 is DEFINITIVELY CLOSED:** across the full powered LIT-PCBA panel, **no
+target-specific novel-chemotype extrapolation signal survives** rigorous property + target-agnostic controls.
+The extrapolation wall HOLDS. No compute is authorized for the molecule half (dead-ends D2/D5 stand). The
+only path that opens R5 is a future model/dataset that clears this same gate — which R2/R3 will auto-detect.
