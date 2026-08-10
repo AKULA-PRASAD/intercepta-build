@@ -1,0 +1,77 @@
+{
+  "config": {
+    "ACT_CUT": 6.5,
+    "CAP_ACT": 125,
+    "NBITS": 2048,
+    "NN_NOVEL": 0.4,
+    "RADIUS": 2,
+    "SEED": 42
+  },
+  "panel": [
+    "ALDH1",
+    "PKM2",
+    "FEN1"
+  ],
+  "targets": [
+    {
+      "n_novel_actives_total": 327,
+      "n_novel_inactives_total": 1210,
+      "n_novel_test": 1537,
+      "n_test": 2259,
+      "n_train_actives": 1388,
+      "receptor_pdb_chosen": "4wp7",
+      "receptor_pdbs_available": [
+        "4wp7",
+        "4wpn",
+        "4x4l",
+        "5ac2",
+        "5l2m",
+        "5l2n",
+        "5l2o",
+        "5tei"
+      ],
+      "scored_actives": 125,
+      "scored_inactives": 125,
+      "scored_total": 250,
+      "target": "ALDH1"
+    },
+    {
+      "n_novel_actives_total": 68,
+      "n_novel_inactives_total": 1519,
+      "n_novel_test": 1587,
+      "n_test": 1841,
+      "n_train_actives": 414,
+      "receptor_pdb_chosen": "3gqy",
+      "receptor_pdbs_available": [
+        "3gqy",
+        "3gr4",
+        "3h6o",
+        "3me3",
+        "3u2z",
+        "4g1n",
+        "4jpg",
+        "5x1v",
+        "5x1w"
+      ],
+      "scored_actives": 68,
+      "scored_inactives": 68,
+      "scored_total": 136,
+      "target": "PKM2"
+    },
+    {
+      "n_novel_actives_total": 68,
+      "n_novel_inactives_total": 1672,
+      "n_novel_test": 1740,
+      "n_test": 1823,
+      "n_train_actives": 257,
+      "receptor_pdb_chosen": "5fv7",
+      "receptor_pdbs_available": [
+        "5fv7"
+      ],
+      "scored_actives": 68,
+      "scored_inactives": 68,
+      "scored_total": 136,
+      "target": "FEN1"
+    }
+  ]
+}
