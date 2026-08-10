@@ -125,8 +125,9 @@ def main():
     }
     payload = json.loads(json.dumps(payload, sort_keys=True))
     blob = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode(); sha = hashlib.sha256(blob).hexdigest()
-    json.dump({"payload": payload, "payload_sha256": sha}, open(os.path.join(RES, "R2_metrics.json"), "w"), sort_keys=True, indent=2)
-    open(os.path.join(RES, "payload.sha256"), "w").write(sha + "\n")
+    out_dir = os.environ.get("R2_OUT", RES); os.makedirs(out_dir, exist_ok=True)   # R3 redirects output per target; payload/sha unchanged
+    json.dump({"payload": payload, "payload_sha256": sha}, open(os.path.join(out_dir, "R2_metrics.json"), "w"), sort_keys=True, indent=2)
+    open(os.path.join(out_dir, "payload.sha256"), "w").write(sha + "\n")
     print("VERDICT:", verdict, "| sha", sha)
     for meth in scores:
         r = report[meth]

@@ -25,3 +25,5 @@ dist/
 oracle/
 experiments/*/scratch/
 papers/zero_data_discovery/MANUSCRIPT.pdf
+experiments/R3_data_ingestion/results/*/r2input.csv
+experiments/R3_data_ingestion/results/*.log
