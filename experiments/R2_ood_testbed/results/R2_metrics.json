@@ -1,0 +1,125 @@
+{
+  "payload": {
+    "alarm_per_method": {
+      "qsar_rf": "WALL_HOLDS",
+      "similarity": "EXCLUDED_interpolation_control"
+    },
+    "config": {
+      "act_cut": 6.5,
+      "alarm_novel_ci_lower_gt": 0.6,
+      "bootstrap_B": 2000,
+      "ecfp": [
+        2,
+        2048
+      ],
+      "ef_frac": 0.1,
+      "nn_novel_threshold": 0.4,
+      "seed": 42
+    },
+    "counts": {
+      "test": 553,
+      "test_active": 292,
+      "test_novel": 67,
+      "test_novel_active": 5,
+      "test_scaffold_novel": 195,
+      "train": 2201,
+      "train_active": 1250
+    },
+    "instrument": "R2 OOD-generalization testbed",
+    "leakage_audit_test_to_train_maxTanimoto": {
+      "frac_ge_0.8": 0.3454,
+      "frac_lt_0.4": 0.1212,
+      "median": 0.75,
+      "min": 0.1938
+    },
+    "results": {
+      "qsar_rf": {
+        "ALL": {
+          "auroc": 0.938638,
+          "ci95": [
+            0.917155,
+            0.958864
+          ],
+          "ef10": 1.7561,
+          "n": 553,
+          "n_pos": 292
+        },
+        "NOVEL": {
+          "auroc": 0.795161,
+          "ci95": [
+            0.416532,
+            0.994792
+          ],
+          "ef10": 5.7429,
+          "n": 67,
+          "n_pos": 5
+        },
+        "NOVEL_scaffold": {
+          "auroc": 0.913528,
+          "ci95": [
+            0.869682,
+            0.953514
+          ],
+          "ef10": 1.6913,
+          "n": 195,
+          "n_pos": 98
+        },
+        "SEEN_analog": {
+          "auroc": 0.930095,
+          "ci95": [
+            0.9035,
+            0.954434
+          ],
+          "ef10": 1.5551,
+          "n": 486,
+          "n_pos": 287
+        }
+      },
+      "similarity": {
+        "ALL": {
+          "auroc": 0.841455,
+          "ci95": [
+            0.807854,
+            0.875917
+          ],
+          "ef10": 1.5495,
+          "n": 553,
+          "n_pos": 292
+        },
+        "NOVEL": {
+          "auroc": 0.383871,
+          "ci95": [
+            0.053846,
+            0.769231
+          ],
+          "ef10": 0.0,
+          "n": 67,
+          "n_pos": 5
+        },
+        "NOVEL_scaffold": {
+          "auroc": 0.865822,
+          "ci95": [
+            0.809657,
+            0.918261
+          ],
+          "ef10": 1.5918,
+          "n": 195,
+          "n_pos": 98
+        },
+        "SEEN_analog": {
+          "auroc": 0.809203,
+          "ci95": [
+            0.767768,
+            0.84725
+          ],
+          "ef10": 1.3478,
+          "n": 486,
+          "n_pos": 287
+        }
+      }
+    },
+    "target_csv": "CHEMBL204_Ki.csv",
+    "verdict": "WALL_HOLDS"
+  },
+  "payload_sha256": "dffa5ef60231c661101d52f2ccd067b705a5a63165a9b8d593ba3ea4dc9bdcf6"
+}
