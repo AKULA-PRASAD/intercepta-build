@@ -94,21 +94,35 @@ def auroc(scores, labels):
     ranks = df["r"].values
     return float((ranks[y == 1].sum() - npos * (npos + 1) / 2.0) / (npos * nneg))
 
-def read_affinity(name):
-    """Boltz-2 affinity output lives at
-    <out_dir>/boltz_results_*/predictions/<name>/affinity_<name>.json (glob-robust)."""
-    hits = glob.glob(os.path.join(DATA, "out", "**", "predictions", name, f"affinity_{name}.json"),
-                     recursive=True)
-    if not hits: return None
-    with open(hits[0]) as f: d = json.load(f)
-    return d
+def build_affinity_index():
+    """ONE pass over <DATA>/out -> {cmpd_name: json_path}. Replaces the old per-compound recursive
+    glob (553 x '**' walks over an NFS tree of 10^4-10^5 files) that was pathologically slow and got
+    `score` SIGKILLed by the login-node resource policy. Prefers chunk_* outputs over any leftover
+    smoke tree, so duplicated compounds resolve DETERMINISTICALLY to the chunk run."""
+    index = {}
+    for root, _dirs, files in os.walk(os.path.join(DATA, "out")):
+        is_chunk = (os.sep + "chunk_") in root
+        for fn in files:
+            if fn.startswith("affinity_cmpd_") and fn.endswith(".json"):
+                name = fn[len("affinity_"):-len(".json")]
+                if name not in index or is_chunk:
+                    index[name] = os.path.join(root, fn)
+    return index
+
+def read_affinity(name, index):
+    p = index.get(name)
+    if not p: return None
+    with open(p) as f:
+        return json.load(f)
 
 def score():
     man = pd.read_csv(os.path.join(DATA, "compounds_manifest.csv"))
+    index = build_affinity_index()          # single NFS walk (was 553x recursive glob -> SIGKILL)
+    print("indexed %d affinity JSONs under %s/out" % (len(index), DATA))
     rows = []
     for _, r in man.iterrows():
         name = f"cmpd_{int(r.idx):04d}"
-        aff = read_affinity(name)
+        aff = read_affinity(name, index)
         if aff is None:
             pred_val = np.nan; pbin = np.nan
         else:
