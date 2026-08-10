@@ -1,0 +1,67 @@
+{
+  "H1_MRsig_vs_drug": {
+    "OR": 3.1608,
+    "OR_95CI": [
+      2.0285,
+      5.1857
+    ],
+    "PASS": true,
+    "contingency": [
+      18,
+      384,
+      1499,
+      101079
+    ],
+    "fisher_p": 3.8667167619702394e-05,
+    "precision_in_MRsig": 0.0448
+  },
+  "H2_MR_beyond_OT": {
+    "PASS": false,
+    "delta_AUPRC": 0.0001,
+    "delta_AUPRC_95CI": [
+      -0.0018,
+      0.001
+    ],
+    "grouped_cv_AUPRC_OT": 0.021,
+    "grouped_cv_AUPRC_OT+MR": 0.021,
+    "mr_coef_95CI": [
+      0.0031,
+      0.0475
+    ],
+    "mr_coef_mean": 0.0216
+  },
+  "H2_context_fame_adjusted": {
+    "delta_AUPRC": -0.0004,
+    "delta_AUPRC_95CI": [
+      -0.0009,
+      -0.0001
+    ],
+    "grouped_cv_AUPRC_OT+fame": 0.0602,
+    "grouped_cv_AUPRC_OT+fame+MR": 0.0598
+  },
+  "POSITIVE_CONTROL_OT_genassoc>0_vs_drug": {
+    "OR": 1.7389,
+    "OR_95CI": [
+      1.5046,
+      2.0174
+    ],
+    "fisher_p": 3.546408422190002e-12,
+    "reproduces_GENETICS1": true
+  },
+  "context": {
+    "AUROC_MR_alone": 0.5365,
+    "AUROC_OT_alone": 0.5287
+  },
+  "drug_base_rate": 0.01473,
+  "n_pairs": 102980,
+  "n_tested_MR": 45088,
+  "panel": {
+    "MONDO_0005010": "CAD.h.tsv.gz",
+    "MONDO_0005148": "T2D.h.tsv.gz",
+    "MONDO_0005180": "PARKINSON.h.tsv.gz",
+    "MONDO_0005265": "IBD.h.tsv.gz",
+    "MONDO_0008383": "RA.h.tsv.gz"
+  },
+  "seed": 42,
+  "universe_protein_coding": 20596
+}
