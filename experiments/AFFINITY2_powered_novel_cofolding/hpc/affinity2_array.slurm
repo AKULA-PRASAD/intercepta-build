@@ -21,5 +21,6 @@ export BOLTZ_CACHE="${BOLTZ_CACHE:-/scratch/$USER/boltz_cache}"
 export A2="${A2:-/scratch/$USER/affinity2}"
 C="$(printf '%02d' "$SLURM_ARRAY_TASK_ID")"
 # AFFINITY2's own per-chunk runner (success = every YAML has affinity_*.json, NFS-safe, restartable)
-bash hpc/boltz_chunk.sh "$A2/chunks/chunk_$C" "$A2/out/chunk_$C"
-echo "task=$SLURM_ARRAY_TASK_ID rc=$? end=$(date)"
+bash hpc/boltz_chunk.sh "$A2/chunks/chunk_$C" "$A2/out/chunk_$C"; rc=$?
+echo "task=$SLURM_ARRAY_TASK_ID rc=$rc end=$(date)"   # rc = # compounds still missing in this chunk
+exit $rc                                               # propagate so SLURM State reflects completeness
