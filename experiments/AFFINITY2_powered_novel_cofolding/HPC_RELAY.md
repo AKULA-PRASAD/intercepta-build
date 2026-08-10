@@ -17,16 +17,24 @@ rsync -av hpc/  akula.pra@login.explorer.northeastern.edu:/scratch/akula.pra/aff
 ```
 
 ## 2. On Explorer (login node) — chunk + submit the array
+The runner `hpc/boltz_chunk.sh` is now AFFINITY2's OWN (globs `*.yaml`, self-contained — no AFFINITY1 path
+dependency). SUBMIT-DIR CONTRACT: submit from a dir that contains `./hpc/boltz_chunk.sh`. Two equivalent ways:
 ```bash
-cd /scratch/akula.pra/affinity2                      # (or the repo's AFFINITY2 dir if cloned)
-export A2=/scratch/akula.pra/affinity2
-python hpc/make_chunks.py "$A2/yamls" "$A2/chunks" 24 # 522 YAMLs -> 24 chunks
-# submit (array 0-23, 8 concurrent). If the repo is cloned, submit from the experiment dir so the
-# relative path to AFFINITY1/hpc/boltz_chunk.sh resolves; otherwise copy boltz_chunk.sh next to it.
-sbatch hpc/affinity2_array.slurm
-squeue -u $USER                                       # watch; logs in hpc/logs/aff2_*.log
+# FIRST: get the fixed scripts. In the repo clone:
+cd /scratch/$USER/intercepta-build && git pull        # -> commit with the AFFINITY2 hpc/ fix
+# then EITHER (a) submit from the repo experiment dir (code+logs there, data via $A2):
+cd /scratch/$USER/intercepta-build/experiments/AFFINITY2_powered_novel_cofolding
+#   OR (b) keep your scratch workspace, but re-copy the fixed hpc/ into it and submit there:
+#   rsync -av /scratch/$USER/intercepta-build/experiments/AFFINITY2_powered_novel_cofolding/hpc/ /scratch/$USER/affinity2/hpc/ ; cd /scratch/$USER/affinity2
+
+export A2=/scratch/$USER/affinity2                    # DATA workspace (where chunks/ already exist)
+ls "$A2/chunks" | wc -l                               # expect 24 (already built; do NOT re-chunk)
+mkdir -p hpc/logs                                     # REQUIRED before sbatch (--output dir must pre-exist)
+sbatch hpc/affinity2_array.slurm                      # array 0-23%8; passes A2 through env
+squeue -u $USER                                       # watch; logs in ./hpc/logs/aff2_*.log
 ```
-Restartable: re-`sbatch` the same array — chunks whose every YAML already has an `affinity_*.json` are skipped.
+Restartable: re-`sbatch` the same array — chunks whose every YAML already has an `affinity_*.json` are skipped
+(verified). Per-task exit code = number of still-missing compounds (0 = that chunk fully done).
 
 ## 3. When complete — verify count + pull outputs back to the Mac
 ```bash

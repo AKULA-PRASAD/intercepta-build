@@ -1,7 +1,10 @@
 #!/bin/bash
 # AFFINITY2 powered novel-chemotype co-folding as a restartable GPU array.
-# Reuses AFFINITY1's boltz_chunk.sh. EDIT --array to (N-1)%concurrency to match make_chunks N.
-# Submit from the AFFINITY2 experiment dir:  sbatch hpc/affinity2_array.slurm
+# Uses AFFINITY2's OWN hpc/boltz_chunk.sh (self-contained; globs *.yaml). EDIT --array to (N-1)%concurrency.
+# SUBMIT DIR CONTRACT: submit from a dir that contains ./hpc/boltz_chunk.sh (either the repo experiment dir
+#   experiments/AFFINITY2_powered_novel_cofolding, or the scratch workspace $A2 if you copied hpc/ there).
+#   Set A2=<data workspace with chunks/> if it differs from the submit dir. `mkdir -p hpc/logs` BEFORE sbatch
+#   (the --output dir must exist at submit time). Example:  A2=/scratch/$USER/affinity2 sbatch hpc/affinity2_array.slurm
 #SBATCH --job-name=aff2
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
@@ -17,6 +20,6 @@ export BENV="${BENV:-/scratch/$USER/envs/boltz2}"
 export BOLTZ_CACHE="${BOLTZ_CACHE:-/scratch/$USER/boltz_cache}"
 export A2="${A2:-/scratch/$USER/affinity2}"
 C="$(printf '%02d' "$SLURM_ARRAY_TASK_ID")"
-# reuse AFFINITY1's robust per-chunk runner (success = every YAML has affinity_*.json, NFS-safe)
-bash ../AFFINITY1_cofolding_zeroshot/hpc/boltz_chunk.sh "$A2/chunks/chunk_$C" "$A2/out/chunk_$C"
+# AFFINITY2's own per-chunk runner (success = every YAML has affinity_*.json, NFS-safe, restartable)
+bash hpc/boltz_chunk.sh "$A2/chunks/chunk_$C" "$A2/out/chunk_$C"
 echo "task=$SLURM_ARRAY_TASK_ID rc=$? end=$(date)"
