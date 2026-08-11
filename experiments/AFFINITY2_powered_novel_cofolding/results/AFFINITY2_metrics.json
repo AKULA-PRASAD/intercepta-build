@@ -1,6 +1,7 @@
 {
   "VERDICT": "PENDING_GPU_RUN",
-  "gate": "TIER1 cofold standalone novel-AUROC CI-lo>0.60 on >=2 targets; TIER2 also cofold-max(QSAR,property)>0.10",
+  "caveats": "target-side leakage (LIT-PCBA receptors predate Boltz cutoff) -> TIER1 optimistic; compound leakage vs Boltz ChEMBL/BindingDB training NOT excluded; per-compound server MSAs; single diffusion sample. Internal go/no-go signal, NOT a publication claim (see REVIEW/SUMMARY).",
+  "gate": "TIER1: cofold subset AUROC CI-lo>0.60 on >=2 targets; TIER2: also cofold-best_baseline>0.10 AND paired-delta CI-lo>0 on >=2 targets",
   "n_targets_tier1": 0,
   "n_targets_tier2": 0,
   "panel": [
@@ -10,57 +11,33 @@
   ],
   "per_target": {
     "ALDH1": {
-      "QSAR_AUROC": 0.7137,
-      "QSAR_CI": [
-        0.6494,
-        0.775
-      ],
+      "QSAR_AUROC_full": 0.7137,
       "TIER1_zero_data_signal": null,
       "TIER2_beats_ligand_ml": null,
       "cofold_AUROC": null,
-      "n": 250,
-      "n_active": 125,
-      "property_AUROC": 0.5688,
-      "property_CI": [
-        0.4955,
-        0.6388
-      ],
+      "n_active_expected": 125,
+      "n_expected": 250,
+      "property_AUROC_full": 0.5688,
       "status": "PENDING_GPU_RUN"
     },
     "FEN1": {
-      "QSAR_AUROC": 0.8934,
-      "QSAR_CI": [
-        0.838,
-        0.9425
-      ],
+      "QSAR_AUROC_full": 0.8934,
       "TIER1_zero_data_signal": null,
       "TIER2_beats_ligand_ml": null,
       "cofold_AUROC": null,
-      "n": 136,
-      "n_active": 68,
-      "property_AUROC": 0.8244,
-      "property_CI": [
-        0.7521,
-        0.8951
-      ],
+      "n_active_expected": 68,
+      "n_expected": 136,
+      "property_AUROC_full": 0.8244,
       "status": "PENDING_GPU_RUN"
     },
     "PKM2": {
-      "QSAR_AUROC": 0.78,
-      "QSAR_CI": [
-        0.6953,
-        0.857
-      ],
+      "QSAR_AUROC_full": 0.78,
       "TIER1_zero_data_signal": null,
       "TIER2_beats_ligand_ml": null,
       "cofold_AUROC": null,
-      "n": 136,
-      "n_active": 68,
-      "property_AUROC": 0.6496,
-      "property_CI": [
-        0.5555,
-        0.7388
-      ],
+      "n_active_expected": 68,
+      "n_expected": 136,
+      "property_AUROC_full": 0.6496,
       "status": "PENDING_GPU_RUN"
     }
   },

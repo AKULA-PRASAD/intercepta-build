@@ -50,8 +50,17 @@ tiers (both pre-registered here, before results):
   **bootstrap 95% CI lower bound > 0.60** on **≥2 targets** (2000 resamples, seed 42). This asks the question
   that matches co-folding's actual use case: with ZERO activity data, does it rank novel-chemotype binders
   above chance-with-margin? A positive here is the genuinely new capability (ligand-only methods need actives).
-- **Tier 2 — BEATS_LIGAND_ML (the stronger claim):** additionally (co-folding − **max**(QSAR, property)) novel
+- **Tier 2 — BEATS_LIGAND_ML (the stronger claim):** additionally (co-folding − **best ligand baseline**) novel
   AUROC **> 0.10** on ≥2 targets. Co-folding's receptor buys generalization beyond ligand-only learning.
+
+### CORRECTION 2026-08-11 (pre-scoring statistical hardening — co-folding AUROC not yet computed anywhere)
+Two rigor fixes locked before the co-folding scores are read on any machine (so not outcome-driven):
+(1) **TIER2 now requires a PAIRED-bootstrap CI on the delta**, not a point comparison — best ligand baseline is
+fixed by full-subset AUROC, then delta=(cofold−baseline) is bootstrapped with SHARED resample indices (seed 42);
+TIER2 passes a target iff point delta > 0.10 **AND** the delta's 95% CI lower bound > 0. (2) All three scores
+(cofold/QSAR/property) for the gate are computed on the **identical co-folding-scored compound subset**, and the
+scorer emits an explicit **coverage report** (scored / expected, with any missing or invalid-value compound IDs
+listed) and **fails loud** on a JSON schema mismatch — existence of a file is not accepted as a valid value.
 
 **Decision:**
 - **Tier 1 PASS → R5 OPENS** for zero-data co-folding on the intervention half (Tier 2 pass = strong open).
