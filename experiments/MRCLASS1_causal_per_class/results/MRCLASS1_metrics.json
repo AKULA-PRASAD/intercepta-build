@@ -1,0 +1,108 @@
+{
+  "n_corroborate": 3,
+  "note": "PRELIMINARY: 5 cached diseases / 4 classes (1-2 each); per-DISEASE with class labels, NOT a powered per-class envelope. Powered version needs ~10-15 more throttled GWAS downloads and (per MR1 H2 redundancy) would likely mirror GENETICCLASS1.",
+  "panel_n": 5,
+  "per_disease": {
+    "CAD": {
+      "MR_OR": 1.7,
+      "MR_OR_95CI": [
+        0.678,
+        5.739
+      ],
+      "MR_signal_present": false,
+      "MRsig_clinical": [
+        3,
+        131,
+        272,
+        20190
+      ],
+      "OT_class_grade": "FULL",
+      "class": "cardiovascular",
+      "corroborates_GENETICCLASS1": false,
+      "disease_id": "MONDO_0005010",
+      "n_mr_sig": 134,
+      "n_tested": 9939
+    },
+    "IBD": {
+      "MR_OR": 4.785,
+      "MR_OR_95CI": [
+        2.495,
+        10.234
+      ],
+      "MR_signal_present": true,
+      "MRsig_clinical": [
+        8,
+        118,
+        286,
+        20184
+      ],
+      "OT_class_grade": "FULL",
+      "class": "immune_inflammatory",
+      "corroborates_GENETICCLASS1": true,
+      "disease_id": "MONDO_0005265",
+      "n_mr_sig": 126,
+      "n_tested": 9302
+    },
+    "Parkinson": {
+      "MR_OR": 8.142,
+      "MR_OR_95CI": [
+        2.625,
+        37.228
+      ],
+      "MR_signal_present": true,
+      "MRsig_clinical": [
+        2,
+        18,
+        277,
+        20299
+      ],
+      "OT_class_grade": "FULL",
+      "class": "neuro_psychiatric",
+      "corroborates_GENETICCLASS1": true,
+      "disease_id": "MONDO_0005180",
+      "n_mr_sig": 20,
+      "n_tested": 9598
+    },
+    "RA": {
+      "MR_OR": 3.354,
+      "MR_OR_95CI": [
+        1.435,
+        9.758
+      ],
+      "MR_signal_present": true,
+      "MRsig_clinical": [
+        4,
+        71,
+        339,
+        20182
+      ],
+      "OT_class_grade": "FULL",
+      "class": "immune_inflammatory",
+      "corroborates_GENETICCLASS1": true,
+      "disease_id": "MONDO_0008383",
+      "n_mr_sig": 75,
+      "n_tested": 9717
+    },
+    "T2D": {
+      "MR_OR": 1.353,
+      "MR_OR_95CI": [
+        0.393,
+        10.226
+      ],
+      "MR_signal_present": false,
+      "MRsig_clinical": [
+        1,
+        46,
+        325,
+        20224
+      ],
+      "OT_class_grade": "CAPPED",
+      "class": "metabolic",
+      "corroborates_GENETICCLASS1": false,
+      "disease_id": "MONDO_0005148",
+      "n_mr_sig": 47,
+      "n_tested": 6532
+    }
+  },
+  "seed": 42
+}
