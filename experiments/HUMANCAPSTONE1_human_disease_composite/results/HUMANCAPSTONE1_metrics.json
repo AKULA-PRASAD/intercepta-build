@@ -1,0 +1,120 @@
+{
+  "about": "Unified human-disease composite: honest decision-coverage across human-disease classes via the disease-class-aware COMPOSITE router (GENETICCLASS1+COMPOSITE5 genetic arm, MENDEL1 monogenic, DEPEND1 cancer-dependency). Signal-backed where a validated transfer condition holds; cited abstention where none does. 'Any human disease' = decision-coverage, NOT a universal model.",
+  "arms_exercised": [
+    "causal_gene",
+    "functional_dependency",
+    "genetic_association"
+  ],
+  "coverage": [
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "disease": "melanoma (cancer)",
+      "fired": [
+        "functional_dependency"
+      ],
+      "genetic_grade": null,
+      "n_gated": 6,
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "disease": "cystic fibrosis (monogenic, CFTR)",
+      "fired": [
+        "causal_gene"
+      ],
+      "genetic_grade": null,
+      "n_gated": 6,
+      "output_type": "mode"
+    },
+    {
+      "abstains": true,
+      "abstention_reason": "class 'human_monogenic' (germline monogenic) requires a declared causal_gene_known descriptor: the causal gene is the target, so target-ID is trivial ONLY when the gene is genetically established (MENDEL1). Without it there is no target -> the router ABSTAINS.",
+      "disease": "Duchenne (monogenic, gene unknown)",
+      "fired": [],
+      "genetic_grade": null,
+      "n_gated": 7,
+      "output_type": "abstention"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "disease": "coronary artery disease (complex)",
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "FULL",
+      "n_gated": 6,
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "disease": "rheumatoid arthritis (complex)",
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "FULL",
+      "n_gated": 6,
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "disease": "Parkinson disease (complex)",
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "FULL",
+      "n_gated": 6,
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "disease": "idiopathic pulmonary fibrosis",
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "FULL",
+      "n_gated": 6,
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "disease": "type 2 diabetes (complex)",
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "CAPPED",
+      "n_gated": 6,
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": true,
+      "abstention_reason": "class 'human_complex_disease' (common/polygenic) requires a declared has_gwas_evidence descriptor: the validated signal is popularity-controlled GWAS->target (GENETICS1), a DATA-dependent capped/attenuated signal. Without GWAS evidence there is no signal -> the router ABSTAINS rather than emit a fame-confounded human target guess.",
+      "disease": "osteoarthritis (complex)",
+      "fired": [],
+      "genetic_grade": null,
+      "n_gated": 7,
+      "output_type": "abstention"
+    },
+    {
+      "abstains": true,
+      "abstention_reason": "class 'human_complex_disease' (common/polygenic) requires a declared has_gwas_evidence descriptor: the validated signal is popularity-controlled GWAS->target (GENETICS1), a DATA-dependent capped/attenuated signal. Without GWAS evidence there is no signal -> the router ABSTAINS rather than emit a fame-confounded human target guess.",
+      "disease": "undiagnosed/idiopathic (no data)",
+      "fired": [],
+      "genetic_grade": null,
+      "n_gated": 7,
+      "output_type": "abstention"
+    }
+  ],
+  "genetic_CAPPED": 1,
+  "genetic_FULL": 4,
+  "n_abstain": 3,
+  "n_inputs": 10,
+  "n_signal_backed": 7,
+  "scope": "Each fired arm is traceable to a committed, reproduced validation (DEPEND1 / MENDEL1 / GENETICS1+GENETICCLASS1). Retrospective, target-RELEVANCE/mode (not a drug, not clinical). The two abstention TYPES (class-level ABSTAIN for musculoskeletal_renal; descriptor-absent ABSTAIN) are both first-class. Pure router logic \u2014 no per-run data."
+}
