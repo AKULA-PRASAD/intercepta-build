@@ -699,7 +699,8 @@ relevance), `PARARESOLVE1–2` (confound isolation), `COMPOSITE1–3` (the route
 experiments: `NONMET1/PLMESS1/REGNET1/PLMSTRUCT1` (non-metabolic-mechanism closures), `CONFORMAL1` (abstention bound),
 `AMR1` (durability negative), `MR1_causal_target_id` (transparent cis-MR arm), `AFFINITY2_powered_novel_cofolding`
 (the affinity-wall closure at power; pre-registration, benchmark builder, scorer, and reproduced aggregate metrics — raw
-co-folding outputs are regenerable and not committed), and `F9_knowledge_graph` (the provenance-tracked composite graph).
+co-folding outputs are regenerable and not committed), `F9_knowledge_graph` (the provenance-tracked composite graph), and
+`TRANSFERLAW1_metabolic_autonomy_predictor` (the pre-registered a-priori-transfer-law falsification).
 Input datasets are open and referenced (with checksums) in `data/MANIFEST.md`; per project policy, data files themselves are
 never committed and are regenerable from the cited public sources.
 
@@ -732,6 +733,16 @@ prospective tests — but a reader should treat it as a proposed, invariance-val
 pre-registered confirmatory result. (14) The "transfer-condition principle" is a synthesis/operational framework over
 largely-known biology (conserved genes tend to be essential; folds outlast sequence); its contribution is the *operational*
 rule (when to fire vs abstain), the empirical transfer boundary, and the abstention-integrity test — not new molecular biology.
+It is explicitly an *after-the-fact* framework, not an *a-priori* law: a pre-registered attempt to make it predictive
+**before validation** — asking whether a GEM-topology-only metabolic-autonomy score (reactions, blocked fraction, exchange
+fraction, GPR coverage; computed with zero use of the essentiality outcome) predicts whether FBA target-ID transfers — **fails**
+across an 18-organism panel and the six *P. falciparum* reconstructions (`TRANSFERLAW1`, reproduced ×2: Spearman ρ(score, log OR)
+= 0.12, 95% CI [−0.42, 0.64]; gate-pass AUROC 0.625; within-*P. falciparum* GEM-swap ρ = 0.03, p = 0.96). This also **bounds**
+the exploratory META1 correlation: its directional "coverage predicts transfer" signal is carried by *outcome-entangled*
+features (`n_fba_essential`, base rate) that do not exist before a validation — stripped to genuinely a-priori model topology,
+no deployable transfer predictor survives. The honest consequence: one **cannot** know from a new organism's metabolic model
+alone whether zero-data target-ID will transfer to it; the deployment envelope is established by the experimental outcome, not
+predicted from structure — a real limit on "know before you test."
 **Part III limitations.** (15) The affinity-wall closure (AFFINITY2) is a **powered internal go/no-go, not a publication-grade
 co-folding benchmark**: it uses public crystal receptors that predate the model's training cutoff (target-side leakage) and
 actives that may lie in the affinity head's ChEMBL/BindingDB training (compound-side leakage) — both of which bias *toward*
