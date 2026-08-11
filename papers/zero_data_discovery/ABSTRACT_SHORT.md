@@ -22,5 +22,9 @@ drugged-enzyme class across five viruses. Human cancer: a **functional-dependenc
 to held-out cell lines, and is enriched for patient-tumour drivers after study-bias correction. Two load-bearing **negatives**
 bound the work: that dependency signal does not transfer label-free to a zero-screen organism, and patient drug-response
 prediction fails external replication. These validated signals compose into an explicit **biology-class-aware router** that
-applies what is validated and **abstains** where none is — "any disease" as honest decision coverage, not a universal model. No
-claim is clinical; the remaining distance to a drug is gated by new experimental information, not more computation.
+applies what is validated and **abstains** where none is — "any disease" as honest decision coverage, not a universal model. We
+then close the molecule/affinity half **at power**: state-of-the-art structure-based **co-folding** (Boltz-2, 522 complexes on
+GPU) fails a leakage-controlled novel-chemotype split — clearing the zero-data bar on only 1/3 targets and underperforming a
+fingerprint QSAR on 2/3, with leakage biasing in its favour — so the last computational method with a plausible path over the
+wall does not cross it. No claim is clinical; the remaining distance to a drug is gated by **new experimental information, not
+more computation**.

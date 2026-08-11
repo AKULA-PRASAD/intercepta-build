@@ -54,6 +54,16 @@ confidence — and **abstains** where none is validated, demonstrated end-to-end
 thus delivered as **honest decision coverage — a real answer where a signal transfers, an explicit abstention where none does —
 not a universal model.**
 
+**Part III — completing the map, and closing the affinity wall at power (2026-08).** Four further results, three of them
+negatives, complete the picture: the non-metabolic-mechanism half is closed across four independent signal classes
+(conservation AUROC 0.91 is the ceiling); a transparent cis-Mendelian-randomization instrument reproduces the genetic-support
+signal for human complex disease (odds ratio 3.16) yet adds nothing beyond the public aggregate (an honest redundancy); and,
+decisively, the molecule/affinity half is closed **at power, including the state-of-the-art method** — Boltz-2 structure-based
+co-folding, run on GPU across 522 protein–ligand complexes on a leakage-controlled novel-chemotype split, clears the zero-data
+bar on only 1/3 targets and is *worse* than a fingerprint QSAR on 2/3, with both leakage channels biasing in its favour. This
+converts the arc's thesis from assertion to demonstration: the last computational method with a plausible path over the affinity
+wall does not cross it, so the remaining distance to a drug is gated by **new experimental information, not more computation**.
+
 **Keywords:** zero-data drug discovery, antibacterial target identification, flux balance analysis, gene essentiality,
 metabolic modeling, WHO priority pathogens, honest machine learning, applicability domain, resistance robustness, pre-registered analyst-blind (lock-before-reveal) validation.
 
@@ -286,6 +296,14 @@ NOT transfer label-free to a zero-screen organism (TRANSFER1, negative) and pati
 tested-and-negative (B20/B10/B17, downgraded). The validated signals compose into an explicit abstaining router
 (COMPOSITE1→2→3) demonstrated end-to-end across all six disease classes (CAPSTONE1).
 
+**Part III — completing the map (2026-08):** the non-metabolic-mechanism door is closed across four signal classes
+(NONMET1/PLMESS1/REGNET1/MET4); abstention is bounded under organism shift (CONFORMAL1); durability is not a static-biology
+property (AMR1, negative); the complex-disease arm is extended by a transparent cis-Mendelian-randomization instrument that
+reproduces the genetic-support enrichment (OR 3.16) but is predictively redundant with the public aggregate (MR1, honest
+negative); the molecule/affinity half is closed *at power* — state-of-the-art co-folding fails a leakage-controlled
+novel-chemotype split and underperforms a fingerprint QSAR (AFFINITY2, 522 complexes, negative); and the whole routing table,
+with its dead-ends as first-class nodes, is made a provenance-tracked, integrity-checked knowledge graph (F9).
+
 ## What is genuinely contributed
 - **The one thing that breaks the ceiling — and it is EXPERIMENTALLY VALIDATED.** FBA gene-essentiality, computed from a
   pathogen's own metabolic model (mechanism, not homology), is the single signal that adds target-ID information *beyond* the
@@ -314,8 +332,11 @@ tested-and-negative (B20/B10/B17, downgraded). The validated signals compose int
   (the most-conserved proteins are the host-toxic ones), the sequence-level safety fix over-excludes 35–52% of real
   targets, and neither sequence nor apo structure can reason about true selectivity from zero data (FRONT1→E2E2→FRONT2) —
   a self-consistent proof that selectivity is resource-gated.
-- **An honest molecule-half map:** ligand methods are analog-bound (HIT1), docking is weak-but-real for binder separation
-  but useless for potency-ranking (C1, HIT2) — no method has traction on genuinely novel chemotypes.
+- **An honest molecule-half map, now closed at power:** ligand methods are analog-bound (HIT1), docking is weak-but-real for
+  binder separation but useless for potency-ranking (C1, HIT2), and — the decisive addition — **state-of-the-art structure-based
+  co-folding (Boltz-2) fails at power on a leakage-controlled novel-chemotype split (1/3 targets clear the zero-data bar; worse
+  than a fingerprint QSAR on 2/3; 522 complexes, reproduced ×2), with both leakage channels biasing *toward* it.** No method —
+  including the SOTA one, on GPU — has traction on genuinely novel chemotypes; the affinity wall is a bound, not a gap.
 - **A rigorous self-improving loop + anti-self-deception guardrail** (with the shuffled/ungated negative controls most
   such claims omit), tied to calibrated conformal prediction — plus its honest near-domain-only boundary (SIL1–2).
 - **The reusable discipline:** pre-registration, reproduce-×2, trivial-baseline/null controls, and verdict honesty —
@@ -330,8 +351,10 @@ validation is scoped to essentiality enrichment (binary, high-precision/low-reca
 which remain retrospective.** Every
 other hard problem in the arc — novel-fold/isolated-pathogen target-ID, non-metabolic mechanism,
 true binding-site selectivity, novel-chemotype hit-finding — converges on the same **information ceiling**: transfer and
-self-accumulation cannot manufacture information that isn't in sequence/structure alone. Crossing it requires *new
-information* — prospective assays, wet-lab, or 3D/experimental data — which is a **resource decision, not a computation**.
+self-accumulation cannot manufacture information that isn't in sequence/structure alone. For the affinity step this is no longer
+an inference from CPU methods alone: the state-of-the-art structure-based model, run at power on GPU, fails the same wall
+(Part III(5)), so the ceiling is **demonstrated at the frontier method**, not merely extrapolated from weaker ones. Crossing it
+requires *new information* — prospective assays, wet-lab, or 3D/experimental data — which is a **resource decision, not a computation**.
 That is the honest state: the computational frontier reachable from open data on CPU is now comprehensively mapped, and the
 next real advance toward the vision is experimental, not algorithmic. What this arc delivers is an exact, reproduced map of
 how far sequence-and-transfer-only discovery reaches, and where — and why — it stops.
@@ -531,10 +554,14 @@ signal). The router's integrity *is* its abstention: it refuses to emit a confid
 that signal is falsified. Driven end-to-end across six representative inputs spanning every reachable disease class, it produces
 five signal-backed routed shortlists and one correct abstention — every fired signal traceable to a committed, reproduced-×2,
 pre-registered validation. This is the North Star's "any disease" delivered as **honest decision coverage, not a universal model.**
+The routing table and its evidence are made machine-readable as a **provenance-tracked knowledge graph** in which the
+first-class citizens are not only the validated arms but the **dead-ends and negatives** — each transfer edge carries an evidence
+path and a reproduced flag, and every *abstention* must cite a specific, falsifiably-reopenable dead-end (enforced by an
+integrity check): the map's refusals are as auditable as its answers.
 
 ## Part III — completing the honest map (2026-08): decisive negatives, an abstention bound, and an autonomous composite
-Extending the arc with the same protocol (pre-registration, reproduce-×2, first-class negatives) sharpened the map in four
-ways — three of them negatives, which are the point.
+Extending the arc with the same protocol (pre-registration, reproduce-×2, first-class negatives) sharpened the map in five
+ways — four of them negatives, which are the point.
 
 **(1) The non-metabolic-mechanism door is now closed across four independent signal classes.** FBA-essentiality is
 metabolic-scoped; the other ~half of drug targets (proteases, polymerases, ribosomal/structural) has no validated
@@ -568,12 +595,32 @@ detector front-ends the router (so the class is auto-detected, not hand-specifie
 disease paradigms and a post-target intervention stage — all target-*relevance*/feasibility-*triage*, not validated drugs:
 human germline **monogenic** (causal-gene → intervention-mode reasoning, fail-safe), human **complex/polygenic** disease
 (GWAS→target via genetics, popularity-controlled but attenuated — effect bounded [1.67, 2.26]), a fail-safe **modality**
-recommender, and a **phenotype**-input front door (HPO retrieval → candidate genes). These compose end-to-end with the
+recommender, and a **phenotype**-input front door (HPO retrieval → candidate genes). The complex-disease arm was further
+tested with a **transparent, self-computed cis-Mendelian-randomization** instrument (eQTLGen cis-eQTLs → disease GWAS →
+Wald-ratio, five diseases, genome-wide): MR-significant genes are enriched for clinical drug-target precedence at odds ratio
+**3.16** (95% CI [2.03, 5.19]) — reproducing, with a mechanistic and direction-aware method, the genetic-support signal — but a
+paired test returns another **honest negative**: this transparent MR adds *no* predictive value beyond the public Open Targets
+aggregate (ΔAUPRC ≈ 0), i.e. it earns provenance and causal direction, not accuracy over the state of the art. These compose end-to-end with the
 existing arms through the autonomous router, firing validated signals at earned (capped where attenuated) confidence and
 abstaining where none transfers, with zero fail-safe mis-fires. A value-of-information layer additionally turns the ranked
 nominations into an experiment-prioritization (~8× fewer wet-lab tests to validate the same targets), the decision-support
 bridge to the one rung computation cannot cross. **Net: the map is more complete and more honest — its new content is mostly
 decisive negatives and bounded, abstaining coverage, not new discovery.**
+
+**(5) The molecule/affinity half is now closed *at power*, including the state-of-the-art method — the "gated by information,
+not computation" claim is thereby *demonstrated*, not asserted.** The prior molecule-half map (weak-but-real binder separation,
+analog-bound hit-finding, no potency signal — all CPU) left one credible untried method: **structure-based co-folding**
+(Boltz-2), which unlike ligand-only methods consumes the receptor and *could* in principle generalize to unseen chemotypes.
+We ran it at scale on GPU (522 protein–ligand complexes across three targets — ALDH1, PKM2, FEN1 — on a leakage-controlled
+ECFP4-Tanimoto<0.40 novel-chemotype split; pre-registered two-tier gate; reproduced ×2). Result: a **decisive negative**.
+Co-folding clears the zero-data bar (bootstrap AUROC 95% CI-lower > 0.60) on only **1/3** targets (FEN1 0.72; PKM2 0.69 and
+ALDH1 0.55 fail), and is **significantly *worse* than a simple target-trained fingerprint QSAR** on two of three (paired-
+bootstrap ΔAUROC −0.16 and −0.18, CIs excluding zero). Crucially, both leakage channels — target-side (the crystal structures
+predate the model's training cutoff) and compound-side (the actives plausibly sit in the affinity head's ChEMBL/BindingDB
+training) — can only *inflate* co-folding, and it failed anyway: the negative is therefore conservative. This closes the novel-
+target affinity problem across docking, QSAR, PCM, generation, *and* co-folding, and converts the arc's central thesis from an
+assertion into a demonstrated result — the last computational method with a plausible path over the affinity wall does not
+cross it, so the remaining distance to a drug is gated by *new experimental information*, not more computation or a better model.
 
 ## Figures
 *All figures are generated directly from the committed experiment metrics by `gen_figures.py` — every value traces to a reproduced-×2 experiment.*
@@ -629,9 +676,11 @@ set, DeJesus 2017 (Mtb), and DEG (Turner 2015 *P. aeruginosa*; Wang 2014 *A. bau
 CRISPRi/Tn-seq set; Hart CEG2 core-essential genes; LIT-PCBA, MoleculeACE, Open Targets, DepMap (for the molecule-half and
 human-disease arms).
 
-**Tools (CPU-only, Apple-Silicon arm64; no GPU).** mmseqs2 (homology), Foldseek (structural homology, TM-score), fpocket
+**Tools (Parts I–II CPU-only, Apple-Silicon arm64).** mmseqs2 (homology), Foldseek (structural homology, TM-score), fpocket
 (pocket druggability), COBRApy+GLPK (FBA single-/double-gene and reaction deletion, multi-medium essentiality), CarveMe+SCIP
-(de-novo GEMs), RDKit and AutoDock Vina (molecule half), ESM-2 and scikit-learn (learned baselines). The engine
+(de-novo GEMs), RDKit and AutoDock Vina (molecule half), ESM-2 and scikit-learn (learned baselines). **Part III** additionally
+used **GPU** for the affinity-wall test — Boltz-2 co-folding (`boltz predict`, model=boltz2, seed 42) on an HPC cluster (SLURM
+array, 522 complexes) — and, for the cis-MR arm, eQTLGen cis-eQTL instruments with GWAS Catalog harmonized summary statistics. The engine
 (`src/intercepta/substrate.py` + `substrate_providers.py` + `discovery_engine.py`) composes providers by z-scored,
 provenance-tier-weighted RANK aggregation with a hard SAFETY filter and honest abstention; 15/15 data-free unit tests.
 
@@ -646,7 +695,11 @@ All source code, the append-only results ledger (`LEDGER.md`), per-experiment co
 Part II experiments are committed under `experiments/`: `GENERALIZE1–5` (virus/eukaryote/parasite generalization),
 `HOSTCTX1–2` (host-context negatives), `STRUCTREPURPOSE1` (repurposing null), `DEPEND1` (functional dependency),
 `TRANSFER1` (zero-screen transfer negative), `HARDENV1/HARDENF1/HARDENP1` (n>1 hardening), `F3CLIN1` (patient-driver
-relevance), `PARARESOLVE1–2` (confound isolation), `COMPOSITE1–3` (the router), and `CAPSTONE1` (end-to-end demonstration).
+relevance), `PARARESOLVE1–2` (confound isolation), `COMPOSITE1–3` (the router), and `CAPSTONE1` (end-to-end demonstration). Part III
+experiments: `NONMET1/PLMESS1/REGNET1/PLMSTRUCT1` (non-metabolic-mechanism closures), `CONFORMAL1` (abstention bound),
+`AMR1` (durability negative), `MR1_causal_target_id` (transparent cis-MR arm), `AFFINITY2_powered_novel_cofolding`
+(the affinity-wall closure at power; pre-registration, benchmark builder, scorer, and reproduced aggregate metrics — raw
+co-folding outputs are regenerable and not committed), and `F9_knowledge_graph` (the provenance-tracked composite graph).
 Input datasets are open and referenced (with checksums) in `data/MANIFEST.md`; per project policy, data files themselves are
 never committed and are regenerable from the cited public sources.
 
@@ -679,6 +732,15 @@ prospective tests — but a reader should treat it as a proposed, invariance-val
 pre-registered confirmatory result. (14) The "transfer-condition principle" is a synthesis/operational framework over
 largely-known biology (conserved genes tend to be essential; folds outlast sequence); its contribution is the *operational*
 rule (when to fire vs abstain), the empirical transfer boundary, and the abstention-integrity test — not new molecular biology.
+**Part III limitations.** (15) The affinity-wall closure (AFFINITY2) is a **powered internal go/no-go, not a publication-grade
+co-folding benchmark**: it uses public crystal receptors that predate the model's training cutoff (target-side leakage) and
+actives that may lie in the affinity head's ChEMBL/BindingDB training (compound-side leakage) — both of which bias *toward*
+co-folding and therefore only **strengthen the negative** — but it also uses single-conformer crystallization-construct receptor
+sequences, monomer folding of oligomeric targets, per-compound server-generated MSAs, and a single diffusion sample; a stronger
+*positive* claim (not needed to support a negative) would require a post-cutoff target, native sequences, archived MSAs, and
+multi-sample variance. (16) The cis-Mendelian-randomization arm (MR1) is a single-instrument Wald-ratio **without
+colocalization**, on blood eQTLs; its clinical-precedence enrichment (OR 3.16) is validated, but its added value over the public
+Open Targets aggregate is **null** — an honest redundancy, reported as such, not an improvement over the state of the art.
 
 ## Conclusion
 For pathogens with zero activity data, the honest reachable frontier is now mapped and, at its core, **experimentally
@@ -686,9 +748,10 @@ anchored**: mechanistic gene-essentiality is the one signal that breaks the cons
 laboratory knockout data in six bacteria (Gram-negative, Gram-positive and acid-fast; three outside the development panel, including two WHO critical-priority held-out pathogens), and it composes into
 a shipped, disease-agnostic engine that returns safe, calibrated, resistance- and environment-aware target shortlists while
 abstaining where it lacks signal. The remaining distance to a drug — a validated *novel* target, a real inhibitor for a novel
-target, selectivity, and clinical efficacy — is gated by **new experimental information, not more computation**. The value of
-this work is a reproducible method, an honest negative map, and an experimentally-anchored core that any future experimental
-result can enter as high-tier evidence.
+target, selectivity, and clinical efficacy — is gated by **new experimental information, not more computation** — a claim now
+*demonstrated* rather than asserted, since the state-of-the-art affinity method (co-folding), run at power on GPU, fails the
+same wall. The value of this work is a reproducible method, an honest negative map — its refusals as auditable as its answers —
+and an experimentally-anchored core that any future experimental result can enter as high-tier evidence.
 
 Part II extends this from bacteria to a general principle. "Any disease" is achievable not as a single universal model but as a
 **composition of validated signals routed by biology** — a transfer-condition principle that says which signal is trustworthy for

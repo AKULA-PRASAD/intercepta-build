@@ -1,5 +1,14 @@
 # bioRxiv submission bundle — "Zero-data drug discovery & a disease-class-aware composite"
 
+> **UPDATE 2026-08-11 (before you submit):** the manuscript (`REPORT.md`) and both abstracts were extended with the completed
+> Part III — most importantly **AFFINITY2**, which closes the molecule/affinity half *at power*: state-of-the-art co-folding
+> (Boltz-2, 522 GPU complexes) fails a leakage-controlled novel-chemotype split, converting the arc's "gated by information, not
+> computation" thesis from assertion to demonstration. Also added: the **MR1** transparent cis-MR arm (validated OR 3.16, honest
+> OT-redundancy) and the **F9** provenance knowledge graph; the "CPU-only" claim was corrected (Part III used GPU); two new
+> honest limitations (15, 16) were added. **The committed `MANUSCRIPT.pdf` is now STALE — rebuild it before uploading**
+> (`pandoc REPORT.md -o MANUSCRIPT.pdf` with the repo's xelatex template; see *Rebuild* below). All added numbers were
+> cross-checked against the committed `AFFINITY2_metrics.json` / `MR1_metrics.json`.
+
 **I cannot post this for you.** bioRxiv submission is a manual, authenticated web flow (your account + ORCID + author
 confirmations + license choice + a public, hard-to-retract posting). Everything below is ready; posting is a ~5–10 minute
 action you take. Prepared 2026-08-06 for the assembled Part I + Part II manuscript.
