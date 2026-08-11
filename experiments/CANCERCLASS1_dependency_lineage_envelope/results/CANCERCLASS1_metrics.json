@@ -1,0 +1,214 @@
+{
+  "B_perm": 1000,
+  "K": 20,
+  "envelope_discriminates": false,
+  "gate": "FULL: enrichment>=3 & p<0.05; CAPPED: enrichment>=1.5 or p<0.05; else ABSTAIN",
+  "n_genes_after_pan_guard": 15659,
+  "n_lineages": 22,
+  "n_lines_total": 1086,
+  "n_pan_essential_excluded": 1049,
+  "per_lineage": {
+    "bile_duct": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.853,
+      "n_lines": 37,
+      "null_recovery": 0.1349,
+      "perm_p": 0.1349,
+      "recovery_at20": 0.25
+    },
+    "blood": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.571,
+      "n_lines": 60,
+      "null_recovery": 0.1273,
+      "perm_p": 0.2567,
+      "recovery_at20": 0.2
+    },
+    "bone": {
+      "GRADE": "ABSTAIN",
+      "enrichment": 0.379,
+      "n_lines": 41,
+      "null_recovery": 0.1319,
+      "perm_p": 0.9231,
+      "recovery_at20": 0.05
+    },
+    "breast": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.96,
+      "n_lines": 47,
+      "null_recovery": 0.1276,
+      "perm_p": 0.1269,
+      "recovery_at20": 0.25
+    },
+    "central_nervous_system": {
+      "GRADE": "ABSTAIN",
+      "enrichment": 1.117,
+      "n_lines": 79,
+      "null_recovery": 0.1343,
+      "perm_p": 0.5095,
+      "recovery_at20": 0.15
+    },
+    "cervix": {
+      "GRADE": "ABSTAIN",
+      "enrichment": 0.747,
+      "n_lines": 16,
+      "null_recovery": 0.1339,
+      "perm_p": 0.7493,
+      "recovery_at20": 0.1
+    },
+    "colorectal": {
+      "GRADE": "CAPPED",
+      "enrichment": 2.328,
+      "n_lines": 58,
+      "null_recovery": 0.1288,
+      "perm_p": 0.045,
+      "recovery_at20": 0.3
+    },
+    "esophagus": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.509,
+      "n_lines": 32,
+      "null_recovery": 0.1325,
+      "perm_p": 0.2797,
+      "recovery_at20": 0.2
+    },
+    "gastric": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.901,
+      "n_lines": 35,
+      "null_recovery": 0.1315,
+      "perm_p": 0.1239,
+      "recovery_at20": 0.25
+    },
+    "kidney": {
+      "GRADE": "ABSTAIN",
+      "enrichment": 1.148,
+      "n_lines": 32,
+      "null_recovery": 0.1306,
+      "perm_p": 0.4955,
+      "recovery_at20": 0.15
+    },
+    "liver": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.933,
+      "n_lines": 22,
+      "null_recovery": 0.1293,
+      "perm_p": 0.1099,
+      "recovery_at20": 0.25
+    },
+    "lung": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.557,
+      "n_lines": 133,
+      "null_recovery": 0.1284,
+      "perm_p": 0.2517,
+      "recovery_at20": 0.2
+    },
+    "lymphocyte": {
+      "GRADE": "CAPPED",
+      "enrichment": 2.997,
+      "n_lines": 37,
+      "null_recovery": 0.1334,
+      "perm_p": 0.005,
+      "recovery_at20": 0.4
+    },
+    "ovary": {
+      "GRADE": "ABSTAIN",
+      "enrichment": 0.752,
+      "n_lines": 58,
+      "null_recovery": 0.1331,
+      "perm_p": 0.7602,
+      "recovery_at20": 0.1
+    },
+    "pancreas": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.874,
+      "n_lines": 47,
+      "null_recovery": 0.1334,
+      "perm_p": 0.1309,
+      "recovery_at20": 0.25
+    },
+    "peripheral_nervous_system": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.916,
+      "n_lines": 38,
+      "null_recovery": 0.1304,
+      "perm_p": 0.1269,
+      "recovery_at20": 0.25
+    },
+    "plasma_cell": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.888,
+      "n_lines": 21,
+      "null_recovery": 0.1324,
+      "perm_p": 0.1239,
+      "recovery_at20": 0.25
+    },
+    "skin": {
+      "GRADE": "CAPPED",
+      "enrichment": 2.352,
+      "n_lines": 70,
+      "null_recovery": 0.1276,
+      "perm_p": 0.044,
+      "recovery_at20": 0.3
+    },
+    "soft_tissue": {
+      "GRADE": "ABSTAIN",
+      "enrichment": 0.754,
+      "n_lines": 48,
+      "null_recovery": 0.1326,
+      "perm_p": 0.7562,
+      "recovery_at20": 0.1
+    },
+    "upper_aerodigestive": {
+      "GRADE": "ABSTAIN",
+      "enrichment": 0.769,
+      "n_lines": 69,
+      "null_recovery": 0.13,
+      "perm_p": 0.7383,
+      "recovery_at20": 0.1
+    },
+    "urinary_tract": {
+      "GRADE": "CAPPED",
+      "enrichment": 1.53,
+      "n_lines": 31,
+      "null_recovery": 0.1308,
+      "perm_p": 0.2787,
+      "recovery_at20": 0.2
+    },
+    "uterus": {
+      "GRADE": "ABSTAIN",
+      "enrichment": 0.0,
+      "n_lines": 34,
+      "null_recovery": 0.131,
+      "perm_p": 1.0,
+      "recovery_at20": 0.0
+    }
+  },
+  "scope": "DepMap 22Q2 CRISPR (cell-line) selective-dependency recovery of IntOGen drivers per lineage; target-RELEVANCE, NOT patient/clinical; deployment-envelope characterization of a validated arm (DEPEND1), not a new method.",
+  "seed": 42,
+  "transfer_table": {
+    "bile_duct": "CAPPED",
+    "blood": "CAPPED",
+    "bone": "ABSTAIN",
+    "breast": "CAPPED",
+    "central_nervous_system": "ABSTAIN",
+    "cervix": "ABSTAIN",
+    "colorectal": "CAPPED",
+    "esophagus": "CAPPED",
+    "gastric": "CAPPED",
+    "kidney": "ABSTAIN",
+    "liver": "CAPPED",
+    "lung": "CAPPED",
+    "lymphocyte": "CAPPED",
+    "ovary": "ABSTAIN",
+    "pancreas": "CAPPED",
+    "peripheral_nervous_system": "CAPPED",
+    "plasma_cell": "CAPPED",
+    "skin": "CAPPED",
+    "soft_tissue": "ABSTAIN",
+    "upper_aerodigestive": "ABSTAIN",
+    "urinary_tract": "CAPPED",
+    "uterus": "ABSTAIN"
+  }
+}
