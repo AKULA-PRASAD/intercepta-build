@@ -38,8 +38,11 @@ def row_of(label, half, dec):
     ga = [f for f in dec.uncertainty_flags if f["signal"] == "genetic_association"]
     grade = ("FULL" if any(f.get("grade") == "FULL_by_disease_class" for f in ga)
              else "CAPPED" if any(f.get("confidence_cap") == 0.5 for f in ga) else None)
+    interv = dec.intervention or {}
     return {"input": label, "half": half, "output_type": dec.output_type,
             "fired": list(dec.signals_fired), "genetic_grade": grade,
+            # COMPOSITE6: the class-appropriate intervention-modality space (target-ID -> intervention loop)
+            "intervention_modality_applicability": interv.get("class_modality_applicability", []),
             "abstains": bool(dec.abstention), "abstention_reason": dec.abstention or None}
 
 def main():
@@ -66,7 +69,9 @@ def main():
     for r in rows:
         tag = (f"genetic:{r['genetic_grade']}" if r["genetic_grade"]
                else (r["fired"][0] if r["fired"] else "ABSTAIN"))
-        print(f"  [{r['half']:8s}] {r['input']:36s} -> {r['output_type']:18s} [{tag}]")
+        mod = ",".join(m.replace("SMALL_MOLECULE_", "SM_").replace("MONOCLONAL_ANTIBODY", "mAb")
+                       for m in r["intervention_modality_applicability"]) or "-"
+        print(f"  [{r['half']:8s}] {r['input']:36s} -> {r['output_type']:18s} [{tag}]  modality:{{{mod}}}")
     print(f"\nany-disease decision-coverage: signal-backed {out['n_signal_backed']}/{len(rows)} | "
           f"abstain {n_abs}/{len(rows)} | arms: {out['arms_exercised']}")
     print("sha256:", hashlib.sha256(payload.encode()).hexdigest())

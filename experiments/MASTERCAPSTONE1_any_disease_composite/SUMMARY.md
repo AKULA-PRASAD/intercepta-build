@@ -30,6 +30,16 @@ structural; 3 human: dependency, causal-gene, genetic). All four abstention case
 spanning both abstention TYPES (resource/descriptor-absent: no-GEM parasite, monogenic-no-gene, dark proteome;
 and class-level: musculoskeletal-renal genetic ABSTAIN).
 
+## The full loop: target-ID → class-appropriate intervention (COMPOSITE6)
+Each input now also surfaces the **class-appropriate intervention-modality space** (biologically applicable
+modalities per class), closing the target-ID → intervention loop end-to-end:
+- **pathogens** (bacterium/archaeon/eukaryote/parasite) → {SMALL_MOLECULE_INHIBITOR} (antimicrobial — you cannot
+  gene-therapy/siRNA a pathogen); **virus** → {+ MONOCLONAL_ANTIBODY};
+- **human cancer** → {small-molecule, mAb, ASO_siRNA} (siRNA reaches the undruggable set); **human monogenic** →
+  the full host-modality space {+ GENE_THERAPY, ENZYME_PROTEIN_REPLACEMENT} (mode-dependent, MENDEL1);
+  **human complex** → {small-molecule, mAb, ASO_siRNA}; **unknown** → {} (no applicable modality).
+So the composite is class-coherent from *which arm identifies the target* through *which modality could act on it*.
+
 ## What it is (and is not)
 - **The operational realization of "find effective drugs for any disease" as honest DECISION-COVERAGE:** one
   router applies the arm whose committed transfer condition holds for the input's biology, across the entire

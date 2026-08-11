@@ -20,6 +20,9 @@
       "genetic_grade": null,
       "half": "pathogen",
       "input": "bacterium (E. coli)",
+      "intervention_modality_applicability": [
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -32,6 +35,9 @@
       "genetic_grade": null,
       "half": "pathogen",
       "input": "archaeon (M. maripaludis)",
+      "intervention_modality_applicability": [
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -44,6 +50,9 @@
       "genetic_grade": null,
       "half": "pathogen",
       "input": "free eukaryote (S. cerevisiae)",
+      "intervention_modality_applicability": [
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -55,6 +64,10 @@
       "genetic_grade": null,
       "half": "pathogen",
       "input": "virus (SARS-CoV-2)",
+      "intervention_modality_applicability": [
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "structural_class_id"
     },
     {
@@ -66,6 +79,9 @@
       "genetic_grade": null,
       "half": "pathogen",
       "input": "parasite +GEM (Toxoplasma)",
+      "intervention_modality_applicability": [
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -75,6 +91,9 @@
       "genetic_grade": null,
       "half": "pathogen",
       "input": "parasite -GEM (Plasmodium)",
+      "intervention_modality_applicability": [
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "abstention"
     },
     {
@@ -86,6 +105,12 @@
       "genetic_grade": null,
       "half": "human",
       "input": "cancer (melanoma)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -97,6 +122,14 @@
       "genetic_grade": null,
       "half": "human",
       "input": "monogenic +gene (cystic fibrosis)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "mode"
     },
     {
@@ -106,6 +139,14 @@
       "genetic_grade": null,
       "half": "human",
       "input": "monogenic -gene (Duchenne)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "ENZYME_PROTEIN_REPLACEMENT",
+        "GENE_THERAPY",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "abstention"
     },
     {
@@ -117,6 +158,12 @@
       "genetic_grade": "FULL",
       "half": "human",
       "input": "complex/cardiovascular (CAD)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -128,6 +175,12 @@
       "genetic_grade": "FULL",
       "half": "human",
       "input": "complex/immune (RA)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -139,6 +192,12 @@
       "genetic_grade": "FULL",
       "half": "human",
       "input": "complex/neuro (Parkinson)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -150,6 +209,12 @@
       "genetic_grade": "FULL",
       "half": "human",
       "input": "complex/respiratory (IPF)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -161,6 +226,12 @@
       "genetic_grade": "CAPPED",
       "half": "human",
       "input": "complex/metabolic (T2D)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "shortlist"
     },
     {
@@ -170,6 +241,12 @@
       "genetic_grade": null,
       "half": "human",
       "input": "complex/musculoskeletal_renal (OA)",
+      "intervention_modality_applicability": [
+        "ASO_siRNA",
+        "MONOCLONAL_ANTIBODY",
+        "SMALL_MOLECULE_ACTIVATOR",
+        "SMALL_MOLECULE_INHIBITOR"
+      ],
       "output_type": "abstention"
     },
     {
@@ -179,6 +256,7 @@
       "genetic_grade": null,
       "half": "either",
       "input": "unknown / dark proteome",
+      "intervention_modality_applicability": [],
       "output_type": "abstention"
     }
   ],
