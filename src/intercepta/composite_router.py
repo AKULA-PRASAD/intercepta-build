@@ -429,9 +429,34 @@ def _mod_is_feasible(modality, mech, loc, pc, bbb_cns, splice_addressable):
     return True
 
 
+# COMPOSITE6 — per-class intervention wiring: which MODALITY CLASSES are biologically APPLICABLE to a biology
+# class (cited). Pathogen targets are treated with SMALL-MOLECULE antimicrobials -- you cannot gene-therapy /
+# siRNA / enzyme-replace a pathogen; viruses add neutralizing antibodies; human classes span the host-modality
+# space (full/mode-dependent for monogenic). This ANNOTATES MODALITY1's feasibility triage with the class
+# context (ADDITIVE: never changes recommended_modality_class or feasible_set -- adds class_modality_applicability
+# + a class_consistent flag that catches a class-inapplicable recommendation, e.g. ASO_siRNA for a bacterium).
+CLASS_MODALITY_APPLICABILITY = {
+    "bacterium": {"SMALL_MOLECULE_INHIBITOR"}, "archaeon": {"SMALL_MOLECULE_INHIBITOR"},
+    "free_eukaryote": {"SMALL_MOLECULE_INHIBITOR"}, "host_dependent_parasite": {"SMALL_MOLECULE_INHIBITOR"},
+    "virus": {"SMALL_MOLECULE_INHIBITOR", "MONOCLONAL_ANTIBODY"},
+    "human_cancer": {"SMALL_MOLECULE_INHIBITOR", "SMALL_MOLECULE_ACTIVATOR", "MONOCLONAL_ANTIBODY", "ASO_siRNA"},
+    "human_monogenic": {"SMALL_MOLECULE_INHIBITOR", "SMALL_MOLECULE_ACTIVATOR", "MONOCLONAL_ANTIBODY",
+                        "ENZYME_PROTEIN_REPLACEMENT", "GENE_THERAPY", "ASO_siRNA"},
+    "human_complex_disease": {"SMALL_MOLECULE_INHIBITOR", "SMALL_MOLECULE_ACTIVATOR", "MONOCLONAL_ANTIBODY", "ASO_siRNA"},
+    "unknown": set(),
+}
+
+
+def _class_modality_info(biology_class, recommended) -> dict:
+    bc = biology_class.value if hasattr(biology_class, "value") else str(biology_class)
+    appl = sorted(CLASS_MODALITY_APPLICABILITY.get(bc, set()))
+    return {"class_modality_applicability": appl,
+            "class_consistent": bool(recommended == "ABSTAIN" or recommended in appl)}
+
+
 def recommend_intervention(mechanism: Optional[str] = None, localization: Optional[str] = None,
                            protein_class: Optional[str] = None, bbb_cns: bool = False,
-                           splice_addressable: bool = False) -> dict:
+                           splice_addressable: bool = False, biology_class=None) -> dict:
     """COMPOSITE4 INTERVENTION STAGE (MODALITY1 port). Returns
     {recommended_modality_class, feasible_set, fail_safe: True, note}.
 
@@ -439,13 +464,16 @@ def recommend_intervention(mechanism: Optional[str] = None, localization: Option
     for a credible feasibility call (mechanism + localization) are absent. HARD FAIL-SAFE: the returned
     recommendation is ALWAYS in feasible_set (or ABSTAIN) — an infeasible modality is never emitted."""
     if not mechanism or not localization:
-        return {
+        result = {
             "recommended_modality_class": "ABSTAIN",
             "feasible_set": [],
             "fail_safe": True,
             "note": ("no objective features (mechanism + localization) provided -> ABSTAIN; the intervention "
                      "stage is feasibility TRIAGE and refuses to recommend a modality without them"),
         }
+        if biology_class is not None:
+            result.update(_class_modality_info(biology_class, "ABSTAIN"))
+        return result
     rec = _mod_recommend(mechanism, localization, protein_class)
     # localization-aware BBB gate on lysosomal enzyme replacement (ERT cannot cross the BBB) -> abstain
     if rec == "ENZYME_PROTEIN_REPLACEMENT" and localization == "lysosomal" and bbb_cns:
@@ -456,7 +484,7 @@ def recommend_intervention(mechanism: Optional[str] = None, localization: Option
     if rec != "ABSTAIN" and not _mod_is_feasible(rec, mechanism, localization, protein_class,
                                                  bbb_cns, splice_addressable):
         rec = "ABSTAIN"
-    return {
+    result = {
         "recommended_modality_class": rec,
         "feasible_set": feasible,
         "fail_safe": True,
@@ -464,6 +492,9 @@ def recommend_intervention(mechanism: Optional[str] = None, localization: Option
                  "CLASS, not a molecule; the SM branch still hits the affinity wall); recommendation is "
                  "guaranteed a member of feasible_set or ABSTAIN"),
     }
+    if biology_class is not None:
+        result.update(_class_modality_info(biology_class, rec))
+    return result
 
 
 def decide(biology_class: BiologyClass, organism: str = "", class_source: str = "declared",
@@ -554,8 +585,8 @@ def decide(biology_class: BiologyClass, organism: str = "", class_source: str = 
         gated.append(GatedSignal(sig.value,
                      f"out of transfer domain for {biology_class.value}: {spec.out_of_domain_note}"))
 
-    # ---- COMPOSITE4: the orthogonal, fail-safe INTERVENTION STAGE (never changes fire/abstain routing) --
-    interv = recommend_intervention(**(intervention_features or {}))
+    # ---- COMPOSITE4/6: the fail-safe INTERVENTION STAGE, now CLASS-AWARE (never changes fire/abstain routing) --
+    interv = recommend_intervention(biology_class=biology_class, **(intervention_features or {}))
 
     # ---- determine output type from the fired DISCOVERY signals -----------------------------------
     if not fired:
