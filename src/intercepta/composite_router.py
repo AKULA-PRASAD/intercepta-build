@@ -89,6 +89,22 @@ class Signal(str, Enum):
     CAUSAL_GENE = "causal_gene"                      # germline monogenic causal gene GIVEN (MENDEL1) -> mode-triage
 
 
+# COMPOSITE5 / GENETICCLASS1 (reproduced x2, sha ffaa351): disease-class deployment envelope for the
+# GWAS->target genetic-association arm. Grades the signal per HUMAN_COMPLEX_DISEASE *class* (Mantel-Haenszel OR
+# on the genome-wide universe, fame-adjusted). Data-free constant (cited evidence); consulted only when the
+# caller DECLARES a disease_class. Undeclared -> the original blanket-CAPPED behaviour (backward compatible).
+GENETIC_CLASS_GRADE = {
+    "cardiovascular": "FULL", "immune_inflammatory": "FULL", "neuro_psychiatric": "FULL",
+    "respiratory_fibrotic": "FULL",      # provisional-FULL (n=2 diseases; wide CI)
+    "metabolic": "CAPPED",
+    "musculoskeletal_renal": "ABSTAIN",  # MH-OR CI includes ~1 AND fame-adjusted coef CI includes 0
+}
+GENETIC_CLASS_EVIDENCE = ("GENETICCLASS1 (sha ffaa351, reproduced x2): per-class Mantel-Haenszel OR, "
+                          "fame-adjusted, on the 20,596-gene genome-wide universe x 27 diseases. FULL: "
+                          "cardiovascular 2.50 / immune 2.13 / neuro 2.17 / respiratory 3.19; CAPPED: "
+                          "metabolic 1.61; ABSTAIN: musculoskeletal_renal 1.32 (CI incl ~1, fame-coef CI incl 0).")
+
+
 @dataclass(frozen=True)
 class SignalSpec:
     """Encodes ONE signal's evidence-derived transfer condition."""
@@ -452,7 +468,8 @@ def recommend_intervention(mechanism: Optional[str] = None, localization: Option
 
 def decide(biology_class: BiologyClass, organism: str = "", class_source: str = "declared",
            has_curated_gem: bool = False, has_gwas_evidence: bool = False,
-           causal_gene_known: bool = False, intervention_features: Optional[dict] = None) -> RoutingDecision:
+           causal_gene_known: bool = False, intervention_features: Optional[dict] = None,
+           disease_class: str = "") -> RoutingDecision:
     """Apply the transfer-gate table to a class and return the routing decision. NO I/O — pure logic.
 
     COMPOSITE3: `has_curated_gem` is the runtime resource flag consulted for the CAPPED/UNCERTAIN transfer
@@ -498,6 +515,25 @@ def decide(biology_class: BiologyClass, organism: str = "", class_source: str = 
             continue
         if in_uncertain:
             # CAPPED/UNCERTAIN, resource-contingent transfer (COMPOSITE3 parasite path; COMPOSITE4 GWAS path).
+            # COMPOSITE5/GENETICCLASS1: disease-class-aware grading of the genetic-association arm (only when a
+            # disease_class is DECLARED; undeclared -> original blanket-CAPPED behaviour below, backward-compatible).
+            if sig == Signal.GENETIC_ASSOCIATION and disease_class:
+                grade = GENETIC_CLASS_GRADE.get(disease_class)
+                if grade == "ABSTAIN":
+                    gated.append(GatedSignal(sig.value,
+                        f"GENETICCLASS1: zero-data genetic target-ID does NOT robustly transfer for disease "
+                        f"class '{disease_class}' -> class-level ABSTAIN. {GENETIC_CLASS_EVIDENCE}"))
+                    continue
+                if grade == "FULL" and _resource_available(spec.uncertain_requires, resources):
+                    fired.append(sig.value)
+                    uncertainty_flags.append({
+                        "signal": sig.value, "grade": "FULL_by_disease_class", "confidence_cap": None,
+                        "note": (f"GENETICCLASS1: FULL-grade genetic target-ID for disease class "
+                                 f"'{disease_class}' (fame-adjusted MH-OR>2, CI-lo>1.5) -- upgraded from the "
+                                 f"blanket-CAPPED default."),
+                        "evidence": GENETIC_CLASS_EVIDENCE})
+                    continue
+                # grade == CAPPED (or FULL but gwas_evidence absent) -> fall through to default capped/gate logic:
             if _resource_available(spec.uncertain_requires, resources):
                 # FIRE, but flagged + capped -- NEITHER a blanket abstention NOR full-grade confidence.
                 fired.append(sig.value)
