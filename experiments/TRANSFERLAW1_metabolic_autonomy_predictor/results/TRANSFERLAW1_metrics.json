@@ -1,0 +1,180 @@
+{
+  "H1_spearman_S_vs_logOR": {
+    "PASS": false,
+    "boot95CI": [
+      -0.4226,
+      0.638
+    ],
+    "p": 0.6273461454239679,
+    "rho": 0.1228
+  },
+  "H2_AUROC_S_for_gatepass": {
+    "PASS": false,
+    "auroc": 0.625
+  },
+  "H3_within_Pfalciparum_swap": {
+    "PASS": true,
+    "n_recon": 6,
+    "p": 0.9571545189504373,
+    "recons": [
+      [
+        "Chiappino-Pepe2017",
+        1.034,
+        -2.9299
+      ],
+      [
+        "iPfal19",
+        2.469,
+        -1.2604
+      ],
+      [
+        "iPfal17",
+        2.461,
+        -0.4816
+      ],
+      [
+        "gf_Pf3D7",
+        1.03,
+        0.8827
+      ],
+      [
+        "gf_no_ortho",
+        0.859,
+        1.4261
+      ],
+      [
+        "AbdelHaleem_iAM480",
+        3.074,
+        2.363
+      ]
+    ],
+    "spearman_S_vs_OR": 0.0286
+  },
+  "VERDICT": "HONEST NEGATIVE: transfer-condition NOT quantifiable from GEM topology alone (stays qualitative)",
+  "features_used": [
+    "log10_reactions",
+    "blocked_fraction",
+    "exchange_fraction",
+    "gpr_coverage"
+  ],
+  "missing": [],
+  "panel_n": 18,
+  "per_organism": [
+    [
+      "B.subtilis",
+      12.48,
+      true,
+      -3.4401
+    ],
+    [
+      "P.falciparum",
+      2.469,
+      false,
+      -2.7796
+    ],
+    [
+      "S.aureus",
+      15.91,
+      true,
+      -1.5997
+    ],
+    [
+      "T.brucei",
+      0.64,
+      false,
+      -1.3007
+    ],
+    [
+      "A.baumannii",
+      12.75,
+      true,
+      -1.1992
+    ],
+    [
+      "S.cerevisiae",
+      4.65,
+      true,
+      -0.4489
+    ],
+    [
+      "Toxoplasma",
+      14.1,
+      true,
+      -0.3838
+    ],
+    [
+      "M.maripaludis",
+      4.23,
+      true,
+      -0.255
+    ],
+    [
+      "S.pneumoniae",
+      2.96,
+      false,
+      0.1079
+    ],
+    [
+      "C.jejuni",
+      3.92,
+      true,
+      0.4448
+    ],
+    [
+      "C.albicans",
+      13.93,
+      true,
+      0.4971
+    ],
+    [
+      "M.tuberculosis",
+      26.11,
+      true,
+      0.9104
+    ],
+    [
+      "N.gonorrhoeae",
+      6.13,
+      true,
+      1.0408
+    ],
+    [
+      "K.pneumoniae",
+      5.92,
+      true,
+      1.0691
+    ],
+    [
+      "Salmonella",
+      4.33,
+      true,
+      1.3411
+    ],
+    [
+      "K.phaffii",
+      2.36,
+      false,
+      1.6106
+    ],
+    [
+      "B.theta",
+      8.03,
+      true,
+      2.0713
+    ],
+    [
+      "E.coli",
+      44.94,
+      true,
+      2.3141
+    ]
+  ],
+  "relationship_to_META1": "a-priori/non-circular (GEM topology only) predictor; META1 used outcome-entangled features post-hoc",
+  "seed": 42,
+  "signs": {
+    "blocked_fraction": -1,
+    "exchange_fraction": -1,
+    "gpr_coverage": 1,
+    "log10_reactions": 1
+  }
+}
