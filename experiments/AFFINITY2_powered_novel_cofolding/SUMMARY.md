@@ -1,32 +1,47 @@
-# AFFINITY2 — powered novel-chemotype co-folding vs the affinity wall: STATUS
+# AFFINITY2 — powered novel-chemotype co-folding vs the affinity wall: VERDICT
 
-**Status: BUILT & HPC-ready; co-folding run PENDING on Explorer (relay).** The decisive, powered test of the
-one untried method (Boltz-2 structure-based co-folding) against the one wall gating the intervention half of
-the vision (novel-chemotype affinity, D2/R5). Supplies the power AFFINITY1 lacked (n=5 → here 68–125 novel
-actives/target). Pre-registered two-tier gate locked before any co-folding (`PREREG.md`).
+**Status: COMPLETE. Verdict = WALL HOLDS → D2 CLOSED DEFINITIVELY AT POWER.** Reproduced ×2 byte-identical
+(`payload.sha256` = 8e3ac05…). 522/522 complexes co-folded (100% coverage; no missing/invalid). Boltz-2
+co-folding — the one untried method for the intervention half (novel-target/novel-chemotype affinity) — does
+**not** produce a usable zero-data signal on a powered, leakage-controlled novel split, and is **significantly
+worse** than a simple target-trained QSAR.
 
-## What is built + verified (CPU, in-repo, reproducible)
-- **Benchmark (522 complexes):** leakage-controlled novel split (ECFP4 max-Tanimoto to train actives < 0.40),
-  class-balanced — ALDH1 125a/125i, PKM2 68a/68i, FEN1 68a/68i (`build_benchmark.py`, manifest sha-stable).
-- **Receptors:** ALDH1 4wp7 (501aa), PKM2 3gqy (550aa), FEN1 5fv7 (353aa), from RCSB.
-- **Co-folding inputs:** 522 Boltz-2 YAMLs (protein seq + ligand SMILES + affinity head; `prep_yamls.py`).
-- **Baselines already scored (the bar to beat; `results/AFFINITY2_metrics.json`, reproduced ×2):**
-  target-trained QSAR novel-split AUROC **ALDH1 0.714 / PKM2 0.780 / FEN1 0.893**; property-only
-  0.569 / 0.650 / 0.824.
-- **HPC campaign:** `hpc/affinity2_array.slurm` + `hpc/make_chunks.py` (reuse AFFINITY1's robust, restartable,
-  NFS-safe `boltz_chunk.sh`); exact relay commands in `HPC_RELAY.md`.
+## Result (per the pre-registered two-tier gate; scored on the identical co-folding subset, paired bootstrap)
+| target | n (a/i) | co-fold AUROC (95% CI) | best ligand baseline | Δ(cofold−best) 95% CI | TIER1 | TIER2 |
+|---|---|---|---|---|---|---|
+| ALDH1 | 250 (125/125) | **0.553** [0.483, 0.621] | QSAR 0.714 | **−0.161** [−0.240, −0.078] | ✗ | ✗ |
+| PKM2  | 136 (68/68)   | **0.690** [0.594, 0.776] | QSAR 0.780 | −0.090 [−0.199, +0.021] | ✗ | ✗ |
+| FEN1  | 136 (68/68)   | **0.716** [0.630, 0.794] | QSAR 0.893 | **−0.178** [−0.269, −0.088] | ✓ | ✗ |
 
-## The pre-registered two-tier verdict (applied by `score.py` once outputs return)
-- **TIER1 — ZERO_DATA_SIGNAL** (co-folding standalone novel AUROC CI-lo > 0.60 on ≥2 targets): co-folding, with
-  ZERO activity data, ranks novel-chemotype binders above chance — its actual vision use case → **R5 OPENS**.
-- **TIER2 — BEATS_LIGAND_ML** (also cofold − max(QSAR,property) > 0.10): the receptor buys generalization beyond
-  ligand-only learning → strong open.
-- **neither → D2 CLOSED DEFINITIVELY at power** (high-value negative; intervention half is information-limited,
-  not method-limited).
+- **TIER1 (zero-data signal, cofold CI-lo > 0.60): 1/3** (FEN1 only; PKM2 narrowly misses at 0.594; ALDH1 fails).
+  Gate needs ≥2 → **FAIL.**
+- **TIER2 (beats ligand-ML): 0/3.** Co-folding is significantly *worse* than a target-trained QSAR on ALDH1 and
+  FEN1 (paired-bootstrap Δ CI excludes 0), and worse (non-significant) on PKM2.
+- Sign verified: actives have lower predicted affinity than inactives on all three targets → the weak AUROCs
+  are genuine, not an inverted score.
 
-## Honest caveats (locked in PREREG)
-Target-side leakage: LIT-PCBA receptors predate Boltz's 2023-06-01 cutoff → a co-folding PASS is optimistic
-(re-confirm on a post-cutoff target); a FAIL is strong. Ligand-side is leakage-controlled by the novel split.
+## Why this negative is STRONG (the leakage caveats cut in its favor)
+The pre-registration flagged that LIT-PCBA receptors predate Boltz's cutoff (**target-side leakage**), and the
+review flagged that these actives likely sit in Boltz's ChEMBL/BindingDB affinity-head training
+(**compound-side leakage**). Both would **inflate** co-folding. Co-folding failed **anyway** — so the leakage
+that would make a *pass* untrustworthy makes this *fail* conservative and robust. Even with every advantage,
+structure-based co-folding cannot rank novel-chemotype binders as well as a fingerprint model.
 
-## Next action
-Run `HPC_RELAY.md` steps 1–4 on Explorer → paste back the affinity-JSON count → I score + report the verdict.
+## Scientific meaning
+The intervention half (novel-target affinity) is **information-limited, not method-limited.** Co-folding — the
+last untried method and the largest unbuilt piece of the vision — joins docking, QSAR, PCM, and generation
+below the wall. **Roadmap R5 stays CLOSED; dead-end D2 is upgraded from "closed (gated)" to "closed at power,
+co-folding included."** No further GPU compute on novel-target affinity is warranted absent a genuinely new
+method/data class.
+
+## Honest scope (this is an internal go/no-go, NOT a publication benchmark)
+Real reviewer-blockers remain for a publishable co-folding benchmark (see the design review): target-side
+leakage, compound-side leakage vs Boltz training, crystallization-construct sequences (PKM2 3gqy His-tag) +
+arbitrary `pdbs[0]` receptor, monomer folding of oligomers, non-archived per-compound server MSAs, single
+diffusion sample. These do not change the internal verdict (they'd only help co-folding, which still failed),
+but a publication-grade claim would require: a post-cutoff target, native sequences, one archived MSA per
+target, and multi-sample variance.
+
+## Reproduce
+`python build_benchmark.py` · `python prep_yamls.py` · (Explorer: `HPC_RELAY.md`) · rsync affinity JSONs to
+`benchmark/boltz_out/` · `python score.py` (byte-identical; boltz_out gitignored, aggregate metrics only).

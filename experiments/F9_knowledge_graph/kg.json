@@ -264,12 +264,12 @@
     },
     {
       "category": "dead-end-closed",
-      "evidence": "COMPUTATIONAL_DEAD_ENDS.md#D2",
+      "evidence": "experiments/AFFINITY2_powered_novel_cofolding/SUMMARY.md",
       "id": "D2",
-      "name": "Novel-target/novel-chemotype affinity",
-      "negative_outcome": "docking AUROC 0.428 (HIT2); QSAR 0.90->0.67 novel-chemotype (HIT1); PCM adds nothing (B49); Boltz-2 training-leaked, novel-split n=5 ~0.52 (AFFINITY1)",
-      "reopen_trigger": "the R2 OOD testbed shows a method beating the wall on a leakage-controlled novel-target split",
-      "tried": "docking / QSAR / PCM / co-folding on public benchmarks"
+      "name": "Novel-target/novel-chemotype affinity (CLOSED AT POWER incl. co-folding)",
+      "negative_outcome": "docking AUROC 0.428 (HIT2); QSAR 0.90->0.67 (HIT1); PCM adds nothing (B49); Boltz-2 co-folding AFFINITY2 (522 complexes, reproduced x2): zero-data TIER1 1/3 (FEN1 0.63; PKM2 0.59; ALDH1 0.48) and WORSE than target-QSAR on 2/3 (dAUROC -0.16/-0.18, CI excludes 0) -- leakage biases toward cofold, it failed anyway",
+      "reopen_trigger": "a genuinely new method/data class beats the same leakage-controlled powered gate",
+      "tried": "docking / QSAR / PCM / co-folding on leakage-controlled novel splits"
     },
     {
       "category": "dead-end-closed",

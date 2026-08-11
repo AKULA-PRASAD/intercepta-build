@@ -1,8 +1,8 @@
 {
-  "VERDICT": "PENDING_GPU_RUN",
+  "VERDICT": "WALL HOLDS -> D2 CLOSED DEFINITIVELY AT POWER (co-folding fails zero-data novel-chemotype)",
   "caveats": "target-side leakage (LIT-PCBA receptors predate Boltz cutoff) -> TIER1 optimistic; compound leakage vs Boltz ChEMBL/BindingDB training NOT excluded; per-compound server MSAs; single diffusion sample. Internal go/no-go signal, NOT a publication claim (see REVIEW/SUMMARY).",
   "gate": "TIER1: cofold subset AUROC CI-lo>0.60 on >=2 targets; TIER2: also cofold-best_baseline>0.10 AND paired-delta CI-lo>0 on >=2 targets",
-  "n_targets_tier1": 0,
+  "n_targets_tier1": 1,
   "n_targets_tier2": 0,
   "panel": [
     "ALDH1",
@@ -12,33 +12,111 @@
   "per_target": {
     "ALDH1": {
       "QSAR_AUROC_full": 0.7137,
-      "TIER1_zero_data_signal": null,
-      "TIER2_beats_ligand_ml": null,
-      "cofold_AUROC": null,
+      "QSAR_AUROC_subset": 0.7137,
+      "TIER1_zero_data_signal": false,
+      "TIER2_beats_ligand_ml": false,
+      "best_baseline": "QSAR",
+      "cofold_AUROC": 0.553,
+      "cofold_CI": [
+        0.4832,
+        0.6212
+      ],
+      "cofold_minus_best": -0.1607,
+      "cofold_raw_affinity_pred_value": {
+        "active_mean": 0.8534,
+        "inactive_mean": 0.9769,
+        "note": "score=-affinity_pred_value; if actives truly bind stronger, active_mean should be LOWER"
+      },
+      "coverage": {
+        "coverage_frac": 1.0,
+        "expected": 250,
+        "invalid_ids": [],
+        "missing_ids": [],
+        "scored": 250,
+        "scored_active": 125,
+        "scored_inactive": 125
+      },
       "n_active_expected": 125,
       "n_expected": 250,
+      "paired_delta_95CI": [
+        -0.2399,
+        -0.0779
+      ],
+      "paired_delta_mean": -0.1607,
       "property_AUROC_full": 0.5688,
-      "status": "PENDING_GPU_RUN"
+      "property_AUROC_subset": 0.5688
     },
     "FEN1": {
       "QSAR_AUROC_full": 0.8934,
-      "TIER1_zero_data_signal": null,
-      "TIER2_beats_ligand_ml": null,
-      "cofold_AUROC": null,
+      "QSAR_AUROC_subset": 0.8934,
+      "TIER1_zero_data_signal": true,
+      "TIER2_beats_ligand_ml": false,
+      "best_baseline": "QSAR",
+      "cofold_AUROC": 0.7156,
+      "cofold_CI": [
+        0.6301,
+        0.7938
+      ],
+      "cofold_minus_best": -0.1778,
+      "cofold_raw_affinity_pred_value": {
+        "active_mean": 0.9173,
+        "inactive_mean": 1.2244,
+        "note": "score=-affinity_pred_value; if actives truly bind stronger, active_mean should be LOWER"
+      },
+      "coverage": {
+        "coverage_frac": 1.0,
+        "expected": 136,
+        "invalid_ids": [],
+        "missing_ids": [],
+        "scored": 136,
+        "scored_active": 68,
+        "scored_inactive": 68
+      },
       "n_active_expected": 68,
       "n_expected": 136,
+      "paired_delta_95CI": [
+        -0.2689,
+        -0.0878
+      ],
+      "paired_delta_mean": -0.1778,
       "property_AUROC_full": 0.8244,
-      "status": "PENDING_GPU_RUN"
+      "property_AUROC_subset": 0.8244
     },
     "PKM2": {
       "QSAR_AUROC_full": 0.78,
-      "TIER1_zero_data_signal": null,
-      "TIER2_beats_ligand_ml": null,
-      "cofold_AUROC": null,
+      "QSAR_AUROC_subset": 0.78,
+      "TIER1_zero_data_signal": false,
+      "TIER2_beats_ligand_ml": false,
+      "best_baseline": "QSAR",
+      "cofold_AUROC": 0.69,
+      "cofold_CI": [
+        0.5941,
+        0.7762
+      ],
+      "cofold_minus_best": -0.09,
+      "cofold_raw_affinity_pred_value": {
+        "active_mean": 1.0623,
+        "inactive_mean": 1.3339,
+        "note": "score=-affinity_pred_value; if actives truly bind stronger, active_mean should be LOWER"
+      },
+      "coverage": {
+        "coverage_frac": 1.0,
+        "expected": 136,
+        "invalid_ids": [],
+        "missing_ids": [],
+        "scored": 136,
+        "scored_active": 68,
+        "scored_inactive": 68
+      },
       "n_active_expected": 68,
       "n_expected": 136,
+      "paired_delta_95CI": [
+        -0.1993,
+        0.0208
+      ],
+      "paired_delta_mean": -0.09,
       "property_AUROC_full": 0.6496,
-      "status": "PENDING_GPU_RUN"
+      "property_AUROC_subset": 0.6496
     }
   },
   "seed": 42

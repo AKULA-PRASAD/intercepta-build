@@ -11,13 +11,18 @@ aware) Δ+0.008 (`experiments/{NONMET1,PLMESS1,REGNET1,MULTISIG1,PLMSTRUCT1}/res
 new label-free CPU signal to capture. **Reopen only if:** curated mechanism *labels* or a fundamentally new
 data modality (not another sequence/graph transform) becomes available.
 
-### D2 — Novel-target / novel-chemotype AFFINITY via docking, QSAR, PCM, or co-folding on current benchmarks. **CLOSED (gated).**
+### D2 — Novel-target / novel-chemotype AFFINITY via docking, QSAR, PCM, or co-folding. **CLOSED AT POWER (co-folding included, 2026-08-11).**
 **Proof (code):** docking AUROC **0.428** (`HIT2`); QSAR novel-chemotype **0.90→0.67** (`HIT1`); PCM protein
-features add nothing (`B49`); active-learning collapses on novel chemistry (`B65`); Boltz-2 co-folding was
-**training-leaked** and **novel-split n=5 ≈ 0.52** (`AFFINITY1/results/scored.csv` + `LEAKAGE_AUDIT.md`).
-**Why:** all are interpolation within a similarity/training manifold; the novel split — the only thing that
-matters for the vision — is chance. **Reopen only if:** the OOD testbed (roadmap R2) shows a method beating
-the wall on a *leakage-controlled* novel-target split. Not before — this is a proven money-pit.
+features add nothing (`B49`); active-learning collapses on novel chemistry (`B65`). **Co-folding now settled at
+power (`AFFINITY2`, reproduced ×2, sha 8e3ac05):** Boltz-2 on a leakage-controlled ECFP-Tanimoto<0.40 novel
+split, 522 complexes across 3 LIT-PCBA targets — zero-data TIER1 passes only **1/3** (FEN1 CI-lo 0.630; PKM2
+0.594 misses; ALDH1 0.483), and co-folding is **significantly WORSE than a target-trained QSAR** on 2/3
+(ALDH1 Δ−0.161 CI[−0.24,−0.08]; FEN1 Δ−0.178 CI[−0.27,−0.09]; PKM2 Δ−0.090 ns). The earlier AFFINITY1 novel-
+split n=5≈0.52 was underpowered; AFFINITY2 is the powered closure. **Leakage cuts in the negative's favor:**
+target-side (receptors predate Boltz cutoff) + compound-side (actives likely in Boltz's ChEMBL/BindingDB
+training) would only INFLATE co-folding, which failed anyway. **Why:** all methods are interpolation within a
+similarity/training manifold; the novel split is at/below chance. **Reopen only if:** a genuinely new
+method/data class beats this same leakage-controlled powered gate. Co-folding is now a proven money-pit too.
 
 ### D3 — Single-agent human DRUG-RESPONSE from baseline molecular profiles. **CLOSED.**
 **Proof:** cross-dataset ceiling ρ**+0.212**; within-cancer clinical AUROC **0.504** (p=0.43); inferred

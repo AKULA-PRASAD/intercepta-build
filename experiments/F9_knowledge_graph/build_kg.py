@@ -22,11 +22,14 @@ DEADENDS = [
      "conservation AUROC 0.9078 unbeaten (NONMET1 +0.021, PLMESS1 +0.008/study-ctrl -0.0006, REGNET1 -0.006, "
      "PLMSTRUCT1 +0.0076, MULTISIG1 +0.019, MET4 +0.128->-0.004 after study-bias control)", "dead-end-closed",
      "curated mechanism LABELS or a fundamentally new data modality appears", "COMPUTATIONAL_DEAD_ENDS.md#D1"),
-    ("D2", "Novel-target/novel-chemotype affinity", "docking / QSAR / PCM / co-folding on public benchmarks",
-     "docking AUROC 0.428 (HIT2); QSAR 0.90->0.67 novel-chemotype (HIT1); PCM adds nothing (B49); Boltz-2 "
-     "training-leaked, novel-split n=5 ~0.52 (AFFINITY1)", "dead-end-closed",
-     "the R2 OOD testbed shows a method beating the wall on a leakage-controlled novel-target split",
-     "COMPUTATIONAL_DEAD_ENDS.md#D2"),
+    ("D2", "Novel-target/novel-chemotype affinity (CLOSED AT POWER incl. co-folding)",
+     "docking / QSAR / PCM / co-folding on leakage-controlled novel splits",
+     "docking AUROC 0.428 (HIT2); QSAR 0.90->0.67 (HIT1); PCM adds nothing (B49); Boltz-2 co-folding AFFINITY2 "
+     "(522 complexes, reproduced x2): zero-data TIER1 1/3 (FEN1 0.63; PKM2 0.59; ALDH1 0.48) and WORSE than "
+     "target-QSAR on 2/3 (dAUROC -0.16/-0.18, CI excludes 0) -- leakage biases toward cofold, it failed anyway",
+     "dead-end-closed",
+     "a genuinely new method/data class beats the same leakage-controlled powered gate",
+     "experiments/AFFINITY2_powered_novel_cofolding/SUMMARY.md"),
     ("D3", "Single-agent human drug-response from baseline profiles", "cross-dataset + within-cancer clinical",
      "cross-dataset ceiling rho +0.212; within-cancer clinical AUROC 0.504 (p=0.43); inferred functional layer "
      "fails external replication (B20/B21)", "dead-end-closed",
