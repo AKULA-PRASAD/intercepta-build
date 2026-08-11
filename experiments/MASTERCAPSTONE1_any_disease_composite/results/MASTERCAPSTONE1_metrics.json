@@ -1,0 +1,191 @@
+{
+  "about": "MASTER composite: one COMPOSITE router across the WHOLE reachable disease universe (pathogen + human). North-star 'any disease' as honest DECISION-COVERAGE -- a signal-backed result where a committed transfer condition holds, a CITED abstention where none does. NOT a universal model.",
+  "arms_exercised": [
+    "causal_gene",
+    "conservation_breadth",
+    "fba_essentiality",
+    "functional_dependency",
+    "genetic_association",
+    "structural_homology"
+  ],
+  "coverage": [
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "conservation_breadth",
+        "fba_essentiality",
+        "structural_homology"
+      ],
+      "genetic_grade": null,
+      "half": "pathogen",
+      "input": "bacterium (E. coli)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "conservation_breadth",
+        "fba_essentiality"
+      ],
+      "genetic_grade": null,
+      "half": "pathogen",
+      "input": "archaeon (M. maripaludis)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "conservation_breadth",
+        "fba_essentiality"
+      ],
+      "genetic_grade": null,
+      "half": "pathogen",
+      "input": "free eukaryote (S. cerevisiae)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "structural_homology"
+      ],
+      "genetic_grade": null,
+      "half": "pathogen",
+      "input": "virus (SARS-CoV-2)",
+      "output_type": "structural_class_id"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "fba_essentiality"
+      ],
+      "genetic_grade": null,
+      "half": "pathogen",
+      "input": "parasite +GEM (Toxoplasma)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": true,
+      "abstention_reason": "host-dependent parasite with NO curated GEM: FBA-essentiality is the only signal with any validated host-dependent transfer, and it is GEM-topology-contingent (HARDENP1 Toxoplasma PASS OR 14.10 / GENERALIZE5 Plasmodium FAIL OR 2.47, n=2) -- WITHOUT a GEM it cannot even be attempted (not blanket-refused: the router would FIRE it capped-and-flagged IF a GEM existed). The functional-dependency layer is BUILT and VALIDATED for HUMAN_CANCER only (DEPEND1 G1/G2/G3 on DepMap) but does NOT transfer to this parasite -- no dependency data for the organism and DEPEND1's label-free expr->dep arm was NOT organism-transferred (validated on held-out DepMap human lines only). Structural/conservation are out of domain. No signal available -> the router ABSTAINS rather than fabricate an answer",
+      "fired": [],
+      "genetic_grade": null,
+      "half": "pathogen",
+      "input": "parasite -GEM (Plasmodium)",
+      "output_type": "abstention"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "functional_dependency"
+      ],
+      "genetic_grade": null,
+      "half": "human",
+      "input": "cancer (melanoma)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "causal_gene"
+      ],
+      "genetic_grade": null,
+      "half": "human",
+      "input": "monogenic +gene (cystic fibrosis)",
+      "output_type": "mode"
+    },
+    {
+      "abstains": true,
+      "abstention_reason": "class 'human_monogenic' (germline monogenic) requires a declared causal_gene_known descriptor: the causal gene is the target, so target-ID is trivial ONLY when the gene is genetically established (MENDEL1). Without it there is no target -> the router ABSTAINS.",
+      "fired": [],
+      "genetic_grade": null,
+      "half": "human",
+      "input": "monogenic -gene (Duchenne)",
+      "output_type": "abstention"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "FULL",
+      "half": "human",
+      "input": "complex/cardiovascular (CAD)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "FULL",
+      "half": "human",
+      "input": "complex/immune (RA)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "FULL",
+      "half": "human",
+      "input": "complex/neuro (Parkinson)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "FULL",
+      "half": "human",
+      "input": "complex/respiratory (IPF)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": false,
+      "abstention_reason": null,
+      "fired": [
+        "genetic_association"
+      ],
+      "genetic_grade": "CAPPED",
+      "half": "human",
+      "input": "complex/metabolic (T2D)",
+      "output_type": "shortlist"
+    },
+    {
+      "abstains": true,
+      "abstention_reason": "class 'human_complex_disease' (common/polygenic) requires a declared has_gwas_evidence descriptor: the validated signal is popularity-controlled GWAS->target (GENETICS1), a DATA-dependent capped/attenuated signal. Without GWAS evidence there is no signal -> the router ABSTAINS rather than emit a fame-confounded human target guess.",
+      "fired": [],
+      "genetic_grade": null,
+      "half": "human",
+      "input": "complex/musculoskeletal_renal (OA)",
+      "output_type": "abstention"
+    },
+    {
+      "abstains": true,
+      "abstention_reason": "no validated discovery signal transfers to class 'unknown'; the system refuses to emit a confident answer rather than force an ill-fitting model",
+      "fired": [],
+      "genetic_grade": null,
+      "half": "either",
+      "input": "unknown / dark proteome",
+      "output_type": "abstention"
+    }
+  ],
+  "n_abstain": 4,
+  "n_classes_human": 9,
+  "n_classes_pathogen": 6,
+  "n_inputs": 16,
+  "n_signal_backed": 12,
+  "scope": "Composition of committed, reproduced-x2, validated arms (FBA/conservation/structure for pathogens; DEPEND1 dependency / MENDEL1 mode / GENETICS1+GENETICCLASS1 class-graded genetic for humans). Deliverables are target-relevance / mode / class-ID hypotheses -- NOT drugs, NOT clinical. Abstention is first-class (dark proteome, no-GEM parasite, class-level genetic ABSTAIN, descriptor-absent). Pure router logic, no per-run data."
+}
