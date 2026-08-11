@@ -1,0 +1,8 @@
+{
+  "cardiovascular": "FULL",
+  "immune_inflammatory": "FULL",
+  "metabolic": "CAPPED",
+  "musculoskeletal_renal": "ABSTAIN",
+  "neuro_psychiatric": "FULL",
+  "respiratory_fibrotic": "FULL"
+}

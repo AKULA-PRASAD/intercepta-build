@@ -1,0 +1,142 @@
+{
+  "classes": {
+    "cardiovascular": {
+      "GRADE": "FULL",
+      "MH_OR": 2.497,
+      "MH_OR_95CI": [
+        1.945,
+        3.205
+      ],
+      "fame_adj_coef_95CI": [
+        0.0521,
+        0.1284
+      ],
+      "fame_adj_genassoc_coef": 0.0903,
+      "fisher_OR": 2.566,
+      "fisher_OR_95CI": [
+        2.025,
+        3.289
+      ],
+      "genassoc_AUROC": 0.5291,
+      "n_diseases": 3,
+      "n_drug_pos": 757
+    },
+    "immune_inflammatory": {
+      "GRADE": "FULL",
+      "MH_OR": 2.131,
+      "MH_OR_95CI": [
+        1.846,
+        2.46
+      ],
+      "fame_adj_coef_95CI": [
+        0.0779,
+        0.1224
+      ],
+      "fame_adj_genassoc_coef": 0.1002,
+      "fisher_OR": 2.363,
+      "fisher_OR_95CI": [
+        2.054,
+        2.728
+      ],
+      "genassoc_AUROC": 0.5288,
+      "n_diseases": 10,
+      "n_drug_pos": 2131
+    },
+    "metabolic": {
+      "GRADE": "CAPPED",
+      "MH_OR": 1.613,
+      "MH_OR_95CI": [
+        1.264,
+        2.059
+      ],
+      "fame_adj_coef_95CI": [
+        0.0405,
+        0.1292
+      ],
+      "fame_adj_genassoc_coef": 0.0848,
+      "fisher_OR": 1.857,
+      "fisher_OR_95CI": [
+        1.484,
+        2.347
+      ],
+      "genassoc_AUROC": 0.5233,
+      "n_diseases": 3,
+      "n_drug_pos": 795
+    },
+    "musculoskeletal_renal": {
+      "GRADE": "ABSTAIN",
+      "MH_OR": 1.322,
+      "MH_OR_95CI": [
+        0.939,
+        1.862
+      ],
+      "fame_adj_coef_95CI": [
+        -0.0119,
+        0.0914
+      ],
+      "fame_adj_genassoc_coef": 0.0397,
+      "fisher_OR": 1.623,
+      "fisher_OR_95CI": [
+        1.173,
+        2.303
+      ],
+      "genassoc_AUROC": 0.5114,
+      "n_diseases": 3,
+      "n_drug_pos": 599
+    },
+    "neuro_psychiatric": {
+      "GRADE": "FULL",
+      "MH_OR": 2.168,
+      "MH_OR_95CI": [
+        1.823,
+        2.579
+      ],
+      "fame_adj_coef_95CI": [
+        0.0982,
+        0.1515
+      ],
+      "fame_adj_genassoc_coef": 0.1248,
+      "fisher_OR": 2.171,
+      "fisher_OR_95CI": [
+        1.835,
+        2.584
+      ],
+      "genassoc_AUROC": 0.525,
+      "n_diseases": 6,
+      "n_drug_pos": 1567
+    },
+    "respiratory_fibrotic": {
+      "GRADE": "FULL",
+      "MH_OR": 3.194,
+      "MH_OR_95CI": [
+        2.246,
+        4.541
+      ],
+      "fame_adj_coef_95CI": [
+        0.0946,
+        0.182
+      ],
+      "fame_adj_genassoc_coef": 0.1383,
+      "fisher_OR": 3.443,
+      "fisher_OR_95CI": [
+        2.465,
+        4.924
+      ],
+      "genassoc_AUROC": 0.5331,
+      "n_diseases": 2,
+      "n_drug_pos": 380
+    }
+  },
+  "envelope_discriminates": true,
+  "n_pairs": 556092,
+  "seed": 42,
+  "transfer_table": {
+    "cardiovascular": "FULL",
+    "immune_inflammatory": "FULL",
+    "metabolic": "CAPPED",
+    "musculoskeletal_renal": "ABSTAIN",
+    "neuro_psychiatric": "FULL",
+    "respiratory_fibrotic": "FULL"
+  },
+  "universe_protein_coding": 20596
+}
