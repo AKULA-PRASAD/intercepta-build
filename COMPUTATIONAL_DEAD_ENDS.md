@@ -67,3 +67,10 @@ positive-fraction **0.41**, position-level AUROC **0.446** (below chance), clust
 n=15 AUROC 0.84 was a small-n artifact; the signal is absent (or slightly reversed — resistance sites tend to be
 functionally important/conserved, i.e., lower tolerance). **This closes the durability-entropy axis** (previously
 mis-ranked as roadmap R1). Reopen ONLY with a different, powered observable (FEP/MD ΔΔG or measured DMS fitness).
+**Both reopen-triggers investigated 2026-08-11 (DMS1, feasibility verdict) → still gated, gate now precise:**
+FEP/MD ΔΔG has no drug-matched fragile-vs-durable structures (durable targets are undrugged) + is relay-fragile;
+measured DMS fitness exists only for resistance ENZYMES (TEM-1 β-lactamase/AAC/DHFR — CARD homolog models, 0
+resistance-SNP positions), while the CARD-labelled drug targets (gyrA/rpoB/…) have no DMS — observable and label
+are on DISJOINT proteins. The true gate is a **missing dataset pairing per-position fitness with resistance
+labels on the same drug-target panel** (data-acquisition/wet-lab), not more computation
+(`experiments/DMS1_measured_durability/FINDING.md`).
